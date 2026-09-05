@@ -1,0 +1,20 @@
+{
+  "name": "postulo-chromium",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser extension that sends the job posting you are looking at to your own Postulo. One source, built for Chromium-based browsers and for Firefox.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "build:chromium": "node scripts/build.mjs chromium",
+    "build:firefox": "node scripts/build.mjs firefox",
+    "lint:firefox": "npm run build:firefox && web-ext lint --source-dir dist/firefox",
+    "package": "npm run build && web-ext build --source-dir dist/chromium --artifacts-dir dist/artifacts/chromium --overwrite-dest && web-ext build --source-dir dist/firefox --artifacts-dir dist/artifacts/firefox --overwrite-dest",
+    "run:firefox": "npm run build:firefox && web-ext run --source-dir dist/firefox"
+  },
+  "devDependencies": {
+    "web-ext": "^8.0.0"
+  },
+  "license": "AGPL-3.0-or-later"
+}

@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container:
+      image: node:22-bookworm
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - name: Test the pure parts
+        run: npm test
+      - name: Build both targets
+        run: npm run build
+      - name: Lint the Firefox build with web-ext
+        run: npx web-ext lint --source-dir dist/firefox
+      - name: Package
+        run: npm run package
+      - uses: actions/upload-artifact@v3
+        continue-on-error: true
+        with:
+          name: extension-packages
+          path: dist/artifacts
