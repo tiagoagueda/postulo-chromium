@@ -1,7 +1,7 @@
 # postulo-chromium
 
 **The Postulo browser extension: one button that sends the job posting you are looking
-at to your own [Postulo](https://source.tiagoagueda.com/tiagoagueda/postulo), for review.**
+at to your own [Postulo](https://source.tiagoagueda.com/postulo/postulo), for review.**
 
 Postulo can read a posting from its address, but a page only visible to a signed-in
 reader, or one behind bot protection, cannot be fetched by a server. The extension sends
@@ -10,7 +10,7 @@ anything else and shows it to you for review; nothing is recorded until you say 
 
 This repository holds the **source for both browsers** and builds Chromium's package. The
 Firefox package is built from the same source by
-[postulo-firefox](https://source.tiagoagueda.com/tiagoagueda/postulo-firefox), which
+[postulo-firefox](https://source.tiagoagueda.com/postulo/postulo-firefox), which
 carries what Firefox and addons.mozilla.org need and nothing else.
 
 ## Privacy, in one paragraph
