@@ -26,7 +26,13 @@ async function main() {
   }
 
   show("ready");
-  $("target").textContent = new URL(settings.instance).host;
+  // Where a capture goes, in the corner rather than above the button: always visible, never
+  // in the way, and a click away from the instance itself.
+  const server = $("server");
+  server.textContent = settings.instance;
+  server.title = settings.instance;
+  server.href = settings.instance;
+  server.hidden = false;
 
   $("capture").addEventListener("click", async () => {
     const button = $("capture");

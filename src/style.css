@@ -125,13 +125,6 @@ button:disabled {
   cursor: default;
 }
 
-button.link {
-  border: none;
-  padding: 0;
-  color: var(--brand);
-  font-size: 12px;
-}
-
 #status {
   min-height: 1.4em;
   margin-top: 10px;
@@ -143,9 +136,50 @@ button.link {
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-top: 12px;
   padding-top: 8px;
   border-top: 1px solid var(--line);
+}
+
+/* The instance a capture goes to, on the start side. A long address ends in an ellipsis
+   rather than pushing the gear out; the whole of it is in the tooltip. */
+.server {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.server:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+/* The settings gear, on the end side whether or not there is an address beside it. 28 pixels
+   square: comfortably over the 24 a pointer target needs. */
+button.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  margin-inline-start: auto;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  color: var(--muted);
+}
+
+button.icon:hover {
+  color: var(--ink);
+  background: var(--line);
 }
 
 kbd {
