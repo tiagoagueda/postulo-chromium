@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "La page n'a pas pu être lue. Certaines pages bloquent les extensions."
+  },
+  "previewing": {
+    "message": "On demande à Postulo ce qu'il lit ici…"
+  },
+  "reviewHint": {
+    "message": "Voici ce que Postulo a lu sur la page. Corrigez ce qui est faux avant de l'envoyer."
+  },
+  "sendForReview": {
+    "message": "Envoyer pour vérification"
+  },
+  "fieldTitle": {
+    "message": "Intitulé du poste"
+  },
+  "fieldCompany": {
+    "message": "Entreprise"
+  },
+  "fieldLocation": {
+    "message": "Lieu"
+  },
+  "fieldRemote": {
+    "message": "Modalité de travail"
+  },
+  "fieldEmployment": {
+    "message": "Type de contrat"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salaire à partir de"
+  },
+  "fieldSalaryTo": {
+    "message": "Salaire jusqu'à"
+  },
+  "fieldCurrency": {
+    "message": "Devise"
+  },
+  "fieldPeriod": {
+    "message": "Période"
+  },
+  "fieldCloses": {
+    "message": "Date de clôture"
+  },
+  "fieldDescription": {
+    "message": "Description"
+  },
+  "remoteOnsite": {
+    "message": "Sur site"
+  },
+  "remoteHybrid": {
+    "message": "Hybride"
+  },
+  "remoteRemote": {
+    "message": "À distance"
+  },
+  "employmentFullTime": {
+    "message": "Temps plein"
+  },
+  "employmentPartTime": {
+    "message": "Temps partiel"
+  },
+  "employmentContract": {
+    "message": "CDD"
+  },
+  "employmentFreelance": {
+    "message": "Indépendant"
+  },
+  "employmentInternship": {
+    "message": "Stage"
+  },
+  "employmentApprenticeship": {
+    "message": "Apprentissage"
+  },
+  "periodYear": {
+    "message": "Par an"
+  },
+  "periodMonth": {
+    "message": "Par mois"
+  },
+  "periodDay": {
+    "message": "Par jour"
+  },
+  "periodHour": {
+    "message": "Par heure"
   }
 }

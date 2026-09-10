@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "De pagina kon niet worden gelezen. Sommige pagina's blokkeren extensies."
+  },
+  "previewing": {
+    "message": "Postulo wordt gevraagd wat het hier leest…"
+  },
+  "reviewHint": {
+    "message": "Dit heeft Postulo op de pagina gelezen. Verbeter wat niet klopt voordat u het verstuurt."
+  },
+  "sendForReview": {
+    "message": "Ter controle versturen"
+  },
+  "fieldTitle": {
+    "message": "Functietitel"
+  },
+  "fieldCompany": {
+    "message": "Bedrijf"
+  },
+  "fieldLocation": {
+    "message": "Locatie"
+  },
+  "fieldRemote": {
+    "message": "Werkvorm"
+  },
+  "fieldEmployment": {
+    "message": "Soort dienstverband"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salaris vanaf"
+  },
+  "fieldSalaryTo": {
+    "message": "Salaris tot"
+  },
+  "fieldCurrency": {
+    "message": "Valuta"
+  },
+  "fieldPeriod": {
+    "message": "Periode"
+  },
+  "fieldCloses": {
+    "message": "Sluitingsdatum"
+  },
+  "fieldDescription": {
+    "message": "Beschrijving"
+  },
+  "remoteOnsite": {
+    "message": "Op locatie"
+  },
+  "remoteHybrid": {
+    "message": "Hybride"
+  },
+  "remoteRemote": {
+    "message": "Op afstand"
+  },
+  "employmentFullTime": {
+    "message": "Voltijd"
+  },
+  "employmentPartTime": {
+    "message": "Deeltijd"
+  },
+  "employmentContract": {
+    "message": "Tijdelijk contract"
+  },
+  "employmentFreelance": {
+    "message": "Freelance"
+  },
+  "employmentInternship": {
+    "message": "Stage"
+  },
+  "employmentApprenticeship": {
+    "message": "Leertraject"
+  },
+  "periodYear": {
+    "message": "Per jaar"
+  },
+  "periodMonth": {
+    "message": "Per maand"
+  },
+  "periodDay": {
+    "message": "Per dag"
+  },
+  "periodHour": {
+    "message": "Per uur"
   }
 }

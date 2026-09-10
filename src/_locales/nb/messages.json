@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Siden kunne ikke leses. Noen sider blokkerer utvidelser."
+  },
+  "previewing": {
+    "message": "Spør Postulo hva den leser her …"
+  },
+  "reviewHint": {
+    "message": "Dette er hva Postulo leste på siden. Rett det som er feil før du sender det."
+  },
+  "sendForReview": {
+    "message": "Send til gjennomsyn"
+  },
+  "fieldTitle": {
+    "message": "Stillingstittel"
+  },
+  "fieldCompany": {
+    "message": "Selskap"
+  },
+  "fieldLocation": {
+    "message": "Sted"
+  },
+  "fieldRemote": {
+    "message": "Arbeidsform"
+  },
+  "fieldEmployment": {
+    "message": "Ansettelsesform"
+  },
+  "fieldSalaryFrom": {
+    "message": "Lønn fra"
+  },
+  "fieldSalaryTo": {
+    "message": "Lønn til"
+  },
+  "fieldCurrency": {
+    "message": "Valuta"
+  },
+  "fieldPeriod": {
+    "message": "Periode"
+  },
+  "fieldCloses": {
+    "message": "Sluttdato"
+  },
+  "fieldDescription": {
+    "message": "Beskrivelse"
+  },
+  "remoteOnsite": {
+    "message": "På stedet"
+  },
+  "remoteHybrid": {
+    "message": "Hybrid"
+  },
+  "remoteRemote": {
+    "message": "Hjemmefra"
+  },
+  "employmentFullTime": {
+    "message": "Heltid"
+  },
+  "employmentPartTime": {
+    "message": "Deltid"
+  },
+  "employmentContract": {
+    "message": "Kontrakt"
+  },
+  "employmentFreelance": {
+    "message": "Frilans"
+  },
+  "employmentInternship": {
+    "message": "Praksisplass"
+  },
+  "employmentApprenticeship": {
+    "message": "Lærlingplass"
+  },
+  "periodYear": {
+    "message": "Per år"
+  },
+  "periodMonth": {
+    "message": "Per måned"
+  },
+  "periodDay": {
+    "message": "Per dag"
+  },
+  "periodHour": {
+    "message": "Per time"
   }
 }

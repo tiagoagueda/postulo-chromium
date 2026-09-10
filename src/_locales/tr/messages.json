@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Sayfa okunamadı. Bazı sayfalar uzantıları engeller."
+  },
+  "previewing": {
+    "message": "Postulo'ya burada ne okuduğu soruluyor…"
+  },
+  "reviewHint": {
+    "message": "Postulo'nun sayfadan okudukları bunlar. Göndermeden önce yanlış olanları düzeltin."
+  },
+  "sendForReview": {
+    "message": "İncelemeye gönder"
+  },
+  "fieldTitle": {
+    "message": "İş unvanı"
+  },
+  "fieldCompany": {
+    "message": "Şirket"
+  },
+  "fieldLocation": {
+    "message": "Yer"
+  },
+  "fieldRemote": {
+    "message": "Çalışma düzeni"
+  },
+  "fieldEmployment": {
+    "message": "Çalışma türü"
+  },
+  "fieldSalaryFrom": {
+    "message": "Maaş alt sınırı"
+  },
+  "fieldSalaryTo": {
+    "message": "Maaş üst sınırı"
+  },
+  "fieldCurrency": {
+    "message": "Para birimi"
+  },
+  "fieldPeriod": {
+    "message": "Dönem"
+  },
+  "fieldCloses": {
+    "message": "Kapanış tarihi"
+  },
+  "fieldDescription": {
+    "message": "Açıklama"
+  },
+  "remoteOnsite": {
+    "message": "Yerinde"
+  },
+  "remoteHybrid": {
+    "message": "Karma"
+  },
+  "remoteRemote": {
+    "message": "Uzaktan"
+  },
+  "employmentFullTime": {
+    "message": "Tam zamanlı"
+  },
+  "employmentPartTime": {
+    "message": "Yarı zamanlı"
+  },
+  "employmentContract": {
+    "message": "Sözleşmeli"
+  },
+  "employmentFreelance": {
+    "message": "Serbest"
+  },
+  "employmentInternship": {
+    "message": "Staj"
+  },
+  "employmentApprenticeship": {
+    "message": "Çıraklık"
+  },
+  "periodYear": {
+    "message": "Yıllık"
+  },
+  "periodMonth": {
+    "message": "Aylık"
+  },
+  "periodDay": {
+    "message": "Günlük"
+  },
+  "periodHour": {
+    "message": "Saatlik"
   }
 }

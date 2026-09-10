@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "გვერდის წაკითხვა ვერ მოხერხდა. ზოგი გვერდი გაფართოებებს ბლოკავს."
+  },
+  "previewing": {
+    "message": "ვეკითხებით Postulo-ს, რას კითხულობს აქ…"
+  },
+  "reviewHint": {
+    "message": "ეს არის ის, რაც Postulo-მ გვერდიდან წაიკითხა. გაგზავნამდე შეასწორეთ ყველაფერი, რაც არასწორია."
+  },
+  "sendForReview": {
+    "message": "განსახილველად გაგზავნა"
+  },
+  "fieldTitle": {
+    "message": "თანამდებობის დასახელება"
+  },
+  "fieldCompany": {
+    "message": "კომპანია"
+  },
+  "fieldLocation": {
+    "message": "ადგილმდებარეობა"
+  },
+  "fieldRemote": {
+    "message": "მუშაობის ფორმა"
+  },
+  "fieldEmployment": {
+    "message": "დასაქმების ტიპი"
+  },
+  "fieldSalaryFrom": {
+    "message": "ხელფასი დან"
+  },
+  "fieldSalaryTo": {
+    "message": "ხელფასი მდე"
+  },
+  "fieldCurrency": {
+    "message": "ვალუტა"
+  },
+  "fieldPeriod": {
+    "message": "პერიოდი"
+  },
+  "fieldCloses": {
+    "message": "დახურვის თარიღი"
+  },
+  "fieldDescription": {
+    "message": "აღწერა"
+  },
+  "remoteOnsite": {
+    "message": "ადგილზე"
+  },
+  "remoteHybrid": {
+    "message": "ჰიბრიდული"
+  },
+  "remoteRemote": {
+    "message": "დისტანციური"
+  },
+  "employmentFullTime": {
+    "message": "სრული განაკვეთი"
+  },
+  "employmentPartTime": {
+    "message": "ნახევარი განაკვეთი"
+  },
+  "employmentContract": {
+    "message": "კონტრაქტი"
+  },
+  "employmentFreelance": {
+    "message": "თავისუფალი დასაქმება"
+  },
+  "employmentInternship": {
+    "message": "სტაჟირება"
+  },
+  "employmentApprenticeship": {
+    "message": "შეგირდობა"
+  },
+  "periodYear": {
+    "message": "წელიწადში"
+  },
+  "periodMonth": {
+    "message": "თვეში"
+  },
+  "periodDay": {
+    "message": "დღეში"
+  },
+  "periodHour": {
+    "message": "საათში"
   }
 }

@@ -226,5 +226,113 @@
   "unreadable": {
     "message": "The page could not be read. Some pages block extensions.",
     "description": "Reading the page failed."
+  },
+  "previewing": {
+    "message": "Asking Postulo what it reads here…",
+    "description": "Status while Postulo reads the page without keeping it."
+  },
+  "reviewHint": {
+    "message": "This is what Postulo read from the page. Correct anything it got wrong before sending it.",
+    "description": "Above the form showing what was read, before anything is sent."
+  },
+  "sendForReview": {
+    "message": "Send for review",
+    "description": "Button under that form: sends the page with the corrections, to be confirmed in Postulo."
+  },
+  "fieldTitle": {
+    "message": "Job title",
+    "description": "Field label. Postulo's own word, from its posting form."
+  },
+  "fieldCompany": {
+    "message": "Company",
+    "description": "Field label. Postulo's own word, from its posting form."
+  },
+  "fieldLocation": {
+    "message": "Location",
+    "description": "Field label. Postulo's own word, from its posting form."
+  },
+  "fieldRemote": {
+    "message": "Working arrangement",
+    "description": "Field label: on site, hybrid or remote. Postulo's own word."
+  },
+  "fieldEmployment": {
+    "message": "Employment type",
+    "description": "Field label. Postulo's own word, from its posting form."
+  },
+  "fieldSalaryFrom": {
+    "message": "Salary from",
+    "description": "Field label. Postulo's own word, from its posting form."
+  },
+  "fieldSalaryTo": {
+    "message": "Salary to",
+    "description": "Field label. Postulo's own word, from its posting form."
+  },
+  "fieldCurrency": {
+    "message": "Currency",
+    "description": "Field label: a three-letter code such as EUR. Postulo's own word."
+  },
+  "fieldPeriod": {
+    "message": "Period",
+    "description": "Field label: what the salary is per. Postulo's own word."
+  },
+  "fieldCloses": {
+    "message": "Closing date",
+    "description": "Field label: when applications close. Postulo's own word."
+  },
+  "fieldDescription": {
+    "message": "Description",
+    "description": "The posting's text, folded away. Postulo's own word."
+  },
+  "remoteOnsite": {
+    "message": "On site",
+    "description": "A working arrangement. Postulo's own word."
+  },
+  "remoteHybrid": {
+    "message": "Hybrid",
+    "description": "A working arrangement. Postulo's own word."
+  },
+  "remoteRemote": {
+    "message": "Remote",
+    "description": "A working arrangement. Postulo's own word."
+  },
+  "employmentFullTime": {
+    "message": "Full time",
+    "description": "An employment type. Postulo's own word."
+  },
+  "employmentPartTime": {
+    "message": "Part time",
+    "description": "An employment type. Postulo's own word."
+  },
+  "employmentContract": {
+    "message": "Contract",
+    "description": "An employment type: fixed-term. Postulo's own word."
+  },
+  "employmentFreelance": {
+    "message": "Freelance",
+    "description": "An employment type. Postulo's own word."
+  },
+  "employmentInternship": {
+    "message": "Internship",
+    "description": "An employment type. Postulo's own word."
+  },
+  "employmentApprenticeship": {
+    "message": "Apprenticeship",
+    "description": "An employment type. Postulo's own word."
+  },
+  "periodYear": {
+    "message": "Per year",
+    "description": "A salary period. Postulo's own word."
+  },
+  "periodMonth": {
+    "message": "Per month",
+    "description": "A salary period. Postulo's own word."
+  },
+  "periodDay": {
+    "message": "Per day",
+    "description": "A salary period. Postulo's own word."
+  },
+  "periodHour": {
+    "message": "Per hour",
+    "description": "A salary period. Postulo's own word."
   }
 }

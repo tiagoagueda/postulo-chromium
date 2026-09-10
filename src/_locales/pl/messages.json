@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Nie udało się odczytać strony. Niektóre strony blokują rozszerzenia."
+  },
+  "previewing": {
+    "message": "Pytanie Postulo, co tu odczytuje…"
+  },
+  "reviewHint": {
+    "message": "Tyle Postulo odczytało ze strony. Popraw to, co się nie zgadza, zanim to wyślesz."
+  },
+  "sendForReview": {
+    "message": "Wyślij do sprawdzenia"
+  },
+  "fieldTitle": {
+    "message": "Nazwa stanowiska"
+  },
+  "fieldCompany": {
+    "message": "Firma"
+  },
+  "fieldLocation": {
+    "message": "Lokalizacja"
+  },
+  "fieldRemote": {
+    "message": "Tryb pracy"
+  },
+  "fieldEmployment": {
+    "message": "Rodzaj zatrudnienia"
+  },
+  "fieldSalaryFrom": {
+    "message": "Wynagrodzenie od"
+  },
+  "fieldSalaryTo": {
+    "message": "Wynagrodzenie do"
+  },
+  "fieldCurrency": {
+    "message": "Waluta"
+  },
+  "fieldPeriod": {
+    "message": "Okres"
+  },
+  "fieldCloses": {
+    "message": "Termin zamknięcia"
+  },
+  "fieldDescription": {
+    "message": "Opis"
+  },
+  "remoteOnsite": {
+    "message": "Na miejscu"
+  },
+  "remoteHybrid": {
+    "message": "Hybrydowo"
+  },
+  "remoteRemote": {
+    "message": "Zdalnie"
+  },
+  "employmentFullTime": {
+    "message": "Pełny etat"
+  },
+  "employmentPartTime": {
+    "message": "Niepełny etat"
+  },
+  "employmentContract": {
+    "message": "Umowa na czas określony"
+  },
+  "employmentFreelance": {
+    "message": "Freelancer"
+  },
+  "employmentInternship": {
+    "message": "Staż"
+  },
+  "employmentApprenticeship": {
+    "message": "Praktyka zawodowa"
+  },
+  "periodYear": {
+    "message": "Rocznie"
+  },
+  "periodMonth": {
+    "message": "Miesięcznie"
+  },
+  "periodDay": {
+    "message": "Dziennie"
+  },
+  "periodHour": {
+    "message": "Godzinowo"
   }
 }

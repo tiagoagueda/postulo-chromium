@@ -2,7 +2,18 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { Refusal, capture, describe, endpoint, normaliseInstance, originPattern, readResponse, whoAmI } from "../src/lib/api.js";
+import {
+  Refusal,
+  capture,
+  corrections,
+  describe,
+  endpoint,
+  normaliseInstance,
+  originPattern,
+  preview,
+  readResponse,
+  whoAmI,
+} from "../src/lib/api.js";
 
 // The extension's own refusals carry a key into _locales, not a sentence: said in the browser's language.
 const refusal = (key, substitutions = []) => (error) =>
@@ -40,6 +51,10 @@ test("responses become data or a sentence a person can act on", async () => {
   await assert.rejects(readResponse(fakeResponse(403, { detail: "This token does not have the 'captures' scope." })), /captures/);
   await assert.rejects(readResponse(fakeResponse(403, {})), refusal("notAllowed"));
   await assert.rejects(readResponse(fakeResponse(422, { detail: "That page yielded nothing." })), /nothing/);
+  await assert.rejects(
+    readResponse(fakeResponse(422, { detail: [{ loc: ["body", "payload", "data", "title"], msg: "Value error, A posting needs a title." }] })),
+    { message: "title: Value error, A posting needs a title." },
+  );
   await assert.rejects(readResponse(fakeResponse(429, {})), refusal("tooMany"));
   await assert.rejects(readResponse(fakeResponse(500, null)), refusal("answered", ["500"]));
 });
@@ -69,4 +84,82 @@ test("the test button asks /me", async () => {
   });
   assert.equal(asked, "https://postulo.example.org/api/v1/me");
   assert.deepEqual(me.scopes, ["captures"]);
+});
+
+const READ = {
+  title: "Research Engineer",
+  company_name: "Black Mesa",
+  location: "",
+  remote_type: "",
+  employment_type: "full_time",
+  description: "Science.",
+  salary_min: "55000.00",
+  salary_max: null,
+  salary_currency: "EUR",
+  salary_period: "year",
+  closes_at: "2026-10-01",
+};
+
+function asTheFormShowsIt(read) {
+  return Object.fromEntries(Object.entries(read).map(([field, value]) => [field, value === null ? "" : String(value)]));
+}
+
+test("a preview asks Postulo what it reads, and an older Postulo is told apart from a refusal", async () => {
+  const calls = [];
+  const seen = await preview("https://postulo.example.org", "tok", { url: "https://jobs.example/1", html: "<html>" }, async (url, init) => {
+    calls.push({ url, init });
+    return fakeResponse(200, { url: "https://jobs.example/1", source: "schema.org", data: READ });
+  });
+  assert.equal(calls[0].url, "https://postulo.example.org/api/v1/captures/preview");
+  assert.equal(calls[0].init.method, "POST");
+  assert.deepEqual(JSON.parse(calls[0].init.body), { url: "https://jobs.example/1", html: "<html>" });
+  assert.equal(seen.data.title, "Research Engineer");
+
+  assert.equal(await preview("https://old.example.org", "tok", { url: "u", html: "h" }, async () => fakeResponse(404, null)), null);
+  await assert.rejects(
+    preview("https://postulo.example.org", "tok", { url: "u", html: "h" }, async () => fakeResponse(422, { detail: "Nothing resembling a job posting was found there." })),
+    /job posting/,
+  );
+});
+
+test("nothing touched is nothing corrected, whatever shape Postulo wrote it in", () => {
+  assert.deepEqual(corrections(READ, asTheFormShowsIt(READ)), {});
+  assert.deepEqual(corrections(READ, { ...asTheFormShowsIt(READ), salary_min: "55000" }), {});
+  assert.deepEqual(corrections(READ, { ...asTheFormShowsIt(READ), title: "  Research Engineer " }), {});
+});
+
+test("only what was changed is sent, and an emptied field is cleared rather than kept", () => {
+  const form = {
+    ...asTheFormShowsIt(READ),
+    title: "Senior Research Engineer",
+    location: "Lyon",
+    salary_min: "",
+    salary_max: "65000",
+    closes_at: "",
+    remote_type: "hybrid",
+  };
+  assert.deepEqual(corrections(READ, form), {
+    title: "Senior Research Engineer",
+    location: "Lyon",
+    salary_min: null,
+    salary_max: "65000",
+    closes_at: null,
+    remote_type: "hybrid",
+  });
+});
+
+test("a capture carries the corrections, and none when there are none", async () => {
+  const bodies = [];
+  const fetchImpl = async (url, init) => {
+    bodies.push(JSON.parse(init.body));
+    return fakeResponse(201, { title: "Senior Research Engineer", review_url: "https://postulo.example.org/r/1" });
+  };
+  await capture("https://postulo.example.org", "tok", { url: "u", html: "h", data: { title: "Senior Research Engineer" } }, fetchImpl);
+  await capture("https://postulo.example.org", "tok", { url: "u", html: "h", data: {} }, fetchImpl);
+  await capture("https://postulo.example.org", "tok", { url: "u", html: "h" }, fetchImpl);
+  assert.deepEqual(bodies, [
+    { url: "u", html: "h", data: { title: "Senior Research Engineer" } },
+    { url: "u", html: "h" },
+    { url: "u", html: "h" },
+  ]);
 });

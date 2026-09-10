@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Էջը հնարավոր չեղավ կարդալ։ Որոշ էջեր արգելափակում են ընդլայնումները։"
+  },
+  "previewing": {
+    "message": "Հարցնում ենք Postulo-ին, թե ինչ է այն կարդում այստեղ…"
+  },
+  "reviewHint": {
+    "message": "Սա է այն, ինչ Postulo-ն կարդաց էջից։ Ուղղեք սխալները՝ նախքան ուղարկելը։"
+  },
+  "sendForReview": {
+    "message": "Ուղարկել ստուգման"
+  },
+  "fieldTitle": {
+    "message": "Պաշտոնի անվանում"
+  },
+  "fieldCompany": {
+    "message": "Ընկերություն"
+  },
+  "fieldLocation": {
+    "message": "Գտնվելու վայր"
+  },
+  "fieldRemote": {
+    "message": "Աշխատանքի ձևը"
+  },
+  "fieldEmployment": {
+    "message": "Զբաղվածության տեսակ"
+  },
+  "fieldSalaryFrom": {
+    "message": "Աշխատավարձ՝ սկսած"
+  },
+  "fieldSalaryTo": {
+    "message": "Աշխատավարձ՝ մինչև"
+  },
+  "fieldCurrency": {
+    "message": "Արժույթ"
+  },
+  "fieldPeriod": {
+    "message": "Ժամանակահատված"
+  },
+  "fieldCloses": {
+    "message": "Փակման ամսաթիվ"
+  },
+  "fieldDescription": {
+    "message": "Նկարագրություն"
+  },
+  "remoteOnsite": {
+    "message": "Տեղում"
+  },
+  "remoteHybrid": {
+    "message": "Հիբրիդային"
+  },
+  "remoteRemote": {
+    "message": "Հեռավար"
+  },
+  "employmentFullTime": {
+    "message": "Լրիվ դրույք"
+  },
+  "employmentPartTime": {
+    "message": "Կես դրույք"
+  },
+  "employmentContract": {
+    "message": "Պայմանագիր"
+  },
+  "employmentFreelance": {
+    "message": "Ազատ զբաղվածություն"
+  },
+  "employmentInternship": {
+    "message": "Պրակտիկա"
+  },
+  "employmentApprenticeship": {
+    "message": "Աշկերտություն"
+  },
+  "periodYear": {
+    "message": "Տարեկան"
+  },
+  "periodMonth": {
+    "message": "Ամսական"
+  },
+  "periodDay": {
+    "message": "Օրական"
+  },
+  "periodHour": {
+    "message": "Ժամական"
   }
 }

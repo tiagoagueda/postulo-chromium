@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "No s'ha pogut llegir la pàgina. Algunes pàgines bloquegen les extensions."
+  },
+  "previewing": {
+    "message": "Preguntant a Postulo què hi llegeix…"
+  },
+  "reviewHint": {
+    "message": "Això és el que Postulo ha llegit de la pàgina. Corregiu el que estigui malament abans d'enviar-ho."
+  },
+  "sendForReview": {
+    "message": "Envia a revisió"
+  },
+  "fieldTitle": {
+    "message": "Càrrec"
+  },
+  "fieldCompany": {
+    "message": "Empresa"
+  },
+  "fieldLocation": {
+    "message": "Ubicació"
+  },
+  "fieldRemote": {
+    "message": "Modalitat de treball"
+  },
+  "fieldEmployment": {
+    "message": "Tipus de contracte"
+  },
+  "fieldSalaryFrom": {
+    "message": "Sou des de"
+  },
+  "fieldSalaryTo": {
+    "message": "Sou fins a"
+  },
+  "fieldCurrency": {
+    "message": "Moneda"
+  },
+  "fieldPeriod": {
+    "message": "Període"
+  },
+  "fieldCloses": {
+    "message": "Data de tancament"
+  },
+  "fieldDescription": {
+    "message": "Descripció"
+  },
+  "remoteOnsite": {
+    "message": "Presencial"
+  },
+  "remoteHybrid": {
+    "message": "Híbrid"
+  },
+  "remoteRemote": {
+    "message": "Remot"
+  },
+  "employmentFullTime": {
+    "message": "Jornada completa"
+  },
+  "employmentPartTime": {
+    "message": "Jornada parcial"
+  },
+  "employmentContract": {
+    "message": "Contracte"
+  },
+  "employmentFreelance": {
+    "message": "Autònom"
+  },
+  "employmentInternship": {
+    "message": "Pràctiques"
+  },
+  "employmentApprenticeship": {
+    "message": "Aprenentatge"
+  },
+  "periodYear": {
+    "message": "A l'any"
+  },
+  "periodMonth": {
+    "message": "Al mes"
+  },
+  "periodDay": {
+    "message": "Al dia"
+  },
+  "periodHour": {
+    "message": "A l'hora"
   }
 }

@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Lehte ei õnnestunud lugeda. Mõned lehed blokeerivad laiendusi."
+  },
+  "previewing": {
+    "message": "Küsime Postulolt, mida ta siit loeb…"
+  },
+  "reviewHint": {
+    "message": "Selle luges Postulo lehelt. Parandage vead enne saatmist."
+  },
+  "sendForReview": {
+    "message": "Saada ülevaatamiseks"
+  },
+  "fieldTitle": {
+    "message": "Ametinimetus"
+  },
+  "fieldCompany": {
+    "message": "Ettevõte"
+  },
+  "fieldLocation": {
+    "message": "Asukoht"
+  },
+  "fieldRemote": {
+    "message": "Töökorraldus"
+  },
+  "fieldEmployment": {
+    "message": "Töösuhte liik"
+  },
+  "fieldSalaryFrom": {
+    "message": "Palk alates"
+  },
+  "fieldSalaryTo": {
+    "message": "Palk kuni"
+  },
+  "fieldCurrency": {
+    "message": "Valuuta"
+  },
+  "fieldPeriod": {
+    "message": "Periood"
+  },
+  "fieldCloses": {
+    "message": "Sulgemiskuupäev"
+  },
+  "fieldDescription": {
+    "message": "Kirjeldus"
+  },
+  "remoteOnsite": {
+    "message": "Kohapeal"
+  },
+  "remoteHybrid": {
+    "message": "Hübriid"
+  },
+  "remoteRemote": {
+    "message": "Kaugtöö"
+  },
+  "employmentFullTime": {
+    "message": "Täistööaeg"
+  },
+  "employmentPartTime": {
+    "message": "Osaline tööaeg"
+  },
+  "employmentContract": {
+    "message": "Tähtajaline"
+  },
+  "employmentFreelance": {
+    "message": "Vabakutseline"
+  },
+  "employmentInternship": {
+    "message": "Praktika"
+  },
+  "employmentApprenticeship": {
+    "message": "Õpipoisiõpe"
+  },
+  "periodYear": {
+    "message": "Aastas"
+  },
+  "periodMonth": {
+    "message": "Kuus"
+  },
+  "periodDay": {
+    "message": "Päevas"
+  },
+  "periodHour": {
+    "message": "Tunnis"
   }
 }

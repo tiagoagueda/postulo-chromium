@@ -44,8 +44,13 @@ permanently once signed; see that repository).
 2. Click the extension's icon, then *Set it up*: paste your Postulo's address and the
    token. *Test* asks Postulo who the token is. *Save* asks the browser for permission to
    reach that address.
-3. On a job posting, click the icon and **Capture this posting**. The result names what
-   Postulo read and links to the review screen.
+3. On a job posting, click the icon and **Capture this posting**. The popup shows what
+   Postulo read from the page — title, company, location, arrangement, contract, salary,
+   closing date, description — and nothing is kept yet. Correct what it got wrong, then
+   **Send for review**: the capture waits in Postulo's review queue with your corrections,
+   and the popup links to its review screen. Only the fields you changed are sent as
+   corrections; the rest stays what the page said. A Postulo older than the preview
+   (before 0.3.0) gets the page straight away, as before.
 
 ## Languages
 

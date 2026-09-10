@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Strani ni bilo mogoče prebrati. Nekatere strani blokirajo razširitve."
+  },
+  "previewing": {
+    "message": "Postulo sprašujemo, kaj prebere tukaj …"
+  },
+  "reviewHint": {
+    "message": "To je Postulo prebral s strani. Pred pošiljanjem popravite, kar je narobe."
+  },
+  "sendForReview": {
+    "message": "Pošlji v pregled"
+  },
+  "fieldTitle": {
+    "message": "Naziv delovnega mesta"
+  },
+  "fieldCompany": {
+    "message": "Podjetje"
+  },
+  "fieldLocation": {
+    "message": "Lokacija"
+  },
+  "fieldRemote": {
+    "message": "Način dela"
+  },
+  "fieldEmployment": {
+    "message": "Vrsta zaposlitve"
+  },
+  "fieldSalaryFrom": {
+    "message": "Plača od"
+  },
+  "fieldSalaryTo": {
+    "message": "Plača do"
+  },
+  "fieldCurrency": {
+    "message": "Valuta"
+  },
+  "fieldPeriod": {
+    "message": "Obdobje"
+  },
+  "fieldCloses": {
+    "message": "Rok za prijavo"
+  },
+  "fieldDescription": {
+    "message": "Opis"
+  },
+  "remoteOnsite": {
+    "message": "Na lokaciji"
+  },
+  "remoteHybrid": {
+    "message": "Hibridno"
+  },
+  "remoteRemote": {
+    "message": "Na daljavo"
+  },
+  "employmentFullTime": {
+    "message": "Polni delovni čas"
+  },
+  "employmentPartTime": {
+    "message": "Krajši delovni čas"
+  },
+  "employmentContract": {
+    "message": "Za določen čas"
+  },
+  "employmentFreelance": {
+    "message": "Samostojni delavec"
+  },
+  "employmentInternship": {
+    "message": "Pripravništvo"
+  },
+  "employmentApprenticeship": {
+    "message": "Vajeništvo"
+  },
+  "periodYear": {
+    "message": "Na leto"
+  },
+  "periodMonth": {
+    "message": "Na mesec"
+  },
+  "periodDay": {
+    "message": "Na dan"
+  },
+  "periodHour": {
+    "message": "Na uro"
   }
 }

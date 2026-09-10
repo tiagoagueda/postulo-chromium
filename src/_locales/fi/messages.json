@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Sivua ei voitu lukea. Jotkin sivut estävät laajennukset."
+  },
+  "previewing": {
+    "message": "Kysytään Postulolta, mitä se lukee tästä…"
+  },
+  "reviewHint": {
+    "message": "Tämän Postulo luki sivulta. Korjaa virheet ennen lähettämistä."
+  },
+  "sendForReview": {
+    "message": "Lähetä tarkistettavaksi"
+  },
+  "fieldTitle": {
+    "message": "Tehtävänimike"
+  },
+  "fieldCompany": {
+    "message": "Yritys"
+  },
+  "fieldLocation": {
+    "message": "Sijainti"
+  },
+  "fieldRemote": {
+    "message": "Työjärjestely"
+  },
+  "fieldEmployment": {
+    "message": "Työsuhteen tyyppi"
+  },
+  "fieldSalaryFrom": {
+    "message": "Palkka alkaen"
+  },
+  "fieldSalaryTo": {
+    "message": "Palkka enintään"
+  },
+  "fieldCurrency": {
+    "message": "Valuutta"
+  },
+  "fieldPeriod": {
+    "message": "Jakso"
+  },
+  "fieldCloses": {
+    "message": "Hakuaika päättyy"
+  },
+  "fieldDescription": {
+    "message": "Kuvaus"
+  },
+  "remoteOnsite": {
+    "message": "Paikan päällä"
+  },
+  "remoteHybrid": {
+    "message": "Hybridi"
+  },
+  "remoteRemote": {
+    "message": "Etätyö"
+  },
+  "employmentFullTime": {
+    "message": "Kokoaikainen"
+  },
+  "employmentPartTime": {
+    "message": "Osa-aikainen"
+  },
+  "employmentContract": {
+    "message": "Määräaikainen"
+  },
+  "employmentFreelance": {
+    "message": "Freelance"
+  },
+  "employmentInternship": {
+    "message": "Harjoittelu"
+  },
+  "employmentApprenticeship": {
+    "message": "Oppisopimus"
+  },
+  "periodYear": {
+    "message": "Vuodessa"
+  },
+  "periodMonth": {
+    "message": "Kuukaudessa"
+  },
+  "periodDay": {
+    "message": "Päivässä"
+  },
+  "periodHour": {
+    "message": "Tunnissa"
   }
 }

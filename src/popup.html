@@ -21,6 +21,92 @@
       <p class="hint" data-i18n="captureHint">The page you are looking at is sent to your Postulo and nowhere else.</p>
     </section>
 
+    <!-- What Postulo read, before anything is kept: the fields its review screen opens with,
+         less the ones a person rarely needs to fix from the posting itself. -->
+    <section id="edit" hidden>
+      <p class="hint" data-i18n="reviewHint">This is what Postulo read from the page. Correct anything it got wrong before sending it.</p>
+      <form id="posting">
+        <label for="f-title" data-i18n="fieldTitle">Job title</label>
+        <input id="f-title" name="title" maxlength="500" required />
+
+        <div class="pair">
+          <div>
+            <label for="f-company" data-i18n="fieldCompany">Company</label>
+            <input id="f-company" name="company_name" maxlength="500" />
+          </div>
+          <div>
+            <label for="f-location" data-i18n="fieldLocation">Location</label>
+            <input id="f-location" name="location" maxlength="500" />
+          </div>
+        </div>
+
+        <div class="pair">
+          <div>
+            <label for="f-remote" data-i18n="fieldRemote">Working arrangement</label>
+            <select id="f-remote" name="remote_type">
+              <option value="">—</option>
+              <option value="onsite" data-i18n="remoteOnsite">On site</option>
+              <option value="hybrid" data-i18n="remoteHybrid">Hybrid</option>
+              <option value="remote" data-i18n="remoteRemote">Remote</option>
+            </select>
+          </div>
+          <div>
+            <label for="f-employment" data-i18n="fieldEmployment">Employment type</label>
+            <select id="f-employment" name="employment_type">
+              <option value="">—</option>
+              <option value="full_time" data-i18n="employmentFullTime">Full time</option>
+              <option value="part_time" data-i18n="employmentPartTime">Part time</option>
+              <option value="contract" data-i18n="employmentContract">Contract</option>
+              <option value="freelance" data-i18n="employmentFreelance">Freelance</option>
+              <option value="internship" data-i18n="employmentInternship">Internship</option>
+              <option value="apprenticeship" data-i18n="employmentApprenticeship">Apprenticeship</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pair">
+          <div>
+            <label for="f-salary-min" data-i18n="fieldSalaryFrom">Salary from</label>
+            <input id="f-salary-min" name="salary_min" type="number" min="0" step="any" inputmode="decimal" />
+          </div>
+          <div>
+            <label for="f-salary-max" data-i18n="fieldSalaryTo">Salary to</label>
+            <input id="f-salary-max" name="salary_max" type="number" min="0" step="any" inputmode="decimal" />
+          </div>
+        </div>
+
+        <div class="pair">
+          <div>
+            <label for="f-currency" data-i18n="fieldCurrency">Currency</label>
+            <input id="f-currency" name="salary_currency" maxlength="3" autocapitalize="characters" spellcheck="false" />
+          </div>
+          <div>
+            <label for="f-period" data-i18n="fieldPeriod">Period</label>
+            <select id="f-period" name="salary_period">
+              <option value="">—</option>
+              <option value="year" data-i18n="periodYear">Per year</option>
+              <option value="month" data-i18n="periodMonth">Per month</option>
+              <option value="day" data-i18n="periodDay">Per day</option>
+              <option value="hour" data-i18n="periodHour">Per hour</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="f-closes" data-i18n="fieldCloses">Closing date</label>
+        <input id="f-closes" name="closes_at" type="date" />
+
+        <details>
+          <summary id="f-description-label" data-i18n="fieldDescription">Description</summary>
+          <textarea id="f-description" name="description" rows="7" aria-labelledby="f-description-label"></textarea>
+        </details>
+
+        <div class="send">
+          <button id="send" type="submit" class="primary" data-i18n="sendForReview">Send for review</button>
+          <span id="edit-read-by" class="muted"></span>
+        </div>
+      </form>
+    </section>
+
     <section id="result" hidden>
       <p id="summary"></p>
       <p id="read-by" class="muted"></p>

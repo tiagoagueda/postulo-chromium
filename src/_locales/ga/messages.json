@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Níorbh fhéidir an leathanach a léamh. Cuireann roinnt leathanach bac ar shínte."
+  },
+  "previewing": {
+    "message": "Ag fiafraí de Postulo cad a léann sé anseo…"
+  },
+  "reviewHint": {
+    "message": "Seo an méid a léigh Postulo ón leathanach. Ceartaigh aon rud atá mícheart sula seolfaidh tú é."
+  },
+  "sendForReview": {
+    "message": "Seol le haghaidh athbhreithnithe"
+  },
+  "fieldTitle": {
+    "message": "Teideal poist"
+  },
+  "fieldCompany": {
+    "message": "Cuideachta"
+  },
+  "fieldLocation": {
+    "message": "Suíomh"
+  },
+  "fieldRemote": {
+    "message": "Socrú oibre"
+  },
+  "fieldEmployment": {
+    "message": "Cineál fostaíochta"
+  },
+  "fieldSalaryFrom": {
+    "message": "Tuarastal ó"
+  },
+  "fieldSalaryTo": {
+    "message": "Tuarastal go"
+  },
+  "fieldCurrency": {
+    "message": "Airgeadra"
+  },
+  "fieldPeriod": {
+    "message": "Tréimhse"
+  },
+  "fieldCloses": {
+    "message": "Dáta dúnta"
+  },
+  "fieldDescription": {
+    "message": "Cur síos"
+  },
+  "remoteOnsite": {
+    "message": "Ar an láthair"
+  },
+  "remoteHybrid": {
+    "message": "Hibrideach"
+  },
+  "remoteRemote": {
+    "message": "Cianda"
+  },
+  "employmentFullTime": {
+    "message": "Lánaimseartha"
+  },
+  "employmentPartTime": {
+    "message": "Páirtaimseartha"
+  },
+  "employmentContract": {
+    "message": "Conradh"
+  },
+  "employmentFreelance": {
+    "message": "Saorfhostaí"
+  },
+  "employmentInternship": {
+    "message": "Intéirneacht"
+  },
+  "employmentApprenticeship": {
+    "message": "Printíseacht"
+  },
+  "periodYear": {
+    "message": "In aghaidh na bliana"
+  },
+  "periodMonth": {
+    "message": "In aghaidh na míosa"
+  },
+  "periodDay": {
+    "message": "In aghaidh an lae"
+  },
+  "periodHour": {
+    "message": "In aghaidh na huaire"
   }
 }

@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Puslapio nepavyko nuskaityti. Kai kurie puslapiai blokuoja plėtinius."
+  },
+  "previewing": {
+    "message": "Klausiama Postulo, ką jis čia perskaito…"
+  },
+  "reviewHint": {
+    "message": "Tai Postulo perskaitė puslapyje. Prieš siųsdami ištaisykite klaidas."
+  },
+  "sendForReview": {
+    "message": "Siųsti peržiūrai"
+  },
+  "fieldTitle": {
+    "message": "Pareigų pavadinimas"
+  },
+  "fieldCompany": {
+    "message": "Įmonė"
+  },
+  "fieldLocation": {
+    "message": "Vieta"
+  },
+  "fieldRemote": {
+    "message": "Darbo forma"
+  },
+  "fieldEmployment": {
+    "message": "Įdarbinimo tipas"
+  },
+  "fieldSalaryFrom": {
+    "message": "Atlyginimas nuo"
+  },
+  "fieldSalaryTo": {
+    "message": "Atlyginimas iki"
+  },
+  "fieldCurrency": {
+    "message": "Valiuta"
+  },
+  "fieldPeriod": {
+    "message": "Laikotarpis"
+  },
+  "fieldCloses": {
+    "message": "Pabaigos data"
+  },
+  "fieldDescription": {
+    "message": "Aprašymas"
+  },
+  "remoteOnsite": {
+    "message": "Vietoje"
+  },
+  "remoteHybrid": {
+    "message": "Hibridinis"
+  },
+  "remoteRemote": {
+    "message": "Nuotoliniu būdu"
+  },
+  "employmentFullTime": {
+    "message": "Visa darbo diena"
+  },
+  "employmentPartTime": {
+    "message": "Ne visa darbo diena"
+  },
+  "employmentContract": {
+    "message": "Terminuota sutartis"
+  },
+  "employmentFreelance": {
+    "message": "Laisvai samdomas"
+  },
+  "employmentInternship": {
+    "message": "Stažuotė"
+  },
+  "employmentApprenticeship": {
+    "message": "Pameistrystė"
+  },
+  "periodYear": {
+    "message": "Per metus"
+  },
+  "periodMonth": {
+    "message": "Per mėnesį"
+  },
+  "periodDay": {
+    "message": "Per dieną"
+  },
+  "periodHour": {
+    "message": "Per valandą"
   }
 }

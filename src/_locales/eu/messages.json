@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Ezin izan da orria irakurri. Orri batzuek hedapenak blokeatzen dituzte."
+  },
+  "previewing": {
+    "message": "Postulori galdetzen hemen zer irakurtzen duen…"
+  },
+  "reviewHint": {
+    "message": "Hau da Postulok orritik irakurri duena. Zuzendu gaizki dagoena bidali aurretik."
+  },
+  "sendForReview": {
+    "message": "Bidali berrikusteko"
+  },
+  "fieldTitle": {
+    "message": "Lanpostuaren izena"
+  },
+  "fieldCompany": {
+    "message": "Enpresa"
+  },
+  "fieldLocation": {
+    "message": "Kokapena"
+  },
+  "fieldRemote": {
+    "message": "Lan-modua"
+  },
+  "fieldEmployment": {
+    "message": "Kontratu mota"
+  },
+  "fieldSalaryFrom": {
+    "message": "Soldata honetatik"
+  },
+  "fieldSalaryTo": {
+    "message": "Soldata honetara"
+  },
+  "fieldCurrency": {
+    "message": "Moneta"
+  },
+  "fieldPeriod": {
+    "message": "Aldia"
+  },
+  "fieldCloses": {
+    "message": "Itxiera-data"
+  },
+  "fieldDescription": {
+    "message": "Deskribapena"
+  },
+  "remoteOnsite": {
+    "message": "Bertan"
+  },
+  "remoteHybrid": {
+    "message": "Hibridoa"
+  },
+  "remoteRemote": {
+    "message": "Urrunetik"
+  },
+  "employmentFullTime": {
+    "message": "Lanaldi osoa"
+  },
+  "employmentPartTime": {
+    "message": "Lanaldi partziala"
+  },
+  "employmentContract": {
+    "message": "Kontratua"
+  },
+  "employmentFreelance": {
+    "message": "Autonomoa"
+  },
+  "employmentInternship": {
+    "message": "Praktikak"
+  },
+  "employmentApprenticeship": {
+    "message": "Ikastuna"
+  },
+  "periodYear": {
+    "message": "Urtean"
+  },
+  "periodMonth": {
+    "message": "Hilean"
+  },
+  "periodDay": {
+    "message": "Egunean"
+  },
+  "periodHour": {
+    "message": "Orduan"
   }
 }

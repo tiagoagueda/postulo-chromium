@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Η σελίδα δεν μπόρεσε να διαβαστεί. Ορισμένες σελίδες μπλοκάρουν τις επεκτάσεις."
+  },
+  "previewing": {
+    "message": "Ρωτάμε το Postulo τι διαβάζει εδώ…"
+  },
+  "reviewHint": {
+    "message": "Αυτά διάβασε το Postulo από τη σελίδα. Διορθώστε ό,τι είναι λάθος πριν το στείλετε."
+  },
+  "sendForReview": {
+    "message": "Αποστολή για έλεγχο"
+  },
+  "fieldTitle": {
+    "message": "Τίτλος θέσης"
+  },
+  "fieldCompany": {
+    "message": "Εταιρεία"
+  },
+  "fieldLocation": {
+    "message": "Τοποθεσία"
+  },
+  "fieldRemote": {
+    "message": "Μορφή εργασίας"
+  },
+  "fieldEmployment": {
+    "message": "Τύπος απασχόλησης"
+  },
+  "fieldSalaryFrom": {
+    "message": "Μισθός από"
+  },
+  "fieldSalaryTo": {
+    "message": "Μισθός έως"
+  },
+  "fieldCurrency": {
+    "message": "Νόμισμα"
+  },
+  "fieldPeriod": {
+    "message": "Περίοδος"
+  },
+  "fieldCloses": {
+    "message": "Ημερομηνία λήξης"
+  },
+  "fieldDescription": {
+    "message": "Περιγραφή"
+  },
+  "remoteOnsite": {
+    "message": "Με φυσική παρουσία"
+  },
+  "remoteHybrid": {
+    "message": "Υβριδικό"
+  },
+  "remoteRemote": {
+    "message": "Εξ αποστάσεως"
+  },
+  "employmentFullTime": {
+    "message": "Πλήρης απασχόληση"
+  },
+  "employmentPartTime": {
+    "message": "Μερική απασχόληση"
+  },
+  "employmentContract": {
+    "message": "Ορισμένου χρόνου"
+  },
+  "employmentFreelance": {
+    "message": "Ελεύθερος επαγγελματίας"
+  },
+  "employmentInternship": {
+    "message": "Πρακτική άσκηση"
+  },
+  "employmentApprenticeship": {
+    "message": "Μαθητεία"
+  },
+  "periodYear": {
+    "message": "Ανά έτος"
+  },
+  "periodMonth": {
+    "message": "Ανά μήνα"
+  },
+  "periodDay": {
+    "message": "Ανά ημέρα"
+  },
+  "periodHour": {
+    "message": "Ανά ώρα"
   }
 }

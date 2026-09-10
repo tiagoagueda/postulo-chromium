@@ -84,7 +84,8 @@ export async function readResponse(response) {
     throw new Refusal("notAllowed");
   }
   if (response.status === 422 && body && body.detail) {
-    throw new Error(typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail));
+    // A sentence of Postulo's, or a list of refused fields, each saying where and why.
+    throw new Error(typeof body.detail === "string" ? body.detail : body.detail.map(problem).join(" "));
   }
   if (response.status === 429) {
     throw new Refusal("tooMany");
@@ -98,14 +99,68 @@ export async function whoAmI(instance, token, fetchImpl = fetch) {
   return readResponse(response);
 }
 
-/** POST /captures with the page's address and its source. */
-export async function capture(instance, token, { url, html }, fetchImpl = fetch) {
-  const response = await fetchImpl(endpoint(instance, "/captures"), {
+function problem(error) {
+  const where = Array.isArray(error.loc) ? error.loc.at(-1) : "";
+  return where ? `${where}: ${error.msg}` : error.msg;
+}
+
+/** POST /captures/preview: what the page would be captured as, with nothing kept.
+ *
+ *  `null` from a Postulo older than the preview, which has no such address: the caller then
+ *  sends the page straight away, as the extension did before there was anything to show. */
+export async function preview(instance, token, { url, html }, fetchImpl = fetch) {
+  const response = await fetchImpl(endpoint(instance, "/captures/preview"), {
     method: "POST",
     headers: headers(token),
     body: JSON.stringify({ url, html }),
   });
+  if (response.status === 404 || response.status === 405) {
+    return null;
+  }
   return readResponse(response);
+}
+
+/** POST /captures with the page's address and its source, and the fields a person corrected. */
+export async function capture(instance, token, { url, html, data }, fetchImpl = fetch) {
+  const payload = { url, html };
+  if (data && Object.keys(data).length) {
+    payload.data = data;
+  }
+  const response = await fetchImpl(endpoint(instance, "/captures"), {
+    method: "POST",
+    headers: headers(token),
+    body: JSON.stringify(payload),
+  });
+  return readResponse(response);
+}
+
+const NUMBERS = new Set(["salary_min", "salary_max"]);
+const DATES = new Set(["posted_at", "closes_at"]);
+
+/** The fields where what the form says differs from what was read: the only ones sent.
+ *
+ *  What nobody touched stays what the source read, so the capture says so. Amounts compare
+ *  as numbers, since Postulo may write 55000 as "55000.00"; a field somebody emptied is sent
+ *  empty, or null for an amount or a date, so that it is cleared rather than kept. */
+export function corrections(read, edited) {
+  const changed = {};
+  for (const [field, value] of Object.entries(edited)) {
+    const before = read[field];
+    if (NUMBERS.has(field)) {
+      const was = before === null || before === undefined || before === "" ? null : Number(before);
+      const now = value === "" ? null : Number(value);
+      if (was !== now) {
+        changed[field] = now === null ? null : value;
+      }
+    } else if (DATES.has(field)) {
+      if ((before || null) !== (value || null)) {
+        changed[field] = value || null;
+      }
+    } else if ((before ?? "").trim() !== value.trim()) {
+      changed[field] = value.trim();
+    }
+  }
+  return changed;
 }
 
 /** One line for the popup, from what the capture API returned. `untitled` is said when the

@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Страницата не можеше да се прочита. Некои страници ги блокираат проширувањата."
+  },
+  "previewing": {
+    "message": "Го прашуваме Postulo што чита тука…"
+  },
+  "reviewHint": {
+    "message": "Ова е она што Postulo го прочита од страницата. Поправете сè што е погрешно пред да го испратите."
+  },
+  "sendForReview": {
+    "message": "Испрати на преглед"
+  },
+  "fieldTitle": {
+    "message": "Назив на работното место"
+  },
+  "fieldCompany": {
+    "message": "Компанија"
+  },
+  "fieldLocation": {
+    "message": "Локација"
+  },
+  "fieldRemote": {
+    "message": "Начин на работа"
+  },
+  "fieldEmployment": {
+    "message": "Вид на вработување"
+  },
+  "fieldSalaryFrom": {
+    "message": "Плата од"
+  },
+  "fieldSalaryTo": {
+    "message": "Плата до"
+  },
+  "fieldCurrency": {
+    "message": "Валута"
+  },
+  "fieldPeriod": {
+    "message": "Период"
+  },
+  "fieldCloses": {
+    "message": "Датум на затворање"
+  },
+  "fieldDescription": {
+    "message": "Опис"
+  },
+  "remoteOnsite": {
+    "message": "На локација"
+  },
+  "remoteHybrid": {
+    "message": "Хибридно"
+  },
+  "remoteRemote": {
+    "message": "Од далечина"
+  },
+  "employmentFullTime": {
+    "message": "Полно работно време"
+  },
+  "employmentPartTime": {
+    "message": "Скратено работно време"
+  },
+  "employmentContract": {
+    "message": "Договор"
+  },
+  "employmentFreelance": {
+    "message": "Слободна професија"
+  },
+  "employmentInternship": {
+    "message": "Пракса"
+  },
+  "employmentApprenticeship": {
+    "message": "Приправништво"
+  },
+  "periodYear": {
+    "message": "Годишно"
+  },
+  "periodMonth": {
+    "message": "Месечно"
+  },
+  "periodDay": {
+    "message": "Дневно"
+  },
+  "periodHour": {
+    "message": "На час"
   }
 }

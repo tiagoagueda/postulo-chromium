@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Stránku sa nepodarilo prečítať. Niektoré stránky blokujú rozšírenia."
+  },
+  "previewing": {
+    "message": "Zisťujeme, čo tu Postulo prečíta…"
+  },
+  "reviewHint": {
+    "message": "Toto Postulo zo stránky prečítal. Pred odoslaním opravte, čo je nesprávne."
+  },
+  "sendForReview": {
+    "message": "Odoslať na kontrolu"
+  },
+  "fieldTitle": {
+    "message": "Názov pozície"
+  },
+  "fieldCompany": {
+    "message": "Firma"
+  },
+  "fieldLocation": {
+    "message": "Miesto"
+  },
+  "fieldRemote": {
+    "message": "Forma práce"
+  },
+  "fieldEmployment": {
+    "message": "Typ úväzku"
+  },
+  "fieldSalaryFrom": {
+    "message": "Plat od"
+  },
+  "fieldSalaryTo": {
+    "message": "Plat do"
+  },
+  "fieldCurrency": {
+    "message": "Mena"
+  },
+  "fieldPeriod": {
+    "message": "Obdobie"
+  },
+  "fieldCloses": {
+    "message": "Dátum uzávierky"
+  },
+  "fieldDescription": {
+    "message": "Popis"
+  },
+  "remoteOnsite": {
+    "message": "Na mieste"
+  },
+  "remoteHybrid": {
+    "message": "Hybridný"
+  },
+  "remoteRemote": {
+    "message": "Na diaľku"
+  },
+  "employmentFullTime": {
+    "message": "Plný úväzok"
+  },
+  "employmentPartTime": {
+    "message": "Čiastočný úväzok"
+  },
+  "employmentContract": {
+    "message": "Na dobu určitú"
+  },
+  "employmentFreelance": {
+    "message": "Na voľnej nohe"
+  },
+  "employmentInternship": {
+    "message": "Stáž"
+  },
+  "employmentApprenticeship": {
+    "message": "Učňovský pomer"
+  },
+  "periodYear": {
+    "message": "Za rok"
+  },
+  "periodMonth": {
+    "message": "Za mesiac"
+  },
+  "periodDay": {
+    "message": "Za deň"
+  },
+  "periodHour": {
+    "message": "Za hodinu"
   }
 }

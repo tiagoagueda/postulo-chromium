@@ -37,6 +37,11 @@ body.popup {
   width: 320px;
 }
 
+/* Showing what was read: a form, two fields to a row where they pair. */
+body.popup.wide {
+  width: 400px;
+}
+
 /* Chromium sizes its settings dialog to the page, from 400 pixels up, and cuts off whatever a
    page wider than its own measure lays out. A set width is one it can measure. */
 body.options {
@@ -75,21 +80,26 @@ label {
   margin: 12px 0 4px;
 }
 
-label:first-child {
+form > label:first-child {
   margin-top: 0;
 }
 
-input {
+input,
+select,
+textarea {
   width: 100%;
   padding: 7px 9px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: transparent;
+  background: var(--paper);
   color: inherit;
   font: inherit;
 }
 
 input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
 button:focus-visible,
 a:focus-visible {
   outline: 2px solid var(--brand);
@@ -187,6 +197,60 @@ button.icon {
 button.icon:hover {
   color: var(--ink);
   background: var(--line);
+}
+
+/* The review form is the popup's longest state; its labels sit closer than the settings'. */
+#posting label {
+  margin: 7px 0 2px;
+  font-size: 12px;
+}
+
+#posting > label:first-child {
+  margin-top: 4px;
+}
+
+#posting input,
+#posting select {
+  padding: 4px 8px;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-items: end;
+}
+
+textarea {
+  resize: vertical;
+  font-size: 12px;
+}
+
+details {
+  margin: 8px 0 0;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+details textarea {
+  margin-top: 4px;
+}
+
+/* Send, and beside it which source read the page. */
+.send {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#edit-read-by {
+  min-width: 0;
+  font-size: 12px;
 }
 
 kbd {

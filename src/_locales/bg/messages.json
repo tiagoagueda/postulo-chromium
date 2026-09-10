@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Страницата не можа да бъде прочетена. Някои страници блокират разширенията."
+  },
+  "previewing": {
+    "message": "Питаме Postulo какво разчита тук…"
+  },
+  "reviewHint": {
+    "message": "Това е прочетеното от Postulo на страницата. Поправете всичко сгрешено, преди да го изпратите."
+  },
+  "sendForReview": {
+    "message": "Изпращане за преглед"
+  },
+  "fieldTitle": {
+    "message": "Длъжност"
+  },
+  "fieldCompany": {
+    "message": "Компания"
+  },
+  "fieldLocation": {
+    "message": "Местоположение"
+  },
+  "fieldRemote": {
+    "message": "Форма на работа"
+  },
+  "fieldEmployment": {
+    "message": "Вид заетост"
+  },
+  "fieldSalaryFrom": {
+    "message": "Заплата от"
+  },
+  "fieldSalaryTo": {
+    "message": "Заплата до"
+  },
+  "fieldCurrency": {
+    "message": "Валута"
+  },
+  "fieldPeriod": {
+    "message": "Период"
+  },
+  "fieldCloses": {
+    "message": "Краен срок"
+  },
+  "fieldDescription": {
+    "message": "Описание"
+  },
+  "remoteOnsite": {
+    "message": "На място"
+  },
+  "remoteHybrid": {
+    "message": "Хибридна"
+  },
+  "remoteRemote": {
+    "message": "Дистанционно"
+  },
+  "employmentFullTime": {
+    "message": "Пълно работно време"
+  },
+  "employmentPartTime": {
+    "message": "Непълно работно време"
+  },
+  "employmentContract": {
+    "message": "Срочен договор"
+  },
+  "employmentFreelance": {
+    "message": "Свободна практика"
+  },
+  "employmentInternship": {
+    "message": "Стаж"
+  },
+  "employmentApprenticeship": {
+    "message": "Стаж за квалификация"
+  },
+  "periodYear": {
+    "message": "На година"
+  },
+  "periodMonth": {
+    "message": "На месец"
+  },
+  "periodDay": {
+    "message": "На ден"
+  },
+  "periodHour": {
+    "message": "На час"
   }
 }

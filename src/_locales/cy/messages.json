@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Doedd dim modd darllen y dudalen. Mae rhai tudalennau'n rhwystro estyniadau."
+  },
+  "previewing": {
+    "message": "Yn gofyn i Postulo beth mae'n ei ddarllen yma…"
+  },
+  "reviewHint": {
+    "message": "Dyma beth ddarllenodd Postulo o'r dudalen. Cywirwch unrhyw beth sy'n anghywir cyn ei anfon."
+  },
+  "sendForReview": {
+    "message": "Anfon i'w adolygu"
+  },
+  "fieldTitle": {
+    "message": "Teitl y swydd"
+  },
+  "fieldCompany": {
+    "message": "Cwmni"
+  },
+  "fieldLocation": {
+    "message": "Lleoliad"
+  },
+  "fieldRemote": {
+    "message": "Trefniant gweithio"
+  },
+  "fieldEmployment": {
+    "message": "Math o gyflogaeth"
+  },
+  "fieldSalaryFrom": {
+    "message": "Cyflog o"
+  },
+  "fieldSalaryTo": {
+    "message": "Cyflog hyd at"
+  },
+  "fieldCurrency": {
+    "message": "Arian cyfred"
+  },
+  "fieldPeriod": {
+    "message": "Cyfnod"
+  },
+  "fieldCloses": {
+    "message": "Dyddiad cau"
+  },
+  "fieldDescription": {
+    "message": "Disgrifiad"
+  },
+  "remoteOnsite": {
+    "message": "Ar y safle"
+  },
+  "remoteHybrid": {
+    "message": "Hybrid"
+  },
+  "remoteRemote": {
+    "message": "O bell"
+  },
+  "employmentFullTime": {
+    "message": "Amser llawn"
+  },
+  "employmentPartTime": {
+    "message": "Rhan amser"
+  },
+  "employmentContract": {
+    "message": "Contract"
+  },
+  "employmentFreelance": {
+    "message": "Llawrydd"
+  },
+  "employmentInternship": {
+    "message": "Interniaeth"
+  },
+  "employmentApprenticeship": {
+    "message": "Prentisiaeth"
+  },
+  "periodYear": {
+    "message": "Y flwyddyn"
+  },
+  "periodMonth": {
+    "message": "Y mis"
+  },
+  "periodDay": {
+    "message": "Y dydd"
+  },
+  "periodHour": {
+    "message": "Yr awr"
   }
 }

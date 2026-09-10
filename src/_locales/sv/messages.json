@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Sidan kunde inte läsas. Vissa sidor blockerar tillägg."
+  },
+  "previewing": {
+    "message": "Frågar Postulo vad den läser här …"
+  },
+  "reviewHint": {
+    "message": "Det här är vad Postulo läste på sidan. Rätta det som är fel innan du skickar det."
+  },
+  "sendForReview": {
+    "message": "Skicka för granskning"
+  },
+  "fieldTitle": {
+    "message": "Jobbtitel"
+  },
+  "fieldCompany": {
+    "message": "Företag"
+  },
+  "fieldLocation": {
+    "message": "Plats"
+  },
+  "fieldRemote": {
+    "message": "Arbetsform"
+  },
+  "fieldEmployment": {
+    "message": "Anställningsform"
+  },
+  "fieldSalaryFrom": {
+    "message": "Lön från"
+  },
+  "fieldSalaryTo": {
+    "message": "Lön till"
+  },
+  "fieldCurrency": {
+    "message": "Valuta"
+  },
+  "fieldPeriod": {
+    "message": "Period"
+  },
+  "fieldCloses": {
+    "message": "Sista ansökningsdag"
+  },
+  "fieldDescription": {
+    "message": "Beskrivning"
+  },
+  "remoteOnsite": {
+    "message": "På plats"
+  },
+  "remoteHybrid": {
+    "message": "Hybrid"
+  },
+  "remoteRemote": {
+    "message": "På distans"
+  },
+  "employmentFullTime": {
+    "message": "Heltid"
+  },
+  "employmentPartTime": {
+    "message": "Deltid"
+  },
+  "employmentContract": {
+    "message": "Tidsbegränsad anställning"
+  },
+  "employmentFreelance": {
+    "message": "Frilans"
+  },
+  "employmentInternship": {
+    "message": "Praktik"
+  },
+  "employmentApprenticeship": {
+    "message": "Lärlingsplats"
+  },
+  "periodYear": {
+    "message": "Per år"
+  },
+  "periodMonth": {
+    "message": "Per månad"
+  },
+  "periodDay": {
+    "message": "Per dag"
+  },
+  "periodHour": {
+    "message": "Per timme"
   }
 }

@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Lapu neizdevās nolasīt. Dažas lapas bloķē paplašinājumus."
+  },
+  "previewing": {
+    "message": "Postulo tiek jautāts, ko tas šeit nolasa…"
+  },
+  "reviewHint": {
+    "message": "To Postulo nolasīja lapā. Pirms sūtīšanas izlabojiet kļūdas."
+  },
+  "sendForReview": {
+    "message": "Sūtīt pārskatīšanai"
+  },
+  "fieldTitle": {
+    "message": "Amata nosaukums"
+  },
+  "fieldCompany": {
+    "message": "Uzņēmums"
+  },
+  "fieldLocation": {
+    "message": "Atrašanās vieta"
+  },
+  "fieldRemote": {
+    "message": "Darba forma"
+  },
+  "fieldEmployment": {
+    "message": "Nodarbinātības veids"
+  },
+  "fieldSalaryFrom": {
+    "message": "Alga no"
+  },
+  "fieldSalaryTo": {
+    "message": "Alga līdz"
+  },
+  "fieldCurrency": {
+    "message": "Valūta"
+  },
+  "fieldPeriod": {
+    "message": "Periods"
+  },
+  "fieldCloses": {
+    "message": "Beigu datums"
+  },
+  "fieldDescription": {
+    "message": "Apraksts"
+  },
+  "remoteOnsite": {
+    "message": "Uz vietas"
+  },
+  "remoteHybrid": {
+    "message": "Hibrīds"
+  },
+  "remoteRemote": {
+    "message": "Attālināti"
+  },
+  "employmentFullTime": {
+    "message": "Pilna slodze"
+  },
+  "employmentPartTime": {
+    "message": "Nepilna slodze"
+  },
+  "employmentContract": {
+    "message": "Terminēts līgums"
+  },
+  "employmentFreelance": {
+    "message": "Pašnodarbinātais"
+  },
+  "employmentInternship": {
+    "message": "Prakse"
+  },
+  "employmentApprenticeship": {
+    "message": "Māceklība"
+  },
+  "periodYear": {
+    "message": "Gadā"
+  },
+  "periodMonth": {
+    "message": "Mēnesī"
+  },
+  "periodDay": {
+    "message": "Dienā"
+  },
+  "periodHour": {
+    "message": "Stundā"
   }
 }

@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Ekki tókst að lesa síðuna. Sumar síður loka á viðbætur."
+  },
+  "previewing": {
+    "message": "Spyr Postulo hvað það les hér…"
+  },
+  "reviewHint": {
+    "message": "Þetta las Postulo af síðunni. Leiðréttu það sem er rangt áður en þú sendir það."
+  },
+  "sendForReview": {
+    "message": "Senda til yfirferðar"
+  },
+  "fieldTitle": {
+    "message": "Starfsheiti"
+  },
+  "fieldCompany": {
+    "message": "Fyrirtæki"
+  },
+  "fieldLocation": {
+    "message": "Staðsetning"
+  },
+  "fieldRemote": {
+    "message": "Vinnufyrirkomulag"
+  },
+  "fieldEmployment": {
+    "message": "Ráðningarform"
+  },
+  "fieldSalaryFrom": {
+    "message": "Laun frá"
+  },
+  "fieldSalaryTo": {
+    "message": "Laun til"
+  },
+  "fieldCurrency": {
+    "message": "Gjaldmiðill"
+  },
+  "fieldPeriod": {
+    "message": "Tímabil"
+  },
+  "fieldCloses": {
+    "message": "Lokadagsetning"
+  },
+  "fieldDescription": {
+    "message": "Lýsing"
+  },
+  "remoteOnsite": {
+    "message": "Á staðnum"
+  },
+  "remoteHybrid": {
+    "message": "Blandað"
+  },
+  "remoteRemote": {
+    "message": "Fjarvinna"
+  },
+  "employmentFullTime": {
+    "message": "Fullt starf"
+  },
+  "employmentPartTime": {
+    "message": "Hlutastarf"
+  },
+  "employmentContract": {
+    "message": "Verktaka"
+  },
+  "employmentFreelance": {
+    "message": "Sjálfstætt starfandi"
+  },
+  "employmentInternship": {
+    "message": "Starfsnám"
+  },
+  "employmentApprenticeship": {
+    "message": "Iðnnám"
+  },
+  "periodYear": {
+    "message": "Á ári"
+  },
+  "periodMonth": {
+    "message": "Á mánuði"
+  },
+  "periodDay": {
+    "message": "Á dag"
+  },
+  "periodHour": {
+    "message": "Á klukkustund"
   }
 }

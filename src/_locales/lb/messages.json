@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "D'Säit konnt net gelies ginn. Verschidde Säite blockéieren Erweiderungen."
+  },
+  "previewing": {
+    "message": "De Postulo gëtt gefrot, wat en hei liest…"
+  },
+  "reviewHint": {
+    "message": "Dat huet de Postulo op der Säit gelies. Verbessert, wat falsch ass, ier Dir et schéckt."
+  },
+  "sendForReview": {
+    "message": "Fir ze iwwerpréiwe schécken"
+  },
+  "fieldTitle": {
+    "message": "Stellenbezeechnung"
+  },
+  "fieldCompany": {
+    "message": "Firma"
+  },
+  "fieldLocation": {
+    "message": "Uert"
+  },
+  "fieldRemote": {
+    "message": "Aarbechtsform"
+  },
+  "fieldEmployment": {
+    "message": "Aarbechtsverhältnis"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salaire vun"
+  },
+  "fieldSalaryTo": {
+    "message": "Salaire bis"
+  },
+  "fieldCurrency": {
+    "message": "Währung"
+  },
+  "fieldPeriod": {
+    "message": "Period"
+  },
+  "fieldCloses": {
+    "message": "Enndatum"
+  },
+  "fieldDescription": {
+    "message": "Beschreiwung"
+  },
+  "remoteOnsite": {
+    "message": "Op der Plaz"
+  },
+  "remoteHybrid": {
+    "message": "Hybrid"
+  },
+  "remoteRemote": {
+    "message": "Teleaarbecht"
+  },
+  "employmentFullTime": {
+    "message": "Vollzäit"
+  },
+  "employmentPartTime": {
+    "message": "Deelzäit"
+  },
+  "employmentContract": {
+    "message": "Kontrakt"
+  },
+  "employmentFreelance": {
+    "message": "Fräiberuffler"
+  },
+  "employmentInternship": {
+    "message": "Stage"
+  },
+  "employmentApprenticeship": {
+    "message": "Léierplaz"
+  },
+  "periodYear": {
+    "message": "Pro Joer"
+  },
+  "periodMonth": {
+    "message": "Pro Mount"
+  },
+  "periodDay": {
+    "message": "Pro Dag"
+  },
+  "periodHour": {
+    "message": "Pro Stonn"
   }
 }

@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Die Seite konnte nicht gelesen werden. Manche Seiten blockieren Erweiterungen."
+  },
+  "previewing": {
+    "message": "Postulo wird gefragt, was es hier liest…"
+  },
+  "reviewHint": {
+    "message": "Das hat Postulo auf der Seite gelesen. Korrigieren Sie, was falsch ist, bevor Sie es senden."
+  },
+  "sendForReview": {
+    "message": "Zur Prüfung senden"
+  },
+  "fieldTitle": {
+    "message": "Stellenbezeichnung"
+  },
+  "fieldCompany": {
+    "message": "Unternehmen"
+  },
+  "fieldLocation": {
+    "message": "Ort"
+  },
+  "fieldRemote": {
+    "message": "Arbeitsmodell"
+  },
+  "fieldEmployment": {
+    "message": "Beschäftigungsart"
+  },
+  "fieldSalaryFrom": {
+    "message": "Gehalt ab"
+  },
+  "fieldSalaryTo": {
+    "message": "Gehalt bis"
+  },
+  "fieldCurrency": {
+    "message": "Währung"
+  },
+  "fieldPeriod": {
+    "message": "Zeitraum"
+  },
+  "fieldCloses": {
+    "message": "Bewerbungsschluss"
+  },
+  "fieldDescription": {
+    "message": "Beschreibung"
+  },
+  "remoteOnsite": {
+    "message": "Vor Ort"
+  },
+  "remoteHybrid": {
+    "message": "Hybrid"
+  },
+  "remoteRemote": {
+    "message": "Remote"
+  },
+  "employmentFullTime": {
+    "message": "Vollzeit"
+  },
+  "employmentPartTime": {
+    "message": "Teilzeit"
+  },
+  "employmentContract": {
+    "message": "Befristet"
+  },
+  "employmentFreelance": {
+    "message": "Freiberuflich"
+  },
+  "employmentInternship": {
+    "message": "Praktikum"
+  },
+  "employmentApprenticeship": {
+    "message": "Ausbildung"
+  },
+  "periodYear": {
+    "message": "Pro Jahr"
+  },
+  "periodMonth": {
+    "message": "Pro Monat"
+  },
+  "periodDay": {
+    "message": "Pro Tag"
+  },
+  "periodHour": {
+    "message": "Pro Stunde"
   }
 }

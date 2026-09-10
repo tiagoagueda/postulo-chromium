@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Не вдалося прочитати сторінку. Деякі сторінки блокують розширення."
+  },
+  "previewing": {
+    "message": "Запитуємо в Postulo, що він тут читає…"
+  },
+  "reviewHint": {
+    "message": "Ось що Postulo прочитав зі сторінки. Виправте помилки, перш ніж надсилати."
+  },
+  "sendForReview": {
+    "message": "Надіслати на розгляд"
+  },
+  "fieldTitle": {
+    "message": "Назва посади"
+  },
+  "fieldCompany": {
+    "message": "Компанія"
+  },
+  "fieldLocation": {
+    "message": "Місце"
+  },
+  "fieldRemote": {
+    "message": "Формат роботи"
+  },
+  "fieldEmployment": {
+    "message": "Тип зайнятості"
+  },
+  "fieldSalaryFrom": {
+    "message": "Зарплата від"
+  },
+  "fieldSalaryTo": {
+    "message": "Зарплата до"
+  },
+  "fieldCurrency": {
+    "message": "Валюта"
+  },
+  "fieldPeriod": {
+    "message": "Період"
+  },
+  "fieldCloses": {
+    "message": "Дата закриття"
+  },
+  "fieldDescription": {
+    "message": "Опис"
+  },
+  "remoteOnsite": {
+    "message": "На місці"
+  },
+  "remoteHybrid": {
+    "message": "Гібридний"
+  },
+  "remoteRemote": {
+    "message": "Віддалено"
+  },
+  "employmentFullTime": {
+    "message": "Повна зайнятість"
+  },
+  "employmentPartTime": {
+    "message": "Часткова зайнятість"
+  },
+  "employmentContract": {
+    "message": "Контракт"
+  },
+  "employmentFreelance": {
+    "message": "Фріланс"
+  },
+  "employmentInternship": {
+    "message": "Стажування"
+  },
+  "employmentApprenticeship": {
+    "message": "Учнівство"
+  },
+  "periodYear": {
+    "message": "За рік"
+  },
+  "periodMonth": {
+    "message": "За місяць"
+  },
+  "periodDay": {
+    "message": "За день"
+  },
+  "periodHour": {
+    "message": "За годину"
   }
 }

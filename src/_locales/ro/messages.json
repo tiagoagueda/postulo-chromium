@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Pagina nu a putut fi citită. Unele pagini blochează extensiile."
+  },
+  "previewing": {
+    "message": "Îl întrebăm pe Postulo ce citește aici…"
+  },
+  "reviewHint": {
+    "message": "Asta a citit Postulo din pagină. Corectează ce e greșit înainte să trimiți."
+  },
+  "sendForReview": {
+    "message": "Trimite spre revizuire"
+  },
+  "fieldTitle": {
+    "message": "Titlul postului"
+  },
+  "fieldCompany": {
+    "message": "Companie"
+  },
+  "fieldLocation": {
+    "message": "Locație"
+  },
+  "fieldRemote": {
+    "message": "Regim de lucru"
+  },
+  "fieldEmployment": {
+    "message": "Tip de angajare"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salariu de la"
+  },
+  "fieldSalaryTo": {
+    "message": "Salariu până la"
+  },
+  "fieldCurrency": {
+    "message": "Monedă"
+  },
+  "fieldPeriod": {
+    "message": "Perioadă"
+  },
+  "fieldCloses": {
+    "message": "Data închiderii"
+  },
+  "fieldDescription": {
+    "message": "Descriere"
+  },
+  "remoteOnsite": {
+    "message": "La sediu"
+  },
+  "remoteHybrid": {
+    "message": "Hibrid"
+  },
+  "remoteRemote": {
+    "message": "La distanță"
+  },
+  "employmentFullTime": {
+    "message": "Normă întreagă"
+  },
+  "employmentPartTime": {
+    "message": "Normă parțială"
+  },
+  "employmentContract": {
+    "message": "Determinat"
+  },
+  "employmentFreelance": {
+    "message": "Liber profesionist"
+  },
+  "employmentInternship": {
+    "message": "Stagiu"
+  },
+  "employmentApprenticeship": {
+    "message": "Ucenicie"
+  },
+  "periodYear": {
+    "message": "Pe an"
+  },
+  "periodMonth": {
+    "message": "Pe lună"
+  },
+  "periodDay": {
+    "message": "Pe zi"
+  },
+  "periodHour": {
+    "message": "Pe oră"
   }
 }

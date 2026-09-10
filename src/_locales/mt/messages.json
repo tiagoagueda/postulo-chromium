@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Il-paġna ma setgħetx tinqara. Xi paġni jimblukkaw l-estensjonijiet."
+  },
+  "previewing": {
+    "message": "Qed nistaqsu lill-Postulo x'jaqra hawn…"
+  },
+  "reviewHint": {
+    "message": "Dan hu dak li qara l-Postulo mill-paġna. Ikkoreġi dak li huwa ħażin qabel ma tibagħtu."
+  },
+  "sendForReview": {
+    "message": "Ibgħat għar-reviżjoni"
+  },
+  "fieldTitle": {
+    "message": "Titlu tax-xogħol"
+  },
+  "fieldCompany": {
+    "message": "Kumpanija"
+  },
+  "fieldLocation": {
+    "message": "Post"
+  },
+  "fieldRemote": {
+    "message": "Arranġament tax-xogħol"
+  },
+  "fieldEmployment": {
+    "message": "Tip ta' impjieg"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salarju minn"
+  },
+  "fieldSalaryTo": {
+    "message": "Salarju sa"
+  },
+  "fieldCurrency": {
+    "message": "Munita"
+  },
+  "fieldPeriod": {
+    "message": "Perjodu"
+  },
+  "fieldCloses": {
+    "message": "Data tal-għeluq"
+  },
+  "fieldDescription": {
+    "message": "Deskrizzjoni"
+  },
+  "remoteOnsite": {
+    "message": "Fuq il-post"
+  },
+  "remoteHybrid": {
+    "message": "Ibridu"
+  },
+  "remoteRemote": {
+    "message": "Remot"
+  },
+  "employmentFullTime": {
+    "message": "Full time"
+  },
+  "employmentPartTime": {
+    "message": "Part time"
+  },
+  "employmentContract": {
+    "message": "Kuntratt"
+  },
+  "employmentFreelance": {
+    "message": "Freelance"
+  },
+  "employmentInternship": {
+    "message": "Internship"
+  },
+  "employmentApprenticeship": {
+    "message": "Apprendistat"
+  },
+  "periodYear": {
+    "message": "Fis-sena"
+  },
+  "periodMonth": {
+    "message": "Fix-xahar"
+  },
+  "periodDay": {
+    "message": "Kuljum"
+  },
+  "periodHour": {
+    "message": "Fis-siegħa"
   }
 }

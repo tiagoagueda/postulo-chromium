@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Siden kunne ikke læses. Nogle sider blokerer udvidelser."
+  },
+  "previewing": {
+    "message": "Spørger Postulo, hvad den læser her …"
+  },
+  "reviewHint": {
+    "message": "Det her er, hvad Postulo læste på siden. Ret det, den tog fejl af, før du sender det."
+  },
+  "sendForReview": {
+    "message": "Send til gennemsyn"
+  },
+  "fieldTitle": {
+    "message": "Jobtitel"
+  },
+  "fieldCompany": {
+    "message": "Virksomhed"
+  },
+  "fieldLocation": {
+    "message": "Sted"
+  },
+  "fieldRemote": {
+    "message": "Arbejdsform"
+  },
+  "fieldEmployment": {
+    "message": "Ansættelsesform"
+  },
+  "fieldSalaryFrom": {
+    "message": "Løn fra"
+  },
+  "fieldSalaryTo": {
+    "message": "Løn til"
+  },
+  "fieldCurrency": {
+    "message": "Valuta"
+  },
+  "fieldPeriod": {
+    "message": "Periode"
+  },
+  "fieldCloses": {
+    "message": "Ansøgningsfrist"
+  },
+  "fieldDescription": {
+    "message": "Beskrivelse"
+  },
+  "remoteOnsite": {
+    "message": "På stedet"
+  },
+  "remoteHybrid": {
+    "message": "Hybrid"
+  },
+  "remoteRemote": {
+    "message": "Fjernarbejde"
+  },
+  "employmentFullTime": {
+    "message": "Fuldtid"
+  },
+  "employmentPartTime": {
+    "message": "Deltid"
+  },
+  "employmentContract": {
+    "message": "Tidsbegrænset"
+  },
+  "employmentFreelance": {
+    "message": "Freelance"
+  },
+  "employmentInternship": {
+    "message": "Praktik"
+  },
+  "employmentApprenticeship": {
+    "message": "Lærlingeplads"
+  },
+  "periodYear": {
+    "message": "Pr. år"
+  },
+  "periodMonth": {
+    "message": "Pr. måned"
+  },
+  "periodDay": {
+    "message": "Pr. dag"
+  },
+  "periodHour": {
+    "message": "Pr. time"
   }
 }

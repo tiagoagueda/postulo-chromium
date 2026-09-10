@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Az oldalt nem sikerült beolvasni. Egyes oldalak letiltják a bővítményeket."
+  },
+  "previewing": {
+    "message": "Megkérdezzük a Postulót, mit olvas itt…"
+  },
+  "reviewHint": {
+    "message": "Ezt olvasta ki a Postulo az oldalból. Javítsa ki, ami hibás, mielőtt elküldi."
+  },
+  "sendForReview": {
+    "message": "Küldés ellenőrzésre"
+  },
+  "fieldTitle": {
+    "message": "Munkakör"
+  },
+  "fieldCompany": {
+    "message": "Cég"
+  },
+  "fieldLocation": {
+    "message": "Helyszín"
+  },
+  "fieldRemote": {
+    "message": "Munkarend"
+  },
+  "fieldEmployment": {
+    "message": "Foglalkoztatás típusa"
+  },
+  "fieldSalaryFrom": {
+    "message": "Fizetés ettől"
+  },
+  "fieldSalaryTo": {
+    "message": "Fizetés eddig"
+  },
+  "fieldCurrency": {
+    "message": "Pénznem"
+  },
+  "fieldPeriod": {
+    "message": "Időszak"
+  },
+  "fieldCloses": {
+    "message": "Jelentkezési határidő"
+  },
+  "fieldDescription": {
+    "message": "Leírás"
+  },
+  "remoteOnsite": {
+    "message": "Helyben"
+  },
+  "remoteHybrid": {
+    "message": "Hibrid"
+  },
+  "remoteRemote": {
+    "message": "Távmunka"
+  },
+  "employmentFullTime": {
+    "message": "Teljes munkaidő"
+  },
+  "employmentPartTime": {
+    "message": "Részmunkaidő"
+  },
+  "employmentContract": {
+    "message": "Határozott idejű"
+  },
+  "employmentFreelance": {
+    "message": "Szabadúszó"
+  },
+  "employmentInternship": {
+    "message": "Gyakornoki program"
+  },
+  "employmentApprenticeship": {
+    "message": "Tanulószerződés"
+  },
+  "periodYear": {
+    "message": "Évente"
+  },
+  "periodMonth": {
+    "message": "Havonta"
+  },
+  "periodDay": {
+    "message": "Naponta"
+  },
+  "periodHour": {
+    "message": "Óránként"
   }
 }

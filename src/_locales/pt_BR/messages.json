@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Não foi possível ler a página. Algumas páginas bloqueiam extensões."
+  },
+  "previewing": {
+    "message": "Perguntando ao Postulo o que ele lê aqui…"
+  },
+  "reviewHint": {
+    "message": "Isto é o que o Postulo leu da página. Corrija o que estiver errado antes de enviar."
+  },
+  "sendForReview": {
+    "message": "Enviar para revisão"
+  },
+  "fieldTitle": {
+    "message": "Título da função"
+  },
+  "fieldCompany": {
+    "message": "Empresa"
+  },
+  "fieldLocation": {
+    "message": "Localização"
+  },
+  "fieldRemote": {
+    "message": "Regime de trabalho"
+  },
+  "fieldEmployment": {
+    "message": "Tipo de contrato"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salário desde"
+  },
+  "fieldSalaryTo": {
+    "message": "Salário até"
+  },
+  "fieldCurrency": {
+    "message": "Moeda"
+  },
+  "fieldPeriod": {
+    "message": "Período"
+  },
+  "fieldCloses": {
+    "message": "Data de encerramento"
+  },
+  "fieldDescription": {
+    "message": "Descrição"
+  },
+  "remoteOnsite": {
+    "message": "Presencial"
+  },
+  "remoteHybrid": {
+    "message": "Híbrido"
+  },
+  "remoteRemote": {
+    "message": "Remoto"
+  },
+  "employmentFullTime": {
+    "message": "Tempo inteiro"
+  },
+  "employmentPartTime": {
+    "message": "Tempo parcial"
+  },
+  "employmentContract": {
+    "message": "Contrato a termo"
+  },
+  "employmentFreelance": {
+    "message": "Freelance"
+  },
+  "employmentInternship": {
+    "message": "Estágio"
+  },
+  "employmentApprenticeship": {
+    "message": "Aprendizagem"
+  },
+  "periodYear": {
+    "message": "Por ano"
+  },
+  "periodMonth": {
+    "message": "Por mês"
+  },
+  "periodDay": {
+    "message": "Por dia"
+  },
+  "periodHour": {
+    "message": "Por hora"
   }
 }

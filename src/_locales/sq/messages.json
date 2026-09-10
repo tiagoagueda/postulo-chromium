@@ -182,5 +182,86 @@
   },
   "unreadable": {
     "message": "Faqja nuk mund të lexohej. Disa faqe i bllokojnë zgjerimet."
+  },
+  "previewing": {
+    "message": "Po pyetet Postulo se çfarë lexon këtu…"
+  },
+  "reviewHint": {
+    "message": "Kjo është ajo që Postulo lexoi nga faqja. Korrigjoni çdo gabim para se ta dërgoni."
+  },
+  "sendForReview": {
+    "message": "Dërgoje për shqyrtim"
+  },
+  "fieldTitle": {
+    "message": "Titulli i punës"
+  },
+  "fieldCompany": {
+    "message": "Kompani"
+  },
+  "fieldLocation": {
+    "message": "Vendndodhja"
+  },
+  "fieldRemote": {
+    "message": "Mënyra e punës"
+  },
+  "fieldEmployment": {
+    "message": "Lloji i punësimit"
+  },
+  "fieldSalaryFrom": {
+    "message": "Paga nga"
+  },
+  "fieldSalaryTo": {
+    "message": "Paga deri"
+  },
+  "fieldCurrency": {
+    "message": "Monedha"
+  },
+  "fieldPeriod": {
+    "message": "Periudha"
+  },
+  "fieldCloses": {
+    "message": "Data e mbylljes"
+  },
+  "fieldDescription": {
+    "message": "Përshkrim"
+  },
+  "remoteOnsite": {
+    "message": "Në vend"
+  },
+  "remoteHybrid": {
+    "message": "Hibrid"
+  },
+  "remoteRemote": {
+    "message": "Në distancë"
+  },
+  "employmentFullTime": {
+    "message": "Kohë e plotë"
+  },
+  "employmentPartTime": {
+    "message": "Kohë e pjesshme"
+  },
+  "employmentContract": {
+    "message": "Kontratë"
+  },
+  "employmentFreelance": {
+    "message": "I pavarur"
+  },
+  "employmentInternship": {
+    "message": "Praktikë"
+  },
+  "employmentApprenticeship": {
+    "message": "Praktikë profesionale"
+  },
+  "periodYear": {
+    "message": "Në vit"
+  },
+  "periodMonth": {
+    "message": "Në muaj"
+  },
+  "periodDay": {
+    "message": "Në ditë"
+  },
+  "periodHour": {
+    "message": "Në orë"
   }
 }
