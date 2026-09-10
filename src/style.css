@@ -37,8 +37,11 @@ body.popup {
   width: 320px;
 }
 
+/* Chromium sizes its settings dialog to the page, from 400 pixels up, and cuts off whatever a
+   page wider than its own measure lays out. A set width is one it can measure. */
 body.options {
-  max-width: 460px;
+  width: 400px;
+  max-width: 100%;
 }
 
 header {
@@ -70,6 +73,10 @@ label {
   display: block;
   font-weight: 600;
   margin: 12px 0 4px;
+}
+
+label:first-child {
+  margin-top: 0;
 }
 
 input {
