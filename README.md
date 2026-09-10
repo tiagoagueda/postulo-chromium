@@ -58,11 +58,20 @@ permanently once signed; see that repository).
 | `src/lib/browser.js` | `browser ?? chrome`, storage, permissions, reading the active tab |
 | `src/background.js` | Opens the settings on first install; nothing else |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
+| `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, made by `scripts/icons.py` |
 
 ```sh
 npm test               # the pure parts
 npm run lint:firefox   # web-ext lint on the Firefox build
 npm run package        # zips under dist/artifacts/
+```
+
+The icons are Postulo's mark, derived with the core's own recipe from
+`assets/brand/postulo.png` in the core repository, and committed. When the mark changes,
+regenerate them from a checkout of the core beside this one:
+
+```sh
+uv run --with pillow python scripts/icons.py
 ```
 
 ## Licence
