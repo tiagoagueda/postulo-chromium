@@ -6,11 +6,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="options">
-    <header>
-      <img src="icons/postulo-32.png" alt="" width="20" height="20" />
-      <h1>Postulo</h1>
-    </header>
-
+    <!-- No heading of its own: the browser shows this page under the extension's name and
+         icon already, in Chromium's dialog and in Firefox's add-on manager alike. -->
     <form id="settings">
       <label for="instance" data-i18n="instanceLabel">Your Postulo</label>
       <input id="instance" name="instance" type="url" placeholder="https://postulo.example.org" autocomplete="off" required />
