@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "eu"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Bidali ikusten ari zaren lan-iragarkia zure Postulora, berrikus dezazun. Ez da beste inora joaten."
+  },
+  "actionTitle": {
+    "message": "Harrapatu iragarki hau Postulon"
+  },
+  "settings": {
+    "message": "Ezarpenak"
+  },
+  "unconfigured": {
+    "message": "Esaiozu hedapenari non dagoen zure Postulo eta zein token erabili behar duen."
+  },
+  "setUp": {
+    "message": "Konfiguratu"
+  },
+  "capture": {
+    "message": "Harrapatu iragarki hau"
+  },
+  "captureHint": {
+    "message": "Ikusten ari zaren orria zure Postulora bidaltzen da, eta ez beste inora."
+  },
+  "review": {
+    "message": "Berrikusi Postulon"
+  },
+  "reading": {
+    "message": "Orria irakurtzen…"
+  },
+  "allowing": {
+    "message": "Hedapenari zure Postulora iristeko baimena ematen…"
+  },
+  "noPermission": {
+    "message": "Zure Postulora iristeko baimenik gabe, ezin da ezer bidali."
+  },
+  "sending": {
+    "message": "Postulora bidaltzen…"
+  },
+  "captured": {
+    "message": "Harrapatuta. Berrikusi zure iragarkien artean sartu aurretik."
+  },
+  "readBy": {
+    "message": "Irakurlea: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Izenbururik gabeko iragarkia"
+  },
+  "optionsTitle": {
+    "message": "Postuloren ezarpenak"
+  },
+  "instanceLabel": {
+    "message": "Zure Postulo"
+  },
+  "instanceHint": {
+    "message": "Irekitzen duzun helbidea. https, makina honetan exekutatzen ez bada behintzat."
+  },
+  "tokenLabel": {
+    "message": "API tokena"
+  },
+  "tokenHint": {
+    "message": "Postuloko $PATH$ atalean sortzen da, $SCOPE$ esparruarekin eta beste ezer gabe. Gailu honetan bakarrik gordetzen da, eta ez da inoiz nabigatzailearen kontu baten bidez sinkronizatzen.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Ezarpenak → API tokenak"
+  },
+  "save": {
+    "message": "Gorde"
+  },
+  "test": {
+    "message": "Probatu"
+  },
+  "shortcutHint": {
+    "message": "Botoia edo $SHORTCUT$ sakatuta, ikusten ari zaren orria zure Postulora bidaltzen da berrikusteko. Ez da orririk irakurtzen eskatu arte, eta ez da ezer beste inora bidaltzen.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Itsatsi Postulok erakutsi zizun tokena."
+  },
+  "saved": {
+    "message": "Gordeta. Botoiak orriak $HOST$ helbidera bidaliko ditu orain.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Gordeta, baina nabigatzaileak ukatu egin du bertara iristeko baimena; eman baimena hedapenaren baimenetan."
+  },
+  "asking": {
+    "message": "Postului galdetzen token hau norena den…"
+  },
+  "addressRefused": {
+    "message": "Helbide horretara iristeko baimena ukatu da."
+  },
+  "tokenIs": {
+    "message": "$OWNER$ erabiltzailearen «$NAME$» tokena.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "$OWNER$ erabiltzailearen «$NAME$» tokena ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Ez du captures esparrua, beraz ezin du harrapatu."
+  },
+  "enterAddress": {
+    "message": "Idatzi zure Postuloren helbidea."
+  },
+  "notAnAddress": {
+    "message": "Horrek ez du web-helbide baten itxurarik."
+  },
+  "httpsOnly": {
+    "message": "Erabili https zure makinan ez dagoen guztirako: tokena eskaera bakoitzarekin bidaiatzen da."
+  },
+  "tokenRefused": {
+    "message": "Postulok ez du token hau onartzen. Egiaztatu $PATH$ atalean.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Token honek ez du harrapatzeko baimenik."
+  },
+  "tooMany": {
+    "message": "Harrapaketa gehiegi denbora gutxian. Itxaron minutu bat eta saiatu berriro."
+  },
+  "answered": {
+    "message": "Postulok $STATUS$ erantzun du.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Ez dago irakurtzeko fitxarik."
+  },
+  "notWebPage": {
+    "message": "Web-orriak bakarrik harrapa daitezke."
+  },
+  "unreadable": {
+    "message": "Ezin izan da orria irakurri. Orri batzuek hedapenak blokeatzen dituzte."
+  }
+}

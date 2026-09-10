@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "bs"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Pošaljite oglas za posao koji gledate u svoj Postulo, na pregled. Ništa ne ide nigdje drugo."
+  },
+  "actionTitle": {
+    "message": "Uhvati ovaj oglas u Postulo"
+  },
+  "settings": {
+    "message": "Postavke"
+  },
+  "unconfigured": {
+    "message": "Recite proširenju gdje je vaš Postulo i koji token da koristi."
+  },
+  "setUp": {
+    "message": "Postavi"
+  },
+  "capture": {
+    "message": "Uhvati ovaj oglas"
+  },
+  "captureHint": {
+    "message": "Stranica koju gledate šalje se u vaš Postulo i nigdje drugo."
+  },
+  "review": {
+    "message": "Pregledaj u Postulu"
+  },
+  "reading": {
+    "message": "Čitanje stranice…"
+  },
+  "allowing": {
+    "message": "Dozvoljavanje proširenju da dođe do vašeg Postula…"
+  },
+  "noPermission": {
+    "message": "Bez dozvole da dođe do vašeg Postula ništa se ne može poslati."
+  },
+  "sending": {
+    "message": "Slanje u Postulo…"
+  },
+  "captured": {
+    "message": "Uhvaćeno. Pregledajte ga prije nego što uđe među vaše oglase."
+  },
+  "readBy": {
+    "message": "Pročitao: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Oglas bez naslova"
+  },
+  "optionsTitle": {
+    "message": "Postavke Postula"
+  },
+  "instanceLabel": {
+    "message": "Vaš Postulo"
+  },
+  "instanceHint": {
+    "message": "Adresa na kojoj ga otvarate. https, osim ako radi na ovom računaru."
+  },
+  "tokenLabel": {
+    "message": "API token"
+  },
+  "tokenHint": {
+    "message": "Pravi se u $PATH$ u Postulu, s opsegom $SCOPE$ i ničim više. Čuva se samo na ovom uređaju i nikad se ne sinhronizira kroz račun preglednika.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Postavke → API tokeni"
+  },
+  "save": {
+    "message": "Sačuvaj"
+  },
+  "test": {
+    "message": "Testiraj"
+  },
+  "shortcutHint": {
+    "message": "Pritiskom na dugme ili na $SHORTCUT$ stranica koju gledate šalje se u vaš Postulo na pregled. Nijedna stranica se ne čita dok to ne zatražite, i ništa se ne šalje nigdje drugo.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Zalijepite token koji vam je Postulo pokazao."
+  },
+  "saved": {
+    "message": "Sačuvano. Dugme će sada slati stranice na $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Sačuvano, ali preglednik je odbio dozvolu da dođe do njega; dozvolite to u dozvolama proširenja."
+  },
+  "asking": {
+    "message": "Pitamo Postulo čiji je ovaj token…"
+  },
+  "addressRefused": {
+    "message": "Dozvola da se dođe do te adrese je odbijena."
+  },
+  "tokenIs": {
+    "message": "Token „$NAME$“ za $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token „$NAME$“ za $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Nedostaje mu opseg captures, pa ne može hvatati."
+  },
+  "enterAddress": {
+    "message": "Unesite adresu svog Postula."
+  },
+  "notAnAddress": {
+    "message": "To ne izgleda kao web adresa."
+  },
+  "httpsOnly": {
+    "message": "Koristite https za sve što nije na vašem vlastitom računaru: token putuje sa svakim zahtjevom."
+  },
+  "tokenRefused": {
+    "message": "Postulo ne prihvata ovaj token. Provjerite ga u $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Ovom tokenu nije dozvoljeno hvatanje."
+  },
+  "tooMany": {
+    "message": "Previše hvatanja u kratkom vremenu. Sačekajte minutu i pokušajte ponovo."
+  },
+  "answered": {
+    "message": "Postulo je odgovorio: $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nema kartice za čitanje."
+  },
+  "notWebPage": {
+    "message": "Mogu se hvatati samo web stranice."
+  },
+  "unreadable": {
+    "message": "Stranica se nije mogla pročitati. Neke stranice blokiraju proširenja."
+  }
+}

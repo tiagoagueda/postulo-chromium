@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "lt"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Nusiųskite peržiūrimą darbo skelbimą į savo Postulo, kad jį peržiūrėtumėte. Niekas nekeliauja kitur."
+  },
+  "actionTitle": {
+    "message": "Fiksuoti šį skelbimą Postulo"
+  },
+  "settings": {
+    "message": "Nustatymai"
+  },
+  "unconfigured": {
+    "message": "Nurodykite plėtiniui, kur yra jūsų Postulo ir kurį žetoną naudoti."
+  },
+  "setUp": {
+    "message": "Nustatyti"
+  },
+  "capture": {
+    "message": "Fiksuoti šį skelbimą"
+  },
+  "captureHint": {
+    "message": "Peržiūrimas puslapis siunčiamas į jūsų Postulo ir niekur kitur."
+  },
+  "review": {
+    "message": "Peržiūrėti Postulo"
+  },
+  "reading": {
+    "message": "Skaitomas puslapis…"
+  },
+  "allowing": {
+    "message": "Plėtiniui leidžiama pasiekti jūsų Postulo…"
+  },
+  "noPermission": {
+    "message": "Be leidimo pasiekti jūsų Postulo nieko negalima išsiųsti."
+  },
+  "sending": {
+    "message": "Siunčiama į Postulo…"
+  },
+  "captured": {
+    "message": "Užfiksuota. Peržiūrėkite jį prieš jam patenkant į jūsų skelbimus."
+  },
+  "readBy": {
+    "message": "Nuskaitė: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Skelbimas be pavadinimo"
+  },
+  "optionsTitle": {
+    "message": "Postulo nustatymai"
+  },
+  "instanceLabel": {
+    "message": "Jūsų Postulo"
+  },
+  "instanceHint": {
+    "message": "Adresas, kuriuo jį atidarote. https, nebent jis veikia šiame kompiuteryje."
+  },
+  "tokenLabel": {
+    "message": "API žetonas"
+  },
+  "tokenHint": {
+    "message": "Sukuriamas Postulo skiltyje $PATH$, su teise $SCOPE$ ir niekuo daugiau. Laikomas tik šiame įrenginyje ir niekada nesinchronizuojamas per naršyklės paskyrą.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Nustatymai → API žetonai"
+  },
+  "save": {
+    "message": "Išsaugoti"
+  },
+  "test": {
+    "message": "Išbandyti"
+  },
+  "shortcutHint": {
+    "message": "Paspaudus mygtuką arba $SHORTCUT$, peržiūrimas puslapis siunčiamas į jūsų Postulo peržiūrai. Joks puslapis neskaitomas, kol nepaprašote, ir nieko nesiunčiama kitur.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Įklijuokite žetoną, kurį jums parodė Postulo."
+  },
+  "saved": {
+    "message": "Išsaugota. Mygtukas dabar siųs puslapius į $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Išsaugota, bet naršyklė atsisakė suteikti leidimą jį pasiekti; leiskite tai plėtinio leidimuose."
+  },
+  "asking": {
+    "message": "Klausiama Postulo, kieno šis žetonas…"
+  },
+  "addressRefused": {
+    "message": "Leidimas pasiekti tą adresą atmestas."
+  },
+  "tokenIs": {
+    "message": "Žetonas „$NAME$“, savininkas $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Žetonas „$NAME$“, savininkas $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Jam trūksta teisės captures, todėl jis negali fiksuoti."
+  },
+  "enterAddress": {
+    "message": "Įveskite savo Postulo adresą."
+  },
+  "notAnAddress": {
+    "message": "Tai nepanašu į žiniatinklio adresą."
+  },
+  "httpsOnly": {
+    "message": "Naudokite https viskam, kas nėra jūsų kompiuteryje: žetonas keliauja su kiekviena užklausa."
+  },
+  "tokenRefused": {
+    "message": "Postulo nepriima šio žetono. Patikrinkite jį skiltyje $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Šiam žetonui neleidžiama fiksuoti."
+  },
+  "tooMany": {
+    "message": "Per daug fiksavimų per trumpą laiką. Palaukite minutę ir bandykite dar kartą."
+  },
+  "answered": {
+    "message": "Postulo atsakė $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nėra kortelės, kurią būtų galima nuskaityti."
+  },
+  "notWebPage": {
+    "message": "Fiksuoti galima tik tinklalapius."
+  },
+  "unreadable": {
+    "message": "Puslapio nepavyko nuskaityti. Kai kurie puslapiai blokuoja plėtinius."
+  }
+}

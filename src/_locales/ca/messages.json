@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "ca"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Envieu l'oferta de feina que esteu mirant al vostre propi Postulo, perquè la reviseu. No va enlloc més."
+  },
+  "actionTitle": {
+    "message": "Captura aquesta oferta al Postulo"
+  },
+  "settings": {
+    "message": "Configuració"
+  },
+  "unconfigured": {
+    "message": "Digueu a l'extensió on és el vostre Postulo i quin testimoni ha de fer servir."
+  },
+  "setUp": {
+    "message": "Configura-la"
+  },
+  "capture": {
+    "message": "Captura aquesta oferta"
+  },
+  "captureHint": {
+    "message": "La pàgina que esteu mirant s'envia al vostre Postulo i enlloc més."
+  },
+  "review": {
+    "message": "Revisa-la al Postulo"
+  },
+  "reading": {
+    "message": "S'està llegint la pàgina…"
+  },
+  "allowing": {
+    "message": "S'està permetent que l'extensió arribi al vostre Postulo…"
+  },
+  "noPermission": {
+    "message": "Sense permís per arribar al vostre Postulo, no es pot enviar res."
+  },
+  "sending": {
+    "message": "S'està enviant al Postulo…"
+  },
+  "captured": {
+    "message": "Capturada. Reviseu-la abans que passi a les vostres ofertes."
+  },
+  "readBy": {
+    "message": "Llegida per $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Oferta sense títol"
+  },
+  "optionsTitle": {
+    "message": "Configuració del Postulo"
+  },
+  "instanceLabel": {
+    "message": "El vostre Postulo"
+  },
+  "instanceHint": {
+    "message": "L'adreça on l'obriu. https, tret que funcioni en aquest ordinador."
+  },
+  "tokenLabel": {
+    "message": "Testimoni d'API"
+  },
+  "tokenHint": {
+    "message": "Es crea a $PATH$ al Postulo, amb l'abast $SCOPE$ i res més. Només es desa en aquest dispositiu i mai no se sincronitza amb un compte del navegador.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Configuració → Testimonis d'API"
+  },
+  "save": {
+    "message": "Desa"
+  },
+  "test": {
+    "message": "Prova"
+  },
+  "shortcutHint": {
+    "message": "En prémer el botó, o $SHORTCUT$, la pàgina que esteu mirant s'envia al vostre Postulo perquè la reviseu. No es llegeix cap pàgina fins que ho demaneu, i no s'envia res enlloc més.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Enganxeu el testimoni que us va mostrar el Postulo."
+  },
+  "saved": {
+    "message": "Desat. Ara el botó enviarà les pàgines a $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Desat, però el navegador ha denegat el permís per arribar-hi; permeteu-ho als permisos de l'extensió."
+  },
+  "asking": {
+    "message": "S'està preguntant al Postulo de qui és aquest testimoni…"
+  },
+  "addressRefused": {
+    "message": "S'ha denegat el permís per arribar a aquesta adreça."
+  },
+  "tokenIs": {
+    "message": "Testimoni «$NAME$» de $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Testimoni «$NAME$» de $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "No té l'abast captures, així que no pot capturar."
+  },
+  "enterAddress": {
+    "message": "Introduïu l'adreça del vostre Postulo."
+  },
+  "notAnAddress": {
+    "message": "Això no sembla una adreça web."
+  },
+  "httpsOnly": {
+    "message": "Feu servir https per a tot el que no sigui al vostre propi ordinador: el testimoni viatja amb cada petició."
+  },
+  "tokenRefused": {
+    "message": "El Postulo no accepta aquest testimoni. Comproveu-lo a $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Aquest testimoni no té permís per capturar."
+  },
+  "tooMany": {
+    "message": "Massa captures en poc temps. Espereu un minut i torneu-ho a provar."
+  },
+  "answered": {
+    "message": "El Postulo ha respost $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "No hi ha cap pestanya per llegir."
+  },
+  "notWebPage": {
+    "message": "Només es poden capturar pàgines web."
+  },
+  "unreadable": {
+    "message": "No s'ha pogut llegir la pàgina. Algunes pàgines bloquegen les extensions."
+  }
+}

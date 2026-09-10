@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "de"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Senden Sie die Stellenanzeige, die Sie gerade ansehen, zur Prüfung an Ihr eigenes Postulo. Nichts geht anderswohin."
+  },
+  "actionTitle": {
+    "message": "Diese Anzeige in Postulo erfassen"
+  },
+  "settings": {
+    "message": "Einstellungen"
+  },
+  "unconfigured": {
+    "message": "Sagen Sie der Erweiterung, wo Ihr Postulo ist und welches Token sie verwenden soll."
+  },
+  "setUp": {
+    "message": "Einrichten"
+  },
+  "capture": {
+    "message": "Diese Anzeige erfassen"
+  },
+  "captureHint": {
+    "message": "Die Seite, die Sie ansehen, wird an Ihr Postulo gesendet und nirgendwohin sonst."
+  },
+  "review": {
+    "message": "In Postulo prüfen"
+  },
+  "reading": {
+    "message": "Seite wird gelesen …"
+  },
+  "allowing": {
+    "message": "Der Erweiterung wird der Zugriff auf Ihr Postulo erlaubt …"
+  },
+  "noPermission": {
+    "message": "Ohne die Erlaubnis, Ihr Postulo zu erreichen, kann nichts gesendet werden."
+  },
+  "sending": {
+    "message": "Wird an Postulo gesendet …"
+  },
+  "captured": {
+    "message": "Erfasst. Prüfen Sie sie, bevor sie zu Ihren Angeboten kommt."
+  },
+  "readBy": {
+    "message": "Gelesen von $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Anzeige ohne Titel"
+  },
+  "optionsTitle": {
+    "message": "Postulo-Einstellungen"
+  },
+  "instanceLabel": {
+    "message": "Ihr Postulo"
+  },
+  "instanceHint": {
+    "message": "Die Adresse, unter der Sie es öffnen. https, außer es läuft auf diesem Rechner."
+  },
+  "tokenLabel": {
+    "message": "API-Token"
+  },
+  "tokenHint": {
+    "message": "Erstellt unter $PATH$ in Postulo, mit dem Bereich $SCOPE$ und nichts weiter. Es wird nur auf diesem Gerät gespeichert und nie über ein Browserkonto synchronisiert.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Einstellungen → API-Token"
+  },
+  "save": {
+    "message": "Speichern"
+  },
+  "test": {
+    "message": "Testen"
+  },
+  "shortcutHint": {
+    "message": "Ein Klick auf die Schaltfläche oder $SHORTCUT$ sendet die Seite, die Sie ansehen, zur Prüfung an Ihr Postulo. Keine Seite wird gelesen, bevor Sie es verlangen, und nichts wird anderswohin gesendet.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Fügen Sie das Token ein, das Postulo Ihnen angezeigt hat."
+  },
+  "saved": {
+    "message": "Gespeichert. Die Schaltfläche sendet Seiten jetzt an $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Gespeichert, aber der Browser hat den Zugriff darauf verweigert; erlauben Sie ihn in den Berechtigungen der Erweiterung."
+  },
+  "asking": {
+    "message": "Postulo wird gefragt, wem dieses Token gehört …"
+  },
+  "addressRefused": {
+    "message": "Die Erlaubnis, diese Adresse zu erreichen, wurde verweigert."
+  },
+  "tokenIs": {
+    "message": "Token „$NAME$“ für $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token „$NAME$“ für $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Ihm fehlt der Bereich captures, deshalb kann es nichts erfassen."
+  },
+  "enterAddress": {
+    "message": "Geben Sie die Adresse Ihres Postulo ein."
+  },
+  "notAnAddress": {
+    "message": "Das sieht nicht wie eine Webadresse aus."
+  },
+  "httpsOnly": {
+    "message": "Verwenden Sie https für alles, was nicht auf Ihrem eigenen Rechner läuft: Das Token reist mit jeder Anfrage mit."
+  },
+  "tokenRefused": {
+    "message": "Postulo akzeptiert dieses Token nicht. Prüfen Sie es unter $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Dieses Token darf nichts erfassen."
+  },
+  "tooMany": {
+    "message": "Zu viele Erfassungen in kurzer Zeit. Warten Sie eine Minute und versuchen Sie es erneut."
+  },
+  "answered": {
+    "message": "Postulo antwortete mit $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Kein Tab zum Lesen."
+  },
+  "notWebPage": {
+    "message": "Nur Webseiten können erfasst werden."
+  },
+  "unreadable": {
+    "message": "Die Seite konnte nicht gelesen werden. Manche Seiten blockieren Erweiterungen."
+  }
+}

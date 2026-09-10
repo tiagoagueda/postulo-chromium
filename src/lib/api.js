@@ -6,11 +6,24 @@
 
 const API = "/api/v1";
 
+/** An error with a sentence to show, named by its key in _locales rather than written out.
+ *  These functions stay pure and testable outside a browser; the page that catches one says
+ *  it in the browser's language. A substitution may itself be `{ key }`, for a phrase that is
+ *  translated too. */
+export class Refusal extends Error {
+  constructor(key, substitutions = []) {
+    super(key);
+    this.name = "Refusal";
+    this.key = key;
+    this.substitutions = substitutions;
+  }
+}
+
 /** A typed instance address, cleaned: scheme, host, optional port and path prefix. */
 export function normaliseInstance(raw) {
   let text = (raw || "").trim();
   if (!text) {
-    throw new Error("Enter the address of your Postulo.");
+    throw new Refusal("enterAddress");
   }
   if (!/^https?:\/\//i.test(text)) {
     text = "https://" + text;
@@ -19,11 +32,11 @@ export function normaliseInstance(raw) {
   try {
     url = new URL(text);
   } catch {
-    throw new Error("That does not look like a web address.");
+    throw new Refusal("notAnAddress");
   }
   const local = ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname) || url.hostname.endsWith(".local");
   if (url.protocol !== "https:" && !local) {
-    throw new Error("Use https for anything that is not on your own machine: the token travels with every request.");
+    throw new Refusal("httpsOnly");
   }
   url.search = "";
   url.hash = "";
@@ -61,18 +74,22 @@ export async function readResponse(response) {
     return body;
   }
   if (response.status === 401) {
-    throw new Error("Postulo does not accept this token. Check it under Settings > API tokens.");
+    throw new Refusal("tokenRefused", [{ key: "tokenPath" }]);
   }
   if (response.status === 403) {
-    throw new Error(body && body.detail ? body.detail : "This token is not allowed to capture.");
+    // Postulo's own sentence when it gives one: it names the scope that is missing.
+    if (body && body.detail) {
+      throw new Error(body.detail);
+    }
+    throw new Refusal("notAllowed");
   }
   if (response.status === 422 && body && body.detail) {
     throw new Error(typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail));
   }
   if (response.status === 429) {
-    throw new Error("Too many captures in a short time. Wait a minute and try again.");
+    throw new Refusal("tooMany");
   }
-  throw new Error(`Postulo answered ${response.status}.`);
+  throw new Refusal("answered", [String(response.status)]);
 }
 
 /** GET /me: who this token is, and what it may do. */
@@ -91,9 +108,10 @@ export async function capture(instance, token, { url, html }, fetchImpl = fetch)
   return readResponse(response);
 }
 
-/** One line for the popup, from what the capture API returned. */
-export function describe(result) {
-  const parts = [result.title || "Untitled posting"];
+/** One line for the popup, from what the capture API returned. `untitled` is said when the
+ *  page gave no title, in whatever language the caller speaks. */
+export function describe(result, untitled = "Untitled posting") {
+  const parts = [result.title || untitled];
   const where = [result.company_name, result.location].filter(Boolean).join(", ");
   if (where) {
     parts.push(where);

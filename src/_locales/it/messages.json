@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "it"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Invia l'annuncio di lavoro che stai guardando al tuo Postulo, per rivederlo. Niente va da nessun'altra parte."
+  },
+  "actionTitle": {
+    "message": "Acquisisci questo annuncio in Postulo"
+  },
+  "settings": {
+    "message": "Impostazioni"
+  },
+  "unconfigured": {
+    "message": "Di' all'estensione dov'è il tuo Postulo e quale token usare."
+  },
+  "setUp": {
+    "message": "Configurala"
+  },
+  "capture": {
+    "message": "Acquisisci questo annuncio"
+  },
+  "captureHint": {
+    "message": "La pagina che stai guardando viene inviata al tuo Postulo e da nessun'altra parte."
+  },
+  "review": {
+    "message": "Rivedi in Postulo"
+  },
+  "reading": {
+    "message": "Lettura della pagina…"
+  },
+  "allowing": {
+    "message": "Autorizzazione dell'estensione a raggiungere il tuo Postulo…"
+  },
+  "noPermission": {
+    "message": "Senza il permesso di raggiungere il tuo Postulo, non si può inviare nulla."
+  },
+  "sending": {
+    "message": "Invio a Postulo…"
+  },
+  "captured": {
+    "message": "Acquisito. Rivedilo prima che finisca tra i tuoi annunci."
+  },
+  "readBy": {
+    "message": "Letto da $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Annuncio senza titolo"
+  },
+  "optionsTitle": {
+    "message": "Impostazioni di Postulo"
+  },
+  "instanceLabel": {
+    "message": "Il tuo Postulo"
+  },
+  "instanceHint": {
+    "message": "L'indirizzo a cui lo apri. https, a meno che non giri su questo computer."
+  },
+  "tokenLabel": {
+    "message": "Token API"
+  },
+  "tokenHint": {
+    "message": "Si crea in $PATH$ in Postulo, con l'ambito $SCOPE$ e nient'altro. Resta solo su questo dispositivo e non viene mai sincronizzato tramite un account del browser.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Impostazioni → Token API"
+  },
+  "save": {
+    "message": "Salva"
+  },
+  "test": {
+    "message": "Prova"
+  },
+  "shortcutHint": {
+    "message": "Premendo il pulsante, o $SHORTCUT$, la pagina che stai guardando viene inviata al tuo Postulo per essere rivista. Nessuna pagina viene letta finché non lo chiedi, e niente viene inviato altrove.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Incolla il token che Postulo ti ha mostrato."
+  },
+  "saved": {
+    "message": "Salvato. Ora il pulsante invierà le pagine a $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Salvato, ma il browser ha negato il permesso di raggiungerlo; consentilo nei permessi dell'estensione."
+  },
+  "asking": {
+    "message": "Chiedo a Postulo di chi è questo token…"
+  },
+  "addressRefused": {
+    "message": "Il permesso di raggiungere quell'indirizzo è stato negato."
+  },
+  "tokenIs": {
+    "message": "Token «$NAME$» di $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token «$NAME$» di $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Gli manca l'ambito captures, quindi non può acquisire."
+  },
+  "enterAddress": {
+    "message": "Inserisci l'indirizzo del tuo Postulo."
+  },
+  "notAnAddress": {
+    "message": "Non sembra un indirizzo web."
+  },
+  "httpsOnly": {
+    "message": "Usa https per tutto ciò che non è sul tuo computer: il token viaggia con ogni richiesta."
+  },
+  "tokenRefused": {
+    "message": "Postulo non accetta questo token. Controllalo in $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Questo token non è autorizzato ad acquisire."
+  },
+  "tooMany": {
+    "message": "Troppe acquisizioni in poco tempo. Aspetta un minuto e riprova."
+  },
+  "answered": {
+    "message": "Postulo ha risposto $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nessuna scheda da leggere."
+  },
+  "notWebPage": {
+    "message": "Si possono acquisire solo pagine web."
+  },
+  "unreadable": {
+    "message": "Non è stato possibile leggere la pagina. Alcune pagine bloccano le estensioni."
+  }
+}

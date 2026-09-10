@@ -2,7 +2,11 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { capture, describe, endpoint, normaliseInstance, originPattern, readResponse, whoAmI } from "../src/lib/api.js";
+import { Refusal, capture, describe, endpoint, normaliseInstance, originPattern, readResponse, whoAmI } from "../src/lib/api.js";
+
+// The extension's own refusals carry a key into _locales, not a sentence: said in the browser's language.
+const refusal = (key, substitutions = []) => (error) =>
+  error instanceof Refusal && error.key === key && JSON.stringify(error.substitutions) === JSON.stringify(substitutions);
 
 test("an instance address is cleaned and https is insisted on away from home", () => {
   assert.equal(normaliseInstance("postulo.example.org"), "https://postulo.example.org");
@@ -11,9 +15,9 @@ test("an instance address is cleaned and https is insisted on away from home", (
   assert.equal(normaliseInstance("https://host.example/postulo/?x=1#y"), "https://host.example/postulo");
   assert.equal(normaliseInstance("http://localhost:8000"), "http://localhost:8000");
   assert.equal(normaliseInstance("http://pi.local"), "http://pi.local");
-  assert.throws(() => normaliseInstance("http://postulo.example.org"), /https/);
-  assert.throws(() => normaliseInstance(""), /Enter/);
-  assert.throws(() => normaliseInstance("not a url at all :::"), /web address/);
+  assert.throws(() => normaliseInstance("http://postulo.example.org"), refusal("httpsOnly"));
+  assert.throws(() => normaliseInstance(""), refusal("enterAddress"));
+  assert.throws(() => normaliseInstance("not a url at all :::"), refusal("notAnAddress"));
 });
 
 test("the host permission asked for is the instance's origin and nothing wider", () => {
@@ -32,11 +36,12 @@ function fakeResponse(status, body) {
 
 test("responses become data or a sentence a person can act on", async () => {
   assert.deepEqual(await readResponse(fakeResponse(201, { id: 1 })), { id: 1 });
-  await assert.rejects(readResponse(fakeResponse(401, {})), /does not accept this token/);
+  await assert.rejects(readResponse(fakeResponse(401, {})), refusal("tokenRefused", [{ key: "tokenPath" }]));
   await assert.rejects(readResponse(fakeResponse(403, { detail: "This token does not have the 'captures' scope." })), /captures/);
+  await assert.rejects(readResponse(fakeResponse(403, {})), refusal("notAllowed"));
   await assert.rejects(readResponse(fakeResponse(422, { detail: "That page yielded nothing." })), /nothing/);
-  await assert.rejects(readResponse(fakeResponse(429, {})), /Wait a minute/);
-  await assert.rejects(readResponse(fakeResponse(500, null)), /answered 500/);
+  await assert.rejects(readResponse(fakeResponse(429, {})), refusal("tooMany"));
+  await assert.rejects(readResponse(fakeResponse(500, null)), refusal("answered", ["500"]));
 });
 
 test("a capture posts the page to the configured instance with the token, and to nothing else", async () => {
@@ -53,6 +58,7 @@ test("a capture posts the page to the configured instance with the token, and to
   assert.deepEqual(JSON.parse(calls[0].init.body), { url: "https://jobs.example/1", html: "<html>" });
   assert.equal(describe(result), "Research Engineer — Black Mesa, Lyon");
   assert.equal(describe({ title: "" }), "Untitled posting");
+  assert.equal(describe({ title: "" }, "Anúncio sem título"), "Anúncio sem título");
 });
 
 test("the test button asks /me", async () => {

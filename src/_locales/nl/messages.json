@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "nl"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Stuur de vacature die u bekijkt naar uw eigen Postulo, om te controleren. Er gaat niets ergens anders heen."
+  },
+  "actionTitle": {
+    "message": "Deze vacature vastleggen in Postulo"
+  },
+  "settings": {
+    "message": "Instellingen"
+  },
+  "unconfigured": {
+    "message": "Vertel de extensie waar uw Postulo staat en welk token ze moet gebruiken."
+  },
+  "setUp": {
+    "message": "Instellen"
+  },
+  "capture": {
+    "message": "Deze vacature vastleggen"
+  },
+  "captureHint": {
+    "message": "De pagina die u bekijkt, wordt naar uw Postulo gestuurd en nergens anders heen."
+  },
+  "review": {
+    "message": "Controleren in Postulo"
+  },
+  "reading": {
+    "message": "De pagina wordt gelezen…"
+  },
+  "allowing": {
+    "message": "De extensie krijgt toegang tot uw Postulo…"
+  },
+  "noPermission": {
+    "message": "Zonder toestemming om uw Postulo te bereiken, kan er niets worden verstuurd."
+  },
+  "sending": {
+    "message": "Wordt naar Postulo gestuurd…"
+  },
+  "captured": {
+    "message": "Vastgelegd. Controleer hem voordat hij tussen uw vacatures komt."
+  },
+  "readBy": {
+    "message": "Gelezen door $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Vacature zonder titel"
+  },
+  "optionsTitle": {
+    "message": "Postulo-instellingen"
+  },
+  "instanceLabel": {
+    "message": "Uw Postulo"
+  },
+  "instanceHint": {
+    "message": "Het adres waarop u hem opent. https, tenzij hij op deze computer draait."
+  },
+  "tokenLabel": {
+    "message": "API-token"
+  },
+  "tokenHint": {
+    "message": "Aangemaakt onder $PATH$ in Postulo, met het bereik $SCOPE$ en verder niets. Het wordt alleen op dit apparaat bewaard en nooit via een browseraccount gesynchroniseerd.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Instellingen → API-tokens"
+  },
+  "save": {
+    "message": "Opslaan"
+  },
+  "test": {
+    "message": "Testen"
+  },
+  "shortcutHint": {
+    "message": "Met de knop, of $SHORTCUT$, wordt de pagina die u bekijkt ter controle naar uw Postulo gestuurd. Er wordt geen pagina gelezen voordat u erom vraagt, en er gaat niets ergens anders heen.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Plak het token dat Postulo u liet zien."
+  },
+  "saved": {
+    "message": "Opgeslagen. De knop stuurt pagina's nu naar $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Opgeslagen, maar de browser weigerde toestemming om hem te bereiken; sta het toe in de machtigingen van de extensie."
+  },
+  "asking": {
+    "message": "Postulo wordt gevraagd van wie dit token is…"
+  },
+  "addressRefused": {
+    "message": "Toestemming om dat adres te bereiken is geweigerd."
+  },
+  "tokenIs": {
+    "message": "Token ‘$NAME$’ van $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token ‘$NAME$’ van $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Het mist het bereik captures, dus het kan niets vastleggen."
+  },
+  "enterAddress": {
+    "message": "Voer het adres van uw Postulo in."
+  },
+  "notAnAddress": {
+    "message": "Dat lijkt geen webadres."
+  },
+  "httpsOnly": {
+    "message": "Gebruik https voor alles wat niet op uw eigen computer staat: het token reist met elk verzoek mee."
+  },
+  "tokenRefused": {
+    "message": "Postulo accepteert dit token niet. Controleer het onder $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Dit token mag niets vastleggen."
+  },
+  "tooMany": {
+    "message": "Te veel vastleggingen in korte tijd. Wacht een minuut en probeer het opnieuw."
+  },
+  "answered": {
+    "message": "Postulo antwoordde met $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Geen tabblad om te lezen."
+  },
+  "notWebPage": {
+    "message": "Alleen webpagina's kunnen worden vastgelegd."
+  },
+  "unreadable": {
+    "message": "De pagina kon niet worden gelezen. Sommige pagina's blokkeren extensies."
+  }
+}

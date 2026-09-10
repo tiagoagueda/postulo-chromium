@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "et"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Saatke vaadatav töökuulutus ülevaatamiseks oma Postulosse. Mujale ei lähe midagi."
+  },
+  "actionTitle": {
+    "message": "Püüa see kuulutus Postulosse"
+  },
+  "settings": {
+    "message": "Seaded"
+  },
+  "unconfigured": {
+    "message": "Öelge laiendusele, kus teie Postulo asub ja millist tõendit kasutada."
+  },
+  "setUp": {
+    "message": "Seadista"
+  },
+  "capture": {
+    "message": "Püüa see kuulutus"
+  },
+  "captureHint": {
+    "message": "Leht, mida vaatate, saadetakse teie Postulosse ja mitte kuhugi mujale."
+  },
+  "review": {
+    "message": "Vaata üle Postulos"
+  },
+  "reading": {
+    "message": "Lehte loetakse…"
+  },
+  "allowing": {
+    "message": "Laiendusele antakse luba teie Postuloni jõuda…"
+  },
+  "noPermission": {
+    "message": "Ilma loata teie Postuloni jõuda ei saa midagi saata."
+  },
+  "sending": {
+    "message": "Saadetakse Postulosse…"
+  },
+  "captured": {
+    "message": "Püütud. Vaadake see üle, enne kui see teie kuulutuste hulka jõuab."
+  },
+  "readBy": {
+    "message": "Luges $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Pealkirjata kuulutus"
+  },
+  "optionsTitle": {
+    "message": "Postulo seaded"
+  },
+  "instanceLabel": {
+    "message": "Teie Postulo"
+  },
+  "instanceHint": {
+    "message": "Aadress, millelt te selle avate. https, välja arvatud juhul, kui see töötab selles arvutis."
+  },
+  "tokenLabel": {
+    "message": "API tõend"
+  },
+  "tokenHint": {
+    "message": "Luuakse Postulos jaotises $PATH$, ulatusega $SCOPE$ ja mitte millegi muuga. Seda hoitakse ainult selles seadmes ja seda ei sünkroonita kunagi brauserikonto kaudu.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Seaded → API tõendid"
+  },
+  "save": {
+    "message": "Salvesta"
+  },
+  "test": {
+    "message": "Testi"
+  },
+  "shortcutHint": {
+    "message": "Nupu või $SHORTCUT$ vajutamine saadab vaadatava lehe ülevaatamiseks teie Postulosse. Ühtegi lehte ei loeta enne, kui te seda palute, ja mujale ei saadeta midagi.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Kleepige tõend, mille Postulo teile näitas."
+  },
+  "saved": {
+    "message": "Salvestatud. Nupp saadab nüüd lehed aadressile $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Salvestatud, kuid brauser keeldus sellele ligipääsu lubamast; lubage see laienduse õigustes."
+  },
+  "asking": {
+    "message": "Postulolt küsitakse, kellele see tõend kuulub…"
+  },
+  "addressRefused": {
+    "message": "Luba sellele aadressile jõuda keelati."
+  },
+  "tokenIs": {
+    "message": "Tõend „$NAME$“ kasutajale $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Tõend „$NAME$“ kasutajale $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Sel puudub ulatus captures, seega ei saa see püüda."
+  },
+  "enterAddress": {
+    "message": "Sisestage oma Postulo aadress."
+  },
+  "notAnAddress": {
+    "message": "See ei näe välja nagu veebiaadress."
+  },
+  "httpsOnly": {
+    "message": "Kasutage https-i kõige jaoks, mis ei ole teie enda arvutis: tõend liigub iga päringuga kaasa."
+  },
+  "tokenRefused": {
+    "message": "Postulo ei aktsepteeri seda tõendit. Kontrollige seda jaotises $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Sellel tõendil ei ole lubatud püüda."
+  },
+  "tooMany": {
+    "message": "Liiga palju püüdmisi lühikese aja jooksul. Oodake minut ja proovige uuesti."
+  },
+  "answered": {
+    "message": "Postulo vastas $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Pole vahekaarti, mida lugeda."
+  },
+  "notWebPage": {
+    "message": "Püüda saab ainult veebilehti."
+  },
+  "unreadable": {
+    "message": "Lehte ei õnnestunud lugeda. Mõned lehed blokeerivad laiendusi."
+  }
+}

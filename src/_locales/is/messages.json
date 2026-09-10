@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "is"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Sendu starfsauglýsinguna sem þú ert að skoða í þitt eigið Postulo, til yfirferðar. Ekkert fer neitt annað."
+  },
+  "actionTitle": {
+    "message": "Grípa þessa auglýsingu í Postulo"
+  },
+  "settings": {
+    "message": "Stillingar"
+  },
+  "unconfigured": {
+    "message": "Segðu viðbótinni hvar Postulo-ið þitt er og hvaða teikn hún á að nota."
+  },
+  "setUp": {
+    "message": "Setja upp"
+  },
+  "capture": {
+    "message": "Grípa þessa auglýsingu"
+  },
+  "captureHint": {
+    "message": "Síðan sem þú ert að skoða er send í Postulo-ið þitt og hvergi annað."
+  },
+  "review": {
+    "message": "Fara yfir í Postulo"
+  },
+  "reading": {
+    "message": "Les síðuna…"
+  },
+  "allowing": {
+    "message": "Leyfi viðbótinni að ná í Postulo-ið þitt…"
+  },
+  "noPermission": {
+    "message": "Án leyfis til að ná í Postulo-ið þitt er ekki hægt að senda neitt."
+  },
+  "sending": {
+    "message": "Sendi í Postulo…"
+  },
+  "captured": {
+    "message": "Gripið. Farðu yfir hana áður en hún bætist við auglýsingarnar þínar."
+  },
+  "readBy": {
+    "message": "Lesið af $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Auglýsing án titils"
+  },
+  "optionsTitle": {
+    "message": "Stillingar Postulo"
+  },
+  "instanceLabel": {
+    "message": "Postulo-ið þitt"
+  },
+  "instanceHint": {
+    "message": "Vistfangið sem þú opnar það á. https, nema það keyri á þessari vél."
+  },
+  "tokenLabel": {
+    "message": "API-teikn"
+  },
+  "tokenHint": {
+    "message": "Búið til undir $PATH$ í Postulo, með heimildinni $SCOPE$ og engu öðru. Það er aðeins geymt á þessu tæki og aldrei samstillt í gegnum vafrareikning.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Stillingar → API-teikn"
+  },
+  "save": {
+    "message": "Vista"
+  },
+  "test": {
+    "message": "Prófa"
+  },
+  "shortcutHint": {
+    "message": "Með því að ýta á hnappinn, eða $SHORTCUT$, er síðan sem þú ert að skoða send í Postulo-ið þitt til yfirferðar. Engin síða er lesin fyrr en þú biður um það, og ekkert er sent neitt annað.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Límdu teiknið sem Postulo sýndi þér."
+  },
+  "saved": {
+    "message": "Vistað. Hnappurinn sendir nú síður til $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Vistað, en vafrinn neitaði um leyfi til að ná í það; leyfðu það í heimildum viðbótarinnar."
+  },
+  "asking": {
+    "message": "Spyr Postulo hver á þetta teikn…"
+  },
+  "addressRefused": {
+    "message": "Leyfi til að ná í þetta vistfang var hafnað."
+  },
+  "tokenIs": {
+    "message": "Teiknið „$NAME$“ fyrir $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Teiknið „$NAME$“ fyrir $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Það vantar heimildina captures, svo það getur ekki gripið."
+  },
+  "enterAddress": {
+    "message": "Sláðu inn vistfang Postulo-sins þíns."
+  },
+  "notAnAddress": {
+    "message": "Þetta lítur ekki út eins og vefvistfang."
+  },
+  "httpsOnly": {
+    "message": "Notaðu https fyrir allt sem er ekki á þinni eigin vél: teiknið ferðast með hverri beiðni."
+  },
+  "tokenRefused": {
+    "message": "Postulo tekur ekki við þessu teikni. Athugaðu það undir $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Þetta teikn má ekki grípa."
+  },
+  "tooMany": {
+    "message": "Of mörg grip á stuttum tíma. Bíddu í mínútu og reyndu aftur."
+  },
+  "answered": {
+    "message": "Postulo svaraði $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Enginn flipi til að lesa."
+  },
+  "notWebPage": {
+    "message": "Aðeins er hægt að grípa vefsíður."
+  },
+  "unreadable": {
+    "message": "Ekki tókst að lesa síðuna. Sumar síður loka á viðbætur."
+  }
+}

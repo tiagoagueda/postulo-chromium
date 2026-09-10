@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "el"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Στείλτε την αγγελία εργασίας που βλέπετε στο δικό σας Postulo, για έλεγχο. Τίποτα δεν πηγαίνει αλλού."
+  },
+  "actionTitle": {
+    "message": "Σύλληψη αυτής της αγγελίας στο Postulo"
+  },
+  "settings": {
+    "message": "Ρυθμίσεις"
+  },
+  "unconfigured": {
+    "message": "Πείτε στην επέκταση πού βρίσκεται το Postulo σας και ποιο διακριτικό να χρησιμοποιήσει."
+  },
+  "setUp": {
+    "message": "Ρύθμιση"
+  },
+  "capture": {
+    "message": "Σύλληψη αυτής της αγγελίας"
+  },
+  "captureHint": {
+    "message": "Η σελίδα που βλέπετε αποστέλλεται στο Postulo σας και πουθενά αλλού."
+  },
+  "review": {
+    "message": "Έλεγχος στο Postulo"
+  },
+  "reading": {
+    "message": "Ανάγνωση της σελίδας…"
+  },
+  "allowing": {
+    "message": "Επιτρέπεται στην επέκταση η πρόσβαση στο Postulo σας…"
+  },
+  "noPermission": {
+    "message": "Χωρίς άδεια πρόσβασης στο Postulo σας, δεν μπορεί να σταλεί τίποτα."
+  },
+  "sending": {
+    "message": "Αποστολή στο Postulo…"
+  },
+  "captured": {
+    "message": "Συλλήφθηκε. Ελέγξτε την πριν μπει στις αγγελίες σας."
+  },
+  "readBy": {
+    "message": "Αναγνώστηκε από $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Αγγελία χωρίς τίτλο"
+  },
+  "optionsTitle": {
+    "message": "Ρυθμίσεις Postulo"
+  },
+  "instanceLabel": {
+    "message": "Το Postulo σας"
+  },
+  "instanceHint": {
+    "message": "Η διεύθυνση όπου το ανοίγετε. https, εκτός αν τρέχει σε αυτόν τον υπολογιστή."
+  },
+  "tokenLabel": {
+    "message": "Διακριτικό API"
+  },
+  "tokenHint": {
+    "message": "Δημιουργείται στην ενότητα $PATH$ του Postulo, με το εύρος $SCOPE$ και τίποτα παραπάνω. Φυλάσσεται μόνο σε αυτή τη συσκευή και δεν συγχρονίζεται ποτέ μέσω λογαριασμού του προγράμματος περιήγησης.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Ρυθμίσεις → Διακριτικά API"
+  },
+  "save": {
+    "message": "Αποθήκευση"
+  },
+  "test": {
+    "message": "Δοκιμή"
+  },
+  "shortcutHint": {
+    "message": "Πατώντας το κουμπί ή $SHORTCUT$, η σελίδα που βλέπετε αποστέλλεται στο Postulo σας για έλεγχο. Καμία σελίδα δεν διαβάζεται πριν το ζητήσετε, και τίποτα δεν αποστέλλεται αλλού.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Επικολλήστε το διακριτικό που σας έδειξε το Postulo."
+  },
+  "saved": {
+    "message": "Αποθηκεύτηκε. Το κουμπί θα στέλνει πλέον σελίδες στο $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Αποθηκεύτηκε, αλλά το πρόγραμμα περιήγησης αρνήθηκε την άδεια πρόσβασης· επιτρέψτε την στα δικαιώματα της επέκτασης."
+  },
+  "asking": {
+    "message": "Ερωτάται το Postulo σε ποιον ανήκει αυτό το διακριτικό…"
+  },
+  "addressRefused": {
+    "message": "Η άδεια πρόσβασης σε αυτή τη διεύθυνση απορρίφθηκε."
+  },
+  "tokenIs": {
+    "message": "Διακριτικό «$NAME$» για $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Διακριτικό «$NAME$» για $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Του λείπει το εύρος captures, οπότε δεν μπορεί να κάνει σύλληψη."
+  },
+  "enterAddress": {
+    "message": "Εισαγάγετε τη διεύθυνση του Postulo σας."
+  },
+  "notAnAddress": {
+    "message": "Αυτό δεν μοιάζει με διεύθυνση ιστού."
+  },
+  "httpsOnly": {
+    "message": "Χρησιμοποιήστε https για οτιδήποτε δεν βρίσκεται στον δικό σας υπολογιστή: το διακριτικό ταξιδεύει με κάθε αίτημα."
+  },
+  "tokenRefused": {
+    "message": "Το Postulo δεν δέχεται αυτό το διακριτικό. Ελέγξτε το στην ενότητα $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Αυτό το διακριτικό δεν επιτρέπεται να κάνει σύλληψη."
+  },
+  "tooMany": {
+    "message": "Πάρα πολλές συλλήψεις σε λίγο χρόνο. Περιμένετε ένα λεπτό και δοκιμάστε ξανά."
+  },
+  "answered": {
+    "message": "Το Postulo απάντησε $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Δεν υπάρχει καρτέλα για ανάγνωση."
+  },
+  "notWebPage": {
+    "message": "Μόνο ιστοσελίδες μπορούν να συλληφθούν."
+  },
+  "unreadable": {
+    "message": "Η σελίδα δεν μπόρεσε να διαβαστεί. Ορισμένες σελίδες μπλοκάρουν τις επεκτάσεις."
+  }
+}

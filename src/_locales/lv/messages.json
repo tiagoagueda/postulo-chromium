@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "lv"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Nosūtiet skatīto darba sludinājumu uz savu Postulo pārskatīšanai. Nekas nenonāk citur."
+  },
+  "actionTitle": {
+    "message": "Tvert šo sludinājumu Postulo"
+  },
+  "settings": {
+    "message": "Iestatījumi"
+  },
+  "unconfigured": {
+    "message": "Norādiet paplašinājumam, kur ir jūsu Postulo un kuru žetonu izmantot."
+  },
+  "setUp": {
+    "message": "Iestatīt"
+  },
+  "capture": {
+    "message": "Tvert šo sludinājumu"
+  },
+  "captureHint": {
+    "message": "Skatītā lapa tiek nosūtīta uz jūsu Postulo un nekur citur."
+  },
+  "review": {
+    "message": "Pārskatīt Postulo"
+  },
+  "reading": {
+    "message": "Lapa tiek lasīta…"
+  },
+  "allowing": {
+    "message": "Paplašinājumam tiek atļauts sasniegt jūsu Postulo…"
+  },
+  "noPermission": {
+    "message": "Bez atļaujas sasniegt jūsu Postulo neko nevar nosūtīt."
+  },
+  "sending": {
+    "message": "Sūta uz Postulo…"
+  },
+  "captured": {
+    "message": "Notverts. Pārskatiet to, pirms tas nonāk jūsu sludinājumos."
+  },
+  "readBy": {
+    "message": "Nolasīja: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Sludinājums bez nosaukuma"
+  },
+  "optionsTitle": {
+    "message": "Postulo iestatījumi"
+  },
+  "instanceLabel": {
+    "message": "Jūsu Postulo"
+  },
+  "instanceHint": {
+    "message": "Adrese, kurā to atverat. https, ja vien tas nedarbojas šajā datorā."
+  },
+  "tokenLabel": {
+    "message": "API žetons"
+  },
+  "tokenHint": {
+    "message": "Tiek izveidots Postulo sadaļā $PATH$ ar tvērumu $SCOPE$ un neko vairāk. Tas tiek glabāts tikai šajā ierīcē un nekad netiek sinhronizēts ar pārlūka kontu.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Iestatījumi → API žetoni"
+  },
+  "save": {
+    "message": "Saglabāt"
+  },
+  "test": {
+    "message": "Pārbaudīt"
+  },
+  "shortcutHint": {
+    "message": "Nospiežot pogu vai $SHORTCUT$, skatītā lapa tiek nosūtīta uz jūsu Postulo pārskatīšanai. Neviena lapa netiek lasīta, kamēr to nelūdzat, un nekas netiek sūtīts citur.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Ielīmējiet žetonu, ko jums parādīja Postulo."
+  },
+  "saved": {
+    "message": "Saglabāts. Poga tagad sūtīs lapas uz $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Saglabāts, bet pārlūks atteica atļauju to sasniegt; atļaujiet to paplašinājuma atļaujās."
+  },
+  "asking": {
+    "message": "Postulo tiek jautāts, kam pieder šis žetons…"
+  },
+  "addressRefused": {
+    "message": "Atļauja sasniegt šo adresi tika atteikta."
+  },
+  "tokenIs": {
+    "message": "Žetons “$NAME$” lietotājam $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Žetons “$NAME$” lietotājam $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Tam trūkst tvēruma captures, tāpēc tas nevar tvert."
+  },
+  "enterAddress": {
+    "message": "Ievadiet sava Postulo adresi."
+  },
+  "notAnAddress": {
+    "message": "Tas neizskatās pēc tīmekļa adreses."
+  },
+  "httpsOnly": {
+    "message": "Izmantojiet https visam, kas nav jūsu datorā: žetons ceļo līdzi katram pieprasījumam."
+  },
+  "tokenRefused": {
+    "message": "Postulo nepieņem šo žetonu. Pārbaudiet to sadaļā $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Šim žetonam nav atļauts tvert."
+  },
+  "tooMany": {
+    "message": "Pārāk daudz tvērumu īsā laikā. Uzgaidiet minūti un mēģiniet vēlreiz."
+  },
+  "answered": {
+    "message": "Postulo atbildēja $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nav cilnes, ko lasīt."
+  },
+  "notWebPage": {
+    "message": "Tvert var tikai tīmekļa lapas."
+  },
+  "unreadable": {
+    "message": "Lapu neizdevās nolasīt. Dažas lapas bloķē paplašinājumus."
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "lb"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Schéckt d'Stellenannonce, déi Dir Iech grad ukuckt, fir ze iwwerpréiwen un Ären eegene Postulo. Näischt geet soss iergendwouhin."
+  },
+  "actionTitle": {
+    "message": "Dës Annonce am Postulo erfaassen"
+  },
+  "settings": {
+    "message": "Astellungen"
+  },
+  "unconfigured": {
+    "message": "Sot der Erweiderung, wou Äre Postulo ass a wéi en Token se benotze soll."
+  },
+  "setUp": {
+    "message": "Ariichten"
+  },
+  "capture": {
+    "message": "Dës Annonce erfaassen"
+  },
+  "captureHint": {
+    "message": "D'Säit, déi Dir Iech ukuckt, gëtt un Äre Postulo geschéckt an nëmmen do hin."
+  },
+  "review": {
+    "message": "Am Postulo duerchkucken"
+  },
+  "reading": {
+    "message": "D'Säit gëtt gelies…"
+  },
+  "allowing": {
+    "message": "D'Erweiderung kritt d'Erlaabnis, Äre Postulo z'erreechen…"
+  },
+  "noPermission": {
+    "message": "Ouni d'Erlaabnis, Äre Postulo z'erreechen, kann näischt geschéckt ginn."
+  },
+  "sending": {
+    "message": "Gëtt un de Postulo geschéckt…"
+  },
+  "captured": {
+    "message": "Erfaasst. Kuckt se duerch, ier se bei Är Annoncë kënnt."
+  },
+  "readBy": {
+    "message": "Gelies vun $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Annonce ouni Titel"
+  },
+  "optionsTitle": {
+    "message": "Astellunge vum Postulo"
+  },
+  "instanceLabel": {
+    "message": "Äre Postulo"
+  },
+  "instanceHint": {
+    "message": "D'Adress, ënner där Dir en opmaacht. https, ausser e leeft op dësem Computer."
+  },
+  "tokenLabel": {
+    "message": "API-Token"
+  },
+  "tokenHint": {
+    "message": "Gëtt am Postulo ënner $PATH$ gemaach, mam Beräich $SCOPE$ an näischt weider. En gëtt nëmmen op dësem Apparat gespäichert an ni iwwer e Browserkont synchroniséiert.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Astellungen → API-Tokens"
+  },
+  "save": {
+    "message": "Späicheren"
+  },
+  "test": {
+    "message": "Testen"
+  },
+  "shortcutHint": {
+    "message": "E Klick op de Knäppchen, oder $SHORTCUT$, schéckt d'Säit, déi Dir Iech ukuckt, fir ze iwwerpréiwen un Äre Postulo. Keng Säit gëtt gelies, ier Dir et frot, an näischt gëtt soss iergendwouhi geschéckt.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Fügt den Token an, deen de Postulo Iech gewisen huet."
+  },
+  "saved": {
+    "message": "Gespäichert. De Knäppchen schéckt Säiten elo un $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Gespäichert, mä de Browser huet d'Erlaabnis refuséiert, en z'erreechen; erlaabt et an den Autorisatioune vun der Erweiderung."
+  },
+  "asking": {
+    "message": "De Postulo gëtt gefrot, wiem dësen Token gehéiert…"
+  },
+  "addressRefused": {
+    "message": "D'Erlaabnis, dës Adress z'erreechen, gouf refuséiert."
+  },
+  "tokenIs": {
+    "message": "Token „$NAME$“ fir $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token „$NAME$“ fir $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Him feelt de Beräich captures, dofir kann en näischt erfaassen."
+  },
+  "enterAddress": {
+    "message": "Gitt d'Adress vun Ärem Postulo an."
+  },
+  "notAnAddress": {
+    "message": "Dat gesäit net no enger Webadress aus."
+  },
+  "httpsOnly": {
+    "message": "Benotzt https fir alles, wat net op Ärem eegene Computer ass: den Token reest mat all Ufro mat."
+  },
+  "tokenRefused": {
+    "message": "De Postulo akzeptéiert dësen Token net. Kuckt en ënner $PATH$ no.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Dësen Token däerf näischt erfaassen."
+  },
+  "tooMany": {
+    "message": "Ze vill Erfaassungen a kuerzer Zäit. Waart eng Minutt a probéiert nach eng Kéier."
+  },
+  "answered": {
+    "message": "De Postulo huet mat $STATUS$ geäntwert.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Keen Tab fir ze liesen."
+  },
+  "notWebPage": {
+    "message": "Nëmme Websäite kënnen erfaasst ginn."
+  },
+  "unreadable": {
+    "message": "D'Säit konnt net gelies ginn. Verschidde Säite blockéieren Erweiderungen."
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "ga"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Seol an fógra poist atá á fheiceáil agat chuig do Postulo féin, lena athbhreithniú. Ní théann aon rud áit ar bith eile."
+  },
+  "actionTitle": {
+    "message": "Gabh an fógra seo in Postulo"
+  },
+  "settings": {
+    "message": "Socruithe"
+  },
+  "unconfigured": {
+    "message": "Inis don síneadh cá bhfuil do Postulo agus cén comhartha le húsáid."
+  },
+  "setUp": {
+    "message": "Socraigh é"
+  },
+  "capture": {
+    "message": "Gabh an fógra seo"
+  },
+  "captureHint": {
+    "message": "Seoltar an leathanach atá á fheiceáil agat chuig do Postulo agus ní chuig áit ar bith eile."
+  },
+  "review": {
+    "message": "Athbhreithnigh in Postulo"
+  },
+  "reading": {
+    "message": "Ag léamh an leathanaigh…"
+  },
+  "allowing": {
+    "message": "Ag ligean don síneadh do Postulo a bhaint amach…"
+  },
+  "noPermission": {
+    "message": "Gan cead do Postulo a bhaint amach, ní féidir aon rud a sheoladh."
+  },
+  "sending": {
+    "message": "Á sheoladh chuig Postulo…"
+  },
+  "captured": {
+    "message": "Gafa. Athbhreithnigh é sula dtéann sé i measc do chuid fógraí."
+  },
+  "readBy": {
+    "message": "Léite ag $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Fógra gan teideal"
+  },
+  "optionsTitle": {
+    "message": "Socruithe Postulo"
+  },
+  "instanceLabel": {
+    "message": "Do Postulo"
+  },
+  "instanceHint": {
+    "message": "An seoladh ag a n-osclaíonn tú é. https, mura bhfuil sé ag rith ar an meaisín seo."
+  },
+  "tokenLabel": {
+    "message": "Comhartha API"
+  },
+  "tokenHint": {
+    "message": "Déantar é faoi $PATH$ in Postulo, leis an scóip $SCOPE$ agus gan tada eile. Ní choinnítear é ach ar an ngléas seo, agus ní shioncronaítear riamh é trí chuntas brabhsálaí.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Socruithe → Comharthaí API"
+  },
+  "save": {
+    "message": "Sábháil"
+  },
+  "test": {
+    "message": "Tástáil"
+  },
+  "shortcutHint": {
+    "message": "Nuair a bhrúnn tú an cnaipe, nó $SHORTCUT$, seoltar an leathanach atá á fheiceáil agat chuig do Postulo lena athbhreithniú. Ní léitear aon leathanach go n-iarrann tú é, agus ní sheoltar aon rud áit ar bith eile.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Greamaigh an comhartha a thaispeáin Postulo duit."
+  },
+  "saved": {
+    "message": "Sábháilte. Seolfaidh an cnaipe leathanaigh chuig $HOST$ anois.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Sábháilte, ach dhiúltaigh an brabhsálaí cead é a bhaint amach; ceadaigh é i gceadanna an tsínte."
+  },
+  "asking": {
+    "message": "Ag fiafraí de Postulo cé leis an comhartha seo…"
+  },
+  "addressRefused": {
+    "message": "Diúltaíodh cead an seoladh sin a bhaint amach."
+  },
+  "tokenIs": {
+    "message": "Comhartha “$NAME$” do $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Comhartha “$NAME$” do $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Níl an scóip captures aige, mar sin ní féidir leis gabháil."
+  },
+  "enterAddress": {
+    "message": "Cuir isteach seoladh do Postulo."
+  },
+  "notAnAddress": {
+    "message": "Ní cosúil gur seoladh gréasáin é sin."
+  },
+  "httpsOnly": {
+    "message": "Úsáid https le haghaidh aon rud nach bhfuil ar do mheaisín féin: taistealaíonn an comhartha le gach iarratas."
+  },
+  "tokenRefused": {
+    "message": "Ní ghlacann Postulo leis an gcomhartha seo. Seiceáil é faoi $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Níl cead ag an gcomhartha seo gabháil."
+  },
+  "tooMany": {
+    "message": "An iomarca gabhálacha in achar gearr. Fan nóiméad agus bain triail eile as."
+  },
+  "answered": {
+    "message": "D'fhreagair Postulo $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Níl aon chluaisín le léamh."
+  },
+  "notWebPage": {
+    "message": "Ní féidir ach leathanaigh ghréasáin a ghabháil."
+  },
+  "unreadable": {
+    "message": "Níorbh fhéidir an leathanach a léamh. Cuireann roinnt leathanach bac ar shínte."
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "fr"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Envoyez l'annonce d'emploi que vous consultez à votre propre Postulo, pour vérification. Rien ne part ailleurs."
+  },
+  "actionTitle": {
+    "message": "Capturer cette annonce dans Postulo"
+  },
+  "settings": {
+    "message": "Paramètres"
+  },
+  "unconfigured": {
+    "message": "Indiquez à l'extension où se trouve votre Postulo et quel jeton utiliser."
+  },
+  "setUp": {
+    "message": "La configurer"
+  },
+  "capture": {
+    "message": "Capturer cette annonce"
+  },
+  "captureHint": {
+    "message": "La page que vous consultez est envoyée à votre Postulo, et nulle part ailleurs."
+  },
+  "review": {
+    "message": "Vérifier dans Postulo"
+  },
+  "reading": {
+    "message": "Lecture de la page…"
+  },
+  "allowing": {
+    "message": "Autorisation de l'extension à joindre votre Postulo…"
+  },
+  "noPermission": {
+    "message": "Sans autorisation de joindre votre Postulo, rien ne peut être envoyé."
+  },
+  "sending": {
+    "message": "Envoi à Postulo…"
+  },
+  "captured": {
+    "message": "Capturée. Vérifiez-la avant qu'elle ne rejoigne vos offres."
+  },
+  "readBy": {
+    "message": "Lue par $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Annonce sans titre"
+  },
+  "optionsTitle": {
+    "message": "Paramètres de Postulo"
+  },
+  "instanceLabel": {
+    "message": "Votre Postulo"
+  },
+  "instanceHint": {
+    "message": "L'adresse à laquelle vous l'ouvrez. En https, sauf s'il tourne sur cette machine."
+  },
+  "tokenLabel": {
+    "message": "Jeton d'API"
+  },
+  "tokenHint": {
+    "message": "Créé dans $PATH$ dans Postulo, avec la portée $SCOPE$ et rien de plus. Il est conservé sur cet appareil uniquement, jamais synchronisé par un compte de navigateur.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Paramètres → Jetons d'API"
+  },
+  "save": {
+    "message": "Enregistrer"
+  },
+  "test": {
+    "message": "Tester"
+  },
+  "shortcutHint": {
+    "message": "Appuyer sur le bouton, ou sur $SHORTCUT$, envoie la page que vous consultez à votre Postulo pour vérification. Aucune page n'est lue avant que vous le demandiez, et rien n'est envoyé ailleurs.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Collez le jeton que Postulo vous a montré."
+  },
+  "saved": {
+    "message": "Enregistré. Le bouton enverra désormais les pages à $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Enregistré, mais le navigateur a refusé l'autorisation de le joindre ; autorisez-la dans les permissions de l'extension."
+  },
+  "asking": {
+    "message": "Postulo est interrogé sur le propriétaire de ce jeton…"
+  },
+  "addressRefused": {
+    "message": "L'autorisation de joindre cette adresse a été refusée."
+  },
+  "tokenIs": {
+    "message": "Jeton « $NAME$ » de $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Jeton « $NAME$ » de $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Il lui manque la portée captures, il ne peut donc pas capturer."
+  },
+  "enterAddress": {
+    "message": "Saisissez l'adresse de votre Postulo."
+  },
+  "notAnAddress": {
+    "message": "Cela ne ressemble pas à une adresse web."
+  },
+  "httpsOnly": {
+    "message": "Utilisez https pour tout ce qui n'est pas sur votre propre machine : le jeton voyage avec chaque requête."
+  },
+  "tokenRefused": {
+    "message": "Postulo n'accepte pas ce jeton. Vérifiez-le dans $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Ce jeton n'est pas autorisé à capturer."
+  },
+  "tooMany": {
+    "message": "Trop de captures en peu de temps. Attendez une minute et réessayez."
+  },
+  "answered": {
+    "message": "Postulo a répondu $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Aucun onglet à lire."
+  },
+  "notWebPage": {
+    "message": "Seules les pages web peuvent être capturées."
+  },
+  "unreadable": {
+    "message": "La page n'a pas pu être lue. Certaines pages bloquent les extensions."
+  }
+}

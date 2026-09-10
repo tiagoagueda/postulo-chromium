@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "pt-PT"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Envie o anúncio de emprego que está a ver para o seu próprio Postulo, para revisão. Nada segue para mais lado nenhum."
+  },
+  "actionTitle": {
+    "message": "Capturar este anúncio no Postulo"
+  },
+  "settings": {
+    "message": "Definições"
+  },
+  "unconfigured": {
+    "message": "Indique à extensão onde está o seu Postulo e que token deve usar."
+  },
+  "setUp": {
+    "message": "Configurar"
+  },
+  "capture": {
+    "message": "Capturar este anúncio"
+  },
+  "captureHint": {
+    "message": "A página que está a ver é enviada para o seu Postulo e para mais lado nenhum."
+  },
+  "review": {
+    "message": "Rever no Postulo"
+  },
+  "reading": {
+    "message": "A ler a página…"
+  },
+  "allowing": {
+    "message": "A permitir que a extensão chegue ao seu Postulo…"
+  },
+  "noPermission": {
+    "message": "Sem permissão para chegar ao seu Postulo, nada pode ser enviado."
+  },
+  "sending": {
+    "message": "A enviar para o Postulo…"
+  },
+  "captured": {
+    "message": "Capturado. Reveja-o antes de passar para as suas ofertas."
+  },
+  "readBy": {
+    "message": "Lido por $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Anúncio sem título"
+  },
+  "optionsTitle": {
+    "message": "Definições do Postulo"
+  },
+  "instanceLabel": {
+    "message": "O seu Postulo"
+  },
+  "instanceHint": {
+    "message": "O endereço onde o abre. https, a menos que corra neste computador."
+  },
+  "tokenLabel": {
+    "message": "Token de API"
+  },
+  "tokenHint": {
+    "message": "Criado em $PATH$ no Postulo, com o âmbito $SCOPE$ e nada mais. Fica guardado apenas neste dispositivo e nunca é sincronizado através de uma conta do navegador.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Definições → Tokens de API"
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "test": {
+    "message": "Testar"
+  },
+  "shortcutHint": {
+    "message": "Ao carregar no botão, ou em $SHORTCUT$, a página que está a ver é enviada para o seu Postulo para revisão. Nenhuma página é lida até o pedir, e nada é enviado para mais lado nenhum.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Cole o token que o Postulo lhe mostrou."
+  },
+  "saved": {
+    "message": "Guardado. O botão passa a enviar as páginas para $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Guardado, mas o navegador recusou a permissão para lá chegar; permita-a nas permissões da extensão."
+  },
+  "asking": {
+    "message": "A perguntar ao Postulo de quem é este token…"
+  },
+  "addressRefused": {
+    "message": "A permissão para chegar a esse endereço foi recusada."
+  },
+  "tokenIs": {
+    "message": "Token «$NAME$» de $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token «$NAME$» de $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Falta-lhe o âmbito captures, pelo que não pode capturar."
+  },
+  "enterAddress": {
+    "message": "Introduza o endereço do seu Postulo."
+  },
+  "notAnAddress": {
+    "message": "Isso não parece um endereço web."
+  },
+  "httpsOnly": {
+    "message": "Use https para tudo o que não esteja no seu próprio computador: o token segue com cada pedido."
+  },
+  "tokenRefused": {
+    "message": "O Postulo não aceita este token. Verifique-o em $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Este token não tem permissão para capturar."
+  },
+  "tooMany": {
+    "message": "Demasiadas capturas em pouco tempo. Aguarde um minuto e tente novamente."
+  },
+  "answered": {
+    "message": "O Postulo respondeu $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Não há separador para ler."
+  },
+  "notWebPage": {
+    "message": "Só é possível capturar páginas web."
+  },
+  "unreadable": {
+    "message": "Não foi possível ler a página. Algumas páginas bloqueiam extensões."
+  }
+}

@@ -1,5 +1,6 @@
 import { capture, describe, originPattern } from "./lib/api.js";
 import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission } from "./lib/browser.js";
+import { explain, localise, t } from "./lib/i18n.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -16,6 +17,7 @@ function say(text, isError = false) {
 }
 
 async function main() {
+  localise();
   const settings = await loadSettings();
   $("open-options").addEventListener("click", () => ext.runtime.openOptionsPage());
   $("options-link").addEventListener("click", () => ext.runtime.openOptionsPage());
@@ -37,26 +39,26 @@ async function main() {
   $("capture").addEventListener("click", async () => {
     const button = $("capture");
     button.disabled = true;
-    say("Reading the page…");
+    say(t("reading"));
     try {
       const pattern = originPattern(settings.instance);
       if (!(await hasHostPermission(pattern))) {
-        say("Allowing the extension to reach your Postulo…");
+        say(t("allowing"));
         const granted = await requestHostPermission(pattern);
         if (!granted) {
-          throw new Error("Without permission to reach your Postulo, nothing can be sent.");
+          throw new Error(t("noPermission"));
         }
       }
       const page = await readCurrentTab();
-      say("Sending to Postulo…");
+      say(t("sending"));
       const result = await capture(settings.instance, settings.token, page);
-      $("summary").textContent = describe(result);
-      $("read-by").textContent = result.source ? `Read by ${result.source}` : "";
+      $("summary").textContent = describe(result, t("untitled"));
+      $("read-by").textContent = result.source ? t("readBy", [result.source]) : "";
       $("review").href = result.review_url;
       show("result");
-      say("Captured. Review it before it becomes a listing.");
+      say(t("captured"));
     } catch (error) {
-      say(error.message || String(error), true);
+      say(explain(error), true);
       button.disabled = false;
     }
   });

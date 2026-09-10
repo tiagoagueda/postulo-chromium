@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "hu"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Küldje el a megtekintett álláshirdetést saját Postulójába ellenőrzésre. Semmi sem kerül máshová."
+  },
+  "actionTitle": {
+    "message": "A hirdetés rögzítése a Postulóban"
+  },
+  "settings": {
+    "message": "Beállítások"
+  },
+  "unconfigured": {
+    "message": "Adja meg a bővítménynek, hol érhető el a Postulója, és melyik tokent használja."
+  },
+  "setUp": {
+    "message": "Beállítás"
+  },
+  "capture": {
+    "message": "A hirdetés rögzítése"
+  },
+  "captureHint": {
+    "message": "A megtekintett oldal a Postulójába kerül, és sehová máshová."
+  },
+  "review": {
+    "message": "Ellenőrzés a Postulóban"
+  },
+  "reading": {
+    "message": "Az oldal olvasása…"
+  },
+  "allowing": {
+    "message": "A bővítmény hozzáférésének engedélyezése a Postulójához…"
+  },
+  "noPermission": {
+    "message": "A Postulója eléréséhez szükséges engedély nélkül semmit sem lehet elküldeni."
+  },
+  "sending": {
+    "message": "Küldés a Postulóba…"
+  },
+  "captured": {
+    "message": "Rögzítve. Ellenőrizze, mielőtt a hirdetései közé kerül."
+  },
+  "readBy": {
+    "message": "Beolvasta: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Cím nélküli hirdetés"
+  },
+  "optionsTitle": {
+    "message": "Postulo beállításai"
+  },
+  "instanceLabel": {
+    "message": "Az Ön Postulója"
+  },
+  "instanceHint": {
+    "message": "A cím, amelyen megnyitja. https, kivéve ha ezen a gépen fut."
+  },
+  "tokenLabel": {
+    "message": "API-token"
+  },
+  "tokenHint": {
+    "message": "A Postulóban, a(z) $PATH$ menüpontban hozható létre, a(z) $SCOPE$ hatókörrel, semmi mással. Csak ezen az eszközön tárolódik, böngészőfiókon keresztül soha nem szinkronizálódik.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Beállítások → API-tokenek"
+  },
+  "save": {
+    "message": "Mentés"
+  },
+  "test": {
+    "message": "Teszt"
+  },
+  "shortcutHint": {
+    "message": "A gomb vagy a(z) $SHORTCUT$ megnyomásával a megtekintett oldal ellenőrzésre a Postulójába kerül. Egyetlen oldalt sem olvas be, amíg nem kéri, és semmit sem küld máshová.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Illessze be a tokent, amelyet a Postulo megmutatott."
+  },
+  "saved": {
+    "message": "Mentve. A gomb mostantól ide küldi az oldalakat: $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Mentve, de a böngésző megtagadta a hozzáférési engedélyt; engedélyezze a bővítmény engedélyei között."
+  },
+  "asking": {
+    "message": "Megkérdezzük a Postulót, kié ez a token…"
+  },
+  "addressRefused": {
+    "message": "A cím eléréséhez szükséges engedélyt megtagadták."
+  },
+  "tokenIs": {
+    "message": "„$NAME$” token, tulajdonos: $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "„$NAME$” token, tulajdonos: $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Hiányzik belőle a captures hatókör, így nem tud rögzíteni."
+  },
+  "enterAddress": {
+    "message": "Adja meg a Postulója címét."
+  },
+  "notAnAddress": {
+    "message": "Ez nem úgy néz ki, mint egy webcím."
+  },
+  "httpsOnly": {
+    "message": "Használjon https-t mindenhez, ami nem a saját gépén fut: a token minden kéréssel együtt utazik."
+  },
+  "tokenRefused": {
+    "message": "A Postulo nem fogadja el ezt a tokent. Ellenőrizze itt: $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Ez a token nem rögzíthet."
+  },
+  "tooMany": {
+    "message": "Túl sok rögzítés rövid idő alatt. Várjon egy percet, és próbálja újra."
+  },
+  "answered": {
+    "message": "A Postulo válasza: $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nincs olvasható lap."
+  },
+  "notWebPage": {
+    "message": "Csak weboldalak rögzíthetők."
+  },
+  "unreadable": {
+    "message": "Az oldalt nem sikerült beolvasni. Egyes oldalak letiltják a bővítményeket."
+  }
+}

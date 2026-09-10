@@ -1,0 +1,230 @@
+{
+  "languageTag": {
+    "message": "en",
+    "description": "This translation's language tag, as the page's lang attribute: en, pt-PT, fr, nb."
+  },
+  "direction": {
+    "message": "ltr",
+    "description": "ltr, or rtl for a language written right to left."
+  },
+  "extensionDescription": {
+    "message": "Send the job posting you are looking at to your own Postulo, for review. Nothing goes anywhere else.",
+    "description": "The extension's description, in the browser's list of extensions and in the store."
+  },
+  "actionTitle": {
+    "message": "Capture this posting in Postulo",
+    "description": "The toolbar button's tooltip, and the name of its keyboard shortcut."
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "The gear that opens the extension's settings. Postulo's own word for its Settings."
+  },
+  "unconfigured": {
+    "message": "Tell the extension where your Postulo is and which token to use.",
+    "description": "Shown until it is set up."
+  },
+  "setUp": {
+    "message": "Set it up",
+    "description": "Button that opens the settings."
+  },
+  "capture": {
+    "message": "Capture this posting",
+    "description": "The popup's main button."
+  },
+  "captureHint": {
+    "message": "The page you are looking at is sent to your Postulo and nowhere else.",
+    "description": "Under the main button."
+  },
+  "review": {
+    "message": "Review in Postulo",
+    "description": "Link to the captured posting's review page in Postulo."
+  },
+  "reading": {
+    "message": "Reading the page…",
+    "description": "Status while the page is read."
+  },
+  "allowing": {
+    "message": "Allowing the extension to reach your Postulo…",
+    "description": "Status while the browser asks for permission."
+  },
+  "noPermission": {
+    "message": "Without permission to reach your Postulo, nothing can be sent.",
+    "description": "The permission was refused."
+  },
+  "sending": {
+    "message": "Sending to Postulo…",
+    "description": "Status while the page is sent."
+  },
+  "captured": {
+    "message": "Captured. Review it before it becomes a listing.",
+    "description": "After a capture: it waits for review in Postulo before joining the person's listings."
+  },
+  "readBy": {
+    "message": "Read by $SOURCE$",
+    "description": "SOURCE is the capture source that understood the page, such as schema.org.",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Untitled posting",
+    "description": "A captured posting whose page gave no title."
+  },
+  "optionsTitle": {
+    "message": "Postulo settings",
+    "description": "The settings page's title."
+  },
+  "instanceLabel": {
+    "message": "Your Postulo",
+    "description": "Label of the field for the address of the person's Postulo."
+  },
+  "instanceHint": {
+    "message": "The address you open it at. https, unless it runs on this machine.",
+    "description": "Under that field."
+  },
+  "tokenLabel": {
+    "message": "API token",
+    "description": "Label of the field for the token."
+  },
+  "tokenHint": {
+    "message": "Made under $PATH$ in Postulo, with the $SCOPE$ scope and nothing more. It is kept on this device only, never synced through a browser account.",
+    "description": "PATH is where tokens are made in Postulo (tokenPath), in italics; SCOPE is the scope's name, captures.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Settings → API tokens",
+    "description": "Where tokens are made in Postulo, in Postulo's own words for both."
+  },
+  "save": {
+    "message": "Save",
+    "description": "Button."
+  },
+  "test": {
+    "message": "Test",
+    "description": "Button that checks the address and the token."
+  },
+  "shortcutHint": {
+    "message": "Pressing the button, or $SHORTCUT$, sends the page you are looking at to your Postulo for review. No page is read until you ask, and nothing is sent anywhere else.",
+    "description": "SHORTCUT is the key combination, Alt+Shift+P.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Paste the token Postulo showed you.",
+    "description": "Saving with no token."
+  },
+  "saved": {
+    "message": "Saved. The button will now send pages to $HOST$.",
+    "description": "HOST is the host name of the person's Postulo.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Saved, but the browser refused permission to reach it; allow it in the extension's permissions.",
+    "description": "Saved without the permission to reach the address."
+  },
+  "asking": {
+    "message": "Asking Postulo who this token is…",
+    "description": "Status while the token is checked."
+  },
+  "addressRefused": {
+    "message": "Permission to reach that address was refused.",
+    "description": "The permission was refused."
+  },
+  "tokenIs": {
+    "message": "Token “$NAME$” for $OWNER$.",
+    "description": "NAME is the token's name; OWNER the account's email address.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token “$NAME$” for $OWNER$ ($SCOPES$).",
+    "description": "As tokenIs; SCOPES lists what the token may do, such as captures, read.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "It lacks the captures scope, so it cannot capture.",
+    "description": "captures is the scope's name in Postulo: keep it as it is."
+  },
+  "enterAddress": {
+    "message": "Enter the address of your Postulo.",
+    "description": "The address field is empty."
+  },
+  "notAnAddress": {
+    "message": "That does not look like a web address.",
+    "description": "What was typed is not an address."
+  },
+  "httpsOnly": {
+    "message": "Use https for anything that is not on your own machine: the token travels with every request.",
+    "description": "An http address somewhere other than this machine."
+  },
+  "tokenRefused": {
+    "message": "Postulo does not accept this token. Check it under $PATH$.",
+    "description": "PATH is tokenPath.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "This token is not allowed to capture.",
+    "description": "The token lacks the permission."
+  },
+  "tooMany": {
+    "message": "Too many captures in a short time. Wait a minute and try again.",
+    "description": "Rate limit."
+  },
+  "answered": {
+    "message": "Postulo answered $STATUS$.",
+    "description": "STATUS is an HTTP status code, such as 500.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "No tab to read.",
+    "description": "There is no active tab."
+  },
+  "notWebPage": {
+    "message": "Only web pages can be captured.",
+    "description": "The tab shows something that is not a web page."
+  },
+  "unreadable": {
+    "message": "The page could not be read. Some pages block extensions.",
+    "description": "Reading the page failed."
+  }
+}

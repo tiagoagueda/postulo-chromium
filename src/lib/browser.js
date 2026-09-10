@@ -1,5 +1,7 @@
 // Chromium exposes `chrome`, Firefox exposes `browser` (and `chrome` as an alias). Both
 // return promises in Manifest V3, so no polyfill is needed: pick whichever exists.
+import { Refusal } from "./api.js";
+
 export const ext = globalThis.browser ?? globalThis.chrome;
 
 export async function loadSettings() {
@@ -25,17 +27,17 @@ export async function requestHostPermission(pattern) {
 export async function readCurrentTab() {
   const [tab] = await ext.tabs.query({ active: true, currentWindow: true });
   if (!tab || !tab.id) {
-    throw new Error("No tab to read.");
+    throw new Refusal("noTab");
   }
   if (!/^https?:/.test(tab.url || "")) {
-    throw new Error("Only web pages can be captured.");
+    throw new Refusal("notWebPage");
   }
   const [injected] = await ext.scripting.executeScript({
     target: { tabId: tab.id },
     func: () => ({ url: location.href, html: document.documentElement.outerHTML }),
   });
   if (!injected || !injected.result) {
-    throw new Error("The page could not be read. Some pages block extensions.");
+    throw new Refusal("unreadable");
   }
   return injected.result;
 }

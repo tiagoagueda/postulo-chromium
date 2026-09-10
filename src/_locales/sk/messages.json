@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "sk"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Pošlite pracovný inzerát, ktorý si prezeráte, do svojho vlastného Postula na kontrolu. Nič nejde nikam inam."
+  },
+  "actionTitle": {
+    "message": "Zachytiť tento inzerát v Postule"
+  },
+  "settings": {
+    "message": "Nastavenia"
+  },
+  "unconfigured": {
+    "message": "Povedzte rozšíreniu, kde je váš Postulo a aký token má použiť."
+  },
+  "setUp": {
+    "message": "Nastaviť"
+  },
+  "capture": {
+    "message": "Zachytiť tento inzerát"
+  },
+  "captureHint": {
+    "message": "Stránka, ktorú si prezeráte, sa odošle do vášho Postula a nikam inam."
+  },
+  "review": {
+    "message": "Skontrolovať v Postule"
+  },
+  "reading": {
+    "message": "Stránka sa číta…"
+  },
+  "allowing": {
+    "message": "Rozšírenie dostáva povolenie na prístup k vášmu Postulu…"
+  },
+  "noPermission": {
+    "message": "Bez povolenia na prístup k vášmu Postulu nemožno nič odoslať."
+  },
+  "sending": {
+    "message": "Odosiela sa do Postula…"
+  },
+  "captured": {
+    "message": "Zachytené. Skontrolujte ho skôr, ako sa dostane medzi vaše ponuky."
+  },
+  "readBy": {
+    "message": "Prečítal: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Inzerát bez názvu"
+  },
+  "optionsTitle": {
+    "message": "Nastavenia Postula"
+  },
+  "instanceLabel": {
+    "message": "Váš Postulo"
+  },
+  "instanceHint": {
+    "message": "Adresa, na ktorej ho otvárate. https, pokiaľ nebeží na tomto počítači."
+  },
+  "tokenLabel": {
+    "message": "API token"
+  },
+  "tokenHint": {
+    "message": "Vytvára sa v Postule v časti $PATH$, s rozsahom $SCOPE$ a ničím viac. Uchováva sa len v tomto zariadení a nikdy sa nesynchronizuje cez účet prehliadača.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Nastavenia → API tokeny"
+  },
+  "save": {
+    "message": "Uložiť"
+  },
+  "test": {
+    "message": "Otestovať"
+  },
+  "shortcutHint": {
+    "message": "Stlačením tlačidla alebo $SHORTCUT$ sa stránka, ktorú si prezeráte, odošle do vášho Postula na kontrolu. Žiadna stránka sa nečíta, kým o to nepožiadate, a nič sa neposiela nikam inam.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Vložte token, ktorý vám ukázal Postulo."
+  },
+  "saved": {
+    "message": "Uložené. Tlačidlo teraz bude posielať stránky na $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Uložené, ale prehliadač odmietol povolenie na prístup; povoľte ho v povoleniach rozšírenia."
+  },
+  "asking": {
+    "message": "Postulo sa pýta, komu patrí tento token…"
+  },
+  "addressRefused": {
+    "message": "Povolenie na prístup k tejto adrese bolo zamietnuté."
+  },
+  "tokenIs": {
+    "message": "Token „$NAME$“ používateľa $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token „$NAME$“ používateľa $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Chýba mu rozsah captures, takže nemôže zachytávať."
+  },
+  "enterAddress": {
+    "message": "Zadajte adresu svojho Postula."
+  },
+  "notAnAddress": {
+    "message": "Toto nevyzerá ako webová adresa."
+  },
+  "httpsOnly": {
+    "message": "Používajte https pre všetko, čo nie je na vašom vlastnom počítači: token putuje s každou požiadavkou."
+  },
+  "tokenRefused": {
+    "message": "Postulo tento token neprijíma. Skontrolujte ho v časti $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Tento token nemá povolené zachytávať."
+  },
+  "tooMany": {
+    "message": "Príliš veľa zachytení za krátky čas. Počkajte minútu a skúste to znova."
+  },
+  "answered": {
+    "message": "Postulo odpovedal $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nie je karta na čítanie."
+  },
+  "notWebPage": {
+    "message": "Zachytiť možno len webové stránky."
+  },
+  "unreadable": {
+    "message": "Stránku sa nepodarilo prečítať. Niektoré stránky blokujú rozšírenia."
+  }
+}

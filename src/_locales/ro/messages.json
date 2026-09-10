@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "ro"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Trimite anunțul de angajare pe care îl vezi către propriul tău Postulo, pentru revizuire. Nimic nu ajunge în altă parte."
+  },
+  "actionTitle": {
+    "message": "Captează acest anunț în Postulo"
+  },
+  "settings": {
+    "message": "Setări"
+  },
+  "unconfigured": {
+    "message": "Spune extensiei unde este Postulo-ul tău și ce token să folosească."
+  },
+  "setUp": {
+    "message": "Configurează"
+  },
+  "capture": {
+    "message": "Captează acest anunț"
+  },
+  "captureHint": {
+    "message": "Pagina pe care o vezi este trimisă către Postulo-ul tău și nicăieri altundeva."
+  },
+  "review": {
+    "message": "Revizuiește în Postulo"
+  },
+  "reading": {
+    "message": "Se citește pagina…"
+  },
+  "allowing": {
+    "message": "Extensia primește permisiunea de a ajunge la Postulo-ul tău…"
+  },
+  "noPermission": {
+    "message": "Fără permisiunea de a ajunge la Postulo-ul tău, nu se poate trimite nimic."
+  },
+  "sending": {
+    "message": "Se trimite către Postulo…"
+  },
+  "captured": {
+    "message": "Captat. Revizuiește-l înainte să intre printre anunțurile tale."
+  },
+  "readBy": {
+    "message": "Citit de $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Anunț fără titlu"
+  },
+  "optionsTitle": {
+    "message": "Setări Postulo"
+  },
+  "instanceLabel": {
+    "message": "Postulo-ul tău"
+  },
+  "instanceHint": {
+    "message": "Adresa la care îl deschizi. https, dacă nu rulează pe acest calculator."
+  },
+  "tokenLabel": {
+    "message": "Token API"
+  },
+  "tokenHint": {
+    "message": "Se creează în $PATH$ în Postulo, cu domeniul $SCOPE$ și nimic în plus. Este păstrat doar pe acest dispozitiv și nu este niciodată sincronizat printr-un cont de browser.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Setări → Tokenuri API"
+  },
+  "save": {
+    "message": "Salvează"
+  },
+  "test": {
+    "message": "Testează"
+  },
+  "shortcutHint": {
+    "message": "Apăsând butonul, sau $SHORTCUT$, pagina pe care o vezi este trimisă către Postulo-ul tău pentru revizuire. Nicio pagină nu este citită până nu ceri, și nimic nu este trimis în altă parte.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Lipește tokenul pe care ți l-a arătat Postulo."
+  },
+  "saved": {
+    "message": "Salvat. Butonul va trimite acum paginile către $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Salvat, dar browserul a refuzat permisiunea de a ajunge la el; permite-o în permisiunile extensiei."
+  },
+  "asking": {
+    "message": "Îl întrebăm pe Postulo al cui este acest token…"
+  },
+  "addressRefused": {
+    "message": "Permisiunea de a ajunge la acea adresă a fost refuzată."
+  },
+  "tokenIs": {
+    "message": "Tokenul „$NAME$” al lui $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Tokenul „$NAME$” al lui $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Îi lipsește domeniul captures, deci nu poate capta."
+  },
+  "enterAddress": {
+    "message": "Introdu adresa Postulo-ului tău."
+  },
+  "notAnAddress": {
+    "message": "Asta nu arată a adresă web."
+  },
+  "httpsOnly": {
+    "message": "Folosește https pentru tot ce nu este pe propriul tău calculator: tokenul călătorește cu fiecare cerere."
+  },
+  "tokenRefused": {
+    "message": "Postulo nu acceptă acest token. Verifică-l în $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Acest token nu are voie să capteze."
+  },
+  "tooMany": {
+    "message": "Prea multe capturi într-un timp scurt. Așteaptă un minut și încearcă din nou."
+  },
+  "answered": {
+    "message": "Postulo a răspuns $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nicio filă de citit."
+  },
+  "notWebPage": {
+    "message": "Doar paginile web pot fi captate."
+  },
+  "unreadable": {
+    "message": "Pagina nu a putut fi citită. Unele pagini blochează extensiile."
+  }
+}

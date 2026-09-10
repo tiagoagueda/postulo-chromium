@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "mt"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Ibgħat l-avviż tax-xogħol li qed tħares lejh lill-Postulo tiegħek, biex tirrevedih. Xejn ma jmur x'imkien ieħor."
+  },
+  "actionTitle": {
+    "message": "Aqbad dan l-avviż fil-Postulo"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "unconfigured": {
+    "message": "Għid lill-estensjoni fejn hu l-Postulo tiegħek u liema token għandha tuża."
+  },
+  "setUp": {
+    "message": "Issettjaha"
+  },
+  "capture": {
+    "message": "Aqbad dan l-avviż"
+  },
+  "captureHint": {
+    "message": "Il-paġna li qed tħares lejha tintbagħat lill-Postulo tiegħek u mkien ieħor."
+  },
+  "review": {
+    "message": "Irrevedi fil-Postulo"
+  },
+  "reading": {
+    "message": "Qed tinqara l-paġna…"
+  },
+  "allowing": {
+    "message": "Qed tingħata permess lill-estensjoni biex tilħaq il-Postulo tiegħek…"
+  },
+  "noPermission": {
+    "message": "Mingħajr permess biex tilħaq il-Postulo tiegħek, ma jista' jintbagħat xejn."
+  },
+  "sending": {
+    "message": "Qed jintbagħat lill-Postulo…"
+  },
+  "captured": {
+    "message": "Maqbud. Irrevedih qabel ma jidħol fost l-avviżi tiegħek."
+  },
+  "readBy": {
+    "message": "Moqri minn $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Avviż mingħajr titlu"
+  },
+  "optionsTitle": {
+    "message": "Settings tal-Postulo"
+  },
+  "instanceLabel": {
+    "message": "Il-Postulo tiegħek"
+  },
+  "instanceHint": {
+    "message": "L-indirizz li tiftħu fih. https, sakemm ma jkunx qed jaħdem fuq din il-magna."
+  },
+  "tokenLabel": {
+    "message": "Token tal-API"
+  },
+  "tokenHint": {
+    "message": "Isir taħt $PATH$ fil-Postulo, bl-ambitu $SCOPE$ u xejn aktar. Jinżamm fuq dan l-apparat biss, u qatt ma jiġi sinkronizzat permezz ta' kont tal-brawżer.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Settings → Tokens tal-API"
+  },
+  "save": {
+    "message": "Issejvja"
+  },
+  "test": {
+    "message": "Ittestja"
+  },
+  "shortcutHint": {
+    "message": "Meta tagħfas il-buttuna, jew $SHORTCUT$, il-paġna li qed tħares lejha tintbagħat lill-Postulo tiegħek biex tirrevediha. L-ebda paġna ma tinqara sakemm ma titlobx, u xejn ma jintbagħat x'imkien ieħor.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Waħħal it-token li wriek il-Postulo."
+  },
+  "saved": {
+    "message": "Issejvjat. Il-buttuna issa se tibgħat il-paġni lil $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Issejvjat, iżda l-brawżer irrifjuta l-permess biex jilħqu; ippermettih fil-permessi tal-estensjoni."
+  },
+  "asking": {
+    "message": "Qed nistaqsu lill-Postulo ta' min hu dan it-token…"
+  },
+  "addressRefused": {
+    "message": "Il-permess biex jintlaħaq dak l-indirizz ġie rrifjutat."
+  },
+  "tokenIs": {
+    "message": "Token “$NAME$” għal $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token “$NAME$” għal $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Nieqsu l-ambitu captures, għalhekk ma jistax jaqbad."
+  },
+  "enterAddress": {
+    "message": "Daħħal l-indirizz tal-Postulo tiegħek."
+  },
+  "notAnAddress": {
+    "message": "Dan ma jidhirx indirizz tal-web."
+  },
+  "httpsOnly": {
+    "message": "Uża https għal kull ħaġa li mhix fuq il-magna tiegħek: it-token jivvjaġġa ma' kull talba."
+  },
+  "tokenRefused": {
+    "message": "Il-Postulo ma jaċċettax dan it-token. Iċċekkjah taħt $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Dan it-token mhux permess jaqbad."
+  },
+  "tooMany": {
+    "message": "Wisq qbid f'ħin qasir. Stenna minuta u erġa' pprova."
+  },
+  "answered": {
+    "message": "Il-Postulo wieġeb $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "M'hemm l-ebda tab x'taqra."
+  },
+  "notWebPage": {
+    "message": "Jistgħu jinqabdu biss paġni tal-web."
+  },
+  "unreadable": {
+    "message": "Il-paġna ma setgħetx tinqara. Xi paġni jimblukkaw l-estensjonijiet."
+  }
+}

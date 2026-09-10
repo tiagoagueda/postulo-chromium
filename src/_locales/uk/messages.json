@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "uk"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Надішліть вакансію, яку ви переглядаєте, до власного Postulo на розгляд. Нічого не йде деінде."
+  },
+  "actionTitle": {
+    "message": "Захопити цю вакансію в Postulo"
+  },
+  "settings": {
+    "message": "Налаштування"
+  },
+  "unconfigured": {
+    "message": "Вкажіть розширенню, де ваш Postulo і який токен використовувати."
+  },
+  "setUp": {
+    "message": "Налаштувати"
+  },
+  "capture": {
+    "message": "Захопити цю вакансію"
+  },
+  "captureHint": {
+    "message": "Сторінка, яку ви переглядаєте, надсилається до вашого Postulo і більше нікуди."
+  },
+  "review": {
+    "message": "Розглянути в Postulo"
+  },
+  "reading": {
+    "message": "Читання сторінки…"
+  },
+  "allowing": {
+    "message": "Розширенню надається дозвіл звертатися до вашого Postulo…"
+  },
+  "noPermission": {
+    "message": "Без дозволу звертатися до вашого Postulo нічого не можна надіслати."
+  },
+  "sending": {
+    "message": "Надсилання до Postulo…"
+  },
+  "captured": {
+    "message": "Захоплено. Розгляньте її, перш ніж вона потрапить до ваших вакансій."
+  },
+  "readBy": {
+    "message": "Прочитано: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Вакансія без назви"
+  },
+  "optionsTitle": {
+    "message": "Налаштування Postulo"
+  },
+  "instanceLabel": {
+    "message": "Ваш Postulo"
+  },
+  "instanceHint": {
+    "message": "Адреса, за якою ви його відкриваєте. https, якщо він не працює на цьому комп'ютері."
+  },
+  "tokenLabel": {
+    "message": "Токен API"
+  },
+  "tokenHint": {
+    "message": "Створюється в розділі $PATH$ у Postulo, з областю $SCOPE$ і нічим більше. Зберігається лише на цьому пристрої й ніколи не синхронізується через обліковий запис браузера.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Налаштування → Токени API"
+  },
+  "save": {
+    "message": "Зберегти"
+  },
+  "test": {
+    "message": "Перевірити"
+  },
+  "shortcutHint": {
+    "message": "Натискання кнопки або $SHORTCUT$ надсилає сторінку, яку ви переглядаєте, до вашого Postulo на розгляд. Жодна сторінка не читається, доки ви не попросите, і нічого не надсилається деінде.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Вставте токен, який вам показав Postulo."
+  },
+  "saved": {
+    "message": "Збережено. Тепер кнопка надсилатиме сторінки на $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Збережено, але браузер відмовив у дозволі звертатися до нього; дозвольте це в дозволах розширення."
+  },
+  "asking": {
+    "message": "Запитуємо в Postulo, чий це токен…"
+  },
+  "addressRefused": {
+    "message": "У дозволі звертатися до цієї адреси відмовлено."
+  },
+  "tokenIs": {
+    "message": "Токен «$NAME$» для $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Токен «$NAME$» для $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Йому бракує області captures, тож він не може захоплювати."
+  },
+  "enterAddress": {
+    "message": "Введіть адресу свого Postulo."
+  },
+  "notAnAddress": {
+    "message": "Це не схоже на вебадресу."
+  },
+  "httpsOnly": {
+    "message": "Використовуйте https для всього, що не на вашому власному комп'ютері: токен передається з кожним запитом."
+  },
+  "tokenRefused": {
+    "message": "Postulo не приймає цей токен. Перевірте його в розділі $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Цьому токену не дозволено захоплювати."
+  },
+  "tooMany": {
+    "message": "Забагато захоплень за короткий час. Зачекайте хвилину й спробуйте знову."
+  },
+  "answered": {
+    "message": "Postulo відповів $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Немає вкладки для читання."
+  },
+  "notWebPage": {
+    "message": "Захоплювати можна лише вебсторінки."
+  },
+  "unreadable": {
+    "message": "Не вдалося прочитати сторінку. Деякі сторінки блокують розширення."
+  }
+}

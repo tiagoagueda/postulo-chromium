@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "sv"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Skicka jobbannonsen du tittar på till din egen Postulo, för granskning. Inget går någon annanstans."
+  },
+  "actionTitle": {
+    "message": "Fånga in den här annonsen i Postulo"
+  },
+  "settings": {
+    "message": "Inställningar"
+  },
+  "unconfigured": {
+    "message": "Berätta för tillägget var din Postulo finns och vilken token det ska använda."
+  },
+  "setUp": {
+    "message": "Ställ in"
+  },
+  "capture": {
+    "message": "Fånga in den här annonsen"
+  },
+  "captureHint": {
+    "message": "Sidan du tittar på skickas till din Postulo och ingen annanstans."
+  },
+  "review": {
+    "message": "Granska i Postulo"
+  },
+  "reading": {
+    "message": "Läser sidan …"
+  },
+  "allowing": {
+    "message": "Ger tillägget åtkomst till din Postulo …"
+  },
+  "noPermission": {
+    "message": "Utan tillåtelse att nå din Postulo kan inget skickas."
+  },
+  "sending": {
+    "message": "Skickar till Postulo …"
+  },
+  "captured": {
+    "message": "Infångad. Granska den innan den hamnar bland dina annonser."
+  },
+  "readBy": {
+    "message": "Läst av $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Annons utan titel"
+  },
+  "optionsTitle": {
+    "message": "Inställningar för Postulo"
+  },
+  "instanceLabel": {
+    "message": "Din Postulo"
+  },
+  "instanceHint": {
+    "message": "Adressen du öppnar den på. https, om den inte körs på den här datorn."
+  },
+  "tokenLabel": {
+    "message": "API-token"
+  },
+  "tokenHint": {
+    "message": "Skapas under $PATH$ i Postulo, med behörigheten $SCOPE$ och inget mer. Den sparas bara på den här enheten och synkas aldrig via ett webbläsarkonto.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Inställningar → API-tokens"
+  },
+  "save": {
+    "message": "Spara"
+  },
+  "test": {
+    "message": "Testa"
+  },
+  "shortcutHint": {
+    "message": "Ett tryck på knappen, eller $SHORTCUT$, skickar sidan du tittar på till din Postulo för granskning. Ingen sida läses förrän du ber om det, och inget skickas någon annanstans.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Klistra in token som Postulo visade dig."
+  },
+  "saved": {
+    "message": "Sparat. Knappen skickar nu sidor till $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Sparat, men webbläsaren nekade åtkomst; tillåt det i tilläggets behörigheter."
+  },
+  "asking": {
+    "message": "Frågar Postulo vems den här token är …"
+  },
+  "addressRefused": {
+    "message": "Tillåtelse att nå den adressen nekades."
+  },
+  "tokenIs": {
+    "message": "Token ”$NAME$” för $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token ”$NAME$” för $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Den saknar behörigheten captures, så den kan inte fånga in."
+  },
+  "enterAddress": {
+    "message": "Ange adressen till din Postulo."
+  },
+  "notAnAddress": {
+    "message": "Det ser inte ut som en webbadress."
+  },
+  "httpsOnly": {
+    "message": "Använd https för allt som inte finns på din egen dator: token följer med varje förfrågan."
+  },
+  "tokenRefused": {
+    "message": "Postulo godtar inte den här token. Kontrollera den under $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Den här token får inte fånga in."
+  },
+  "tooMany": {
+    "message": "För många infångningar på kort tid. Vänta en minut och försök igen."
+  },
+  "answered": {
+    "message": "Postulo svarade $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Ingen flik att läsa."
+  },
+  "notWebPage": {
+    "message": "Bara webbsidor kan fångas in."
+  },
+  "unreadable": {
+    "message": "Sidan kunde inte läsas. Vissa sidor blockerar tillägg."
+  }
+}

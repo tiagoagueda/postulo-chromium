@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "pl"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Wyślij ogłoszenie o pracę, które oglądasz, do własnego Postulo, do sprawdzenia. Nic nie trafia nigdzie indziej."
+  },
+  "actionTitle": {
+    "message": "Przechwyć to ogłoszenie do Postulo"
+  },
+  "settings": {
+    "message": "Ustawienia"
+  },
+  "unconfigured": {
+    "message": "Powiedz rozszerzeniu, gdzie jest Twoje Postulo i jakiego tokenu ma używać."
+  },
+  "setUp": {
+    "message": "Skonfiguruj"
+  },
+  "capture": {
+    "message": "Przechwyć to ogłoszenie"
+  },
+  "captureHint": {
+    "message": "Strona, którą oglądasz, trafia do Twojego Postulo i nigdzie indziej."
+  },
+  "review": {
+    "message": "Sprawdź w Postulo"
+  },
+  "reading": {
+    "message": "Czytanie strony…"
+  },
+  "allowing": {
+    "message": "Zezwalanie rozszerzeniu na dostęp do Twojego Postulo…"
+  },
+  "noPermission": {
+    "message": "Bez pozwolenia na dostęp do Twojego Postulo nie można nic wysłać."
+  },
+  "sending": {
+    "message": "Wysyłanie do Postulo…"
+  },
+  "captured": {
+    "message": "Przechwycono. Sprawdź je, zanim trafi do Twoich ofert."
+  },
+  "readBy": {
+    "message": "Odczytane przez $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Ogłoszenie bez tytułu"
+  },
+  "optionsTitle": {
+    "message": "Ustawienia Postulo"
+  },
+  "instanceLabel": {
+    "message": "Twoje Postulo"
+  },
+  "instanceHint": {
+    "message": "Adres, pod którym je otwierasz. https, chyba że działa na tym komputerze."
+  },
+  "tokenLabel": {
+    "message": "Token API"
+  },
+  "tokenHint": {
+    "message": "Tworzy się go w $PATH$ w Postulo, z zakresem $SCOPE$ i niczym więcej. Jest przechowywany tylko na tym urządzeniu i nigdy nie jest synchronizowany przez konto przeglądarki.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Ustawienia → Tokeny API"
+  },
+  "save": {
+    "message": "Zapisz"
+  },
+  "test": {
+    "message": "Testuj"
+  },
+  "shortcutHint": {
+    "message": "Naciśnięcie przycisku albo $SHORTCUT$ wysyła oglądaną stronę do Twojego Postulo do sprawdzenia. Żadna strona nie jest czytana, dopóki o to nie poprosisz, i nic nie jest wysyłane nigdzie indziej.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Wklej token, który pokazało Ci Postulo."
+  },
+  "saved": {
+    "message": "Zapisano. Przycisk będzie teraz wysyłał strony do $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Zapisano, ale przeglądarka odmówiła pozwolenia na dostęp; zezwól na to w uprawnieniach rozszerzenia."
+  },
+  "asking": {
+    "message": "Pytanie Postulo, czyj jest ten token…"
+  },
+  "addressRefused": {
+    "message": "Odmówiono pozwolenia na dostęp do tego adresu."
+  },
+  "tokenIs": {
+    "message": "Token „$NAME$” użytkownika $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token „$NAME$” użytkownika $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Brakuje mu zakresu captures, więc nie może przechwytywać."
+  },
+  "enterAddress": {
+    "message": "Wpisz adres swojego Postulo."
+  },
+  "notAnAddress": {
+    "message": "To nie wygląda na adres internetowy."
+  },
+  "httpsOnly": {
+    "message": "Używaj https do wszystkiego, co nie jest na Twoim własnym komputerze: token podróżuje z każdym żądaniem."
+  },
+  "tokenRefused": {
+    "message": "Postulo nie akceptuje tego tokenu. Sprawdź go w $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Ten token nie może przechwytywać."
+  },
+  "tooMany": {
+    "message": "Za dużo przechwyceń w krótkim czasie. Poczekaj minutę i spróbuj ponownie."
+  },
+  "answered": {
+    "message": "Postulo odpowiedziało $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Brak karty do odczytania."
+  },
+  "notWebPage": {
+    "message": "Przechwytywać można tylko strony internetowe."
+  },
+  "unreadable": {
+    "message": "Nie udało się odczytać strony. Niektóre strony blokują rozszerzenia."
+  }
+}

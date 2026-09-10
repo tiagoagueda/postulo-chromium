@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "nb"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Send stillingsannonsen du ser på til din egen Postulo, til gjennomsyn. Ingenting går noe annet sted."
+  },
+  "actionTitle": {
+    "message": "Fang denne annonsen i Postulo"
+  },
+  "settings": {
+    "message": "Innstillinger"
+  },
+  "unconfigured": {
+    "message": "Fortell utvidelsen hvor Postulo-en din er og hvilket token den skal bruke."
+  },
+  "setUp": {
+    "message": "Sett den opp"
+  },
+  "capture": {
+    "message": "Fang denne annonsen"
+  },
+  "captureHint": {
+    "message": "Siden du ser på, sendes til Postulo-en din og ingen andre steder."
+  },
+  "review": {
+    "message": "Se gjennom i Postulo"
+  },
+  "reading": {
+    "message": "Leser siden …"
+  },
+  "allowing": {
+    "message": "Gir utvidelsen tilgang til Postulo-en din …"
+  },
+  "noPermission": {
+    "message": "Uten tillatelse til å nå Postulo-en din kan ingenting sendes."
+  },
+  "sending": {
+    "message": "Sender til Postulo …"
+  },
+  "captured": {
+    "message": "Fanget. Se gjennom den før den havner blant utlysningene dine."
+  },
+  "readBy": {
+    "message": "Lest av $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Annonse uten tittel"
+  },
+  "optionsTitle": {
+    "message": "Innstillinger for Postulo"
+  },
+  "instanceLabel": {
+    "message": "Din Postulo"
+  },
+  "instanceHint": {
+    "message": "Adressen du åpner den på. https, med mindre den kjører på denne maskinen."
+  },
+  "tokenLabel": {
+    "message": "API-token"
+  },
+  "tokenHint": {
+    "message": "Lages under $PATH$ i Postulo, med omfanget $SCOPE$ og ingenting mer. Det lagres bare på denne enheten og synkroniseres aldri gjennom en nettleserkonto.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Innstillinger → API-tokener"
+  },
+  "save": {
+    "message": "Lagre"
+  },
+  "test": {
+    "message": "Test"
+  },
+  "shortcutHint": {
+    "message": "Et trykk på knappen, eller $SHORTCUT$, sender siden du ser på til Postulo-en din for gjennomsyn. Ingen side leses før du ber om det, og ingenting sendes noe annet sted.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Lim inn tokenet Postulo viste deg."
+  },
+  "saved": {
+    "message": "Lagret. Knappen sender nå sider til $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Lagret, men nettleseren nektet tilgang til den; tillat det i utvidelsens tillatelser."
+  },
+  "asking": {
+    "message": "Spør Postulo hvem dette tokenet tilhører …"
+  },
+  "addressRefused": {
+    "message": "Tillatelse til å nå den adressen ble nektet."
+  },
+  "tokenIs": {
+    "message": "Token «$NAME$» for $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token «$NAME$» for $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Det mangler omfanget captures, så det kan ikke fange."
+  },
+  "enterAddress": {
+    "message": "Skriv inn adressen til Postulo-en din."
+  },
+  "notAnAddress": {
+    "message": "Det ser ikke ut som en nettadresse."
+  },
+  "httpsOnly": {
+    "message": "Bruk https for alt som ikke er på din egen maskin: tokenet følger med hver forespørsel."
+  },
+  "tokenRefused": {
+    "message": "Postulo godtar ikke dette tokenet. Sjekk det under $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Dette tokenet har ikke lov til å fange."
+  },
+  "tooMany": {
+    "message": "For mange fangster på kort tid. Vent et minutt og prøv igjen."
+  },
+  "answered": {
+    "message": "Postulo svarte $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Ingen fane å lese."
+  },
+  "notWebPage": {
+    "message": "Bare nettsider kan fanges."
+  },
+  "unreadable": {
+    "message": "Siden kunne ikke leses. Noen sider blokkerer utvidelser."
+  }
+}

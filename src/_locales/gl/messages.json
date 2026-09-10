@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "gl"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Envía a oferta de traballo que estás a ver ao teu propio Postulo, para revisala. Nada vai a ningures máis."
+  },
+  "actionTitle": {
+    "message": "Capturar esta oferta no Postulo"
+  },
+  "settings": {
+    "message": "Configuración"
+  },
+  "unconfigured": {
+    "message": "Dille á extensión onde está o teu Postulo e que testemuño debe usar."
+  },
+  "setUp": {
+    "message": "Configurala"
+  },
+  "capture": {
+    "message": "Capturar esta oferta"
+  },
+  "captureHint": {
+    "message": "A páxina que estás a ver envíase ao teu Postulo e a ningures máis."
+  },
+  "review": {
+    "message": "Revisala no Postulo"
+  },
+  "reading": {
+    "message": "Lendo a páxina…"
+  },
+  "allowing": {
+    "message": "Permitindo que a extensión chegue ao teu Postulo…"
+  },
+  "noPermission": {
+    "message": "Sen permiso para chegar ao teu Postulo, non se pode enviar nada."
+  },
+  "sending": {
+    "message": "Enviando ao Postulo…"
+  },
+  "captured": {
+    "message": "Capturada. Revísaa antes de que pase ás túas ofertas."
+  },
+  "readBy": {
+    "message": "Lida por $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Oferta sen título"
+  },
+  "optionsTitle": {
+    "message": "Configuración do Postulo"
+  },
+  "instanceLabel": {
+    "message": "O teu Postulo"
+  },
+  "instanceHint": {
+    "message": "O enderezo no que o abres. https, agás que funcione neste ordenador."
+  },
+  "tokenLabel": {
+    "message": "Testemuño de API"
+  },
+  "tokenHint": {
+    "message": "Créase en $PATH$ no Postulo, co ámbito $SCOPE$ e nada máis. Gárdase só neste dispositivo e nunca se sincroniza cunha conta do navegador.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Configuración → Testemuños de API"
+  },
+  "save": {
+    "message": "Gardar"
+  },
+  "test": {
+    "message": "Probar"
+  },
+  "shortcutHint": {
+    "message": "Ao premer o botón, ou $SHORTCUT$, a páxina que estás a ver envíase ao teu Postulo para revisala. Non se le ningunha páxina ata que o pidas, e non se envía nada a ningures máis.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Pega o testemuño que che mostrou o Postulo."
+  },
+  "saved": {
+    "message": "Gardado. O botón enviará agora as páxinas a $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Gardado, pero o navegador denegou o permiso para chegar a el; permíteo nos permisos da extensión."
+  },
+  "asking": {
+    "message": "Preguntando ao Postulo de quen é este testemuño…"
+  },
+  "addressRefused": {
+    "message": "Denegouse o permiso para chegar a ese enderezo."
+  },
+  "tokenIs": {
+    "message": "Testemuño «$NAME$» de $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Testemuño «$NAME$» de $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Non ten o ámbito captures, así que non pode capturar."
+  },
+  "enterAddress": {
+    "message": "Escribe o enderezo do teu Postulo."
+  },
+  "notAnAddress": {
+    "message": "Iso non parece un enderezo web."
+  },
+  "httpsOnly": {
+    "message": "Usa https para todo o que non estea no teu propio ordenador: o testemuño viaxa con cada petición."
+  },
+  "tokenRefused": {
+    "message": "O Postulo non acepta este testemuño. Compróbao en $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Este testemuño non ten permiso para capturar."
+  },
+  "tooMany": {
+    "message": "Demasiadas capturas en pouco tempo. Agarda un minuto e téntao de novo."
+  },
+  "answered": {
+    "message": "O Postulo respondeu $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Non hai ningunha lapela que ler."
+  },
+  "notWebPage": {
+    "message": "Só se poden capturar páxinas web."
+  },
+  "unreadable": {
+    "message": "Non se puido ler a páxina. Algunhas páxinas bloquean as extensións."
+  }
+}

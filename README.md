@@ -47,6 +47,24 @@ permanently once signed; see that repository).
 3. On a job posting, click the icon and **Capture this posting**. The result names what
    Postulo read and links to the review screen.
 
+## Languages
+
+The extension speaks the language the browser is set to; there is no setting for it. The
+browser matches its own language against `src/_locales/` and falls back to English for one
+that is not there.
+
+The languages are the ones Postulo itself offers: English plus the 39 European catalogues
+the core has complete. Where the core has a word for something — *Settings*, *API tokens*,
+*Save*, *Test* — the extension uses the core's, so the button and the screen it points at
+agree. A language joins here when the core starts offering it.
+
+English is the source. The other translations are drafts that no native speaker has
+reviewed yet, as are the core's own new strings until one does.
+
+To add or change a sentence, change `en` first, then every other language: `npm test`
+fails while any language lacks a key or has different placeholders from English, and
+while the code asks for a key that `en` does not have.
+
 ## Layout
 
 | Path | What |
@@ -56,12 +74,14 @@ permanently once signed; see that repository).
 | `src/options.*` | Address, token, *Test*, *Save* (which requests the host permission) |
 | `src/lib/api.js` | Talking to `/api/v1`: pure functions, tested with `node --test` |
 | `src/lib/browser.js` | `browser ?? chrome`, storage, permissions, reading the active tab |
+| `src/lib/i18n.js` | Fills the pages from `_locales` in the browser's language |
+| `src/_locales/` | One `messages.json` per language; `en` is the source |
 | `src/background.js` | Opens the settings on first install; nothing else |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
 | `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, made by `scripts/icons.py` |
 
 ```sh
-npm test               # the pure parts
+npm test               # the pure parts, and every language against en
 npm run lint:firefox   # web-ext lint on the Firefox build
 npm run package        # zips under dist/artifacts/
 ```

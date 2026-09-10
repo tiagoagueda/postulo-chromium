@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "ka"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "გაგზავნეთ ვაკანსია, რომელსაც ათვალიერებთ, თქვენს საკუთარ Postulo-ში განსახილველად. სხვაგან არაფერი იგზავნება."
+  },
+  "actionTitle": {
+    "message": "ამ ვაკანსიის აღება Postulo-ში"
+  },
+  "settings": {
+    "message": "პარამეტრები"
+  },
+  "unconfigured": {
+    "message": "უთხარით გაფართოებას, სად არის თქვენი Postulo და რომელი ტოკენი გამოიყენოს."
+  },
+  "setUp": {
+    "message": "დაყენება"
+  },
+  "capture": {
+    "message": "ამ ვაკანსიის აღება"
+  },
+  "captureHint": {
+    "message": "გვერდი, რომელსაც ათვალიერებთ, იგზავნება თქვენს Postulo-ში და სხვაგან არსად."
+  },
+  "review": {
+    "message": "განხილვა Postulo-ში"
+  },
+  "reading": {
+    "message": "გვერდი იკითხება…"
+  },
+  "allowing": {
+    "message": "გაფართოებას ეძლევა ნებართვა, მიაღწიოს თქვენს Postulo-ს…"
+  },
+  "noPermission": {
+    "message": "თქვენს Postulo-მდე მიღწევის ნებართვის გარეშე ვერაფერი გაიგზავნება."
+  },
+  "sending": {
+    "message": "იგზავნება Postulo-ში…"
+  },
+  "captured": {
+    "message": "აღებულია. განიხილეთ, სანამ თქვენს ვაკანსიებში მოხვდება."
+  },
+  "readBy": {
+    "message": "წაიკითხა: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "ვაკანსია სათაურის გარეშე"
+  },
+  "optionsTitle": {
+    "message": "Postulo-ს პარამეტრები"
+  },
+  "instanceLabel": {
+    "message": "თქვენი Postulo"
+  },
+  "instanceHint": {
+    "message": "მისამართი, რომლითაც მას ხსნით. https, თუ ის ამ კომპიუტერზე არ მუშაობს."
+  },
+  "tokenLabel": {
+    "message": "API ტოკენი"
+  },
+  "tokenHint": {
+    "message": "იქმნება Postulo-ში, განყოფილებაში $PATH$, მხოლოდ $SCOPE$ უფლებით. ინახება მხოლოდ ამ მოწყობილობაზე და არასოდეს სინქრონიზდება ბრაუზერის ანგარიშით.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "პარამეტრები → API ტოკენები"
+  },
+  "save": {
+    "message": "შენახვა"
+  },
+  "test": {
+    "message": "შემოწმება"
+  },
+  "shortcutHint": {
+    "message": "ღილაკზე ან $SHORTCUT$-ზე დაჭერით გვერდი, რომელსაც ათვალიერებთ, იგზავნება თქვენს Postulo-ში განსახილველად. არც ერთი გვერდი არ იკითხება, სანამ არ მოითხოვთ, და სხვაგან არაფერი იგზავნება.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "ჩასვით ტოკენი, რომელიც Postulo-მ გაჩვენათ."
+  },
+  "saved": {
+    "message": "შენახულია. ღილაკი ახლა გვერდებს გაგზავნის მისამართზე $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "შენახულია, მაგრამ ბრაუზერმა უარი თქვა მასთან წვდომის ნებართვაზე; დაუშვით ის გაფართოების ნებართვებში."
+  },
+  "asking": {
+    "message": "Postulo-ს ვეკითხებით, ვისია ეს ტოკენი…"
+  },
+  "addressRefused": {
+    "message": "ამ მისამართზე წვდომის ნებართვაზე უარი ითქვა."
+  },
+  "tokenIs": {
+    "message": "ტოკენი „$NAME$“ — $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "ტოკენი „$NAME$“ — $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "მას არ აქვს captures უფლება, ამიტომ ვერ აიღებს."
+  },
+  "enterAddress": {
+    "message": "შეიყვანეთ თქვენი Postulo-ს მისამართი."
+  },
+  "notAnAddress": {
+    "message": "ეს ვებმისამართს არ ჰგავს."
+  },
+  "httpsOnly": {
+    "message": "გამოიყენეთ https ყველაფრისთვის, რაც თქვენს კომპიუტერზე არ არის: ტოკენი ყოველ მოთხოვნას თან ახლავს."
+  },
+  "tokenRefused": {
+    "message": "Postulo ამ ტოკენს არ იღებს. შეამოწმეთ ის განყოფილებაში $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "ამ ტოკენს აღების უფლება არ აქვს."
+  },
+  "tooMany": {
+    "message": "ძალიან ბევრი აღება მოკლე დროში. დაიცადეთ ერთი წუთი და სცადეთ ხელახლა."
+  },
+  "answered": {
+    "message": "Postulo-მ უპასუხა: $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "წასაკითხი ჩანართი არ არის."
+  },
+  "notWebPage": {
+    "message": "მხოლოდ ვებგვერდების აღებაა შესაძლებელი."
+  },
+  "unreadable": {
+    "message": "გვერდის წაკითხვა ვერ მოხერხდა. ზოგი გვერდი გაფართოებებს ბლოკავს."
+  }
+}

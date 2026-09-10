@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "sr"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Пошаљите оглас за посао који гледате у свој Postulo, на преглед. Ништа не иде нигде другде."
+  },
+  "actionTitle": {
+    "message": "Ухвати овај оглас у Postulo"
+  },
+  "settings": {
+    "message": "Подешавања"
+  },
+  "unconfigured": {
+    "message": "Реците проширењу где је ваш Postulo и који токен да користи."
+  },
+  "setUp": {
+    "message": "Подеси"
+  },
+  "capture": {
+    "message": "Ухвати овај оглас"
+  },
+  "captureHint": {
+    "message": "Страница коју гледате шаље се у ваш Postulo и нигде другде."
+  },
+  "review": {
+    "message": "Прегледај у Postulo-у"
+  },
+  "reading": {
+    "message": "Чита се страница…"
+  },
+  "allowing": {
+    "message": "Проширењу се дозвољава да дође до вашег Postulo-а…"
+  },
+  "noPermission": {
+    "message": "Без дозволе да се дође до вашег Postulo-а, ништа се не може послати."
+  },
+  "sending": {
+    "message": "Шаље се у Postulo…"
+  },
+  "captured": {
+    "message": "Ухваћено. Прегледајте га пре него што уђе међу ваше огласе."
+  },
+  "readBy": {
+    "message": "Прочитао: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Оглас без наслова"
+  },
+  "optionsTitle": {
+    "message": "Подешавања Postulo-а"
+  },
+  "instanceLabel": {
+    "message": "Ваш Postulo"
+  },
+  "instanceHint": {
+    "message": "Адреса на којој га отварате. https, осим ако ради на овом рачунару."
+  },
+  "tokenLabel": {
+    "message": "API токен"
+  },
+  "tokenHint": {
+    "message": "Прави се у одељку $PATH$ у Postulo-у, са опсегом $SCOPE$ и ничим више. Чува се само на овом уређају и никада се не синхронизује преко налога у прегледачу.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Подешавања → API токени"
+  },
+  "save": {
+    "message": "Сачувај"
+  },
+  "test": {
+    "message": "Тестирај"
+  },
+  "shortcutHint": {
+    "message": "Притиском на дугме, или на $SHORTCUT$, страница коју гледате шаље се у ваш Postulo на преглед. Ниједна страница се не чита док то не затражите, и ништа се не шаље нигде другде.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Налепите токен који вам је Postulo показао."
+  },
+  "saved": {
+    "message": "Сачувано. Дугме ће сада слати странице на $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Сачувано, али је прегледач одбио дозволу да дође до њега; дозволите је у дозволама проширења."
+  },
+  "asking": {
+    "message": "Питамо Postulo чији је овај токен…"
+  },
+  "addressRefused": {
+    "message": "Дозвола да се дође до те адресе је одбијена."
+  },
+  "tokenIs": {
+    "message": "Токен „$NAME$“ за $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Токен „$NAME$“ за $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Недостаје му опсег captures, па не може да хвата."
+  },
+  "enterAddress": {
+    "message": "Унесите адресу свог Postulo-а."
+  },
+  "notAnAddress": {
+    "message": "Ово не личи на веб-адресу."
+  },
+  "httpsOnly": {
+    "message": "Користите https за све што није на вашем рачунару: токен путује са сваким захтевом."
+  },
+  "tokenRefused": {
+    "message": "Postulo не прихвата овај токен. Проверите га у одељку $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Овом токену није дозвољено да хвата."
+  },
+  "tooMany": {
+    "message": "Превише хватања за кратко време. Сачекајте минут и покушајте поново."
+  },
+  "answered": {
+    "message": "Postulo је одговорио $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Нема картице за читање."
+  },
+  "notWebPage": {
+    "message": "Могу се хватати само веб-странице."
+  },
+  "unreadable": {
+    "message": "Страница није могла да се прочита. Неке странице блокирају проширења."
+  }
+}

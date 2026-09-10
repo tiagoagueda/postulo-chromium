@@ -12,26 +12,26 @@
     </header>
 
     <section id="unconfigured" hidden>
-      <p>Tell the extension where your Postulo is and which token to use.</p>
-      <button id="open-options" type="button" class="primary">Set it up</button>
+      <p data-i18n="unconfigured">Tell the extension where your Postulo is and which token to use.</p>
+      <button id="open-options" type="button" class="primary" data-i18n="setUp">Set it up</button>
     </section>
 
     <section id="ready" hidden>
-      <button id="capture" type="button" class="primary">Capture this posting</button>
-      <p class="hint">The page you are looking at is sent to your Postulo and nowhere else.</p>
+      <button id="capture" type="button" class="primary" data-i18n="capture">Capture this posting</button>
+      <p class="hint" data-i18n="captureHint">The page you are looking at is sent to your Postulo and nowhere else.</p>
     </section>
 
     <section id="result" hidden>
       <p id="summary"></p>
       <p id="read-by" class="muted"></p>
-      <a id="review" href="#" target="_blank" rel="noopener" class="primary button">Review in Postulo</a>
+      <a id="review" href="#" target="_blank" rel="noopener" class="primary button" data-i18n="review">Review in Postulo</a>
     </section>
 
     <p id="status" role="status" aria-live="polite"></p>
 
     <footer>
       <a id="server" class="server" href="#" target="_blank" rel="noopener" hidden></a>
-      <button id="options-link" type="button" class="icon" aria-label="Settings" title="Settings">
+      <button id="options-link" type="button" class="icon" aria-label="Settings" title="Settings" data-i18n-label="settings">
         <!-- The core's settings icon, so the two look alike: lucide-static v1.41.0, ISC. -->
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"

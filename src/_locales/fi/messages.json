@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "fi"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Lähetä katsomasi työpaikkailmoitus omaan Postuloosi tarkistettavaksi. Mitään ei lähetetä muualle."
+  },
+  "actionTitle": {
+    "message": "Kaappaa tämä ilmoitus Postuloon"
+  },
+  "settings": {
+    "message": "Asetukset"
+  },
+  "unconfigured": {
+    "message": "Kerro laajennukselle, missä Postulosi on ja mitä avainta se käyttää."
+  },
+  "setUp": {
+    "message": "Määritä"
+  },
+  "capture": {
+    "message": "Kaappaa tämä ilmoitus"
+  },
+  "captureHint": {
+    "message": "Katsomasi sivu lähetetään Postuloosi eikä minnekään muualle."
+  },
+  "review": {
+    "message": "Tarkista Postulossa"
+  },
+  "reading": {
+    "message": "Luetaan sivua…"
+  },
+  "allowing": {
+    "message": "Annetaan laajennukselle lupa tavoittaa Postulosi…"
+  },
+  "noPermission": {
+    "message": "Ilman lupaa tavoittaa Postulosi mitään ei voi lähettää."
+  },
+  "sending": {
+    "message": "Lähetetään Postuloon…"
+  },
+  "captured": {
+    "message": "Kaapattu. Tarkista se, ennen kuin se päätyy ilmoituksiisi."
+  },
+  "readBy": {
+    "message": "Lukija: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Nimetön ilmoitus"
+  },
+  "optionsTitle": {
+    "message": "Postulon asetukset"
+  },
+  "instanceLabel": {
+    "message": "Postulosi"
+  },
+  "instanceHint": {
+    "message": "Osoite, josta avaat sen. https, ellei se toimi tällä koneella."
+  },
+  "tokenLabel": {
+    "message": "API-avain"
+  },
+  "tokenHint": {
+    "message": "Luodaan Postulossa kohdassa $PATH$, oikeudella $SCOPE$ eikä millään muulla. Se säilytetään vain tällä laitteella, eikä sitä koskaan synkronoida selaintilin kautta.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Asetukset → API-avaimet"
+  },
+  "save": {
+    "message": "Tallenna"
+  },
+  "test": {
+    "message": "Testaa"
+  },
+  "shortcutHint": {
+    "message": "Painikkeen tai $SHORTCUT$ painaminen lähettää katsomasi sivun Postuloosi tarkistettavaksi. Mitään sivua ei lueta ennen kuin pyydät, eikä mitään lähetetä muualle.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Liitä avain, jonka Postulo näytti sinulle."
+  },
+  "saved": {
+    "message": "Tallennettu. Painike lähettää nyt sivut osoitteeseen $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Tallennettu, mutta selain ei antanut lupaa tavoittaa sitä; salli se laajennuksen käyttöoikeuksissa."
+  },
+  "asking": {
+    "message": "Kysytään Postulolta, kenen avain tämä on…"
+  },
+  "addressRefused": {
+    "message": "Lupa tavoittaa tuo osoite evättiin."
+  },
+  "tokenIs": {
+    "message": "Avain ”$NAME$” käyttäjälle $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Avain ”$NAME$” käyttäjälle $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Siltä puuttuu oikeus captures, joten se ei voi kaapata."
+  },
+  "enterAddress": {
+    "message": "Anna Postulosi osoite."
+  },
+  "notAnAddress": {
+    "message": "Tuo ei näytä verkko-osoitteelta."
+  },
+  "httpsOnly": {
+    "message": "Käytä https:ää kaikessa, mikä ei ole omalla koneellasi: avain kulkee jokaisen pyynnön mukana."
+  },
+  "tokenRefused": {
+    "message": "Postulo ei hyväksy tätä avainta. Tarkista se kohdassa $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Tällä avaimella ei saa kaapata."
+  },
+  "tooMany": {
+    "message": "Liian monta kaappausta lyhyessä ajassa. Odota minuutti ja yritä uudelleen."
+  },
+  "answered": {
+    "message": "Postulo vastasi $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Ei välilehteä luettavaksi."
+  },
+  "notWebPage": {
+    "message": "Vain verkkosivuja voi kaapata."
+  },
+  "unreadable": {
+    "message": "Sivua ei voitu lukea. Jotkin sivut estävät laajennukset."
+  }
+}

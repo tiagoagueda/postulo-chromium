@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "cy"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Anfonwch yr hysbyseb swydd rydych chi'n edrych arni i'ch Postulo eich hun, i'w hadolygu. Does dim yn mynd i unman arall."
+  },
+  "actionTitle": {
+    "message": "Dal yr hysbyseb hon yn Postulo"
+  },
+  "settings": {
+    "message": "Gosodiadau"
+  },
+  "unconfigured": {
+    "message": "Dywedwch wrth yr estyniad ble mae eich Postulo a pha docyn i'w ddefnyddio."
+  },
+  "setUp": {
+    "message": "Ei osod"
+  },
+  "capture": {
+    "message": "Dal yr hysbyseb hon"
+  },
+  "captureHint": {
+    "message": "Mae'r dudalen rydych chi'n edrych arni'n cael ei hanfon i'ch Postulo a nunlle arall."
+  },
+  "review": {
+    "message": "Adolygu yn Postulo"
+  },
+  "reading": {
+    "message": "Yn darllen y dudalen…"
+  },
+  "allowing": {
+    "message": "Yn caniatáu i'r estyniad gyrraedd eich Postulo…"
+  },
+  "noPermission": {
+    "message": "Heb ganiatâd i gyrraedd eich Postulo, does dim modd anfon dim."
+  },
+  "sending": {
+    "message": "Yn anfon i Postulo…"
+  },
+  "captured": {
+    "message": "Wedi'i dal. Adolygwch hi cyn iddi ymuno â'ch hysbysebion."
+  },
+  "readBy": {
+    "message": "Wedi'i darllen gan $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Hysbyseb heb deitl"
+  },
+  "optionsTitle": {
+    "message": "Gosodiadau Postulo"
+  },
+  "instanceLabel": {
+    "message": "Eich Postulo"
+  },
+  "instanceHint": {
+    "message": "Y cyfeiriad rydych chi'n ei agor arno. https, oni bai ei fod yn rhedeg ar y peiriant hwn."
+  },
+  "tokenLabel": {
+    "message": "Tocyn API"
+  },
+  "tokenHint": {
+    "message": "Caiff ei wneud o dan $PATH$ yn Postulo, gyda'r cwmpas $SCOPE$ a dim byd arall. Caiff ei gadw ar y ddyfais hon yn unig, a byth ei gysoni drwy gyfrif porwr.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Gosodiadau → Tocynnau API"
+  },
+  "save": {
+    "message": "Cadw"
+  },
+  "test": {
+    "message": "Profi"
+  },
+  "shortcutHint": {
+    "message": "Mae pwyso'r botwm, neu $SHORTCUT$, yn anfon y dudalen rydych chi'n edrych arni i'ch Postulo i'w hadolygu. Does dim tudalen yn cael ei darllen nes i chi ofyn, a does dim yn cael ei anfon i unman arall.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Gludwch y tocyn a ddangosodd Postulo i chi."
+  },
+  "saved": {
+    "message": "Wedi'i gadw. Bydd y botwm bellach yn anfon tudalennau i $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Wedi'i gadw, ond gwrthododd y porwr ganiatâd i'w gyrraedd; caniatewch hynny yng nghaniatâd yr estyniad."
+  },
+  "asking": {
+    "message": "Yn gofyn i Postulo pwy biau'r tocyn hwn…"
+  },
+  "addressRefused": {
+    "message": "Gwrthodwyd caniatâd i gyrraedd y cyfeiriad hwnnw."
+  },
+  "tokenIs": {
+    "message": "Tocyn “$NAME$” ar gyfer $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Tocyn “$NAME$” ar gyfer $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Does ganddo ddim y cwmpas captures, felly all e ddim dal."
+  },
+  "enterAddress": {
+    "message": "Rhowch gyfeiriad eich Postulo."
+  },
+  "notAnAddress": {
+    "message": "Dydy hwnna ddim yn edrych fel cyfeiriad gwe."
+  },
+  "httpsOnly": {
+    "message": "Defnyddiwch https ar gyfer unrhyw beth nad yw ar eich peiriant eich hun: mae'r tocyn yn teithio gyda phob cais."
+  },
+  "tokenRefused": {
+    "message": "Dydy Postulo ddim yn derbyn y tocyn hwn. Gwiriwch ef o dan $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Does gan y tocyn hwn ddim caniatâd i ddal."
+  },
+  "tooMany": {
+    "message": "Gormod o ddalfeydd mewn amser byr. Arhoswch funud a rhowch gynnig arall arni."
+  },
+  "answered": {
+    "message": "Atebodd Postulo $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Does dim tab i'w ddarllen."
+  },
+  "notWebPage": {
+    "message": "Dim ond tudalennau gwe y gellir eu dal."
+  },
+  "unreadable": {
+    "message": "Doedd dim modd darllen y dudalen. Mae rhai tudalennau'n rhwystro estyniadau."
+  }
+}

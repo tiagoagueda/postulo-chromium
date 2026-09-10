@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "mk"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Испратете го огласот за работа што го гледате во вашиот Postulo, на преглед. Ништо не оди никаде друго."
+  },
+  "actionTitle": {
+    "message": "Фати го овој оглас во Postulo"
+  },
+  "settings": {
+    "message": "Поставки"
+  },
+  "unconfigured": {
+    "message": "Кажете му на проширувањето каде е вашиот Postulo и кој токен да го користи."
+  },
+  "setUp": {
+    "message": "Постави"
+  },
+  "capture": {
+    "message": "Фати го овој оглас"
+  },
+  "captureHint": {
+    "message": "Страницата што ја гледате се испраќа во вашиот Postulo и никаде друго."
+  },
+  "review": {
+    "message": "Прегледај во Postulo"
+  },
+  "reading": {
+    "message": "Се чита страницата…"
+  },
+  "allowing": {
+    "message": "Му се дозволува на проширувањето да стигне до вашиот Postulo…"
+  },
+  "noPermission": {
+    "message": "Без дозвола да се стигне до вашиот Postulo, ништо не може да се испрати."
+  },
+  "sending": {
+    "message": "Се испраќа во Postulo…"
+  },
+  "captured": {
+    "message": "Фатено. Прегледајте го пред да влезе меѓу вашите огласи."
+  },
+  "readBy": {
+    "message": "Прочитано од $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Оглас без наслов"
+  },
+  "optionsTitle": {
+    "message": "Поставки на Postulo"
+  },
+  "instanceLabel": {
+    "message": "Вашиот Postulo"
+  },
+  "instanceHint": {
+    "message": "Адресата на која го отворате. https, освен ако работи на овој компјутер."
+  },
+  "tokenLabel": {
+    "message": "API токен"
+  },
+  "tokenHint": {
+    "message": "Се прави во $PATH$ во Postulo, со опсегот $SCOPE$ и ништо повеќе. Се чува само на овој уред и никогаш не се синхронизира преку профил во прелистувачот.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Поставки → API токени"
+  },
+  "save": {
+    "message": "Зачувај"
+  },
+  "test": {
+    "message": "Тестирај"
+  },
+  "shortcutHint": {
+    "message": "Со притискање на копчето, или на $SHORTCUT$, страницата што ја гледате се испраќа во вашиот Postulo на преглед. Ниту една страница не се чита додека не побарате, и ништо не се испраќа никаде друго.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Залепете го токенот што ви го покажа Postulo."
+  },
+  "saved": {
+    "message": "Зачувано. Копчето сега ќе испраќа страници на $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Зачувано, но прелистувачот ја одби дозволата да стигне до него; дозволете ја во дозволите на проширувањето."
+  },
+  "asking": {
+    "message": "Го прашуваме Postulo чиј е овој токен…"
+  },
+  "addressRefused": {
+    "message": "Дозволата да се стигне до таа адреса беше одбиена."
+  },
+  "tokenIs": {
+    "message": "Токен „$NAME$“ за $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Токен „$NAME$“ за $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Му недостасува опсегот captures, па не може да фаќа."
+  },
+  "enterAddress": {
+    "message": "Внесете ја адресата на вашиот Postulo."
+  },
+  "notAnAddress": {
+    "message": "Ова не личи на веб-адреса."
+  },
+  "httpsOnly": {
+    "message": "Користете https за сè што не е на вашиот сопствен компјутер: токенот патува со секое барање."
+  },
+  "tokenRefused": {
+    "message": "Postulo не го прифаќа овој токен. Проверете го во $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "На овој токен не му е дозволено да фаќа."
+  },
+  "tooMany": {
+    "message": "Премногу фаќања за кратко време. Почекајте една минута и обидете се повторно."
+  },
+  "answered": {
+    "message": "Postulo одговори $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Нема јазиче за читање."
+  },
+  "notWebPage": {
+    "message": "Може да се фаќаат само веб-страници."
+  },
+  "unreadable": {
+    "message": "Страницата не можеше да се прочита. Некои страници ги блокираат проширувањата."
+  }
+}

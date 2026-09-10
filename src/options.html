@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Postulo settings</title>
+    <title data-i18n="optionsTitle">Postulo settings</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="options">
@@ -12,27 +12,27 @@
     </header>
 
     <form id="settings">
-      <label for="instance">Your Postulo</label>
+      <label for="instance" data-i18n="instanceLabel">Your Postulo</label>
       <input id="instance" name="instance" type="url" placeholder="https://postulo.example.org" autocomplete="off" required />
-      <p class="hint">The address you open it at. https, unless it runs on this machine.</p>
+      <p class="hint" data-i18n="instanceHint">The address you open it at. https, unless it runs on this machine.</p>
 
-      <label for="token">API token</label>
+      <label for="token" data-i18n="tokenLabel">API token</label>
       <input id="token" name="token" type="password" autocomplete="off" required />
-      <p class="hint">
+      <p id="token-hint" class="hint">
         Made under <em>Settings → API tokens</em> in Postulo, with the <code>captures</code> scope
         and nothing more. It is kept on this device only, never synced through a browser account.
       </p>
 
       <div class="actions">
-        <button type="submit" class="primary">Save</button>
-        <button id="test" type="button">Test</button>
+        <button type="submit" class="primary" data-i18n="save">Save</button>
+        <button id="test" type="button" data-i18n="test">Test</button>
       </div>
     </form>
 
     <p id="status" role="status" aria-live="polite"></p>
 
     <footer>
-      <p class="hint">
+      <p id="shortcut-hint" class="hint">
         Pressing the button, or <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, sends the page you are looking
         at to your Postulo for review. No page is read until you ask, and nothing is sent anywhere else.
       </p>

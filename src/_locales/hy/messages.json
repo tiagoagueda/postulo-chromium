@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "hy"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Ուղարկեք ձեր դիտած աշխատանքի հայտարարությունը ձեր սեփական Postulo՝ վերանայման համար։ Ոչինչ այլ տեղ չի գնում։"
+  },
+  "actionTitle": {
+    "message": "Որսալ այս հայտարարությունը Postulo-ում"
+  },
+  "settings": {
+    "message": "Կարգավորումներ"
+  },
+  "unconfigured": {
+    "message": "Ասեք ընդլայնմանը, թե որտեղ է ձեր Postulo-ն և որ թոքենն օգտագործել։"
+  },
+  "setUp": {
+    "message": "Կարգավորել"
+  },
+  "capture": {
+    "message": "Որսալ այս հայտարարությունը"
+  },
+  "captureHint": {
+    "message": "Ձեր դիտած էջն ուղարկվում է ձեր Postulo, և ուրիշ ոչ մի տեղ։"
+  },
+  "review": {
+    "message": "Վերանայել Postulo-ում"
+  },
+  "reading": {
+    "message": "Էջը կարդացվում է…"
+  },
+  "allowing": {
+    "message": "Ընդլայնմանը թույլատրվում է հասնել ձեր Postulo-ին…"
+  },
+  "noPermission": {
+    "message": "Առանց ձեր Postulo-ին հասնելու թույլտվության ոչինչ հնարավոր չէ ուղարկել։"
+  },
+  "sending": {
+    "message": "Ուղարկվում է Postulo…"
+  },
+  "captured": {
+    "message": "Որսված է։ Վերանայեք այն, նախքան այն կհայտնվի ձեր հայտարարությունների մեջ։"
+  },
+  "readBy": {
+    "message": "Կարդացել է՝ $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Անվերնագիր հայտարարություն"
+  },
+  "optionsTitle": {
+    "message": "Postulo-ի կարգավորումներ"
+  },
+  "instanceLabel": {
+    "message": "Ձեր Postulo-ն"
+  },
+  "instanceHint": {
+    "message": "Այն հասցեն, որով բացում եք այն։ https, եթե այն չի աշխատում այս համակարգչում։"
+  },
+  "tokenLabel": {
+    "message": "API թոքեն"
+  },
+  "tokenHint": {
+    "message": "Ստեղծվում է Postulo-ում՝ $PATH$ բաժնում, $SCOPE$ շրջանակով և ուրիշ ոչինչ։ Պահվում է միայն այս սարքում և երբեք չի համաժամացվում դիտարկիչի հաշվի միջոցով։",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Կարգավորումներ → API թոքեններ"
+  },
+  "save": {
+    "message": "Պահպանել"
+  },
+  "test": {
+    "message": "Փորձարկել"
+  },
+  "shortcutHint": {
+    "message": "Կոճակը կամ $SHORTCUT$ սեղմելով՝ ձեր դիտած էջն ուղարկվում է ձեր Postulo՝ վերանայման։ Ոչ մի էջ չի կարդացվում, քանի դեռ չեք խնդրել, և ոչինչ այլ տեղ չի ուղարկվում։",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Տեղադրեք այն թոքենը, որը ձեզ ցույց տվեց Postulo-ն։"
+  },
+  "saved": {
+    "message": "Պահպանված է։ Կոճակն այժմ էջերը կուղարկի $HOST$։",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Պահպանված է, բայց դիտարկիչը մերժեց դրան հասնելու թույլտվությունը․ թույլատրեք այն ընդլայնման թույլտվություններում։"
+  },
+  "asking": {
+    "message": "Postulo-ին հարցնում ենք, թե ում է պատկանում այս թոքենը…"
+  },
+  "addressRefused": {
+    "message": "Այդ հասցեին հասնելու թույլտվությունը մերժվեց։"
+  },
+  "tokenIs": {
+    "message": "«$NAME$» թոքեն՝ $OWNER$-ի համար։",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "«$NAME$» թոքեն՝ $OWNER$-ի համար ($SCOPES$)։",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Նրան պակասում է captures շրջանակը, ուստի այն չի կարող որսալ։"
+  },
+  "enterAddress": {
+    "message": "Մուտքագրեք ձեր Postulo-ի հասցեն։"
+  },
+  "notAnAddress": {
+    "message": "Սա վեբ հասցեի նման չէ։"
+  },
+  "httpsOnly": {
+    "message": "Օգտագործեք https ամեն ինչի համար, որը ձեր սեփական համակարգչում չէ․ թոքենը ճանապարհորդում է յուրաքանչյուր հարցման հետ։"
+  },
+  "tokenRefused": {
+    "message": "Postulo-ն չի ընդունում այս թոքենը։ Ստուգեք այն $PATH$ բաժնում։",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Այս թոքենին թույլատրված չէ որսալ։"
+  },
+  "tooMany": {
+    "message": "Չափազանց շատ որսումներ կարճ ժամանակում։ Սպասեք մեկ րոպե և կրկին փորձեք։"
+  },
+  "answered": {
+    "message": "Postulo-ն պատասխանեց $STATUS$։",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Կարդալու ներդիր չկա։"
+  },
+  "notWebPage": {
+    "message": "Կարելի է որսալ միայն վեբ էջեր։"
+  },
+  "unreadable": {
+    "message": "Էջը հնարավոր չեղավ կարդալ։ Որոշ էջեր արգելափակում են ընդլայնումները։"
+  }
+}

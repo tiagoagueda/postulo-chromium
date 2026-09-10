@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "sq"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Dërgojeni shpalljen e punës që po shikoni te Postulo-ja juaj, për shqyrtim. Asgjë nuk shkon gjetkë."
+  },
+  "actionTitle": {
+    "message": "Kape këtë shpallje në Postulo"
+  },
+  "settings": {
+    "message": "Cilësimet"
+  },
+  "unconfigured": {
+    "message": "I tregoni zgjerimit ku është Postulo-ja juaj dhe cilin token të përdorë."
+  },
+  "setUp": {
+    "message": "Konfigurojeni"
+  },
+  "capture": {
+    "message": "Kape këtë shpallje"
+  },
+  "captureHint": {
+    "message": "Faqja që po shikoni i dërgohet Postulo-së suaj dhe askund tjetër."
+  },
+  "review": {
+    "message": "Shqyrtojeni në Postulo"
+  },
+  "reading": {
+    "message": "Po lexohet faqja…"
+  },
+  "allowing": {
+    "message": "Zgjerimit po i jepet leje të arrijë Postulo-në tuaj…"
+  },
+  "noPermission": {
+    "message": "Pa leje për të arritur Postulo-në tuaj, nuk mund të dërgohet asgjë."
+  },
+  "sending": {
+    "message": "Po dërgohet te Postulo…"
+  },
+  "captured": {
+    "message": "U kap. Shqyrtojeni para se të hyjë te shpalljet tuaja."
+  },
+  "readBy": {
+    "message": "Lexuar nga $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Shpallje pa titull"
+  },
+  "optionsTitle": {
+    "message": "Cilësimet e Postulo-s"
+  },
+  "instanceLabel": {
+    "message": "Postulo-ja juaj"
+  },
+  "instanceHint": {
+    "message": "Adresa ku e hapni. https, përveç nëse punon në këtë kompjuter."
+  },
+  "tokenLabel": {
+    "message": "Token API"
+  },
+  "tokenHint": {
+    "message": "Krijohet te $PATH$ në Postulo, me fushëveprimin $SCOPE$ dhe asgjë më shumë. Mbahet vetëm në këtë pajisje dhe nuk sinkronizohet kurrë përmes një llogarie shfletuesi.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Cilësimet → Tokena API"
+  },
+  "save": {
+    "message": "Ruaj"
+  },
+  "test": {
+    "message": "Testo"
+  },
+  "shortcutHint": {
+    "message": "Duke shtypur butonin, ose $SHORTCUT$, faqja që po shikoni i dërgohet Postulo-së suaj për shqyrtim. Asnjë faqe nuk lexohet derisa ta kërkoni, dhe asgjë nuk dërgohet gjetkë.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Ngjitni tokenin që ju tregoi Postulo."
+  },
+  "saved": {
+    "message": "U ruajt. Butoni tani do t'i dërgojë faqet te $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "U ruajt, por shfletuesi refuzoi lejen për ta arritur; lejojeni te lejet e zgjerimit."
+  },
+  "asking": {
+    "message": "Po pyetet Postulo se kujt i përket ky token…"
+  },
+  "addressRefused": {
+    "message": "Leja për të arritur atë adresë u refuzua."
+  },
+  "tokenIs": {
+    "message": "Tokeni “$NAME$” për $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Tokeni “$NAME$” për $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "I mungon fushëveprimi captures, prandaj nuk mund të kapë."
+  },
+  "enterAddress": {
+    "message": "Jepni adresën e Postulo-s suaj."
+  },
+  "notAnAddress": {
+    "message": "Kjo nuk duket si adresë uebi."
+  },
+  "httpsOnly": {
+    "message": "Përdorni https për çdo gjë që nuk është në kompjuterin tuaj: tokeni udhëton me çdo kërkesë."
+  },
+  "tokenRefused": {
+    "message": "Postulo nuk e pranon këtë token. Kontrollojeni te $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Ky token nuk lejohet të kapë."
+  },
+  "tooMany": {
+    "message": "Shumë kapje në kohë të shkurtër. Prisni një minutë dhe provoni sërish."
+  },
+  "answered": {
+    "message": "Postulo u përgjigj me $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nuk ka skedë për t'u lexuar."
+  },
+  "notWebPage": {
+    "message": "Mund të kapen vetëm faqe uebi."
+  },
+  "unreadable": {
+    "message": "Faqja nuk mund të lexohej. Disa faqe i bllokojnë zgjerimet."
+  }
+}

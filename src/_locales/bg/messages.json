@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "bg"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Изпратете обявата за работа, която разглеждате, към собствения си Postulo за преглед. Нищо не отива другаде."
+  },
+  "actionTitle": {
+    "message": "Прихващане на тази обява в Postulo"
+  },
+  "settings": {
+    "message": "Настройки"
+  },
+  "unconfigured": {
+    "message": "Кажете на разширението къде е вашият Postulo и кой токен да използва."
+  },
+  "setUp": {
+    "message": "Настройване"
+  },
+  "capture": {
+    "message": "Прихващане на тази обява"
+  },
+  "captureHint": {
+    "message": "Страницата, която разглеждате, се изпраща към вашия Postulo и никъде другаде."
+  },
+  "review": {
+    "message": "Преглед в Postulo"
+  },
+  "reading": {
+    "message": "Страницата се чете…"
+  },
+  "allowing": {
+    "message": "Разрешава се на разширението да достигне вашия Postulo…"
+  },
+  "noPermission": {
+    "message": "Без разрешение за достъп до вашия Postulo нищо не може да бъде изпратено."
+  },
+  "sending": {
+    "message": "Изпраща се към Postulo…"
+  },
+  "captured": {
+    "message": "Прихванато. Прегледайте я, преди да влезе във вашите обяви."
+  },
+  "readBy": {
+    "message": "Прочетено от $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Обява без заглавие"
+  },
+  "optionsTitle": {
+    "message": "Настройки на Postulo"
+  },
+  "instanceLabel": {
+    "message": "Вашият Postulo"
+  },
+  "instanceHint": {
+    "message": "Адресът, на който го отваряте. https, освен ако не работи на този компютър."
+  },
+  "tokenLabel": {
+    "message": "API токен"
+  },
+  "tokenHint": {
+    "message": "Създава се в $PATH$ в Postulo, с обхвата $SCOPE$ и нищо повече. Пази се само на това устройство и никога не се синхронизира през профил в браузъра.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Настройки → API токени"
+  },
+  "save": {
+    "message": "Запазване"
+  },
+  "test": {
+    "message": "Тест"
+  },
+  "shortcutHint": {
+    "message": "С натискане на бутона или на $SHORTCUT$ страницата, която разглеждате, се изпраща към вашия Postulo за преглед. Нито една страница не се чете, преди да поискате, и нищо не се изпраща другаде.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Поставете токена, който Postulo ви показа."
+  },
+  "saved": {
+    "message": "Запазено. Отсега бутонът ще изпраща страници към $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Запазено, но браузърът отказа разрешение за достъп до него; разрешете го в разрешенията на разширението."
+  },
+  "asking": {
+    "message": "Postulo се пита чий е този токен…"
+  },
+  "addressRefused": {
+    "message": "Разрешението за достъп до този адрес беше отказано."
+  },
+  "tokenIs": {
+    "message": "Токен „$NAME$“ за $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Токен „$NAME$“ за $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Липсва му обхватът captures, затова не може да прихваща."
+  },
+  "enterAddress": {
+    "message": "Въведете адреса на вашия Postulo."
+  },
+  "notAnAddress": {
+    "message": "Това не прилича на уеб адрес."
+  },
+  "httpsOnly": {
+    "message": "Използвайте https за всичко, което не е на вашия собствен компютър: токенът пътува с всяка заявка."
+  },
+  "tokenRefused": {
+    "message": "Postulo не приема този токен. Проверете го в $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "На този токен не е разрешено да прихваща."
+  },
+  "tooMany": {
+    "message": "Твърде много прихващания за кратко време. Изчакайте минута и опитайте отново."
+  },
+  "answered": {
+    "message": "Postulo отговори с $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Няма раздел за четене."
+  },
+  "notWebPage": {
+    "message": "Могат да се прихващат само уеб страници."
+  },
+  "unreadable": {
+    "message": "Страницата не можа да бъде прочетена. Някои страници блокират разширенията."
+  }
+}

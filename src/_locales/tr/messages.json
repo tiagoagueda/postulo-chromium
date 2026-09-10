@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "tr"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Baktığınız iş ilanını incelemek üzere kendi Postulo'nuza gönderin. Başka hiçbir yere bir şey gitmez."
+  },
+  "actionTitle": {
+    "message": "Bu ilanı Postulo'ya yakala"
+  },
+  "settings": {
+    "message": "Ayarlar"
+  },
+  "unconfigured": {
+    "message": "Uzantıya Postulo'nuzun nerede olduğunu ve hangi jetonu kullanacağını söyleyin."
+  },
+  "setUp": {
+    "message": "Kur"
+  },
+  "capture": {
+    "message": "Bu ilanı yakala"
+  },
+  "captureHint": {
+    "message": "Baktığınız sayfa Postulo'nuza gönderilir, başka hiçbir yere gitmez."
+  },
+  "review": {
+    "message": "Postulo'da incele"
+  },
+  "reading": {
+    "message": "Sayfa okunuyor…"
+  },
+  "allowing": {
+    "message": "Uzantının Postulo'nuza erişmesine izin veriliyor…"
+  },
+  "noPermission": {
+    "message": "Postulo'nuza erişim izni olmadan hiçbir şey gönderilemez."
+  },
+  "sending": {
+    "message": "Postulo'ya gönderiliyor…"
+  },
+  "captured": {
+    "message": "Yakalandı. İlanlarınıza katılmadan önce onu inceleyin."
+  },
+  "readBy": {
+    "message": "Okuyan: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Başlıksız ilan"
+  },
+  "optionsTitle": {
+    "message": "Postulo ayarları"
+  },
+  "instanceLabel": {
+    "message": "Postulo'nuz"
+  },
+  "instanceHint": {
+    "message": "Onu açtığınız adres. Bu bilgisayarda çalışmıyorsa https."
+  },
+  "tokenLabel": {
+    "message": "API jetonu"
+  },
+  "tokenHint": {
+    "message": "Postulo'da $PATH$ altında, yalnızca $SCOPE$ kapsamıyla oluşturulur. Yalnızca bu cihazda saklanır ve hiçbir zaman bir tarayıcı hesabı üzerinden eşitlenmez.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Ayarlar → API jetonları"
+  },
+  "save": {
+    "message": "Kaydet"
+  },
+  "test": {
+    "message": "Sına"
+  },
+  "shortcutHint": {
+    "message": "Düğmeye ya da $SHORTCUT$ tuşlarına basmak, baktığınız sayfayı incelemeniz için Postulo'nuza gönderir. Siz istemeden hiçbir sayfa okunmaz ve başka hiçbir yere bir şey gönderilmez.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Postulo'nun size gösterdiği jetonu yapıştırın."
+  },
+  "saved": {
+    "message": "Kaydedildi. Düğme artık sayfaları $HOST$ adresine gönderecek.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Kaydedildi, ancak tarayıcı erişim iznini reddetti; uzantının izinlerinden buna izin verin."
+  },
+  "asking": {
+    "message": "Postulo'ya bu jetonun kime ait olduğu soruluyor…"
+  },
+  "addressRefused": {
+    "message": "Bu adrese erişim izni reddedildi."
+  },
+  "tokenIs": {
+    "message": "$OWNER$ için \"$NAME$\" jetonu.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "$OWNER$ için \"$NAME$\" jetonu ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "captures kapsamı eksik, bu yüzden yakalayamaz."
+  },
+  "enterAddress": {
+    "message": "Postulo'nuzun adresini girin."
+  },
+  "notAnAddress": {
+    "message": "Bu bir web adresine benzemiyor."
+  },
+  "httpsOnly": {
+    "message": "Kendi bilgisayarınızda olmayan her şey için https kullanın: jeton her istekle birlikte gider."
+  },
+  "tokenRefused": {
+    "message": "Postulo bu jetonu kabul etmiyor. $PATH$ altında kontrol edin.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Bu jetonun yakalama izni yok."
+  },
+  "tooMany": {
+    "message": "Kısa sürede çok fazla yakalama. Bir dakika bekleyip yeniden deneyin."
+  },
+  "answered": {
+    "message": "Postulo $STATUS$ ile yanıt verdi.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Okunacak sekme yok."
+  },
+  "notWebPage": {
+    "message": "Yalnızca web sayfaları yakalanabilir."
+  },
+  "unreadable": {
+    "message": "Sayfa okunamadı. Bazı sayfalar uzantıları engeller."
+  }
+}

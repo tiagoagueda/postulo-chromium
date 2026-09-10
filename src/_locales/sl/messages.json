@@ -1,0 +1,186 @@
+{
+  "languageTag": {
+    "message": "sl"
+  },
+  "direction": {
+    "message": "ltr"
+  },
+  "extensionDescription": {
+    "message": "Pošljite zaposlitveni oglas, ki ga gledate, v svoj Postulo v pregled. Nič ne gre nikamor drugam."
+  },
+  "actionTitle": {
+    "message": "Zajemi ta oglas v Postulo"
+  },
+  "settings": {
+    "message": "Nastavitve"
+  },
+  "unconfigured": {
+    "message": "Povejte razširitvi, kje je vaš Postulo in kateri žeton naj uporabi."
+  },
+  "setUp": {
+    "message": "Nastavi"
+  },
+  "capture": {
+    "message": "Zajemi ta oglas"
+  },
+  "captureHint": {
+    "message": "Stran, ki jo gledate, se pošlje v vaš Postulo in nikamor drugam."
+  },
+  "review": {
+    "message": "Preglej v Postulu"
+  },
+  "reading": {
+    "message": "Branje strani …"
+  },
+  "allowing": {
+    "message": "Razširitev dobiva dovoljenje za dostop do vašega Postula …"
+  },
+  "noPermission": {
+    "message": "Brez dovoljenja za dostop do vašega Postula ni mogoče poslati ničesar."
+  },
+  "sending": {
+    "message": "Pošiljanje v Postulo …"
+  },
+  "captured": {
+    "message": "Zajeto. Preglejte ga, preden se pridruži vašim oglasom."
+  },
+  "readBy": {
+    "message": "Prebral: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Oglas brez naslova"
+  },
+  "optionsTitle": {
+    "message": "Nastavitve Postula"
+  },
+  "instanceLabel": {
+    "message": "Vaš Postulo"
+  },
+  "instanceHint": {
+    "message": "Naslov, na katerem ga odprete. https, razen če teče na tem računalniku."
+  },
+  "tokenLabel": {
+    "message": "Žeton API"
+  },
+  "tokenHint": {
+    "message": "Ustvari se v Postulu pod $PATH$, z obsegom $SCOPE$ in ničesar več. Hrani se samo v tej napravi in se nikoli ne sinhronizira prek računa brskalnika.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Nastavitve → Žetoni API"
+  },
+  "save": {
+    "message": "Shrani"
+  },
+  "test": {
+    "message": "Preizkusi"
+  },
+  "shortcutHint": {
+    "message": "Pritisk na gumb ali $SHORTCUT$ pošlje stran, ki jo gledate, v vaš Postulo v pregled. Nobena stran se ne prebere, dokler tega ne zahtevate, in nič se ne pošlje nikamor drugam.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Prilepite žeton, ki vam ga je pokazal Postulo."
+  },
+  "saved": {
+    "message": "Shranjeno. Gumb bo zdaj pošiljal strani na $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Shranjeno, vendar je brskalnik zavrnil dovoljenje za dostop; dovolite ga v dovoljenjih razširitve."
+  },
+  "asking": {
+    "message": "Postulo sprašujemo, čigav je ta žeton …"
+  },
+  "addressRefused": {
+    "message": "Dovoljenje za dostop do tega naslova je bilo zavrnjeno."
+  },
+  "tokenIs": {
+    "message": "Žeton »$NAME$« za $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Žeton »$NAME$« za $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Manjka mu obseg captures, zato ne more zajemati."
+  },
+  "enterAddress": {
+    "message": "Vnesite naslov svojega Postula."
+  },
+  "notAnAddress": {
+    "message": "To ni videti kot spletni naslov."
+  },
+  "httpsOnly": {
+    "message": "Uporabite https za vse, kar ni na vašem lastnem računalniku: žeton potuje z vsako zahtevo."
+  },
+  "tokenRefused": {
+    "message": "Postulo tega žetona ne sprejme. Preverite ga pod $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Ta žeton nima dovoljenja za zajemanje."
+  },
+  "tooMany": {
+    "message": "Preveč zajemov v kratkem času. Počakajte minuto in poskusite znova."
+  },
+  "answered": {
+    "message": "Postulo je odgovoril $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Ni zavihka za branje."
+  },
+  "notWebPage": {
+    "message": "Zajeti je mogoče samo spletne strani."
+  },
+  "unreadable": {
+    "message": "Strani ni bilo mogoče prebrati. Nekatere strani blokirajo razširitve."
+  }
+}
