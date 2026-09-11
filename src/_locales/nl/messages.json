@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Stuur de vacature die u bekijkt naar uw eigen Postulo, om te controleren. Er gaat niets ergens anders heen."
+    "message": "Leg de vacature die u bekijkt vast, bewaar hem in uw browser en stuur hem ter controle naar uw eigen Postulo wanneer u dat wilt. Er gaat niets ergens anders heen."
   },
   "actionTitle": {
     "message": "Deze vacature vastleggen in Postulo"
   },
   "settings": {
     "message": "Instellingen"
-  },
-  "unconfigured": {
-    "message": "Vertel de extensie waar uw Postulo staat en welk token ze moet gebruiken."
   },
   "setUp": {
     "message": "Instellen"
@@ -24,7 +21,7 @@
     "message": "Deze vacature vastleggen"
   },
   "captureHint": {
-    "message": "De pagina die u bekijkt, wordt naar uw Postulo gestuurd en nergens anders heen."
+    "message": "De pagina wordt hier gelezen, in uw browser. Er wordt niets verstuurd voordat u dat zegt."
   },
   "review": {
     "message": "Controleren in Postulo"
@@ -88,7 +85,7 @@
     "message": "Testen"
   },
   "shortcutHint": {
-    "message": "Met de knop, of $SHORTCUT$, wordt de pagina die u bekijkt ter controle naar uw Postulo gestuurd. Er wordt geen pagina gelezen voordat u erom vraagt, en er gaat niets ergens anders heen.",
+    "message": "Met de knop, of $SHORTCUT$, wordt de pagina die u bekijkt hier in de browser gelezen. Er wordt geen pagina gelezen voordat u erom vraagt, en er gaat niets ergens anders heen dan naar uw eigen Postulo, wanneer u dat zegt.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "De pagina kon niet worden gelezen. Sommige pagina's blokkeren extensies."
   },
-  "previewing": {
-    "message": "Postulo wordt gevraagd wat het hier leest…"
-  },
   "reviewHint": {
-    "message": "Dit heeft Postulo op de pagina gelezen. Verbeter wat niet klopt voordat u het verstuurt."
+    "message": "Dit is wat er van de pagina is gelezen. Verbeter wat niet klopt; er verlaat niets deze browser voordat u het verstuurt."
   },
   "sendForReview": {
     "message": "Ter controle versturen"
+  },
+  "notConnected": {
+    "message": "Nog niet verbonden met een Postulo: wat u vastlegt, wordt in deze browser bewaard."
+  },
+  "keep": {
+    "message": "Bewaren in deze browser"
+  },
+  "kept": {
+    "message": "Bewaard in deze browser. Stuur hem naar Postulo wanneer u er klaar voor bent."
+  },
+  "alreadyKept": {
+    "message": "U hebt deze pagina al bewaard en nog niet verstuurd: dit is uw versie."
+  },
+  "nothingRead": {
+    "message": "Er kon niets van deze pagina worden gelezen. Vul in wat u weet; er verlaat niets deze browser voordat u het verstuurt."
+  },
+  "waiting": {
+    "message": "Postulo is nu niet bereikbaar. De vacature blijft in deze browser bewaard en wordt verstuurd zodra Postulo antwoordt."
+  },
+  "waitingOffline": {
+    "message": "De testschakelaar staat aan, dus de vacature wacht in deze browser. Hij wordt verstuurd zodra de schakelaar uit staat."
+  },
+  "waitingAccount": {
+    "message": "De vacature blijft in deze browser bewaard en wordt verstuurd zodra dat is opgelost."
+  },
+  "sendNeedsSetup": {
+    "message": "Bewaard in deze browser, om te versturen zodra uw Postulo is ingesteld."
+  },
+  "capturesTitle": {
+    "message": "Vastleggingen in deze browser"
+  },
+  "capturesIntro": {
+    "message": "Vacatures die u hebt vastgelegd, hier bewaard tot ze uw Postulo bereiken. Wat u verstuurt, gaat zodra Postulo bereikbaar is."
+  },
+  "nothingKept": {
+    "message": "Er is niets bewaard in deze browser."
+  },
+  "sendAll": {
+    "message": "Alle niet-verstuurde versturen"
+  },
+  "clearSent": {
+    "message": "Verstuurde opruimen"
+  },
+  "stateKept": {
+    "message": "Niet verstuurd"
+  },
+  "stateWaiting": {
+    "message": "Wacht op Postulo"
+  },
+  "stateSent": {
+    "message": "Verstuurd"
+  },
+  "stateRefused": {
+    "message": "Geweigerd"
+  },
+  "tryNow": {
+    "message": "Nu proberen"
+  },
+  "holdBack": {
+    "message": "Hier houden"
+  },
+  "deleteConfirm": {
+    "message": "Deze vastlegging wissen? Ze heeft Postulo niet bereikt, dus ze bestaat alleen hier."
+  },
+  "troubleshooting": {
+    "message": "Testen en probleemoplossing"
+  },
+  "offlineLabel": {
+    "message": "Doen alsof Postulo niet bereikbaar is"
+  },
+  "offlineHint": {
+    "message": "Voor tests. Zolang dit aan staat, wordt er niets verstuurd: vastleggingen wachten in deze browser precies zoals wanneer Postulo onbereikbaar is, en gaan zodra het uit staat."
+  },
+  "offlineOn": {
+    "message": "De testschakelaar staat aan: er wordt niets naar Postulo verstuurd."
+  },
+  "offlineOff": {
+    "message": "De testschakelaar staat uit: wat wacht, gaat nu naar Postulo."
+  },
+  "downloadLog": {
+    "message": "Logboek downloaden"
+  },
+  "clearLog": {
+    "message": "Logboek leegmaken"
+  },
+  "logCleared": {
+    "message": "Het logboek is leeg."
+  },
+  "logHint": {
+    "message": "Wat de extensie heeft gedaan, om uit te zoeken waarom iets niet werkte. Het bevat geen token en niets van de pagina's."
+  },
+  "cancel": {
+    "message": "Annuleren"
+  },
+  "delete": {
+    "message": "Wissen"
+  },
+  "edit": {
+    "message": "Bewerken"
   },
   "fieldTitle": {
     "message": "Functietitel"

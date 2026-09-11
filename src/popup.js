@@ -1,30 +1,25 @@
-import { capture, corrections, describe, originPattern, preview } from "./lib/api.js";
+import { describe, originPattern } from "./lib/api.js";
 import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission } from "./lib/browser.js";
+import { postingForm } from "./lib/form.js";
 import { explain, localise, t } from "./lib/i18n.js";
+import { afterSending, deliverWaiting, log, openCaptures, showUnsentCount, store } from "./lib/local.js";
+import { hostOf } from "./lib/log.js";
+import { emptyPosting, readPosting, slimPage } from "./lib/parse.js";
 
 const $ = (id) => document.getElementById(id);
 
-/** The posting's fields the popup shows, by the names Postulo's API gives them. */
-const FIELDS = [
-  "title",
-  "company_name",
-  "location",
-  "remote_type",
-  "employment_type",
-  "salary_min",
-  "salary_max",
-  "salary_currency",
-  "salary_period",
-  "closes_at",
-  "description",
-];
-
 function show(section) {
-  for (const id of ["unconfigured", "ready", "edit", "result"]) {
+  for (const id of ["ready", "edit", "result"]) {
     $(id).hidden = id !== section;
   }
   // The form needs more room than a button does.
   document.body.classList.toggle("wide", section === "edit");
+  // And all the height a popup gets: the link to the list waits until it is done.
+  $("captures-link").parentElement.hidden = section === "edit";
+  // The notes about the connection too: what became of a capture is said once it is sent.
+  for (const id of ["not-connected", "offline-on"]) {
+    $(id).classList.toggle("folded", section === "edit");
+  }
 }
 
 function say(text, isError = false) {
@@ -33,101 +28,136 @@ function say(text, isError = false) {
   status.classList.toggle("error", isError);
 }
 
-/** Put what was read into the form. */
-function fill(form, data) {
-  for (const name of FIELDS) {
-    const field = form.elements[name];
-    const value = data[name] ?? "";
-    // A value a source wrote that the list has no word for is shown as it is, not dropped:
-    // choosing nothing would send a correction nobody made.
-    if (field instanceof HTMLSelectElement && value && ![...field.options].some((option) => option.value === value)) {
-      field.add(new Option(value, value));
-    }
-    field.value = value;
-  }
-}
-
-/** What the form says now. */
-function edited(form) {
-  const values = Object.fromEntries(FIELDS.map((name) => [name, form.elements[name].value]));
-  values.salary_currency = values.salary_currency.trim().toUpperCase();
-  return values;
+async function showCount() {
+  const count = await store.unsentCount();
+  $("unsent").textContent = String(count);
+  $("unsent").hidden = !count;
+  await showUnsentCount();
 }
 
 async function main() {
   localise();
   const settings = await loadSettings();
+  const connected = Boolean(settings.instance && settings.token);
   $("open-options").addEventListener("click", () => ext.runtime.openOptionsPage());
   $("options-link").addEventListener("click", () => ext.runtime.openOptionsPage());
+  $("captures-link").addEventListener("click", (event) => {
+    event.preventDefault();
+    openCaptures();
+    window.close();
+  });
 
-  if (!settings.instance || !settings.token) {
-    show("unconfigured");
-    return;
+  $("not-connected").hidden = connected;
+  $("offline-on").hidden = !settings.offline;
+  if (connected) {
+    // Where a capture goes, in the corner: always visible, never in the way.
+    const server = $("server");
+    server.textContent = settings.instance;
+    server.title = settings.instance;
+    server.href = settings.instance;
+    server.hidden = false;
   }
-
   show("ready");
-  // Where a capture goes, in the corner rather than above the button: always visible, never
-  // in the way, and a click away from the instance itself.
-  const server = $("server");
-  server.textContent = settings.instance;
-  server.title = settings.instance;
-  server.href = settings.instance;
-  server.hidden = false;
+  await showCount();
+  // Whatever was waiting may go now; quietly, as the background would.
+  deliverWaiting().then(showCount, () => {});
 
-  // The page as read once, and what Postulo made of it: sending sends this same page, so
-  // what is kept is what was shown, whatever the tab has done since.
-  let page = null;
-  let read = null;
-
-  async function send(data) {
-    say(t("sending"));
-    const result = await capture(settings.instance, settings.token, { ...page, data });
-    $("summary").textContent = describe(result, t("untitled"));
-    $("read-by").textContent = result.source ? t("readBy", [result.source]) : "";
-    $("review").href = result.review_url;
-    show("result");
-    say(t("captured"));
-  }
+  const editor = postingForm();
+  $("form-slot").append(editor.form);
+  let page = null; // {url, html, source, read} of the page read this time
+  let current = null; // the capture's record, once it is kept
 
   $("capture").addEventListener("click", async () => {
     const button = $("capture");
     button.disabled = true;
     say(t("reading"));
     try {
-      const pattern = originPattern(settings.instance);
-      if (!(await hasHostPermission(pattern))) {
-        say(t("allowing"));
-        const granted = await requestHostPermission(pattern);
-        if (!granted) {
-          throw new Error(t("noPermission"));
-        }
-      }
-      page = await readCurrentTab();
-      say(t("previewing"));
-      const seen = await preview(settings.instance, settings.token, page);
-      if (!seen) {
-        // A Postulo from before the preview: nothing to show, so it goes as it always did.
-        await send();
-        return;
-      }
-      read = seen.data;
-      fill($("posting"), read);
-      $("edit-read-by").textContent = seen.source ? t("readBy", [seen.source]) : "";
+      const tab = await readCurrentTab();
+      const parse = (html) => new DOMParser().parseFromString(html, "text/html");
+      const doc = parse(tab.html);
+      const found = readPosting(doc, tab.url, parse);
+      page = {
+        url: tab.url,
+        html: slimPage(doc),
+        source: found ? found.source : "",
+        read: found ? found.data : emptyPosting(tab.url),
+      };
+      await log.add("read", { host: hostOf(tab.url), source: page.source || "nothing" });
+
+      // Already kept and not sent: show that one, edits and all, rather than a second copy.
+      current = await store.unsentFor(tab.url);
+      editor.fill(current ? current.data : page.read);
+      $("edit-hint").textContent = current ? t("alreadyKept") : found ? t("reviewHint") : t("nothingRead");
+      const source = current ? current.source : page.source;
+      $("edit-read-by").textContent = source ? t("readBy", [source]) : "";
       show("edit");
       say("");
-      $("f-title").focus();
+      editor.focus();
     } catch (error) {
+      await log.add("error", { where: "reading", problem: error.key || error.message });
       say(explain(error), true);
       button.disabled = false;
     }
   });
 
-  $("posting").addEventListener("submit", async (event) => {
-    event.preventDefault();
+  /** Keep what the form says, in the given state; the page as read goes with a new one. */
+  async function save(state) {
+    const data = editor.values(current ? current.data : page.read);
+    if (current) {
+      current = await store.update(current.id, { data, state, problem: null });
+    }
+    if (!current) {
+      current = await store.add({ url: page.url, html: page.html, source: page.source, read: page.read, data, state });
+    }
+    await log.add(state === "waiting" ? "to send" : "kept", { id: current.id, host: hostOf(current.url) });
+    await showCount();
+    return current;
+  }
+
+  $("keep").addEventListener("click", async () => {
+    if (!editor.form.reportValidity()) {
+      return;
+    }
+    const record = await save("kept");
+    $("summary").textContent = describe(record.data, t("untitled"));
+    show("result");
+    say(t("kept"));
+  });
+
+  $("send").addEventListener("click", async () => {
+    if (!editor.form.reportValidity()) {
+      return;
+    }
     const button = $("send");
     button.disabled = true;
     try {
-      await send(corrections(read, edited($("posting"))));
+      // Asked for here, from the click, while the browser still counts it as one.
+      if (connected && !settings.offline) {
+        const pattern = originPattern(settings.instance);
+        if (!(await hasHostPermission(pattern))) {
+          say(t("allowing"));
+          await requestHostPermission(pattern);
+        }
+      }
+      const record = await save("waiting");
+      say(t("sending"));
+      const result = await deliverWaiting([record.id]);
+      current = await store.get(record.id);
+      await showCount();
+      $("summary").textContent = describe(current.data, t("untitled"));
+      if (current.state === "sent") {
+        $("review").href = current.reviewUrl;
+        $("review").hidden = false;
+        show("result");
+        say(t("captured"));
+      } else if (current.state === "refused") {
+        // Postulo said no to this one: the form stays, to fix it and send again.
+        say(explain(current.problem), true);
+        button.disabled = false;
+      } else {
+        show("result");
+        say(...afterSending(result));
+      }
     } catch (error) {
       say(explain(error), true);
       button.disabled = false;

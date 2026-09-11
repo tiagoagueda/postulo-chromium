@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Envieu l'oferta de feina que esteu mirant al vostre propi Postulo, perquè la reviseu. No va enlloc més."
+    "message": "Captureu l'oferta de feina que esteu mirant, deseu-la al vostre navegador i envieu-la al vostre propi Postulo perquè la reviseu quan ho digueu. No va enlloc més."
   },
   "actionTitle": {
     "message": "Captura aquesta oferta al Postulo"
   },
   "settings": {
     "message": "Configuració"
-  },
-  "unconfigured": {
-    "message": "Digueu a l'extensió on és el vostre Postulo i quin testimoni ha de fer servir."
   },
   "setUp": {
     "message": "Configura-la"
@@ -24,7 +21,7 @@
     "message": "Captura aquesta oferta"
   },
   "captureHint": {
-    "message": "La pàgina que esteu mirant s'envia al vostre Postulo i enlloc més."
+    "message": "La pàgina es llegeix aquí, al vostre navegador. No s'envia res fins que ho digueu."
   },
   "review": {
     "message": "Revisa-la al Postulo"
@@ -88,7 +85,7 @@
     "message": "Prova"
   },
   "shortcutHint": {
-    "message": "En prémer el botó, o $SHORTCUT$, la pàgina que esteu mirant s'envia al vostre Postulo perquè la reviseu. No es llegeix cap pàgina fins que ho demaneu, i no s'envia res enlloc més.",
+    "message": "En prémer el botó, o $SHORTCUT$, es llegeix la pàgina que esteu mirant, aquí al navegador. No es llegeix cap pàgina fins que ho demaneu, i no s'envia res enlloc més que al vostre propi Postulo, quan ho digueu.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "No s'ha pogut llegir la pàgina. Algunes pàgines bloquegen les extensions."
   },
-  "previewing": {
-    "message": "Preguntant a Postulo què hi llegeix…"
-  },
   "reviewHint": {
-    "message": "Això és el que Postulo ha llegit de la pàgina. Corregiu el que estigui malament abans d'enviar-ho."
+    "message": "Això és el que s'ha llegit de la pàgina. Corregiu el que estigui malament; res no surt d'aquest navegador fins que ho envieu."
   },
   "sendForReview": {
     "message": "Envia a revisió"
+  },
+  "notConnected": {
+    "message": "Encara sense connexió amb cap Postulo: el que captureu es desa en aquest navegador."
+  },
+  "keep": {
+    "message": "Desa en aquest navegador"
+  },
+  "kept": {
+    "message": "Desada en aquest navegador. Envieu-la al Postulo quan estigueu a punt."
+  },
+  "alreadyKept": {
+    "message": "Ja havíeu desat aquesta pàgina i no l'heu enviada: aquesta és la vostra versió."
+  },
+  "nothingRead": {
+    "message": "No s'ha pogut llegir res d'aquesta pàgina. Ompliu el que sapigueu; res no surt d'aquest navegador fins que ho envieu."
+  },
+  "waiting": {
+    "message": "Ara mateix no es pot arribar al Postulo. Es desa en aquest navegador i s'enviarà tan bon punt el Postulo respongui."
+  },
+  "waitingOffline": {
+    "message": "L'interruptor de proves està activat, així que espera en aquest navegador. S'enviarà quan es desactivi l'interruptor."
+  },
+  "waitingAccount": {
+    "message": "Es desa en aquest navegador i s'enviarà quan això s'hagi resolt."
+  },
+  "sendNeedsSetup": {
+    "message": "Desada en aquest navegador; s'enviarà quan hàgiu configurat el vostre Postulo."
+  },
+  "capturesTitle": {
+    "message": "Captures en aquest navegador"
+  },
+  "capturesIntro": {
+    "message": "Ofertes que heu capturat, desades aquí fins que arribin al vostre Postulo. El que envieu surt tan bon punt es pot arribar al Postulo."
+  },
+  "nothingKept": {
+    "message": "No hi ha res desat en aquest navegador."
+  },
+  "sendAll": {
+    "message": "Envia tot el pendent"
+  },
+  "clearSent": {
+    "message": "Treu les enviades"
+  },
+  "stateKept": {
+    "message": "Sense enviar"
+  },
+  "stateWaiting": {
+    "message": "Esperant el Postulo"
+  },
+  "stateSent": {
+    "message": "Enviada"
+  },
+  "stateRefused": {
+    "message": "Rebutjada"
+  },
+  "tryNow": {
+    "message": "Prova-ho ara"
+  },
+  "holdBack": {
+    "message": "Deixa-la aquí"
+  },
+  "deleteConfirm": {
+    "message": "Voleu esborrar aquesta captura? No ha arribat al Postulo, així que només existeix aquí."
+  },
+  "troubleshooting": {
+    "message": "Proves i resolució de problemes"
+  },
+  "offlineLabel": {
+    "message": "Fes com si no es pogués arribar al Postulo"
+  },
+  "offlineHint": {
+    "message": "Per a proves. Mentre estigui activat, no s'envia res: les captures esperen en aquest navegador exactament com si el Postulo estigués caigut, i surten quan es desactiva."
+  },
+  "offlineOn": {
+    "message": "L'interruptor de proves està activat: no s'envia res al Postulo."
+  },
+  "offlineOff": {
+    "message": "L'interruptor de proves està desactivat: el que esperava s'envia ara al Postulo."
+  },
+  "downloadLog": {
+    "message": "Baixa el registre"
+  },
+  "clearLog": {
+    "message": "Buida el registre"
+  },
+  "logCleared": {
+    "message": "El registre és buit."
+  },
+  "logHint": {
+    "message": "El que ha fet l'extensió, per esbrinar per què alguna cosa no ha funcionat. No conté cap testimoni ni res de les pàgines."
+  },
+  "cancel": {
+    "message": "Cancel·la"
+  },
+  "delete": {
+    "message": "Esborra"
+  },
+  "edit": {
+    "message": "Edita"
   },
   "fieldTitle": {
     "message": "Càrrec"

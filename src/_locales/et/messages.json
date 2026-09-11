@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Saatke vaadatav töökuulutus ülevaatamiseks oma Postulosse. Mujale ei lähe midagi."
+    "message": "Püüdke töökuulutus, mida vaatate, hoidke seda oma brauseris ja saatke see ülevaatamiseks oma Postulosse, kui te seda ütlete. Mujale ei lähe midagi."
   },
   "actionTitle": {
     "message": "Püüa see kuulutus Postulosse"
   },
   "settings": {
     "message": "Seaded"
-  },
-  "unconfigured": {
-    "message": "Öelge laiendusele, kus teie Postulo asub ja millist tõendit kasutada."
   },
   "setUp": {
     "message": "Seadista"
@@ -24,7 +21,7 @@
     "message": "Püüa see kuulutus"
   },
   "captureHint": {
-    "message": "Leht, mida vaatate, saadetakse teie Postulosse ja mitte kuhugi mujale."
+    "message": "Lehte loetakse siin, teie brauseris. Midagi ei saadeta enne, kui te seda ütlete."
   },
   "review": {
     "message": "Vaata üle Postulos"
@@ -88,7 +85,7 @@
     "message": "Testi"
   },
   "shortcutHint": {
-    "message": "Nupu või $SHORTCUT$ vajutamine saadab vaadatava lehe ülevaatamiseks teie Postulosse. Ühtegi lehte ei loeta enne, kui te seda palute, ja mujale ei saadeta midagi.",
+    "message": "Nupu või $SHORTCUT$ vajutamine loeb vaadatava lehe siin brauseris. Ühtegi lehte ei loeta enne, kui te seda palute, ja midagi ei saadeta kuhugi mujale kui teie enda Postulosse ning ainult siis, kui te seda ütlete.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Lehte ei õnnestunud lugeda. Mõned lehed blokeerivad laiendusi."
   },
-  "previewing": {
-    "message": "Küsime Postulolt, mida ta siit loeb…"
-  },
   "reviewHint": {
-    "message": "Selle luges Postulo lehelt. Parandage vead enne saatmist."
+    "message": "See on lehelt loetu. Parandage kõik, mis on valesti; midagi ei lahku sellest brauserist enne, kui te selle saadate."
   },
   "sendForReview": {
     "message": "Saada ülevaatamiseks"
+  },
+  "notConnected": {
+    "message": "Ühendust Postuloga veel pole: see, mida püüate, jääb sellesse brauserisse."
+  },
+  "keep": {
+    "message": "Hoia selles brauseris"
+  },
+  "kept": {
+    "message": "Hoitakse selles brauseris. Saatke see Postulosse, kui olete valmis."
+  },
+  "alreadyKept": {
+    "message": "Hoidsite selle lehe juba alles ega ole seda saatnud: see on teie versioon."
+  },
+  "nothingRead": {
+    "message": "Sellelt lehelt ei õnnestunud midagi lugeda. Täitke, mida teate; midagi ei lahku sellest brauserist enne, kui te selle saadate."
+  },
+  "waiting": {
+    "message": "Postulo pole praegu kättesaadav. Kuulutust hoitakse selles brauseris ja see saadetakse kohe, kui Postulo vastab."
+  },
+  "waitingOffline": {
+    "message": "Testlüliti on sees, seega ootab kuulutus selles brauseris. See saadetakse, kui lüliti on väljas."
+  },
+  "waitingAccount": {
+    "message": "Kuulutust hoitakse selles brauseris ja see saadetakse, kui asi on korda tehtud."
+  },
+  "sendNeedsSetup": {
+    "message": "Hoitakse selles brauseris ja saadetakse, kui teie Postulo on seadistatud."
+  },
+  "capturesTitle": {
+    "message": "Püüdmised selles brauseris"
+  },
+  "capturesIntro": {
+    "message": "Teie püütud kuulutused, mida hoitakse siin, kuni need jõuavad teie Postulosse. See, mille saadate, läheb teele kohe, kui Postulo on kättesaadav."
+  },
+  "nothingKept": {
+    "message": "Selles brauseris ei hoita midagi."
+  },
+  "sendAll": {
+    "message": "Saada kõik saatmata"
+  },
+  "clearSent": {
+    "message": "Eemalda saadetud"
+  },
+  "stateKept": {
+    "message": "Saatmata"
+  },
+  "stateWaiting": {
+    "message": "Ootab Postulot"
+  },
+  "stateSent": {
+    "message": "Saadetud"
+  },
+  "stateRefused": {
+    "message": "Tagasi lükatud"
+  },
+  "tryNow": {
+    "message": "Proovi kohe"
+  },
+  "holdBack": {
+    "message": "Hoia hoopis siin"
+  },
+  "deleteConfirm": {
+    "message": "Kas kustutada see püüdmine? See pole Postulosse jõudnud, seega on see olemas ainult siin."
+  },
+  "troubleshooting": {
+    "message": "Testimine ja tõrkeotsing"
+  },
+  "offlineLabel": {
+    "message": "Käitu nii, nagu Postulo poleks kättesaadav"
+  },
+  "offlineHint": {
+    "message": "Testimiseks. Kui see on sees, ei saadeta midagi: püüdmised ootavad selles brauseris täpselt nii, nagu siis, kui Postulo ei tööta, ja lähevad teele, kui see on väljas."
+  },
+  "offlineOn": {
+    "message": "Testlüliti on sees: Postulosse ei saadeta midagi."
+  },
+  "offlineOff": {
+    "message": "Testlüliti on väljas: ootel olev läheb nüüd Postulosse."
+  },
+  "downloadLog": {
+    "message": "Laadi logi alla"
+  },
+  "clearLog": {
+    "message": "Tühjenda logi"
+  },
+  "logCleared": {
+    "message": "Logi on tühi."
+  },
+  "logHint": {
+    "message": "Mida laiendus tegi, et selgitada välja, miks miski ei töötanud. See ei sisalda ühtegi tõendit ega midagi lehtedelt."
+  },
+  "cancel": {
+    "message": "Loobu"
+  },
+  "delete": {
+    "message": "Kustuta"
+  },
+  "edit": {
+    "message": "Muuda"
   },
   "fieldTitle": {
     "message": "Ametinimetus"

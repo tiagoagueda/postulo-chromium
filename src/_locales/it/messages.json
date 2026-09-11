@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Invia l'annuncio di lavoro che stai guardando al tuo Postulo, per rivederlo. Niente va da nessun'altra parte."
+    "message": "Acquisisci l'annuncio di lavoro che stai guardando, conservalo nel tuo browser e invialo al tuo Postulo per la revisione quando lo decidi tu. Niente va da nessun'altra parte."
   },
   "actionTitle": {
     "message": "Acquisisci questo annuncio in Postulo"
   },
   "settings": {
     "message": "Impostazioni"
-  },
-  "unconfigured": {
-    "message": "Di' all'estensione dov'è il tuo Postulo e quale token usare."
   },
   "setUp": {
     "message": "Configurala"
@@ -24,7 +21,7 @@
     "message": "Acquisisci questo annuncio"
   },
   "captureHint": {
-    "message": "La pagina che stai guardando viene inviata al tuo Postulo e da nessun'altra parte."
+    "message": "La pagina viene letta qui, nel tuo browser. Non viene inviato nulla finché non lo dici tu."
   },
   "review": {
     "message": "Rivedi in Postulo"
@@ -88,7 +85,7 @@
     "message": "Prova"
   },
   "shortcutHint": {
-    "message": "Premendo il pulsante, o $SHORTCUT$, la pagina che stai guardando viene inviata al tuo Postulo per essere rivista. Nessuna pagina viene letta finché non lo chiedi, e niente viene inviato altrove.",
+    "message": "Premendo il pulsante, o $SHORTCUT$, la pagina che stai guardando viene letta qui, nel browser. Nessuna pagina viene letta finché non lo chiedi, e niente viene inviato altrove se non al tuo Postulo, quando lo dici tu.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Non è stato possibile leggere la pagina. Alcune pagine bloccano le estensioni."
   },
-  "previewing": {
-    "message": "Chiedo a Postulo cosa legge qui…"
-  },
   "reviewHint": {
-    "message": "Ecco cosa ha letto Postulo dalla pagina. Correggi ciò che è sbagliato prima di inviarlo."
+    "message": "Ecco cosa è stato letto dalla pagina. Correggi ciò che è sbagliato; niente lascia questo browser finché non lo invii."
   },
   "sendForReview": {
     "message": "Invia per la revisione"
+  },
+  "notConnected": {
+    "message": "Nessun Postulo ancora collegato: ciò che acquisisci resta in questo browser."
+  },
+  "keep": {
+    "message": "Conserva in questo browser"
+  },
+  "kept": {
+    "message": "Conservato in questo browser. Invialo a Postulo quando vuoi."
+  },
+  "alreadyKept": {
+    "message": "Hai già conservato questa pagina e non l'hai inviata: questa è la tua versione."
+  },
+  "nothingRead": {
+    "message": "Non è stato possibile leggere nulla da questa pagina. Compila ciò che sai; niente lascia questo browser finché non lo invii."
+  },
+  "waiting": {
+    "message": "Al momento Postulo non è raggiungibile. Resta in questo browser e verrà inviato non appena Postulo risponde."
+  },
+  "waitingOffline": {
+    "message": "L'interruttore di test è attivo, quindi resta in attesa in questo browser. Partirà quando l'interruttore sarà disattivato."
+  },
+  "waitingAccount": {
+    "message": "Resta in questo browser e verrà inviato non appena il problema sarà risolto."
+  },
+  "sendNeedsSetup": {
+    "message": "Conservato in questo browser, verrà inviato non appena il tuo Postulo sarà configurato."
+  },
+  "capturesTitle": {
+    "message": "Acquisizioni in questo browser"
+  },
+  "capturesIntro": {
+    "message": "Gli annunci che hai acquisito, conservati qui finché non arrivano al tuo Postulo. Ciò che invii parte non appena Postulo è raggiungibile."
+  },
+  "nothingKept": {
+    "message": "In questo browser non è conservato nulla."
+  },
+  "sendAll": {
+    "message": "Invia tutte le non inviate"
+  },
+  "clearSent": {
+    "message": "Rimuovi quelle inviate"
+  },
+  "stateKept": {
+    "message": "Non inviata"
+  },
+  "stateWaiting": {
+    "message": "In attesa di Postulo"
+  },
+  "stateSent": {
+    "message": "Inviata"
+  },
+  "stateRefused": {
+    "message": "Rifiutata"
+  },
+  "tryNow": {
+    "message": "Riprova ora"
+  },
+  "holdBack": {
+    "message": "Tienila qui"
+  },
+  "deleteConfirm": {
+    "message": "Eliminare questa acquisizione? Non è arrivata a Postulo, quindi esiste solo qui."
+  },
+  "troubleshooting": {
+    "message": "Test e risoluzione dei problemi"
+  },
+  "offlineLabel": {
+    "message": "Fai come se Postulo non fosse raggiungibile"
+  },
+  "offlineHint": {
+    "message": "Per i test. Finché è attivo, non viene inviato nulla: le acquisizioni restano in questo browser esattamente come farebbero con Postulo fuori servizio, e partono quando lo disattivi."
+  },
+  "offlineOn": {
+    "message": "L'interruttore di test è attivo: a Postulo non viene inviato nulla."
+  },
+  "offlineOff": {
+    "message": "L'interruttore di test è disattivato: ciò che era in attesa parte ora verso Postulo."
+  },
+  "downloadLog": {
+    "message": "Scarica il registro"
+  },
+  "clearLog": {
+    "message": "Svuota il registro"
+  },
+  "logCleared": {
+    "message": "Il registro è vuoto."
+  },
+  "logHint": {
+    "message": "Ciò che ha fatto l'estensione, per capire perché qualcosa non ha funzionato. Non contiene alcun token né nulla delle pagine."
+  },
+  "cancel": {
+    "message": "Annulla"
+  },
+  "delete": {
+    "message": "Elimina"
+  },
+  "edit": {
+    "message": "Modifica"
   },
   "fieldTitle": {
     "message": "Titolo della posizione"

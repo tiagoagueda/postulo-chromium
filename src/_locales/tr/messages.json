@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Baktığınız iş ilanını incelemek üzere kendi Postulo'nuza gönderin. Başka hiçbir yere bir şey gitmez."
+    "message": "Baktığınız iş ilanını yakalayın, tarayıcınızda saklayın ve siz söylediğinizde incelemek üzere kendi Postulo'nuza gönderin. Başka hiçbir yere bir şey gitmez."
   },
   "actionTitle": {
     "message": "Bu ilanı Postulo'ya yakala"
   },
   "settings": {
     "message": "Ayarlar"
-  },
-  "unconfigured": {
-    "message": "Uzantıya Postulo'nuzun nerede olduğunu ve hangi jetonu kullanacağını söyleyin."
   },
   "setUp": {
     "message": "Kur"
@@ -24,7 +21,7 @@
     "message": "Bu ilanı yakala"
   },
   "captureHint": {
-    "message": "Baktığınız sayfa Postulo'nuza gönderilir, başka hiçbir yere gitmez."
+    "message": "Sayfa burada, tarayıcınızda okunur. Siz söyleyene kadar hiçbir şey gönderilmez."
   },
   "review": {
     "message": "Postulo'da incele"
@@ -88,7 +85,7 @@
     "message": "Sına"
   },
   "shortcutHint": {
-    "message": "Düğmeye ya da $SHORTCUT$ tuşlarına basmak, baktığınız sayfayı incelemeniz için Postulo'nuza gönderir. Siz istemeden hiçbir sayfa okunmaz ve başka hiçbir yere bir şey gönderilmez.",
+    "message": "Düğmeye ya da $SHORTCUT$ tuşlarına basmak, baktığınız sayfayı burada, tarayıcıda okur. Siz istemeden hiçbir sayfa okunmaz; bir şey yalnızca siz söylediğinizde ve yalnızca kendi Postulo'nuza gönderilir.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Sayfa okunamadı. Bazı sayfalar uzantıları engeller."
   },
-  "previewing": {
-    "message": "Postulo'ya burada ne okuduğu soruluyor…"
-  },
   "reviewHint": {
-    "message": "Postulo'nun sayfadan okudukları bunlar. Göndermeden önce yanlış olanları düzeltin."
+    "message": "Sayfadan okunanlar bunlar. Yanlış olanları düzeltin; siz gönderene kadar hiçbir şey bu tarayıcıdan çıkmaz."
   },
   "sendForReview": {
     "message": "İncelemeye gönder"
+  },
+  "notConnected": {
+    "message": "Henüz bir Postulo'ya bağlı değilsiniz: yakaladıklarınız bu tarayıcıda saklanır."
+  },
+  "keep": {
+    "message": "Bu tarayıcıda sakla"
+  },
+  "kept": {
+    "message": "Bu tarayıcıda saklandı. Hazır olduğunuzda Postulo'ya gönderin."
+  },
+  "alreadyKept": {
+    "message": "Bu sayfayı zaten sakladınız ve henüz göndermediniz: bu sizin sürümünüz."
+  },
+  "nothingRead": {
+    "message": "Bu sayfadan hiçbir şey okunamadı. Bildiklerinizi doldurun; siz gönderene kadar hiçbir şey bu tarayıcıdan çıkmaz."
+  },
+  "waiting": {
+    "message": "Postulo'ya şu anda erişilemiyor. Bu tarayıcıda saklanır ve Postulo yanıt verir vermez gönderilir."
+  },
+  "waitingOffline": {
+    "message": "Test anahtarı açık, bu yüzden bu tarayıcıda bekliyor. Anahtar kapatılınca gönderilir."
+  },
+  "waitingAccount": {
+    "message": "Bu tarayıcıda saklanır ve sorun giderilince gönderilir."
+  },
+  "sendNeedsSetup": {
+    "message": "Bu tarayıcıda saklandı; Postulo'nuz kurulunca gönderilecek."
+  },
+  "capturesTitle": {
+    "message": "Bu tarayıcıdaki yakalamalar"
+  },
+  "capturesIntro": {
+    "message": "Yakaladığınız ilanlar, Postulo'nuza ulaşana kadar burada saklanır. Gönderdikleriniz, Postulo'ya erişilebildiği anda gider."
+  },
+  "nothingKept": {
+    "message": "Bu tarayıcıda saklanan bir şey yok."
+  },
+  "sendAll": {
+    "message": "Gönderilmemiş her şeyi gönder"
+  },
+  "clearSent": {
+    "message": "Gönderilenleri temizle"
+  },
+  "stateKept": {
+    "message": "Gönderilmedi"
+  },
+  "stateWaiting": {
+    "message": "Postulo bekleniyor"
+  },
+  "stateSent": {
+    "message": "Gönderildi"
+  },
+  "stateRefused": {
+    "message": "Reddedildi"
+  },
+  "tryNow": {
+    "message": "Şimdi dene"
+  },
+  "holdBack": {
+    "message": "Burada tut"
+  },
+  "deleteConfirm": {
+    "message": "Bu yakalama silinsin mi? Postulo'ya ulaşmadı, bu yüzden yalnızca burada var."
+  },
+  "troubleshooting": {
+    "message": "Test ve sorun giderme"
+  },
+  "offlineLabel": {
+    "message": "Postulo'ya erişilemiyormuş gibi davran"
+  },
+  "offlineHint": {
+    "message": "Test için. Bu açıkken hiçbir şey gönderilmez: yakalamalar tıpkı Postulo çöktüğünde olacağı gibi bu tarayıcıda bekler ve bu kapatılınca gider."
+  },
+  "offlineOn": {
+    "message": "Test anahtarı açık: Postulo'ya hiçbir şey gönderilmiyor."
+  },
+  "offlineOff": {
+    "message": "Test anahtarı kapalı: bekleyenler şimdi Postulo'ya gidiyor."
+  },
+  "downloadLog": {
+    "message": "Günlüğü indir"
+  },
+  "clearLog": {
+    "message": "Günlüğü temizle"
+  },
+  "logCleared": {
+    "message": "Günlük boş."
+  },
+  "logHint": {
+    "message": "Bir şeyin neden çalışmadığını bulmak için uzantının yaptıkları. Hiçbir jeton ve sayfalardan hiçbir şey içermez."
+  },
+  "cancel": {
+    "message": "Vazgeç"
+  },
+  "delete": {
+    "message": "Sil"
+  },
+  "edit": {
+    "message": "Düzenle"
   },
   "fieldTitle": {
     "message": "İş unvanı"

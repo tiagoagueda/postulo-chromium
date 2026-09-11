@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Envie o anúncio de emprego que está a ver para o seu próprio Postulo, para revisão. Nada segue para mais lado nenhum."
+    "message": "Capture o anúncio de emprego que está a ver, guarde-o no seu navegador e envie-o para o seu próprio Postulo para revisão quando o indicar. Nada segue para mais lado nenhum."
   },
   "actionTitle": {
     "message": "Capturar este anúncio no Postulo"
   },
   "settings": {
     "message": "Definições"
-  },
-  "unconfigured": {
-    "message": "Indique à extensão onde está o seu Postulo e que token deve usar."
   },
   "setUp": {
     "message": "Configurar"
@@ -24,7 +21,7 @@
     "message": "Capturar este anúncio"
   },
   "captureHint": {
-    "message": "A página que está a ver é enviada para o seu Postulo e para mais lado nenhum."
+    "message": "A página é lida aqui, no seu navegador. Nada é enviado até que o indique."
   },
   "review": {
     "message": "Rever no Postulo"
@@ -88,7 +85,7 @@
     "message": "Testar"
   },
   "shortcutHint": {
-    "message": "Ao carregar no botão, ou em $SHORTCUT$, a página que está a ver é enviada para o seu Postulo para revisão. Nenhuma página é lida até o pedir, e nada é enviado para mais lado nenhum.",
+    "message": "Ao carregar no botão, ou em $SHORTCUT$, a página que está a ver é lida aqui, no navegador. Nenhuma página é lida até o pedir, e nada é enviado para lado nenhum além do seu próprio Postulo, quando o indicar.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Não foi possível ler a página. Algumas páginas bloqueiam extensões."
   },
-  "previewing": {
-    "message": "A perguntar ao Postulo o que lê aqui…"
-  },
   "reviewHint": {
-    "message": "Isto é o que o Postulo leu da página. Corrija o que estiver errado antes de enviar."
+    "message": "Isto é o que foi lido da página. Corrija o que estiver errado; nada sai deste navegador até o enviar."
   },
   "sendForReview": {
     "message": "Enviar para revisão"
+  },
+  "notConnected": {
+    "message": "Ainda não está ligado a um Postulo: o que capturar fica guardado neste navegador."
+  },
+  "keep": {
+    "message": "Manter neste navegador"
+  },
+  "kept": {
+    "message": "Mantido neste navegador. Envie-o para o Postulo quando estiver pronto."
+  },
+  "alreadyKept": {
+    "message": "Já tinha mantido esta página sem a enviar: esta é a sua versão."
+  },
+  "nothingRead": {
+    "message": "Não foi possível ler nada desta página. Preencha o que souber; nada sai deste navegador até o enviar."
+  },
+  "waiting": {
+    "message": "Neste momento não é possível chegar ao Postulo. Fica guardado neste navegador e é enviado assim que o Postulo responder."
+  },
+  "waitingOffline": {
+    "message": "O interruptor de teste está ligado, por isso fica à espera neste navegador. Segue assim que o interruptor for desligado."
+  },
+  "waitingAccount": {
+    "message": "Fica guardado neste navegador e é enviado assim que isso for resolvido."
+  },
+  "sendNeedsSetup": {
+    "message": "Mantido neste navegador, para ser enviado assim que o seu Postulo estiver configurado."
+  },
+  "capturesTitle": {
+    "message": "Capturas neste navegador"
+  },
+  "capturesIntro": {
+    "message": "Anúncios que capturou, guardados aqui até chegarem ao seu Postulo. O que enviar segue assim que for possível chegar ao Postulo."
+  },
+  "nothingKept": {
+    "message": "Não há nada guardado neste navegador."
+  },
+  "sendAll": {
+    "message": "Enviar tudo o que falta"
+  },
+  "clearSent": {
+    "message": "Limpar os enviados"
+  },
+  "stateKept": {
+    "message": "Não enviado"
+  },
+  "stateWaiting": {
+    "message": "À espera do Postulo"
+  },
+  "stateSent": {
+    "message": "Enviado"
+  },
+  "stateRefused": {
+    "message": "Recusado"
+  },
+  "tryNow": {
+    "message": "Tentar agora"
+  },
+  "holdBack": {
+    "message": "Manter aqui"
+  },
+  "deleteConfirm": {
+    "message": "Eliminar esta captura? Não chegou ao Postulo, por isso só existe aqui."
+  },
+  "troubleshooting": {
+    "message": "Testes e resolução de problemas"
+  },
+  "offlineLabel": {
+    "message": "Agir como se o Postulo estivesse inacessível"
+  },
+  "offlineHint": {
+    "message": "Para testes. Enquanto isto estiver ligado, nada é enviado: as capturas esperam neste navegador exatamente como esperariam com o Postulo em baixo, e seguem quando for desligado."
+  },
+  "offlineOn": {
+    "message": "O interruptor de teste está ligado: nada é enviado para o Postulo."
+  },
+  "offlineOff": {
+    "message": "O interruptor de teste está desligado: o que está à espera segue agora para o Postulo."
+  },
+  "downloadLog": {
+    "message": "Transferir o registo"
+  },
+  "clearLog": {
+    "message": "Limpar o registo"
+  },
+  "logCleared": {
+    "message": "O registo está vazio."
+  },
+  "logHint": {
+    "message": "O que a extensão fez, para descobrir porque é que algo não funcionou. Não contém nenhum token nem nada das páginas."
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "delete": {
+    "message": "Eliminar"
+  },
+  "edit": {
+    "message": "Editar"
   },
   "fieldTitle": {
     "message": "Título da função"

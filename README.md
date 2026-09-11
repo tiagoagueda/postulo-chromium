@@ -1,12 +1,15 @@
 # postulo-chromium
 
-**The Postulo browser extension: one button that sends the job posting you are looking
-at to your own [Postulo](https://source.tiagoagueda.com/postulo/postulo), for review.**
+**The Postulo browser extension: one button that captures the job posting you are
+looking at, keeps it in your browser, and sends it to your own
+[Postulo](https://source.tiagoagueda.com/postulo/postulo) for review when you say so.**
 
 Postulo can read a posting from its address, but a page only visible to a signed-in
-reader, or one behind bot protection, cannot be fetched by a server. The extension sends
-the page as your browser sees it. Postulo reads it with the same sources it uses for
-anything else and shows it to you for review; nothing is recorded until you say so.
+reader, or one behind bot protection, cannot be fetched by a server. The extension reads
+the page as your browser sees it, with the same two sources Postulo itself ships, so it
+needs no server to do it: with Postulo down, away, or not set up yet, a capture is kept in
+the browser, and goes once Postulo can be reached. Nothing is recorded in Postulo until you
+review it there.
 
 This repository holds the **source for both browsers** and builds Chromium's package. The
 Firefox package is built from the same source by
@@ -15,12 +18,14 @@ carries what Firefox and addons.mozilla.org need and nothing else.
 
 ## Privacy, in one paragraph
 
-The extension sends the page to **your** server and nowhere else. It reads a page only
-when you press the button (or `Alt+Shift+P`), through a script injected for that one
-call — it has no permission to run on any site, only `activeTab`. It asks for permission to
-reach your instance's address once, when you save it. There are no analytics, no
-third-party requests, no permanent host permissions and no copy of any page. The token is
-stored on this device only (`storage.local`), never synced through a browser account.
+The extension sends a capture to **your** server and nowhere else, and only when you
+press *Send*. It reads a page only when you press the button (or `Alt+Shift+P`), through a
+script injected for that one call — it has no permission to run on any site, only
+`activeTab`. It asks for permission to reach your instance's address once, when you save
+it. There are no analytics, no third-party requests and no permanent host permissions.
+What it keeps — the captures, a trimmed copy of each page until Postulo has it, and a log
+of what it did — stays in this browser (`storage.local`), as does the token, never synced
+through a browser account.
 
 ## Install
 
@@ -44,13 +49,40 @@ permanently once signed; see that repository).
 2. Click the extension's icon, then *Set it up*: paste your Postulo's address and the
    token. *Test* asks Postulo who the token is. *Save* asks the browser for permission to
    reach that address.
-3. On a job posting, click the icon and **Capture this posting**. The popup shows what
-   Postulo read from the page — title, company, location, arrangement, contract, salary,
-   closing date, description — and nothing is kept yet. Correct what it got wrong, then
-   **Send for review**: the capture waits in Postulo's review queue with your corrections,
-   and the popup links to its review screen. Only the fields you changed are sent as
-   corrections; the rest stays what the page said. A Postulo older than the preview
-   (before 0.3.0) gets the page straight away, as before.
+3. On a job posting, click the icon and **Capture this posting**. The page is read there
+   and then, in the browser, and the popup shows what was read — title, company, location,
+   arrangement, contract, salary, closing date, description. Correct what is wrong, then:
+   - **Send for review**: it goes to Postulo's review queue as you left it, and the popup
+     links to its review screen. If Postulo cannot be reached, it waits in the browser.
+   - **Keep in this browser**: it stays here, not sent, until you send it.
+
+Capturing does not need step 1 or 2: without a Postulo set up, captures are kept, and what
+you send goes once it is.
+
+## Without a server
+
+Everything the extension keeps is listed under **Captures in this browser** — the link at
+the bottom of the popup, where the number is how many have not reached Postulo (the
+toolbar button shows it too). Each is *Not sent*, *Waiting for Postulo*, *Sent* (with a
+link to its review screen) or *Refused* (with Postulo's reason); from there you edit one,
+send it, hold it back, or delete it.
+
+A capture you sent is sent as soon as Postulo answers: the popup tries at once, the list
+tries when it is opened, and the background tries every five minutes and when the browser
+starts. It sends only what you pressed *Send* on. A Postulo that is down, busy or failing
+is tried again later; a token it refuses keeps everything waiting until it is fixed; a
+capture it refuses on its own account (say, a field it will not take) is marked refused
+and the rest still go.
+
+What is sent is exactly what you reviewed, every field, with a trimmed copy of the page:
+scripts, styles and inline graphics dropped, which is most of a page's weight and none of
+its posting. Postulo reads that copy too, to note which of its sources did.
+
+**Testing.** *Settings → Testing and troubleshooting → Act as if Postulo cannot be
+reached* has the extension send nothing while it is on, exactly as if Postulo were down;
+turn it off and what is waiting goes. **Download the log** from the same place saves what
+the extension did — reads, keeps, send attempts and what Postulo answered — as a text file
+to attach to an issue. It holds no token and nothing from the pages.
 
 ## Languages
 
@@ -75,18 +107,25 @@ while the code asks for a key that `en` does not have.
 | Path | What |
 | --- | --- |
 | `src/manifest.json` | Manifest V3 for both browsers; the build strips what each one would complain about |
-| `src/popup.*` | The button and the result |
-| `src/options.*` | Address, token, *Test*, *Save* (which requests the host permission) |
+| `src/popup.*` | The button, the form showing what was read, *Send* and *Keep* |
+| `src/captures.*` | Captures in this browser: the list, to edit, send, hold back or delete |
+| `src/options.*` | Address, token, *Test*, *Save*; the testing switch and the log |
+| `src/background.js` | Opens the settings on first install; sends what is waiting, every five minutes and at start |
+| `src/lib/parse.js` | Reading a posting: Postulo's `schema.org` and `page-metadata` sources, carried over |
+| `src/lib/store.js` | The captures kept in the browser, and the page each was read from |
+| `src/lib/outbox.js` | Sending what is waiting, one delivery at a time |
+| `src/lib/log.js` | What the extension did, for the log download |
+| `src/lib/form.js` | The posting as a form, for the popup and the list alike |
+| `src/lib/local.js` | The store, the log and delivery over `storage.local`, as every page uses them |
 | `src/lib/api.js` | Talking to `/api/v1`: pure functions, tested with `node --test` |
-| `src/lib/browser.js` | `browser ?? chrome`, storage, permissions, reading the active tab |
+| `src/lib/browser.js` | `browser ?? chrome`, settings, permissions, reading the active tab |
 | `src/lib/i18n.js` | Fills the pages from `_locales` in the browser's language |
 | `src/_locales/` | One `messages.json` per language; `en` is the source |
-| `src/background.js` | Opens the settings on first install; nothing else |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
 | `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, made by `scripts/icons.py` |
 
 ```sh
-npm test               # the pure parts, and every language against en
+npm test               # the reader, the store and delivery, the API, and every language against en
 npm run lint:firefox   # web-ext lint on the Firefox build
 npm run package        # zips under dist/artifacts/
 ```

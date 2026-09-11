@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Pošaljite oglas za posao koji gledate u svoj Postulo, na pregled. Ništa ne ide nigdje drugo."
+    "message": "Uhvatite oglas za posao koji gledate, čuvajte ga u svom pregledniku i pošaljite ga u svoj Postulo na pregled kad vi kažete. Ništa ne ide nigdje drugo."
   },
   "actionTitle": {
     "message": "Uhvati ovaj oglas u Postulo"
   },
   "settings": {
     "message": "Postavke"
-  },
-  "unconfigured": {
-    "message": "Recite proširenju gdje je vaš Postulo i koji token da koristi."
   },
   "setUp": {
     "message": "Postavi"
@@ -24,7 +21,7 @@
     "message": "Uhvati ovaj oglas"
   },
   "captureHint": {
-    "message": "Stranica koju gledate šalje se u vaš Postulo i nigdje drugo."
+    "message": "Stranica se čita ovdje, u vašem pregledniku. Ništa se ne šalje dok to ne kažete."
   },
   "review": {
     "message": "Pregledaj u Postulu"
@@ -88,7 +85,7 @@
     "message": "Testiraj"
   },
   "shortcutHint": {
-    "message": "Pritiskom na dugme ili na $SHORTCUT$ stranica koju gledate šalje se u vaš Postulo na pregled. Nijedna stranica se ne čita dok to ne zatražite, i ništa se ne šalje nigdje drugo.",
+    "message": "Pritiskom na dugme ili na $SHORTCUT$ čita se stranica koju gledate, ovdje u pregledniku. Nijedna stranica se ne čita dok to ne zatražite, i ništa se ne šalje nigdje osim u vaš vlastiti Postulo, kad vi kažete.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Stranica se nije mogla pročitati. Neke stranice blokiraju proširenja."
   },
-  "previewing": {
-    "message": "Pitamo Postulo šta ovdje čita…"
-  },
   "reviewHint": {
-    "message": "Ovo je Postulo pročitao sa stranice. Ispravite sve što je pogrešno prije slanja."
+    "message": "Ovo je pročitano sa stranice. Ispravite sve što je pogrešno; ništa ne napušta ovaj preglednik dok to ne pošaljete."
   },
   "sendForReview": {
     "message": "Pošalji na pregled"
+  },
+  "notConnected": {
+    "message": "Još niste povezani ni s jednim Postulom: ono što uhvatite čuva se u ovom pregledniku."
+  },
+  "keep": {
+    "message": "Zadrži u ovom pregledniku"
+  },
+  "kept": {
+    "message": "Čuva se u ovom pregledniku. Pošaljite ga u Postulo kad budete spremni."
+  },
+  "alreadyKept": {
+    "message": "Ovu stranicu ste već zadržali i niste je poslali: ovo je vaša verzija."
+  },
+  "nothingRead": {
+    "message": "Sa ove stranice ništa se nije moglo pročitati. Popunite ono što znate; ništa ne napušta ovaj preglednik dok to ne pošaljete."
+  },
+  "waiting": {
+    "message": "Postulo trenutno nije dostupan. Oglas se čuva u ovom pregledniku i šalje čim Postulo odgovori."
+  },
+  "waitingOffline": {
+    "message": "Prekidač za testiranje je uključen, pa oglas čeka u ovom pregledniku. Šalje se čim se prekidač isključi."
+  },
+  "waitingAccount": {
+    "message": "Čuva se u ovom pregledniku i šalje čim se to popravi."
+  },
+  "sendNeedsSetup": {
+    "message": "Čuva se u ovom pregledniku i šalje čim postavite svoj Postulo."
+  },
+  "capturesTitle": {
+    "message": "Hvatanja u ovom pregledniku"
+  },
+  "capturesIntro": {
+    "message": "Oglasi koje ste uhvatili, sačuvani ovdje dok ne stignu u vaš Postulo. Ono što pošaljete ide čim Postulo bude dostupan."
+  },
+  "nothingKept": {
+    "message": "U ovom pregledniku ništa se ne čuva."
+  },
+  "sendAll": {
+    "message": "Pošalji sve neposlano"
+  },
+  "clearSent": {
+    "message": "Ukloni poslano"
+  },
+  "stateKept": {
+    "message": "Nije poslano"
+  },
+  "stateWaiting": {
+    "message": "Čeka Postulo"
+  },
+  "stateSent": {
+    "message": "Poslano"
+  },
+  "stateRefused": {
+    "message": "Odbijeno"
+  },
+  "tryNow": {
+    "message": "Pokušaj sada"
+  },
+  "holdBack": {
+    "message": "Ipak zadrži ovdje"
+  },
+  "deleteConfirm": {
+    "message": "Obrisati ovo hvatanje? Postulo ga još nije primio, pa postoji samo ovdje."
+  },
+  "troubleshooting": {
+    "message": "Testiranje i rješavanje problema"
+  },
+  "offlineLabel": {
+    "message": "Ponašaj se kao da Postulo nije dostupan"
+  },
+  "offlineHint": {
+    "message": "Za testiranje. Dok je ovo uključeno, ništa se ne šalje: hvatanja čekaju u ovom pregledniku tačno kao da Postulo ne radi, i šalju se čim se isključi."
+  },
+  "offlineOn": {
+    "message": "Prekidač za testiranje je uključen: ništa se ne šalje u Postulo."
+  },
+  "offlineOff": {
+    "message": "Prekidač za testiranje je isključen: ono što čeka sada ide u Postulo."
+  },
+  "downloadLog": {
+    "message": "Preuzmi zapisnik"
+  },
+  "clearLog": {
+    "message": "Očisti zapisnik"
+  },
+  "logCleared": {
+    "message": "Zapisnik je prazan."
+  },
+  "logHint": {
+    "message": "Šta je proširenje radilo, da se otkrije zašto nešto nije radilo. Ne sadrži nijedan token ni ništa sa stranica."
+  },
+  "cancel": {
+    "message": "Odustani"
+  },
+  "delete": {
+    "message": "Obriši"
+  },
+  "edit": {
+    "message": "Uredi"
   },
   "fieldTitle": {
     "message": "Naziv radnog mjesta"

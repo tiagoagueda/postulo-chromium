@@ -5,12 +5,12 @@ import { test } from "node:test";
 import {
   Refusal,
   capture,
-  corrections,
   describe,
+  kindOfFailure,
   endpoint,
   normaliseInstance,
   originPattern,
-  preview,
+  problemOf,
   readResponse,
   whoAmI,
 } from "../src/lib/api.js";
@@ -86,69 +86,27 @@ test("the test button asks /me", async () => {
   assert.deepEqual(me.scopes, ["captures"]);
 });
 
-const READ = {
-  title: "Research Engineer",
-  company_name: "Black Mesa",
-  location: "",
-  remote_type: "",
-  employment_type: "full_time",
-  description: "Science.",
-  salary_min: "55000.00",
-  salary_max: null,
-  salary_currency: "EUR",
-  salary_period: "year",
-  closes_at: "2026-10-01",
-};
-
-function asTheFormShowsIt(read) {
-  return Object.fromEntries(Object.entries(read).map(([field, value]) => [field, value === null ? "" : String(value)]));
-}
-
-test("a preview asks Postulo what it reads, and an older Postulo is told apart from a refusal", async () => {
-  const calls = [];
-  const seen = await preview("https://postulo.example.org", "tok", { url: "https://jobs.example/1", html: "<html>" }, async (url, init) => {
-    calls.push({ url, init });
-    return fakeResponse(200, { url: "https://jobs.example/1", source: "schema.org", data: READ });
-  });
-  assert.equal(calls[0].url, "https://postulo.example.org/api/v1/captures/preview");
-  assert.equal(calls[0].init.method, "POST");
-  assert.deepEqual(JSON.parse(calls[0].init.body), { url: "https://jobs.example/1", html: "<html>" });
-  assert.equal(seen.data.title, "Research Engineer");
-
-  assert.equal(await preview("https://old.example.org", "tok", { url: "u", html: "h" }, async () => fakeResponse(404, null)), null);
-  await assert.rejects(
-    preview("https://postulo.example.org", "tok", { url: "u", html: "h" }, async () => fakeResponse(422, { detail: "Nothing resembling a job posting was found there." })),
-    /job posting/,
-  );
-});
-
-test("nothing touched is nothing corrected, whatever shape Postulo wrote it in", () => {
-  assert.deepEqual(corrections(READ, asTheFormShowsIt(READ)), {});
-  assert.deepEqual(corrections(READ, { ...asTheFormShowsIt(READ), salary_min: "55000" }), {});
-  assert.deepEqual(corrections(READ, { ...asTheFormShowsIt(READ), title: "  Research Engineer " }), {});
-});
-
-test("only what was changed is sent, and an emptied field is cleared rather than kept", () => {
-  const form = {
-    ...asTheFormShowsIt(READ),
-    title: "Senior Research Engineer",
-    location: "Lyon",
-    salary_min: "",
-    salary_max: "65000",
-    closes_at: "",
-    remote_type: "hybrid",
+test("what goes wrong says whether to try again later", async () => {
+  const failure = async (status, body = {}) => {
+    try {
+      await readResponse(fakeResponse(status, body));
+    } catch (error) {
+      return error;
+    }
+    throw new Error("expected a failure");
   };
-  assert.deepEqual(corrections(READ, form), {
-    title: "Senior Research Engineer",
-    location: "Lyon",
-    salary_min: null,
-    salary_max: "65000",
-    closes_at: null,
-    remote_type: "hybrid",
-  });
+  assert.equal(kindOfFailure(new TypeError("Failed to fetch")), "later");
+  assert.equal(kindOfFailure(await failure(503)), "later");
+  assert.equal(kindOfFailure(await failure(429)), "later");
+  assert.equal(kindOfFailure(await failure(401)), "account");
+  assert.equal(kindOfFailure(await failure(403, { detail: "No captures scope." })), "account");
+  assert.equal(kindOfFailure(await failure(422, { detail: "Nothing there." })), "refused");
+  assert.equal(kindOfFailure(await failure(404, null)), "refused");
+  assert.deepEqual(problemOf(await failure(401)), { key: "tokenRefused", substitutions: [{ key: "tokenPath" }] });
+  assert.deepEqual(problemOf(await failure(422, { detail: "Nothing there." })), { message: "Nothing there." });
 });
 
-test("a capture carries the corrections, and none when there are none", async () => {
+test("a capture carries what was reviewed, and nothing when there is nothing", async () => {
   const bodies = [];
   const fetchImpl = async (url, init) => {
     bodies.push(JSON.parse(init.body));

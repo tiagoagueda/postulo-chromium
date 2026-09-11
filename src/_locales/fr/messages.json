@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Envoyez l'annonce d'emploi que vous consultez à votre propre Postulo, pour vérification. Rien ne part ailleurs."
+    "message": "Capturez l'annonce d'emploi que vous consultez, gardez-la dans votre navigateur et envoyez-la à votre propre Postulo pour vérification quand vous le décidez. Rien ne part ailleurs."
   },
   "actionTitle": {
     "message": "Capturer cette annonce dans Postulo"
   },
   "settings": {
     "message": "Paramètres"
-  },
-  "unconfigured": {
-    "message": "Indiquez à l'extension où se trouve votre Postulo et quel jeton utiliser."
   },
   "setUp": {
     "message": "La configurer"
@@ -24,7 +21,7 @@
     "message": "Capturer cette annonce"
   },
   "captureHint": {
-    "message": "La page que vous consultez est envoyée à votre Postulo, et nulle part ailleurs."
+    "message": "La page est lue ici, dans votre navigateur. Rien n'est envoyé avant que vous le décidiez."
   },
   "review": {
     "message": "Vérifier dans Postulo"
@@ -88,7 +85,7 @@
     "message": "Tester"
   },
   "shortcutHint": {
-    "message": "Appuyer sur le bouton, ou sur $SHORTCUT$, envoie la page que vous consultez à votre Postulo pour vérification. Aucune page n'est lue avant que vous le demandiez, et rien n'est envoyé ailleurs.",
+    "message": "Appuyer sur le bouton, ou sur $SHORTCUT$, lit la page que vous consultez, ici dans le navigateur. Aucune page n'est lue avant que vous le demandiez, et rien n'est envoyé ailleurs qu'à votre propre Postulo, quand vous le décidez.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "La page n'a pas pu être lue. Certaines pages bloquent les extensions."
   },
-  "previewing": {
-    "message": "On demande à Postulo ce qu'il lit ici…"
-  },
   "reviewHint": {
-    "message": "Voici ce que Postulo a lu sur la page. Corrigez ce qui est faux avant de l'envoyer."
+    "message": "Voici ce qui a été lu sur la page. Corrigez ce qui est faux ; rien ne quitte ce navigateur avant que vous l'envoyiez."
   },
   "sendForReview": {
     "message": "Envoyer pour vérification"
+  },
+  "notConnected": {
+    "message": "Aucun Postulo n'est encore connecté : ce que vous capturez est gardé dans ce navigateur."
+  },
+  "keep": {
+    "message": "Garder dans ce navigateur"
+  },
+  "kept": {
+    "message": "Gardée dans ce navigateur. Envoyez-la à Postulo quand vous le souhaitez."
+  },
+  "alreadyKept": {
+    "message": "Vous avez déjà gardé cette page sans l'envoyer : voici votre version."
+  },
+  "nothingRead": {
+    "message": "Rien n'a pu être lu sur cette page. Remplissez ce que vous savez ; rien ne quitte ce navigateur avant que vous l'envoyiez."
+  },
+  "waiting": {
+    "message": "Postulo est injoignable pour le moment. Elle est gardée dans ce navigateur et sera envoyée dès que Postulo répondra."
+  },
+  "waitingOffline": {
+    "message": "L'interrupteur de test est activé, elle attend donc dans ce navigateur. Elle partira dès qu'il sera désactivé."
+  },
+  "waitingAccount": {
+    "message": "Elle est gardée dans ce navigateur et sera envoyée dès que ce sera réglé."
+  },
+  "sendNeedsSetup": {
+    "message": "Gardée dans ce navigateur, elle sera envoyée dès que votre Postulo sera configuré."
+  },
+  "capturesTitle": {
+    "message": "Captures dans ce navigateur"
+  },
+  "capturesIntro": {
+    "message": "Les annonces que vous avez capturées, gardées ici jusqu'à ce qu'elles parviennent à votre Postulo. Ce que vous envoyez part dès que Postulo est joignable."
+  },
+  "nothingKept": {
+    "message": "Rien n'est gardé dans ce navigateur."
+  },
+  "sendAll": {
+    "message": "Envoyer les non envoyées"
+  },
+  "clearSent": {
+    "message": "Effacer les envoyées"
+  },
+  "stateKept": {
+    "message": "Non envoyée"
+  },
+  "stateWaiting": {
+    "message": "En attente de Postulo"
+  },
+  "stateSent": {
+    "message": "Envoyée"
+  },
+  "stateRefused": {
+    "message": "Refusée"
+  },
+  "tryNow": {
+    "message": "Essayer maintenant"
+  },
+  "holdBack": {
+    "message": "Plutôt la garder ici"
+  },
+  "deleteConfirm": {
+    "message": "Supprimer cette capture ? Elle n'a pas atteint Postulo, elle n'existe donc qu'ici."
+  },
+  "troubleshooting": {
+    "message": "Tests et dépannage"
+  },
+  "offlineLabel": {
+    "message": "Faire comme si Postulo était injoignable"
+  },
+  "offlineHint": {
+    "message": "Pour les tests. Tant que cette option est activée, rien n'est envoyé : les captures attendent dans ce navigateur exactement comme si Postulo était en panne, et partent dès qu'elle est désactivée."
+  },
+  "offlineOn": {
+    "message": "L'interrupteur de test est activé : rien n'est envoyé à Postulo."
+  },
+  "offlineOff": {
+    "message": "L'interrupteur de test est désactivé : ce qui attendait part maintenant vers Postulo."
+  },
+  "downloadLog": {
+    "message": "Télécharger le journal"
+  },
+  "clearLog": {
+    "message": "Vider le journal"
+  },
+  "logCleared": {
+    "message": "Le journal est vide."
+  },
+  "logHint": {
+    "message": "Ce qu'a fait l'extension, pour comprendre pourquoi quelque chose n'a pas fonctionné. Il ne contient aucun jeton et rien des pages."
+  },
+  "cancel": {
+    "message": "Annuler"
+  },
+  "delete": {
+    "message": "Supprimer"
+  },
+  "edit": {
+    "message": "Modifier"
   },
   "fieldTitle": {
     "message": "Intitulé du poste"

@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Schéckt d'Stellenannonce, déi Dir Iech grad ukuckt, fir ze iwwerpréiwen un Ären eegene Postulo. Näischt geet soss iergendwouhin."
+    "message": "Erfaasst d'Stellenannonce, déi Dir Iech grad ukuckt, behaalt se an Ärem Browser a schéckt se, wann Dir et sot, fir ze iwwerpréiwen un Ären eegene Postulo. Näischt geet soss iergendwouhin."
   },
   "actionTitle": {
     "message": "Dës Annonce am Postulo erfaassen"
   },
   "settings": {
     "message": "Astellungen"
-  },
-  "unconfigured": {
-    "message": "Sot der Erweiderung, wou Äre Postulo ass a wéi en Token se benotze soll."
   },
   "setUp": {
     "message": "Ariichten"
@@ -24,7 +21,7 @@
     "message": "Dës Annonce erfaassen"
   },
   "captureHint": {
-    "message": "D'Säit, déi Dir Iech ukuckt, gëtt un Äre Postulo geschéckt an nëmmen do hin."
+    "message": "D'Säit gëtt hei gelies, an Ärem Browser. Näischt gëtt geschéckt, ier Dir et sot."
   },
   "review": {
     "message": "Am Postulo duerchkucken"
@@ -88,7 +85,7 @@
     "message": "Testen"
   },
   "shortcutHint": {
-    "message": "E Klick op de Knäppchen, oder $SHORTCUT$, schéckt d'Säit, déi Dir Iech ukuckt, fir ze iwwerpréiwen un Äre Postulo. Keng Säit gëtt gelies, ier Dir et frot, an näischt gëtt soss iergendwouhi geschéckt.",
+    "message": "E Klick op de Knäppchen, oder $SHORTCUT$, liest d'Säit, déi Dir Iech ukuckt, hei am Browser. Keng Säit gëtt gelies, ier Dir et frot, an näischt gëtt iergendwouhi geschéckt ausser un Ären eegene Postulo, wann Dir et sot.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "D'Säit konnt net gelies ginn. Verschidde Säite blockéieren Erweiderungen."
   },
-  "previewing": {
-    "message": "De Postulo gëtt gefrot, wat en hei liest…"
-  },
   "reviewHint": {
-    "message": "Dat huet de Postulo op der Säit gelies. Verbessert, wat falsch ass, ier Dir et schéckt."
+    "message": "Dat gouf vun der Säit gelies. Verbessert, wat falsch ass; näischt verléisst dëse Browser, ier Dir et schéckt."
   },
   "sendForReview": {
     "message": "Fir ze iwwerpréiwe schécken"
+  },
+  "notConnected": {
+    "message": "Nach net mat engem Postulo verbonnen: wat Dir erfaasst, bleift an dësem Browser."
+  },
+  "keep": {
+    "message": "An dësem Browser behalen"
+  },
+  "kept": {
+    "message": "An dësem Browser behalen. Schéckt se un de Postulo, wann Dir prett sidd."
+  },
+  "alreadyKept": {
+    "message": "Dir hutt dës Säit scho behalen an nach net geschéckt: dëst ass Är Versioun."
+  },
+  "nothingRead": {
+    "message": "Vun dëser Säit konnt näischt gelies ginn. Fëllt aus, wat Dir wësst; näischt verléisst dëse Browser, ier Dir et schéckt."
+  },
+  "waiting": {
+    "message": "De Postulo ass grad net z'erreechen. D'Annonce bleift an dësem Browser a gëtt geschéckt, soubal de Postulo äntwert."
+  },
+  "waitingOffline": {
+    "message": "Den Testschalter ass un, dofir waart d'Annonce an dësem Browser. Si gëtt geschéckt, soubal de Schalter aus ass."
+  },
+  "waitingAccount": {
+    "message": "D'Annonce bleift an dësem Browser a gëtt geschéckt, soubal dat behuewen ass."
+  },
+  "sendNeedsSetup": {
+    "message": "An dësem Browser behalen, fir geschéckt ze ginn, soubal Äre Postulo ageriicht ass."
+  },
+  "capturesTitle": {
+    "message": "Erfaassungen an dësem Browser"
+  },
+  "capturesIntro": {
+    "message": "Annoncen, déi Dir erfaasst hutt, bleiwen hei, bis se Äre Postulo erreechen. Wat Dir schéckt, geet fort, soubal de Postulo z'erreechen ass."
+  },
+  "nothingKept": {
+    "message": "An dësem Browser gëtt näischt behalen."
+  },
+  "sendAll": {
+    "message": "Alles Ongeschéckt schécken"
+  },
+  "clearSent": {
+    "message": "Déi Geschéckt ewechmaachen"
+  },
+  "stateKept": {
+    "message": "Net geschéckt"
+  },
+  "stateWaiting": {
+    "message": "Waart op de Postulo"
+  },
+  "stateSent": {
+    "message": "Geschéckt"
+  },
+  "stateRefused": {
+    "message": "Refuséiert"
+  },
+  "tryNow": {
+    "message": "Elo probéieren"
+  },
+  "holdBack": {
+    "message": "Hei behalen"
+  },
+  "deleteConfirm": {
+    "message": "Dës Erfaassung läschen? Si ass net beim Postulo ukomm, also gëtt et se nëmmen hei."
+  },
+  "troubleshooting": {
+    "message": "Testen a Feelersich"
+  },
+  "offlineLabel": {
+    "message": "Maachen, wéi wann de Postulo net z'erreechen wier"
+  },
+  "offlineHint": {
+    "message": "Fir ze testen. Soulaang dat un ass, gëtt näischt geschéckt: Erfaassunge waarden an dësem Browser genee wéi wann de Postulo net lafe géif, a ginn, soubal et aus ass."
+  },
+  "offlineOn": {
+    "message": "Den Testschalter ass un: näischt gëtt un de Postulo geschéckt."
+  },
+  "offlineOff": {
+    "message": "Den Testschalter ass aus: wat waart, geet elo un de Postulo."
+  },
+  "downloadLog": {
+    "message": "Protokoll eroflueden"
+  },
+  "clearLog": {
+    "message": "Protokoll eidel maachen"
+  },
+  "logCleared": {
+    "message": "D'Protokoll ass eidel."
+  },
+  "logHint": {
+    "message": "Wat d'Erweiderung gemaach huet, fir erauszefannen, firwat eppes net funktionéiert huet. Et enthält keen Token an näischt vun de Säiten."
+  },
+  "cancel": {
+    "message": "Ofbriechen"
+  },
+  "delete": {
+    "message": "Läschen"
+  },
+  "edit": {
+    "message": "Änneren"
   },
   "fieldTitle": {
     "message": "Stellenbezeechnung"

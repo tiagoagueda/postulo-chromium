@@ -1,6 +1,8 @@
 import { normaliseInstance, originPattern, whoAmI } from "./lib/api.js";
-import { loadSettings, requestHostPermission, saveSettings } from "./lib/browser.js";
+import { ext, loadSettings, requestHostPermission, saveSettings, setOffline } from "./lib/browser.js";
 import { explain, localise, localiseWith, t } from "./lib/i18n.js";
+import { log, store } from "./lib/local.js";
+import { hostOf } from "./lib/log.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -32,12 +34,40 @@ function localiseHints() {
   localiseWith($("shortcut-hint"), "shortcutHint", [shortcut]);
 }
 
+/** The log as a file, headed by what somebody helping would ask first. */
+async function downloadLog() {
+  const settings = await loadSettings();
+  const counts = {};
+  for (const record of await store.list()) {
+    counts[record.state] = (counts[record.state] || 0) + 1;
+  }
+  const now = new Date();
+  const text = await log.text({
+    extension: ext.runtime.getManifest().version,
+    browser: navigator.userAgent,
+    language: t("languageTag"),
+    postulo: settings.instance || "(not set up)",
+    "testing switch": settings.offline ? "on" : "off",
+    captures: JSON.stringify(counts),
+    written: now.toISOString(),
+  });
+  const url = URL.createObjectURL(new Blob([text], { type: "text/plain;charset=utf-8" }));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `postulo-extension-log-${now.toISOString().slice(0, 16).replace(/[-:T]/g, "")}.txt`;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10_000);
+}
+
 async function main() {
   localise();
   localiseHints();
   const settings = await loadSettings();
   $("instance").value = settings.instance;
   $("token").value = settings.token;
+  $("offline").checked = settings.offline;
 
   $("settings").addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -51,6 +81,7 @@ async function main() {
       // is happy either way.
       const granted = await requestHostPermission(originPattern(next.instance));
       await saveSettings(next);
+      await log.add("settings saved", { postulo: hostOf(next.instance), permission: granted });
       say(
         granted ? t("saved", [new URL(next.instance).host]) : t("savedNoPermission"),
         !granted
@@ -63,6 +94,10 @@ async function main() {
   $("test").addEventListener("click", async () => {
     try {
       const next = values();
+      if ($("offline").checked) {
+        say(t("offlineOn"));
+        return;
+      }
       say(t("asking"));
       const granted = await requestHostPermission(originPattern(next.instance));
       if (!granted) {
@@ -71,11 +106,27 @@ async function main() {
       const me = await whoAmI(next.instance, next.token);
       const scopes = (me.scopes || []).join(", ");
       const canCapture = (me.scopes || []).includes("captures");
+      await log.add("test", { postulo: hostOf(next.instance), scopes });
       const who = scopes ? t("tokenIsScoped", [me.name, me.owner, scopes]) : t("tokenIs", [me.name, me.owner]);
       say(canCapture ? who : `${who} ${t("lacksCaptures")}`, !canCapture);
     } catch (error) {
+      await log.add("test", { outcome: "failed", status: error.status || "no answer", problem: error.key || error.message });
       say(explain(error), true);
     }
+  });
+
+  // Takes effect at once, without Save: it is a switch for trying things, not a setting.
+  $("offline").addEventListener("change", async () => {
+    const offline = $("offline").checked;
+    await setOffline(offline);
+    await log.add("testing switch", { offline });
+    say(offline ? t("offlineOn") : t("offlineOff"));
+  });
+
+  $("download-log").addEventListener("click", downloadLog);
+  $("clear-log").addEventListener("click", async () => {
+    await log.clear();
+    say(t("logCleared"));
   });
 }
 

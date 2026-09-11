@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Trimite anunțul de angajare pe care îl vezi către propriul tău Postulo, pentru revizuire. Nimic nu ajunge în altă parte."
+    "message": "Captează anunțul de angajare pe care îl vezi, păstrează-l în browserul tău și trimite-l spre revizuire către propriul tău Postulo când spui tu. Nimic nu ajunge în altă parte."
   },
   "actionTitle": {
     "message": "Captează acest anunț în Postulo"
   },
   "settings": {
     "message": "Setări"
-  },
-  "unconfigured": {
-    "message": "Spune extensiei unde este Postulo-ul tău și ce token să folosească."
   },
   "setUp": {
     "message": "Configurează"
@@ -24,7 +21,7 @@
     "message": "Captează acest anunț"
   },
   "captureHint": {
-    "message": "Pagina pe care o vezi este trimisă către Postulo-ul tău și nicăieri altundeva."
+    "message": "Pagina este citită aici, în browserul tău. Nimic nu este trimis până nu spui tu."
   },
   "review": {
     "message": "Revizuiește în Postulo"
@@ -88,7 +85,7 @@
     "message": "Testează"
   },
   "shortcutHint": {
-    "message": "Apăsând butonul, sau $SHORTCUT$, pagina pe care o vezi este trimisă către Postulo-ul tău pentru revizuire. Nicio pagină nu este citită până nu ceri, și nimic nu este trimis în altă parte.",
+    "message": "Apăsând butonul, sau $SHORTCUT$, pagina pe care o vezi este citită aici, în browser. Nicio pagină nu este citită până nu ceri, și nimic nu este trimis nicăieri în afară de propriul tău Postulo, când spui tu.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Pagina nu a putut fi citită. Unele pagini blochează extensiile."
   },
-  "previewing": {
-    "message": "Îl întrebăm pe Postulo ce citește aici…"
-  },
   "reviewHint": {
-    "message": "Asta a citit Postulo din pagină. Corectează ce e greșit înainte să trimiți."
+    "message": "Asta s-a citit din pagină. Corectează ce e greșit; nimic nu părăsește acest browser până nu îl trimiți."
   },
   "sendForReview": {
     "message": "Trimite spre revizuire"
+  },
+  "notConnected": {
+    "message": "Nu ești încă conectat la un Postulo: ce captezi este păstrat în acest browser."
+  },
+  "keep": {
+    "message": "Păstrează în acest browser"
+  },
+  "kept": {
+    "message": "Păstrat în acest browser. Trimite-l către Postulo când ești gata."
+  },
+  "alreadyKept": {
+    "message": "Ai păstrat deja această pagină și nu ai trimis-o: aceasta este versiunea ta."
+  },
+  "nothingRead": {
+    "message": "Nu s-a putut citi nimic din această pagină. Completează ce știi; nimic nu părăsește acest browser până nu îl trimiți."
+  },
+  "waiting": {
+    "message": "Nu se poate ajunge la Postulo acum. Este păstrat în acest browser și trimis imediat ce Postulo răspunde."
+  },
+  "waitingOffline": {
+    "message": "Comutatorul de testare este pornit, așa că așteaptă în acest browser. Pleacă imediat ce comutatorul este oprit."
+  },
+  "waitingAccount": {
+    "message": "Este păstrat în acest browser și trimis după ce se rezolvă asta."
+  },
+  "sendNeedsSetup": {
+    "message": "Păstrat în acest browser, pentru a fi trimis după ce Postulo-ul tău este configurat."
+  },
+  "capturesTitle": {
+    "message": "Captări în acest browser"
+  },
+  "capturesIntro": {
+    "message": "Anunțurile pe care le-ai captat, păstrate aici până ajung la Postulo-ul tău. Ce trimiți pleacă imediat ce se poate ajunge la Postulo."
+  },
+  "nothingKept": {
+    "message": "Nimic nu este păstrat în acest browser."
+  },
+  "sendAll": {
+    "message": "Trimite tot ce nu e trimis"
+  },
+  "clearSent": {
+    "message": "Elimină cele trimise"
+  },
+  "stateKept": {
+    "message": "Netrimis"
+  },
+  "stateWaiting": {
+    "message": "Așteaptă Postulo"
+  },
+  "stateSent": {
+    "message": "Trimis"
+  },
+  "stateRefused": {
+    "message": "Refuzat"
+  },
+  "tryNow": {
+    "message": "Încearcă acum"
+  },
+  "holdBack": {
+    "message": "Păstrează-l aici"
+  },
+  "deleteConfirm": {
+    "message": "Ștergi această captare? Nu a ajuns la Postulo, deci există doar aici."
+  },
+  "troubleshooting": {
+    "message": "Testare și depanare"
+  },
+  "offlineLabel": {
+    "message": "Simulează că nu se poate ajunge la Postulo"
+  },
+  "offlineHint": {
+    "message": "Pentru testare. Cât timp e pornit, nu se trimite nimic: captările așteaptă în acest browser exact ca atunci când Postulo e căzut, și pleacă după ce îl oprești."
+  },
+  "offlineOn": {
+    "message": "Comutatorul de testare este pornit: nimic nu este trimis către Postulo."
+  },
+  "offlineOff": {
+    "message": "Comutatorul de testare este oprit: ce așteaptă pleacă acum către Postulo."
+  },
+  "downloadLog": {
+    "message": "Descarcă jurnalul"
+  },
+  "clearLog": {
+    "message": "Golește jurnalul"
+  },
+  "logCleared": {
+    "message": "Jurnalul este gol."
+  },
+  "logHint": {
+    "message": "Ce a făcut extensia, ca să afli de ce ceva nu a funcționat. Nu conține niciun token și nimic din pagini."
+  },
+  "cancel": {
+    "message": "Anulează"
+  },
+  "delete": {
+    "message": "Șterge"
+  },
+  "edit": {
+    "message": "Editează"
   },
   "fieldTitle": {
     "message": "Titlul postului"

@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Pošlite pracovný inzerát, ktorý si prezeráte, do svojho vlastného Postula na kontrolu. Nič nejde nikam inam."
+    "message": "Zachyťte pracovný inzerát, ktorý si prezeráte, uchovajte ho vo svojom prehliadači a keď poviete, dostane ho na kontrolu váš vlastný Postulo. Nič nejde nikam inam."
   },
   "actionTitle": {
     "message": "Zachytiť tento inzerát v Postule"
   },
   "settings": {
     "message": "Nastavenia"
-  },
-  "unconfigured": {
-    "message": "Povedzte rozšíreniu, kde je váš Postulo a aký token má použiť."
   },
   "setUp": {
     "message": "Nastaviť"
@@ -24,7 +21,7 @@
     "message": "Zachytiť tento inzerát"
   },
   "captureHint": {
-    "message": "Stránka, ktorú si prezeráte, sa odošle do vášho Postula a nikam inam."
+    "message": "Stránka sa číta tu, vo vašom prehliadači. Nič sa neodošle, kým to nepoviete."
   },
   "review": {
     "message": "Skontrolovať v Postule"
@@ -88,7 +85,7 @@
     "message": "Otestovať"
   },
   "shortcutHint": {
-    "message": "Stlačením tlačidla alebo $SHORTCUT$ sa stránka, ktorú si prezeráte, odošle do vášho Postula na kontrolu. Žiadna stránka sa nečíta, kým o to nepožiadate, a nič sa neposiela nikam inam.",
+    "message": "Stlačením tlačidla alebo $SHORTCUT$ sa stránka, ktorú si prezeráte, prečíta tu v prehliadači. Žiadna stránka sa nečíta, kým o to nepožiadate, a nič sa nikam neposiela; dostane to len váš vlastný Postulo, keď poviete.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Stránku sa nepodarilo prečítať. Niektoré stránky blokujú rozšírenia."
   },
-  "previewing": {
-    "message": "Zisťujeme, čo tu Postulo prečíta…"
-  },
   "reviewHint": {
-    "message": "Toto Postulo zo stránky prečítal. Pred odoslaním opravte, čo je nesprávne."
+    "message": "Toto sa zo stránky prečítalo. Opravte, čo je nesprávne; nič neopustí tento prehliadač, kým to neodošlete."
   },
   "sendForReview": {
     "message": "Odoslať na kontrolu"
+  },
+  "notConnected": {
+    "message": "Postulo zatiaľ nie je pripojený: čo zachytíte, sa uchováva v tomto prehliadači."
+  },
+  "keep": {
+    "message": "Ponechať v tomto prehliadači"
+  },
+  "kept": {
+    "message": "Ponechané v tomto prehliadači. Postulo ho dostane, keď ho budete chcieť odoslať."
+  },
+  "alreadyKept": {
+    "message": "Túto stránku ste si už ponechali a neodoslali ste ju: toto je vaša verzia."
+  },
+  "nothingRead": {
+    "message": "Z tejto stránky sa nepodarilo nič prečítať. Vyplňte, čo viete; nič neopustí tento prehliadač, kým to neodošlete."
+  },
+  "waiting": {
+    "message": "K Postulu sa momentálne nedá pripojiť. Uchováva sa v tomto prehliadači a odošle sa, hneď ako Postulo odpovie."
+  },
+  "waitingOffline": {
+    "message": "Testovací prepínač je zapnutý, preto to čaká v tomto prehliadači. Odošle sa, keď sa prepínač vypne."
+  },
+  "waitingAccount": {
+    "message": "Uchováva sa v tomto prehliadači a odošle sa, keď sa to vyrieši."
+  },
+  "sendNeedsSetup": {
+    "message": "Ponechané v tomto prehliadači; odošle sa, keď bude váš Postulo nastavený."
+  },
+  "capturesTitle": {
+    "message": "Zachytenia v tomto prehliadači"
+  },
+  "capturesIntro": {
+    "message": "Inzeráty, ktoré ste zachytili, zostávajú tu, kým sa nedostanú do vášho Postula. Čo odošlete, odíde, hneď ako bude Postulo dostupný."
+  },
+  "nothingKept": {
+    "message": "V tomto prehliadači nie je nič uchované."
+  },
+  "sendAll": {
+    "message": "Odoslať všetko neodoslané"
+  },
+  "clearSent": {
+    "message": "Odstrániť odoslané"
+  },
+  "stateKept": {
+    "message": "Neodoslané"
+  },
+  "stateWaiting": {
+    "message": "Čaká na Postulo"
+  },
+  "stateSent": {
+    "message": "Odoslané"
+  },
+  "stateRefused": {
+    "message": "Odmietnuté"
+  },
+  "tryNow": {
+    "message": "Skúsiť teraz"
+  },
+  "holdBack": {
+    "message": "Radšej ponechať tu"
+  },
+  "deleteConfirm": {
+    "message": "Vymazať toto zachytenie? Postulo ho ešte nemá, takže existuje len tu."
+  },
+  "troubleshooting": {
+    "message": "Testovanie a riešenie problémov"
+  },
+  "offlineLabel": {
+    "message": "Správať sa, akoby bol Postulo nedostupný"
+  },
+  "offlineHint": {
+    "message": "Na testovanie. Kým je to zapnuté, nič sa neodosiela: zachytenia čakajú v tomto prehliadači presne tak, ako keby bol Postulo mimo prevádzky, a odídu, keď sa to vypne."
+  },
+  "offlineOn": {
+    "message": "Testovací prepínač je zapnutý: Postulo nič nedostane."
+  },
+  "offlineOff": {
+    "message": "Testovací prepínač je vypnutý: Postulo teraz dostane všetko, čo čaká."
+  },
+  "downloadLog": {
+    "message": "Stiahnuť záznam"
+  },
+  "clearLog": {
+    "message": "Vymazať záznam"
+  },
+  "logCleared": {
+    "message": "Záznam je prázdny."
+  },
+  "logHint": {
+    "message": "Čo rozšírenie robilo, aby ste zistili, prečo niečo nefungovalo. Neobsahuje žiadny token ani nič zo stránok."
+  },
+  "cancel": {
+    "message": "Zrušiť"
+  },
+  "delete": {
+    "message": "Vymazať"
+  },
+  "edit": {
+    "message": "Upraviť"
   },
   "fieldTitle": {
     "message": "Názov pozície"

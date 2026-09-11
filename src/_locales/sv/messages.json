@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Skicka jobbannonsen du tittar på till din egen Postulo, för granskning. Inget går någon annanstans."
+    "message": "Fånga in jobbannonsen du tittar på, spara den i din webbläsare och skicka den till din egen Postulo för granskning när du säger till. Inget går någon annanstans."
   },
   "actionTitle": {
     "message": "Fånga in den här annonsen i Postulo"
   },
   "settings": {
     "message": "Inställningar"
-  },
-  "unconfigured": {
-    "message": "Berätta för tillägget var din Postulo finns och vilken token det ska använda."
   },
   "setUp": {
     "message": "Ställ in"
@@ -24,7 +21,7 @@
     "message": "Fånga in den här annonsen"
   },
   "captureHint": {
-    "message": "Sidan du tittar på skickas till din Postulo och ingen annanstans."
+    "message": "Sidan läses här, i din webbläsare. Inget skickas förrän du säger till."
   },
   "review": {
     "message": "Granska i Postulo"
@@ -88,7 +85,7 @@
     "message": "Testa"
   },
   "shortcutHint": {
-    "message": "Ett tryck på knappen, eller $SHORTCUT$, skickar sidan du tittar på till din Postulo för granskning. Ingen sida läses förrän du ber om det, och inget skickas någon annanstans.",
+    "message": "Ett tryck på knappen, eller $SHORTCUT$, läser sidan du tittar på här i webbläsaren. Ingen sida läses förrän du ber om det, och inget skickas någon annanstans än till din egen Postulo, när du säger till.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Sidan kunde inte läsas. Vissa sidor blockerar tillägg."
   },
-  "previewing": {
-    "message": "Frågar Postulo vad den läser här …"
-  },
   "reviewHint": {
-    "message": "Det här är vad Postulo läste på sidan. Rätta det som är fel innan du skickar det."
+    "message": "Det här lästes från sidan. Rätta det som är fel; inget lämnar den här webbläsaren förrän du skickar det."
   },
   "sendForReview": {
     "message": "Skicka för granskning"
+  },
+  "notConnected": {
+    "message": "Inte ansluten till någon Postulo än: det du fångar in sparas i den här webbläsaren."
+  },
+  "keep": {
+    "message": "Behåll i webbläsaren"
+  },
+  "kept": {
+    "message": "Sparad i den här webbläsaren. Skicka den till Postulo när du är redo."
+  },
+  "alreadyKept": {
+    "message": "Du har redan sparat den här sidan utan att skicka den: det här är din version."
+  },
+  "nothingRead": {
+    "message": "Inget kunde läsas från den här sidan. Fyll i det du vet; inget lämnar den här webbläsaren förrän du skickar det."
+  },
+  "waiting": {
+    "message": "Postulo går inte att nå just nu. Den sparas i den här webbläsaren och skickas så snart Postulo svarar."
+  },
+  "waitingOffline": {
+    "message": "Testreglaget är på, så den väntar i den här webbläsaren. Den skickas när reglaget slås av."
+  },
+  "waitingAccount": {
+    "message": "Den sparas i den här webbläsaren och skickas när det är åtgärdat."
+  },
+  "sendNeedsSetup": {
+    "message": "Sparad i den här webbläsaren och skickas när din Postulo är inställd."
+  },
+  "capturesTitle": {
+    "message": "Infångningar i den här webbläsaren"
+  },
+  "capturesIntro": {
+    "message": "Annonser du har fångat in, sparade här tills de når din Postulo. Det du skickar går iväg så snart Postulo kan nås."
+  },
+  "nothingKept": {
+    "message": "Inget är sparat i den här webbläsaren."
+  },
+  "sendAll": {
+    "message": "Skicka allt som inte skickats"
+  },
+  "clearSent": {
+    "message": "Rensa de skickade"
+  },
+  "stateKept": {
+    "message": "Inte skickad"
+  },
+  "stateWaiting": {
+    "message": "Väntar på Postulo"
+  },
+  "stateSent": {
+    "message": "Skickad"
+  },
+  "stateRefused": {
+    "message": "Avvisad"
+  },
+  "tryNow": {
+    "message": "Försök nu"
+  },
+  "holdBack": {
+    "message": "Behåll här i stället"
+  },
+  "deleteConfirm": {
+    "message": "Radera den här infångningen? Den har inte nått Postulo, så den finns bara här."
+  },
+  "troubleshooting": {
+    "message": "Testning och felsökning"
+  },
+  "offlineLabel": {
+    "message": "Låtsas att Postulo inte går att nå"
+  },
+  "offlineHint": {
+    "message": "För testning. Medan det här är på skickas inget: infångningar väntar i den här webbläsaren precis som om Postulo låg nere, och går iväg när det slås av."
+  },
+  "offlineOn": {
+    "message": "Testreglaget är på: inget skickas till Postulo."
+  },
+  "offlineOff": {
+    "message": "Testreglaget är av: det som väntar går till Postulo nu."
+  },
+  "downloadLog": {
+    "message": "Ladda ned loggen"
+  },
+  "clearLog": {
+    "message": "Rensa loggen"
+  },
+  "logCleared": {
+    "message": "Loggen är tom."
+  },
+  "logHint": {
+    "message": "Vad tillägget har gjort, för att ta reda på varför något inte fungerade. Den innehåller ingen token och inget från sidorna."
+  },
+  "cancel": {
+    "message": "Avbryt"
+  },
+  "delete": {
+    "message": "Radera"
+  },
+  "edit": {
+    "message": "Redigera"
   },
   "fieldTitle": {
     "message": "Jobbtitel"

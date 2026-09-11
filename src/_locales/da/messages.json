@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Send det jobopslag, du kigger på, til din egen Postulo til gennemsyn. Intet går andre steder hen."
+    "message": "Indfang det jobopslag, du kigger på, gem det i din browser, og send det til din egen Postulo til gennemsyn, når du siger til. Intet går andre steder hen."
   },
   "actionTitle": {
     "message": "Indfang dette opslag i Postulo"
   },
   "settings": {
     "message": "Indstillinger"
-  },
-  "unconfigured": {
-    "message": "Fortæl udvidelsen, hvor din Postulo er, og hvilket token den skal bruge."
   },
   "setUp": {
     "message": "Sæt den op"
@@ -24,7 +21,7 @@
     "message": "Indfang dette opslag"
   },
   "captureHint": {
-    "message": "Siden, du kigger på, sendes til din Postulo og ingen andre steder."
+    "message": "Siden læses her, i din browser. Intet sendes, før du siger til."
   },
   "review": {
     "message": "Gennemse i Postulo"
@@ -88,7 +85,7 @@
     "message": "Test"
   },
   "shortcutHint": {
-    "message": "Et tryk på knappen, eller $SHORTCUT$, sender siden, du kigger på, til din Postulo til gennemsyn. Ingen side læses, før du beder om det, og intet sendes andre steder hen.",
+    "message": "Et tryk på knappen, eller $SHORTCUT$, læser siden, du kigger på, her i browseren. Ingen side læses, før du beder om det, og intet sendes andre steder hen end til din egen Postulo, når du siger til.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Siden kunne ikke læses. Nogle sider blokerer udvidelser."
   },
-  "previewing": {
-    "message": "Spørger Postulo, hvad den læser her …"
-  },
   "reviewHint": {
-    "message": "Det her er, hvad Postulo læste på siden. Ret det, den tog fejl af, før du sender det."
+    "message": "Det her er, hvad der blev læst på siden. Ret det, der er forkert; intet forlader denne browser, før du sender det."
   },
   "sendForReview": {
     "message": "Send til gennemsyn"
+  },
+  "notConnected": {
+    "message": "Endnu ikke forbundet til en Postulo: det, du indfanger, gemmes i denne browser."
+  },
+  "keep": {
+    "message": "Behold i denne browser"
+  },
+  "kept": {
+    "message": "Gemt i denne browser. Send det til Postulo, når du er klar."
+  },
+  "alreadyKept": {
+    "message": "Du har allerede gemt denne side uden at sende den: dette er din version."
+  },
+  "nothingRead": {
+    "message": "Der kunne ikke læses noget på denne side. Udfyld det, du ved; intet forlader denne browser, før du sender det."
+  },
+  "waiting": {
+    "message": "Postulo kan ikke nås lige nu. Det gemmes i denne browser og sendes, så snart Postulo svarer."
+  },
+  "waitingOffline": {
+    "message": "Testkontakten er slået til, så det venter i denne browser. Det sendes, når kontakten er slået fra."
+  },
+  "waitingAccount": {
+    "message": "Det gemmes i denne browser og sendes, når det er rettet."
+  },
+  "sendNeedsSetup": {
+    "message": "Gemt i denne browser; det sendes, når din Postulo er sat op."
+  },
+  "capturesTitle": {
+    "message": "Indfangninger i denne browser"
+  },
+  "capturesIntro": {
+    "message": "Opslag, du har indfanget, gemt her, indtil de når din Postulo. Det, du sender, går af sted, så snart Postulo kan nås."
+  },
+  "nothingKept": {
+    "message": "Intet er gemt i denne browser."
+  },
+  "sendAll": {
+    "message": "Send alt, der ikke er sendt"
+  },
+  "clearSent": {
+    "message": "Ryd de sendte"
+  },
+  "stateKept": {
+    "message": "Ikke sendt"
+  },
+  "stateWaiting": {
+    "message": "Venter på Postulo"
+  },
+  "stateSent": {
+    "message": "Sendt"
+  },
+  "stateRefused": {
+    "message": "Afvist"
+  },
+  "tryNow": {
+    "message": "Prøv nu"
+  },
+  "holdBack": {
+    "message": "Behold det her i stedet"
+  },
+  "deleteConfirm": {
+    "message": "Slet denne indfangning? Den har ikke nået Postulo, så den findes kun her."
+  },
+  "troubleshooting": {
+    "message": "Test og fejlfinding"
+  },
+  "offlineLabel": {
+    "message": "Lad som om Postulo ikke kan nås"
+  },
+  "offlineHint": {
+    "message": "Til test. Mens den er slået til, sendes intet: indfangninger venter i denne browser, præcis som hvis Postulo var nede, og sendes, når den er slået fra."
+  },
+  "offlineOn": {
+    "message": "Testkontakten er slået til: intet sendes til Postulo."
+  },
+  "offlineOff": {
+    "message": "Testkontakten er slået fra: det, der venter, sendes nu til Postulo."
+  },
+  "downloadLog": {
+    "message": "Hent loggen"
+  },
+  "clearLog": {
+    "message": "Ryd loggen"
+  },
+  "logCleared": {
+    "message": "Loggen er tom."
+  },
+  "logHint": {
+    "message": "Hvad udvidelsen har gjort, så du kan finde ud af, hvorfor noget ikke virkede. Den indeholder ingen tokens og intet fra siderne."
+  },
+  "cancel": {
+    "message": "Annuller"
+  },
+  "delete": {
+    "message": "Slet"
+  },
+  "edit": {
+    "message": "Rediger"
   },
   "fieldTitle": {
     "message": "Jobtitel"

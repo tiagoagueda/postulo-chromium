@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Lähetä katsomasi työpaikkailmoitus omaan Postuloosi tarkistettavaksi. Mitään ei lähetetä muualle."
+    "message": "Kaappaa katsomasi työpaikkailmoitus, säilytä se selaimessasi ja lähetä se omaan Postuloosi tarkistettavaksi, kun itse haluat. Mitään ei lähetetä muualle."
   },
   "actionTitle": {
     "message": "Kaappaa tämä ilmoitus Postuloon"
   },
   "settings": {
     "message": "Asetukset"
-  },
-  "unconfigured": {
-    "message": "Kerro laajennukselle, missä Postulosi on ja mitä avainta se käyttää."
   },
   "setUp": {
     "message": "Määritä"
@@ -24,7 +21,7 @@
     "message": "Kaappaa tämä ilmoitus"
   },
   "captureHint": {
-    "message": "Katsomasi sivu lähetetään Postuloosi eikä minnekään muualle."
+    "message": "Sivu luetaan täällä, selaimessasi. Mitään ei lähetetä, ennen kuin sanot."
   },
   "review": {
     "message": "Tarkista Postulossa"
@@ -88,7 +85,7 @@
     "message": "Testaa"
   },
   "shortcutHint": {
-    "message": "Painikkeen tai $SHORTCUT$ painaminen lähettää katsomasi sivun Postuloosi tarkistettavaksi. Mitään sivua ei lueta ennen kuin pyydät, eikä mitään lähetetä muualle.",
+    "message": "Painikkeen tai $SHORTCUT$ painaminen lukee katsomasi sivun täällä selaimessa. Mitään sivua ei lueta ennen kuin pyydät, eikä mitään lähetetä minnekään muualle kuin omaan Postuloosi, kun sanot.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Sivua ei voitu lukea. Jotkin sivut estävät laajennukset."
   },
-  "previewing": {
-    "message": "Kysytään Postulolta, mitä se lukee tästä…"
-  },
   "reviewHint": {
-    "message": "Tämän Postulo luki sivulta. Korjaa virheet ennen lähettämistä."
+    "message": "Tämä luettiin sivulta. Korjaa virheet; mikään ei lähde tästä selaimesta ennen kuin lähetät sen."
   },
   "sendForReview": {
     "message": "Lähetä tarkistettavaksi"
+  },
+  "notConnected": {
+    "message": "Ei vielä yhteyttä mihinkään Postuloon: kaappaamasi säilytetään tässä selaimessa."
+  },
+  "keep": {
+    "message": "Säilytä tässä selaimessa"
+  },
+  "kept": {
+    "message": "Säilytetty tässä selaimessa. Lähetä se Postuloon, kun olet valmis."
+  },
+  "alreadyKept": {
+    "message": "Säilytit tämän sivun jo etkä ole lähettänyt sitä: tämä on sinun versiosi."
+  },
+  "nothingRead": {
+    "message": "Tältä sivulta ei voitu lukea mitään. Täytä, mitä tiedät; mikään ei lähde tästä selaimesta ennen kuin lähetät sen."
+  },
+  "waiting": {
+    "message": "Postuloa ei tavoiteta juuri nyt. Se säilytetään tässä selaimessa ja lähetetään heti, kun Postulo vastaa."
+  },
+  "waitingOffline": {
+    "message": "Testikytkin on päällä, joten se odottaa tässä selaimessa. Se lähtee, kun kytkin on pois päältä."
+  },
+  "waitingAccount": {
+    "message": "Se säilytetään tässä selaimessa ja lähetetään, kun asia on korjattu."
+  },
+  "sendNeedsSetup": {
+    "message": "Säilytetty tässä selaimessa; lähetetään, kun Postulosi on määritetty."
+  },
+  "capturesTitle": {
+    "message": "Kaappaukset tässä selaimessa"
+  },
+  "capturesIntro": {
+    "message": "Kaappaamasi ilmoitukset säilytetään täällä, kunnes ne päätyvät Postuloosi. Lähettämäsi lähtee heti, kun Postulo tavoitetaan."
+  },
+  "nothingKept": {
+    "message": "Tässä selaimessa ei ole säilytetty mitään."
+  },
+  "sendAll": {
+    "message": "Lähetä kaikki lähettämättömät"
+  },
+  "clearSent": {
+    "message": "Tyhjennä lähetetyt"
+  },
+  "stateKept": {
+    "message": "Ei lähetetty"
+  },
+  "stateWaiting": {
+    "message": "Odottaa Postuloa"
+  },
+  "stateSent": {
+    "message": "Lähetetty"
+  },
+  "stateRefused": {
+    "message": "Hylätty"
+  },
+  "tryNow": {
+    "message": "Yritä nyt"
+  },
+  "holdBack": {
+    "message": "Säilytä sittenkin täällä"
+  },
+  "deleteConfirm": {
+    "message": "Poistetaanko tämä kaappaus? Se ei ole päätynyt Postuloon, joten se on olemassa vain täällä."
+  },
+  "troubleshooting": {
+    "message": "Testaus ja vianmääritys"
+  },
+  "offlineLabel": {
+    "message": "Toimi kuin Postuloa ei tavoitettaisi"
+  },
+  "offlineHint": {
+    "message": "Testausta varten. Kun tämä on päällä, mitään ei lähetetä: kaappaukset odottavat tässä selaimessa aivan kuin Postulo olisi alhaalla, ja lähtevät, kun tämä on pois päältä."
+  },
+  "offlineOn": {
+    "message": "Testikytkin on päällä: Postuloon ei lähetetä mitään."
+  },
+  "offlineOff": {
+    "message": "Testikytkin on pois päältä: odottavat lähtevät nyt Postuloon."
+  },
+  "downloadLog": {
+    "message": "Lataa loki"
+  },
+  "clearLog": {
+    "message": "Tyhjennä loki"
+  },
+  "logCleared": {
+    "message": "Loki on tyhjä."
+  },
+  "logHint": {
+    "message": "Mitä laajennus teki, jotta selviää, miksi jokin ei toiminut. Siinä ei ole avainta eikä mitään sivujen sisällöstä."
+  },
+  "cancel": {
+    "message": "Peruuta"
+  },
+  "delete": {
+    "message": "Poista"
+  },
+  "edit": {
+    "message": "Muokkaa"
   },
   "fieldTitle": {
     "message": "Tehtävänimike"

@@ -6,7 +6,8 @@ import { JSDOM } from "jsdom";
 
 import { jsonLd, metadata, readPosting, slimPage, textOf } from "../src/lib/parse.js";
 
-const page = (head, body = "") => new JSDOM(`<!doctype html><html><head>${head}</head><body>${body}</body></html>`).window.document;
+const parse = (html) => new JSDOM(html).window.document;
+const page = (head, body = "") => parse(`<!doctype html><html><head>${head}</head><body>${body}</body></html>`);
 const ld = (object) => `<script type="application/ld+json">${JSON.stringify(object)}</script>`;
 const URL_ = "https://jobs.example.org/42";
 
@@ -29,7 +30,7 @@ const POSTING = {
 };
 
 test("a schema.org JobPosting is read into every field Postulo has", () => {
-  const read = readPosting(page(ld(POSTING)), URL_);
+  const read = readPosting(page(ld(POSTING)), URL_, parse);
   assert.equal(read.source, "schema.org");
   assert.deepEqual(read.data, {
     title: "Research Engineer",
@@ -55,13 +56,14 @@ test("JSON-LD comes as one object, a list, or an @graph, and a broken block spoi
       ld([{ "@type": "WebSite" }, { "@graph": [{ "@type": ["Thing", "JobPosting"], title: "In a graph" }] }]),
   );
   assert.equal(jsonLd(doc).length, 3);
-  assert.equal(readPosting(doc, URL_).data.title, "In a graph");
+  assert.equal(readPosting(doc, URL_, parse).data.title, "In a graph");
 });
 
 test("what cannot be determined is left empty, never guessed", () => {
   const read = readPosting(
     page(ld({ "@type": "JobPosting", title: "Just a title", baseSalary: { value: "competitive" }, validThrough: "soon" })),
     URL_,
+    parse,
   );
   assert.equal(read.data.salary_min, null);
   assert.equal(read.data.closes_at, null);
@@ -70,7 +72,7 @@ test("what cannot be determined is left empty, never guessed", () => {
 });
 
 test("a place is said once, and a genuine repetition is kept", () => {
-  const where = (address) => readPosting(page(ld({ "@type": "JobPosting", title: "T", jobLocation: { address } })), URL_).data.location;
+  const where = (address) => readPosting(page(ld({ "@type": "JobPosting", title: "T", jobLocation: { address } })), URL_, parse).data.location;
   assert.equal(where({ addressLocality: "New York", addressRegion: "York" }), "New York, York");
   assert.equal(where({ addressLocality: "Lyon", addressCountry: { name: "France" } }), "Lyon, France");
   assert.equal(where("12 Rue de la Paix, Paris"), "12 Rue de la Paix, Paris");
@@ -82,7 +84,7 @@ test("with no structured data, the declared title and the page's text are taken"
       "<style>p { color: red }</style>",
     "<nav>Menu</nav><h1>Senior Plumber</h1><p>Pipes,   mostly.</p><script>track()</script><p>Apply now.</p>",
   );
-  const read = readPosting(doc, URL_);
+  const read = readPosting(doc, URL_, parse);
   assert.equal(read.source, "page-metadata");
   assert.equal(read.data.title, "Senior Plumber");
   assert.equal(read.data.company_name, "Jobs & Co");
@@ -90,17 +92,17 @@ test("with no structured data, the declared title and the page's text are taken"
 });
 
 test("a JobPosting without a title falls through to the page's own", () => {
-  const read = readPosting(page(`<title>From the page</title>${ld({ "@type": "JobPosting", title: " " })}`), URL_);
+  const read = readPosting(page(`<title>From the page</title>${ld({ "@type": "JobPosting", title: " " })}`), URL_, parse);
   assert.equal(read.source, "page-metadata");
   assert.equal(read.data.title, "From the page");
 });
 
 test("a page that declares nothing reads as nothing", () => {
-  assert.equal(readPosting(page("", "<p>Hello</p>"), URL_), null);
+  assert.equal(readPosting(page("", "<p>Hello</p>"), URL_, parse), null);
 });
 
 test("fields are cut to what Postulo would accept, not refused", () => {
-  const read = readPosting(page(ld({ "@type": "JobPosting", title: "T".repeat(600), description: "x".repeat(50_000) })), URL_);
+  const read = readPosting(page(ld({ "@type": "JobPosting", title: "T".repeat(600), description: "x".repeat(50_000) })), URL_, parse);
   assert.equal(read.data.title.length, 500);
   assert.ok(read.data.description.endsWith("\n\n[…truncated]"));
   assert.equal(read.data.description.length, 40_000 + "\n\n[…truncated]".length);
@@ -125,5 +127,5 @@ test("the page kept is lighter but reads the same", () => {
   assert.ok(!slim.includes("app.js") && !slim.includes("big()") && !slim.includes("<style") && !slim.includes("<svg"));
   assert.ok(slim.includes("application/ld+json") && slim.includes("<title>Research Engineer</title>"));
   const again = new JSDOM(slim).window.document;
-  assert.deepEqual(readPosting(again, URL_), readPosting(doc, URL_));
+  assert.deepEqual(readPosting(again, URL_, parse), readPosting(doc, URL_, parse));
 });

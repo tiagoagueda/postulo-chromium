@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Envía a oferta de traballo que estás a ver ao teu propio Postulo, para revisala. Nada vai a ningures máis."
+    "message": "Captura a oferta de traballo que estás a ver, consérvaa no teu navegador e envíaa ao teu propio Postulo para revisala cando ti o digas. Nada vai a ningures máis."
   },
   "actionTitle": {
     "message": "Capturar esta oferta no Postulo"
   },
   "settings": {
     "message": "Configuración"
-  },
-  "unconfigured": {
-    "message": "Dille á extensión onde está o teu Postulo e que testemuño debe usar."
   },
   "setUp": {
     "message": "Configurala"
@@ -24,7 +21,7 @@
     "message": "Capturar esta oferta"
   },
   "captureHint": {
-    "message": "A páxina que estás a ver envíase ao teu Postulo e a ningures máis."
+    "message": "A páxina lese aquí, no teu navegador. Non se envía nada ata que ti o digas."
   },
   "review": {
     "message": "Revisala no Postulo"
@@ -88,7 +85,7 @@
     "message": "Probar"
   },
   "shortcutHint": {
-    "message": "Ao premer o botón, ou $SHORTCUT$, a páxina que estás a ver envíase ao teu Postulo para revisala. Non se le ningunha páxina ata que o pidas, e non se envía nada a ningures máis.",
+    "message": "Ao premer o botón, ou $SHORTCUT$, lese a páxina que estás a ver, aquí no navegador. Non se le ningunha páxina ata que o pidas, e non se envía nada a ningures agás ao teu propio Postulo, cando ti o digas.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Non se puido ler a páxina. Algunhas páxinas bloquean as extensións."
   },
-  "previewing": {
-    "message": "Preguntando a Postulo que le aquí…"
-  },
   "reviewHint": {
-    "message": "Isto é o que Postulo leu da páxina. Corrixe o que estea mal antes de envialo."
+    "message": "Isto é o que se leu da páxina. Corrixe o que estea mal; nada sae deste navegador ata que o envíes."
   },
   "sendForReview": {
     "message": "Enviar a revisión"
+  },
+  "notConnected": {
+    "message": "Aínda non hai ningún Postulo conectado: o que captures consérvase neste navegador."
+  },
+  "keep": {
+    "message": "Conservar neste navegador"
+  },
+  "kept": {
+    "message": "Conservada neste navegador. Envíaa ao Postulo cando queiras."
+  },
+  "alreadyKept": {
+    "message": "Xa conservaches esta páxina e non a enviaches: esta é a túa versión."
+  },
+  "nothingRead": {
+    "message": "Non se puido ler nada desta páxina. Enche o que saibas; nada sae deste navegador ata que o envíes."
+  },
+  "waiting": {
+    "message": "Agora mesmo non se pode chegar ao Postulo. Consérvase neste navegador e enviarase en canto o Postulo responda."
+  },
+  "waitingOffline": {
+    "message": "O interruptor de proba está activado, así que agarda neste navegador. Sairá cando o interruptor estea desactivado."
+  },
+  "waitingAccount": {
+    "message": "Consérvase neste navegador e enviarase en canto iso se arranxe."
+  },
+  "sendNeedsSetup": {
+    "message": "Conservada neste navegador, para enviala en canto o teu Postulo estea configurado."
+  },
+  "capturesTitle": {
+    "message": "Capturas neste navegador"
+  },
+  "capturesIntro": {
+    "message": "As ofertas que capturaches, conservadas aquí ata que cheguen ao teu Postulo. O que envías sae en canto se pode chegar ao Postulo."
+  },
+  "nothingKept": {
+    "message": "Non hai nada conservado neste navegador."
+  },
+  "sendAll": {
+    "message": "Enviar todo o non enviado"
+  },
+  "clearSent": {
+    "message": "Limpar as enviadas"
+  },
+  "stateKept": {
+    "message": "Sen enviar"
+  },
+  "stateWaiting": {
+    "message": "Agardando polo Postulo"
+  },
+  "stateSent": {
+    "message": "Enviada"
+  },
+  "stateRefused": {
+    "message": "Rexeitada"
+  },
+  "tryNow": {
+    "message": "Tentar agora"
+  },
+  "holdBack": {
+    "message": "Mellor conservala aquí"
+  },
+  "deleteConfirm": {
+    "message": "Queres borrar esta captura? Non chegou ao Postulo, así que só existe aquí."
+  },
+  "troubleshooting": {
+    "message": "Probas e resolución de problemas"
+  },
+  "offlineLabel": {
+    "message": "Actuar como se non se puidese chegar ao Postulo"
+  },
+  "offlineHint": {
+    "message": "Para probas. Mentres isto estea activado, non se envía nada: as capturas agardan neste navegador exactamente como farían co Postulo caído, e saen en canto se desactive."
+  },
+  "offlineOn": {
+    "message": "O interruptor de proba está activado: non se envía nada ao Postulo."
+  },
+  "offlineOff": {
+    "message": "O interruptor de proba está desactivado: o que agardaba vai agora ao Postulo."
+  },
+  "downloadLog": {
+    "message": "Descargar o rexistro"
+  },
+  "clearLog": {
+    "message": "Limpar o rexistro"
+  },
+  "logCleared": {
+    "message": "O rexistro está baleiro."
+  },
+  "logHint": {
+    "message": "O que fixo a extensión, para descubrir por que algo non funcionou. Non contén ningún testemuño nin nada das páxinas."
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "delete": {
+    "message": "Borrar"
+  },
+  "edit": {
+    "message": "Editar"
   },
   "fieldTitle": {
     "message": "Cargo"

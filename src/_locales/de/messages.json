@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Senden Sie die Stellenanzeige, die Sie gerade ansehen, zur Prüfung an Ihr eigenes Postulo. Nichts geht anderswohin."
+    "message": "Erfassen Sie die Stellenanzeige, die Sie gerade ansehen, bewahren Sie sie in Ihrem Browser auf und senden Sie sie zur Prüfung an Ihr eigenes Postulo, wenn Sie es sagen. Nichts geht anderswohin."
   },
   "actionTitle": {
     "message": "Diese Anzeige in Postulo erfassen"
   },
   "settings": {
     "message": "Einstellungen"
-  },
-  "unconfigured": {
-    "message": "Sagen Sie der Erweiterung, wo Ihr Postulo ist und welches Token sie verwenden soll."
   },
   "setUp": {
     "message": "Einrichten"
@@ -24,7 +21,7 @@
     "message": "Diese Anzeige erfassen"
   },
   "captureHint": {
-    "message": "Die Seite, die Sie ansehen, wird an Ihr Postulo gesendet und nirgendwohin sonst."
+    "message": "Die Seite wird hier in Ihrem Browser gelesen. Nichts wird gesendet, bevor Sie es sagen."
   },
   "review": {
     "message": "In Postulo prüfen"
@@ -88,7 +85,7 @@
     "message": "Testen"
   },
   "shortcutHint": {
-    "message": "Ein Klick auf die Schaltfläche oder $SHORTCUT$ sendet die Seite, die Sie ansehen, zur Prüfung an Ihr Postulo. Keine Seite wird gelesen, bevor Sie es verlangen, und nichts wird anderswohin gesendet.",
+    "message": "Ein Klick auf die Schaltfläche oder $SHORTCUT$ liest die Seite, die Sie ansehen, hier im Browser. Keine Seite wird gelesen, bevor Sie es verlangen, und nichts wird irgendwohin gesendet außer an Ihr eigenes Postulo, wenn Sie es sagen.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Die Seite konnte nicht gelesen werden. Manche Seiten blockieren Erweiterungen."
   },
-  "previewing": {
-    "message": "Postulo wird gefragt, was es hier liest…"
-  },
   "reviewHint": {
-    "message": "Das hat Postulo auf der Seite gelesen. Korrigieren Sie, was falsch ist, bevor Sie es senden."
+    "message": "Das wurde von der Seite gelesen. Korrigieren Sie, was falsch ist; nichts verlässt diesen Browser, bevor Sie es senden."
   },
   "sendForReview": {
     "message": "Zur Prüfung senden"
+  },
+  "notConnected": {
+    "message": "Noch mit keinem Postulo verbunden: Was Sie erfassen, wird in diesem Browser aufbewahrt."
+  },
+  "keep": {
+    "message": "In diesem Browser behalten"
+  },
+  "kept": {
+    "message": "In diesem Browser aufbewahrt. Senden Sie sie an Postulo, sobald Sie so weit sind."
+  },
+  "alreadyKept": {
+    "message": "Sie haben diese Seite schon aufbewahrt und noch nicht gesendet: Das ist Ihre Fassung."
+  },
+  "nothingRead": {
+    "message": "Von dieser Seite ließ sich nichts lesen. Füllen Sie aus, was Sie wissen; nichts verlässt diesen Browser, bevor Sie es senden."
+  },
+  "waiting": {
+    "message": "Postulo ist gerade nicht erreichbar. Die Erfassung wird in diesem Browser aufbewahrt und gesendet, sobald Postulo antwortet."
+  },
+  "waitingOffline": {
+    "message": "Der Testschalter ist an, deshalb wartet die Erfassung in diesem Browser. Sobald der Schalter aus ist, wird sie gesendet."
+  },
+  "waitingAccount": {
+    "message": "Die Erfassung wird in diesem Browser aufbewahrt und gesendet, sobald das behoben ist."
+  },
+  "sendNeedsSetup": {
+    "message": "In diesem Browser aufbewahrt; gesendet wird sie, sobald Ihr Postulo eingerichtet ist."
+  },
+  "capturesTitle": {
+    "message": "Erfassungen in diesem Browser"
+  },
+  "capturesIntro": {
+    "message": "Anzeigen, die Sie erfasst haben, hier aufbewahrt, bis sie Ihr Postulo erreichen. Was Sie senden, geht los, sobald Postulo erreichbar ist."
+  },
+  "nothingKept": {
+    "message": "In diesem Browser ist nichts aufbewahrt."
+  },
+  "sendAll": {
+    "message": "Alles Ungesendete senden"
+  },
+  "clearSent": {
+    "message": "Gesendete entfernen"
+  },
+  "stateKept": {
+    "message": "Nicht gesendet"
+  },
+  "stateWaiting": {
+    "message": "Wartet auf Postulo"
+  },
+  "stateSent": {
+    "message": "Gesendet"
+  },
+  "stateRefused": {
+    "message": "Abgelehnt"
+  },
+  "tryNow": {
+    "message": "Jetzt versuchen"
+  },
+  "holdBack": {
+    "message": "Doch hier behalten"
+  },
+  "deleteConfirm": {
+    "message": "Diese Erfassung löschen? Da sie Postulo nicht erreicht hat, gibt es sie nur hier."
+  },
+  "troubleshooting": {
+    "message": "Test und Fehlerbehebung"
+  },
+  "offlineLabel": {
+    "message": "So tun, als wäre Postulo nicht erreichbar"
+  },
+  "offlineHint": {
+    "message": "Zum Testen. Solange dies an ist, wird nichts gesendet: Erfassungen warten in diesem Browser genau so, als wäre Postulo ausgefallen, und gehen los, sobald es aus ist."
+  },
+  "offlineOn": {
+    "message": "Der Testschalter ist an: Nichts wird an Postulo gesendet."
+  },
+  "offlineOff": {
+    "message": "Der Testschalter ist aus: Was wartet, geht jetzt an Postulo."
+  },
+  "downloadLog": {
+    "message": "Protokoll herunterladen"
+  },
+  "clearLog": {
+    "message": "Protokoll leeren"
+  },
+  "logCleared": {
+    "message": "Das Protokoll ist leer."
+  },
+  "logHint": {
+    "message": "Was die Erweiterung getan hat, um herauszufinden, warum etwas nicht funktioniert hat. Es enthält kein Token und nichts von den Seiten."
+  },
+  "cancel": {
+    "message": "Abbrechen"
+  },
+  "delete": {
+    "message": "Löschen"
+  },
+  "edit": {
+    "message": "Bearbeiten"
   },
   "fieldTitle": {
     "message": "Stellenbezeichnung"

@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Seol an fógra poist atá á fheiceáil agat chuig do Postulo féin, lena athbhreithniú. Ní théann aon rud áit ar bith eile."
+    "message": "Gabh an fógra poist atá á fheiceáil agat, coinnigh i do bhrabhsálaí é, agus seol chuig do Postulo féin é lena athbhreithniú nuair a deir tú é. Ní théann aon rud áit ar bith eile."
   },
   "actionTitle": {
     "message": "Gabh an fógra seo in Postulo"
   },
   "settings": {
     "message": "Socruithe"
-  },
-  "unconfigured": {
-    "message": "Inis don síneadh cá bhfuil do Postulo agus cén comhartha le húsáid."
   },
   "setUp": {
     "message": "Socraigh é"
@@ -24,7 +21,7 @@
     "message": "Gabh an fógra seo"
   },
   "captureHint": {
-    "message": "Seoltar an leathanach atá á fheiceáil agat chuig do Postulo agus ní chuig áit ar bith eile."
+    "message": "Léitear an leathanach anseo, i do bhrabhsálaí. Ní sheoltar aon rud go dtí go ndeir tú é."
   },
   "review": {
     "message": "Athbhreithnigh in Postulo"
@@ -88,7 +85,7 @@
     "message": "Tástáil"
   },
   "shortcutHint": {
-    "message": "Nuair a bhrúnn tú an cnaipe, nó $SHORTCUT$, seoltar an leathanach atá á fheiceáil agat chuig do Postulo lena athbhreithniú. Ní léitear aon leathanach go n-iarrann tú é, agus ní sheoltar aon rud áit ar bith eile.",
+    "message": "Nuair a bhrúnn tú an cnaipe, nó $SHORTCUT$, léitear an leathanach atá á fheiceáil agat, anseo sa bhrabhsálaí. Ní léitear aon leathanach go n-iarrann tú é, agus ní sheoltar aon rud áit ar bith ach chuig do Postulo féin, nuair a deir tú é.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Níorbh fhéidir an leathanach a léamh. Cuireann roinnt leathanach bac ar shínte."
   },
-  "previewing": {
-    "message": "Ag fiafraí de Postulo cad a léann sé anseo…"
-  },
   "reviewHint": {
-    "message": "Seo an méid a léigh Postulo ón leathanach. Ceartaigh aon rud atá mícheart sula seolfaidh tú é."
+    "message": "Seo an méid a léadh ón leathanach. Ceartaigh aon rud atá mícheart; ní fhágann aon rud an brabhsálaí seo go dtí go seolann tú é."
   },
   "sendForReview": {
     "message": "Seol le haghaidh athbhreithnithe"
+  },
+  "notConnected": {
+    "message": "Níl tú ceangailte le Postulo fós: coinnítear a ngabhann tú sa bhrabhsálaí seo."
+  },
+  "keep": {
+    "message": "Coinnigh anseo"
+  },
+  "kept": {
+    "message": "Coinnithe sa bhrabhsálaí seo. Seol chuig Postulo é nuair atá tú réidh."
+  },
+  "alreadyKept": {
+    "message": "Choinnigh tú an leathanach seo cheana agus níor sheol tú é: seo do leagan féin."
+  },
+  "nothingRead": {
+    "message": "Níorbh fhéidir aon rud a léamh ón leathanach seo. Líon isteach a bhfuil ar eolas agat; ní fhágann aon rud an brabhsálaí seo go dtí go seolann tú é."
+  },
+  "waiting": {
+    "message": "Ní féidir Postulo a bhaint amach faoi láthair. Coinnítear sa bhrabhsálaí seo é agus seolfar é chomh luath agus a fhreagraíonn Postulo."
+  },
+  "waitingOffline": {
+    "message": "Tá an lasc tástála ar siúl, mar sin fanann sé sa bhrabhsálaí seo. Imeoidh sé nuair a bheidh an lasc múchta."
+  },
+  "waitingAccount": {
+    "message": "Coinnítear sa bhrabhsálaí seo é agus seolfar é nuair a bheidh sé sin réitithe."
+  },
+  "sendNeedsSetup": {
+    "message": "Coinnithe sa bhrabhsálaí seo, le seoladh nuair a bheidh do Postulo socraithe."
+  },
+  "capturesTitle": {
+    "message": "Gabhálacha sa bhrabhsálaí seo"
+  },
+  "capturesIntro": {
+    "message": "Fógraí a ghabh tú, coinnithe anseo go dtí go sroicheann siad do Postulo. An méid a sheolann tú, imíonn sé chomh luath agus is féidir Postulo a bhaint amach."
+  },
+  "nothingKept": {
+    "message": "Níl aon rud coinnithe sa bhrabhsálaí seo."
+  },
+  "sendAll": {
+    "message": "Seol gach rud nár seoladh"
+  },
+  "clearSent": {
+    "message": "Glan na cinn a seoladh"
+  },
+  "stateKept": {
+    "message": "Gan seoladh"
+  },
+  "stateWaiting": {
+    "message": "Ag fanacht le Postulo"
+  },
+  "stateSent": {
+    "message": "Seolta"
+  },
+  "stateRefused": {
+    "message": "Diúltaithe"
+  },
+  "tryNow": {
+    "message": "Bain triail as anois"
+  },
+  "holdBack": {
+    "message": "Coinnigh anseo é"
+  },
+  "deleteConfirm": {
+    "message": "An ghabháil seo a scriosadh? Níor shroich sí Postulo, mar sin níl sí ann ach anseo."
+  },
+  "troubleshooting": {
+    "message": "Tástáil agus réiteach fadhbanna"
+  },
+  "offlineLabel": {
+    "message": "Lig ort nach féidir Postulo a bhaint amach"
+  },
+  "offlineHint": {
+    "message": "Le haghaidh tástála. Fad atá sé seo ar siúl, ní sheoltar aon rud: fanann gabhálacha sa bhrabhsálaí seo díreach mar a d'fhanfaidís dá mbeadh Postulo as feidhm, agus imíonn siad nuair a mhúchtar é."
+  },
+  "offlineOn": {
+    "message": "Tá an lasc tástála ar siúl: ní sheoltar aon rud chuig Postulo."
+  },
+  "offlineOff": {
+    "message": "Tá an lasc tástála múchta: téann a bhfuil ag fanacht chuig Postulo anois."
+  },
+  "downloadLog": {
+    "message": "Íoslódáil an loga"
+  },
+  "clearLog": {
+    "message": "Glan an loga"
+  },
+  "logCleared": {
+    "message": "Tá an loga folamh."
+  },
+  "logHint": {
+    "message": "An méid a rinne an síneadh, le fáil amach cén fáth nár oibrigh rud éigin. Níl aon chomhartha ann ná aon rud ó na leathanaigh."
+  },
+  "cancel": {
+    "message": "Cealaigh"
+  },
+  "delete": {
+    "message": "Scrios"
+  },
+  "edit": {
+    "message": "Cuir in eagar"
   },
   "fieldTitle": {
     "message": "Teideal poist"

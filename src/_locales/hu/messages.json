@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Küldje el a megtekintett álláshirdetést saját Postulójába ellenőrzésre. Semmi sem kerül máshová."
+    "message": "Rögzítse a megtekintett álláshirdetést, őrizze meg a böngészőjében, és küldje el ellenőrzésre a saját Postulo-példányába, amikor úgy dönt. Semmi sem kerül máshová."
   },
   "actionTitle": {
     "message": "A hirdetés rögzítése a Postulóban"
   },
   "settings": {
     "message": "Beállítások"
-  },
-  "unconfigured": {
-    "message": "Adja meg a bővítménynek, hol érhető el a Postulója, és melyik tokent használja."
   },
   "setUp": {
     "message": "Beállítás"
@@ -24,7 +21,7 @@
     "message": "A hirdetés rögzítése"
   },
   "captureHint": {
-    "message": "A megtekintett oldal a Postulójába kerül, és sehová máshová."
+    "message": "Az oldal beolvasása itt, a böngészőjében történik. Semmit sem küld el, amíg Ön nem szól."
   },
   "review": {
     "message": "Ellenőrzés a Postulóban"
@@ -88,7 +85,7 @@
     "message": "Teszt"
   },
   "shortcutHint": {
-    "message": "A gomb vagy a(z) $SHORTCUT$ megnyomásával a megtekintett oldal ellenőrzésre a Postulójába kerül. Egyetlen oldalt sem olvas be, amíg nem kéri, és semmit sem küld máshová.",
+    "message": "A gomb vagy a(z) $SHORTCUT$ megnyomásával a megtekintett oldal beolvasása itt, a böngészőben történik. Egyetlen oldalt sem olvas be, amíg nem kéri, és semmit sem küld máshová, csak a saját Postulo-példányába, amikor Ön szól.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Az oldalt nem sikerült beolvasni. Egyes oldalak letiltják a bővítményeket."
   },
-  "previewing": {
-    "message": "Megkérdezzük a Postulót, mit olvas itt…"
-  },
   "reviewHint": {
-    "message": "Ezt olvasta ki a Postulo az oldalból. Javítsa ki, ami hibás, mielőtt elküldi."
+    "message": "Ezt olvasta be az oldalról. Javítsa ki, ami hibás; semmi sem hagyja el ezt a böngészőt, amíg el nem küldi."
   },
   "sendForReview": {
     "message": "Küldés ellenőrzésre"
+  },
+  "notConnected": {
+    "message": "Még nincs csatlakoztatott Postulo: amit rögzít, azt ez a böngésző őrzi meg."
+  },
+  "keep": {
+    "message": "Megőrzés itt"
+  },
+  "kept": {
+    "message": "Megőrizve ebben a böngészőben. Küldje el a Postulo részére, amikor készen áll."
+  },
+  "alreadyKept": {
+    "message": "Ezt az oldalt már megőrizte, és még nem küldte el: ez az Ön változata."
+  },
+  "nothingRead": {
+    "message": "Erről az oldalról semmit sem sikerült beolvasni. Töltse ki, amit tud; semmi sem hagyja el ezt a böngészőt, amíg el nem küldi."
+  },
+  "waiting": {
+    "message": "A Postulo most nem érhető el. Ebben a böngészőben marad, és elmegy, amint a Postulo válaszol."
+  },
+  "waitingOffline": {
+    "message": "A tesztkapcsoló be van kapcsolva, ezért ebben a böngészőben vár. A kapcsoló kikapcsolása után elmegy."
+  },
+  "waitingAccount": {
+    "message": "Ebben a böngészőben marad, és elmegy, amint ez rendeződik."
+  },
+  "sendNeedsSetup": {
+    "message": "Megőrizve ebben a böngészőben; elmegy, amint beállítja a Postulo-kapcsolatot."
+  },
+  "capturesTitle": {
+    "message": "Rögzítések ebben a böngészőben"
+  },
+  "capturesIntro": {
+    "message": "Az Ön által rögzített hirdetések, amelyek itt maradnak, amíg el nem jutnak a Postulójába. Amit elküld, az elmegy, amint a Postulo elérhető."
+  },
+  "nothingKept": {
+    "message": "Ebben a böngészőben semmi sincs megőrizve."
+  },
+  "sendAll": {
+    "message": "Az összes hátralévő elküldése"
+  },
+  "clearSent": {
+    "message": "Az elküldöttek eltávolítása"
+  },
+  "stateKept": {
+    "message": "Nincs elküldve"
+  },
+  "stateWaiting": {
+    "message": "Postulo válaszára vár"
+  },
+  "stateSent": {
+    "message": "Elküldve"
+  },
+  "stateRefused": {
+    "message": "Elutasítva"
+  },
+  "tryNow": {
+    "message": "Küldés most"
+  },
+  "holdBack": {
+    "message": "Inkább maradjon itt"
+  },
+  "deleteConfirm": {
+    "message": "Törli ezt a rögzítést? Még nem kapta meg a Postulo, így csak itt létezik."
+  },
+  "troubleshooting": {
+    "message": "Tesztelés és hibaelhárítás"
+  },
+  "offlineLabel": {
+    "message": "A Postulo elérhetetlenségének szimulálása"
+  },
+  "offlineHint": {
+    "message": "Teszteléshez. Amíg be van kapcsolva, semmi sem megy el: a rögzítések pontosan úgy várnak ebben a böngészőben, mintha a Postulo nem működne, és kikapcsolás után elmennek."
+  },
+  "offlineOn": {
+    "message": "A tesztkapcsoló be van kapcsolva: a Postulo semmit sem kap meg."
+  },
+  "offlineOff": {
+    "message": "A tesztkapcsoló ki van kapcsolva: ami várakozott, azt most megkapja a Postulo."
+  },
+  "downloadLog": {
+    "message": "A napló letöltése"
+  },
+  "clearLog": {
+    "message": "A napló ürítése"
+  },
+  "logCleared": {
+    "message": "A napló üres."
+  },
+  "logHint": {
+    "message": "A bővítmény tevékenysége, hogy kideríthesse, miért nem működött valami. Nem tartalmaz tokent, és semmit sem az oldalakról."
+  },
+  "cancel": {
+    "message": "Mégse"
+  },
+  "delete": {
+    "message": "Törlés"
+  },
+  "edit": {
+    "message": "Szerkesztés"
   },
   "fieldTitle": {
     "message": "Munkakör"

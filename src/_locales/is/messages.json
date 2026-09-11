@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Sendu starfsauglýsinguna sem þú ert að skoða í þitt eigið Postulo, til yfirferðar. Ekkert fer neitt annað."
+    "message": "Gríptu starfsauglýsinguna sem þú ert að skoða, geymdu hana í vafranum þínum og sendu hana í þitt eigið Postulo til yfirferðar þegar þú segir til. Ekkert fer neitt annað."
   },
   "actionTitle": {
     "message": "Grípa þessa auglýsingu í Postulo"
   },
   "settings": {
     "message": "Stillingar"
-  },
-  "unconfigured": {
-    "message": "Segðu viðbótinni hvar Postulo-ið þitt er og hvaða teikn hún á að nota."
   },
   "setUp": {
     "message": "Setja upp"
@@ -24,7 +21,7 @@
     "message": "Grípa þessa auglýsingu"
   },
   "captureHint": {
-    "message": "Síðan sem þú ert að skoða er send í Postulo-ið þitt og hvergi annað."
+    "message": "Síðan er lesin hér, í vafranum þínum. Ekkert er sent fyrr en þú segir til."
   },
   "review": {
     "message": "Fara yfir í Postulo"
@@ -88,7 +85,7 @@
     "message": "Prófa"
   },
   "shortcutHint": {
-    "message": "Með því að ýta á hnappinn, eða $SHORTCUT$, er síðan sem þú ert að skoða send í Postulo-ið þitt til yfirferðar. Engin síða er lesin fyrr en þú biður um það, og ekkert er sent neitt annað.",
+    "message": "Með því að ýta á hnappinn, eða $SHORTCUT$, er síðan sem þú ert að skoða lesin hér í vafranum. Engin síða er lesin fyrr en þú biður um það, og ekkert er sent neitt nema í þitt eigið Postulo, þegar þú segir til.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Ekki tókst að lesa síðuna. Sumar síður loka á viðbætur."
   },
-  "previewing": {
-    "message": "Spyr Postulo hvað það les hér…"
-  },
   "reviewHint": {
-    "message": "Þetta las Postulo af síðunni. Leiðréttu það sem er rangt áður en þú sendir það."
+    "message": "Þetta var lesið af síðunni. Leiðréttu það sem er rangt; ekkert fer úr þessum vafra fyrr en þú sendir það."
   },
   "sendForReview": {
     "message": "Senda til yfirferðar"
+  },
+  "notConnected": {
+    "message": "Ekki enn tengt við Postulo: það sem þú grípur er geymt í þessum vafra."
+  },
+  "keep": {
+    "message": "Geyma í þessum vafra"
+  },
+  "kept": {
+    "message": "Geymt í þessum vafra. Sendu það í Postulo þegar þér hentar."
+  },
+  "alreadyKept": {
+    "message": "Þú geymdir þessa síðu áður og hefur ekki sent hana: þetta er þín útgáfa."
+  },
+  "nothingRead": {
+    "message": "Ekkert var hægt að lesa af þessari síðu. Fylltu út það sem þú veist; ekkert fer úr þessum vafra fyrr en þú sendir það."
+  },
+  "waiting": {
+    "message": "Ekki næst í Postulo í augnablikinu. Það er geymt í þessum vafra og sent um leið og Postulo svarar."
+  },
+  "waitingOffline": {
+    "message": "Kveikt er á prófunarrofanum, svo það bíður í þessum vafra. Það fer þegar slökkt hefur verið á rofanum."
+  },
+  "waitingAccount": {
+    "message": "Það er geymt í þessum vafra og sent þegar það hefur verið lagað."
+  },
+  "sendNeedsSetup": {
+    "message": "Geymt í þessum vafra, verður sent þegar Postulo-ið þitt hefur verið sett upp."
+  },
+  "capturesTitle": {
+    "message": "Grípur í þessum vafra"
+  },
+  "capturesIntro": {
+    "message": "Auglýsingar sem þú greipst, geymdar hér þar til þær berast í Postulo-ið þitt. Það sem þú sendir fer um leið og næst í Postulo."
+  },
+  "nothingKept": {
+    "message": "Ekkert er geymt í þessum vafra."
+  },
+  "sendAll": {
+    "message": "Senda allt ósent"
+  },
+  "clearSent": {
+    "message": "Hreinsa út sendar"
+  },
+  "stateKept": {
+    "message": "Ósent"
+  },
+  "stateWaiting": {
+    "message": "Bíður eftir Postulo"
+  },
+  "stateSent": {
+    "message": "Sent"
+  },
+  "stateRefused": {
+    "message": "Hafnað"
+  },
+  "tryNow": {
+    "message": "Reyna núna"
+  },
+  "holdBack": {
+    "message": "Geyma hér frekar"
+  },
+  "deleteConfirm": {
+    "message": "Eyða þessari grípu? Hún hefur ekki borist í Postulo, svo hún er aðeins til hér."
+  },
+  "troubleshooting": {
+    "message": "Prófanir og bilanaleit"
+  },
+  "offlineLabel": {
+    "message": "Láta sem ekki náist í Postulo"
+  },
+  "offlineHint": {
+    "message": "Til prófunar. Á meðan kveikt er á þessu er ekkert sent: grípur bíða í þessum vafra nákvæmlega eins og þær myndu gera ef Postulo lægi niðri, og fara þegar slökkt er á þessu."
+  },
+  "offlineOn": {
+    "message": "Kveikt er á prófunarrofanum: ekkert er sent í Postulo."
+  },
+  "offlineOff": {
+    "message": "Slökkt er á prófunarrofanum: það sem bíður fer nú í Postulo."
+  },
+  "downloadLog": {
+    "message": "Sækja atvikaskrána"
+  },
+  "clearLog": {
+    "message": "Hreinsa atvikaskrána"
+  },
+  "logCleared": {
+    "message": "Atvikaskráin er tóm."
+  },
+  "logHint": {
+    "message": "Hvað viðbótin gerði, til að komast að því hvers vegna eitthvað virkaði ekki. Hún geymir ekkert teikn og ekkert af síðunum."
+  },
+  "cancel": {
+    "message": "Hætta við"
+  },
+  "delete": {
+    "message": "Eyða"
+  },
+  "edit": {
+    "message": "Breyta"
   },
   "fieldTitle": {
     "message": "Starfsheiti"

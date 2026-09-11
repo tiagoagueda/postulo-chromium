@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Dërgojeni shpalljen e punës që po shikoni te Postulo-ja juaj, për shqyrtim. Asgjë nuk shkon gjetkë."
+    "message": "Kapeni shpalljen e punës që po shikoni, mbajeni në shfletuesin tuaj dhe dërgojeni te Postulo-ja juaj për shqyrtim kur ta thoni ju. Asgjë nuk shkon gjetkë."
   },
   "actionTitle": {
     "message": "Kape këtë shpallje në Postulo"
   },
   "settings": {
     "message": "Cilësimet"
-  },
-  "unconfigured": {
-    "message": "I tregoni zgjerimit ku është Postulo-ja juaj dhe cilin token të përdorë."
   },
   "setUp": {
     "message": "Konfigurojeni"
@@ -24,7 +21,7 @@
     "message": "Kape këtë shpallje"
   },
   "captureHint": {
-    "message": "Faqja që po shikoni i dërgohet Postulo-së suaj dhe askund tjetër."
+    "message": "Faqja lexohet këtu, në shfletuesin tuaj. Asgjë nuk dërgohet derisa ta thoni ju."
   },
   "review": {
     "message": "Shqyrtojeni në Postulo"
@@ -88,7 +85,7 @@
     "message": "Testo"
   },
   "shortcutHint": {
-    "message": "Duke shtypur butonin, ose $SHORTCUT$, faqja që po shikoni i dërgohet Postulo-së suaj për shqyrtim. Asnjë faqe nuk lexohet derisa ta kërkoni, dhe asgjë nuk dërgohet gjetkë.",
+    "message": "Duke shtypur butonin, ose $SHORTCUT$, faqja që po shikoni lexohet këtu, në shfletues. Asnjë faqe nuk lexohet derisa ta kërkoni, dhe asgjë nuk dërgohet askund tjetër veçse te Postulo-ja juaj, kur ta thoni ju.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Faqja nuk mund të lexohej. Disa faqe i bllokojnë zgjerimet."
   },
-  "previewing": {
-    "message": "Po pyetet Postulo se çfarë lexon këtu…"
-  },
   "reviewHint": {
-    "message": "Kjo është ajo që Postulo lexoi nga faqja. Korrigjoni çdo gabim para se ta dërgoni."
+    "message": "Kjo është ajo që u lexua nga faqja. Korrigjoni çdo gabim; asgjë nuk del nga ky shfletues derisa ta dërgoni."
   },
   "sendForReview": {
     "message": "Dërgoje për shqyrtim"
+  },
+  "notConnected": {
+    "message": "Ende nuk jeni lidhur me një Postulo: ato që kapni mbahen në këtë shfletues."
+  },
+  "keep": {
+    "message": "Mbaje në këtë shfletues"
+  },
+  "kept": {
+    "message": "U mbajt në këtë shfletues. Dërgojeni te Postulo kur të jeni gati."
+  },
+  "alreadyKept": {
+    "message": "Këtë faqe e keni mbajtur tashmë dhe nuk e keni dërguar: ky është versioni juaj."
+  },
+  "nothingRead": {
+    "message": "Nga kjo faqe nuk mund të lexohej asgjë. Plotësoni atë që dini; asgjë nuk del nga ky shfletues derisa ta dërgoni."
+  },
+  "waiting": {
+    "message": "Postulo nuk mund të arrihet tani. Mbahet në këtë shfletues dhe dërgohet sapo Postulo të përgjigjet."
+  },
+  "waitingOffline": {
+    "message": "Çelësi i testimit është i ndezur, prandaj pret në këtë shfletues. Dërgohet sapo çelësi të fiket."
+  },
+  "waitingAccount": {
+    "message": "Mbahet në këtë shfletues dhe dërgohet sapo kjo të rregullohet."
+  },
+  "sendNeedsSetup": {
+    "message": "U mbajt në këtë shfletues, për t'u dërguar sapo Postulo-ja juaj të konfigurohet."
+  },
+  "capturesTitle": {
+    "message": "Kapjet në këtë shfletues"
+  },
+  "capturesIntro": {
+    "message": "Shpalljet që keni kapur, të mbajtura këtu derisa të arrijnë te Postulo-ja juaj. Ajo që dërgoni shkon sapo Postulo të mund të arrihet."
+  },
+  "nothingKept": {
+    "message": "Asgjë nuk mbahet në këtë shfletues."
+  },
+  "sendAll": {
+    "message": "Dërgo gjithçka të padërguar"
+  },
+  "clearSent": {
+    "message": "Pastro të dërguarat"
+  },
+  "stateKept": {
+    "message": "E padërguar"
+  },
+  "stateWaiting": {
+    "message": "Në pritje të Postulo-s"
+  },
+  "stateSent": {
+    "message": "E dërguar"
+  },
+  "stateRefused": {
+    "message": "E refuzuar"
+  },
+  "tryNow": {
+    "message": "Provo tani"
+  },
+  "holdBack": {
+    "message": "Mbaje këtu"
+  },
+  "deleteConfirm": {
+    "message": "Ta fshini këtë kapje? Nuk ka arritur te Postulo, prandaj ekziston vetëm këtu."
+  },
+  "troubleshooting": {
+    "message": "Testimi dhe zgjidhja e problemeve"
+  },
+  "offlineLabel": {
+    "message": "Vepro sikur Postulo të mos mund të arrihet"
+  },
+  "offlineHint": {
+    "message": "Për testim. Sa kohë që kjo është e ndezur, asgjë nuk dërgohet: kapjet presin në këtë shfletues njësoj siç do të prisnin me Postulo-n jashtë funksionit, dhe shkojnë sapo të fiket."
+  },
+  "offlineOn": {
+    "message": "Çelësi i testimit është i ndezur: asgjë nuk i dërgohet Postulo-s."
+  },
+  "offlineOff": {
+    "message": "Çelësi i testimit është i fikur: ato që presin shkojnë tani te Postulo."
+  },
+  "downloadLog": {
+    "message": "Shkarko regjistrin"
+  },
+  "clearLog": {
+    "message": "Pastro regjistrin"
+  },
+  "logCleared": {
+    "message": "Regjistri është bosh."
+  },
+  "logHint": {
+    "message": "Çfarë bëri zgjerimi, për të gjetur pse diçka nuk funksionoi. Nuk përmban asnjë token dhe asgjë nga faqet."
+  },
+  "cancel": {
+    "message": "Anulo"
+  },
+  "delete": {
+    "message": "Fshi"
+  },
+  "edit": {
+    "message": "Redakto"
   },
   "fieldTitle": {
     "message": "Titulli i punës"

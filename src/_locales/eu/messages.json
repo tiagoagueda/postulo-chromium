@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Bidali ikusten ari zaren lan-iragarkia zure Postulora, berrikus dezazun. Ez da beste inora joaten."
+    "message": "Harrapatu ikusten ari zaren lan-iragarkia, gorde zure nabigatzailean eta bidali zure Postulora berrikusteko, zuk esaten duzunean. Ez da beste inora joaten."
   },
   "actionTitle": {
     "message": "Harrapatu iragarki hau Postulon"
   },
   "settings": {
     "message": "Ezarpenak"
-  },
-  "unconfigured": {
-    "message": "Esaiozu hedapenari non dagoen zure Postulo eta zein token erabili behar duen."
   },
   "setUp": {
     "message": "Konfiguratu"
@@ -24,7 +21,7 @@
     "message": "Harrapatu iragarki hau"
   },
   "captureHint": {
-    "message": "Ikusten ari zaren orria zure Postulora bidaltzen da, eta ez beste inora."
+    "message": "Orria hemen irakurtzen da, zure nabigatzailean. Ez da ezer bidaltzen zuk esan arte."
   },
   "review": {
     "message": "Berrikusi Postulon"
@@ -88,7 +85,7 @@
     "message": "Probatu"
   },
   "shortcutHint": {
-    "message": "Botoia edo $SHORTCUT$ sakatuta, ikusten ari zaren orria zure Postulora bidaltzen da berrikusteko. Ez da orririk irakurtzen eskatu arte, eta ez da ezer beste inora bidaltzen.",
+    "message": "Botoia edo $SHORTCUT$ sakatuta, ikusten ari zaren orria hemen irakurtzen da, nabigatzailean. Ez da orririk irakurtzen eskatu arte, eta zuk esaten duzunean bakarrik bidaltzen da, zure Postulora eta ez beste inora.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Ezin izan da orria irakurri. Orri batzuek hedapenak blokeatzen dituzte."
   },
-  "previewing": {
-    "message": "Postulori galdetzen hemen zer irakurtzen duen…"
-  },
   "reviewHint": {
-    "message": "Hau da Postulok orritik irakurri duena. Zuzendu gaizki dagoena bidali aurretik."
+    "message": "Hau da orritik irakurri dena. Zuzendu gaizki dagoena; ez da ezer nabigatzaile honetatik ateratzen zuk bidali arte."
   },
   "sendForReview": {
     "message": "Bidali berrikusteko"
+  },
+  "notConnected": {
+    "message": "Oraindik ez dago Postulorik konektatuta: harrapatzen duzuna nabigatzaile honetan gordetzen da."
+  },
+  "keep": {
+    "message": "Gorde nabigatzaile honetan"
+  },
+  "kept": {
+    "message": "Nabigatzaile honetan gordeta. Bidali Postulora prest zaudenean."
+  },
+  "alreadyKept": {
+    "message": "Orri hau lehendik gorde zenuen eta ez duzu bidali: hau da zure bertsioa."
+  },
+  "nothingRead": {
+    "message": "Ezin izan da ezer irakurri orri honetatik. Bete dakizuna; ez da ezer nabigatzaile honetatik ateratzen zuk bidali arte."
+  },
+  "waiting": {
+    "message": "Orain ezin da Postulora iritsi. Nabigatzaile honetan gordetzen da, eta Postulok erantzun bezain laster bidaliko da."
+  },
+  "waitingOffline": {
+    "message": "Proba-etengailua piztuta dago, beraz nabigatzaile honetan zain dago. Etengailua itzaltzean joango da."
+  },
+  "waitingAccount": {
+    "message": "Nabigatzaile honetan gordetzen da, eta hori konpondu bezain laster bidaliko da."
+  },
+  "sendNeedsSetup": {
+    "message": "Nabigatzaile honetan gordeta, zure Postulo konfiguratu bezain laster bidaltzeko."
+  },
+  "capturesTitle": {
+    "message": "Harrapaketak nabigatzaile honetan"
+  },
+  "capturesIntro": {
+    "message": "Harrapatu dituzun iragarkiak, hemen gordeta zure Postulora iritsi arte. Bidaltzen duzuna Postulora iritsi daitekeen bezain laster joaten da."
+  },
+  "nothingKept": {
+    "message": "Ez dago ezer gordeta nabigatzaile honetan."
+  },
+  "sendAll": {
+    "message": "Bidali bidali gabeko guztiak"
+  },
+  "clearSent": {
+    "message": "Garbitu bidalitakoak"
+  },
+  "stateKept": {
+    "message": "Bidali gabe"
+  },
+  "stateWaiting": {
+    "message": "Postuloren zain"
+  },
+  "stateSent": {
+    "message": "Bidalita"
+  },
+  "stateRefused": {
+    "message": "Ukatuta"
+  },
+  "tryNow": {
+    "message": "Saiatu orain"
+  },
+  "holdBack": {
+    "message": "Gorde hemen, ez bidali"
+  },
+  "deleteConfirm": {
+    "message": "Harrapaketa hau ezabatu? Ez da Postulora iritsi, beraz hemen bakarrik dago."
+  },
+  "troubleshooting": {
+    "message": "Probak eta arazoen konponketa"
+  },
+  "offlineLabel": {
+    "message": "Jokatu Postulora iritsi ezin balitz bezala"
+  },
+  "offlineHint": {
+    "message": "Probak egiteko. Piztuta dagoen bitartean, ez da ezer bidaltzen: harrapaketak nabigatzaile honetan zain geratzen dira, Postulo erorita balego bezala hain zuzen, eta itzaltzean joaten dira."
+  },
+  "offlineOn": {
+    "message": "Proba-etengailua piztuta dago: ez da ezer bidaltzen Postulora."
+  },
+  "offlineOff": {
+    "message": "Proba-etengailua itzalita dago: zain zegoena Postulora doa orain."
+  },
+  "downloadLog": {
+    "message": "Deskargatu erregistroa"
+  },
+  "clearLog": {
+    "message": "Garbitu erregistroa"
+  },
+  "logCleared": {
+    "message": "Erregistroa hutsik dago."
+  },
+  "logHint": {
+    "message": "Hedapenak egin duena, zerbaitek zergatik ez duen funtzionatu jakiteko. Ez du tokenik gordetzen, ezta orrietako ezer ere."
+  },
+  "cancel": {
+    "message": "Utzi"
+  },
+  "delete": {
+    "message": "Ezabatu"
+  },
+  "edit": {
+    "message": "Editatu"
   },
   "fieldTitle": {
     "message": "Lanpostuaren izena"

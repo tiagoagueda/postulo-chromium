@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Ibgħat l-avviż tax-xogħol li qed tħares lejh lill-Postulo tiegħek, biex tirrevedih. Xejn ma jmur x'imkien ieħor."
+    "message": "Aqbad l-avviż tax-xogħol li qed tħares lejh, żommu fil-brawżer tiegħek, u ibagħtu lill-Postulo tiegħek biex tirrevedih meta tgħid int. Xejn ma jmur x'imkien ieħor."
   },
   "actionTitle": {
     "message": "Aqbad dan l-avviż fil-Postulo"
   },
   "settings": {
     "message": "Settings"
-  },
-  "unconfigured": {
-    "message": "Għid lill-estensjoni fejn hu l-Postulo tiegħek u liema token għandha tuża."
   },
   "setUp": {
     "message": "Issettjaha"
@@ -24,7 +21,7 @@
     "message": "Aqbad dan l-avviż"
   },
   "captureHint": {
-    "message": "Il-paġna li qed tħares lejha tintbagħat lill-Postulo tiegħek u mkien ieħor."
+    "message": "Il-paġna tinqara hawn, fil-brawżer tiegħek. Xejn ma jintbagħat sakemm ma tgħidx int."
   },
   "review": {
     "message": "Irrevedi fil-Postulo"
@@ -88,7 +85,7 @@
     "message": "Ittestja"
   },
   "shortcutHint": {
-    "message": "Meta tagħfas il-buttuna, jew $SHORTCUT$, il-paġna li qed tħares lejha tintbagħat lill-Postulo tiegħek biex tirrevediha. L-ebda paġna ma tinqara sakemm ma titlobx, u xejn ma jintbagħat x'imkien ieħor.",
+    "message": "Meta tagħfas il-buttuna, jew $SHORTCUT$, il-paġna li qed tħares lejha tinqara hawn, fil-brawżer. L-ebda paġna ma tinqara sakemm ma titlobx, u xejn ma jintbagħat x'imkien ħlief lill-Postulo tiegħek, meta tgħid int.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Il-paġna ma setgħetx tinqara. Xi paġni jimblukkaw l-estensjonijiet."
   },
-  "previewing": {
-    "message": "Qed nistaqsu lill-Postulo x'jaqra hawn…"
-  },
   "reviewHint": {
-    "message": "Dan hu dak li qara l-Postulo mill-paġna. Ikkoreġi dak li huwa ħażin qabel ma tibagħtu."
+    "message": "Dan hu dak li nqara mill-paġna. Ikkoreġi dak li huwa ħażin; xejn ma joħroġ minn dan il-brawżer sakemm ma tibagħtux."
   },
   "sendForReview": {
     "message": "Ibgħat għar-reviżjoni"
+  },
+  "notConnected": {
+    "message": "Għad m'hemmx konnessjoni ma' Postulo: dak li taqbad jinżamm f'dan il-brawżer."
+  },
+  "keep": {
+    "message": "Żomm f'dan il-brawżer"
+  },
+  "kept": {
+    "message": "Miżmum f'dan il-brawżer. Ibagħtu lill-Postulo meta trid."
+  },
+  "alreadyKept": {
+    "message": "Din il-paġna diġà żammejtha u għadek ma bgħattihiex: din hi l-verżjoni tiegħek."
+  },
+  "nothingRead": {
+    "message": "Xejn ma seta' jinqara minn din il-paġna. Imla dak li taf; xejn ma joħroġ minn dan il-brawżer sakemm ma tibagħtux."
+  },
+  "waiting": {
+    "message": "Il-Postulo ma jistax jintlaħaq bħalissa. Jinżamm f'dan il-brawżer u jintbagħat hekk kif il-Postulo jwieġeb."
+  },
+  "waitingOffline": {
+    "message": "Is-swiċċ tal-ittestjar mixgħul, għalhekk jistenna f'dan il-brawżer. Jintbagħat hekk kif is-swiċċ jintefa."
+  },
+  "waitingAccount": {
+    "message": "Jinżamm f'dan il-brawżer u jintbagħat hekk kif dan jissewwa."
+  },
+  "sendNeedsSetup": {
+    "message": "Miżmum f'dan il-brawżer, biex jintbagħat hekk kif il-Postulo tiegħek ikun issettjat."
+  },
+  "capturesTitle": {
+    "message": "Qbidiet f'dan il-brawżer"
+  },
+  "capturesIntro": {
+    "message": "Avviżi li qbadt, miżmuma hawn sakemm jaslu fil-Postulo tiegħek. Dak li tibgħat jitlaq hekk kif il-Postulo jista' jintlaħaq."
+  },
+  "nothingKept": {
+    "message": "Xejn mhu miżmum f'dan il-brawżer."
+  },
+  "sendAll": {
+    "message": "Ibgħat dak kollu li ma ntbagħatx"
+  },
+  "clearSent": {
+    "message": "Neħħi dawk mibgħuta"
+  },
+  "stateKept": {
+    "message": "Mhux mibgħut"
+  },
+  "stateWaiting": {
+    "message": "Qed jistenna l-Postulo"
+  },
+  "stateSent": {
+    "message": "Mibgħut"
+  },
+  "stateRefused": {
+    "message": "Rifjutat"
+  },
+  "tryNow": {
+    "message": "Ipprova issa"
+  },
+  "holdBack": {
+    "message": "Żommu hawn minflok"
+  },
+  "deleteConfirm": {
+    "message": "Tħassar dan il-qbid? Ma laħaqx il-Postulo, għalhekk jeżisti hawn biss."
+  },
+  "troubleshooting": {
+    "message": "Ittestjar u soluzzjoni ta' problemi"
+  },
+  "offlineLabel": {
+    "message": "Aġixxi daqslikieku l-Postulo ma jistax jintlaħaq"
+  },
+  "offlineHint": {
+    "message": "Għall-ittestjar. Sakemm dan ikun mixgħul, xejn ma jintbagħat: il-qbidiet jistennew f'dan il-brawżer eżatt kif kienu jagħmlu kieku l-Postulo ma jaħdimx, u jitilqu hekk kif jintefa."
+  },
+  "offlineOn": {
+    "message": "Is-swiċċ tal-ittestjar mixgħul: xejn ma jintbagħat lill-Postulo."
+  },
+  "offlineOff": {
+    "message": "Is-swiċċ tal-ittestjar mitfi: dak li qed jistenna jmur lill-Postulo issa."
+  },
+  "downloadLog": {
+    "message": "Niżżel ir-reġistru"
+  },
+  "clearLog": {
+    "message": "Battal ir-reġistru"
+  },
+  "logCleared": {
+    "message": "Ir-reġistru huwa vojt."
+  },
+  "logHint": {
+    "message": "X'għamlet l-estensjoni, biex issib għaliex xi ħaġa ma ħadmitx. Ma fih l-ebda token u xejn mill-paġni."
+  },
+  "cancel": {
+    "message": "Ikkanċella"
+  },
+  "delete": {
+    "message": "Ħassar"
+  },
+  "edit": {
+    "message": "Editja"
   },
   "fieldTitle": {
     "message": "Titlu tax-xogħol"

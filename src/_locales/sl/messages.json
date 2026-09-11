@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Pošljite zaposlitveni oglas, ki ga gledate, v svoj Postulo v pregled. Nič ne gre nikamor drugam."
+    "message": "Zajemite zaposlitveni oglas, ki ga gledate, ga hranite v svojem brskalniku in ga, ko tako rečete, pošljite v pregled v svoj Postulo. Nič ne gre nikamor drugam."
   },
   "actionTitle": {
     "message": "Zajemi ta oglas v Postulo"
   },
   "settings": {
     "message": "Nastavitve"
-  },
-  "unconfigured": {
-    "message": "Povejte razširitvi, kje je vaš Postulo in kateri žeton naj uporabi."
   },
   "setUp": {
     "message": "Nastavi"
@@ -24,7 +21,7 @@
     "message": "Zajemi ta oglas"
   },
   "captureHint": {
-    "message": "Stran, ki jo gledate, se pošlje v vaš Postulo in nikamor drugam."
+    "message": "Stran se prebere tukaj, v vašem brskalniku. Nič se ne pošlje, dokler tega ne rečete."
   },
   "review": {
     "message": "Preglej v Postulu"
@@ -88,7 +85,7 @@
     "message": "Preizkusi"
   },
   "shortcutHint": {
-    "message": "Pritisk na gumb ali $SHORTCUT$ pošlje stran, ki jo gledate, v vaš Postulo v pregled. Nobena stran se ne prebere, dokler tega ne zahtevate, in nič se ne pošlje nikamor drugam.",
+    "message": "Pritisk na gumb ali $SHORTCUT$ prebere stran, ki jo gledate, tukaj v brskalniku. Nobena stran se ne prebere, dokler tega ne zahtevate, in nič se ne pošlje nikamor razen v vaš Postulo, ko tako rečete.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Strani ni bilo mogoče prebrati. Nekatere strani blokirajo razširitve."
   },
-  "previewing": {
-    "message": "Postulo sprašujemo, kaj prebere tukaj …"
-  },
   "reviewHint": {
-    "message": "To je Postulo prebral s strani. Pred pošiljanjem popravite, kar je narobe."
+    "message": "To je bilo prebrano s strani. Popravite, kar je narobe; nič ne zapusti tega brskalnika, dokler tega ne pošljete."
   },
   "sendForReview": {
     "message": "Pošlji v pregled"
+  },
+  "notConnected": {
+    "message": "Postulo še ni povezan: kar zajamete, se hrani v tem brskalniku."
+  },
+  "keep": {
+    "message": "Obdrži v tem brskalniku"
+  },
+  "kept": {
+    "message": "Ostaja v tem brskalniku. Pošljite ga v Postulo, ko boste pripravljeni."
+  },
+  "alreadyKept": {
+    "message": "To stran ste že obdržali in je še niste poslali: to je vaša različica."
+  },
+  "nothingRead": {
+    "message": "S te strani ni bilo mogoče prebrati ničesar. Izpolnite, kar veste; nič ne zapusti tega brskalnika, dokler tega ne pošljete."
+  },
+  "waiting": {
+    "message": "Postulo trenutno ni dosegljiv. Hrani se v tem brskalniku in se pošlje, takoj ko se Postulo odzove."
+  },
+  "waitingOffline": {
+    "message": "Preizkusno stikalo je vklopljeno, zato čaka v tem brskalniku. Poslano bo, ko se stikalo izklopi."
+  },
+  "waitingAccount": {
+    "message": "Hrani se v tem brskalniku in bo poslano, ko bo to odpravljeno."
+  },
+  "sendNeedsSetup": {
+    "message": "Hrani se v tem brskalniku in bo poslano, ko bo vaš Postulo nastavljen."
+  },
+  "capturesTitle": {
+    "message": "Zajemi v tem brskalniku"
+  },
+  "capturesIntro": {
+    "message": "Oglasi, ki ste jih zajeli, se hranijo tukaj, dokler ne pridejo v vaš Postulo. Kar pošljete, gre, takoj ko je Postulo dosegljiv."
+  },
+  "nothingKept": {
+    "message": "V tem brskalniku se ne hrani nič."
+  },
+  "sendAll": {
+    "message": "Pošlji vse neposlano"
+  },
+  "clearSent": {
+    "message": "Počisti poslane"
+  },
+  "stateKept": {
+    "message": "Neposlano"
+  },
+  "stateWaiting": {
+    "message": "Čaka na Postulo"
+  },
+  "stateSent": {
+    "message": "Poslano"
+  },
+  "stateRefused": {
+    "message": "Zavrnjeno"
+  },
+  "tryNow": {
+    "message": "Poskusi zdaj"
+  },
+  "holdBack": {
+    "message": "Raje obdrži tukaj"
+  },
+  "deleteConfirm": {
+    "message": "Želite izbrisati ta zajem? V Postulo ni prišel, zato obstaja samo tukaj."
+  },
+  "troubleshooting": {
+    "message": "Preizkušanje in odpravljanje težav"
+  },
+  "offlineLabel": {
+    "message": "Ravnaj, kot da Postulo ni dosegljiv"
+  },
+  "offlineHint": {
+    "message": "Za preizkušanje. Dokler je to vklopljeno, se nič ne pošlje: zajemi čakajo v tem brskalniku natanko tako, kot bi, če Postulo ne bi deloval, in gredo, ko se izklopi."
+  },
+  "offlineOn": {
+    "message": "Preizkusno stikalo je vklopljeno: v Postulo se nič ne pošlje."
+  },
+  "offlineOff": {
+    "message": "Preizkusno stikalo je izklopljeno: kar čaka, gre zdaj v Postulo."
+  },
+  "downloadLog": {
+    "message": "Prenesi dnevnik"
+  },
+  "clearLog": {
+    "message": "Počisti dnevnik"
+  },
+  "logCleared": {
+    "message": "Dnevnik je prazen."
+  },
+  "logHint": {
+    "message": "Kaj je naredila razširitev, da ugotovite, zakaj nekaj ni delovalo. Ne vsebuje nobenega žetona in ničesar s strani."
+  },
+  "cancel": {
+    "message": "Prekliči"
+  },
+  "delete": {
+    "message": "Izbriši"
+  },
+  "edit": {
+    "message": "Uredi"
   },
   "fieldTitle": {
     "message": "Naziv delovnega mesta"

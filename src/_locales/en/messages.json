@@ -8,7 +8,7 @@
     "description": "ltr, or rtl for a language written right to left."
   },
   "extensionDescription": {
-    "message": "Send the job posting you are looking at to your own Postulo, for review. Nothing goes anywhere else.",
+    "message": "Capture the job posting you are looking at, keep it in your browser, and send it to your own Postulo for review when you say so. Nothing goes anywhere else.",
     "description": "The extension's description, in the browser's list of extensions and in the store."
   },
   "actionTitle": {
@@ -19,10 +19,6 @@
     "message": "Settings",
     "description": "The gear that opens the extension's settings. Postulo's own word for its Settings."
   },
-  "unconfigured": {
-    "message": "Tell the extension where your Postulo is and which token to use.",
-    "description": "Shown until it is set up."
-  },
   "setUp": {
     "message": "Set it up",
     "description": "Button that opens the settings."
@@ -32,7 +28,7 @@
     "description": "The popup's main button."
   },
   "captureHint": {
-    "message": "The page you are looking at is sent to your Postulo and nowhere else.",
+    "message": "The page is read here, in your browser. Nothing is sent until you say so.",
     "description": "Under the main button."
   },
   "review": {
@@ -113,7 +109,7 @@
     "description": "Button that checks the address and the token."
   },
   "shortcutHint": {
-    "message": "Pressing the button, or $SHORTCUT$, sends the page you are looking at to your Postulo for review. No page is read until you ask, and nothing is sent anywhere else.",
+    "message": "Pressing the button, or $SHORTCUT$, reads the page you are looking at, here in the browser. No page is read until you ask, and nothing is sent anywhere but your own Postulo, when you say so.",
     "description": "SHORTCUT is the key combination, Alt+Shift+P.",
     "placeholders": {
       "shortcut": {
@@ -227,17 +223,145 @@
     "message": "The page could not be read. Some pages block extensions.",
     "description": "Reading the page failed."
   },
-  "previewing": {
-    "message": "Asking Postulo what it reads here…",
-    "description": "Status while Postulo reads the page without keeping it."
-  },
   "reviewHint": {
-    "message": "This is what Postulo read from the page. Correct anything it got wrong before sending it.",
+    "message": "This is what was read from the page. Correct anything that is wrong; nothing leaves this browser until you send it.",
     "description": "Above the form showing what was read, before anything is sent."
   },
   "sendForReview": {
     "message": "Send for review",
     "description": "Button under that form: sends the page with the corrections, to be confirmed in Postulo."
+  },
+  "notConnected": {
+    "message": "Not connected to a Postulo yet: what you capture is kept in this browser.",
+    "description": "Above the popup and the list while no address and token are set; followed by a Set it up button."
+  },
+  "keep": {
+    "message": "Keep in this browser",
+    "description": "Button beside Send for review: keeps the capture here without sending it."
+  },
+  "kept": {
+    "message": "Kept in this browser. Send it to Postulo whenever you are ready.",
+    "description": "Status after Keep in this browser."
+  },
+  "alreadyKept": {
+    "message": "You kept this page already and have not sent it: this is your version.",
+    "description": "Above the form when the page was captured before and not sent; the form shows the earlier edits."
+  },
+  "nothingRead": {
+    "message": "Nothing could be read from this page. Fill in what you know; nothing leaves this browser until you send it.",
+    "description": "Above an empty form, when the page declared no posting and no title."
+  },
+  "waiting": {
+    "message": "Postulo cannot be reached right now. It is kept in this browser and sent as soon as Postulo answers.",
+    "description": "After Send for review, when Postulo did not answer: the extension keeps trying in the background."
+  },
+  "waitingOffline": {
+    "message": "The testing switch is on, so it waits in this browser. It goes once the switch is off.",
+    "description": "After Send for review while the testing switch in the settings is on."
+  },
+  "waitingAccount": {
+    "message": "It is kept in this browser and sent once that is fixed.",
+    "description": "After a sentence saying Postulo refused the token: the capture waits until the token works."
+  },
+  "sendNeedsSetup": {
+    "message": "Kept in this browser, to be sent once your Postulo is set up.",
+    "description": "After Send for review with no address and token set."
+  },
+  "capturesTitle": {
+    "message": "Captures in this browser",
+    "description": "Title of the page listing every capture kept here, and the popup's link to it."
+  },
+  "capturesIntro": {
+    "message": "Postings you captured, kept here until they reach your Postulo. What you send goes as soon as Postulo can be reached.",
+    "description": "Under that title."
+  },
+  "nothingKept": {
+    "message": "Nothing is kept in this browser.",
+    "description": "That page, when there is no capture."
+  },
+  "sendAll": {
+    "message": "Send everything not sent",
+    "description": "Button on that page: sends every capture not sent yet."
+  },
+  "clearSent": {
+    "message": "Clear the ones sent",
+    "description": "Button on that page: removes from the browser the captures Postulo has; they stay in Postulo."
+  },
+  "stateKept": {
+    "message": "Not sent",
+    "description": "A capture's state: kept here, not sent."
+  },
+  "stateWaiting": {
+    "message": "Waiting for Postulo",
+    "description": "A capture's state: to be sent as soon as Postulo can be reached."
+  },
+  "stateSent": {
+    "message": "Sent",
+    "description": "A capture's state: Postulo has it, for review there."
+  },
+  "stateRefused": {
+    "message": "Refused",
+    "description": "A capture's state: Postulo would not take it; the reason is shown under it."
+  },
+  "tryNow": {
+    "message": "Try now",
+    "description": "Button on a capture waiting for Postulo: tries to send it at once."
+  },
+  "holdBack": {
+    "message": "Keep it here instead",
+    "description": "Button on a capture waiting for Postulo: it goes back to Not sent, and is not sent."
+  },
+  "deleteConfirm": {
+    "message": "Delete this capture? It has not reached Postulo, so it exists only here.",
+    "description": "Asked before deleting a capture that was not sent."
+  },
+  "troubleshooting": {
+    "message": "Testing and troubleshooting",
+    "description": "Heading in the settings over the switch and the log."
+  },
+  "offlineLabel": {
+    "message": "Act as if Postulo cannot be reached",
+    "description": "A checkbox in the settings, for testing: while it is on, nothing is sent."
+  },
+  "offlineHint": {
+    "message": "For testing. While this is on, nothing is sent: captures wait in this browser exactly as they would with Postulo down, and go once it is off.",
+    "description": "Under that checkbox."
+  },
+  "offlineOn": {
+    "message": "The testing switch is on: nothing is sent to Postulo.",
+    "description": "A note at the top of the popup and the list, and a status in the settings, while the switch is on."
+  },
+  "offlineOff": {
+    "message": "The testing switch is off: what is waiting goes to Postulo now.",
+    "description": "Status in the settings when the switch is turned off."
+  },
+  "downloadLog": {
+    "message": "Download the log",
+    "description": "Button in the settings: saves the log as a text file."
+  },
+  "clearLog": {
+    "message": "Clear the log",
+    "description": "Button in the settings."
+  },
+  "logCleared": {
+    "message": "The log is empty.",
+    "description": "Status after Clear the log."
+  },
+  "logHint": {
+    "message": "What the extension did, to find out why something did not work. It holds no token and nothing from the pages.",
+    "description": "Under the log's buttons."
+  },
+  "cancel": {
+    "message": "Cancel",
+    "description": "Button closing a capture's editor without saving. Postulo's own word."
+  },
+  "delete": {
+    "message": "Delete",
+    "description": "Button deleting a capture from the browser. Postulo's own word."
+  },
+  "edit": {
+    "message": "Edit",
+    "description": "Button opening a capture's editor. Postulo's own word."
   },
   "fieldTitle": {
     "message": "Job title",

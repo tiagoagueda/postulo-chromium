@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Envie o anúncio de emprego que você está vendo para o seu próprio Postulo, para revisão. Nada vai para nenhum outro lugar."
+    "message": "Capture o anúncio de emprego que você está vendo, guarde-o no seu navegador e envie-o para o seu próprio Postulo para revisão quando quiser. Nada vai para nenhum outro lugar."
   },
   "actionTitle": {
     "message": "Capturar este anúncio no Postulo"
   },
   "settings": {
     "message": "Configurações"
-  },
-  "unconfigured": {
-    "message": "Diga à extensão onde está o seu Postulo e qual token usar."
   },
   "setUp": {
     "message": "Configurar"
@@ -24,7 +21,7 @@
     "message": "Capturar este anúncio"
   },
   "captureHint": {
-    "message": "A página que você está vendo é enviada para o seu Postulo e para nenhum outro lugar."
+    "message": "A página é lida aqui, no seu navegador. Nada é enviado até você pedir."
   },
   "review": {
     "message": "Revisar no Postulo"
@@ -88,7 +85,7 @@
     "message": "Testar"
   },
   "shortcutHint": {
-    "message": "Ao clicar no botão, ou em $SHORTCUT$, a página que você está vendo é enviada para o seu Postulo para revisão. Nenhuma página é lida até você pedir, e nada é enviado para nenhum outro lugar.",
+    "message": "Ao clicar no botão, ou em $SHORTCUT$, a página que você está vendo é lida aqui mesmo, no navegador. Nenhuma página é lida até você pedir, e nada é enviado para lugar nenhum além do seu próprio Postulo, quando você quiser.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Não foi possível ler a página. Algumas páginas bloqueiam extensões."
   },
-  "previewing": {
-    "message": "Perguntando ao Postulo o que ele lê aqui…"
-  },
   "reviewHint": {
-    "message": "Isto é o que o Postulo leu da página. Corrija o que estiver errado antes de enviar."
+    "message": "Isto é o que foi lido da página. Corrija o que estiver errado; nada sai deste navegador até você enviar."
   },
   "sendForReview": {
     "message": "Enviar para revisão"
+  },
+  "notConnected": {
+    "message": "Ainda não conectado a um Postulo: o que você capturar fica guardado neste navegador."
+  },
+  "keep": {
+    "message": "Guardar neste navegador"
+  },
+  "kept": {
+    "message": "Guardado neste navegador. Envie-o ao Postulo quando quiser."
+  },
+  "alreadyKept": {
+    "message": "Você já guardou esta página e ainda não a enviou: esta é a sua versão."
+  },
+  "nothingRead": {
+    "message": "Não foi possível ler nada desta página. Preencha o que você sabe; nada sai deste navegador até você enviar."
+  },
+  "waiting": {
+    "message": "Não é possível acessar o Postulo agora. O anúncio fica guardado neste navegador e é enviado assim que o Postulo responder."
+  },
+  "waitingOffline": {
+    "message": "O modo de teste está ativado, então o anúncio espera neste navegador. Ele é enviado assim que o modo for desativado."
+  },
+  "waitingAccount": {
+    "message": "O anúncio fica guardado neste navegador e é enviado assim que isso for resolvido."
+  },
+  "sendNeedsSetup": {
+    "message": "Guardado neste navegador, para ser enviado assim que o seu Postulo estiver configurado."
+  },
+  "capturesTitle": {
+    "message": "Capturas neste navegador"
+  },
+  "capturesIntro": {
+    "message": "Anúncios que você capturou, guardados aqui até chegarem ao seu Postulo. O que você envia segue assim que o Postulo puder ser acessado."
+  },
+  "nothingKept": {
+    "message": "Nada está guardado neste navegador."
+  },
+  "sendAll": {
+    "message": "Enviar os não enviados"
+  },
+  "clearSent": {
+    "message": "Limpar os enviados"
+  },
+  "stateKept": {
+    "message": "Não enviado"
+  },
+  "stateWaiting": {
+    "message": "Aguardando o Postulo"
+  },
+  "stateSent": {
+    "message": "Enviado"
+  },
+  "stateRefused": {
+    "message": "Recusado"
+  },
+  "tryNow": {
+    "message": "Tentar agora"
+  },
+  "holdBack": {
+    "message": "Manter aqui"
+  },
+  "deleteConfirm": {
+    "message": "Excluir esta captura? Ela não chegou ao Postulo, então só existe aqui."
+  },
+  "troubleshooting": {
+    "message": "Teste e solução de problemas"
+  },
+  "offlineLabel": {
+    "message": "Agir como se o Postulo não pudesse ser acessado"
+  },
+  "offlineHint": {
+    "message": "Para testes. Enquanto isto estiver ativado, nada é enviado: as capturas esperam neste navegador exatamente como esperariam com o Postulo fora do ar, e seguem assim que for desativado."
+  },
+  "offlineOn": {
+    "message": "O modo de teste está ativado: nada é enviado ao Postulo."
+  },
+  "offlineOff": {
+    "message": "O modo de teste está desativado: o que estava esperando vai para o Postulo agora."
+  },
+  "downloadLog": {
+    "message": "Baixar o registro"
+  },
+  "clearLog": {
+    "message": "Limpar o registro"
+  },
+  "logCleared": {
+    "message": "O registro está vazio."
+  },
+  "logHint": {
+    "message": "O que a extensão fez, para descobrir por que algo não funcionou. Não contém nenhum token nem nada das páginas."
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "delete": {
+    "message": "Excluir"
+  },
+  "edit": {
+    "message": "Editar"
   },
   "fieldTitle": {
     "message": "Título da função"

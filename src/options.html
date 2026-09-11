@@ -28,6 +28,20 @@
 
     <p id="status" role="status" aria-live="polite"></p>
 
+    <section class="testing" aria-labelledby="testing-heading">
+      <h2 id="testing-heading" data-i18n="troubleshooting">Testing and troubleshooting</h2>
+      <label class="check">
+        <input id="offline" type="checkbox" />
+        <span data-i18n="offlineLabel">Act as if Postulo cannot be reached</span>
+      </label>
+      <p class="hint" data-i18n="offlineHint">For testing. While this is on, nothing is sent: captures wait in this browser exactly as they would with Postulo down, and go once it is off.</p>
+      <div class="actions">
+        <button id="download-log" type="button" data-i18n="downloadLog">Download the log</button>
+        <button id="clear-log" type="button" data-i18n="clearLog">Clear the log</button>
+      </div>
+      <p class="hint" data-i18n="logHint">What the extension did, to find out why something did not work. It holds no token and nothing from the pages.</p>
+    </section>
+
     <footer>
       <p id="shortcut-hint" class="hint">
         Pressing the button, or <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>, sends the page you are looking

@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Wyślij ogłoszenie o pracę, które oglądasz, do własnego Postulo, do sprawdzenia. Nic nie trafia nigdzie indziej."
+    "message": "Przechwyć ogłoszenie o pracę, które oglądasz, zachowaj je w przeglądarce i wyślij do własnego Postulo do sprawdzenia, kiedy zechcesz. Nic nie trafia nigdzie indziej."
   },
   "actionTitle": {
     "message": "Przechwyć to ogłoszenie do Postulo"
   },
   "settings": {
     "message": "Ustawienia"
-  },
-  "unconfigured": {
-    "message": "Powiedz rozszerzeniu, gdzie jest Twoje Postulo i jakiego tokenu ma używać."
   },
   "setUp": {
     "message": "Skonfiguruj"
@@ -24,7 +21,7 @@
     "message": "Przechwyć to ogłoszenie"
   },
   "captureHint": {
-    "message": "Strona, którą oglądasz, trafia do Twojego Postulo i nigdzie indziej."
+    "message": "Strona jest czytana tutaj, w Twojej przeglądarce. Nic nie jest wysyłane, dopóki o tym nie zdecydujesz."
   },
   "review": {
     "message": "Sprawdź w Postulo"
@@ -88,7 +85,7 @@
     "message": "Testuj"
   },
   "shortcutHint": {
-    "message": "Naciśnięcie przycisku albo $SHORTCUT$ wysyła oglądaną stronę do Twojego Postulo do sprawdzenia. Żadna strona nie jest czytana, dopóki o to nie poprosisz, i nic nie jest wysyłane nigdzie indziej.",
+    "message": "Naciśnięcie przycisku albo $SHORTCUT$ odczytuje oglądaną stronę tutaj, w przeglądarce. Żadna strona nie jest czytana, dopóki o to nie poprosisz, a nic nie trafia nigdzie indziej niż do Twojego własnego Postulo, i to wtedy, gdy zechcesz.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Nie udało się odczytać strony. Niektóre strony blokują rozszerzenia."
   },
-  "previewing": {
-    "message": "Pytanie Postulo, co tu odczytuje…"
-  },
   "reviewHint": {
-    "message": "Tyle Postulo odczytało ze strony. Popraw to, co się nie zgadza, zanim to wyślesz."
+    "message": "Tyle odczytano ze strony. Popraw to, co się nie zgadza; nic nie opuszcza tej przeglądarki, dopóki tego nie wyślesz."
   },
   "sendForReview": {
     "message": "Wyślij do sprawdzenia"
+  },
+  "notConnected": {
+    "message": "Brak jeszcze połączenia z Postulo: to, co przechwycisz, zostaje w tej przeglądarce."
+  },
+  "keep": {
+    "message": "Zachowaj w przeglądarce"
+  },
+  "kept": {
+    "message": "Zachowano w tej przeglądarce. Wyślij do Postulo, kiedy zechcesz."
+  },
+  "alreadyKept": {
+    "message": "Ta strona jest już zachowana i nie została wysłana: oto Twoja wersja."
+  },
+  "nothingRead": {
+    "message": "Z tej strony nie udało się nic odczytać. Uzupełnij, co wiesz; nic nie opuszcza tej przeglądarki, dopóki tego nie wyślesz."
+  },
+  "waiting": {
+    "message": "Postulo jest teraz nieosiągalne. Ogłoszenie zostaje w tej przeglądarce i zostanie wysłane, gdy tylko Postulo odpowie."
+  },
+  "waitingOffline": {
+    "message": "Przełącznik testowy jest włączony, więc ogłoszenie czeka w tej przeglądarce. Zostanie wysłane po wyłączeniu przełącznika."
+  },
+  "waitingAccount": {
+    "message": "Ogłoszenie zostaje w tej przeglądarce i zostanie wysłane, gdy tylko problem zostanie rozwiązany."
+  },
+  "sendNeedsSetup": {
+    "message": "Zachowano w tej przeglądarce; zostanie wysłane, gdy Twoje Postulo będzie skonfigurowane."
+  },
+  "capturesTitle": {
+    "message": "Przechwycenia w tej przeglądarce"
+  },
+  "capturesIntro": {
+    "message": "Przechwycone ogłoszenia, przechowywane tutaj, dopóki nie trafią do Twojego Postulo. To, co wyślesz, trafia tam, gdy tylko Postulo będzie osiągalne."
+  },
+  "nothingKept": {
+    "message": "W tej przeglądarce nic nie jest przechowywane."
+  },
+  "sendAll": {
+    "message": "Wyślij wszystkie niewysłane"
+  },
+  "clearSent": {
+    "message": "Wyczyść wysłane"
+  },
+  "stateKept": {
+    "message": "Niewysłane"
+  },
+  "stateWaiting": {
+    "message": "Czeka na Postulo"
+  },
+  "stateSent": {
+    "message": "Wysłane"
+  },
+  "stateRefused": {
+    "message": "Odrzucone"
+  },
+  "tryNow": {
+    "message": "Spróbuj teraz"
+  },
+  "holdBack": {
+    "message": "Zostaw tutaj"
+  },
+  "deleteConfirm": {
+    "message": "Usunąć to przechwycenie? Nie dotarło do Postulo, więc istnieje tylko tutaj."
+  },
+  "troubleshooting": {
+    "message": "Testowanie i rozwiązywanie problemów"
+  },
+  "offlineLabel": {
+    "message": "Udawaj, że Postulo jest nieosiągalne"
+  },
+  "offlineHint": {
+    "message": "Do testów. Gdy to jest włączone, nic nie jest wysyłane: przechwycenia czekają w tej przeglądarce dokładnie tak, jak gdyby Postulo nie działało, i trafiają tam po wyłączeniu."
+  },
+  "offlineOn": {
+    "message": "Przełącznik testowy jest włączony: nic nie jest wysyłane do Postulo."
+  },
+  "offlineOff": {
+    "message": "Przełącznik testowy jest wyłączony: to, co czeka, trafia teraz do Postulo."
+  },
+  "downloadLog": {
+    "message": "Pobierz dziennik"
+  },
+  "clearLog": {
+    "message": "Wyczyść dziennik"
+  },
+  "logCleared": {
+    "message": "Dziennik jest pusty."
+  },
+  "logHint": {
+    "message": "Co zrobiło rozszerzenie, aby dało się ustalić, dlaczego coś nie zadziałało. Nie zawiera żadnego tokenu ani niczego ze stron."
+  },
+  "cancel": {
+    "message": "Anuluj"
+  },
+  "delete": {
+    "message": "Usuń"
+  },
+  "edit": {
+    "message": "Edytuj"
   },
   "fieldTitle": {
     "message": "Nazwa stanowiska"

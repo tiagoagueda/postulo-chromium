@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Nosūtiet skatīto darba sludinājumu uz savu Postulo pārskatīšanai. Nekas nenonāk citur."
+    "message": "Tveriet skatīto darba sludinājumu, paturiet to savā pārlūkā un nosūtiet uz savu Postulo pārskatīšanai, kad vēlaties. Nekas nenonāk citur."
   },
   "actionTitle": {
     "message": "Tvert šo sludinājumu Postulo"
   },
   "settings": {
     "message": "Iestatījumi"
-  },
-  "unconfigured": {
-    "message": "Norādiet paplašinājumam, kur ir jūsu Postulo un kuru žetonu izmantot."
   },
   "setUp": {
     "message": "Iestatīt"
@@ -24,7 +21,7 @@
     "message": "Tvert šo sludinājumu"
   },
   "captureHint": {
-    "message": "Skatītā lapa tiek nosūtīta uz jūsu Postulo un nekur citur."
+    "message": "Lapa tiek lasīta šeit, jūsu pārlūkā. Nekas netiek nosūtīts, kamēr jūs to nelūdzat."
   },
   "review": {
     "message": "Pārskatīt Postulo"
@@ -88,7 +85,7 @@
     "message": "Pārbaudīt"
   },
   "shortcutHint": {
-    "message": "Nospiežot pogu vai $SHORTCUT$, skatītā lapa tiek nosūtīta uz jūsu Postulo pārskatīšanai. Neviena lapa netiek lasīta, kamēr to nelūdzat, un nekas netiek sūtīts citur.",
+    "message": "Nospiežot pogu vai $SHORTCUT$, skatītā lapa tiek nolasīta šeit, pārlūkā. Neviena lapa netiek lasīta, kamēr to nelūdzat, un nekas netiek sūtīts nekur citur kā vien uz jūsu pašu Postulo, kad jūs to vēlaties.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Lapu neizdevās nolasīt. Dažas lapas bloķē paplašinājumus."
   },
-  "previewing": {
-    "message": "Postulo tiek jautāts, ko tas šeit nolasa…"
-  },
   "reviewHint": {
-    "message": "To Postulo nolasīja lapā. Pirms sūtīšanas izlabojiet kļūdas."
+    "message": "Tas ir nolasīts no lapas. Izlabojiet kļūdas; nekas neatstāj šo pārlūku, kamēr to nenosūtāt."
   },
   "sendForReview": {
     "message": "Sūtīt pārskatīšanai"
+  },
+  "notConnected": {
+    "message": "Vēl nav savienojuma ar Postulo: tas, ko tverat, tiek glabāts šajā pārlūkā."
+  },
+  "keep": {
+    "message": "Paturēt šajā pārlūkā"
+  },
+  "kept": {
+    "message": "Paturēts šajā pārlūkā. Nosūtiet to uz Postulo, kad vēlaties."
+  },
+  "alreadyKept": {
+    "message": "Šī lapa jau ir paturēta un nav nosūtīta: šī ir jūsu versija."
+  },
+  "nothingRead": {
+    "message": "No šīs lapas neizdevās neko nolasīt. Aizpildiet to, ko zināt; nekas neatstāj šo pārlūku, kamēr to nenosūtāt."
+  },
+  "waiting": {
+    "message": "Postulo pašlaik nav sasniedzams. Sludinājums tiek glabāts šajā pārlūkā un tiks nosūtīts, tiklīdz Postulo atbildēs."
+  },
+  "waitingOffline": {
+    "message": "Testēšanas slēdzis ir ieslēgts, tāpēc sludinājums gaida šajā pārlūkā. Tas tiks nosūtīts, tiklīdz slēdzis būs izslēgts."
+  },
+  "waitingAccount": {
+    "message": "Sludinājums tiek glabāts šajā pārlūkā un tiks nosūtīts, tiklīdz problēma būs novērsta."
+  },
+  "sendNeedsSetup": {
+    "message": "Paturēts šajā pārlūkā; tiks nosūtīts, tiklīdz jūsu Postulo būs iestatīts."
+  },
+  "capturesTitle": {
+    "message": "Tvērumi šajā pārlūkā"
+  },
+  "capturesIntro": {
+    "message": "Jūsu tvertie sludinājumi, kas glabājas šeit, līdz nonāk jūsu Postulo. Tas, ko nosūtāt, aiziet, tiklīdz Postulo ir sasniedzams."
+  },
+  "nothingKept": {
+    "message": "Šajā pārlūkā nekas netiek glabāts."
+  },
+  "sendAll": {
+    "message": "Sūtīt visu nenosūtīto"
+  },
+  "clearSent": {
+    "message": "Notīrīt nosūtītos"
+  },
+  "stateKept": {
+    "message": "Nav nosūtīts"
+  },
+  "stateWaiting": {
+    "message": "Gaida Postulo"
+  },
+  "stateSent": {
+    "message": "Nosūtīts"
+  },
+  "stateRefused": {
+    "message": "Noraidīts"
+  },
+  "tryNow": {
+    "message": "Mēģināt tagad"
+  },
+  "holdBack": {
+    "message": "Paturēt šeit"
+  },
+  "deleteConfirm": {
+    "message": "Dzēst šo tvērumu? Tas nav nonācis Postulo, tāpēc pastāv tikai šeit."
+  },
+  "troubleshooting": {
+    "message": "Testēšana un problēmu novēršana"
+  },
+  "offlineLabel": {
+    "message": "Rīkoties tā, it kā Postulo nebūtu sasniedzams"
+  },
+  "offlineHint": {
+    "message": "Testēšanai. Kamēr šis ir ieslēgts, nekas netiek sūtīts: tvērumi gaida šajā pārlūkā tieši tāpat kā tad, ja Postulo nedarbotos, un aiziet, tiklīdz tas ir izslēgts."
+  },
+  "offlineOn": {
+    "message": "Testēšanas slēdzis ir ieslēgts: uz Postulo nekas netiek sūtīts."
+  },
+  "offlineOff": {
+    "message": "Testēšanas slēdzis ir izslēgts: tas, kas gaida, tagad aiziet uz Postulo."
+  },
+  "downloadLog": {
+    "message": "Lejupielādēt žurnālu"
+  },
+  "clearLog": {
+    "message": "Notīrīt žurnālu"
+  },
+  "logCleared": {
+    "message": "Žurnāls ir tukšs."
+  },
+  "logHint": {
+    "message": "Ko paplašinājums darīja, lai noskaidrotu, kāpēc kaut kas nedarbojās. Tajā nav neviena žetona un nekā no lapām."
+  },
+  "cancel": {
+    "message": "Atcelt"
+  },
+  "delete": {
+    "message": "Dzēst"
+  },
+  "edit": {
+    "message": "Rediģēt"
   },
   "fieldTitle": {
     "message": "Amata nosaukums"

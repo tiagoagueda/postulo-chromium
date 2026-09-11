@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Anfonwch yr hysbyseb swydd rydych chi'n edrych arni i'ch Postulo eich hun, i'w hadolygu. Does dim yn mynd i unman arall."
+    "message": "Daliwch yr hysbyseb swydd rydych chi'n edrych arni, cadwch hi yn eich porwr, a'i hanfon i'ch Postulo eich hun i'w hadolygu pan fyddwch chi'n dweud. Does dim yn mynd i unman arall."
   },
   "actionTitle": {
     "message": "Dal yr hysbyseb hon yn Postulo"
   },
   "settings": {
     "message": "Gosodiadau"
-  },
-  "unconfigured": {
-    "message": "Dywedwch wrth yr estyniad ble mae eich Postulo a pha docyn i'w ddefnyddio."
   },
   "setUp": {
     "message": "Ei osod"
@@ -24,7 +21,7 @@
     "message": "Dal yr hysbyseb hon"
   },
   "captureHint": {
-    "message": "Mae'r dudalen rydych chi'n edrych arni'n cael ei hanfon i'ch Postulo a nunlle arall."
+    "message": "Caiff y dudalen ei darllen yma, yn eich porwr. Does dim yn cael ei anfon nes i chi ddweud."
   },
   "review": {
     "message": "Adolygu yn Postulo"
@@ -88,7 +85,7 @@
     "message": "Profi"
   },
   "shortcutHint": {
-    "message": "Mae pwyso'r botwm, neu $SHORTCUT$, yn anfon y dudalen rydych chi'n edrych arni i'ch Postulo i'w hadolygu. Does dim tudalen yn cael ei darllen nes i chi ofyn, a does dim yn cael ei anfon i unman arall.",
+    "message": "Mae pwyso'r botwm, neu $SHORTCUT$, yn darllen y dudalen rydych chi'n edrych arni, yma yn y porwr. Does dim tudalen yn cael ei darllen nes i chi ofyn, a does dim yn cael ei anfon i unman ond i'ch Postulo eich hun, pan fyddwch chi'n dweud.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Doedd dim modd darllen y dudalen. Mae rhai tudalennau'n rhwystro estyniadau."
   },
-  "previewing": {
-    "message": "Yn gofyn i Postulo beth mae'n ei ddarllen yma…"
-  },
   "reviewHint": {
-    "message": "Dyma beth ddarllenodd Postulo o'r dudalen. Cywirwch unrhyw beth sy'n anghywir cyn ei anfon."
+    "message": "Dyma beth gafodd ei ddarllen o'r dudalen. Cywirwch unrhyw beth sy'n anghywir; does dim yn gadael y porwr hwn nes i chi ei anfon."
   },
   "sendForReview": {
     "message": "Anfon i'w adolygu"
+  },
+  "notConnected": {
+    "message": "Heb gysylltu â Postulo eto: mae'r hyn rydych chi'n ei ddal yn cael ei gadw yn y porwr hwn."
+  },
+  "keep": {
+    "message": "Cadw yn y porwr hwn"
+  },
+  "kept": {
+    "message": "Wedi'i chadw yn y porwr hwn. Anfonwch hi i Postulo pryd bynnag rydych chi'n barod."
+  },
+  "alreadyKept": {
+    "message": "Rydych chi wedi cadw'r dudalen hon yn barod heb ei hanfon: dyma'ch fersiwn chi."
+  },
+  "nothingRead": {
+    "message": "Doedd dim modd darllen dim o'r dudalen hon. Llenwch yr hyn rydych chi'n ei wybod; does dim yn gadael y porwr hwn nes i chi ei anfon."
+  },
+  "waiting": {
+    "message": "Does dim modd cyrraedd Postulo ar hyn o bryd. Mae hi'n cael ei chadw yn y porwr hwn a'i hanfon cyn gynted ag y bydd Postulo'n ateb."
+  },
+  "waitingOffline": {
+    "message": "Mae'r switsh profi ymlaen, felly mae hi'n aros yn y porwr hwn. Bydd hi'n mynd unwaith y bydd y switsh i ffwrdd."
+  },
+  "waitingAccount": {
+    "message": "Mae hi'n cael ei chadw yn y porwr hwn a'i hanfon unwaith y bydd hynny wedi'i drwsio."
+  },
+  "sendNeedsSetup": {
+    "message": "Wedi'i chadw yn y porwr hwn, i'w hanfon unwaith y bydd eich Postulo wedi'i osod."
+  },
+  "capturesTitle": {
+    "message": "Dalfeydd yn y porwr hwn"
+  },
+  "capturesIntro": {
+    "message": "Hysbysebion rydych chi wedi'u dal, wedi'u cadw yma nes iddyn nhw gyrraedd eich Postulo. Mae'r hyn rydych chi'n ei anfon yn mynd cyn gynted ag y mae modd cyrraedd Postulo."
+  },
+  "nothingKept": {
+    "message": "Does dim wedi'i gadw yn y porwr hwn."
+  },
+  "sendAll": {
+    "message": "Anfon popeth heb ei anfon"
+  },
+  "clearSent": {
+    "message": "Clirio'r rhai a anfonwyd"
+  },
+  "stateKept": {
+    "message": "Heb ei hanfon"
+  },
+  "stateWaiting": {
+    "message": "Yn aros am Postulo"
+  },
+  "stateSent": {
+    "message": "Anfonwyd"
+  },
+  "stateRefused": {
+    "message": "Gwrthodwyd"
+  },
+  "tryNow": {
+    "message": "Rhoi cynnig nawr"
+  },
+  "holdBack": {
+    "message": "Cadw yma yn lle hynny"
+  },
+  "deleteConfirm": {
+    "message": "Dileu'r ddalfa hon? Dyw hi ddim wedi cyrraedd Postulo, felly dim ond yma mae hi'n bodoli."
+  },
+  "troubleshooting": {
+    "message": "Profi a datrys problemau"
+  },
+  "offlineLabel": {
+    "message": "Ymddwyn fel pe na bai modd cyrraedd Postulo"
+  },
+  "offlineHint": {
+    "message": "Ar gyfer profi. Tra bo hwn ymlaen, does dim yn cael ei anfon: mae dalfeydd yn aros yn y porwr hwn yn union fel y bydden nhw pe bai Postulo i lawr, ac yn mynd unwaith y bydd i ffwrdd."
+  },
+  "offlineOn": {
+    "message": "Mae'r switsh profi ymlaen: does dim yn cael ei anfon i Postulo."
+  },
+  "offlineOff": {
+    "message": "Mae'r switsh profi i ffwrdd: mae'r hyn sy'n aros yn mynd i Postulo nawr."
+  },
+  "downloadLog": {
+    "message": "Llwytho'r log i lawr"
+  },
+  "clearLog": {
+    "message": "Clirio'r log"
+  },
+  "logCleared": {
+    "message": "Mae'r log yn wag."
+  },
+  "logHint": {
+    "message": "Beth wnaeth yr estyniad, i ganfod pam na weithiodd rhywbeth. Does dim tocyn ynddo na dim byd o'r tudalennau."
+  },
+  "cancel": {
+    "message": "Canslo"
+  },
+  "delete": {
+    "message": "Dileu"
+  },
+  "edit": {
+    "message": "Golygu"
   },
   "fieldTitle": {
     "message": "Teitl y swydd"

@@ -4,13 +4,19 @@ import { Refusal } from "./api.js";
 
 export const ext = globalThis.browser ?? globalThis.chrome;
 
+/** Where captures go and with what token, and `offline`: the switch, for testing, that has
+ *  the extension act as if Postulo could not be reached. */
 export async function loadSettings() {
-  const stored = await ext.storage.local.get(["instance", "token"]);
-  return { instance: stored.instance || "", token: stored.token || "" };
+  const stored = await ext.storage.local.get(["instance", "token", "offline"]);
+  return { instance: stored.instance || "", token: stored.token || "", offline: stored.offline === true };
 }
 
 export async function saveSettings({ instance, token }) {
   await ext.storage.local.set({ instance, token });
+}
+
+export async function setOffline(offline) {
+  await ext.storage.local.set({ offline });
 }
 
 /** Whether the instance's origin may be contacted; requests it when asked. */

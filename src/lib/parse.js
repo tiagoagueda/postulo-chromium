@@ -7,8 +7,8 @@
 // sent, and neither invents a value: what cannot be determined is left empty for the
 // person to fill in.
 //
-// Everything here takes a parsed Document, from the browser's DOMParser or from jsdom in
-// the tests; nothing reaches for a global.
+// Everything here takes a parsed Document, and a function to parse more, from the
+// browser's DOMParser or from jsdom in the tests; nothing reaches for a global.
 
 /** schema.org employmentType values mapped onto Postulo's own. */
 const EMPLOYMENT_TYPES = {
@@ -116,15 +116,17 @@ export function textOf(node) {
     .trim();
 }
 
-/** Text from an HTML fragment, as a description inside JSON is: often escaped once more. */
-function fragmentText(doc, html) {
-  // Unescape first, keeping the markup: a textarea's content is text, so its value is the
-  // fragment with its entities decoded and its tags intact. Then read it as HTML.
-  const decoder = doc.createElement("textarea");
-  decoder.innerHTML = html;
-  const holder = doc.createElement("div");
-  holder.innerHTML = decoder.value;
-  return textOf(holder);
+/** Text from an HTML fragment, as a description inside JSON is: often escaped once more.
+ *
+ *  As Postulo does it: decode the entities first, markup and all, so "&lt;p&gt;" becomes a
+ *  paragraph, then read the result as HTML. Only the text between tags is decoded, each
+ *  piece by the parser, so nothing is ever handed to innerHTML. */
+function fragmentText(parse, html) {
+  const unescaped = html
+    .split(/(<[^>]*>)/)
+    .map((piece, index) => (index % 2 || !piece.includes("&") ? piece : parse(`<body>${piece.replaceAll("<", "&lt;")}`).body.textContent))
+    .join("");
+  return textOf(parse(`<body>${unescaped}`).body);
 }
 
 // ------------------------------------------------------------------ schema.org values
@@ -241,7 +243,7 @@ function hostOf(url) {
   }
 }
 
-function schemaOrg(doc, url) {
+function schemaOrg(doc, url, parse) {
   const posting = jsonLd(doc).find((object) => {
     const types = Array.isArray(object["@type"]) ? object["@type"] : [object["@type"]];
     return types.some((type) => String(type).toLowerCase() === "jobposting");
@@ -256,7 +258,7 @@ function schemaOrg(doc, url) {
   const [low, high, currency, period] = salary(posting.baseSalary);
   const employment = String(first(posting.employmentType) || "").toUpperCase().replaceAll("-", "_");
   const remote = String(posting.jobLocationType || "").toUpperCase().includes("TELECOMMUTE") ? "remote" : "";
-  const description = typeof posting.description === "string" ? fragmentText(doc, posting.description) : "";
+  const description = typeof posting.description === "string" ? fragmentText(parse, posting.description) : "";
   return {
     title,
     company_name: text(posting.hiringOrganization),
@@ -329,13 +331,14 @@ const SOURCES = [
   ["page-metadata", pageMetadata],
 ];
 
-/** `{data, source}` for the first source that reads the page, or null when none does. */
-export function readPosting(doc, url) {
+/** `{data, source}` for the first source that reads the page, or null when none does.
+ *  `parse(html)` makes a Document of a string: the browser's DOMParser, or jsdom's. */
+export function readPosting(doc, url, parse) {
   for (const [name, source] of SOURCES) {
     let data = null;
     // A source that throws is skipped, as Postulo skips it: the next may well cope.
     try {
-      data = source(doc, url);
+      data = source(doc, url, parse);
     } catch {
       data = null;
     }

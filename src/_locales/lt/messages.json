@@ -6,16 +6,13 @@
     "message": "ltr"
   },
   "extensionDescription": {
-    "message": "Nusiųskite peržiūrimą darbo skelbimą į savo Postulo, kad jį peržiūrėtumėte. Niekas nekeliauja kitur."
+    "message": "Užfiksuokite peržiūrimą darbo skelbimą, laikykite jį savo naršyklėje ir, kai nuspręsite, nusiųskite į savo Postulo peržiūrai. Niekas nekeliauja kitur."
   },
   "actionTitle": {
     "message": "Fiksuoti šį skelbimą Postulo"
   },
   "settings": {
     "message": "Nustatymai"
-  },
-  "unconfigured": {
-    "message": "Nurodykite plėtiniui, kur yra jūsų Postulo ir kurį žetoną naudoti."
   },
   "setUp": {
     "message": "Nustatyti"
@@ -24,7 +21,7 @@
     "message": "Fiksuoti šį skelbimą"
   },
   "captureHint": {
-    "message": "Peržiūrimas puslapis siunčiamas į jūsų Postulo ir niekur kitur."
+    "message": "Puslapis skaitomas čia, jūsų naršyklėje. Nieko nesiunčiama, kol nepasakysite."
   },
   "review": {
     "message": "Peržiūrėti Postulo"
@@ -88,7 +85,7 @@
     "message": "Išbandyti"
   },
   "shortcutHint": {
-    "message": "Paspaudus mygtuką arba $SHORTCUT$, peržiūrimas puslapis siunčiamas į jūsų Postulo peržiūrai. Joks puslapis neskaitomas, kol nepaprašote, ir nieko nesiunčiama kitur.",
+    "message": "Paspaudus mygtuką arba $SHORTCUT$, peržiūrimas puslapis nuskaitomas čia, naršyklėje. Joks puslapis neskaitomas, kol nepaprašote, ir nieko nesiunčiama niekur kitur, tik į jūsų pačių Postulo, kai pasakysite.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -183,14 +180,110 @@
   "unreadable": {
     "message": "Puslapio nepavyko nuskaityti. Kai kurie puslapiai blokuoja plėtinius."
   },
-  "previewing": {
-    "message": "Klausiama Postulo, ką jis čia perskaito…"
-  },
   "reviewHint": {
-    "message": "Tai Postulo perskaitė puslapyje. Prieš siųsdami ištaisykite klaidas."
+    "message": "Tai nuskaityta iš puslapio. Ištaisykite, kas neteisinga; niekas nepalieka šios naršyklės, kol to neišsiųsite."
   },
   "sendForReview": {
     "message": "Siųsti peržiūrai"
+  },
+  "notConnected": {
+    "message": "Dar neprisijungta prie Postulo: tai, ką užfiksuosite, laikoma šioje naršyklėje."
+  },
+  "keep": {
+    "message": "Laikyti šioje naršyklėje"
+  },
+  "kept": {
+    "message": "Laikoma šioje naršyklėje. Nusiųskite į Postulo, kai norėsite."
+  },
+  "alreadyKept": {
+    "message": "Šį puslapį jau pasilikote ir dar neišsiuntėte: tai jūsų versija."
+  },
+  "nothingRead": {
+    "message": "Iš šio puslapio nepavyko nieko nuskaityti. Užpildykite, ką žinote; niekas nepalieka šios naršyklės, kol to neišsiųsite."
+  },
+  "waiting": {
+    "message": "Postulo šiuo metu nepasiekiamas. Skelbimas laikomas šioje naršyklėje ir bus išsiųstas, kai tik Postulo atsakys."
+  },
+  "waitingOffline": {
+    "message": "Testavimo jungiklis įjungtas, todėl skelbimas laukia šioje naršyklėje. Jis bus išsiųstas, kai jungiklis bus išjungtas."
+  },
+  "waitingAccount": {
+    "message": "Skelbimas laikomas šioje naršyklėje ir bus išsiųstas, kai tai bus sutvarkyta."
+  },
+  "sendNeedsSetup": {
+    "message": "Laikoma šioje naršyklėje; bus išsiųsta, kai jūsų Postulo bus nustatytas."
+  },
+  "capturesTitle": {
+    "message": "Fiksavimai šioje naršyklėje"
+  },
+  "capturesIntro": {
+    "message": "Jūsų užfiksuoti skelbimai, laikomi čia, kol pasieks jūsų Postulo. Tai, ką siunčiate, iškeliauja, kai tik Postulo pasiekiamas."
+  },
+  "nothingKept": {
+    "message": "Šioje naršyklėje nieko nelaikoma."
+  },
+  "sendAll": {
+    "message": "Siųsti visus neišsiųstus"
+  },
+  "clearSent": {
+    "message": "Išvalyti išsiųstus"
+  },
+  "stateKept": {
+    "message": "Neišsiųsta"
+  },
+  "stateWaiting": {
+    "message": "Laukia Postulo"
+  },
+  "stateSent": {
+    "message": "Išsiųsta"
+  },
+  "stateRefused": {
+    "message": "Atmesta"
+  },
+  "tryNow": {
+    "message": "Bandyti dabar"
+  },
+  "holdBack": {
+    "message": "Palikti čia"
+  },
+  "deleteConfirm": {
+    "message": "Ištrinti šį fiksavimą? Jis nepasiekė Postulo, todėl egzistuoja tik čia."
+  },
+  "troubleshooting": {
+    "message": "Testavimas ir trikčių šalinimas"
+  },
+  "offlineLabel": {
+    "message": "Elgtis taip, lyg Postulo būtų nepasiekiamas"
+  },
+  "offlineHint": {
+    "message": "Testavimui. Kol tai įjungta, nieko nesiunčiama: fiksavimai laukia šioje naršyklėje lygiai taip, kaip lauktų neveikiant Postulo, ir iškeliauja, kai tai išjungiama."
+  },
+  "offlineOn": {
+    "message": "Testavimo jungiklis įjungtas: į Postulo nieko nesiunčiama."
+  },
+  "offlineOff": {
+    "message": "Testavimo jungiklis išjungtas: tai, kas laukia, dabar keliauja į Postulo."
+  },
+  "downloadLog": {
+    "message": "Atsisiųsti žurnalą"
+  },
+  "clearLog": {
+    "message": "Išvalyti žurnalą"
+  },
+  "logCleared": {
+    "message": "Žurnalas tuščias."
+  },
+  "logHint": {
+    "message": "Ką darė plėtinys, kad būtų galima išsiaiškinti, kodėl kažkas neveikė. Jame nėra jokio žetono ir nieko iš puslapių."
+  },
+  "cancel": {
+    "message": "Atšaukti"
+  },
+  "delete": {
+    "message": "Ištrinti"
+  },
+  "edit": {
+    "message": "Redaguoti"
   },
   "fieldTitle": {
     "message": "Pareigų pavadinimas"
