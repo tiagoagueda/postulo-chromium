@@ -1,14 +1,23 @@
 // Reading a posting out of a page, here in the browser, so a capture needs no server.
 //
 // This is Postulo's own two built-in sources, carried over line for line from
-// postulo/plugins/builtin: `schema.org` reads the JobPosting most large boards publish as
-// JSON-LD, and `page-metadata` falls back to the title the page declares and its text. Kept
-// to exactly what Postulo reads, so a page read here is one Postulo reads too when it is
-// sent, and neither invents a value: what cannot be determined is left empty for the
-// person to fill in.
+// postulo/plugins/builtin: `schema.org` reads the JobPosting most large boards publish
+// about themselves -- as JSON-LD in a script, or as itemprop microdata or RDFa written
+// into the markup, which is all an older recruitment system or a public-sector board ever
+// publishes -- and `page-metadata` falls back to the title the page declares and its
+// readable text. Kept to exactly what Postulo reads, so a page read here is one Postulo
+// reads too when it is sent, and neither invents a value: what cannot be determined is
+// left empty for the person to fill in.
+//
+// Ahead of both, `board` runs a recipe for the handful of boards that publish nothing a
+// standard can read -- LinkedIn marks the company and the place with class names and
+// nothing else -- and lets the two below fill whatever the recipe left empty. See
+// `boards.js`, which is `postulo/plugins/builtin/boards` carried over the same way.
 //
 // Everything here takes a parsed Document, and a function to parse more, from the
 // browser's DOMParser or from jsdom in the tests; nothing reaches for a global.
+
+import { recipeFor } from "./boards.js";
 
 /** schema.org employmentType values mapped onto Postulo's own. */
 const EMPLOYMENT_TYPES = {
@@ -21,6 +30,16 @@ const EMPLOYMENT_TYPES = {
   INTERNSHIP: "internship",
   APPRENTICESHIP: "apprenticeship",
 };
+
+/** Postulo's word for an employment type, or "" for anything it does not know.
+ *
+ *  Takes the spellings boards actually use -- "FULL_TIME", "Full-time", "full time" -- and
+ *  nothing else. A board writing it in the reader's language ("Temps plein") gets an empty
+ *  field and a person filling it in, which is the right answer: the alternative is a table
+ *  of every employment word in every language Postulo speaks. */
+export function employmentType(raw) {
+  return EMPLOYMENT_TYPES[String(raw ?? "").trim().toUpperCase().replaceAll("-", "_").replaceAll(" ", "_")] || "";
+}
 
 /** schema.org QuantitativeValue unitText values Postulo has a period for. */
 const SALARY_PERIODS = { YEAR: "year", MONTH: "month", DAY: "day", HOUR: "hour" };
@@ -42,7 +61,11 @@ const LIMITS = { remote_type: 20, employment_type: 20, salary_currency: 3, salar
 
 // ------------------------------------------------------------------ the page's parts
 
-/** Every JSON-LD object in the page: one object, a list, or an @graph holding either. */
+/** Every JSON-LD object in the page: one object, a list, or an @graph holding either.
+ *
+ *  A board that publishes several postings on one page wraps them in an ItemList or hangs
+ *  them off mainEntity, so those are followed too: the posting being looked at is often
+ *  inside one, and picking it back out is `bestPosting`'s job, not this one's. */
 export function jsonLd(doc) {
   const found = [];
   const flatten = (node) => {
@@ -50,8 +73,10 @@ export function jsonLd(doc) {
       node.forEach(flatten);
     } else if (node && typeof node === "object") {
       found.push(node);
-      if (node["@graph"] !== undefined) {
-        flatten(node["@graph"]);
+      for (const key of ["@graph", "itemListElement", "mainEntity", "item"]) {
+        if (node[key] !== undefined) {
+          flatten(node[key]);
+        }
       }
     }
   };
@@ -83,8 +108,127 @@ export function metadata(doc) {
   return { title: title ? title.textContent.trim() : "", ...meta };
 }
 
-/** A node's readable text, with paragraph breaks kept: tidy enough to edit, no more. */
-export function textOf(node) {
+// ------------------------------------------------- the same vocabulary, written in markup
+
+/** The attribute a property element carries its value in, per the microdata spec. */
+const VALUE_ATTRIBUTE = {
+  meta: "content",
+  audio: "src",
+  embed: "src",
+  iframe: "src",
+  img: "src",
+  source: "src",
+  track: "src",
+  video: "src",
+  a: "href",
+  area: "href",
+  link: "href",
+  object: "data",
+  data: "value",
+  meter: "value",
+  time: "datetime",
+};
+
+/** What one property element states: its attribute where it has one, else its text. */
+function propertyValue(element) {
+  const attribute = VALUE_ATTRIBUTE[element.localName];
+  if (attribute) {
+    const value = element.getAttribute(attribute);
+    if (value !== null) {
+      return value.trim();
+    }
+    // A <time> with no datetime states its date as text; the rest state nothing.
+    if (element.localName !== "time") {
+      return "";
+    }
+  }
+  return textOf(element);
+}
+
+/** The last segment of a type URL: "https://schema.org/JobPosting" → "JobPosting". */
+const typeName = (raw) => String(raw || "").trim().split(/[/#]/).filter(Boolean).pop() || "";
+
+/** Read one item, and everything nested in it, into the plain object JSON-LD would be.
+ *
+ *  `scopeOf` says which element opens an item, `typeOf` and `propsOf` name its type and
+ *  its properties. Microdata and RDFa differ only in those three, so one walk serves both
+ *  and the reader downstream never learns which of them a page used. */
+function readItem(element, shape) {
+  const item = {};
+  const types = shape.typeOf(element).split(/\s+/).map(typeName).filter(Boolean);
+  if (types.length) {
+    item["@type"] = types.length === 1 ? types[0] : types;
+  }
+  const add = (name, value) => {
+    if (value === "" || value === null || value === undefined) {
+      return;
+    }
+    // schema.org lets a property repeat; keep every value, as a list once there are two.
+    if (name in item) {
+      item[name] = Array.isArray(item[name]) ? [...item[name], value] : [item[name], value];
+    } else {
+      item[name] = value;
+    }
+  };
+  const walk = (parent) => {
+    for (const child of parent.children) {
+      const names = shape.propsOf(child);
+      const nested = shape.scopeOf(child);
+      if (names.length) {
+        // A property that opens an item of its own is an object; otherwise it is a value.
+        names.forEach((name) => add(name, nested ? readItem(child, shape) : propertyValue(child)));
+      }
+      // Descend unless the child began its own item, which has just read itself.
+      if (!nested) {
+        walk(child);
+      }
+    }
+  };
+  walk(element);
+  return item;
+}
+
+/** Only the outermost items: a nested one is read as part of the item that holds it. */
+const outermost = (elements, selector) =>
+  [...elements].filter((element) => !element.parentElement?.closest(selector));
+
+/** Every microdata item in the page, shaped as the object JSON-LD would have given. */
+export function microdata(doc) {
+  const shape = {
+    scopeOf: (element) => element.hasAttribute("itemscope"),
+    typeOf: (element) => element.getAttribute("itemtype") || "",
+    propsOf: (element) => (element.getAttribute("itemprop") || "").trim().split(/\s+/).filter(Boolean),
+  };
+  return outermost(doc.querySelectorAll("[itemscope][itemtype]"), "[itemscope]").map((element) =>
+    readItem(element, shape),
+  );
+}
+
+/** Every RDFa item in the page, shaped the same way.
+ *
+ *  RDFa Lite is all a board ever uses here: `typeof` opens an item and `property` names a
+ *  value. The `vocab` in force is not tracked, because a type name is what the reader
+ *  matches on either way, and a prefix like "schema:title" is dropped for the same reason. */
+export function rdfa(doc) {
+  const shape = {
+    scopeOf: (element) => element.hasAttribute("typeof"),
+    typeOf: (element) => element.getAttribute("typeof") || "",
+    propsOf: (element) =>
+      (element.getAttribute("property") || "")
+        .trim()
+        .split(/\s+/)
+        .filter(Boolean)
+        .map((name) => name.split(":").pop()),
+  };
+  return outermost(doc.querySelectorAll("[typeof]"), "[typeof]").map((element) => readItem(element, shape));
+}
+
+// ------------------------------------------------------------------ a page's readable text
+
+/** A node's readable text, with paragraph breaks kept: tidy enough to edit, no more.
+ *
+ *  `drop` names elements to leave out, for the fallback that has a whole page to read. */
+export function textOf(node, drop = null) {
   const parts = [];
   const walk = (parent) => {
     for (const child of parent.childNodes) {
@@ -92,7 +236,7 @@ export function textOf(node) {
         parts.push(child.data);
       } else if (child.nodeType === 1) {
         const tag = child.localName;
-        if (IGNORED.has(tag)) {
+        if (IGNORED.has(tag) || (drop && drop(child))) {
           continue;
         }
         const block = BLOCKS.has(tag);
@@ -116,6 +260,126 @@ export function textOf(node) {
     .trim();
 }
 
+/** Landmarks that surround an advert without ever being part of one.
+ *
+ *  The controls are here and the `<form>` around them is not, deliberately: an advert is
+ *  never written inside a button, but whole pages are still served wrapped in one big form
+ *  — every ASP.NET board is — and dropping those would leave the description empty. */
+const CHROME = new Set(["nav", "header", "footer", "aside", "button", "input", "select", "textarea", "option"]);
+const CHROME_ROLES = new Set([
+  "navigation", "banner", "contentinfo", "complementary", "search", "menu", "menubar", "dialog", "alertdialog",
+]);
+
+/** True for an element that is page furniture rather than the advert.
+ *
+ *  Landmarks only: what a page declares about its own shape, never a guess at a class
+ *  name. A board that marks nothing loses nothing — it is read exactly as it was before. */
+function isChrome(element) {
+  if (element.getAttribute("aria-hidden") === "true" || element.hasAttribute("hidden")) {
+    return true;
+  }
+  // An explicit role overrides the tag: <nav role="main"> means what it says.
+  const role = (element.getAttribute("role") || "").trim().toLowerCase();
+  if (role) {
+    return CHROME_ROLES.has(role);
+  }
+  return CHROME.has(element.localName);
+}
+
+/** A block is a list of links rather than prose once it is this much link, and this many. */
+const FARM_LINKS = 6;
+const FARM_SHARE = 0.7;
+const FARM_FLOOR = 100;
+
+/** Blocks that are a list of links rather than something written.
+ *
+ *  "Similar searches", "people also viewed", "explore top content": every large board ends
+ *  an advert with thousands of characters of them, and marks them with a class name and
+ *  nothing else — LinkedIn's are plain `<section>`s, so no landmark rule reaches them.
+ *
+ *  What does reach them is what they are: text that is almost entirely inside links, a lot
+ *  of them. That is a measurement rather than a guess at a board's markup, it is the same
+ *  measurement every reading-mode extractor makes, and prose does not look like it. The
+ *  floor keeps it off a short run of links inside a real paragraph. */
+function linkFarms(container) {
+  const farms = new Set();
+  for (const element of container.querySelectorAll("section, div, ul, ol, aside, nav")) {
+    // The outermost one is enough; everything inside it goes with it.
+    if (farms.has(element.parentElement?.closest("section, div, ul, ol, aside, nav"))) {
+      farms.add(element);
+      continue;
+    }
+    const links = element.querySelectorAll("a");
+    if (links.length < FARM_LINKS) {
+      continue;
+    }
+    const total = element.textContent.replace(/\s+/g, " ").trim().length;
+    if (total < FARM_FLOOR) {
+      continue;
+    }
+    let linked = 0;
+    for (const link of links) {
+      linked += link.textContent.replace(/\s+/g, " ").trim().length;
+    }
+    if (linked / total >= FARM_SHARE) {
+      farms.add(element);
+    }
+  }
+  return farms;
+}
+
+/** The readable text of a whole page, less its navigation, header, footer and sidebars.
+ *
+ *  A page's own landmarks say which part is the advert: where it declares a `<main>` or an
+ *  `<article>` carrying real text, read that, and otherwise read the body without the
+ *  furniture around it. This is the fallback's text, and it goes to somebody who is about
+ *  to read and correct it, so it would rather keep a stray line than cut the advert. */
+export function mainText(doc) {
+  if (!doc.body) {
+    return "";
+  }
+  const farms = linkFarms(doc.body);
+  const drop = (element) => isChrome(element) || farms.has(element);
+  const whole = textOf(doc.body, drop);
+  for (const selector of ["main", "[role='main']", "article"]) {
+    for (const candidate of doc.body.querySelectorAll(selector)) {
+      if (isChrome(candidate) || candidate.closest("nav, aside, footer")) {
+        continue;
+      }
+      const text = textOf(candidate, drop);
+      // A landmark holding almost none of the page is a teaser or a card, not the advert.
+      if (text.length >= 200 && text.length >= whole.length * 0.25) {
+        return text;
+      }
+    }
+  }
+  return whole;
+}
+
+/** The one heading a page gives itself, where it gives exactly one.
+ *
+ *  A board with no structured data still says what the advert is called, in the element
+ *  HTML has for saying it. That is worth more than the title the page declares for sharing,
+ *  which carries whatever else the board wants a link to read: LinkedIn's `og:title` is
+ *  "<company> hiring <job> in <place> | LinkedIn" and its `<h1>` is the job.
+ *
+ *  Exactly one, and not inside the furniture. Two headings is a page that has not said
+ *  which is the subject, and guessing between them is the thing this does not do. */
+export function headingTitle(doc) {
+  if (!doc.body) {
+    return "";
+  }
+  const headings = [...doc.body.querySelectorAll("h1")].filter(
+    (heading) => !isChrome(heading) && !heading.closest("nav, aside, footer, header"),
+  );
+  if (headings.length !== 1) {
+    return "";
+  }
+  const text = textOf(headings[0]).replace(/\s+/g, " ").trim();
+  // A heading that runs to a paragraph is a page using h1 for something else.
+  return text.length && text.length <= 200 ? text : "";
+}
+
 /** Text from an HTML fragment, as a description inside JSON is: often escaped once more.
  *
  *  As Postulo does it: decode the entities first, markup and all, so "&lt;p&gt;" becomes a
@@ -123,8 +387,11 @@ export function textOf(node) {
  *  piece by the parser, so nothing is ever handed to innerHTML. */
 function fragmentText(parse, html) {
   const unescaped = html
-    .split(/(<[^>]*>)/)
-    .map((piece, index) => (index % 2 || !piece.includes("&") ? piece : parse(`<body>${piece.replaceAll("<", "&lt;")}`).body.textContent))
+    // A tag runs to its closing ">", and a quoted attribute may hold one of its own.
+    .split(/(<\/?[a-zA-Z][^>"']*(?:(?:"[^"]*"|'[^']*')[^>"']*)*>)/)
+    .map((piece, index) =>
+      index % 2 || !piece.includes("&") ? piece : parse(`<body>${piece.replaceAll("<", "&lt;")}`).body.textContent,
+    )
     .join("");
   return textOf(parse(`<body>${unescaped}`).body);
 }
@@ -171,11 +438,10 @@ function amount(value) {
   return fraction === undefined ? integer : `${integer}.${fraction}`;
 }
 
-/** A readable place from a schema.org Place, without the repetition sites put in. */
-function place(jobLocation) {
-  const one = first(jobLocation);
+/** One schema.org Place as a readable line, without the repetition sites put in. */
+function onePlace(one) {
   if (!one || typeof one !== "object") {
-    return text(jobLocation);
+    return typeof one === "string" ? one.trim() : "";
   }
   const address = one.address;
   if (typeof address === "string") {
@@ -209,31 +475,60 @@ function place(jobLocation) {
   return readable.join(", ");
 }
 
-function salary(baseSalary) {
-  const one = first(baseSalary);
+/** A readable place from a schema.org jobLocation, which may name more than one office. */
+function place(jobLocation) {
+  const many = Array.isArray(jobLocation) ? jobLocation : [jobLocation];
+  const lines = [];
+  for (const one of many) {
+    const line = onePlace(one);
+    if (line && !lines.includes(line)) {
+      lines.push(line);
+    }
+  }
+  // Three offices read as a place; a board listing forty is listing its coverage, not one.
+  return lines.length > 3 ? lines.slice(0, 3).join(" · ") : lines.join(" · ");
+}
+
+/** `[low, high, currency, period]` from one MonetaryAmount. */
+function oneSalary(value) {
+  const one = first(value);
   if (!one || typeof one !== "object") {
     return [null, null, "", ""];
   }
   const currency = String(one.currency || one.salaryCurrency || "").trim().slice(0, 3);
-  const value = one.value;
+  const inner = one.value;
   let low;
   let high;
   let period = "";
-  if (value && typeof value === "object" && !Array.isArray(value)) {
-    low = amount(value.minValue);
-    high = amount(value.maxValue);
+  if (inner && typeof inner === "object" && !Array.isArray(inner)) {
+    low = amount(inner.minValue);
+    high = amount(inner.maxValue);
     if (low === null && high === null) {
-      low = amount(value.value);
+      low = amount(inner.value);
     }
-    period = SALARY_PERIODS[String(value.unitText || "").toUpperCase()] || "";
+    period = SALARY_PERIODS[String(inner.unitText || "").toUpperCase()] || "";
   } else {
-    low = amount(value);
+    low = amount(inner);
     high = null;
   }
   return [low, high, currency.toUpperCase(), period];
 }
 
-// ------------------------------------------------------------------ the two sources
+/** What a posting pays: its baseSalary, or the estimate where that is all it states.
+ *
+ *  A currency and a period with no amount behind them say nothing — boards routinely write
+ *  a "USD 0–0 YEAR" placeholder into every advert — so they are kept only alongside one. */
+function salary(posting) {
+  for (const candidate of [posting.baseSalary, posting.estimatedSalary]) {
+    const [low, high, currency, period] = oneSalary(candidate);
+    if (low !== null || high !== null) {
+      return [low, high, currency, period];
+    }
+  }
+  return [null, null, "", ""];
+}
+
+// ------------------------------------------------------------------ the sources
 
 function hostOf(url) {
   try {
@@ -243,28 +538,91 @@ function hostOf(url) {
   }
 }
 
-function schemaOrg(doc, url, parse) {
-  const posting = jsonLd(doc).find((object) => {
+/** A URL reduced to what identifies the posting: no scheme, no "www.", no trailing slash. */
+function sameUrl(raw) {
+  try {
+    const parsed = new URL(raw);
+    return `${parsed.host.replace(/^www\./, "")}${parsed.pathname.replace(/\/+$/, "")}${parsed.search}`.toLowerCase();
+  } catch {
+    return "";
+  }
+}
+
+/** Is this posting the one the page is showing?
+ *
+ *  A search page carries a JobPosting for every hit, and the first is almost never the one
+ *  being looked at. Each states which advert it is, in `url`, in `@id`, or as the
+ *  `identifier` a board puts in its own links, so the one that names this page wins. */
+function matchesUrl(posting, url) {
+  const here = sameUrl(url);
+  if (!here) {
+    return false;
+  }
+  for (const key of ["url", "@id", "sameAs"]) {
+    const stated = sameUrl(text(posting[key]));
+    if (stated && stated === here) {
+      return true;
+    }
+  }
+  const identifier = text(posting.identifier);
+  // Anything this short matches by accident; a board's own id never is.
+  return identifier.length >= 4 && here.includes(identifier.toLowerCase());
+}
+
+/** The JobPosting objects among a page's structured data, in the order they appear. */
+function postings(objects) {
+  return objects.filter((object) => {
     const types = Array.isArray(object["@type"]) ? object["@type"] : [object["@type"]];
     return types.some((type) => String(type).toLowerCase() === "jobposting");
   });
-  if (!posting) {
-    return null;
+}
+
+/** The posting a page is showing: the one naming this URL, or the only one there is. */
+function bestPosting(objects, url) {
+  const found = postings(objects).filter((posting) => text(posting.title));
+  if (found.length < 2) {
+    return found[0] || null;
   }
+  return found.find((posting) => matchesUrl(posting, url)) || found[0];
+}
+
+/** Every field Postulo has, read off one schema.org JobPosting however it was written.
+ *
+ *  `descriptionIsHtml` because the two spellings differ in exactly one place: a JSON string
+ *  carries the description as escaped markup and has to be unescaped and flattened, while
+ *  one read out of the markup is already the text a reader sees. Unescaping that would
+ *  mangle a description legitimately containing an ampersand or an angle bracket. */
+function fromPosting(posting, url, parse, descriptionIsHtml) {
   const title = text(posting.title);
   if (!title) {
     return null;
   }
-  const [low, high, currency, period] = salary(posting.baseSalary);
-  const employment = String(first(posting.employmentType) || "").toUpperCase().replaceAll("-", "_");
-  const remote = String(posting.jobLocationType || "").toUpperCase().includes("TELECOMMUTE") ? "remote" : "";
-  const description = typeof posting.description === "string" ? fragmentText(parse, posting.description) : "";
+  const [low, high, currency, period] = salary(posting);
+  const employment = employmentType(first(posting.employmentType) || "");
+
+  // schema.org defines applicantLocationRequirements as where an applicant may be for a
+  // job done remotely, so a posting carrying one is stating remote as plainly as the type.
+  const remote =
+    String(posting.jobLocationType || "").toUpperCase().includes("TELECOMMUTE") ||
+    (posting.applicantLocationRequirements !== undefined && posting.applicantLocationRequirements !== null)
+      ? "remote"
+      : "";
+
+  // Most boards put the office in jobLocation. Those that do not still name it on the
+  // organisation doing the hiring, which is the same answer written a field across.
+  const organisation = first(posting.hiringOrganization);
+  const location =
+    place(posting.jobLocation) ||
+    (organisation && typeof organisation === "object" ? onePlace({ address: organisation.address }) : "");
+
+  const described = typeof posting.description === "string" ? posting.description : "";
+  const description = descriptionIsHtml ? fragmentText(parse, described) : described;
   return {
     title,
     company_name: text(posting.hiringOrganization),
-    location: place(posting.jobLocation),
+    location,
     remote_type: remote,
-    employment_type: EMPLOYMENT_TYPES[employment] || "",
+    employment_type: employment,
     description,
     salary_min: low,
     salary_max: high,
@@ -277,9 +635,26 @@ function schemaOrg(doc, url, parse) {
   };
 }
 
+/** The JobPosting a board publishes about itself, in whichever of the three spellings it used.
+ *
+ *  JSON-LD first, because that is what most boards publish and it is the least ambiguous;
+ *  then the same vocabulary written into the markup, for the boards that publish it no
+ *  other way. A page carrying both is read from the script, which is the one a board
+ *  maintains deliberately. */
+function schemaOrg(doc, url, parse) {
+  const inScript = bestPosting(jsonLd(doc), url);
+  if (inScript) {
+    return fromPosting(inScript, url, parse, true);
+  }
+  const inMarkup = bestPosting([...microdata(doc), ...rdfa(doc)], url);
+  return inMarkup ? fromPosting(inMarkup, url, parse, false) : null;
+}
+
 function pageMetadata(doc, url) {
   const meta = metadata(doc);
-  const title = meta["og:title"] || meta["twitter:title"] || meta.title || "";
+  // The page's own heading first, then what it declares for a link to read. Both are the
+  // page talking about itself; the heading is the one written for a person reading it.
+  const title = headingTitle(doc) || meta["og:title"] || meta["twitter:title"] || meta.title || "";
   if (!title.trim()) {
     return null;
   }
@@ -287,7 +662,7 @@ function pageMetadata(doc, url) {
     ...emptyPosting(url),
     title: title.slice(0, MAX_FIELD),
     company_name: (meta["og:site_name"] || "").slice(0, MAX_FIELD),
-    description: doc.body ? textOf(doc.body) : "",
+    description: mainText(doc),
   };
 }
 
@@ -325,8 +700,60 @@ export function tidy(posting) {
   return tidied;
 }
 
+/** The fields a recipe may state. Anything else it returns is ignored rather than trusted. */
+const RECIPE_FIELDS = [
+  "title", "company_name", "location", "remote_type", "employment_type", "description",
+  "salary_min", "salary_max", "salary_currency", "salary_period", "posted_at", "closes_at",
+];
+
+/** A board's own recipe, with the standards filling whatever it left empty.
+ *
+ *  Only for a page whose host a recipe claims: everywhere else this answers nothing and the
+ *  standard sources run exactly as they did. */
+function boardSource(doc, url, parse) {
+  const board = recipeFor(url);
+  if (!board || !doc.body) {
+    return null;
+  }
+  const stated = {};
+  const read = board.read(doc.body, url, (node) => textOf(node), employmentType);
+  for (const field of RECIPE_FIELDS) {
+    const value = read[field];
+    if (value !== undefined && value !== null && value !== "") {
+      stated[field] = value;
+    }
+  }
+  if (!stated.title) {
+    // A recipe that cannot name the job has not recognised the page -- an advert that has
+    // moved, or a board that redesigned. Let the standards have it.
+    return null;
+  }
+  for (const fill of [schemaOrg, pageMetadata]) {
+    if (Object.keys(stated).length >= RECIPE_FIELDS.length) {
+      break;
+    }
+    let fallback = null;
+    try {
+      fallback = fill(doc, url, parse);
+    } catch {
+      fallback = null;
+    }
+    if (!fallback) {
+      continue;
+    }
+    for (const field of RECIPE_FIELDS) {
+      const value = fallback[field];
+      if (!(field in stated) && value !== undefined && value !== null && value !== "") {
+        stated[field] = value;
+      }
+    }
+  }
+  return { ...emptyPosting(url), ...stated, url, source: hostOf(url) };
+}
+
 /** The sources, in Postulo's order. */
 const SOURCES = [
+  ["board", boardSource],
   ["schema.org", schemaOrg],
   ["page-metadata", pageMetadata],
 ];

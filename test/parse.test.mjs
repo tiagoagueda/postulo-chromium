@@ -88,7 +88,8 @@ test("with no structured data, the declared title and the page's text are taken"
   assert.equal(read.source, "page-metadata");
   assert.equal(read.data.title, "Senior Plumber");
   assert.equal(read.data.company_name, "Jobs & Co");
-  assert.equal(read.data.description, "Menu\n\nSenior Plumber\n\nPipes, mostly.\n\nApply now.");
+  // The <nav> is the page's furniture, not the advert, and the page said so itself.
+  assert.equal(read.data.description, "Senior Plumber\n\nPipes, mostly.\n\nApply now.");
 });
 
 test("a JobPosting without a title falls through to the page's own", () => {
