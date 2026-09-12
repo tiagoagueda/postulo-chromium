@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Juba püütud: teie kuulutustes alates $WHEN$ nimega $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Ootab Postulos juba ülevaatamist alates $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Selle pealkirjaga kuulutus selles ettevõttes on olemas: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "varem püütud"
+  },
+  "knownOpen": {
+    "message": "Ava Postulos"
   }
 }

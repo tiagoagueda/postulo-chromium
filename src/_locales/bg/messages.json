@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Вече прихванато: в обявите ви от $WHEN$ като $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Вече чака преглед в Postulo от $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Съществува обява с това заглавие в тази фирма: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "прихванато преди"
+  },
+  "knownOpen": {
+    "message": "Отваряне в Postulo"
   }
 }

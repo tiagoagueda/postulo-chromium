@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Արդեն որսված է. ձեր հայտարարություններում $WHEN$-ից՝ որպես $TITLE$։",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Արդեն սպասում է վերանայման Postulo-ում $WHEN$-ից։",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Այս ընկերությունում կա այս վերնագրով հայտարարություն. $TITLE$։",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "արդեն որսված"
+  },
+  "knownOpen": {
+    "message": "Բացել Postulo-ում"
   }
 }

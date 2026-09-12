@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "უკვე აღებულია: თქვენს განცხადებებში $WHEN$-დან, როგორც $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "უკვე ელოდება გადამოწმებას Postulo-ში $WHEN$-დან.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "ამ კომპანიაში ამ სათაურით განცხადება არსებობს: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "უკვე აღებული"
+  },
+  "knownOpen": {
+    "message": "გახსნა Postulo-ში"
   }
 }

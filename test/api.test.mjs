@@ -76,6 +76,29 @@ test("a capture posts the page to the configured instance with the token, and to
   assert.equal(describe({ title: "" }, "Anúncio sem título"), "Anúncio sem título");
 });
 
+test("asking what is known sends the postings and brings the answers back", async () => {
+  const { known } = await import("../src/lib/api.js");
+  let sent = null;
+  const answers = await known(
+    "https://postulo.example.org",
+    "tok",
+    [{ url: "https://jobs.example/1", title: "Research Engineer", company_name: "Black Mesa" }, { url: "https://jobs.example/2" }],
+    async (url, init) => {
+      sent = { url, method: init.method, body: JSON.parse(init.body) };
+      return fakeResponse(200, [{ url: "https://jobs.example/1", listings: [{ id: 3 }], captures: [], similar: [] }, { url: "https://jobs.example/2", listings: [], captures: [], similar: [] }]);
+    },
+  );
+  assert.equal(sent.url, "https://postulo.example.org/api/v1/captures/known");
+  assert.equal(sent.method, "POST");
+  assert.deepEqual(sent.body, {
+    postings: [
+      { url: "https://jobs.example/1", title: "Research Engineer", company: "Black Mesa" },
+      { url: "https://jobs.example/2", title: "", company: "" },
+    ],
+  });
+  assert.equal(answers[0].listings[0].id, 3);
+});
+
 test("the test button asks /me", async () => {
   let asked = "";
   const me = await whoAmI("https://postulo.example.org", "tok", async (url) => {

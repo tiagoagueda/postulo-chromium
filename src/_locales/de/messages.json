@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Bereits erfasst: seit $WHEN$ in Ihren Anzeigen als $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Wartet in Postulo bereits seit $WHEN$ auf Prüfung.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Eine Anzeige mit diesem Titel bei diesem Unternehmen existiert: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "bereits erfasst"
+  },
+  "knownOpen": {
+    "message": "In Postulo öffnen"
   }
 }

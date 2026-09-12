@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Kaapattu jo: ilmoituksissasi $WHEN$ alkaen nimellä $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Odottaa jo tarkistusta Postulossa, $WHEN$ alkaen.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Tällä otsikolla on jo ilmoitus tässä yrityksessä: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "kaapattu aiemmin"
+  },
+  "knownOpen": {
+    "message": "Avaa Postulossa"
   }
 }

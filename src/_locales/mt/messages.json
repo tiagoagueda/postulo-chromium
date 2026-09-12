@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Diġà maqbud: fil-listi tiegħek minn $WHEN$ bħala $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Diġà qed jistenna r-reviżjoni f'Postulo, minn $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Teżisti lista b'dan it-titlu f'din il-kumpanija: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "diġà maqbud"
+  },
+  "knownOpen": {
+    "message": "Iftaħ f'Postulo"
   }
 }

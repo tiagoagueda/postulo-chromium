@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Lehendik harrapatua: zure eskaintzetan $WHEN$ geroztik, $TITLE$ gisa.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Postulon berrikusteko zain dago jada, $WHEN$ geroztik.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Badago izenburu hau duen eskaintza bat enpresa honetan: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "lehendik harrapatua"
+  },
+  "knownOpen": {
+    "message": "Ireki Postulon"
   }
 }

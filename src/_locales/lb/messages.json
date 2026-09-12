@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Scho erfaasst: an Ären Annoncen zënter dem $WHEN$ als $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Waart am Postulo scho zënter dem $WHEN$ op d'Iwwerpréiwung.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Eng Annonce mat dësem Titel bei dëser Firma gëtt et: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "scho erfaasst"
+  },
+  "knownOpen": {
+    "message": "Am Postulo opmaachen"
   }
 }

@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Jau fiksuota: jūsų skelbimuose nuo $WHEN$ kaip $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Jau laukia peržiūros Postulo nuo $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Skelbimas tokiu pavadinimu šioje įmonėje yra: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "jau fiksuota"
+  },
+  "knownOpen": {
+    "message": "Atidaryti Postulo"
   }
 }

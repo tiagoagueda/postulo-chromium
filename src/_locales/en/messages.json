@@ -510,5 +510,43 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Captured before: in your listings since $WHEN$ as $TITLE$.",
+    "description": "In the popup, when the address is already a listing. WHEN is a date, TITLE the listing's title.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Already waiting for review in Postulo, since $WHEN$.",
+    "description": "In the popup, when a capture of the address is still waiting for review. WHEN is a date.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "A listing with this title at this company exists: $TITLE$.",
+    "description": "In the popup, when a listing with the same title at the same company exists. TITLE is its title.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "captured before",
+    "description": "A small tag beside a listed posting Postulo already holds."
+  },
+  "knownOpen": {
+    "message": "Open it in Postulo",
+    "description": "Link after the sentence above: opens the listing or the capture in Postulo."
   }
 }

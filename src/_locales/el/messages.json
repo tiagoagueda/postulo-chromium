@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Έχει ήδη συλληφθεί: στις αγγελίες σας από $WHEN$ ως $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Περιμένει ήδη έλεγχο στο Postulo από $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Υπάρχει αγγελία με αυτόν τον τίτλο σε αυτή την εταιρεία: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "ήδη συλληφθεί"
+  },
+  "knownOpen": {
+    "message": "Άνοιγμα στο Postulo"
   }
 }

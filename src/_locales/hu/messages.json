@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Már rögzítve: a hirdetései között $WHEN$ óta, mint $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Már ellenőrzésre vár a Postulóban $WHEN$ óta.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Létezik ilyen című hirdetés ennél a cégnél: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "már rögzítve"
+  },
+  "knownOpen": {
+    "message": "Megnyitás a Postulóban"
   }
 }

@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Déjà capturée : dans vos annonces depuis le $WHEN$ sous $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Attend déjà d'être relue dans Postulo, depuis le $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Une annonce avec ce titre chez cette entreprise existe : $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "déjà capturée"
+  },
+  "knownOpen": {
+    "message": "L'ouvrir dans Postulo"
   }
 }

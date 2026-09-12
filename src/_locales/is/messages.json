@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Þegar gripið: í auglýsingunum þínum frá $WHEN$ sem $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Bíður þegar yfirferðar í Postulo, frá $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Auglýsing með þessum titli hjá þessu fyrirtæki er til: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "gripið áður"
+  },
+  "knownOpen": {
+    "message": "Opna í Postulo"
   }
 }

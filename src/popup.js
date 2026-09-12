@@ -1,4 +1,4 @@
-import { describe, originPattern } from "./lib/api.js";
+import { describe, known, originPattern } from "./lib/api.js";
 import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
 import { explain, localise, t } from "./lib/i18n.js";
@@ -102,6 +102,10 @@ async function main() {
       $("edit-hint").textContent = current ? t("alreadyKept") : found ? t("reviewHint") : t("nothingRead");
       const source = current ? current.source : page.source;
       $("edit-read-by").textContent = source ? t("readBy", [source]) : "";
+      // Captured before? Asked after the form is up, and said when the answer comes;
+      // the form is usable meanwhile and stays usable if it never does (#178).
+      $("edit-known").hidden = true;
+      askKnown([page.read]).then((answers) => sayKnown($("edit-known"), answers && answers[0]), () => {});
       show("edit");
       say("");
       editor.focus();
@@ -176,6 +180,62 @@ async function main() {
     }
   });
 
+  // -------------------------------------------------------- captured before
+
+  /** What Postulo already holds for these postings, or null when it cannot be asked --
+   *  not set up, the testing switch on, no permission yet, unreachable, or a Postulo
+   *  older than the question -- in which case the capture proceeds exactly as it would
+   *  have (#178). Never a permission prompt: that waits for a press of Send. */
+  async function askKnown(postings) {
+    if (!connected || settings.offline || !postings.length) {
+      return null;
+    }
+    try {
+      if (!(await hasHostPermission(originPattern(settings.instance)))) {
+        return null;
+      }
+      return await known(settings.instance, settings.token, postings);
+    } catch (error) {
+      await log.add("known", { problem: error.key || error.message });
+      return null;
+    }
+  }
+
+  const when = (iso) => new Date(iso).toLocaleDateString();
+
+  /** Say, in `element`, what one answer holds -- the address first, then the softer
+   *  match on title and company -- with a link to it in Postulo; or nothing at all. */
+  function sayKnown(element, answer) {
+    const listing = answer && answer.listings[0];
+    const waiting = answer && answer.captures[0];
+    const similar = answer && answer.similar[0];
+    let sentence = "";
+    let link = "";
+    if (listing) {
+      sentence = t("knownListing", [when(listing.created_at), listing.title]);
+      link = listing.listing_url;
+    } else if (waiting) {
+      sentence = t("knownCapture", [when(waiting.created_at)]);
+      link = waiting.review_url;
+    } else if (similar) {
+      sentence = t("knownSimilar", [similar.title]);
+      link = similar.listing_url;
+    }
+    element.replaceChildren();
+    if (!sentence) {
+      element.hidden = true;
+      return;
+    }
+    element.append(`${sentence} `);
+    const open = document.createElement("a");
+    open.href = link;
+    open.target = "_blank";
+    open.rel = "noopener";
+    open.textContent = t("knownOpen");
+    element.append(open);
+    element.hidden = false;
+  }
+
   // ------------------------------------------------------- several at once
 
   let offered = []; // what the results page listed, in its order
@@ -201,6 +261,22 @@ async function main() {
       list.append(item);
     });
     $("send-picked").disabled = false;
+    // The ones Postulo already holds are marked, not unticked: they are unticked already,
+    // and the second visit to a board's results page is where duplicates arrive in bulk.
+    askKnown(listed.map((posting) => posting.data)).then((answers) => {
+      if (!answers) {
+        return;
+      }
+      answers.forEach((answer, index) => {
+        const label = list.children[index] && list.children[index].querySelector("label");
+        if (label && (answer.listings.length || answer.captures.length)) {
+          const tag = document.createElement("span");
+          tag.className = "tag";
+          tag.textContent = t("knownTag");
+          label.append(tag);
+        }
+      });
+    }, () => {});
   }
 
   function tickEvery(on) {

@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Wedi'i ddal o'r blaen: yn eich rhestrau ers $WHEN$ fel $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Eisoes yn aros i'w adolygu yn Postulo, ers $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Mae rhestr gyda'r teitl hwn yn y cwmni hwn: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "wedi'i ddal o'r blaen"
+  },
+  "knownOpen": {
+    "message": "Ei agor yn Postulo"
   }
 }

@@ -72,6 +72,16 @@ The page is kept once in the browser however many captures were read from it, an
 when the last of them has reached Postulo. A page that is about one posting and happens to
 list similar ones is still that posting's page, and is captured as one.
 
+## Captured before
+
+When the popup opens on a posting your Postulo already holds — a listing at that address
+however it was spelled, a capture of it still waiting for review, or a listing with that
+title at that company — it says so, with a link, before you send anything. On a page of
+results, the postings you already hold carry a *captured before* tag. It asks your server
+once, quietly, and refuses nothing: a second capture is yours to want. With Postulo
+unreachable, not set up, or older than the question, nothing is said and the capture
+proceeds as it always did.
+
 ## Without a server
 
 Everything the extension keeps is listed under **Captures in this browser** — the link at

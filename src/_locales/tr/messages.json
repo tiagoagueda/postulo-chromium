@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Daha önce yakalanmış: $WHEN$ tarihinden beri ilanlarınızda $TITLE$ olarak.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Postulo'da $WHEN$ tarihinden beri zaten inceleme bekliyor.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Bu şirkette bu başlıkla bir ilan var: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "daha önce yakalandı"
+  },
+  "knownOpen": {
+    "message": "Postulo'da aç"
   }
 }

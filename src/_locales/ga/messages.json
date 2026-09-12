@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Gafa cheana: i do liostaí ó $WHEN$ mar $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Ag fanacht le hathbhreithniú in Postulo cheana, ó $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Tá liosta leis an teideal seo ag an gcuideachta seo: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "gafa cheana"
+  },
+  "knownOpen": {
+    "message": "Oscail in Postulo"
   }
 }

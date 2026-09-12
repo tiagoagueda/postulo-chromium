@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "Jau tverts: jūsu sludinājumos kopš $WHEN$ kā $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Jau gaida pārskatīšanu Postulo kopš $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Sludinājums ar šādu nosaukumu šajā uzņēmumā pastāv: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "jau tverts"
+  },
+  "knownOpen": {
+    "message": "Atvērt Postulo"
   }
 }

@@ -400,5 +400,38 @@
         "content": "$1"
       }
     }
+  },
+  "knownListing": {
+    "message": "E kapur më parë: në njoftimet tuaja që nga $WHEN$ si $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Tashmë pret shqyrtim në Postulo, që nga $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Ekziston një njoftim me këtë titull në këtë kompani: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "e kapur më parë"
+  },
+  "knownOpen": {
+    "message": "Hape në Postulo"
   }
 }

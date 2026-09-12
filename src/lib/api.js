@@ -150,6 +150,24 @@ export async function capture(instance, token, { url, html, data, batch }, fetch
   return readResponse(response);
 }
 
+/** POST /captures/known: what Postulo already holds for these postings -- a listing at the
+ *  address however it was spelled, a capture of it still waiting, or a listing with the
+ *  title at the company -- so the popup can say so before anything is sent (#178). One
+ *  request for one posting or forty. Postulo stores nothing and refuses nothing on it. */
+export async function known(instance, token, postings, fetchImpl = fetch) {
+  const asked = postings.map((posting) => ({
+    url: posting.url,
+    title: posting.title || "",
+    company: posting.company_name || "",
+  }));
+  const response = await request(fetchImpl, endpoint(instance, "/captures/known"), {
+    method: "POST",
+    headers: headers(token),
+    body: JSON.stringify({ postings: asked }),
+  });
+  return readResponse(response);
+}
+
 /** Whether a failure means "try again later" rather than "this will not do".
  *
  *  No answer at all, a Postulo that is busy (429) or failing (5xx) is later. A token that
