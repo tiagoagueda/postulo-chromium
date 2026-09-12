@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "All'ora"
+  },
+  "postingsFound": {
+    "message": "Questa pagina elenca $COUNT$ annunci.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Spunta quelli che vale la pena conservare. Ognuno diventa un'acquisizione a sé, riletta da Postulo."
+  },
+  "tickAll": {
+    "message": "Tutti"
+  },
+  "tickNone": {
+    "message": "Nessuno"
+  },
+  "nothingTicked": {
+    "message": "Non c'è nulla di spuntato."
+  },
+  "keptMany": {
+    "message": "$COUNT$ acquisizioni conservate in questo browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ acquisizioni inviate per la revisione.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ sono state rifiutate; l'elenco delle acquisizioni dice perché.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

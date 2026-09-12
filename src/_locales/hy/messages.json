@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Ժամական"
+  },
+  "postingsFound": {
+    "message": "Այս էջում կա $COUNT$ հայտարարություն։",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Նշեք պահելու արժանիները։ Յուրաքանչյուրը դառնում է առանձին որս, որը Postulo-ն կրկին կարդում է։"
+  },
+  "tickAll": {
+    "message": "Բոլորը"
+  },
+  "tickNone": {
+    "message": "Ոչ մեկը"
+  },
+  "nothingTicked": {
+    "message": "Ոչինչ նշված չէ։"
+  },
+  "keptMany": {
+    "message": "$COUNT$ որս պահված է այս դիտարկիչում։",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ որս ուղարկված է վերանայման։",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$-ը մերժվել է. որսերի ցանկն ասում է, թե ինչու։",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

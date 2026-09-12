@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Tunnissa"
+  },
+  "postingsFound": {
+    "message": "Tällä sivulla on $COUNT$ ilmoitusta.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Rastita ne, jotka kannattaa säilyttää. Jokaisesta tulee oma kaappauksensa, jonka Postulo lukee uudelleen."
+  },
+  "tickAll": {
+    "message": "Kaikki"
+  },
+  "tickNone": {
+    "message": "Ei mitään"
+  },
+  "nothingTicked": {
+    "message": "Mitään ei ole rastitettu."
+  },
+  "keptMany": {
+    "message": "$COUNT$ kaappausta säilytetty tässä selaimessa.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ kaappausta lähetetty tarkistettavaksi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ hylättiin; kaappausten luettelo kertoo miksi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

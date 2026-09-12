@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Fis-siegħa"
+  },
+  "postingsFound": {
+    "message": "Din il-paġna telenka $COUNT$ avviżi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Immarka dawk li jiswew jinżammu. Kull wieħed isir qbid għalih, li Postulo jerġa' jaqra."
+  },
+  "tickAll": {
+    "message": "Kollha"
+  },
+  "tickNone": {
+    "message": "Xejn"
+  },
+  "nothingTicked": {
+    "message": "Xejn mhu mmarkat."
+  },
+  "keptMany": {
+    "message": "$COUNT$ qbidiet miżmuma f'dan il-brawżer.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ qbidiet mibgħuta għar-reviżjoni.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ ġew irrifjutati; il-lista tal-qbidiet tgħid għaliex.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

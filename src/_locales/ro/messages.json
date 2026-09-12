@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Pe oră"
+  },
+  "postingsFound": {
+    "message": "Această pagină listează $COUNT$ anunțuri.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Bifați-le pe cele care merită păstrate. Fiecare devine o captare proprie, recitită de Postulo."
+  },
+  "tickAll": {
+    "message": "Toate"
+  },
+  "tickNone": {
+    "message": "Niciuna"
+  },
+  "nothingTicked": {
+    "message": "Nimic nu este bifat."
+  },
+  "keptMany": {
+    "message": "$COUNT$ captări păstrate în acest browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ captări trimise spre verificare.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ au fost respinse; lista de captări spune de ce.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

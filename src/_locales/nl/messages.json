@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Per uur"
+  },
+  "postingsFound": {
+    "message": "Deze pagina toont $COUNT$ vacatures.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Vink aan wat de moeite waard is. Elke wordt een eigen vastlegging, die Postulo opnieuw leest."
+  },
+  "tickAll": {
+    "message": "Alle"
+  },
+  "tickNone": {
+    "message": "Geen"
+  },
+  "nothingTicked": {
+    "message": "Er is niets aangevinkt."
+  },
+  "keptMany": {
+    "message": "$COUNT$ vastleggingen bewaard in deze browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ vastleggingen verstuurd ter beoordeling.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ zijn geweigerd; de lijst met vastleggingen zegt waarom.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

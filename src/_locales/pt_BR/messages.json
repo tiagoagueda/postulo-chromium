@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Por hora"
+  },
+  "postingsFound": {
+    "message": "Esta página lista $COUNT$ vagas.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Marque as que valem a pena guardar. Cada uma vira uma captura própria, relida pelo Postulo."
+  },
+  "tickAll": {
+    "message": "Todas"
+  },
+  "tickNone": {
+    "message": "Nenhuma"
+  },
+  "nothingTicked": {
+    "message": "Nada está marcado."
+  },
+  "keptMany": {
+    "message": "$COUNT$ capturas guardadas neste navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ capturas enviadas para revisão.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ foram recusadas; a lista de capturas diz por quê.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "A la hora"
+  },
+  "postingsFound": {
+    "message": "Esta página lista $COUNT$ ofertas.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Marca las que merezca la pena guardar. Cada una se convierte en su propia captura, que Postulo vuelve a leer."
+  },
+  "tickAll": {
+    "message": "Todas"
+  },
+  "tickNone": {
+    "message": "Ninguna"
+  },
+  "nothingTicked": {
+    "message": "No hay nada marcado."
+  },
+  "keptMany": {
+    "message": "$COUNT$ capturas guardadas en este navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ capturas enviadas para revisión.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ fueron rechazadas; la lista de capturas dice por qué.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

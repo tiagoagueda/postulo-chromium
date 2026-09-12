@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Za hodinu"
+  },
+  "postingsFound": {
+    "message": "Táto stránka uvádza $COUNT$ inzerátov.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Zaškrtnite tie, ktoré stoja za ponechanie. Každý sa stane samostatným zachytením, ktoré Postulo znovu prečíta."
+  },
+  "tickAll": {
+    "message": "Všetky"
+  },
+  "tickNone": {
+    "message": "Žiadne"
+  },
+  "nothingTicked": {
+    "message": "Nič nie je zaškrtnuté."
+  },
+  "keptMany": {
+    "message": "$COUNT$ zachytení ponechaných v tomto prehliadači.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ zachytení odoslaných na kontrolu.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ bolo odmietnutých; zoznam zachytení hovorí prečo.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

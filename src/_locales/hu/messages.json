@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Óránként"
+  },
+  "postingsFound": {
+    "message": "Ez az oldal $COUNT$ hirdetést sorol fel.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Jelölje be a megőrzésre érdemeseket. Mindegyik külön rögzítés lesz, amelyet a Postulo újra elolvas."
+  },
+  "tickAll": {
+    "message": "Mind"
+  },
+  "tickNone": {
+    "message": "Egyik sem"
+  },
+  "nothingTicked": {
+    "message": "Semmi sincs bejelölve."
+  },
+  "keptMany": {
+    "message": "$COUNT$ rögzítés megőrizve ebben a böngészőben.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ rögzítés elküldve ellenőrzésre.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ elutasítva; a rögzítések listája megmondja, miért.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

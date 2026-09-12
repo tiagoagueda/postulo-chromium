@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Pro Stonn"
+  },
+  "postingsFound": {
+    "message": "Dës Säit lëscht $COUNT$ Annoncen op.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Hakt déi un, déi et wäert sinn ze behalen. All eng gëtt eng eegen Erfaassung, déi de Postulo nach eng Kéier liest."
+  },
+  "tickAll": {
+    "message": "All"
+  },
+  "tickNone": {
+    "message": "Keng"
+  },
+  "nothingTicked": {
+    "message": "Näischt ass ugehaakt."
+  },
+  "keptMany": {
+    "message": "$COUNT$ Erfaassungen an dësem Browser behalen.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ Erfaassungen fir d'Iwwerpréiwung geschéckt.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ goufen ofgeleent; d'Lëscht vun den Erfaassungen seet firwat.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

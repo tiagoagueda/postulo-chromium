@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Godzinowo"
+  },
+  "postingsFound": {
+    "message": "Ta strona zawiera $COUNT$ ogłoszeń.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Zaznacz te, które warto zachować. Każde staje się osobnym przechwyceniem, które Postulo czyta ponownie."
+  },
+  "tickAll": {
+    "message": "Wszystkie"
+  },
+  "tickNone": {
+    "message": "Żadne"
+  },
+  "nothingTicked": {
+    "message": "Nic nie jest zaznaczone."
+  },
+  "keptMany": {
+    "message": "$COUNT$ przechwyceń zachowano w tej przeglądarce.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ przechwyceń wysłano do przeglądu.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ odrzucono; lista przechwyceń mówi dlaczego.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

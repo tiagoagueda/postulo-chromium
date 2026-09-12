@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Pr. time"
+  },
+  "postingsFound": {
+    "message": "Denne side viser $COUNT$ opslag.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Sæt kryds ved dem, der er værd at beholde. Hver bliver sin egen indfangning, som Postulo læser igen."
+  },
+  "tickAll": {
+    "message": "Alle"
+  },
+  "tickNone": {
+    "message": "Ingen"
+  },
+  "nothingTicked": {
+    "message": "Der er ikke sat kryds ved noget."
+  },
+  "keptMany": {
+    "message": "$COUNT$ indfangninger gemt i denne browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ indfangninger sendt til gennemsyn.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ blev afvist; listen over indfangninger siger hvorfor.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "A l'hora"
+  },
+  "postingsFound": {
+    "message": "Aquesta pàgina llista $COUNT$ ofertes.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Marqueu les que valgui la pena desar. Cadascuna esdevé una captura pròpia, que el Postulo torna a llegir."
+  },
+  "tickAll": {
+    "message": "Totes"
+  },
+  "tickNone": {
+    "message": "Cap"
+  },
+  "nothingTicked": {
+    "message": "No n'hi ha cap de marcada."
+  },
+  "keptMany": {
+    "message": "$COUNT$ captures desades en aquest navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ captures enviades a revisar.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ han estat rebutjades; la llista de captures en diu el motiu.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

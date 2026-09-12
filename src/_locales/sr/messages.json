@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "По сату"
+  },
+  "postingsFound": {
+    "message": "Ова страница наводи $COUNT$ огласа.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Означите оне које вреди задржати. Свако постаје засебно хватање, које Postulo поново чита."
+  },
+  "tickAll": {
+    "message": "Све"
+  },
+  "tickNone": {
+    "message": "Ниједно"
+  },
+  "nothingTicked": {
+    "message": "Ништа није означено."
+  },
+  "keptMany": {
+    "message": "$COUNT$ хватања задржано у овом прегледачу.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ хватања послато на преглед.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ одбијено; списак хватања каже зашто.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

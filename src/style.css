@@ -304,6 +304,40 @@ button.link {
   color: var(--brand);
 }
 
+/* A page listing several postings: one line each, to tick (#177). */
+.pick {
+  max-height: 260px;
+  margin: 8px 0;
+  padding: 0;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  list-style: none;
+}
+
+.pick li + li {
+  border-top: 1px solid var(--line);
+}
+
+.pick label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 0;
+  padding: 6px 9px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.pick input {
+  margin-top: 3px;
+}
+
+.pick-all {
+  margin: 0;
+  font-size: 12px;
+}
+
 .count {
   display: inline-block;
   min-width: 1.5em;

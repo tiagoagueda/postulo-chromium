@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Ανά ώρα"
+  },
+  "postingsFound": {
+    "message": "Αυτή η σελίδα απαριθμεί $COUNT$ αγγελίες.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Επιλέξτε όσες αξίζει να κρατήσετε. Καθεμία γίνεται ξεχωριστή σύλληψη, που το Postulo διαβάζει ξανά."
+  },
+  "tickAll": {
+    "message": "Όλες"
+  },
+  "tickNone": {
+    "message": "Καμία"
+  },
+  "nothingTicked": {
+    "message": "Δεν έχει επιλεγεί τίποτα."
+  },
+  "keptMany": {
+    "message": "$COUNT$ συλλήψεις φυλάχτηκαν σε αυτό το πρόγραμμα περιήγησης.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ συλλήψεις στάλθηκαν για έλεγχο.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ απορρίφθηκαν· η λίστα συλλήψεων λέει γιατί.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

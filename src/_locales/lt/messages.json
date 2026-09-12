@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Per valandą"
+  },
+  "postingsFound": {
+    "message": "Šiame puslapyje pateikta $COUNT$ skelbimų.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Pažymėkite tuos, kuriuos verta pasilikti. Kiekvienas tampa atskiru fiksavimu, kurį Postulo perskaito iš naujo."
+  },
+  "tickAll": {
+    "message": "Visi"
+  },
+  "tickNone": {
+    "message": "Nė vienas"
+  },
+  "nothingTicked": {
+    "message": "Niekas nepažymėta."
+  },
+  "keptMany": {
+    "message": "$COUNT$ fiksavimų laikoma šioje naršyklėje.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ fiksavimų išsiųsta peržiūrai.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ atmesta; fiksavimų sąrašas sako kodėl.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

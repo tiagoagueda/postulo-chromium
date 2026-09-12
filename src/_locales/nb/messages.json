@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Per time"
+  },
+  "postingsFound": {
+    "message": "Denne siden viser $COUNT$ utlysninger.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Kryss av de som er verdt å beholde. Hver blir sin egen fangst, som Postulo leser på nytt."
+  },
+  "tickAll": {
+    "message": "Alle"
+  },
+  "tickNone": {
+    "message": "Ingen"
+  },
+  "nothingTicked": {
+    "message": "Ingenting er krysset av."
+  },
+  "keptMany": {
+    "message": "$COUNT$ fangster beholdt i denne nettleseren.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ fangster sendt til gjennomgang.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ ble avvist; listen over fangster sier hvorfor.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

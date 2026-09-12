@@ -458,5 +458,57 @@
   "periodHour": {
     "message": "Per hour",
     "description": "A salary period. Postulo's own word."
+  },
+  "postingsFound": {
+    "message": "This page lists $COUNT$ postings.",
+    "description": "Above the list on a results page. COUNT is how many postings it lists.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Tick the ones worth keeping. Each becomes its own capture, read again by Postulo.",
+    "description": "Under that line: what ticking does."
+  },
+  "tickAll": {
+    "message": "All",
+    "description": "Ticks every posting in the list."
+  },
+  "tickNone": {
+    "message": "None",
+    "description": "Unticks every posting in the list."
+  },
+  "nothingTicked": {
+    "message": "Nothing is ticked.",
+    "description": "Status when Send or Keep is pressed with nothing ticked."
+  },
+  "keptMany": {
+    "message": "$COUNT$ captures kept in this browser.",
+    "description": "Summary after keeping several. COUNT is how many.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ captures sent for review.",
+    "description": "Summary after sending several. COUNT is how many reached Postulo.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ were refused; the list of captures says why.",
+    "description": "Status when Postulo refused some of a batch. COUNT is how many.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

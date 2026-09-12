@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Tunnis"
+  },
+  "postingsFound": {
+    "message": "See leht loetleb $COUNT$ kuulutust.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Märgi need, mida tasub hoida. Igaüks saab omaette püüdmiseks, mille Postulo uuesti loeb."
+  },
+  "tickAll": {
+    "message": "Kõik"
+  },
+  "tickNone": {
+    "message": "Mitte ükski"
+  },
+  "nothingTicked": {
+    "message": "Midagi pole märgitud."
+  },
+  "keptMany": {
+    "message": "$COUNT$ püüdmist hoitakse selles brauseris.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ püüdmist saadeti ülevaatamiseks.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ lükati tagasi; püüdmiste loend ütleb, miks.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -25,6 +25,10 @@ export function isCaptureKey(key) {
 /** The store over a storage area: `storage.local` in the extension, a stand-in in tests. */
 export function makeStore(area, { now = () => new Date().toISOString(), newId = () => crypto.randomUUID() } = {}) {
   const ids = async () => (await area.get(INDEX))[INDEX] || [];
+  const pageIdOf = async (id) => {
+    const record = (await area.get(RECORD(id)))[RECORD(id)];
+    return (record && record.pageId) || id;
+  };
 
   const store = {
     /** Every capture, newest first. */
@@ -41,9 +45,14 @@ export function makeStore(area, { now = () => new Date().toISOString(), newId = 
       return (await area.get(RECORD(id)))[RECORD(id)] || null;
     },
 
-    /** The page a capture was read from, as it is sent: gone once Postulo has it. */
+    /** The page a capture was read from, as it is sent: gone once Postulo has it.
+     *
+     *  Several captures read from one page share it (#177): it is kept once, under the
+     *  first of them, and each record says which in `pageId`. A record without one is a
+     *  capture from before that, whose page is under its own id. */
     async page(id) {
-      return (await area.get(PAGE(id)))[PAGE(id)] || "";
+      const key = PAGE(await pageIdOf(id));
+      return (await area.get(key))[key] || "";
     },
 
     /** Keep a new capture. */
@@ -58,6 +67,39 @@ export function makeStore(area, { now = () => new Date().toISOString(), newId = 
       return record;
     },
 
+    /** Keep several captures read from one page, as one write: the page once, and each
+     *  capture saying which page it came from and where it stands among the others, so
+     *  Postulo can be told they came together and say so once (#177). Indexed newest
+     *  first like everything else, the last of the batch counting as the newest, so that
+     *  delivery -- oldest first -- sends them in the page's order and the first of the
+     *  batch is the first to arrive. */
+    async addMany({ html, entries, state = "kept" }) {
+      if (!entries.length) {
+        return [];
+      }
+      const at = now();
+      const fresh = entries.map(() => newId());
+      const pageId = fresh[0];
+      const records = entries.map((entry, position) => ({
+        id: fresh[position],
+        url: entry.url,
+        source: entry.source,
+        read: entry.read,
+        data: entry.data,
+        state,
+        capturedAt: at,
+        updatedAt: at,
+        pageId,
+        batch: { id: pageId, size: entries.length, position: position + 1 },
+      }));
+      const items = { [PAGE(pageId)]: html, [INDEX]: [...fresh].reverse().concat(await ids()) };
+      for (const record of records) {
+        items[RECORD(record.id)] = record;
+      }
+      await area.set(items);
+      return records;
+    },
+
     /** Change a capture; null if it has been deleted meanwhile. */
     async update(id, patch) {
       const record = await store.get(id);
@@ -69,13 +111,21 @@ export function makeStore(area, { now = () => new Date().toISOString(), newId = 
       return next;
     },
 
-    /** Postulo has the page now: the browser need not keep it. */
+    /** Postulo has the page now: the browser need not keep it -- unless another capture
+     *  read from the same page has still to go, in which case it stays for that one. */
     async dropPage(id) {
-      await area.remove(PAGE(id));
+      const pageId = await pageIdOf(id);
+      const stillNeeded = (await store.list()).some(
+        (other) => other.id !== id && (other.pageId || other.id) === pageId && UNSENT.has(other.state),
+      );
+      if (!stillNeeded) {
+        await area.remove(PAGE(pageId));
+      }
     },
 
     async remove(id) {
-      await area.remove([RECORD(id), PAGE(id)]);
+      await store.dropPage(id);
+      await area.remove(RECORD(id));
       await area.set({ [INDEX]: (await ids()).filter((other) => other !== id) });
     },
 

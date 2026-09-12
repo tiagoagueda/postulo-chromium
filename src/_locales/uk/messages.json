@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "За годину"
+  },
+  "postingsFound": {
+    "message": "На цій сторінці $COUNT$ оголошень.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Позначте ті, що варто зберегти. Кожне стає окремим захопленням, яке Postulo читає знову."
+  },
+  "tickAll": {
+    "message": "Усі"
+  },
+  "tickNone": {
+    "message": "Жодного"
+  },
+  "nothingTicked": {
+    "message": "Нічого не позначено."
+  },
+  "keptMany": {
+    "message": "$COUNT$ захоплень залишено в цьому браузері.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ захоплень надіслано на перегляд.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ відхилено; список захоплень каже чому.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -115,9 +115,14 @@ test("a capture carries what was reviewed, and nothing when there is nothing", a
   await capture("https://postulo.example.org", "tok", { url: "u", html: "h", data: { title: "Senior Research Engineer" } }, fetchImpl);
   await capture("https://postulo.example.org", "tok", { url: "u", html: "h", data: {} }, fetchImpl);
   await capture("https://postulo.example.org", "tok", { url: "u", html: "h" }, fetchImpl);
+  // Several from one page: the batch's shape goes, never the browser's own id for it (#177).
+  await capture("https://postulo.example.org", "tok", { url: "u", html: "h", batch: { id: "c1", size: 3, position: 2 } }, fetchImpl);
+  await capture("https://postulo.example.org", "tok", { url: "u", html: "h", batch: { id: "c1", size: 1, position: 1 } }, fetchImpl);
   assert.deepEqual(bodies, [
     { url: "u", html: "h", data: { title: "Senior Research Engineer" } },
     { url: "u", html: "h" },
+    { url: "u", html: "h" },
+    { url: "u", html: "h", batch: { size: 3, position: 2 } },
     { url: "u", html: "h" },
   ]);
 });

@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Na uro"
+  },
+  "postingsFound": {
+    "message": "Ta stran navaja $COUNT$ oglasov.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Označite tiste, ki jih je vredno obdržati. Vsak postane svoj zajem, ki ga Postulo znova prebere."
+  },
+  "tickAll": {
+    "message": "Vse"
+  },
+  "tickNone": {
+    "message": "Nobenega"
+  },
+  "nothingTicked": {
+    "message": "Nič ni označeno."
+  },
+  "keptMany": {
+    "message": "$COUNT$ zajemov ostaja v tem brskalniku.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ zajemov poslanih v pregled.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ zavrnjenih; seznam zajemov pove, zakaj.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

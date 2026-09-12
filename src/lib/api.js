@@ -132,10 +132,15 @@ export async function whoAmI(instance, token, fetchImpl = fetch) {
  *  Every field goes, not only the ones changed: what Postulo keeps is then exactly what the
  *  person looked at, whichever of its sources reads the page on its side. The page still
  *  goes too, because Postulo reads it to know which source did. */
-export async function capture(instance, token, { url, html, data }, fetchImpl = fetch) {
+export async function capture(instance, token, { url, html, data, batch }, fetchImpl = fetch) {
   const payload = { url, html };
   if (data && Object.keys(data).length) {
     payload.data = data;
+  }
+  // Several from one page: Postulo announces the first with the count and the rest not at
+  // all (#177). Only its shape goes; the id that groups them here is the browser's own.
+  if (batch && batch.size > 1) {
+    payload.batch = { size: batch.size, position: batch.position };
   }
   const response = await request(fetchImpl, endpoint(instance, "/captures"), {
     method: "POST",

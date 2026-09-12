@@ -776,6 +776,61 @@ export function readPosting(doc, url, parse) {
   return null;
 }
 
+/** The address a posting states for itself, when it states one: `url`, or an `@id` that is one. */
+function ownUrl(posting) {
+  for (const key of ["url", "@id"]) {
+    const value = text(posting[key]);
+    if (/^https?:\/\//i.test(value)) {
+      return value;
+    }
+  }
+  return "";
+}
+
+/** Every posting a page lists, each read as the one it names: a results page (#177).
+ *
+ *  `readPosting` above answers "which one is this page about?", and throws the rest away;
+ *  this keeps them. `here` says whether a posting names this very page, because an
+ *  advert's own page that also lists similar jobs is still one posting's page and the
+ *  popup should treat it as one. A posting stating no address of its own is read as the
+ *  page's, which Postulo then cannot tell from the others -- every field goes with the
+ *  capture as a correction, so what is kept is still the one that was ticked. The same
+ *  posting written twice, in the script and in the markup, is listed once. */
+export function readPostings(doc, url, parse) {
+  const listed = [];
+  const seen = new Set();
+  const take = (objects, descriptionIsHtml) => {
+    for (const posting of postings(objects)) {
+      const title = text(posting.title);
+      if (!title) {
+        continue;
+      }
+      const own = ownUrl(posting) || url;
+      const key = `${sameUrl(own)}|${title.toLowerCase()}`;
+      if (seen.has(key)) {
+        continue;
+      }
+      const data = fromPosting(posting, own, parse, descriptionIsHtml);
+      if (data) {
+        seen.add(key);
+        listed.push({ data: tidy(data), source: "schema.org", here: matchesUrl(posting, url) });
+      }
+    }
+  };
+  // One spelling that throws says nothing about the other, as in readPosting.
+  try {
+    take(jsonLd(doc), true);
+  } catch {
+    // nothing to list from the scripts
+  }
+  try {
+    take([...microdata(doc), ...rdfa(doc)], false);
+  } catch {
+    // nothing to list from the markup
+  }
+  return listed;
+}
+
 /** The page as it is kept and later sent: what either source reads, less what neither does.
  *
  *  Scripts other than JSON-LD, styles and inline graphics are most of a modern page's

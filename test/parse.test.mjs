@@ -4,7 +4,7 @@ import { test } from "node:test";
 
 import { JSDOM } from "jsdom";
 
-import { jsonLd, metadata, readPosting, slimPage, textOf } from "../src/lib/parse.js";
+import { jsonLd, metadata, readPosting, readPostings, slimPage, textOf } from "../src/lib/parse.js";
 
 const parse = (html) => new JSDOM(html).window.document;
 const page = (head, body = "") => parse(`<!doctype html><html><head>${head}</head><body>${body}</body></html>`);
@@ -28,6 +28,18 @@ const POSTING = {
   validThrough: "2026-10-31",
   description: "&lt;p&gt;Anomalous materials.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Hard hats&lt;/li&gt;&lt;/ul&gt;",
 };
+
+test("a posting written twice, in the script and in the markup, is listed once", () => {
+  const markup =
+    '<div itemscope itemtype="https://schema.org/JobPosting"><span itemprop="title">Research Engineer</span>' +
+    '<meta itemprop="url" content="https://jobs.example.org/42"></div>';
+  const doc = page(ld({ ...POSTING, url: URL_ }), markup);
+  const listed = readPostings(doc, URL_, parse);
+  assert.equal(listed.length, 1);
+  assert.equal(listed[0].data.url, URL_);
+  assert.ok(listed[0].here, "and it is this page's");
+  assert.equal(readPostings(page(""), URL_, parse).length, 0);
+});
 
 test("a schema.org JobPosting is read into every field Postulo has", () => {
   const read = readPosting(page(ld(POSTING)), URL_, parse);

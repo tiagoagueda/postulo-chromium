@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "На час"
+  },
+  "postingsFound": {
+    "message": "Оваа страница наведува $COUNT$ огласи.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Означете ги оние што вреди да се чуваат. Секој станува посебно фаќање, што Postulo повторно го чита."
+  },
+  "tickAll": {
+    "message": "Сите"
+  },
+  "tickNone": {
+    "message": "Ниедно"
+  },
+  "nothingTicked": {
+    "message": "Ништо не е означено."
+  },
+  "keptMany": {
+    "message": "$COUNT$ фаќања се чуваат во овој прелистувач.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ фаќања се испратени на преглед.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ беа одбиени; списокот со фаќања кажува зошто.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -34,6 +34,22 @@
       <p id="edit-read-by" class="muted small"></p>
     </section>
 
+    <!-- A page that lists several postings: a list to tick, not a form to correct (#177). -->
+    <section id="pick" hidden>
+      <p id="pick-count" class="hint"></p>
+      <p class="hint" data-i18n="tickHint">Tick the ones worth keeping. Each becomes its own capture, read again by Postulo.</p>
+      <p class="pick-all">
+        <button id="tick-all" type="button" class="link" data-i18n="tickAll">All</button>
+        · <button id="tick-none" type="button" class="link" data-i18n="tickNone">None</button>
+      </p>
+      <ul id="pick-list" class="pick"></ul>
+      <div class="send">
+        <button id="send-picked" type="button" class="primary" data-i18n="sendForReview">Send for review</button>
+        <button id="keep-picked" type="button" data-i18n="keep">Keep in this browser</button>
+      </div>
+      <p id="pick-read-by" class="muted small"></p>
+    </section>
+
     <section id="result" hidden>
       <p id="summary"></p>
       <a id="review" href="#" target="_blank" rel="noopener" class="primary button" data-i18n="review" hidden>Review in Postulo</a>

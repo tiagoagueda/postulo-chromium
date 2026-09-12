@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Per timme"
+  },
+  "postingsFound": {
+    "message": "Den här sidan listar $COUNT$ annonser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Bocka för dem som är värda att behålla. Var och en blir en egen infångning, som Postulo läser igen."
+  },
+  "tickAll": {
+    "message": "Alla"
+  },
+  "tickNone": {
+    "message": "Inga"
+  },
+  "nothingTicked": {
+    "message": "Inget är förbockat."
+  },
+  "keptMany": {
+    "message": "$COUNT$ infångningar sparade i den här webbläsaren.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ infångningar skickade för granskning.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ avvisades; listan över infångningar säger varför.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

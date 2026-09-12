@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "In aghaidh na huaire"
+  },
+  "postingsFound": {
+    "message": "Liostálann an leathanach seo $COUNT$ fógra.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Ticeáil na cinn is fiú a choinneáil. Déantar gabháil ar leith de gach ceann, a léann Postulo arís."
+  },
+  "tickAll": {
+    "message": "Gach ceann"
+  },
+  "tickNone": {
+    "message": "Ceann ar bith"
+  },
+  "nothingTicked": {
+    "message": "Níl aon rud ticeáilte."
+  },
+  "keptMany": {
+    "message": "$COUNT$ gabháil coinnithe sa bhrabhsálaí seo.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ gabháil seolta le hathbhreithniú.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "Diúltaíodh $COUNT$; deir liosta na ngabhálacha cén fáth.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

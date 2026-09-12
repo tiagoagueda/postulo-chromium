@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Stundā"
+  },
+  "postingsFound": {
+    "message": "Šajā lapā ir $COUNT$ sludinājumi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Atzīmējiet tos, kurus ir vērts paturēt. Katrs kļūst par atsevišķu tvērumu, ko Postulo nolasa vēlreiz."
+  },
+  "tickAll": {
+    "message": "Visi"
+  },
+  "tickNone": {
+    "message": "Neviens"
+  },
+  "nothingTicked": {
+    "message": "Nekas nav atzīmēts."
+  },
+  "keptMany": {
+    "message": "$COUNT$ tvērumi paturēti šajā pārlūkā.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ tvērumi nosūtīti pārskatīšanai.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ tika noraidīti; tvērumu saraksts saka, kāpēc.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

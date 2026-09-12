@@ -4,21 +4,22 @@ import { postingForm } from "./lib/form.js";
 import { explain, localise, t } from "./lib/i18n.js";
 import { afterSending, deliverWaiting, log, openCaptures, showUnsentCount, store } from "./lib/local.js";
 import { hostOf } from "./lib/log.js";
-import { emptyPosting, readPosting, slimPage } from "./lib/parse.js";
+import { emptyPosting, readPosting, readPostings, slimPage } from "./lib/parse.js";
 
 const $ = (id) => document.getElementById(id);
 
 function show(section) {
-  for (const id of ["ready", "edit", "result"]) {
+  for (const id of ["ready", "edit", "pick", "result"]) {
     $(id).hidden = id !== section;
   }
-  // The form needs more room than a button does.
-  document.body.classList.toggle("wide", section === "edit");
+  const working = section === "edit" || section === "pick";
+  // The form needs more room than a button does, and so does a list.
+  document.body.classList.toggle("wide", working);
   // And all the height a popup gets: the link to the list waits until it is done.
-  $("captures-link").parentElement.hidden = section === "edit";
+  $("captures-link").parentElement.hidden = working;
   // The notes about the connection too: what became of a capture is said once it is sent.
   for (const id of ["not-connected", "offline-on"]) {
-    $(id).classList.toggle("folded", section === "edit");
+    $(id).classList.toggle("folded", working);
   }
 }
 
@@ -82,7 +83,18 @@ async function main() {
         source: found ? found.source : "",
         read: found ? found.data : emptyPosting(tab.url),
       };
-      await log.add("read", { host: hostOf(tab.url), source: page.source || "nothing" });
+      // A page listing several postings, none of them this page: a results page. The
+      // ones it lists are offered to tick, each becoming its own capture off this one
+      // page (#177). A page about one posting that also lists similar ones is still that
+      // posting's page, and reads as one.
+      const listed = readPostings(doc, tab.url, parse);
+      await log.add("read", { host: hostOf(tab.url), source: page.source || "nothing", listed: listed.length });
+      if (listed.length > 1 && !listed.some((posting) => posting.here)) {
+        offer(listed);
+        show("pick");
+        say("");
+        return;
+      }
 
       // Already kept and not sent: show that one, edits and all, rather than a second copy.
       current = await store.unsentFor(tab.url);
@@ -156,6 +168,109 @@ async function main() {
         button.disabled = false;
       } else {
         show("result");
+        say(...afterSending(result));
+      }
+    } catch (error) {
+      say(explain(error), true);
+      button.disabled = false;
+    }
+  });
+
+  // ------------------------------------------------------- several at once
+
+  let offered = []; // what the results page listed, in its order
+
+  /** Lay the listed postings out as a list to tick, none ticked: the gesture is
+   *  "look at forty, keep three", and three is easier to tick than thirty-seven to untick. */
+  function offer(listed) {
+    offered = listed;
+    $("pick-count").textContent = t("postingsFound", [String(listed.length)]);
+    $("pick-read-by").textContent = t("readBy", [listed[0].source]);
+    const list = $("pick-list");
+    list.replaceChildren();
+    listed.forEach((posting, index) => {
+      const box = document.createElement("input");
+      box.type = "checkbox";
+      box.value = String(index);
+      const words = document.createElement("span");
+      words.textContent = describe(posting.data, t("untitled"));
+      const label = document.createElement("label");
+      label.append(box, words);
+      const item = document.createElement("li");
+      item.append(label);
+      list.append(item);
+    });
+    $("send-picked").disabled = false;
+  }
+
+  function tickEvery(on) {
+    for (const box of $("pick-list").querySelectorAll("input")) {
+      box.checked = on;
+    }
+  }
+  $("tick-all").addEventListener("click", () => tickEvery(true));
+  $("tick-none").addEventListener("click", () => tickEvery(false));
+
+  /** Keep the ticked postings, in the given state, as captures off the one page: those
+   *  already kept and not sent are left as they are rather than kept twice. */
+  async function savePicked(state) {
+    const ticked = [...$("pick-list").querySelectorAll("input:checked")].map((box) => offered[Number(box.value)]);
+    if (!ticked.length) {
+      say(t("nothingTicked"), true);
+      return [];
+    }
+    const entries = [];
+    for (const posting of ticked) {
+      if (!(await store.unsentFor(posting.data.url))) {
+        entries.push({ url: posting.data.url, source: posting.source, read: posting.data, data: posting.data });
+      }
+    }
+    const records = await store.addMany({ html: page.html, entries, state });
+    await log.add(state === "waiting" ? "to send" : "kept", { batch: records.length, host: hostOf(page.url) });
+    await showCount();
+    return records;
+  }
+
+  $("keep-picked").addEventListener("click", async () => {
+    const records = await savePicked("kept");
+    if (!records.length) {
+      return;
+    }
+    $("summary").textContent = t("keptMany", [String(records.length)]);
+    show("result");
+    say(t("kept"));
+  });
+
+  $("send-picked").addEventListener("click", async () => {
+    const button = $("send-picked");
+    button.disabled = true;
+    try {
+      if (connected && !settings.offline) {
+        const pattern = originPattern(settings.instance);
+        if (!(await hasHostPermission(pattern))) {
+          say(t("allowing"));
+          await requestHostPermission(pattern);
+        }
+      }
+      const records = await savePicked("waiting");
+      if (!records.length) {
+        button.disabled = false;
+        return;
+      }
+      say(t("sending"));
+      const result = await deliverWaiting(records.map((record) => record.id));
+      const latest = await Promise.all(records.map((record) => store.get(record.id)));
+      const sent = latest.filter((record) => record && record.state === "sent").length;
+      const refused = latest.filter((record) => record && record.state === "refused").length;
+      await showCount();
+      $("summary").textContent = t("sentMany", [String(sent)]);
+      $("review").hidden = true;
+      show("result");
+      if (refused) {
+        say(t("refusedSome", [String(refused)]), true);
+      } else if (sent === records.length) {
+        say(t("captured"));
+      } else {
         say(...afterSending(result));
       }
     } catch (error) {

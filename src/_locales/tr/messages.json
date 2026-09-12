@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Saatlik"
+  },
+  "postingsFound": {
+    "message": "Bu sayfada $COUNT$ ilan listeleniyor.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Saklamaya değer olanları işaretleyin. Her biri, Postulo'nun yeniden okuduğu ayrı bir yakalama olur."
+  },
+  "tickAll": {
+    "message": "Tümü"
+  },
+  "tickNone": {
+    "message": "Hiçbiri"
+  },
+  "nothingTicked": {
+    "message": "Hiçbir şey işaretli değil."
+  },
+  "keptMany": {
+    "message": "$COUNT$ yakalama bu tarayıcıda saklandı.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ yakalama incelemeye gönderildi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ tanesi reddedildi; yakalama listesi nedenini söylüyor.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -59,6 +59,19 @@ permanently once signed; see that repository).
 Capturing does not need step 1 or 2: without a Postulo set up, captures are kept, and what
 you send goes once it is.
 
+## A page of results
+
+On a page that lists several postings — a board's search results — the button offers them
+as a list to tick rather than a form to correct: *look at forty, keep three*. Each ticked
+posting becomes its own capture, read from that one page, so a failure loses one and not
+forty; Postulo is told they came together and announces them once, with the count. A
+posting read off a results page is usually a stub — a title, a company, a place — with the
+description left to the advert's own page. It is a capture to triage, not a listing to read.
+
+The page is kept once in the browser however many captures were read from it, and goes
+when the last of them has reached Postulo. A page that is about one posting and happens to
+list similar ones is still that posting's page, and is captured as one.
+
 ## Without a server
 
 Everything the extension keeps is listed under **Captures in this browser** — the link at

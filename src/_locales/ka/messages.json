@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "საათში"
+  },
+  "postingsFound": {
+    "message": "ეს გვერდი $COUNT$ განცხადებას ჩამოთვლის.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "მონიშნეთ ისინი, რომელთა შენახვაც ღირს. თითოეული ცალკე აღება ხდება, რომელსაც Postulo ხელახლა კითხულობს."
+  },
+  "tickAll": {
+    "message": "ყველა"
+  },
+  "tickNone": {
+    "message": "არცერთი"
+  },
+  "nothingTicked": {
+    "message": "არაფერია მონიშნული."
+  },
+  "keptMany": {
+    "message": "$COUNT$ აღება დატოვებულია ამ ბრაუზერში.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ აღება გაგზავნილია გადასამოწმებლად.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ უარყოფილია; აღებების სია ამბობს, რატომ.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

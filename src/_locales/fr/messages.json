@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Par heure"
+  },
+  "postingsFound": {
+    "message": "Cette page liste $COUNT$ annonces.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Cochez celles qui valent la peine d'être gardées. Chacune devient une capture à part, relue par Postulo."
+  },
+  "tickAll": {
+    "message": "Toutes"
+  },
+  "tickNone": {
+    "message": "Aucune"
+  },
+  "nothingTicked": {
+    "message": "Rien n'est coché."
+  },
+  "keptMany": {
+    "message": "$COUNT$ captures gardées dans ce navigateur.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ captures envoyées pour relecture.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ ont été refusées ; la liste des captures dit pourquoi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

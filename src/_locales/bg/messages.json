@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "На час"
+  },
+  "postingsFound": {
+    "message": "Тази страница съдържа $COUNT$ обяви.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Отбележете тези, които си струва да запазите. Всяка става отделно прихващане, прочетено отново от Postulo."
+  },
+  "tickAll": {
+    "message": "Всички"
+  },
+  "tickNone": {
+    "message": "Нито една"
+  },
+  "nothingTicked": {
+    "message": "Нищо не е отбелязано."
+  },
+  "keptMany": {
+    "message": "$COUNT$ прихващания са съхранени в този браузър.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ прихващания са изпратени за преглед.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ бяха отхвърлени; списъкът с прихващания казва защо.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

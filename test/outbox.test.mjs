@@ -106,6 +106,50 @@ test("deleting a capture deletes its page too", async () => {
   assert.ok(!area.data.has(`page:${record.id}`) && !area.data.has(`capture:${record.id}`));
 });
 
+test("several captures from one page share the page, the last of them the newest", async () => {
+  const { area, store } = setUp();
+  const [a, b] = await store.addMany({
+    html: "<title>results</title>",
+    entries: ["1", "2"].map((n) => ({ url: `https://jobs.example/${n}`, source: "schema.org", read: POSTING(n), data: POSTING(n) })),
+    state: "waiting",
+  });
+  assert.equal(a.pageId, a.id);
+  assert.equal(b.pageId, a.id);
+  assert.deepEqual(a.batch, { id: a.id, size: 2, position: 1 });
+  assert.deepEqual(b.batch, { id: a.id, size: 2, position: 2 });
+  assert.equal([...area.data.keys()].filter((key) => key.startsWith("page:")).length, 1, "one page for two");
+  assert.equal(await store.page(b.id), "<title>results</title>");
+  // Newest first, as everything is listed; so oldest-first delivery sends a before b.
+  assert.deepEqual((await store.list()).map((record) => record.id), [b.id, a.id]);
+  assert.equal(await store.unsentCount(), 2);
+});
+
+test("a shared page stays until the last capture read from it has gone", async () => {
+  const { store } = setUp();
+  const [a, b] = await store.addMany({
+    html: "<title>results</title>",
+    entries: ["1", "2"].map((n) => ({ url: `https://jobs.example/${n}`, source: "schema.org", read: POSTING(n), data: POSTING(n) })),
+    state: "waiting",
+  });
+  await store.update(a.id, { state: "sent" });
+  await store.dropPage(a.id);
+  assert.equal(await store.page(b.id), "<title>results</title>", "still needed by the other");
+  await store.remove(b.id);
+  assert.equal(await store.page(a.id), "", "nothing needs it now");
+  assert.deepEqual((await store.list()).map((record) => record.id), [a.id]);
+});
+
+test("deleting one of several leaves the page for the others", async () => {
+  const { store } = setUp();
+  const [a, b] = await store.addMany({
+    html: "<title>results</title>",
+    entries: ["1", "2"].map((n) => ({ url: `https://jobs.example/${n}`, source: "schema.org", read: POSTING(n), data: POSTING(n) })),
+  });
+  await store.remove(a.id);
+  assert.equal(await store.page(b.id), "<title>results</title>");
+  assert.equal(await store.get(a.id), null);
+});
+
 // ------------------------------------------------------------------ delivery
 
 test("only what somebody said to send is sent, oldest first, with everything they reviewed", async () => {
@@ -129,6 +173,31 @@ test("only what somebody said to send is sent, oldest first, with everything the
   assert.equal(sent.reviewUrl, "https://postulo.example.org/r/8");
   assert.equal(await store.page(newer.id), "", "Postulo has the page; the browser need not");
   assert.equal((await store.list()).find((record) => record.data.title === "kept only").state, "kept");
+});
+
+test("a batch goes as the one page with each posting's own address and place, and the page goes after the last", async () => {
+  const { area, store, log } = setUp();
+  const records = await store.addMany({
+    html: "<title>results</title>",
+    entries: ["1", "2", "3"].map((n) => ({ url: `https://jobs.example/${n}`, source: "schema.org", read: POSTING(n), data: POSTING(n) })),
+    state: "waiting",
+  });
+  const { calls, fetchImpl } = answering(
+    ...records.map((record, i) => ({ status: 201, body: { id: 10 + i, review_url: `https://postulo.example.org/r/${i}` } })),
+  );
+  const result = await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+  assert.equal(result.outcome, "done");
+  assert.equal(result.sent, 3);
+  assert.deepEqual(
+    calls.map((call) => [call.body.url, call.body.html, call.body.batch]),
+    [
+      ["https://jobs.example/1", "<title>results</title>", { size: 3, position: 1 }],
+      ["https://jobs.example/2", "<title>results</title>", { size: 3, position: 2 }],
+      ["https://jobs.example/3", "<title>results</title>", { size: 3, position: 3 }],
+    ],
+  );
+  assert.equal([...area.data.keys()].filter((key) => key.startsWith("page:")).length, 0, "the page has gone");
+  assert.ok((await store.list()).every((record) => record.state === "sent"));
 });
 
 test("with Postulo unreachable, nothing is lost and nothing more is tried", async () => {

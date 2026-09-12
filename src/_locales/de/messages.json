@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Pro Stunde"
+  },
+  "postingsFound": {
+    "message": "Diese Seite listet $COUNT$ Stellenanzeigen.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Haken Sie an, was sich zu behalten lohnt. Jede wird zu einer eigenen Erfassung, die Postulo erneut liest."
+  },
+  "tickAll": {
+    "message": "Alle"
+  },
+  "tickNone": {
+    "message": "Keine"
+  },
+  "nothingTicked": {
+    "message": "Nichts ist angehakt."
+  },
+  "keptMany": {
+    "message": "$COUNT$ Erfassungen in diesem Browser aufbewahrt.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ Erfassungen zur Prüfung gesendet.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ wurden abgelehnt; die Liste der Erfassungen sagt, warum.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

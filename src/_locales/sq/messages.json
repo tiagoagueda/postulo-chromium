@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Në orë"
+  },
+  "postingsFound": {
+    "message": "Kjo faqe rendit $COUNT$ njoftime.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Shënoni ato që ia vlen t'i mbani. Secila bëhet kapje më vete, që Postulo e lexon sërish."
+  },
+  "tickAll": {
+    "message": "Të gjitha"
+  },
+  "tickNone": {
+    "message": "Asnjë"
+  },
+  "nothingTicked": {
+    "message": "Asgjë nuk është shënuar."
+  },
+  "keptMany": {
+    "message": "$COUNT$ kapje u mbajtën në këtë shfletues.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ kapje u dërguan për shqyrtim.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ u refuzuan; lista e kapjeve thotë pse.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

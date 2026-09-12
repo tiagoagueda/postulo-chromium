@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Á klukkustund"
+  },
+  "postingsFound": {
+    "message": "Þessi síða telur upp $COUNT$ auglýsingar.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Hakaðu við þær sem vert er að geyma. Hver verður sérstakt grip, sem Postulo les aftur."
+  },
+  "tickAll": {
+    "message": "Allar"
+  },
+  "tickNone": {
+    "message": "Engin"
+  },
+  "nothingTicked": {
+    "message": "Ekkert er hakað við."
+  },
+  "keptMany": {
+    "message": "$COUNT$ grip geymd í þessum vafra.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ grip send til yfirferðar.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ var hafnað; listinn yfir grip segir hvers vegna.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

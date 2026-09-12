@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Á hora"
+  },
+  "postingsFound": {
+    "message": "Esta páxina lista $COUNT$ ofertas.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Marca as que pague a pena conservar. Cada unha convértese na súa propia captura, que o Postulo volve ler."
+  },
+  "tickAll": {
+    "message": "Todas"
+  },
+  "tickNone": {
+    "message": "Ningunha"
+  },
+  "nothingTicked": {
+    "message": "Non hai nada marcado."
+  },
+  "keptMany": {
+    "message": "$COUNT$ capturas conservadas neste navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ capturas enviadas para revisión.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ foron rexeitadas; a lista de capturas di por que.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

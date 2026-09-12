@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Yr awr"
+  },
+  "postingsFound": {
+    "message": "Mae'r dudalen hon yn rhestru $COUNT$ o swyddi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Ticiwch y rhai sy'n werth eu cadw. Daw pob un yn ddalfa ar ei phen ei hun, a ddarllenir eto gan Postulo."
+  },
+  "tickAll": {
+    "message": "Pob un"
+  },
+  "tickNone": {
+    "message": "Dim un"
+  },
+  "nothingTicked": {
+    "message": "Does dim byd wedi'i dicio."
+  },
+  "keptMany": {
+    "message": "$COUNT$ o ddalfeydd wedi'u cadw yn y porwr hwn.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ o ddalfeydd wedi'u hanfon i'w hadolygu.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "Gwrthodwyd $COUNT$; mae'r rhestr o ddalfeydd yn dweud pam.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -56,7 +56,7 @@ export async function deliver({ store, log, settings, allowed, fetchImpl = fetch
         const result = await capture(
           settings.instance,
           settings.token,
-          { url: record.url, html: await store.page(record.id), data: record.data },
+          { url: record.url, html: await store.page(record.id), data: record.data, batch: record.batch },
           fetchImpl,
         );
         await store.update(record.id, {

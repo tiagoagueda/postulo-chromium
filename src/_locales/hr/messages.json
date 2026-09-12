@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Po satu"
+  },
+  "postingsFound": {
+    "message": "Ova stranica navodi $COUNT$ oglasa.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Označite one koje vrijedi zadržati. Svaki postaje zasebno hvatanje, koje Postulo ponovno čita."
+  },
+  "tickAll": {
+    "message": "Sve"
+  },
+  "tickNone": {
+    "message": "Nijedan"
+  },
+  "nothingTicked": {
+    "message": "Ništa nije označeno."
+  },
+  "keptMany": {
+    "message": "$COUNT$ hvatanja zadržano u ovom pregledniku.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ hvatanja poslano na pregled.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ odbijeno; popis hvatanja kaže zašto.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

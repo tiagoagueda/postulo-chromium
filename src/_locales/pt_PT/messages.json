@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Por hora"
+  },
+  "postingsFound": {
+    "message": "Esta página lista $COUNT$ anúncios.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Assinale os que vale a pena manter. Cada um torna-se uma captura própria, relida pelo Postulo."
+  },
+  "tickAll": {
+    "message": "Todos"
+  },
+  "tickNone": {
+    "message": "Nenhum"
+  },
+  "nothingTicked": {
+    "message": "Nada está assinalado."
+  },
+  "keptMany": {
+    "message": "$COUNT$ capturas mantidas neste navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ capturas enviadas para revisão.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ foram recusadas; a lista de capturas diz porquê.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

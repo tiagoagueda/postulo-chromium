@@ -356,5 +356,49 @@
   },
   "periodHour": {
     "message": "Orduan"
+  },
+  "postingsFound": {
+    "message": "Orri honek $COUNT$ eskaintza zerrendatzen ditu.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Markatu gordetzea merezi dutenak. Bakoitza bere harrapaketa bihurtzen da, Postulok berriro irakurtzen duena."
+  },
+  "tickAll": {
+    "message": "Denak"
+  },
+  "tickNone": {
+    "message": "Bat ere ez"
+  },
+  "nothingTicked": {
+    "message": "Ez dago ezer markatuta."
+  },
+  "keptMany": {
+    "message": "$COUNT$ harrapaketa gordeta nabigatzaile honetan.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ harrapaketa bidalita berrikusteko.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ baztertu dira; harrapaketen zerrendak dio zergatik.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   }
 }

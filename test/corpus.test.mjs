@@ -23,7 +23,7 @@ import { test } from "node:test";
 
 import { JSDOM } from "jsdom";
 
-import { readPosting } from "../src/lib/parse.js";
+import { readPosting, readPostings } from "../src/lib/parse.js";
 
 const FIXTURES = path.join(path.dirname(fileURLToPath(import.meta.url)), "fixtures");
 const parse = (html) => new JSDOM(html).window.document;
@@ -39,6 +39,22 @@ const cases = fs
       html: fs.readFileSync(path.join(FIXTURES, `${stem}.html`), "utf8"),
     };
   });
+
+// A results page read whole: every posting it lists, each as its own, none of them the
+// page itself -- and the same page opened on one of them is that one's page (#177).
+test("search-results: every posting a results page lists is read as its own", () => {
+  const { html } = cases.find((each) => each.stem === "search-results");
+  const listed = readPostings(parse(html), "https://careers.blackmesa.example/jobs?q=engineer", parse);
+  assert.equal(listed.length, 3);
+  const urls = listed.map((posting) => posting.data.url);
+  assert.equal(new Set(urls).size, 3, "each read as the address it states");
+  assert.ok(urls.every((url) => url.startsWith("https://careers.blackmesa.example/jobs/")));
+  assert.ok(listed.every((posting) => !posting.here), "a results page is nobody's page");
+  assert.ok(listed.every((posting) => posting.source === "schema.org" && posting.data.title));
+
+  const opened = readPostings(parse(html), "https://careers.blackmesa.example/jobs/2891", parse);
+  assert.deepEqual(opened.map((posting) => posting.here), [false, true, false]);
+});
 
 // A corpus that quietly became empty would pass every assertion below it.
 test("there is a corpus", () => {
