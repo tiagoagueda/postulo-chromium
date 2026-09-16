@@ -831,11 +831,25 @@ export function readPostings(doc, url, parse) {
   return listed;
 }
 
+/** How much of one page is kept in the browser.
+ *
+ *  `storage.local` holds 10 MB without `unlimitedStorage`, a permission both stores read as
+ *  "this may fill your disk" and which a capture does not need: a page is slimmed before it
+ *  is kept and dropped once Postulo has it. Half a megabyte is several times the slimmed
+ *  weight of the heaviest job posting the corpus has, so the cap is a backstop against one
+ *  runaway page filling the quota for every other capture, not a routine trim. */
+export const MAX_PAGE = 512 * 1024;
+
 /** The page as it is kept and later sent: what either source reads, less what neither does.
  *
  *  Scripts other than JSON-LD, styles and inline graphics are most of a modern page's
  *  weight and none of its posting; without them a capture takes a fraction of the room in
- *  the browser and on the way to Postulo, which reads the rest exactly as before. */
+ *  the browser and on the way to Postulo, which reads the rest exactly as before.
+ *
+ *  Past MAX_PAGE what is left is cut, head first and so posting first: the title, the meta
+ *  tags and the JSON-LD a page declares are at the top of it, and what is lost off the end
+ *  is the footer of a page that was extraordinary to begin with. Postulo parses what
+ *  arrives as leniently as a browser does, and reads the truncation note if a person looks. */
 export function slimPage(doc) {
   const copy = doc.documentElement.cloneNode(true);
   for (const element of copy.querySelectorAll("script, style, noscript, template, svg, link, iframe")) {
@@ -844,5 +858,6 @@ export function slimPage(doc) {
       element.remove();
     }
   }
-  return `<!doctype html>\n${copy.outerHTML}`;
+  const html = `<!doctype html>\n${copy.outerHTML}`;
+  return html.length > MAX_PAGE ? `${html.slice(0, MAX_PAGE)}\n<!-- truncated at ${MAX_PAGE} characters -->\n` : html;
 }

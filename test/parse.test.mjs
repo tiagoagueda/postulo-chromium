@@ -4,7 +4,7 @@ import { test } from "node:test";
 
 import { JSDOM } from "jsdom";
 
-import { jsonLd, metadata, readPosting, readPostings, slimPage, textOf } from "../src/lib/parse.js";
+import { MAX_PAGE, jsonLd, metadata, readPosting, readPostings, slimPage, textOf } from "../src/lib/parse.js";
 
 const parse = (html) => new JSDOM(html).window.document;
 const page = (head, body = "") => parse(`<!doctype html><html><head>${head}</head><body>${body}</body></html>`);
@@ -139,6 +139,17 @@ test("the page kept is lighter but reads the same", () => {
   const slim = slimPage(doc);
   assert.ok(!slim.includes("app.js") && !slim.includes("big()") && !slim.includes("<style") && !slim.includes("<svg"));
   assert.ok(slim.includes("application/ld+json") && slim.includes("<title>Research Engineer</title>"));
+  const again = new JSDOM(slim).window.document;
+  assert.deepEqual(readPosting(again, URL_, parse), readPosting(doc, URL_, parse));
+});
+
+test("a page too big to keep is cut, and what it declared survives the cut", () => {
+  const doc = page(`<title>Research Engineer</title>${ld(POSTING)}`, `<p>${"filler ".repeat(MAX_PAGE / 4)}</p>`);
+  const slim = slimPage(doc);
+  assert.ok(slim.length > MAX_PAGE, "the note says what happened");
+  assert.ok(slim.length < MAX_PAGE + 200, "and nothing else is kept");
+  assert.match(slim, /truncated at \d+ characters/);
+  // The posting is declared in the head, so it is still read out of what was kept.
   const again = new JSDOM(slim).window.document;
   assert.deepEqual(readPosting(again, URL_, parse), readPosting(doc, URL_, parse));
 });

@@ -27,6 +27,8 @@ What it keeps — the captures, a trimmed copy of each page until Postulo has it
 of what it did — stays in this browser (`storage.local`), as does the token, never synced
 through a browser account.
 
+In full, and as the stores require it stated on its own: [PRIVACY.md](PRIVACY.md).
+
 ## Install
 
 **Chrome, Edge, Brave, Vivaldi, Opera, Arc** — until it is on the Chrome Web Store, load
@@ -99,7 +101,10 @@ and the rest still go.
 
 What is sent is exactly what you reviewed, every field, with a trimmed copy of the page:
 scripts, styles and inline graphics dropped, which is most of a page's weight and none of
-its posting. Postulo reads that copy too, to note which of its sources did.
+its posting. Postulo reads that copy too, to note which of its sources did. The copy is
+capped at half a megabyte — several times the heaviest posting in the corpus — so that one
+runaway page cannot fill the browser's extension storage: the extension asks for `storage`
+and not `unlimitedStorage`, and a page is dropped as soon as Postulo has it.
 
 **Testing.** *Settings → Testing and troubleshooting → Act as if Postulo cannot be
 reached* has the extension send nothing while it is on, exactly as if Postulo were down;
