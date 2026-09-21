@@ -57,7 +57,9 @@ export function endpoint(instance, path) {
 function headers(token) {
   return {
     Authorization: `Bearer ${token}`,
-    Accept: "application/json",
+    // Postulo answers a refusal as `application/problem+json` (RFC 9457) and everything
+    // else as `application/json`. Both are named so that neither is a surprise.
+    Accept: "application/json, application/problem+json",
     "Content-Type": "application/json",
   };
 }
@@ -79,20 +81,51 @@ export async function readResponse(response) {
   throw withStatus(refusalFor(response.status, body), response.status);
 }
 
+/** The field errors of a refused request, whichever shape Postulo sent them in.
+ *
+ *  Since postulo/postulo#296 a refusal is an RFC 9457 problem document, and the per-field
+ *  list lives in `errors` while `detail` is a one-line summary. Before it, the list *was*
+ *  `detail`. Both are read, because an extension is updated on a different day from the
+ *  instance it talks to, and the person capturing a posting that will not go in needs to
+ *  be told which field is wrong either way (#1). */
+function fieldErrors(body) {
+  const list = Array.isArray(body.errors) ? body.errors : Array.isArray(body.detail) ? body.detail : [];
+  return list.map(problem).filter(Boolean).join(" ");
+}
+
 function refusalFor(status, body) {
   if (status === 401) {
     return new Refusal("tokenRefused", [{ key: "tokenPath" }]);
   }
   if (status === 403) {
-    // Postulo's own sentence when it gives one: it names the scope that is missing.
-    return body && body.detail ? new Error(body.detail) : new Refusal("notAllowed");
+    // Postulo's own sentence when it gives one: it names the scope that is missing. The
+    // scope is a member of its own now, kept on the error for a caller that would rather
+    // act on it than read a sentence written for a developer.
+    const refusal = body && body.detail ? new Error(body.detail) : new Refusal("notAllowed");
+    if (body && body.scope) {
+      refusal.scope = body.scope;
+    }
+    return refusal;
   }
-  if (status === 422 && body && body.detail) {
-    // A sentence of Postulo's, or a list of refused fields, each saying where and why.
-    return new Error(typeof body.detail === "string" ? body.detail : body.detail.map(problem).join(" "));
+  if (status === 422 && body) {
+    // What is wrong with each field, and Postulo's own sentence when there are no fields
+    // -- "that page yielded nothing" is not about a field.
+    const fields = fieldErrors(body);
+    if (fields) {
+      return new Error(fields);
+    }
+    if (typeof body.detail === "string" && body.detail) {
+      return new Error(body.detail);
+    }
   }
   if (status === 429) {
-    return new Refusal("tooMany");
+    // The sentence stays as it is; the wait is carried for whatever decides when to try
+    // again. `Retry-After` says the same, and both come from the same number.
+    const refusal = new Refusal("tooMany");
+    if (body && Number.isFinite(body.retry_after)) {
+      refusal.retryAfter = body.retry_after;
+    }
+    return refusal;
   }
   return new Refusal("answered", [String(status)]);
 }
@@ -103,6 +136,9 @@ function withStatus(error, status) {
 }
 
 function problem(error) {
+  if (!error || typeof error.msg !== "string") {
+    return "";
+  }
   const where = Array.isArray(error.loc) ? error.loc.at(-1) : "";
   return where ? `${where}: ${error.msg}` : error.msg;
 }

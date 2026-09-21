@@ -59,6 +59,80 @@ test("responses become data or a sentence a person can act on", async () => {
   await assert.rejects(readResponse(fakeResponse(500, null)), refusal("answered", ["500"]));
 });
 
+test("a refused capture says which field is wrong, in either shape Postulo sends", async () => {
+  // Postulo answers refusals as RFC 9457 problem documents since postulo/postulo#296: the
+  // per-field list is `errors` and `detail` is a one-line summary of it. Before that the
+  // list *was* `detail`. An extension is updated on a different day from the instance it
+  // talks to, so both are read and both say the same thing (#1).
+  const fields = [{ loc: ["body", "payload", "data", "title"], msg: "Value error, A posting needs a title." }];
+  const said = { message: "title: Value error, A posting needs a title." };
+
+  await assert.rejects(
+    readResponse(
+      fakeResponse(422, {
+        type: "https://example.org/wiki/The-capture-API#validation-failed",
+        title: "The request was not in the shape this call takes",
+        status: 422,
+        detail: "Refused: title. See `errors` for what is wrong with each.",
+        instance: "/api/v1/captures",
+        errors: fields,
+      }),
+    ),
+    said,
+    "the summary is not what to show when the fields are there",
+  );
+  await assert.rejects(readResponse(fakeResponse(422, { detail: fields })), said, "an older Postulo");
+});
+
+test("a refusal that is not about a field still says Postulo's own sentence", async () => {
+  // "That page yielded nothing" names no field, so there is nothing for `errors` to hold
+  // and the summary is the whole of what there is to say.
+  await assert.rejects(
+    readResponse(fakeResponse(422, { status: 422, detail: "That page yielded nothing.", errors: [] })),
+    /nothing/,
+  );
+  await assert.rejects(readResponse(fakeResponse(422, { detail: "That page yielded nothing." })), /nothing/);
+});
+
+test("a refusal carries what a caller would act on, beside the sentence it shows", async () => {
+  // The sentence is for the person; these are for the code. A 403 will never succeed
+  // however often it is tried, and a 429 will -- after this long.
+  const scoped = await readResponse(fakeResponse(403, { detail: "No 'captures' scope.", scope: "captures" })).catch(
+    (error) => error,
+  );
+  assert.equal(scoped.scope, "captures");
+
+  const waited = await readResponse(fakeResponse(429, { detail: "Too many.", retry_after: 42 })).catch(
+    (error) => error,
+  );
+  assert.equal(waited.key, "tooMany", "and the sentence shown is unchanged");
+  assert.equal(waited.retryAfter, 42);
+
+  const older = await readResponse(fakeResponse(429, {})).catch((error) => error);
+  assert.equal(older.retryAfter, undefined, "an older Postulo says nothing, rather than zero");
+});
+
+test("a malformed problem document is still a refusal rather than a crash", async () => {
+  // What comes back on a refusal is the least tested path in any client, and the one most
+  // likely to arrive from a proxy rather than from Postulo.
+  await assert.rejects(readResponse(fakeResponse(422, null)), refusal("answered", ["422"]));
+  await assert.rejects(readResponse(fakeResponse(422, { errors: "not a list" })), refusal("answered", ["422"]));
+  await assert.rejects(readResponse(fakeResponse(422, { errors: [{ loc: 7 }] })), refusal("answered", ["422"]));
+  await assert.rejects(readResponse(fakeResponse(429, { retry_after: "soon" })), refusal("tooMany"));
+});
+
+test("the client accepts both the media type an answer uses and the one a refusal uses", async () => {
+  const calls = [];
+  const fetchImpl = async (url, init) => {
+    calls.push(init);
+    return fakeResponse(201, { id: 1 });
+  };
+  await capture("https://postulo.example.org", "tok", { url: "https://e.org/j/1", html: "<html>" }, fetchImpl);
+
+  assert.match(calls[0].headers.Accept, /application\/problem\+json/);
+  assert.match(calls[0].headers.Accept, /application\/json/);
+});
+
 test("a capture posts the page to the configured instance with the token, and to nothing else", async () => {
   const calls = [];
   const fetchImpl = async (url, init) => {
