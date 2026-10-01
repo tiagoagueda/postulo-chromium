@@ -1,7 +1,7 @@
 {
   "languageTag": {
     "message": "en",
-    "description": "This translation's language tag, as the page's lang attribute: en, pt-PT, fr, nb."
+    "description": "This translation's language, as a BCP 47 tag in its canonical form: en, pt-PT, sr-Cyrl, nb. It is the page's lang attribute and the language dates are written in."
   },
   "direction": {
     "message": "ltr",

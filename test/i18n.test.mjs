@@ -8,12 +8,25 @@ const SOURCE = "src";
 const LOCALES = join(SOURCE, "_locales");
 
 // English, plus every language Postulo itself offers: the core's catalogues at 100%.
-// fr_FR and the core's en_GB map to the plain fr and en the browser matches on.
+// Each is a BCP 47 tag in its canonical form, the way Postulo writes one (#12). The core
+// says fr-FR and en-GB where this says fr and en: the region is dropped where the core has
+// one variety of a language and kept where it has two (pt-BR, pt-PT), because the tag names
+// the catalogue that is served and a browser set to any French matches the fr folder.
 const OFFERED = [
   "bg", "bs", "ca", "cs", "cy", "da", "de", "el", "en", "es", "et", "eu", "fi", "fr",
   "ga", "gl", "hr", "hu", "hy", "is", "it", "ka", "lb", "lt", "lv", "mk", "mt", "nb",
-  "nl", "pl", "pt_BR", "pt_PT", "ro", "sk", "sl", "sq", "sr", "sv", "tr", "uk",
+  "nl", "pl", "pt-BR", "pt-PT", "ro", "sk", "sl", "sq", "sr-Cyrl", "sv", "tr", "uk",
 ];
+
+/** The folder the browser looks in for `tag`: the one place a language is not named by its
+ *  tag. The WebExtension format names a folder by language and region, with an underscore,
+ *  and never by script, so Serbian's is `sr` whichever script its catalogue is written in. */
+function folderOf(tag) {
+  const { language, region } = new Intl.Locale(tag);
+  return region ? `${language}_${region}` : language;
+}
+
+const tagOf = Object.fromEntries(OFFERED.map((tag) => [folderOf(tag), tag]));
 
 function read(path) {
   const text = readFileSync(path, "utf8");
@@ -28,8 +41,15 @@ const english = messages.en;
 const placeholdersIn = (message) => [...message.matchAll(/\$([A-Za-z_]+)\$/g)].map((match) => match[1].toLowerCase()).sort();
 
 test("the extension speaks the languages Postulo does, English by default", () => {
-  assert.deepEqual(folders, [...OFFERED].sort());
-  assert.equal(read(join(SOURCE, "manifest.json")).default_locale, "en");
+  assert.deepEqual(folders, OFFERED.map(folderOf).sort());
+  assert.equal(read(join(SOURCE, "manifest.json")).default_locale, folderOf("en"));
+});
+
+test("a language is named by a BCP 47 tag in its canonical form, and its folder follows from it", () => {
+  for (const tag of OFFERED) {
+    assert.deepEqual(Intl.getCanonicalLocales(tag), [tag], `${tag} is not how that tag is written`);
+  }
+  assert.equal(Object.keys(tagOf).length, OFFERED.length, "two languages would share a folder");
 });
 
 test("every language has every sentence, and nothing else", () => {
@@ -53,8 +73,20 @@ test("placeholders are the same in every language, in the order the code passes 
 
 test("each translation names its own language, so the page's lang attribute is right", () => {
   for (const [folder, catalogue] of Object.entries(messages)) {
-    assert.equal(catalogue.languageTag.message, folder.replace("_", "-"), folder);
+    assert.equal(catalogue.languageTag.message, tagOf[folder], folder);
     assert.ok(["ltr", "rtl"].includes(catalogue.direction.message), folder);
+  }
+});
+
+test("a date is written in the language of the catalogue in use, not the browser's", () => {
+  // With no locale named, toLocaleDateString() and Intl's formatters follow the browser's
+  // setting. That may be a language nobody has translated: the sentence is then the English
+  // one, and the date inside it is in another language.
+  const unnamed = /\.toLocale(?:Date|Time)?String\(\s*\)|\bIntl\.\w+\(\s*\)/;
+  const scripts = readdirSync(SOURCE, { recursive: true }).filter((name) => name.endsWith(".js"));
+  assert.ok(scripts.length, "no script was read");
+  for (const name of scripts) {
+    assert.doesNotMatch(readFileSync(join(SOURCE, name), "utf8"), unnamed, name);
   }
 });
 

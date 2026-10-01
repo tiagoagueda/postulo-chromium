@@ -201,7 +201,10 @@ async function main() {
     }
   }
 
-  const when = (iso) => new Date(iso).toLocaleDateString();
+  // In the language of the catalogue in use, like every other date here. With no locale
+  // named the browser's setting decides, and in a language nobody has translated that put
+  // a date in one language inside a sentence in another.
+  const when = (iso) => new Date(iso).toLocaleDateString(t("languageTag"));
 
   /** Say, in `element`, what one answer holds -- the address first, then the softer
    *  match on title and company -- with a link to it in Postulo; or nothing at all. */

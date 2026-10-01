@@ -123,6 +123,20 @@ the core has complete. Where the core has a word for something — *Settings*, *
 *Save*, *Test* — the extension uses the core's, so the button and the screen it points at
 agree. A language joins here when the core starts offering it.
 
+A language is named by a BCP 47 tag in its canonical form, as everywhere in Postulo: the
+language in lower case, a script with a capital, a region in capitals (`pt-BR`, `sr-Cyrl`,
+`nb`). Each catalogue says its own in `languageTag`, and that is what a page's `lang`
+attribute, every date and the log's header use. A language the extension comes to store
+or send is a tag too. The folders under `src/_locales/` are the one exception, because the browser
+demands it: a folder is named by language and region with an underscore (`pt_BR`) and
+never by script, so Serbian's folder is `sr` and its tag is `sr-Cyrl`. `npm test` derives
+each folder's name from its tag, and fails on a tag written any other way.
+
+The core's tags become the extension's by one rule: the region is dropped where the core
+has one variety of a language (`fr-FR` there is `fr` here, `en-GB` is `en`) and kept where
+it has two (`pt-BR`, `pt-PT`). A browser set to any French matches the `fr` folder, and
+the tag names the catalogue that is served.
+
 English is the source. The other translations are drafts that no native speaker has
 reviewed yet, as are the core's own new strings until one does.
 
