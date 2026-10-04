@@ -554,6 +554,14 @@ function sameUrl(raw) {
   }
 }
 
+/** Does the posting state this page's address as its own, in `url`, `@id` or `sameAs`? */
+function namesByAddress(posting, here) {
+  return ["url", "@id", "sameAs"].some((key) => {
+    const stated = sameUrl(text(posting[key]));
+    return stated !== "" && stated === here;
+  });
+}
+
 /** Is this posting the one the page is showing?
  *
  *  A search page carries a JobPosting for every hit, and the first is almost never the one
@@ -564,15 +572,39 @@ function matchesUrl(posting, url) {
   if (!here) {
     return false;
   }
-  for (const key of ["url", "@id", "sameAs"]) {
-    const stated = sameUrl(text(posting[key]));
-    if (stated && stated === here) {
-      return true;
-    }
+  if (namesByAddress(posting, here)) {
+    return true;
   }
-  const identifier = text(posting.identifier);
+  return namesByIdentifier(posting, url);
+}
+
+/** The id a board gives a posting. An identifier is usually a PropertyValue whose `name`
+ *  is the issuing company and whose `value` is the id, so only the value is read. */
+function identifierOf(posting) {
+  const one = first(posting.identifier);
+  if (one === null || one === undefined) {
+    return "";
+  }
+  return String(typeof one === "object" ? first(one.value) ?? "" : one).trim();
+}
+
+/** Does the page's address carry the posting's identifier as a whole path or query segment? */
+function namesByIdentifier(posting, url) {
+  const identifier = identifierOf(posting).toLowerCase();
   // Anything this short matches by accident; a board's own id never is.
-  return identifier.length >= 4 && here.includes(identifier.toLowerCase());
+  if (identifier.length < 4) {
+    return false;
+  }
+  try {
+    const parsed = new URL(url);
+    const segments = parsed.pathname.split("/");
+    for (const [, value] of parsed.searchParams) {
+      segments.push(value);
+    }
+    return segments.some((segment) => segment.toLowerCase() === identifier);
+  } catch {
+    return false;
+  }
 }
 
 /** The JobPosting objects among a page's structured data, in the order they appear. */
@@ -589,7 +621,13 @@ function bestPosting(objects, url) {
   if (found.length < 2) {
     return found[0] || null;
   }
-  return found.find((posting) => matchesUrl(posting, url)) || found[0];
+  // An address stated outright outranks an identifier found in the address.
+  const here = sameUrl(url);
+  return (
+    found.find((posting) => here && namesByAddress(posting, here)) ||
+    found.find((posting) => matchesUrl(posting, url)) ||
+    found[0]
+  );
 }
 
 /** Every field Postulo has, read off one schema.org JobPosting however it was written.

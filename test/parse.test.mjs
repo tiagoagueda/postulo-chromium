@@ -185,3 +185,29 @@ test("an address over the limit is left out, not cut to a prefix that leads nowh
   assert.equal(tidy({ title: "T", description: "", url: long }).url, "");
   assert.equal(tidy({ title: "T", description: "", url: "https://jobs.example/1" }).url, "https://jobs.example/1");
 });
+
+const SITE = "https://careers.blackmesa.example";
+const sitePostings = ["Welder", "Physicist", "Guard"].map((title, i) => ({
+  ...POSTING,
+  title,
+  url: `${SITE}/jobs/${(i + 1) * 1001}`,
+  identifier: { "@type": "PropertyValue", name: "BlackMesa", value: String((i + 1) * 1001) },
+}));
+
+test("an identifier's issuer is not its id: the posting naming the page wins", () => {
+  const doc = page(ld(sitePostings));
+  assert.equal(readPosting(doc, `${SITE}/jobs/2002`, parse).data.title, "Physicist");
+  assert.equal(readPosting(doc, `${SITE}/jobs/2002?utm_source=x`, parse).data.title, "Physicist");
+});
+
+test("a results page naming no posting marks none as the page's", () => {
+  const listed = readPostings(page(ld(sitePostings)), `${SITE}/jobs?q=all`, parse);
+  assert.equal(listed.length, 3);
+  assert.ok(listed.every((posting) => !posting.here));
+});
+
+test("an identifier matches a whole segment of the address, not part of one", () => {
+  const doc = page(ld(sitePostings.map(({ url, ...rest }) => rest)));
+  assert.equal(readPosting(doc, `${SITE}/jobs/2002`, parse).data.title, "Physicist");
+  assert.equal(readPosting(doc, `${SITE}/jobs/20020`, parse).data.title, "Welder");
+});
