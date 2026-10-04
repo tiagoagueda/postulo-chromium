@@ -19,6 +19,14 @@
     "message": "Postulo cannot be reached: what you send waits in this browser until it answers.",
     "description": "The toolbar button's tooltip, first, while the icon is grey because Postulo does not answer; followed by the button's usual tooltip."
   },
+  "footerOnline": {
+    "message": "Postulo answers",
+    "description": "The title and spoken name of the popup footer's green tick before the address: Postulo answered within a second."
+  },
+  "footerSlow": {
+    "message": "Postulo is slow to answer",
+    "description": "The title and spoken name of the popup footer's orange clock before the address: Postulo took more than a second to answer, or has not answered yet."
+  },
   "reviewHeading": {
     "message": "Needs review",
     "description": "Heading of the popup's list of postings captured and waiting for review, in Postulo or in this browser."

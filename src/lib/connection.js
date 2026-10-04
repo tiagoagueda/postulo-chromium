@@ -2,11 +2,12 @@
 //
 // One record in storage.local says what is known and when and how it was learnt:
 //
-//   { state, at, how, tokenChecked }
+//   { state, at, how, tokenChecked, ms }
 //
 // `state` is one of `noPermission`, `tokenRefused`, `unreachable` or `reachable`. Two more
 // are not stored because the settings already say them: `unconfigured` (no address or
-// token) and `testing` (the switch). The popup, the badge and the icon read it; the
+// token) and `testing` (the switch). `ms` is how long `/healthz` took to answer, when that
+// is what was asked: the popup's footer calls an answer slower than a second slow. The popup, the badge and the icon read it; the
 // background repaints the icon whenever it changes.
 //
 // It is learnt from the outcome of a real call that carried the token (a send, the
@@ -56,6 +57,43 @@ export function toolbarFor(settings, record) {
   };
 }
 
+/** An answer slower than this is slow, to the footer of the popup. It may include setting
+ *  up the connection, so the first check after a pause can read slower than the next. */
+export const SLOW_MS = 1000;
+
+/** The message that says each footer state in words, for the title and the screen reader. */
+const FOOTER = {
+  online: { key: "footerOnline" },
+  slow: { key: "footerSlow" },
+  unreachable: { key: "postuloUnreachable" },
+  testing: { key: "offlineOn" },
+  noPermission: { key: "noPermission" },
+  tokenRefused: { key: "tokenRefused" },
+};
+
+/** What the popup's footer shows before the address: `{state, key}`, or null for nothing
+ *  (not set up, or nothing learnt yet and no reason to say it is slow). It follows the same
+ *  record as the toolbar, so the two agree: the icon is in colour exactly when this is
+ *  `online` or `slow`. `live.slow` is a check begun in the popup that has not been answered
+ *  after `SLOW_MS`; it makes a Postulo last seen answering, or never seen, slow, and leaves
+ *  a red or grey state as it is until the answer comes. */
+export function footerFor(settings, record, live = {}) {
+  if (!settings.instance || !settings.token) {
+    return null;
+  }
+  let state = null;
+  if (settings.offline) {
+    state = "testing";
+  } else if (record && record.state in REASON) {
+    state = record.state;
+  } else if (record && record.state === "reachable") {
+    state = record.ms > SLOW_MS || live.slow ? "slow" : "online";
+  } else if (live.slow) {
+    state = "slow";
+  }
+  return state && { state, key: FOOTER[state].key };
+}
+
 /** The tooltip: the reason first, in words (colour is never the only sign), then what
  *  the button does or the count it carries. */
 export function toolbarTitle(reasonText, buttonTitle) {
@@ -88,6 +126,9 @@ export async function learn(area, outcome, now = () => Date.now()) {
     how: outcome.how,
     tokenChecked: outcome.tokenChecked ?? (outcome.state === "noPermission" ? false : Boolean(before && before.tokenChecked)),
   };
+  if (Number.isFinite(outcome.ms)) {
+    record.ms = outcome.ms;
+  }
   await area.set({ [CONNECTION]: record });
   return record;
 }
@@ -129,8 +170,11 @@ export async function checkConnection({ area, settings, allowed, fetchImpl = fet
   const before = (await area.get(CONNECTION))[CONNECTION];
   const known = before && before.state !== "noPermission" && before.tokenChecked;
   let status = 0;
+  let ms;
   try {
+    const began = now();
     status = await health(settings.instance, fetchImpl);
+    ms = Math.max(0, now() - began);
   } catch {
     return learn(area, { state: "unreachable", how: "healthz" }, now);
   }
@@ -139,12 +183,12 @@ export async function checkConnection({ area, settings, allowed, fetchImpl = fet
   }
   if (status >= 200 && status < 300 && known) {
     // The host answers; whether the token still does is not asked again.
-    return learn(area, { state: before.state === "tokenRefused" ? "tokenRefused" : "reachable", how: "healthz" }, now);
+    return learn(area, { state: before.state === "tokenRefused" ? "tokenRefused" : "reachable", how: "healthz", ms }, now);
   }
   try {
     await whoAmI(settings.instance, settings.token, fetchImpl);
-    return learn(area, { state: "reachable", tokenChecked: true, how: "me" }, now);
+    return learn(area, { state: "reachable", tokenChecked: true, how: "me", ms }, now);
   } catch (error) {
-    return learn(area, { ...stateOfFailure(error), how: "me" }, now);
+    return learn(area, { ...stateOfFailure(error), how: "me", ms }, now);
   }
 }

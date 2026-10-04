@@ -10,6 +10,7 @@
   --line: #e5e7eb;
   --field-line: #6b7280;
   --ok: #15803d;
+  --warn: #b45309;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +25,7 @@
     --line: #374151;
     --field-line: #6b7280;
     --ok: #4ade80;
+    --warn: #fbbf24;
   }
 }
 
@@ -194,6 +196,34 @@ footer {
   color: var(--muted);
   font-size: 12px;
   text-decoration: none;
+}
+
+/* Whether Postulo answers, before the address: a shape for each state as well as a colour. */
+.state {
+  display: inline-flex;
+  flex: none;
+}
+
+.state svg[hidden] {
+  display: none;
+}
+
+.state[data-state="online"] {
+  color: var(--ok);
+}
+
+.state[data-state="slow"] {
+  color: var(--warn);
+}
+
+.state[data-state="unreachable"],
+.state[data-state="noPermission"],
+.state[data-state="tokenRefused"] {
+  color: var(--error);
+}
+
+.state[data-state="testing"] {
+  color: var(--muted);
 }
 
 .server:hover {

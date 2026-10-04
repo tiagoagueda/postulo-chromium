@@ -41,3 +41,11 @@ for (const [name, t] of [["light", light], ["dark", dark]]) {
     assert.ok(ratio(t[used("input, select, textarea", "border")], t.paper) >= 3, "field border");
   });
 }
+
+for (const [name, t] of [["light", light], ["dark", dark]]) {
+  test(`${name}: the footer's state icons clear 3:1 on the page`, () => {
+    for (const token of ["ok", "warn", "error", "muted"]) {
+      assert.ok(ratio(t[token], t.paper) >= 3, `--${token}`);
+    }
+  });
+}

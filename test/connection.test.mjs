@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
 import { test } from "node:test";
 
-import { CONNECTION, checkConnection, learn, outcomeOfDelivery, stateOfFailure, toolbarFor, toolbarTitle } from "../src/lib/connection.js";
+import { CONNECTION, checkConnection, footerFor, learn, outcomeOfDelivery, stateOfFailure, toolbarFor, toolbarTitle } from "../src/lib/connection.js";
 
 const SET = { instance: "https://p.example", token: "t", offline: false };
 const record = (state, extra = {}) => ({ state, at: "2026-10-04T10:00:00Z", how: "send", tokenChecked: true, ...extra });
@@ -189,4 +189,56 @@ test("what a call showed is kept with when and how; an unanswered call leaves th
   const after = await learn(area, { state: "unreachable", how: "send" }, NOW);
   assert.deepEqual(after, { state: "unreachable", at: "2026-10-04T12:00:00.000Z", how: "send", tokenChecked: true });
   assert.equal((await learn(area, { state: "noPermission", how: "permission" }, NOW)).tokenChecked, false);
+});
+
+test("the footer names each state, and follows the toolbar: in colour exactly when online or slow", () => {
+  const cases = [
+    [SET, record("reachable", { ms: 120 }), "online", "footerOnline"],
+    [SET, record("reachable", { ms: 1000 }), "online", "footerOnline"],
+    [SET, record("reachable", { ms: 1001 }), "slow", "footerSlow"],
+    [SET, record("reachable"), "online", "footerOnline"],
+    [SET, record("unreachable"), "unreachable", "postuloUnreachable"],
+    [SET, record("noPermission"), "noPermission", "noPermission"],
+    [SET, record("tokenRefused"), "tokenRefused", "tokenRefused"],
+    [{ ...SET, offline: true }, record("reachable", { ms: 5 }), "testing", "offlineOn"],
+  ];
+  for (const [settings, known, state, key] of cases) {
+    const footer = footerFor(settings, known);
+    assert.deepEqual(footer, { state, key });
+    assert.equal(!toolbarFor(settings, known).grey, state === "online" || state === "slow", state);
+  }
+});
+
+test("the footer shows nothing when not set up, or while nothing is known and nothing is late", () => {
+  assert.equal(footerFor({ ...SET, token: "" }, record("reachable")), null);
+  assert.equal(footerFor({ ...SET, instance: "" }, null, { slow: true }), null);
+  assert.equal(footerFor(SET, null), null);
+  assert.equal(footerFor(SET, undefined, {}), null);
+});
+
+test("a second without an answer is slow for a Postulo last seen answering or never seen, and changes no red or grey", () => {
+  assert.equal(footerFor(SET, record("reachable", { ms: 50 }), { slow: true }).state, "slow");
+  assert.equal(footerFor(SET, null, { slow: true }).state, "slow");
+  assert.equal(footerFor(SET, record("unreachable"), { slow: true }).state, "unreachable");
+  assert.equal(footerFor(SET, record("tokenRefused"), { slow: true }).state, "tokenRefused");
+  assert.equal(footerFor({ ...SET, offline: true }, null, { slow: true }).state, "testing");
+});
+
+test("the check keeps how long /healthz took, and a failed one keeps none", async () => {
+  const area = memoryArea();
+  let at = 1000;
+  const clock = () => at;
+  const slowly = async () => {
+    at += 1500;
+    return { status: 200, ok: true, json: async () => ({}) };
+  };
+  const kept = await checkConnection({ area, settings: SET, allowed: async () => true, fetchImpl: slowly, now: clock });
+  assert.equal(kept.ms >= 1500, true);
+  assert.equal(footerFor(SET, kept).state, "slow");
+  const refused = async () => {
+    throw new TypeError("network");
+  };
+  const down = await checkConnection({ area: memoryArea(), settings: SET, allowed: async () => true, fetchImpl: refused, now: clock });
+  assert.equal(down.state, "unreachable");
+  assert.equal("ms" in down, false);
 });

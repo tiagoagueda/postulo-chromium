@@ -4,8 +4,8 @@ import { ext, loadSettings, readCurrentTab, requestHostPermission, tabProblem } 
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
 import { postingForm } from "./lib/form.js";
 import { askKnown } from "./lib/known.js";
-import { afterSending, deliverWaiting, log, openCaptures, readWaitingList, showUnsentCount, store } from "./lib/local.js";
-import { CONNECTION, toolbarFor } from "./lib/connection.js";
+import { afterSending, checkPostulo, deliverWaiting, log, openCaptures, readWaitingList, showUnsentCount, store } from "./lib/local.js";
+import { CONNECTION, SLOW_MS, footerFor, toolbarFor } from "./lib/connection.js";
 import { hostOf } from "./lib/log.js";
 import { emptyPosting, readPosting, readPostings, slimPage } from "./lib/parse.js";
 import { reviewRows } from "./lib/review.js";
@@ -100,6 +100,49 @@ async function showReviewList() {
   $("review-list").hidden = $("ready").hidden;
 }
 
+/** Draw the footer's state before the address from the settings and the connection record,
+ *  and say it in words for a screen reader and the tooltip. */
+let drawing = 0; // the latest draw wins, whatever order the storage reads return in
+
+async function showState(settings, live = {}) {
+  const turn = ++drawing;
+  const record = (await ext.storage.local.get(CONNECTION))[CONNECTION];
+  if (turn !== drawing) {
+    return;
+  }
+  const shown = footerFor(settings, record, live);
+  const state = $("state");
+  state.hidden = !shown;
+  if (!shown) {
+    return;
+  }
+  const words = shown.state === "tokenRefused" ? t("tokenRefused", [t("tokenPath")]) : t(shown.key);
+  state.dataset.state = shown.state;
+  state.title = words;
+  state.setAttribute("aria-label", words);
+  for (const shape of state.querySelectorAll("svg")) {
+    shape.hidden = shape.dataset.state !== shown.state;
+  }
+}
+
+/** Show what is known at once, then ask once whether Postulo answers and show that. A
+ *  second without an answer shows slow while the 20 s wait goes on; a popup closed before
+ *  the answer writes nothing, and the next check in the background decides. */
+async function watchState(settings) {
+  await showState(settings);
+  if (!settings.instance || !settings.token || settings.offline) {
+    return;
+  }
+  const timer = setTimeout(() => showState(settings, { slow: true }), SLOW_MS);
+  try {
+    await checkPostulo();
+  } catch {
+    // The record keeps what it knew; the footer shows that.
+  }
+  clearTimeout(timer);
+  await showState(settings);
+}
+
 async function main() {
   await useStoredLanguage();
   localise();
@@ -122,6 +165,7 @@ async function main() {
     server.title = settings.instance;
     server.href = settings.instance;
     server.hidden = false;
+    watchState(settings).catch(() => {});
   }
   show("ready");
   // The tab is tested now, not on the press: a disabled button is not reached by the keyboard,

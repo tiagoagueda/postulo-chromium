@@ -144,6 +144,17 @@ the token's state is not known yet, as after saving. Nothing is asked in the tes
 switch, when not set up, or without the permission. The image is set again at start, as the
 number is: browsers forget it on restart.
 
+The footer of the popup shows the same record before the instance address, one shape and
+colour for each state, named in words in its tooltip and to a screen reader: a green tick
+(Postulo answered within a second), an orange clock (it took more than a second, or has not
+answered yet after one), a red cross (it cannot be reached), a red lock (the address is not
+allowed yet), a red key (the token is refused) and a grey flask (the testing switch is on).
+Not set up, it shows nothing. When the popup opens it shows what is known at once, then asks
+`GET /healthz` once more, timing it (`ms` in the record, background checks included), and
+shows the answer; a second without one shows orange while the 20 seconds go on, unless the
+record says red or grey, which stay until the answer. A popup closed before the answer writes
+nothing. The toolbar button is in colour exactly when the footer is green or orange.
+
 ## Without a server
 
 Under the capture button the popup lists the postings that need review, newest first, as
