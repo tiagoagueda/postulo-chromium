@@ -542,6 +542,12 @@ function hostOf(url) {
 function sameUrl(raw) {
   try {
     const parsed = new URL(raw);
+    // A campaign's tracking parameters say where the visitor came from, not which advert.
+    for (const name of [...parsed.searchParams.keys()]) {
+      if (/^(utm_|fbclid$|gclid$|mc_[ce]id$|ref$|ref_src$)/i.test(name)) {
+        parsed.searchParams.delete(name);
+      }
+    }
     return `${parsed.host.replace(/^www\./, "")}${parsed.pathname.replace(/\/+$/, "")}${parsed.search}`.toLowerCase();
   } catch {
     return "";
@@ -805,15 +811,31 @@ export function readPostings(doc, url, parse) {
       if (!title) {
         continue;
       }
-      const own = ownUrl(posting) || url;
+      const stated = ownUrl(posting);
+      const own = stated || url;
       const key = `${sameUrl(own)}|${title.toLowerCase()}`;
       if (seen.has(key)) {
         continue;
       }
       const data = fromPosting(posting, own, parse, descriptionIsHtml);
       if (data) {
+        const tidied = tidy(data);
+        // The other spelling may state the address and this one not (or the reverse), which
+        // keys them apart; the same title and company is the same posting.
+        const twin = listed.findIndex(
+          (entry) =>
+            (!stated || !entry.stated) &&
+            entry.title === title.toLowerCase() &&
+            (!entry.data.company_name || !tidied.company_name || entry.data.company_name === tidied.company_name),
+        );
+        if (twin >= 0) {
+          if (stated && !listed[twin].stated) {
+            listed[twin] = { data: tidied, source: "schema.org", here: matchesUrl(posting, url), stated, title: title.toLowerCase() };
+          }
+          continue;
+        }
         seen.add(key);
-        listed.push({ data: tidy(data), source: "schema.org", here: matchesUrl(posting, url) });
+        listed.push({ data: tidied, source: "schema.org", here: matchesUrl(posting, url), stated, title: title.toLowerCase() });
       }
     }
   };
@@ -828,7 +850,7 @@ export function readPostings(doc, url, parse) {
   } catch {
     // nothing to list from the markup
   }
-  return listed;
+  return listed.map(({ data, source, here }) => ({ data, source, here }));
 }
 
 /** How much of one page is kept in the browser.

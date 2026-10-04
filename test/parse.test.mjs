@@ -41,6 +41,15 @@ test("a posting written twice, in the script and in the markup, is listed once",
   assert.equal(readPostings(page(""), URL_, parse).length, 0);
 });
 
+test("a posting whose script states its address and markup does not is listed once, under a tracking query", () => {
+  const markup =
+    '<div itemscope itemtype="https://schema.org/JobPosting"><span itemprop="title">Research Engineer</span></div>';
+  const doc = page(ld({ ...POSTING, url: URL_ }), markup);
+  const listed = readPostings(doc, `${URL_}?utm_source=newsletter`, parse);
+  assert.equal(listed.length, 1);
+  assert.ok(listed[0].here);
+});
+
 test("a schema.org JobPosting is read into every field Postulo has", () => {
   const read = readPosting(page(ld(POSTING)), URL_, parse);
   assert.equal(read.source, "schema.org");
