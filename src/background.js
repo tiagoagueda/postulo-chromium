@@ -7,15 +7,19 @@
 // toolbar button.
 
 import { ext } from "./lib/browser.js";
-import { deliverWaiting, forgetWaitingList, readWaitingList, showLanguage, showUnsentCount } from "./lib/local.js";
+import { checkPostulo, deliverWaiting, forgetConnection, forgetWaitingList, readWaitingList, showLanguage, showUnsentCount } from "./lib/local.js";
 import { isCaptureKey } from "./lib/store.js";
 
 const ALARM = "deliver";
 const EVERY_MINUTES = 5;
 
-/** Send what is waiting, then read Postulo's list unless sending already did. */
+/** Send what is waiting, then read Postulo's list unless sending already did. With
+ *  nothing to send, ask whether Postulo answers: a send that was made showed it already. */
 async function deliverAndRead() {
   const result = await deliverWaiting();
+  if (result.outcome === "nothing" || (result.outcome === "done" && !result.sent)) {
+    await checkPostulo();
+  }
   if (!result.sent) {
     await readWaitingList();
   }
@@ -26,10 +30,14 @@ function schedule() {
   ext.alarms.create(ALARM, { periodInMinutes: EVERY_MINUTES });
 }
 
+// Browsers forget what was done to the toolbar button when they restart, so the icon is
+// set again, as the badge is, whenever the browser starts or the extension is installed or
+// updated. The record that `lastDelivery` was is replaced by the connection state.
 ext.runtime.onInstalled.addListener((details) => {
   schedule();
   showUnsentCount();
   showLanguage();
+  ext.storage.local.remove("lastDelivery");
   if (details.reason === "install") {
     ext.runtime.openOptionsPage();
   }
@@ -52,15 +60,19 @@ ext.storage.onChanged.addListener((changes, area) => {
   if (area !== "local") {
     return;
   }
-  if (Object.keys(changes).some(isCaptureKey)) {
+  // The icon follows the settings and what was learnt of the connection, the number the captures.
+  if (Object.keys(changes).some(isCaptureKey) || changes.connection || changes.offline || changes.instance || changes.token) {
     showUnsentCount();
   }
   if (changes.language) {
     showLanguage();
   }
   // Turning the testing switch off, or saving an address, is a moment Postulo may be
-  // reachable where it was not.
-  if ((changes.offline && changes.offline.newValue === false) || changes.instance || changes.token) {
+  // reachable where it was not. What was learnt of another Postulo, or of another token,
+  // is not this one's, so it is dropped and learnt again.
+  if (changes.instance || changes.token) {
+    forgetConnection().then(deliverAndRead);
+  } else if (changes.offline && changes.offline.newValue === false) {
     deliverAndRead();
   }
   // A list read from another Postulo, or with another token, is not this one's.
@@ -68,3 +80,7 @@ ext.storage.onChanged.addListener((changes, area) => {
     forgetWaitingList();
   }
 });
+
+// The address is allowed or no longer allowed: the first moment to know it can be asked, or not.
+ext.permissions.onAdded.addListener(() => checkPostulo());
+ext.permissions.onRemoved.addListener(() => checkPostulo());

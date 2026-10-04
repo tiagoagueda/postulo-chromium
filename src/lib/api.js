@@ -174,6 +174,18 @@ export async function whoAmI(instance, token, fetchImpl = fetch) {
   return readResponse(response);
 }
 
+/** GET /healthz: the status Postulo answers with, to a request that carries no token and
+ *  no cookies. It proves the host and its database answer, and nothing about who asks. A
+ *  host that does not answer throws, as with every request here. */
+export async function health(instance, fetchImpl = fetch) {
+  const response = await request(fetchImpl, `${instance}/healthz`, {
+    credentials: "omit",
+    cache: "no-store",
+    headers: { Accept: "application/json" },
+  });
+  return response.status;
+}
+
 /** POST /captures: the page, and the posting as the person reviewed it.
  *
  *  Every field goes, not only the ones changed: what Postulo keeps is then exactly what the

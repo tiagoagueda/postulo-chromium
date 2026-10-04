@@ -3,7 +3,7 @@ import { askAndKeep } from "./lib/allow.js";
 import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
-import { afterSending, deliverWaiting, log, openCaptures, readWaitingList, showUnsentCount, store } from "./lib/local.js";
+import { afterSending, deliverWaiting, learnFromCall, log, openCaptures, readWaitingList, showUnsentCount, store } from "./lib/local.js";
 import { hostOf } from "./lib/log.js";
 import { emptyPosting, readPosting, readPostings, slimPage } from "./lib/parse.js";
 import { drawPage, encodePicture } from "./lib/picture.js";
@@ -261,9 +261,13 @@ async function main() {
       if (!(await hasHostPermission(originPattern(settings.instance)))) {
         return null;
       }
-      return await known(settings.instance, settings.token, postings);
+      const answers = await known(settings.instance, settings.token, postings);
+      // Keeping what was learnt must not turn an answer into a failure.
+      await learnFromCall("known").catch(() => {});
+      return answers;
     } catch (error) {
       await log.add("known", { problem: error.key || error.message });
+      await learnFromCall("known", error).catch(() => {});
       return null;
     }
   }

@@ -15,6 +15,10 @@
     "message": "Capture this posting in Postulo",
     "description": "The toolbar button's tooltip, and the name of its keyboard shortcut."
   },
+  "postuloUnreachable": {
+    "message": "Postulo cannot be reached: what you send waits in this browser until it answers.",
+    "description": "The toolbar button's tooltip, first, while the icon is grey because Postulo does not answer; followed by the button's usual tooltip."
+  },
   "waitingForReview": {
     "message": "Waiting for review: $COUNT$",
     "description": "The toolbar button's tooltip when postings are waiting for review in Postulo or in this browser. COUNT is a number.",

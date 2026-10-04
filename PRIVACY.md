@@ -34,7 +34,9 @@ It keeps:
   on the toolbar button: for each, its id, address, title, company, place, date and the
   address of its review screen — including captures made elsewhere, such as from another
   browser. Never a page. It is dropped when you change the address or token.
-- **A testing switch** and the outcome of the last delivery attempt.
+- **A testing switch**, and whether Postulo answered at last look: not allowed yet, token
+  refused, unreachable or reachable, with when and by which request, for the toolbar
+  button's colour. Nothing else about it.
 
 Deleting a capture from *Captures in this browser* removes it and its page. Removing the
 extension from your browser removes all of the above.
@@ -43,13 +45,14 @@ extension from your browser removes all of the above.
 
 Only to the address you configured, and to nothing else. Your token is sent as a bearer
 token in the `Authorization` header of those requests and of no others. There are exactly
-four:
+five:
 
 | When | Request | What goes |
 | --- | --- | --- |
-| You press *Test* in the settings | `GET /api/v1/me` | Nothing but the token, to ask Postulo who it is |
+| You press *Test* in the settings, and after you save an address or token (or when `/healthz` is blocked on the way) | `GET /api/v1/me` | Nothing but the token, to ask Postulo who it is |
 | You press *Send*, or a waiting capture is retried | `POST /api/v1/captures` | The posting's address, the slimmed copy of the page, the fields as you reviewed them, and — for several captures read off one results page — how many there were and which this is |
 | Every five minutes, when the browser starts, when the popup opens, and after something was sent | `GET /api/v1/captures` | Nothing but the token, to read the list of captures waiting for review, for the number on the toolbar button. Not made with no Postulo set up, with the testing switch on, or before the address is allowed. |
+| Every five minutes, when the browser starts, and when the address is saved, the permission given or the testing switch turned off | `GET /healthz` | Nothing. No token and no cookies: only that your server is asked whether it is up, so it learns the browser is running and from where. It is how the toolbar button knows to turn grey. Not made with no Postulo set up, with the testing switch on, or before the address is allowed. |
 | The popup opens on a posting, with Postulo set up and reachable | `POST /api/v1/captures/known` | The address, title and company of the postings on the page, so the popup can say which your Postulo already holds. Postulo stores nothing on this request. |
 | You press *Send the picture*, offered after a capture was sent, and only when your Postulo says it keeps pictures | `PUT` to the address Postulo gave for it | A picture of the whole page as you see it in that tab, signed in or not: the page's image, and nothing else. Never for several captures read off one results page. |
 
@@ -59,7 +62,7 @@ browser sends that header to every site it visits anyway.
 
 Retries of a capture you already sent happen in the background, every five minutes and when
 the browser starts, until Postulo takes it. Nothing of yours is ever sent that you did not press
-*Send* on. With no Postulo configured, or with the testing switch on, nothing is sent at
+*Send* on; the `GET /healthz` asks, and carries, nothing of yours. With no Postulo configured, or with the testing switch on, nothing is sent at
 all and captures simply stay in the browser.
 
 ## What it reads, and when

@@ -35,7 +35,7 @@ function keyOf(record, payload) {
  * would fail the same way, and trying them all against a server that is down helps nobody.
  * A capture Postulo refuses on its own account is marked refused, and the others go on.
  *
- * Resolves to `{outcome, sent, problem?}`, `outcome` being one of `nothing` (none waiting),
+ * Resolves to `{outcome, sent, problem?, status?}` (`status` being what Postulo answered with, when it did), `outcome` being one of `nothing` (none waiting),
  * `unconfigured`, `offline` (the testing switch), `noPermission`, `unreachable`, `account`
  * (the token was refused) or `done`.
  */
@@ -95,7 +95,7 @@ export async function deliver({ store, log, settings, allowed, fetchImpl = fetch
         await store.update(record.id, { problem });
         const outcome = kind === "account" ? "account" : "unreachable";
         await log.add("delivery", { outcome, sent, waiting: waiting.length - sent });
-        return { outcome, sent, problem };
+        return { outcome, sent, problem, status: error.status };
       }
     }
     await log.add("delivery", { outcome: "done", sent });

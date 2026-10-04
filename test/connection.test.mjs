@@ -1,0 +1,192 @@
+// Runs with `node --test`: the toolbar icon and tooltip from the settings and what is known of Postulo.
+import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
+import { test } from "node:test";
+
+import { CONNECTION, checkConnection, learn, outcomeOfDelivery, stateOfFailure, toolbarFor, toolbarTitle } from "../src/lib/connection.js";
+
+const SET = { instance: "https://p.example", token: "t", offline: false };
+const record = (state, extra = {}) => ({ state, at: "2026-10-04T10:00:00Z", how: "send", tokenChecked: true, ...extra });
+
+test("the icon is grey in every state but reachable, and says why in words", () => {
+  const cases = [
+    [{ ...SET, token: "" }, null, "unconfigured", "notConnected"],
+    [{ ...SET, instance: "" }, record("reachable"), "unconfigured", "notConnected"],
+    [{ ...SET, offline: true }, record("reachable"), "testing", "offlineOn"],
+    [SET, record("noPermission"), "noPermission", "noPermission"],
+    [SET, record("tokenRefused"), "tokenRefused", "tokenRefused"],
+    [SET, record("unreachable"), "unreachable", "postuloUnreachable"],
+  ];
+  for (const [settings, known, state, reason] of cases) {
+    const toolbar = toolbarFor(settings, known);
+    assert.equal(toolbar.state, state);
+    assert.equal(toolbar.grey, true, state);
+    assert.equal(toolbar.reason, reason, state);
+    assert.deepEqual(toolbar.icons, { 16: "icons/postulo-grey-16.png", 32: "icons/postulo-grey-32.png" });
+  }
+});
+
+test("reachable, or not yet known, keeps the colour and has no reason", () => {
+  for (const known of [record("reachable"), null, undefined]) {
+    const toolbar = toolbarFor(SET, known);
+    assert.deepEqual([toolbar.grey, toolbar.reason], [false, null]);
+    assert.deepEqual(toolbar.icons, { 16: "icons/postulo-16.png", 32: "icons/postulo-32.png" });
+  }
+});
+
+test("the testing switch greys the icon at once, whatever was learnt before", () => {
+  assert.equal(toolbarFor({ ...SET, offline: true }, record("reachable")).grey, true);
+  assert.equal(toolbarFor(SET, record("reachable")).grey, false);
+});
+
+test("every image the toolbar can name is in the source", () => {
+  for (const settings of [SET, { ...SET, offline: true }]) {
+    for (const path of Object.values(toolbarFor(settings, record("reachable")).icons)) {
+      assert.ok(existsSync(new URL(`../src/${path}`, import.meta.url)), path);
+    }
+  }
+});
+
+test("the tooltip gives the reason, then the button's own words", () => {
+  assert.equal(toolbarTitle("Reason.", "Capture"), "Reason. Capture");
+  assert.equal(toolbarTitle(null, "Capture"), "Capture");
+});
+
+test("a failure is judged by whether Postulo answered", () => {
+  assert.deepEqual(stateOfFailure({ status: 401 }), { state: "tokenRefused", tokenChecked: true });
+  assert.deepEqual(stateOfFailure({ status: 403 }), { state: "tokenRefused", tokenChecked: true });
+  assert.deepEqual(stateOfFailure({}), { state: "unreachable" });
+  assert.deepEqual(stateOfFailure(new TypeError("Failed to fetch")), { state: "unreachable" });
+  for (const status of [500, 502, 503]) {
+    assert.deepEqual(stateOfFailure({ status }), { state: "unreachable" }, String(status));
+  }
+  // Busy is answering; refusing one capture is answering.
+  assert.deepEqual(stateOfFailure({ status: 429 }), { state: "reachable" });
+  assert.deepEqual(stateOfFailure({ status: 422 }), { state: "reachable", tokenChecked: true });
+});
+
+test("a delivery shows what it showed, and nothing when it asked nothing", () => {
+  assert.deepEqual(outcomeOfDelivery({ outcome: "unreachable", status: 503 }), { state: "unreachable", how: "send" });
+  assert.deepEqual(outcomeOfDelivery({ outcome: "unreachable", status: 429 }), { state: "reachable", how: "send" });
+  assert.deepEqual(outcomeOfDelivery({ outcome: "unreachable" }), { state: "unreachable", how: "send" });
+  assert.deepEqual(outcomeOfDelivery({ outcome: "account", status: 401 }), { state: "tokenRefused", tokenChecked: true, how: "send" });
+  assert.deepEqual(outcomeOfDelivery({ outcome: "noPermission" }), { state: "noPermission", how: "send" });
+  assert.deepEqual(outcomeOfDelivery({ outcome: "done", sent: 2 }), { state: "reachable", tokenChecked: true, how: "send" });
+  for (const result of [{ outcome: "nothing" }, { outcome: "offline" }, { outcome: "unconfigured" }, { outcome: "done", sent: 0 }]) {
+    assert.equal(outcomeOfDelivery(result), null, result.outcome);
+  }
+});
+
+function memoryArea(start = {}) {
+  const data = new Map(Object.entries(start));
+  return {
+    data,
+    async get(key) {
+      return data.has(key) ? { [key]: structuredClone(data.get(key)) } : {};
+    },
+    async set(items) {
+      for (const [key, value] of Object.entries(items)) {
+        data.set(key, structuredClone(value));
+      }
+    },
+  };
+}
+
+/** A Postulo answering each path as told (a status, or an Error for no answer), recording what was asked. */
+function postulo(answers) {
+  const calls = [];
+  const fetchImpl = async (url, init) => {
+    const path = new URL(url).pathname;
+    calls.push({ path, init });
+    const answer = answers[path];
+    if (answer instanceof Error) {
+      throw answer;
+    }
+    return new Response(JSON.stringify({ scopes: ["captures"] }), { status: answer, headers: { "Content-Type": "application/json" } });
+  };
+  return { calls, fetchImpl };
+}
+
+const yes = async () => true;
+const NOW = () => Date.parse("2026-10-04T12:00:00Z");
+
+test("nothing is asked in testing or when not set up, and an absent permission is itself the answer", async () => {
+  for (const settings of [{ ...SET, offline: true }, { ...SET, token: "" }, { ...SET, instance: "" }]) {
+    const area = memoryArea();
+    const { calls, fetchImpl } = postulo({});
+    assert.equal(await checkConnection({ area, settings, allowed: yes, fetchImpl, now: NOW }), null);
+    assert.equal(calls.length, 0);
+    assert.equal(area.data.size, 0);
+  }
+  const area = memoryArea();
+  const { calls, fetchImpl } = postulo({});
+  const kept = await checkConnection({ area, settings: SET, allowed: async () => false, fetchImpl, now: NOW });
+  assert.equal(kept.state, "noPermission");
+  assert.equal(calls.length, 0);
+});
+
+test("the check is /healthz, with no token and no cookies, once the token's state is known", async () => {
+  const area = memoryArea({ [CONNECTION]: record("unreachable") });
+  const { calls, fetchImpl } = postulo({ "/healthz": 200 });
+  const kept = await checkConnection({ area, settings: SET, allowed: yes, fetchImpl, now: NOW });
+  assert.deepEqual(calls.map((call) => call.path), ["/healthz"]);
+  assert.equal(calls[0].init.credentials, "omit");
+  assert.equal(JSON.stringify(calls[0].init.headers).toLowerCase().includes("authorization"), false);
+  assert.equal(kept.state, "reachable");
+  assert.equal(kept.how, "healthz");
+  assert.equal(kept.at, "2026-10-04T12:00:00.000Z");
+  assert.deepEqual(area.data.get(CONNECTION), kept);
+});
+
+test("a refused token stays refused until a real call or a new token says otherwise", async () => {
+  const area = memoryArea({ [CONNECTION]: record("tokenRefused") });
+  const { calls, fetchImpl } = postulo({ "/healthz": 200 });
+  const kept = await checkConnection({ area, settings: SET, allowed: yes, fetchImpl, now: NOW });
+  assert.equal(kept.state, "tokenRefused");
+  assert.equal(calls.length, 1);
+});
+
+test("a Postulo that does not answer, or answers 503, is unreachable", async () => {
+  for (const answer of [new TypeError("Failed to fetch"), 503, 502]) {
+    const area = memoryArea({ [CONNECTION]: record("reachable") });
+    const { fetchImpl } = postulo({ "/healthz": answer });
+    const kept = await checkConnection({ area, settings: SET, allowed: yes, fetchImpl, now: NOW });
+    assert.equal(kept.state, "unreachable", String(answer));
+    assert.equal(kept.tokenChecked, true, "the token was good when last tried and nothing says it is not");
+  }
+});
+
+test("with the token not yet known, /me says it, after /healthz", async () => {
+  const area = memoryArea();
+  const { calls, fetchImpl } = postulo({ "/healthz": 200, "/api/v1/me": 200 });
+  const kept = await checkConnection({ area, settings: SET, allowed: yes, fetchImpl, now: NOW });
+  assert.deepEqual(calls.map((call) => call.path), ["/healthz", "/api/v1/me"]);
+  assert.deepEqual([kept.state, kept.how, kept.tokenChecked], ["reachable", "me", true]);
+
+  const refused = memoryArea();
+  const second = postulo({ "/healthz": 200, "/api/v1/me": 401 });
+  assert.equal((await checkConnection({ area: refused, settings: SET, allowed: yes, fetchImpl: second.fetchImpl, now: NOW })).state, "tokenRefused");
+});
+
+test("a /healthz that is blocked on the way (4xx) falls back to /me", async () => {
+  const area = memoryArea({ [CONNECTION]: record("reachable") });
+  const { calls, fetchImpl } = postulo({ "/healthz": 403, "/api/v1/me": 200 });
+  const kept = await checkConnection({ area, settings: SET, allowed: yes, fetchImpl, now: NOW });
+  assert.deepEqual(calls.map((call) => call.path), ["/healthz", "/api/v1/me"]);
+  assert.equal(kept.state, "reachable");
+});
+
+test("a permission just given is checked with /me, not taken on trust", async () => {
+  const area = memoryArea({ [CONNECTION]: record("noPermission", { tokenChecked: false }) });
+  const { calls, fetchImpl } = postulo({ "/healthz": 200, "/api/v1/me": 200 });
+  await checkConnection({ area, settings: SET, allowed: yes, fetchImpl, now: NOW });
+  assert.equal(calls.length, 2);
+});
+
+test("what a call showed is kept with when and how; an unanswered call leaves the token's state alone", async () => {
+  const area = memoryArea();
+  await learn(area, { state: "reachable", tokenChecked: true, how: "send" }, NOW);
+  const after = await learn(area, { state: "unreachable", how: "send" }, NOW);
+  assert.deepEqual(after, { state: "unreachable", at: "2026-10-04T12:00:00.000Z", how: "send", tokenChecked: true });
+  assert.equal((await learn(area, { state: "noPermission", how: "permission" }, NOW)).tokenChecked, false);
+});

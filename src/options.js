@@ -2,7 +2,7 @@ import { normaliseInstance, originPattern, whoAmI } from "./lib/api.js";
 import { ext, loadSettings, requestHostPermission, saveSettings, setLanguage, setOffline } from "./lib/browser.js";
 import { explain, localise, localiseWith, t, useLanguage, useStoredLanguage } from "./lib/i18n.js";
 import { LANGUAGES } from "./lib/languages.js";
-import { log, store } from "./lib/local.js";
+import { learnFromCall, log, store } from "./lib/local.js";
 import { hostOf } from "./lib/log.js";
 
 const $ = (id) => document.getElementById(id);
@@ -119,7 +119,22 @@ async function main() {
       if (!granted) {
         throw new Error(t("addressRefused"));
       }
-      const me = await whoAmI(next.instance, next.token);
+      // What Test learns about the connection counts only when it asked the saved address
+      // with the saved token, not what is merely typed.
+      const saved = await loadSettings();
+      const saves = saved.instance === next.instance && saved.token === next.token;
+      let me;
+      try {
+        me = await whoAmI(next.instance, next.token);
+      } catch (error) {
+        if (saves) {
+          await learnFromCall("test", error);
+        }
+        throw error;
+      }
+      if (saves) {
+        await learnFromCall("test");
+      }
       const scopes = (me.scopes || []).join(", ");
       const canCapture = (me.scopes || []).includes("captures");
       await log.add("test", { postulo: hostOf(next.instance), scopes });

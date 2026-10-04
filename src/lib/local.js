@@ -7,6 +7,7 @@ import { explain, t, useStoredLanguage } from "./i18n.js";
 import { makeLog } from "./log.js";
 import { deliver } from "./outbox.js";
 import { makeStore } from "./store.js";
+import { CONNECTION, checkConnection, learn, outcomeOfDelivery, stateOfFailure, toolbarFor, toolbarTitle } from "./connection.js";
 import { badgeText, countPostings, lastWaiting, refreshWaiting, WAITING } from "./waiting.js";
 
 export const store = makeStore(ext.storage.local);
@@ -24,8 +25,10 @@ export async function deliverWaiting(only = null) {
     only,
     allowed: () => hasHostPermission(originPattern(settings.instance)),
   });
-  if (result.outcome !== "nothing") {
-    await ext.storage.local.set({ lastDelivery: { at: new Date().toISOString(), ...result } });
+  // What the delivery showed about Postulo is the connection state's to keep.
+  const shown = outcomeOfDelivery(result);
+  if (shown) {
+    await learn(ext.storage.local, shown);
   }
   // What was sent is waiting in Postulo now, so its list is read again at once and the
   // number does not dip in between.
@@ -69,9 +72,33 @@ export async function forgetWaitingList() {
   await readWaitingList();
 }
 
+/** Ask whether Postulo answers (see `checkConnection`); the icon follows the record. */
+export async function checkPostulo() {
+  const settings = await loadSettings();
+  return checkConnection({
+    area: ext.storage.local,
+    settings,
+    allowed: () => hasHostPermission(originPattern(settings.instance)),
+  });
+}
+
+/** Keep what a real call that carried the token showed: `error` is what it threw, or
+ *  nothing when it was answered. `how` names the call. */
+export function learnFromCall(how, error = null) {
+  const shown = error ? stateOfFailure(error) : { state: "reachable", tokenChecked: true };
+  return learn(ext.storage.local, { ...shown, how });
+}
+
+/** Forget what was learnt about the Postulo that was set up before. */
+export function forgetConnection() {
+  return ext.storage.local.remove(CONNECTION);
+}
+
 /** The number on the toolbar button: the postings waiting for review, in Postulo as last
- *  read and in this browser not yet sent, one for each address. */
+ *  read and in this browser not yet sent, one for each address. The icon is grey, and the
+ *  tooltip says why, while Postulo is not to be reached (see `toolbarFor`). */
 export async function showUnsentCount() {
+  await useStoredLanguage();
   const settings = await loadSettings();
   const count = countPostings(await lastWaiting(ext.storage.local, settings), await store.list());
   await ext.action.setBadgeText({ text: badgeText(count) });
@@ -81,7 +108,10 @@ export async function showUnsentCount() {
   if (ext.action.setBadgeTextColor) {
     await ext.action.setBadgeTextColor({ color: "#ffffff" });
   }
-  await ext.action.setTitle({ title: count ? t("waitingForReview", [String(count)]) : t("actionTitle") });
+  const toolbar = toolbarFor(settings, (await ext.storage.local.get(CONNECTION))[CONNECTION]);
+  const reason = toolbar.reason === "tokenRefused" ? t("tokenRefused", [t("tokenPath")]) : toolbar.reason && t(toolbar.reason);
+  await ext.action.setTitle({ title: toolbarTitle(reason, count ? t("waitingForReview", [String(count)]) : t("actionTitle")) });
+  await ext.action.setIcon({ path: toolbar.icons });
 }
 
 /** The sentences the browser keeps for the extension, in the language it speaks: the tooltip
@@ -90,7 +120,8 @@ export async function showUnsentCount() {
 export async function showLanguage() {
   await useStoredLanguage();
   try {
-    await ext.action.setTitle({ title: t("actionTitle") });
+    // The tooltip is the count's and the connection's to word (`showUnsentCount`), in this language.
+    await showUnsentCount();
     // Only Firefox on a computer can re-word a shortcut; elsewhere there is no such call.
     await ext.commands?.update?.({ name: "_execute_action", description: t("actionTitle") });
   } catch (error) {

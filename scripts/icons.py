@@ -16,6 +16,10 @@ Which sizes, and why:
 
 - **16 and 32** are the toolbar button. At that size the mark needs the whole square, as the
   core's favicons do.
+- **Grey 16 and 32** are the same two with the colour taken out and the weight eased, for
+  the toolbar button while Postulo cannot be reached or the testing switch is on. They are
+  made from the images just written, so they are the same pixels in both browsers and
+  readable on a light and a dark toolbar.
 - **48 and 96** are the browsers' extension pages; Firefox asks for 96 on a high-density
   screen, which is why it is here though Chromium never uses it.
 - **128** is the install dialog and the Chrome Web Store, whose guidelines ask for 96 pixels of
@@ -48,6 +52,21 @@ def core_recipe():
     return module
 
 
+#: how much of its opacity the grey button keeps
+GREY_OPACITY = 0.7
+
+
+GREY_SIZES = (16, 32)
+
+
+def greyed(image: Image.Image) -> Image.Image:
+    """The mark without its colour, a little more transparent."""
+    grey = image.convert("LA")
+    luminance, alpha = grey.split()
+    alpha = alpha.point(lambda value: round(value * GREY_OPACITY))
+    return Image.merge("LA", (luminance, alpha)).convert("RGBA")
+
+
 def main() -> None:
     brand = core_recipe()
     source = Image.open(brand.SOURCE).convert("RGBA")
@@ -56,6 +75,10 @@ def main() -> None:
         target = OUT / f"postulo-{size}.png"
         brand.rendered(source, size, padding, None).save(target, format="PNG", optimize=True)
         print(f"{target.relative_to(HERE)}  {size}px")
+        if size in GREY_SIZES:
+            grey = OUT / f"postulo-grey-{size}.png"
+            greyed(Image.open(target)).save(grey, format="PNG", optimize=True)
+            print(f"{grey.relative_to(HERE)}  {size}px")
     print(f"from {brand.SOURCE}  sha256 {brand.digest(brand.SOURCE.read_bytes())[:16]}")
 
 

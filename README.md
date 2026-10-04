@@ -99,6 +99,24 @@ cannot be reached or refuses the token leaves the number at what was last read, 
 what you have captured since. Not set up, with the testing switch on, or before the
 address is allowed, nothing is asked and only this browser's unsent captures count.
 
+## The colour of the toolbar button
+
+The button is grey, and its tooltip says why in words, while the extension has no Postulo to
+send to: not set up, the testing switch on, the address not yet allowed, the token refused
+(401 or 403), or Postulo not answering (nothing within 20 seconds, a network error, a 5xx,
+`/healthz` answering 503). It is in colour otherwise. Grey is not disabled: the popup still
+opens and capturing works, what you send waits in this browser. A busy Postulo (429) has
+answered and is reachable.
+
+What is known is one record in `storage.local` (`connection`: the state, when, and by what).
+It is written from the outcome of a send, of the popup's question about postings Postulo
+holds, and of *Test* when it tested the saved address and token; and between those, every
+five minutes, at start, and when the address, token, permission or testing switch changes,
+from `GET /healthz` (public, no token, no cookies). `GET /api/v1/me` is spent only when
+the token's state is not known yet, as after saving. Nothing is asked in the testing
+switch, when not set up, or without the permission. The image is set again at start, as the
+number is: browsers forget it on restart.
+
 ## Without a server
 
 Everything the extension keeps is listed under **Captures in this browser** — the link at
@@ -217,7 +235,8 @@ while the code asks for a key that `en` does not have.
 | `src/popup.*` | The button, the form showing what was read, *Send* and *Keep* |
 | `src/captures.*` | Captures in this browser: the list, to edit, send, hold back or delete |
 | `src/options.*` | Address, token, *Test*, *Save*; the language; the testing switch and the log |
-| `src/background.js` | Opens the settings on first install; sends what is waiting and reads Postulo's list of captures waiting for review, every five minutes and at start |
+| `src/background.js` | Opens the settings on first install; sends what is waiting, reads Postulo's list of captures waiting for review and asks whether Postulo answers, every five minutes and at start |
+| `src/lib/connection.js` | Whether Postulo answers, kept as one record; and the toolbar's image and tooltip from it and the settings |
 | `src/lib/waiting.js` | The toolbar number: reading Postulo's list, and counting postings once per address |
 | `src/lib/address.js` | What identifies a posting by its address: Postulo's `same_url()`, ported |
 | `src/lib/parse.js` | Reading a posting: Postulo's `schema.org` and `page-metadata` sources, carried over |
@@ -239,7 +258,7 @@ while the code asks for a key that `en` does not have.
 | `.forgejo/ISSUE_TEMPLATE/` | The bug and feature forms, and the links shown above them (security, translations) |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
 | `scripts/locales.mjs` | Which language folders are incomplete, so the build leaves them out |
-| `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, made by `scripts/icons.py` |
+| `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, and the grey 16 and 32 for the toolbar, made by `scripts/icons.py` |
 
 ```sh
 npm test               # the reader, the store and delivery, the API, and every language against en

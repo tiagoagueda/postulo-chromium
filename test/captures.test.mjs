@@ -34,7 +34,7 @@ test("deleting a capture leaves focus on a control of the next one", async () =>
   globalThis.chrome = {
     i18n: { getMessage: (key) => (key === "languageTag" ? "en" : key) },
     storage: { local: area, onChanged: { addListener: (listener) => listeners.push(listener) } },
-    action: { setBadgeText: async () => {}, setBadgeBackgroundColor: async () => {}, setTitle: async () => {} },
+    action: { setBadgeText: async () => {}, setBadgeBackgroundColor: async () => {}, setTitle: async () => {}, setIcon: async () => {} },
     runtime: { openOptionsPage() {} },
     permissions: { contains: async () => true, request: async () => true },
   };
