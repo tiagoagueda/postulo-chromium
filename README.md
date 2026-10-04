@@ -119,8 +119,19 @@ number is: browsers forget it on restart.
 
 ## Without a server
 
+Under the capture button the popup lists the postings that need review, newest first, as
+many as five: the ones the toolbar number counts, one row for each posting, standing for the
+newest capture in Postulo if there is one and else the newest kept here, and saying how many
+captures there are of it. Each row says in words where it waits (*Waiting for review in
+Postulo*, *Not sent*, *Waiting for Postulo* or *Refused*) and is one link: a capture in
+Postulo opens its review page in a tab, one kept here opens the list below. The list is drawn
+from the copy of Postulo's list kept in the browser, so it shows offline, and again when the
+read made on opening lands; while Postulo cannot be asked (the testing switch, no permission,
+unreachable, the token refused) it says when that copy was read, since a row may have been
+decided in the meantime. Without a Postulo set up it lists only what is kept here.
+
 Everything the extension keeps is listed under **Captures in this browser** — the link at
-the bottom of the popup, where the number is how many have not reached Postulo. Each is *Not sent*, *Waiting for Postulo*, *Sent* (with a
+the bottom of the popup. Each is *Not sent*, *Waiting for Postulo*, *Sent* (with a
 link to its review screen) or *Refused* (with Postulo's reason); from there you edit one,
 send it, hold it back, or delete it.
 
@@ -232,7 +243,7 @@ while the code asks for a key that `en` does not have.
 | Path | What |
 | --- | --- |
 | `src/manifest.json` | Manifest V3 for both browsers; the build strips what each one would complain about |
-| `src/popup.*` | The button, the form showing what was read, *Send* and *Keep* |
+| `src/popup.*` | The button, the list of postings needing review, the form showing what was read, *Send* and *Keep* |
 | `src/captures.*` | Captures in this browser: the list, to edit, send, hold back or delete |
 | `src/options.*` | Address, token, *Test*, *Save*; the language; the testing switch and the log |
 | `src/background.js` | Opens the settings on first install; sends what is waiting, reads Postulo's list of captures waiting for review and asks whether Postulo answers, every five minutes and at start |
@@ -244,6 +255,7 @@ while the code asks for a key that `en` does not have.
 | `src/lib/store.js` | The captures kept in the browser, and the page each was read from |
 | `src/lib/outbox.js` | Sending what is waiting, one delivery at a time |
 | `src/lib/log.js` | What the extension did, for the log download |
+| `src/lib/review.js` | The rows of that list: one per posting, newest first |
 | `src/lib/form.js` | The posting as a form, for the popup and the list alike |
 | `src/lib/local.js` | The store, the log and delivery over `storage.local`, as every page uses them |
 | `src/lib/api.js` | Talking to `/api/v1`: pure functions, tested with `node --test` |

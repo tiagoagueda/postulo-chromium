@@ -118,6 +118,16 @@ export async function refreshWaiting({ area, settings, allowed, fetchImpl = fetc
   }
 }
 
+/** The copy of Postulo's list as kept, `{at, rows}`, or null: none when Postulo is not set
+ *  up, and none after the address or token was changed and the old copy dropped. */
+export async function waitingCopy(area, settings) {
+  if (!settings.instance || !settings.token) {
+    return null;
+  }
+  const copy = (await area.get(WAITING))[WAITING];
+  return copy && Array.isArray(copy.rows) ? copy : null;
+}
+
 /** The copy of Postulo's list that counts: none when Postulo is not set up, and so none
  *  after the address or token was changed and the old copy dropped. */
 export async function lastWaiting(area, settings) {

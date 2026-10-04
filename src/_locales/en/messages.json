@@ -19,6 +19,36 @@
     "message": "Postulo cannot be reached: what you send waits in this browser until it answers.",
     "description": "The toolbar button's tooltip, first, while the icon is grey because Postulo does not answer; followed by the button's usual tooltip."
   },
+  "reviewHeading": {
+    "message": "Needs review",
+    "description": "Heading of the popup's list of postings captured and waiting for review, in Postulo or in this browser."
+  },
+  "waitingInPostulo": {
+    "message": "Waiting for review in Postulo",
+    "description": "A row of that list: the capture is in Postulo, waiting for review there."
+  },
+  "nothingWaiting": {
+    "message": "Nothing is waiting for review.",
+    "description": "Said in place of that list when it is empty."
+  },
+  "lastListed": {
+    "message": "As Postulo last listed them, on $WHEN$.",
+    "description": "Under that list's heading when Postulo cannot be asked now (testing switch, no permission, unreachable, token refused). WHEN is a date and time already written in the person's language.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Captures of this posting: $COUNT$",
+    "description": "A row of that list standing for several captures of one posting. COUNT is a number, two or more.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
   "waitingForReview": {
     "message": "Waiting for review: $COUNT$",
     "description": "The toolbar button's tooltip when postings are waiting for review in Postulo or in this browser. COUNT is a number.",

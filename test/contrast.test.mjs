@@ -33,11 +33,10 @@ function used(selector, property) {
 }
 
 for (const [name, t] of [["light", light], ["dark", dark]]) {
-  test(`${name}: button text, count, tag and field borders reach their ratios`, () => {
+  test(`${name}: button text, tag and field borders reach their ratios`, () => {
     const onBrand = used("button.primary, .button.primary", "color");
     assert.ok(ratio(t[onBrand], t.brand) >= 4.5, "primary button");
     assert.ok(ratio(t[onBrand], t["brand-dark"]) >= 4.5, "primary button on hover");
-    assert.ok(ratio(t[used(".count", "color")], t[used(".count", "background")]) >= 4.5, "count");
     assert.ok(ratio(t[used(".tag", "color")], t[used(".tag", "background")]) >= 4.5, "tag");
     assert.ok(ratio(t[used("input, select, textarea", "border")], t.paper) >= 3, "field border");
   });

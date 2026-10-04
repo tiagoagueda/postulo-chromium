@@ -308,6 +308,47 @@ button.link {
   color: var(--brand);
 }
 
+/* The captures that need review: each row one link, its state said in words. */
+.review-rows {
+  margin: 6px 0 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  list-style: none;
+}
+
+.review-rows li + li {
+  border-top: 1px solid var(--line);
+}
+
+.review-rows a {
+  display: block;
+  padding: 6px 9px;
+  color: var(--ink);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.review-rows a:hover,
+.review-rows a:focus-visible {
+  background: var(--line);
+}
+
+.review-rows .title,
+.review-rows .meta {
+  display: block;
+}
+
+.review-rows .title {
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.review-rows .meta {
+  font-size: 12px;
+}
+
 /* A page listing several postings: one line each, to tick (#177). */
 .pick {
   max-height: 260px;
@@ -351,18 +392,6 @@ button.link {
 .pick-all {
   margin: 0;
   font-size: 12px;
-}
-
-.count {
-  display: inline-block;
-  min-width: 1.5em;
-  padding: 0 5px;
-  border-radius: 999px;
-  background: var(--brand);
-  color: var(--on-brand);
-  font-size: 11px;
-  font-weight: 600;
-  text-align: center;
 }
 
 /* Settings: the switch and the log, apart from the address and the token. */

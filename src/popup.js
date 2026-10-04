@@ -4,10 +4,13 @@ import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermis
 import { postingForm } from "./lib/form.js";
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
 import { afterSending, deliverWaiting, learnFromCall, log, openCaptures, readWaitingList, showUnsentCount, store } from "./lib/local.js";
+import { CONNECTION, toolbarFor } from "./lib/connection.js";
 import { hostOf } from "./lib/log.js";
 import { emptyPosting, readPosting, readPostings, slimPage } from "./lib/parse.js";
 import { drawPage, encodePicture } from "./lib/picture.js";
 import { renderingOffer } from "./lib/rendering.js";
+import { reviewRows } from "./lib/review.js";
+import { waitingCopy } from "./lib/waiting.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -21,11 +24,14 @@ function show(section) {
   document.body.classList.toggle("wide", working);
   // And all the height a popup gets: the link to the list waits until it is done.
   $("captures-link").parentElement.hidden = working;
+  $("review-list").hidden = working || !reviewShown;
   // The notes about the connection too: what became of a capture is said once it is sent.
   for (const id of ["not-connected", "offline-on"]) {
     $(id).classList.toggle("folded", working);
   }
 }
+
+let reviewShown = false; // whether the list of captures needing review has anything to say
 
 function say(text, isError = false) {
   const status = $("status");
@@ -34,10 +40,51 @@ function say(text, isError = false) {
 }
 
 async function showCount() {
-  const count = await store.unsentCount();
-  $("unsent").textContent = String(count);
-  $("unsent").hidden = !count;
   await showUnsentCount();
+  await showReviewList();
+}
+
+/** The captures that need review, as the badge counts them: from the copy of Postulo's
+ *  list and the captures here, so offline too, and drawn again when a read lands. */
+async function showReviewList() {
+  const settings = await loadSettings();
+  const copy = await waitingCopy(ext.storage.local, settings);
+  const { rows, total } = reviewRows(copy ? copy.rows : [], await store.list());
+  const connection = (await ext.storage.local.get(CONNECTION))[CONNECTION];
+  const when = new Date(copy ? copy.at : 0);
+  // The last list Postulo gave stands in for it while it cannot be asked: a row may have
+  // been decided meanwhile, and this line is the only warning.
+  const stale = Boolean(copy) && toolbarFor(settings, connection).state !== "reachable";
+  $("review-stale").hidden = !stale;
+  $("review-stale").textContent = stale ? t("lastListed", [when.toLocaleString(t("languageTag"), { dateStyle: "long", timeStyle: "short" })]) : "";
+  $("review-empty").hidden = total > 0;
+  const day = (iso) => (Number.isFinite(Date.parse(iso)) ? new Date(iso).toLocaleDateString(t("languageTag")) : "");
+  // Only a web address is followed out of the popup; anything else Postulo's copy holds
+  // falls back to this extension's own list.
+  const web = (address) => /^https?:\/\//i.test(address || "");
+  $("review-rows").replaceChildren(
+    ...rows.map((row) => {
+      const where = [row.company_name, row.location].filter(Boolean).join(", ");
+      const state = row.kind === "postulo" ? t("waitingInPostulo") : { kept: t("stateKept"), waiting: t("stateWaiting"), refused: t("stateRefused") }[row.state];
+      const link = document.createElement("a");
+      // A row opens outside the popup: Postulo's review page, or this extension's list.
+      link.href = row.kind === "postulo" && web(row.link) ? row.link : ext.runtime.getURL("captures.html");
+      link.target = "_blank";
+      link.rel = "noopener";
+      const lines = [row.title || t("untitled"), [where, day(row.at)].filter(Boolean).join(" · "), state, row.count > 1 ? t("capturesOfPosting", [String(row.count)]) : ""];
+      lines.filter(Boolean).forEach((text, index) => {
+        const line = document.createElement("span");
+        line.className = index ? "meta" : "title";
+        line.textContent = text;
+        link.append(line);
+      });
+      const item = document.createElement("li");
+      item.append(link);
+      return item;
+    }),
+  );
+  reviewShown = true;
+  $("review-list").hidden = $("ready").hidden;
 }
 
 async function main() {
