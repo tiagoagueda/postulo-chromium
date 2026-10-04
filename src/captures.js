@@ -27,8 +27,8 @@ function element(tag, attributes = {}, ...children) {
   return made;
 }
 
-function button(label, onClick, primary = false) {
-  const made = element("button", { type: "button", className: primary ? "primary" : "" }, label);
+function button(label, onClick, primary = false, action = "") {
+  const made = element("button", { type: "button", className: primary ? "primary" : "", ...(action ? { "data-action": action } : {}) }, label);
   made.addEventListener("click", onClick);
   return made;
 }
@@ -95,7 +95,7 @@ function item(record, when) {
     .join(" · ");
   const li = element(
     "li",
-    { className: `capture state-${record.state}` },
+    { className: `capture state-${record.state}`, "data-id": record.id },
     element(
       "div",
       { className: "line" },
@@ -111,17 +111,17 @@ function item(record, when) {
     actions.append(element("a", { href: record.reviewUrl, target: "_blank", rel: "noopener", className: "button primary" }, t("review")));
   } else if (record.state === "waiting") {
     actions.append(
-      button(t("tryNow"), () => send([record.id]), true),
+      button(t("tryNow"), () => send([record.id]), true, "send"),
       button(t("holdBack"), async () => {
         await store.update(record.id, { state: "kept" });
         await log.add("held back", { id: record.id });
-      }),
+      }, false, "hold"),
     );
   } else {
-    actions.append(button(t("sendForReview"), () => send([record.id]), true));
+    actions.append(button(t("sendForReview"), () => send([record.id]), true, "send"));
   }
   if (record.state !== "sent") {
-    actions.append(button(t("edit"), () => openEditor(li, record)));
+    actions.append(button(t("edit"), () => openEditor(li, record), false, "edit"));
   }
   actions.append(
     button(t("delete"), async () => {
@@ -131,7 +131,7 @@ function item(record, when) {
       }
       await store.remove(record.id);
       await log.add("deleted", { id: record.id, state: record.state });
-    }),
+    }, false, "delete"),
   );
   li.append(actions);
   return li;
@@ -147,6 +147,8 @@ function openEditor(li, record) {
   const close = () => {
     editing = null;
     panel.remove();
+    // Save or Cancel went with the panel: put focus back on the item's Edit button.
+    li.querySelector('[data-action="edit"]')?.focus();
     if (redrawLater) {
       redrawLater = false;
       draw();
@@ -177,8 +179,9 @@ function openEditor(li, record) {
           close();
         },
         true,
+        "save",
       ),
-      button(t("cancel"), close),
+      button(t("cancel"), close, false, "cancel"),
     ),
   );
   li.append(panel);
@@ -192,7 +195,29 @@ async function draw() {
   }
   const records = await store.list();
   const when = new Intl.DateTimeFormat(t("languageTag"), { dateStyle: "medium", timeStyle: "short" });
-  $("list").replaceChildren(...records.map((record) => item(record, when)));
+  const list = $("list");
+  // A redraw replaces every item, and the focused button with it: note where focus was.
+  const focused = list.contains(document.activeElement) ? document.activeElement : null;
+  const focusedId = focused?.closest("[data-id]")?.dataset.id;
+  const focusedAction = focused?.dataset.action;
+  const before = [...list.children].map((li) => li.dataset.id);
+  list.replaceChildren(...records.map((record) => item(record, when)));
+  if (focusedId) {
+    const find = (id) => [...list.children].find((li) => li.dataset.id === id);
+    let target = find(focusedId)?.querySelector(`[data-action="${focusedAction}"]`);
+    if (!target) {
+      // The control or its item is gone: the next item still here, else the one before.
+      const at = before.indexOf(focusedId);
+      const near = [...before.slice(at + 1), ...before.slice(0, at).reverse()].map(find).find(Boolean);
+      target = (find(focusedId) || near)?.querySelector("button, a") || document.querySelector("h1");
+    }
+    if (target) {
+      if (target.tagName === "H1") {
+        target.tabIndex = -1;
+      }
+      target.focus();
+    }
+  }
   $("empty").hidden = records.length > 0;
   $("send-all").disabled = !records.some((record) => record.state === "kept" || record.state === "refused");
   $("clear-sent").disabled = !records.some((record) => record.state === "sent");
