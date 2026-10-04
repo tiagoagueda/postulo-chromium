@@ -56,7 +56,7 @@ export async function deliver({ store, log, settings, allowed, fetchImpl = fetch
         const result = await capture(
           settings.instance,
           settings.token,
-          { url: record.url, html: await store.page(record.id), data: record.data, batch: record.batch },
+          { url: withoutFragment(record.url), html: await store.page(record.id), data: record.data, batch: record.batch },
           fetchImpl,
         );
         await store.update(record.id, {
@@ -85,4 +85,10 @@ export async function deliver({ store, log, settings, allowed, fetchImpl = fetch
     await log.add("delivery", { outcome: "done", sent });
     return { outcome: "done", sent };
   });
+}
+
+/** The address as Postulo wants it: a fragment never identifies a posting, and can be very long. */
+function withoutFragment(url) {
+  const at = typeof url === "string" ? url.indexOf("#") : -1;
+  return at < 0 ? url : url.slice(0, at);
 }

@@ -708,6 +708,10 @@ export function tidy(posting) {
       tidied[field] = cut(value.trim(), LIMITS[field] ?? (field === "description" ? Infinity : MAX_FIELD));
     }
   }
+  // An address cut short leads nowhere, so one over its limit is left out instead.
+  if (typeof posting.url === "string" && posting.url.trim().length > (LIMITS.url ?? MAX_FIELD)) {
+    tidied.url = "";
+  }
   if (tidied.description.length > MAX_DESCRIPTION) {
     tidied.description = `${cut(tidied.description, MAX_DESCRIPTION).trimEnd()}\n\n[…truncated]`;
   }

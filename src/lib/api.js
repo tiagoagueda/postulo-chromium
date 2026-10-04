@@ -186,22 +186,33 @@ export async function capture(instance, token, { url, html, data, batch }, fetch
   return readResponse(response);
 }
 
+/** What Postulo's /captures/known takes: this many characters of a title or company, this many postings. */
+const KNOWN_TEXT = 250;
+const KNOWN_COMPANY = 250;
+const KNOWN_URL = 500;
+const KNOWN_POSTINGS = 100;
+
 /** POST /captures/known: what Postulo already holds for these postings -- a listing at the
  *  address however it was spelled, a capture of it still waiting, or a listing with the
  *  title at the company -- so the popup can say so before anything is sent (#178). One
  *  request for one posting or forty. Postulo stores nothing and refuses nothing on it. */
 export async function known(instance, token, postings, fetchImpl = fetch) {
   const asked = postings.map((posting) => ({
-    url: posting.url,
-    title: posting.title || "",
-    company: posting.company_name || "",
+    url: knownAddress(posting.url),
+    title: (posting.title || "").slice(0, KNOWN_TEXT),
+    company: (posting.company_name || "").slice(0, KNOWN_COMPANY),
   }));
-  const response = await request(fetchImpl, endpoint(instance, "/captures/known"), {
-    method: "POST",
-    headers: headers(token),
-    body: JSON.stringify({ postings: asked }),
-  });
-  return readResponse(response);
+  // Postulo takes at most KNOWN_POSTINGS in one question, so a longer page is asked in chunks.
+  const answers = [];
+  for (let from = 0; from < asked.length || from === 0; from += KNOWN_POSTINGS) {
+    const response = await request(fetchImpl, endpoint(instance, "/captures/known"), {
+      method: "POST",
+      headers: headers(token),
+      body: JSON.stringify({ postings: asked.slice(from, from + KNOWN_POSTINGS) }),
+    });
+    answers.push(...(await readResponse(response)));
+  }
+  return answers;
 }
 
 /** Whether a failure means "try again later" rather than "this will not do".
@@ -240,4 +251,10 @@ export function describe(result, untitled = "Untitled posting") {
     parts.push(where);
   }
   return parts.join(" — ");
+}
+
+/** An address as /captures/known takes it: without its fragment, and left out when still too long. */
+function knownAddress(url) {
+  const text = typeof url === "string" ? url.split("#")[0] : "";
+  return text.length > KNOWN_URL ? "" : text;
 }

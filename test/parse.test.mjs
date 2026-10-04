@@ -179,3 +179,9 @@ test("a page cut inside an emoji does not keep half of it", () => {
     assert.doesNotMatch(slim, LONE_SURROGATE);
   }
 });
+
+test("an address over the limit is left out, not cut to a prefix that leads nowhere", () => {
+  const long = `https://jobs.example/search?q=${"a".repeat(600)}`;
+  assert.equal(tidy({ title: "T", description: "", url: long }).url, "");
+  assert.equal(tidy({ title: "T", description: "", url: "https://jobs.example/1" }).url, "https://jobs.example/1");
+});

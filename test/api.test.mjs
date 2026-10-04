@@ -223,3 +223,23 @@ test("a capture carries what was reviewed, and nothing when there is nothing", a
     { url: "u", html: "h" },
   ]);
 });
+
+test("asking what is known keeps within the server's limits", async () => {
+  const { known } = await import("../src/lib/api.js");
+  const bodies = [];
+  const postings = Array.from({ length: 150 }, (_, i) => ({ url: `https://jobs.example/${i}`, title: "t".repeat(400), company_name: "c".repeat(400) }));
+  const answers = await known("https://postulo.example.org", "tok", postings, async (url, init) => {
+    const body = JSON.parse(init.body);
+    bodies.push(body);
+    return fakeResponse(200, body.postings.map((posting) => ({ url: posting.url, listings: [], captures: [], similar: [] })));
+  });
+  assert.deepEqual(bodies.map((body) => body.postings.length), [100, 50]);
+  assert.ok(bodies.every((body) => body.postings.every((p) => p.title.length <= 250 && p.company.length <= 250)));
+  assert.equal(answers.length, 150);
+  const sent = [];
+  await known("https://postulo.example.org", "tok", [{ url: `https://j.example/1#${"f".repeat(600)}` }, { url: `https://j.example/${"a".repeat(600)}` }], async (url, init) => {
+    sent.push(...JSON.parse(init.body).postings.map((p) => p.url));
+    return fakeResponse(200, [{}, {}]);
+  });
+  assert.deepEqual(sent, ["https://j.example/1", ""]);
+});

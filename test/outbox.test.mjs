@@ -315,3 +315,12 @@ test("the log keeps the latest thousand entries", async () => {
   assert.equal(entries.length, 1000);
   assert.equal(entries[0].i, 5);
 });
+
+test("a capture is sent without the fragment of its address", async () => {
+  const { store, log } = setUp();
+  const address = `https://jobs.example/search?q=x#${"f".repeat(600)}`;
+  await store.add({ url: address, html: "<title>x</title>", source: "schema.org", read: POSTING("x"), data: POSTING("x"), state: "waiting" });
+  const { calls, fetchImpl } = answering({ status: 201, body: { id: 1, review_url: "https://postulo.example.org/r/1" } });
+  await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+  assert.equal(calls[0].body.url, "https://jobs.example/search?q=x");
+});
