@@ -1,5 +1,6 @@
+import { askAndKeep } from "./lib/allow.js";
 import { originPattern } from "./lib/api.js";
-import { ext, hasHostPermission, loadSettings, requestHostPermission } from "./lib/browser.js";
+import { ext, loadSettings, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
 import { explain, localise, t } from "./lib/i18n.js";
 import { afterSending, deliverWaiting, log, showUnsentCount, store } from "./lib/local.js";
@@ -36,23 +37,39 @@ let settings = null;
 let editing = null; // the id whose editor is open: a redraw waits for it to close
 let redrawLater = false;
 
-/** Ask for the instance's origin from this click, if sending needs it and it is missing. */
-async function allowFromClick() {
+/** The permission request for the click, or null when sending needs none. */
+function allowFromClick() {
   if (!settings.instance || !settings.token || settings.offline) {
-    return;
+    return null;
   }
-  const pattern = originPattern(settings.instance);
-  if (!(await hasHostPermission(pattern))) {
-    await requestHostPermission(pattern);
+  return () => {
+    say(t("allowing"));
+    return requestHostPermission(originPattern(settings.instance));
+  };
+}
+
+/** `ids` is a list, or a function giving the list: it is read after the request has started,
+ *  because nothing may be awaited before that. */
+async function send(ids) {
+  try {
+    // The request starts from the click, and the records are marked in the same tick.
+    ids = await askAndKeep(allowFromClick(), async () => {
+      const list = typeof ids === "function" ? await ids() : ids;
+      for (const id of list) {
+        await store.update(id, { state: "waiting", problem: null });
+        await log.add("to send", { id });
+      }
+      return list;
+    });
+    if (ids.length) {
+      await deliverAndSay(ids);
+    }
+  } catch (error) {
+    say(explain(error), true);
   }
 }
 
-async function send(ids) {
-  await allowFromClick();
-  for (const id of ids) {
-    await store.update(id, { state: "waiting", problem: null });
-    await log.add("to send", { id });
-  }
+async function deliverAndSay(ids) {
   say(t("sending"));
   const result = await deliverWaiting(ids);
   const records = await Promise.all(ids.map((id) => store.get(id)));
@@ -189,10 +206,9 @@ async function main() {
   $("open-options").addEventListener("click", () => ext.runtime.openOptionsPage());
 
   $("send-all").addEventListener("click", async () => {
-    const ids = (await store.list()).filter((record) => record.state === "kept" || record.state === "refused").map((record) => record.id);
-    if (ids.length) {
-      await send(ids);
-    }
+    await send(async () =>
+      (await store.list()).filter((record) => record.state === "kept" || record.state === "refused").map((record) => record.id),
+    );
   });
   $("clear-sent").addEventListener("click", async () => {
     for (const record of await store.list()) {

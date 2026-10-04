@@ -1,4 +1,5 @@
 import { describe, known, originPattern } from "./lib/api.js";
+import { askAndKeep } from "./lib/allow.js";
 import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
 import { explain, localise, t } from "./lib/i18n.js";
@@ -140,6 +141,18 @@ async function main() {
     say(t("kept"));
   });
 
+  /** The permission request for the click handlers, or null when sending needs none.
+   *  Requesting an origin already granted resolves true without a prompt. */
+  function askFor() {
+    if (!connected || settings.offline) {
+      return null;
+    }
+    return () => {
+      say(t("allowing"));
+      return requestHostPermission(originPattern(settings.instance));
+    };
+  }
+
   $("send").addEventListener("click", async () => {
     if (!editor.form.reportValidity()) {
       return;
@@ -147,15 +160,9 @@ async function main() {
     const button = $("send");
     button.disabled = true;
     try {
-      // Asked for here, from the click, while the browser still counts it as one.
-      if (connected && !settings.offline) {
-        const pattern = originPattern(settings.instance);
-        if (!(await hasHostPermission(pattern))) {
-          say(t("allowing"));
-          await requestHostPermission(pattern);
-        }
-      }
-      const record = await save("waiting");
+      // Asked for here, from the click, while the browser still counts it as one; the
+      // capture is kept in the same tick, so a refused prompt does not cost it.
+      const record = await askAndKeep(askFor(), () => save("waiting"));
       say(t("sending"));
       const result = await deliverWaiting([record.id]);
       current = await store.get(record.id);
@@ -324,14 +331,7 @@ async function main() {
     const button = $("send-picked");
     button.disabled = true;
     try {
-      if (connected && !settings.offline) {
-        const pattern = originPattern(settings.instance);
-        if (!(await hasHostPermission(pattern))) {
-          say(t("allowing"));
-          await requestHostPermission(pattern);
-        }
-      }
-      const records = await savePicked("waiting");
+      const records = await askAndKeep(askFor(), () => savePicked("waiting"));
       if (!records.length) {
         button.disabled = false;
         return;
