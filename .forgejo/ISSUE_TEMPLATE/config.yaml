@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security problem (do not file it here)
+    url: https://source.tiagoagueda.com/postulo/postulo/src/branch/main/SECURITY.md
+    about: A vulnerability is reported privately, never as a public issue. SECURITY.md says how.
+  - name: Wrong or missing translation
+    url: https://translate.tiagoagueda.com/projects/postulo/
+    about: Correct a word in Weblate rather than reporting it here.

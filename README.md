@@ -163,6 +163,7 @@ while the code asks for a key that `en` does not have.
 | `src/lib/browser.js` | `browser ?? chrome`, settings, permissions, reading the active tab |
 | `src/lib/i18n.js` | Fills the pages from `_locales` in the browser's language |
 | `src/_locales/` | One `messages.json` per language; `en` is the source |
+| `.forgejo/ISSUE_TEMPLATE/` | The bug and feature forms, and the links shown above them (security, translations) |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
 | `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, made by `scripts/icons.py` |
 

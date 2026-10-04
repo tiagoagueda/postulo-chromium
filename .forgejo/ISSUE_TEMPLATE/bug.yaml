@@ -1,0 +1,74 @@
+name: Bug report
+about: Something in the extension does not work, or a posting was read wrongly.
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Remove personal details before you paste anything.** Postulo holds CVs, home
+        addresses and the names of the people somebody is applying to. Logs and
+        screenshots are where they leak. Blank them out first.
+
+        A **security problem is not a bug report**: do not post it here. Follow the
+        link above, "Security problem".
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: Shown on the browser's extensions page.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and its version
+      description: For example Chrome 130, Edge 130, Firefox 140.
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+    validations:
+      required: true
+  - type: input
+    id: postulo-version
+    attributes:
+      label: Postulo version it sends to
+      description: Shown in Postulo's footer or on its about page.
+    validations:
+      required: true
+  - type: input
+    id: job-board
+    attributes:
+      label: Which job board or kind of page
+      description: The name of the site is enough. Please do not paste the address; a posting's address can say where somebody is applying.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you did, step by step
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: If a posting was read wrongly, say which fields came out wrong (title, company, location, description, and so on).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: If a posting was read wrongly, what each wrong field should have said. Text copied from the posting is better than a screenshot of the whole page.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error messages (personal details removed)
+      description: From the extension's console, if there is anything. Leave empty if not.
+      render: text

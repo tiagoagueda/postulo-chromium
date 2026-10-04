@@ -1,0 +1,39 @@
+name: Feature request
+about: Ask for something the extension does not do yet.
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **security problem is not a feature request**: do not post it here. Follow
+        the link above, "Security problem".
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem, and who has it
+      description: Describe what is hard or impossible today before you describe a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you propose
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What else you considered
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Whose job is it?
+      description: If the core has to change too (what the capture API accepts, how a page is read on the server), it gets an issue of its own.
+      options:
+        - The extension's
+        - The core's (postulo/postulo)
+        - Both
+        - Not sure
+    validations:
+      required: true
