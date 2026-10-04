@@ -140,6 +140,28 @@ the tag names the catalogue that is served.
 English is the source. The other translations are drafts that no native speaker has
 reviewed yet, as are the core's own new strings until one does.
 
+### Translating
+
+Translate in Weblate, in the `postulo` project at <https://translate.tiagoagueda.com/projects/postulo/>,
+in the component for this extension; nobody has to export or send a file. A sentence added
+to `src/_locales/en/messages.json` appears there, with its `description` as the context, and
+a translation saved there comes back as a commit that CI runs (`npm test`) before it reaches
+`main`.
+
+The component is set up as: file format *WebExtension JSON*; file mask
+`src/_locales/*/messages.json`; template and source `src/_locales/en/messages.json`;
+language code style *Chrome* or *Android* style so folders read `pt_PT`, not `pt-PT` (Serbian
+is the exception, `sr` for `sr-Cyrl`; the repository's `languageTag` message carries the tag).
+
+Complete or absent: `npm test` demands every key in every shipped language, so a language
+that arrives half translated fails CI and is not merged until it is complete, and
+`npm run build` leaves any incomplete folder out of the package with a warning. Which
+languages ship at all is the core's list (#10).
+
+Drafts: the JSON format has no flag for a machine translation nobody has read. Weblate's
+own review state is the record: a string is a draft until a speaker marks it *Approved*
+there. Everything here except English counts as a draft, as stated above.
+
 To add or change a sentence, change `en` first, then every other language: `npm test`
 fails while any language lacks a key or has different placeholders from English, and
 while the code asks for a key that `en` does not have.
@@ -165,6 +187,7 @@ while the code asks for a key that `en` does not have.
 | `src/_locales/` | One `messages.json` per language; `en` is the source |
 | `.forgejo/ISSUE_TEMPLATE/` | The bug and feature forms, and the links shown above them (security, translations) |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
+| `scripts/locales.mjs` | Which language folders are incomplete, so the build leaves them out |
 | `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, made by `scripts/icons.py` |
 
 ```sh

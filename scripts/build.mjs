@@ -11,10 +11,14 @@
 
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { incompleteLocales } from "./locales.mjs";
 
 const SOURCE = "src";
 const DIST = "dist";
 const targets = process.argv.slice(2).length ? process.argv.slice(2) : ["chromium", "firefox"];
+
+const incomplete = incompleteLocales(join(SOURCE, "_locales"));
+for (const folder of incomplete) console.warn(`Leaving out ${folder}: its catalogue is not complete.`);
 
 const manifest = JSON.parse(readFileSync(join(SOURCE, "manifest.json"), "utf8"));
 
@@ -36,6 +40,7 @@ for (const target of targets) {
   rmSync(out, { recursive: true, force: true });
   mkdirSync(out, { recursive: true });
   cpSync(SOURCE, out, { recursive: true });
+  for (const folder of incomplete) rmSync(join(out, "_locales", folder), { recursive: true, force: true });
   writeFileSync(join(out, "manifest.json"), JSON.stringify(manifestFor(target), null, 2) + "\n");
   console.log(`${target}: ${out}`);
 }
