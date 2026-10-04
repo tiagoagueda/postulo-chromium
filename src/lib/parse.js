@@ -18,6 +18,8 @@
 // browser's DOMParser or from jsdom in the tests; nothing reaches for a global.
 
 import { recipeFor } from "./boards.js";
+import { closingDate, pageLanguage, salary as pageSalary, tagOf } from "./patterns.js";
+import { readTitles } from "./titles.js";
 
 /** schema.org employmentType values mapped onto Postulo's own. */
 const EMPLOYMENT_TYPES = {
@@ -694,19 +696,60 @@ function schemaOrg(doc, url, parse) {
   return inMarkup ? fromPosting(inMarkup, url, parse, false) : null;
 }
 
+/** A Twitter card's label-and-value pairs, as the lines a reader would have seen: "Salary:
+ *  £45,000" is read by the same words as a line of the page. */
+function cardLines(meta) {
+  const lines = [];
+  for (let number = 1; number <= 4; number++) {
+    const label = (meta[`twitter:label${number}`] || "").trim();
+    const value = (meta[`twitter:data${number}`] || "").trim();
+    if (label && value) {
+      lines.push(`${label}: ${value}`);
+    }
+  }
+  return lines;
+}
+
 function pageMetadata(doc, url) {
   const meta = metadata(doc);
-  // The page's own heading first, then what it declares for a link to read. Both are the
-  // page talking about itself; the heading is the one written for a person reading it.
-  const title = headingTitle(doc) || meta["og:title"] || meta["twitter:title"] || meta.title || "";
-  if (!title.trim()) {
+  const siteName = (meta["og:site_name"] || "").trim();
+  let host = "";
+  try {
+    host = new URL(url).hostname;
+  } catch {
+    host = "";
+  }
+  // The page's own heading first, then what it declares for a link to read, in the order
+  // they are trusted. All of it is the page talking about itself; the heading is the one
+  // written for a person, and a declared line is split only where something else on the
+  // page vouches for a part (titles.js).
+  const read = readTitles({
+    declared: [meta["og:title"] || "", meta["twitter:title"] || "", meta.title || ""],
+    heading: headingTitle(doc),
+    siteName,
+    host,
+  });
+  if (!read.title.trim()) {
     return null;
   }
+  // The pay and the closing date, in the page's language, from the advert's text and the
+  // pairs a Twitter card may carry.
+  const description = mainText(doc);
+  const language = tagOf(pageLanguage(doc));
+  const stated = [description, ...cardLines(meta)].join("\n");
+  const pay = pageSalary(stated, language);
   return {
     ...emptyPosting(url),
-    title: cut(title, MAX_FIELD),
-    company_name: cut(meta["og:site_name"] || "", MAX_FIELD),
-    description: mainText(doc),
+    title: cut(read.title, MAX_FIELD),
+    // Who is hiring, where the title says so; else what the site calls itself, which is
+    // the employer on its own careers site and the board on a board.
+    company_name: cut(read.company || siteName, MAX_FIELD),
+    description,
+    salary_min: pay.low,
+    salary_max: pay.high,
+    salary_currency: pay.currency,
+    salary_period: pay.period,
+    closes_at: closingDate(stated, language),
   };
 }
 

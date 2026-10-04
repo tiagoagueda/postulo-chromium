@@ -176,6 +176,7 @@ while the code asks for a key that `en` does not have.
 | `src/options.*` | Address, token, *Test*, *Save*; the testing switch and the log |
 | `src/background.js` | Opens the settings on first install; sends what is waiting, every five minutes and at start |
 | `src/lib/parse.js` | Reading a posting: Postulo's `schema.org` and `page-metadata` sources, carried over |
+| `src/lib/titles.js`, `src/lib/patterns.js` | What `page-metadata` reads from a title line (job, employer) and from the text (salary, closing date), as Postulo's `titles.py` and `patterns.py` do |
 | `src/lib/store.js` | The captures kept in the browser, and the page each was read from |
 | `src/lib/outbox.js` | Sending what is waiting, one delivery at a time |
 | `src/lib/log.js` | What the extension did, for the log download |
