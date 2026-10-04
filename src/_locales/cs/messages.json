@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Otevřít v Postulu"
+  },
+  "notPostulo": {
+    "message": "Tato adresa odpověděla, ale ne jako Postulo. Zkontrolujte adresu a případnou přihlašovací stránku před ní."
+  },
+  "storageFull": {
+    "message": "Úložiště tohoto prohlížeče pro Postulo je plné. Odešlete nebo smažte některé zachycené položky a zkuste to znovu."
   }
 }

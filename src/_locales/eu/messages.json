@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Ireki Postulon"
+  },
+  "notPostulo": {
+    "message": "Helbide horrek erantzun du, baina ez Postulo gisa. Egiaztatu helbidea eta haren aurrean dagoen saio-hasierako orriren bat."
+  },
+  "storageFull": {
+    "message": "Nabigatzaile honek Postulorako duen biltegiratzea beteta dago. Bidali edo ezabatu harrapaketa batzuk eta saiatu berriro."
   }
 }

@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Ei agor yn Postulo"
+  },
+  "notPostulo": {
+    "message": "Atebodd y cyfeiriad hwnnw, ond nid fel Postulo. Gwiriwch y cyfeiriad, ac unrhyw dudalen mewngofnodi o'i flaen."
+  },
+  "storageFull": {
+    "message": "Mae storfa'r porwr hwn ar gyfer Postulo yn llawn. Anfonwch neu dilëwch rai dalfeydd, yna rhowch gynnig arall arni."
   }
 }

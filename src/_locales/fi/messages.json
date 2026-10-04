@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Avaa Postulossa"
+  },
+  "notPostulo": {
+    "message": "Osoite vastasi, mutta ei Postulona. Tarkista osoite ja mahdollinen sen edessä oleva kirjautumissivu."
+  },
+  "storageFull": {
+    "message": "Tämän selaimen Postulo-tallennustila on täynnä. Lähetä tai poista joitakin kaappauksia ja yritä sitten uudelleen."
   }
 }

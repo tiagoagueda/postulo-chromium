@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Otvori u Postulu"
+  },
+  "notPostulo": {
+    "message": "Ta adresa je odgovorila, ali ne kao Postulo. Provjerite adresu i eventualnu stranicu za prijavu ispred nje."
+  },
+  "storageFull": {
+    "message": "Pohrana ovog preglednika za Postulo je puna. Pošaljite ili izbrišite neka snimanja, pa pokušajte ponovo."
   }
 }

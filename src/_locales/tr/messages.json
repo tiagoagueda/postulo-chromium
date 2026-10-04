@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Postulo'da aç"
+  },
+  "notPostulo": {
+    "message": "Bu adres yanıt verdi, ancak Postulo olarak değil. Adresi ve önündeki oturum açma sayfasını varsa kontrol edin."
+  },
+  "storageFull": {
+    "message": "Bu tarayıcının Postulo için ayırdığı depolama alanı dolu. Bazı yakalamaları gönderin veya silin, ardından tekrar deneyin."
   }
 }

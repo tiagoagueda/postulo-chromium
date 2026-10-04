@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Megnyitás a Postulóban"
+  },
+  "notPostulo": {
+    "message": "Ez a cím válaszolt, de nem Postuloként. Ellenőrizze a címet, és az előtte álló bejelentkezési oldalt is."
+  },
+  "storageFull": {
+    "message": "A böngésző Postulóhoz tartozó tárhelye megtelt. Küldjön el vagy törölzön néhány rögzítést, majd próbálja újra."
   }
 }

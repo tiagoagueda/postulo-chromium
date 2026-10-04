@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Deschide în Postulo"
+  },
+  "notPostulo": {
+    "message": "Adresa aceea a răspuns, dar nu ca un Postulo. Verifică adresa și orice pagină de autentificare aflată în fața ei."
+  },
+  "storageFull": {
+    "message": "Spațiul de stocare al acestui browser pentru Postulo este plin. Trimite sau șterge câteva capturi, apoi încearcă din nou."
   }
 }

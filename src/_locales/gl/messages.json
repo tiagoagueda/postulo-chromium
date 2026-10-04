@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Abrir no Postulo"
+  },
+  "notPostulo": {
+    "message": "Ese enderezo respondeu, pero non como Postulo. Comproba o enderezo e calquera páxina de inicio de sesión que haxa diante."
+  },
+  "storageFull": {
+    "message": "O almacenamento deste navegador para Postulo está cheo. Envía ou elimina algunhas capturas e téntao de novo."
   }
 }

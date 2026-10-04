@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Ava Postulos"
+  },
+  "notPostulo": {
+    "message": "See aadress vastas, kuid mitte Postulona. Kontrollige aadressi ja selle ees olevat sisselogimislehte."
+  },
+  "storageFull": {
+    "message": "Selle brauseri Postulo salvestusruum on täis. Saatke või kustutage mõned püütud kirjed ja proovige siis uuesti."
   }
 }

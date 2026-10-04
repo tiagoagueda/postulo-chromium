@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Öppna i Postulo"
+  },
+  "notPostulo": {
+    "message": "Adressen svarade, men inte som Postulo. Kontrollera adressen och eventuell inloggningssida framför den."
+  },
+  "storageFull": {
+    "message": "Webbläsarens lagringsutrymme för Postulo är fullt. Skicka eller ta bort några fångster och försök igen."
   }
 }

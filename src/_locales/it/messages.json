@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Aprila in Postulo"
+  },
+  "notPostulo": {
+    "message": "Quell'indirizzo ha risposto, ma non come Postulo. Controlla l'indirizzo ed eventuali pagine di accesso davanti a esso."
+  },
+  "storageFull": {
+    "message": "Lo spazio di archiviazione di questo browser per Postulo è pieno. Invia o elimina alcune acquisizioni, poi riprova."
   }
 }

@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Atidaryti Postulo"
+  },
+  "notPostulo": {
+    "message": "Tas adresas atsakė, bet ne kaip Postulo. Patikrinkite adresą ir bet kokį prisijungimo puslapį prieš jį."
+  },
+  "storageFull": {
+    "message": "Šios naršyklės saugykla Postulo yra pilna. Išsiųskite arba ištrinkite kelis užfiksuotus įrašus ir bandykite dar kartą."
   }
 }

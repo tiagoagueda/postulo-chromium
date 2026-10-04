@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Am Postulo opmaachen"
+  },
+  "notPostulo": {
+    "message": "Dës Adress huet geäntwert, awer net als Postulo. Kontrolléiert d'Adress an eventuell Umeldesäiten doran."
+  },
+  "storageFull": {
+    "message": "D'Späicherplaz vun dësem Browser fir Postulo ass voll. Schéckt oder läscht e puer Erfaassungen a probéiert dann nach eng Kéier."
   }
 }

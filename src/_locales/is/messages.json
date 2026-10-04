@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Opna í Postulo"
+  },
+  "notPostulo": {
+    "message": "Þetta heimilisfang svaraði, en ekki sem Postulo. Athugaðu heimilisfangið og hvort innskráningarsíða standi fyrir framan það."
+  },
+  "storageFull": {
+    "message": "Geymslupláss þessa vafra fyrir Postulo er fullt. Sendu eða eyddu nokkrum föngum og reyndu svo aftur."
   }
 }

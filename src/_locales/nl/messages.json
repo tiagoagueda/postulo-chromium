@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Openen in Postulo"
+  },
+  "notPostulo": {
+    "message": "Dat adres antwoordde, maar niet als Postulo. Controleer het adres en eventuele inlogpagina's ervoor."
+  },
+  "storageFull": {
+    "message": "De opslag van deze browser voor Postulo is vol. Verstuur of verwijder enkele vastleggingen en probeer het opnieuw."
   }
 }

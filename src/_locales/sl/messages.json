@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Odpri v Postulu"
+  },
+  "notPostulo": {
+    "message": "Ta naslov se je odzval, vendar ne kot Postulo. Preverite naslov in morebitno prijavno stran pred njim."
+  },
+  "storageFull": {
+    "message": "Shramba tega brskalnika za Postulo je polna. Pošljite ali izbrišite nekaj zajemov in poskusite znova."
   }
 }

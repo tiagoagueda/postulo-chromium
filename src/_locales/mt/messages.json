@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Iftaħ f'Postulo"
+  },
+  "notPostulo": {
+    "message": "Dak l-indirizz wieġeb, iżda mhux bħala Postulo. Iċċekkja l-indirizz, u kwalunkwe paġna tal-illoggjar quddiemu."
+  },
+  "storageFull": {
+    "message": "L-ispazju ta' dan il-brawżer għal Postulo mimli. Ibgħat jew ħassar xi qbid, imbagħad erġa' pprova."
   }
 }

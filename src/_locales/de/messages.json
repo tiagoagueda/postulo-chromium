@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "In Postulo öffnen"
+  },
+  "notPostulo": {
+    "message": "Diese Adresse hat geantwortet, aber nicht als Postulo. Prüfen Sie die Adresse und jede Anmeldeseite, die davor liegt."
+  },
+  "storageFull": {
+    "message": "Der Speicher dieses Browsers für Postulo ist voll. Senden oder löschen Sie einige Erfassungen und versuchen Sie es dann erneut."
   }
 }

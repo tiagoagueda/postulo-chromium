@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Hape në Postulo"
+  },
+  "notPostulo": {
+    "message": "Ajo adresë u përgjigj, por jo si Postulo. Kontrolloni adresën dhe çdo faqe hyrjeje që gjendet përpara saj."
+  },
+  "storageFull": {
+    "message": "Hapësira ruajtëse e këtij shfletuesi për Postulo është plot. Dërgoni ose fshini disa kapje dhe provoni përsëri."
   }
 }

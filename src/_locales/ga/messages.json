@@ -433,5 +433,11 @@
   },
   "knownOpen": {
     "message": "Oscail in Postulo"
+  },
+  "notPostulo": {
+    "message": "D'fhreagair an seoladh sin, ach ní mar Postulo. Seiceáil an seoladh, agus aon leathanach síniúcháin atá os a chomhair."
+  },
+  "storageFull": {
+    "message": "Tá stór an bhrabhsálaí seo do Postulo lán. Seol nó scrios roinnt gabhálacha, ansin bain triail eile as."
   }
 }
