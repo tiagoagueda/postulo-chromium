@@ -174,7 +174,12 @@ function openEditor(li, record) {
           }
           // Changed after a refusal, it is kept again, to be sent when the person says.
           const state = latest.state === "refused" ? "kept" : latest.state;
-          await store.update(record.id, { data: editor.values(latest.data), state, problem: state === "kept" ? null : latest.problem });
+          try {
+            await store.update(record.id, { data: editor.values(latest.data), state, problem: state === "kept" ? null : latest.problem });
+          } catch (error) {
+            say(explain(error), true);
+            return;
+          }
           await log.add("edited", { id: record.id });
           close();
         },

@@ -22,7 +22,7 @@ It keeps:
 - **Your captures**: for each, the posting's address, the fields that were read and the
   fields as you corrected them, which source read it, when, and where it stands — kept,
   waiting, sent or refused, with Postulo's reason when it refused.
-- **A slimmed copy of each captured page**, at most 512 KB, kept only until Postulo has the
+- **A slimmed copy of each captured page**, at most 512 thousand characters, kept only until Postulo has the
   capture and deleted the moment it does. Scripts, styles, stylesheet links, frames and
   inline graphics are stripped before it is stored.
 - **A log** of what the extension did — the time, the event, a capture's id, a page's host

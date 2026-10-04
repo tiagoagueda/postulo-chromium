@@ -135,7 +135,13 @@ async function main() {
     if (!editor.form.reportValidity()) {
       return;
     }
-    const record = await save("kept");
+    let record;
+    try {
+      record = await save("kept");
+    } catch (error) {
+      say(explain(error), true);
+      return;
+    }
     $("summary").textContent = describe(record.data, t("untitled"));
     show("result");
     say(t("kept"));
@@ -318,7 +324,13 @@ async function main() {
   }
 
   $("keep-picked").addEventListener("click", async () => {
-    const records = await savePicked("kept");
+    let records;
+    try {
+      records = await savePicked("kept");
+    } catch (error) {
+      say(explain(error), true);
+      return;
+    }
     if (!records.length) {
       return;
     }

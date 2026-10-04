@@ -350,3 +350,12 @@ test("a delivery answered 200 with a page that is not JSON leaves the capture wa
   assert.equal(kept.state, "waiting");
   assert.deepEqual(kept.problem, { key: "notPostulo", substitutions: [] });
 });
+
+test("a full storage quota reaches the caller as a message that can be translated", async () => {
+  const { area, store } = setUp();
+  area.set = async () => {
+    throw new Error("QuotaExceededError: Resource::kQuotaBytes quota exceeded");
+  };
+  await assert.rejects(store.add({ url: "https://x.test/1", html: "<p>", source: "s", read: {}, data: {} }), { key: "storageFull" });
+  await assert.rejects(store.addMany({ html: "<p>", entries: [{ url: "u", source: "s", read: {}, data: {} }] }), { key: "storageFull" });
+});

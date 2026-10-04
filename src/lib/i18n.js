@@ -59,5 +59,8 @@ export function explain(error) {
     );
     return t(error.key, substitutions);
   }
+  if (error && /quota/i.test(error.message || "")) {
+    return t("storageFull");
+  }
   return (error && error.message) || String(error);
 }

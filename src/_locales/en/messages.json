@@ -247,6 +247,10 @@
     "message": "Kept in this browser. Send it to Postulo whenever you are ready.",
     "description": "Status after Keep in this browser."
   },
+  "storageFull": {
+    "message": "This browser's storage for Postulo is full. Send or delete some captures, then try again.",
+    "description": "Shown when keeping or saving a capture is refused because the browser's storage quota is used up."
+  },
   "alreadyKept": {
     "message": "You kept this page already and have not sent it: this is your version.",
     "description": "Above the form when the page was captured before and not sent; the form shows the earlier edits."

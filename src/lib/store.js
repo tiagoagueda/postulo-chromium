@@ -22,12 +22,29 @@ export function isCaptureKey(key) {
   return key === INDEX || key.startsWith("capture:");
 }
 
+/** Whether a storage write was refused for want of room (the wording differs by browser). */
+export function isQuotaError(error) {
+  return /quota/i.test((error && error.message) || "");
+}
+
 /** The store over a storage area: `storage.local` in the extension, a stand-in in tests. */
 export function makeStore(area, { now = () => new Date().toISOString(), newId = () => crypto.randomUUID() } = {}) {
   const ids = async () => (await area.get(INDEX))[INDEX] || [];
   const pageIdOf = async (id) => {
     const record = (await area.get(RECORD(id)))[RECORD(id)];
     return (record && record.pageId) || id;
+  };
+
+  // A full quota is the one refusal a person can mend, so it carries a key to be said in words.
+  const write = async (items) => {
+    try {
+      await area.set(items);
+    } catch (error) {
+      if (isQuotaError(error)) {
+        throw Object.assign(new Error(error.message), { key: "storageFull", cause: error });
+      }
+      throw error;
+    }
   };
 
   const store = {
@@ -63,7 +80,7 @@ export function makeStore(area, { now = () => new Date().toISOString(), newId = 
       // One write for all three: a popup closes the moment it loses focus, and a capture
       // written without its place in the index would be kept and never listed.
       const index = [id, ...(await ids())];
-      await area.set({ [RECORD(id)]: record, [PAGE(id)]: html, [INDEX]: index });
+      await write({ [RECORD(id)]: record, [PAGE(id)]: html, [INDEX]: index });
       return record;
     },
 
@@ -96,7 +113,7 @@ export function makeStore(area, { now = () => new Date().toISOString(), newId = 
       for (const record of records) {
         items[RECORD(record.id)] = record;
       }
-      await area.set(items);
+      await write(items);
       return records;
     },
 
@@ -107,7 +124,7 @@ export function makeStore(area, { now = () => new Date().toISOString(), newId = 
         return null;
       }
       const next = { ...record, ...patch, updatedAt: now() };
-      await area.set({ [RECORD(id)]: next });
+      await write({ [RECORD(id)]: next });
       return next;
     },
 
