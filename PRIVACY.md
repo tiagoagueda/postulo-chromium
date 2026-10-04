@@ -4,8 +4,8 @@
 2026-10-04.
 
 The extension has no server of its own, no account and no operator. There is nowhere for
-your data to go except the Postulo you host yourself, and it goes there only when you press
-*Send*. Nobody, including the author, receives anything from it.
+your data to go except the Postulo you host yourself, and your captures go there only when
+you press *Send*. Nobody, including the author, receives anything from it.
 
 ## What it keeps, and where
 
@@ -30,6 +30,10 @@ It keeps:
   can read or download it from *Settings → Testing and troubleshooting*, and clear it there.
   The log never holds your token and never holds a page or anything read from one.
 - **The language you picked** for the extension, if you did, in the settings.
+- **The list of captures waiting for review in your Postulo**, as last read, for the number
+  on the toolbar button: for each, its id, address, title, company, place, date and the
+  address of its review screen — including captures made elsewhere, such as from another
+  browser. Never a page. It is dropped when you change the address or token.
 - **A testing switch** and the outcome of the last delivery attempt.
 
 Deleting a capture from *Captures in this browser* removes it and its page. Removing the
@@ -45,6 +49,7 @@ four:
 | --- | --- | --- |
 | You press *Test* in the settings | `GET /api/v1/me` | Nothing but the token, to ask Postulo who it is |
 | You press *Send*, or a waiting capture is retried | `POST /api/v1/captures` | The posting's address, the slimmed copy of the page, the fields as you reviewed them, and — for several captures read off one results page — how many there were and which this is |
+| Every five minutes, when the browser starts, when the popup opens, and after something was sent | `GET /api/v1/captures` | Nothing but the token, to read the list of captures waiting for review, for the number on the toolbar button. Not made with no Postulo set up, with the testing switch on, or before the address is allowed. |
 | The popup opens on a posting, with Postulo set up and reachable | `POST /api/v1/captures/known` | The address, title and company of the postings on the page, so the popup can say which your Postulo already holds. Postulo stores nothing on this request. |
 | You press *Send the picture*, offered after a capture was sent, and only when your Postulo says it keeps pictures | `PUT` to the address Postulo gave for it | A picture of the whole page as you see it in that tab, signed in or not: the page's image, and nothing else. Never for several captures read off one results page. |
 
@@ -53,7 +58,7 @@ Each of these requests carries the tag of the language the extension is speaking
 browser sends that header to every site it visits anyway.
 
 Retries of a capture you already sent happen in the background, every five minutes and when
-the browser starts, until Postulo takes it. Nothing is ever sent that you did not press
+the browser starts, until Postulo takes it. Nothing of yours is ever sent that you did not press
 *Send* on. With no Postulo configured, or with the testing switch on, nothing is sent at
 all and captures simply stay in the browser.
 

@@ -15,6 +15,15 @@
     "message": "Capture this posting in Postulo",
     "description": "The toolbar button's tooltip, and the name of its keyboard shortcut."
   },
+  "waitingForReview": {
+    "message": "Waiting for review: $COUNT$",
+    "description": "The toolbar button's tooltip when postings are waiting for review in Postulo or in this browser. COUNT is a number.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
   "settings": {
     "message": "Settings",
     "description": "The gear that opens the extension's settings. Postulo's own word for its Settings."

@@ -23,8 +23,9 @@ press *Send*. It reads a page only when you press the button (or `Alt+Shift+P`),
 script injected for that one call — it has no permission to run on any site, only
 `activeTab`. It asks for permission to reach your instance's address once, when you save
 it. There are no analytics, no third-party requests and no permanent host permissions.
-What it keeps — the captures, a trimmed copy of each page until Postulo has it, and a log
-of what it did — stays in this browser (`storage.local`), as does the token, never synced
+What it keeps — the captures, a trimmed copy of each page until Postulo has it, the list of
+postings waiting for review in Postulo as last read (address, title, company and place of
+each, for the toolbar number), and a log of what it did — stays in this browser (`storage.local`), as does the token, never synced
 through a browser account.
 
 In full, and as the stores require it stated on its own: [PRIVACY.md](PRIVACY.md).
@@ -84,11 +85,24 @@ once, quietly, and refuses nothing: a second capture is yours to want. With Post
 unreachable, not set up, or older than the question, nothing is said and the capture
 proceeds as it always did.
 
+## The number on the toolbar button
+
+The button shows how many postings are captured and waiting for review: those waiting in
+Postulo and those in this browser that have not reached it yet, one for each address (two
+captures of one posting, with or without `www.` or a trailing slash, count once; the rule
+is Postulo's own `same_url()`, tested against its cases). Past 99 it reads `99+`, and the
+tooltip says it in words. A capture Postulo has is counted from Postulo's list, which the
+extension reads (`GET /api/v1/captures`, only the token goes) every five minutes, when the
+browser starts, after a delivery that sent something, when you save another address or
+token, and when the popup opens unless it was read in the last minute. A Postulo that
+cannot be reached or refuses the token leaves the number at what was last read, plus
+what you have captured since. Not set up, with the testing switch on, or before the
+address is allowed, nothing is asked and only this browser's unsent captures count.
+
 ## Without a server
 
 Everything the extension keeps is listed under **Captures in this browser** — the link at
-the bottom of the popup, where the number is how many have not reached Postulo (the
-toolbar button shows it too). Each is *Not sent*, *Waiting for Postulo*, *Sent* (with a
+the bottom of the popup, where the number is how many have not reached Postulo. Each is *Not sent*, *Waiting for Postulo*, *Sent* (with a
 link to its review screen) or *Refused* (with Postulo's reason); from there you edit one,
 send it, hold it back, or delete it.
 
@@ -203,7 +217,9 @@ while the code asks for a key that `en` does not have.
 | `src/popup.*` | The button, the form showing what was read, *Send* and *Keep* |
 | `src/captures.*` | Captures in this browser: the list, to edit, send, hold back or delete |
 | `src/options.*` | Address, token, *Test*, *Save*; the language; the testing switch and the log |
-| `src/background.js` | Opens the settings on first install; sends what is waiting, every five minutes and at start |
+| `src/background.js` | Opens the settings on first install; sends what is waiting and reads Postulo's list of captures waiting for review, every five minutes and at start |
+| `src/lib/waiting.js` | The toolbar number: reading Postulo's list, and counting postings once per address |
+| `src/lib/address.js` | What identifies a posting by its address: Postulo's `same_url()`, ported |
 | `src/lib/parse.js` | Reading a posting: Postulo's `schema.org` and `page-metadata` sources, carried over |
 | `src/lib/titles.js`, `src/lib/patterns.js` | What `page-metadata` reads from a title line (job, employer) and from the text (salary, closing date), as Postulo's `titles.py` and `patterns.py` do |
 | `src/lib/store.js` | The captures kept in the browser, and the page each was read from |

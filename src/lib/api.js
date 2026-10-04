@@ -220,6 +220,14 @@ export function pictureRefused(error) {
   return [409, 413, 415, 422].includes(error && error.status);
 }
 
+/** GET /captures: one page of the captures waiting for review, newest first, as `{items, count}`. */
+export async function listCaptures(instance, token, { limit = 100, offset = 0 } = {}, fetchImpl = fetch) {
+  const response = await request(fetchImpl, endpoint(instance, `/captures?limit=${limit}&offset=${offset}`), {
+    headers: headers(token),
+  });
+  return readResponse(response);
+}
+
 /** What Postulo's /captures/known takes: this many characters of a title or company, this many postings. */
 const KNOWN_TEXT = 250;
 const KNOWN_COMPANY = 250;

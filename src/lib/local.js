@@ -7,6 +7,7 @@ import { explain, t, useStoredLanguage } from "./i18n.js";
 import { makeLog } from "./log.js";
 import { deliver } from "./outbox.js";
 import { makeStore } from "./store.js";
+import { badgeText, countPostings, lastWaiting, refreshWaiting, WAITING } from "./waiting.js";
 
 export const store = makeStore(ext.storage.local);
 export const log = makeLog(ext.storage.local);
@@ -26,14 +27,61 @@ export async function deliverWaiting(only = null) {
   if (result.outcome !== "nothing") {
     await ext.storage.local.set({ lastDelivery: { at: new Date().toISOString(), ...result } });
   }
+  // What was sent is waiting in Postulo now, so its list is read again at once and the
+  // number does not dip in between.
+  if (result.sent) {
+    await readWaitingList();
+  }
   return result;
 }
 
-/** The number on the toolbar button: captures that have not reached Postulo yet. */
+let reading = null;
+
+/** Read the captures waiting in Postulo, and show the number. Asks nothing of a Postulo
+ *  that is not to be asked (see `refreshWaiting`); one read at a time in each page. */
+export function readWaitingList({ maxAgeMs = 0 } = {}) {
+  if (reading) {
+    // A read already under way began before whatever asks now (a delivery, a changed token),
+    // so it may not hold what that changed; a caller that wants it fresh reads once more after.
+    return maxAgeMs ? reading : reading.then(() => readWaitingList(), () => readWaitingList());
+  }
+  reading = (async () => {
+    try {
+      const settings = await loadSettings();
+      await refreshWaiting({
+        area: ext.storage.local,
+        settings,
+        allowed: () => hasHostPermission(originPattern(settings.instance)),
+        maxAgeMs,
+      });
+    } finally {
+      reading = null;
+    }
+    await showUnsentCount();
+  })();
+  return reading;
+}
+
+/** Forget the list read from the Postulo that was set up before, and read the new one. */
+export async function forgetWaitingList() {
+  await ext.storage.local.remove(WAITING);
+  await showUnsentCount();
+  await readWaitingList();
+}
+
+/** The number on the toolbar button: the postings waiting for review, in Postulo as last
+ *  read and in this browser not yet sent, one for each address. */
 export async function showUnsentCount() {
-  const count = await store.unsentCount();
-  await ext.action.setBadgeText({ text: count ? String(count) : "" });
+  const settings = await loadSettings();
+  const count = countPostings(await lastWaiting(ext.storage.local, settings), await store.list());
+  await ext.action.setBadgeText({ text: badgeText(count) });
   await ext.action.setBadgeBackgroundColor({ color: "#2563eb" });
+  // Where the browser has it, the number in white on the blue: the default is picked for
+  // the page behind a badge and not always readable on this one.
+  if (ext.action.setBadgeTextColor) {
+    await ext.action.setBadgeTextColor({ color: "#ffffff" });
+  }
+  await ext.action.setTitle({ title: count ? t("waitingForReview", [String(count)]) : t("actionTitle") });
 }
 
 /** The sentences the browser keeps for the extension, in the language it speaks: the tooltip

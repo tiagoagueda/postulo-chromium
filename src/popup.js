@@ -3,7 +3,7 @@ import { askAndKeep } from "./lib/allow.js";
 import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
-import { afterSending, deliverWaiting, log, openCaptures, showUnsentCount, store } from "./lib/local.js";
+import { afterSending, deliverWaiting, log, openCaptures, readWaitingList, showUnsentCount, store } from "./lib/local.js";
 import { hostOf } from "./lib/log.js";
 import { emptyPosting, readPosting, readPostings, slimPage } from "./lib/parse.js";
 import { drawPage, encodePicture } from "./lib/picture.js";
@@ -66,7 +66,10 @@ async function main() {
   show("ready");
   await showCount();
   // Whatever was waiting may go now; quietly, as the background would.
-  deliverWaiting().then(showCount, () => {});
+  // The list of what waits in Postulo is read too, unless it was read a moment ago.
+  deliverWaiting()
+    .then((result) => (result.sent ? null : readWaitingList({ maxAgeMs: 60_000 })))
+    .then(showCount, () => {});
 
   const editor = postingForm();
   $("form-slot").append(editor.form);
