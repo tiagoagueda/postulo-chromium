@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Hva utvidelsen gjorde, for å finne ut hvorfor noe ikke virket. Den inneholder ikke noe token og ingenting fra sidene."
   },
-  "cancel": {
-    "message": "Avbryt"
-  },
   "delete": {
     "message": "Slett"
   },

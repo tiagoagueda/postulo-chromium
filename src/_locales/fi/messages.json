@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Mitä laajennus teki, jotta selviää, miksi jokin ei toiminut. Siinä ei ole avainta eikä mitään sivujen sisällöstä."
   },
-  "cancel": {
-    "message": "Peruuta"
-  },
   "delete": {
     "message": "Poista"
   },

@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Wat d'Erweiderung gemaach huet, fir erauszefannen, firwat eppes net funktionéiert huet. Et enthält keen Token an näischt vun de Säiten."
   },
-  "cancel": {
-    "message": "Ofbriechen"
-  },
   "delete": {
     "message": "Läschen"
   },

@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Co rozšíření dělalo, abyste zjistili, proč něco nefungovalo. Neobsahuje žádný token ani nic ze stránek."
   },
-  "cancel": {
-    "message": "Zrušit"
-  },
   "delete": {
     "message": "Smazat"
   },

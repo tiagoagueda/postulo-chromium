@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Hvað viðbótin gerði, til að komast að því hvers vegna eitthvað virkaði ekki. Hún geymir ekkert teikn og ekkert af síðunum."
   },
-  "cancel": {
-    "message": "Hætta við"
-  },
   "delete": {
     "message": "Eyða"
   },

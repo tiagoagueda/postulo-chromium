@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Vad tillägget har gjort, för att ta reda på varför något inte fungerade. Den innehåller ingen token och inget från sidorna."
   },
-  "cancel": {
-    "message": "Avbryt"
-  },
   "delete": {
     "message": "Radera"
   },

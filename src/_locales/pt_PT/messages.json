@@ -276,9 +276,6 @@
   "logHint": {
     "message": "O que a extensão fez, para descobrir porque é que algo não funcionou. Não contém nenhum token nem nada das páginas."
   },
-  "cancel": {
-    "message": "Cancelar"
-  },
   "delete": {
     "message": "Eliminar"
   },

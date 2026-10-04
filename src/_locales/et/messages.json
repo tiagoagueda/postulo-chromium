@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Mida laiendus tegi, et selgitada välja, miks miski ei töötanud. See ei sisalda ühtegi tõendit ega midagi lehtedelt."
   },
-  "cancel": {
-    "message": "Loobu"
-  },
   "delete": {
     "message": "Kustuta"
   },

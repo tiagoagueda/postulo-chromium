@@ -241,8 +241,8 @@ button.icon:hover {
   background: var(--line);
 }
 
-/* The posting's form, in the popup and in the list of captures: labels closer than the
-   settings' so the popup's longest state fits the 600 pixels a popup gets. */
+/* The posting's form, in the review window: labels closer than the
+   settings'. */
 .posting label {
   margin: 5px 0 2px;
   font-size: 12px;
@@ -445,6 +445,13 @@ body.captures {
   padding: 24px 20px 40px;
 }
 
+/* The review window: one capture's form, in a window of its own that keeps its content. */
+body.review {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 18px 20px 28px;
+}
+
 .capture-list {
   display: grid;
   gap: 10px;
@@ -488,16 +495,6 @@ body.captures {
 .capture .actions {
   margin-top: 0;
   flex-wrap: wrap;
-}
-
-.capture .editor {
-  margin-top: 10px;
-  padding-top: 6px;
-  border-top: 1px solid var(--line);
-}
-
-.capture .editor .actions {
-  margin-top: 10px;
 }
 
 /* The state of a capture, in words and in colour: never the colour alone. */

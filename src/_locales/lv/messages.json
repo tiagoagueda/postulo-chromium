@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Ko paplašinājums darīja, lai noskaidrotu, kāpēc kaut kas nedarbojās. Tajā nav neviena žetona un nekā no lapām."
   },
-  "cancel": {
-    "message": "Atcelt"
-  },
   "delete": {
     "message": "Dzēst"
   },

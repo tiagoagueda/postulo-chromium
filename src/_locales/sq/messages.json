@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Çfarë bëri zgjerimi, për të gjetur pse diçka nuk funksionoi. Nuk përmban asnjë token dhe asgjë nga faqet."
   },
-  "cancel": {
-    "message": "Anulo"
-  },
   "delete": {
     "message": "Fshi"
   },

@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Co zrobiło rozszerzenie, aby dało się ustalić, dlaczego coś nie zadziałało. Nie zawiera żadnego tokenu ani niczego ze stron."
   },
-  "cancel": {
-    "message": "Anuluj"
-  },
   "delete": {
     "message": "Usuń"
   },

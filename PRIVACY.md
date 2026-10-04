@@ -19,7 +19,7 @@ It keeps:
 
 - **Your Postulo's address and API token**, as you typed them into the settings. The token
   is the one you issued in Postulo, and you can revoke it there at any time.
-- **Your captures**: for each, the posting's address, the fields that were read and the
+- **Your captures**: kept as soon as a page is read, before you decide anything, so that closing the review window loses nothing; for each, the posting's address, the fields that were read and the
   fields as you corrected them, which source read it, when, and where it stands — kept,
   waiting, sent or refused, with Postulo's reason when it refused.
 - **A slimmed copy of each captured page**, at most 512 thousand characters, kept only until Postulo has the
@@ -37,8 +37,9 @@ It keeps:
 - **A testing switch**, and whether Postulo answered at last look: not allowed yet, token
   refused, unreachable or reachable, with when and by which request, for the toolbar
   button's colour. Nothing else about it.
+- **Which window is the review window**, while the browser is open: its number, in the browser's session storage, which the browser empties when it closes.
 
-Deleting a capture from *Captures in this browser* removes it and its page. Removing the
+Deleting a capture from *Captures in this browser* or from the review window removes it and its page. Removing the
 extension from your browser removes all of the above.
 
 ## What it sends, and where
@@ -53,8 +54,8 @@ five:
 | You press *Send*, or a waiting capture is retried | `POST /api/v1/captures` | The posting's address, the slimmed copy of the page, the fields as you reviewed them, and — for several captures read off one results page — how many there were and which this is |
 | Every five minutes, when the browser starts, when the popup opens, and after something was sent | `GET /api/v1/captures` | Nothing but the token, to read the list of captures waiting for review, for the number on the toolbar button. Not made with no Postulo set up, with the testing switch on, or before the address is allowed. |
 | Every five minutes, when the browser starts, and when the address is saved, the permission given or the testing switch turned off | `GET /healthz` | Nothing. No token and no cookies: only that your server is asked whether it is up, so it learns the browser is running and from where. It is how the toolbar button knows to turn grey. Not made with no Postulo set up, with the testing switch on, or before the address is allowed. |
-| The popup opens on a posting, with Postulo set up and reachable | `POST /api/v1/captures/known` | The address, title and company of the postings on the page, so the popup can say which your Postulo already holds. Postulo stores nothing on this request. |
-| You press *Send the picture*, offered after a capture was sent, and only when your Postulo says it keeps pictures | `PUT` to the address Postulo gave for it | A picture of the whole page as you see it in that tab, signed in or not: the page's image, and nothing else. Never for several captures read off one results page. |
+| The review window opens on a capture, or the popup on a page of results, with Postulo set up and reachable | `POST /api/v1/captures/known` | The address, title and company of the postings on the page, so the window can say which your Postulo already holds. Postulo stores nothing on this request. |
+| You press *Send the picture*, offered in the review window after a capture was sent, and only when your Postulo says it keeps pictures | `PUT` to the address Postulo gave for it | A picture of the whole page as you see it in that tab, signed in or not: the page's image, and nothing else. Never for several captures read off one results page. |
 
 Each of these requests carries the tag of the language the extension is speaking (`de`,
 `pt-PT`) in the `Accept-Language` header, so that Postulo can word its refusals in it. Your
@@ -72,7 +73,7 @@ reads a page only when you click its toolbar button or press `Alt+Shift+P`, thro
 script injected into that one tab for that one call, under `activeTab`. It reads the page's
 address and its HTML, as your browser already has them. It cannot read a page you did not
 ask it to read, and it reads nothing in the background. If you then say yes to sending a
-picture of the page, it draws that tab: on Firefox in one go, on Chromium by scrolling the
+picture of the page, the review window draws the tab it was read from: on Firefox in one go, on Chromium by scrolling the
 page screen by screen, hiding what stays fixed in place, and putting everything back as it
 was. It does not use the `debugger` permission.
 

@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Hvad udvidelsen har gjort, så du kan finde ud af, hvorfor noget ikke virkede. Den indeholder ingen tokens og intet fra siderne."
   },
-  "cancel": {
-    "message": "Annuller"
-  },
   "delete": {
     "message": "Slet"
   },

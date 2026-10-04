@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Ciò che ha fatto l'estensione, per capire perché qualcosa non ha funzionato. Non contiene alcun token né nulla delle pagine."
   },
-  "cancel": {
-    "message": "Annulla"
-  },
   "delete": {
     "message": "Elimina"
   },

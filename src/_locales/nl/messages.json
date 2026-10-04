@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Wat de extensie heeft gedaan, om uit te zoeken waarom iets niet werkte. Het bevat geen token en niets van de pagina's."
   },
-  "cancel": {
-    "message": "Annuleren"
-  },
   "delete": {
     "message": "Wissen"
   },

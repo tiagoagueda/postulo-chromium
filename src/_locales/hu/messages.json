@@ -276,9 +276,6 @@
   "logHint": {
     "message": "A bővítmény tevékenysége, hogy kideríthesse, miért nem működött valami. Nem tartalmaz tokent, és semmit sem az oldalakról."
   },
-  "cancel": {
-    "message": "Mégse"
-  },
   "delete": {
     "message": "Törlés"
   },

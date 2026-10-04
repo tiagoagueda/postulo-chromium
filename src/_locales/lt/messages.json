@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Ką darė plėtinys, kad būtų galima išsiaiškinti, kodėl kažkas neveikė. Jame nėra jokio žetono ir nieko iš puslapių."
   },
-  "cancel": {
-    "message": "Atšaukti"
-  },
   "delete": {
     "message": "Ištrinti"
   },

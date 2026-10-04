@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Was die Erweiterung getan hat, um herauszufinden, warum etwas nicht funktioniert hat. Es enthält kein Token und nichts von den Seiten."
   },
-  "cancel": {
-    "message": "Abbrechen"
-  },
   "delete": {
     "message": "Löschen"
   },

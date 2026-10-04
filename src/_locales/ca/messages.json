@@ -276,9 +276,6 @@
   "logHint": {
     "message": "El que ha fet l'extensió, per esbrinar per què alguna cosa no ha funcionat. No conté cap testimoni ni res de les pàgines."
   },
-  "cancel": {
-    "message": "Cancel·la"
-  },
   "delete": {
     "message": "Esborra"
   },

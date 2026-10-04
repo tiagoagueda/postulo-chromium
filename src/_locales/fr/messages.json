@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Ce qu'a fait l'extension, pour comprendre pourquoi quelque chose n'a pas fonctionné. Il ne contient aucun jeton et rien des pages."
   },
-  "cancel": {
-    "message": "Annuler"
-  },
   "delete": {
     "message": "Supprimer"
   },

@@ -20,7 +20,7 @@ const time = (iso) => {
  * The rows, newest first: `{rows, total}`, `rows` cut to `limit` and `total` the postings
  * in all. A row is `{key, kind, id, title, company_name, location, at, count, state, link}`:
  * `kind` is `postulo` (then `link` is Postulo's review address) or `here` (then `state` is
- * kept, waiting or refused, and `link` is empty: the extension's own page is opened).
+ * kept, waiting or refused, and `link` is empty: the popup opens the capture's form in the review window).
  */
 export function reviewRows(waiting, records, limit = MOST_ROWS) {
   const postings = new Map();

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="reviewPageTitle">Review a capture</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="review">
+    <header>
+      <img src="icons/postulo-32.png" alt="" width="20" height="20" />
+      <h1 data-i18n="reviewPageTitle">Review a capture</h1>
+    </header>
+
+    <p id="not-connected" class="note" hidden>
+      <span data-i18n="notConnected">Not connected to a Postulo yet: what you capture is kept in this browser.</span>
+      <button id="open-options" type="button" class="link" data-i18n="setUp">Set it up</button>
+    </p>
+    <p id="offline-on" class="note" data-i18n="offlineOn" hidden>The testing switch is on: nothing is sent to Postulo.</p>
+
+    <!-- What was read, before anything leaves the browser. -->
+    <section id="edit" hidden>
+      <p id="edit-hint" class="hint"></p>
+      <!-- What Postulo already holds for this address, if it could be asked (#178). -->
+      <p id="edit-known" class="note" hidden></p>
+      <div id="form-slot"></div>
+      <div class="send">
+        <button id="send" type="button" class="primary" data-i18n="sendForReview">Send for review</button>
+        <button id="keep" type="button" data-i18n="keep">Keep in this browser</button>
+        <button id="delete" type="button" data-i18n="delete">Delete</button>
+      </div>
+      <p id="edit-read-by" class="muted small"></p>
+    </section>
+
+    <section id="result" hidden>
+      <p id="summary"></p>
+      <a id="review" href="#" class="primary button" data-i18n="review" hidden>Review in Postulo</a>
+      <!-- Only when Postulo keeps a picture of the page and the person has not said no. -->
+      <div id="picture" hidden>
+        <p class="hint" data-i18n="pictureOffer">Postulo can keep a picture of the whole page as you see it, signed in or not. Send one?</p>
+        <div class="send">
+          <button id="picture-send" type="button" data-i18n="pictureSend">Send the picture</button>
+          <button id="picture-skip" type="button" data-i18n="pictureSkip">No picture</button>
+        </div>
+      </div>
+    </section>
+
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <script type="module" src="review.js"></script>
+  </body>
+</html>

@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Šta je proširenje radilo, da se otkrije zašto nešto nije radilo. Ne sadrži nijedan token ni ništa sa stranica."
   },
-  "cancel": {
-    "message": "Odustani"
-  },
   "delete": {
     "message": "Obriši"
   },

@@ -86,6 +86,12 @@ export async function drawPage({ tabId, windowId, url }) {
     return canvasOf([[await load(dataUrl), 0]]);
   }
 
+  // Chromium draws the window's active tab, whichever it is: the page is drawn from another
+  // window than the one it is in, so a tab switched meanwhile would be drawn in its place.
+  const tab = await ext.tabs.get(tabId);
+  if (!tab || !tab.active || tab.windowId !== windowId) {
+    throw new Refusal("pictureFailed");
+  }
   const shots = [];
   try {
     for (const [index, start] of screenStarts(height, page.screen, MAX_SCREENS).entries()) {

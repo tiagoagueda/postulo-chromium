@@ -276,9 +276,6 @@
   "logHint": {
     "message": "O que fixo a extensión, para descubrir por que algo non funcionou. Non contén ningún testemuño nin nada das páxinas."
   },
-  "cancel": {
-    "message": "Cancelar"
-  },
   "delete": {
     "message": "Borrar"
   },

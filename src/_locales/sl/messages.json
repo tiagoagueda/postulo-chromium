@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Kaj je naredila razširitev, da ugotovite, zakaj nekaj ni delovalo. Ne vsebuje nobenega žetona in ničesar s strani."
   },
-  "cancel": {
-    "message": "Prekliči"
-  },
   "delete": {
     "message": "Izbriši"
   },

@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Bir şeyin neden çalışmadığını bulmak için uzantının yaptıkları. Hiçbir jeton ve sayfalardan hiçbir şey içermez."
   },
-  "cancel": {
-    "message": "Vazgeç"
-  },
   "delete": {
     "message": "Sil"
   },

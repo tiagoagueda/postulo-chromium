@@ -47,19 +47,6 @@
       <ul id="review-rows" class="review-rows"></ul>
     </section>
 
-    <!-- What was read, before anything leaves the browser. -->
-    <section id="edit" hidden>
-      <p id="edit-hint" class="hint"></p>
-      <!-- What Postulo already holds for this address, if it could be asked (#178). -->
-      <p id="edit-known" class="note" hidden></p>
-      <div id="form-slot"></div>
-      <div class="send">
-        <button id="send" type="button" class="primary" data-i18n="sendForReview">Send for review</button>
-        <button id="keep" type="button" data-i18n="keep">Keep in this browser</button>
-      </div>
-      <p id="edit-read-by" class="muted small"></p>
-    </section>
-
     <!-- A page that lists several postings: a list to tick, not a form to correct (#177). -->
     <section id="pick" hidden>
       <p id="pick-count" class="hint"></p>
@@ -78,15 +65,6 @@
 
     <section id="result" hidden>
       <p id="summary"></p>
-      <a id="review" href="#" target="_blank" rel="noopener" class="primary button" data-i18n="review" hidden>Review in Postulo</a>
-      <!-- Only when Postulo keeps a picture of the page and the person has not said no. -->
-      <div id="picture" hidden>
-        <p class="hint" data-i18n="pictureOffer">Postulo can keep a picture of the whole page as you see it, signed in or not. Send one?</p>
-        <div class="send">
-          <button id="picture-send" type="button" data-i18n="pictureSend">Send the picture</button>
-          <button id="picture-skip" type="button" data-i18n="pictureSkip">No picture</button>
-        </div>
-      </div>
     </section>
 
     <p id="status" role="status" aria-live="polite"></p>

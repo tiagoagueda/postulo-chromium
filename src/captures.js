@@ -1,10 +1,10 @@
 import { askAndKeep } from "./lib/allow.js";
 import { originPattern } from "./lib/api.js";
 import { ext, loadSettings, requestHostPermission } from "./lib/browser.js";
-import { postingForm } from "./lib/form.js";
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
 import { afterSending, deliverWaiting, log, showUnsentCount, store } from "./lib/local.js";
 import { isCaptureKey, UNSENT } from "./lib/store.js";
+import { openInReviewWindow, reviewPageUrl } from "./lib/window.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -34,8 +34,6 @@ function button(label, onClick, primary = false, action = "") {
 }
 
 let settings = null;
-let editing = null; // the id whose editor is open: a redraw waits for it to close
-let redrawLater = false;
 
 /** The permission request for the click, or null when sending needs none. */
 function allowFromClick() {
@@ -108,7 +106,13 @@ function item(record, when) {
 
   const actions = element("div", { className: "actions" });
   if (record.state === "sent") {
-    actions.append(element("a", { href: record.reviewUrl, target: "_blank", rel: "noopener", className: "button primary" }, t("review")));
+    // Postulo's own page opens in the review window, where its "Save and next" walks the queue.
+    const review = element("a", { href: record.reviewUrl, target: "_blank", rel: "noopener", className: "button primary" }, t("review"));
+    review.addEventListener("click", (event) => {
+      event.preventDefault();
+      openInReviewWindow(record.reviewUrl).catch((error) => say(explain(error), true));
+    });
+    actions.append(review);
   } else if (record.state === "waiting") {
     actions.append(
       button(t("tryNow"), () => send([record.id]), true, "send"),
@@ -121,7 +125,8 @@ function item(record, when) {
     actions.append(button(t("sendForReview"), () => send([record.id]), true, "send"));
   }
   if (record.state !== "sent") {
-    actions.append(button(t("edit"), () => openEditor(li, record), false, "edit"));
+    // One editor, in the review window, for this list and the popup alike.
+    actions.append(button(t("edit"), () => openInReviewWindow(reviewPageUrl(record.id)).catch((error) => say(explain(error), true)), false, "edit"));
   }
   actions.append(
     button(t("delete"), async () => {
@@ -137,67 +142,7 @@ function item(record, when) {
   return li;
 }
 
-function openEditor(li, record) {
-  if (editing) {
-    return;
-  }
-  editing = record.id;
-  const editor = postingForm();
-  editor.fill(record.data);
-  const close = () => {
-    editing = null;
-    panel.remove();
-    // Save or Cancel went with the panel: put focus back on the item's Edit button.
-    li.querySelector('[data-action="edit"]')?.focus();
-    if (redrawLater) {
-      redrawLater = false;
-      draw();
-    }
-  };
-  const panel = element(
-    "div",
-    { className: "editor" },
-    editor.form,
-    element(
-      "div",
-      { className: "actions" },
-      button(
-        t("save"),
-        async () => {
-          if (!editor.form.reportValidity()) {
-            return;
-          }
-          const latest = await store.get(record.id);
-          if (!latest) {
-            close();
-            return;
-          }
-          // Changed after a refusal, it is kept again, to be sent when the person says.
-          const state = latest.state === "refused" ? "kept" : latest.state;
-          try {
-            await store.update(record.id, { data: editor.values(latest.data), state, problem: state === "kept" ? null : latest.problem });
-          } catch (error) {
-            say(explain(error), true);
-            return;
-          }
-          await log.add("edited", { id: record.id });
-          close();
-        },
-        true,
-        "save",
-      ),
-      button(t("cancel"), close, false, "cancel"),
-    ),
-  );
-  li.append(panel);
-  editor.focus();
-}
-
 async function draw() {
-  if (editing) {
-    redrawLater = true;
-    return;
-  }
   const records = await store.list();
   const when = new Intl.DateTimeFormat(t("languageTag"), { dateStyle: "medium", timeStyle: "short" });
   const list = $("list");
@@ -255,7 +200,7 @@ async function main() {
       return;
     }
     if (changes.language) {
-      // The list is drawn again once any edit in progress is closed, never under it.
+      // The list is drawn again in the new language.
       await useStoredLanguage();
       localise();
       draw();

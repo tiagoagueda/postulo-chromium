@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Hedapenak egin duena, zerbaitek zergatik ez duen funtzionatu jakiteko. Ez du tokenik gordetzen, ezta orrietako ezer ere."
   },
-  "cancel": {
-    "message": "Utzi"
-  },
   "delete": {
     "message": "Ezabatu"
   },

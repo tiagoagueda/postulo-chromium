@@ -276,9 +276,6 @@
   "logHint": {
     "message": "Ce a făcut extensia, ca să afli de ce ceva nu a funcționat. Nu conține niciun token și nimic din pagini."
   },
-  "cancel": {
-    "message": "Anulează"
-  },
   "delete": {
     "message": "Șterge"
   },

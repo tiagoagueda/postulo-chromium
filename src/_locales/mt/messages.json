@@ -276,9 +276,6 @@
   "logHint": {
     "message": "X'għamlet l-estensjoni, biex issib għaliex xi ħaġa ma ħadmitx. Ma fih l-ebda token u xejn mill-paġni."
   },
-  "cancel": {
-    "message": "Ikkanċella"
-  },
   "delete": {
     "message": "Ħassar"
   },
