@@ -136,10 +136,20 @@ extension's description in the add-on lists, and the shortcut's description in C
 Firefox for Android. Every request to Postulo carries the tag of the language in use as
 `Accept-Language`, so the sentences Postulo writes for a refusal come in it too.
 
-The languages are the ones Postulo itself offers: English plus the 39 European catalogues
-the core has complete. Where the core has a word for something — *Settings*, *API tokens*,
-*Save*, *Test* — the extension uses the core's, so the button and the screen it points at
-agree. A language joins here when the core starts offering it.
+The languages are the ones the Postulo core, the release this one is released beside, has
+started: English, plus every catalogue with a translation in it, all keys filled at once as
+drafts. An administrator's narrowing of a site's list plays no part. Where the core has a
+word for something — *Settings*, *API tokens*, *Save*, *Test* — the extension uses the
+core's, so the button and the screen it points at agree.
+
+The list is `src/lib/languages.js` (folder, tag, direction, own name), and it is written,
+not kept by hand: `python scripts/languages.py` reads the core checked out beside this
+repository (`../postulo`, or `POSTULO_CORE`) and rewrites it; `--check` fails on a
+difference. Run it when the core starts a language, add the `_locales` folder with every
+key, and `npm test` fails until the folders equal the list and each catalogue's `direction`
+matches it. The first language written right to left (Arabic) is the first to need a look
+in a real browser; the tests cover that the page's `dir` follows the catalogue and that the
+style sheet names no physical side.
 
 A language is named by a BCP 47 tag in its canonical form, as everywhere in Postulo: the
 language in lower case, a script with a capital, a region in capitals (`pt-BR`, `sr-Cyrl`,
@@ -150,10 +160,11 @@ demands it: a folder is named by language and region with an underscore (`pt_BR`
 never by script, so Serbian's folder is `sr` and its tag is `sr-Cyrl`. `npm test` derives
 each folder's name from its tag, and fails on a tag written any other way.
 
-The core's tags become the extension's by one rule: the region is dropped where the core
-has one variety of a language (`fr-FR` there is `fr` here, `en-GB` is `en`) and kept where
-it has two (`pt-BR`, `pt-PT`). A browser set to any French matches the `fr` folder, and
-the tag names the catalogue that is served.
+The core's tags become the extension's by one rule, written once, in the script: the
+region is dropped where the core has one variety of a language (`fr-FR` there is `fr` here,
+`en-GB` is `en`) and kept where it has two (`pt-BR`, `pt-PT`). A browser set to any French
+matches the `fr` folder, and the tag names the catalogue that is served. A core code with a
+region or script the script has no entry for stops it.
 
 English is the source. The other translations are drafts that no native speaker has
 reviewed yet, as are the core's own new strings until one does.
@@ -206,7 +217,8 @@ while the code asks for a key that `en` does not have.
 | `src/lib/browser.js` | `browser ?? chrome`, settings, permissions, reading the active tab |
 | `src/lib/i18n.js` | Fills the pages from `_locales`, in the browser's language or the one picked |
 | `src/lib/messages.js` | A sentence out of a catalogue by `getMessage`'s rules, for a picked language |
-| `src/lib/languages.js` | The shipped languages: folder, tag and own name, for the settings' list |
+| `src/lib/languages.js` | The shipped languages: folder, tag, direction and own name; written by `scripts/languages.py` |
+| `scripts/languages.py` | Writes that list from the core's roll-out (`../postulo`) |
 | `src/_locales/` | One `messages.json` per language; `en` is the source |
 | `.forgejo/ISSUE_TEMPLATE/` | The bug and feature forms, and the links shown above them (security, translations) |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |

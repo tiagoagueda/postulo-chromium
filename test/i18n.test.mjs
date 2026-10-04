@@ -7,16 +7,12 @@ import { test } from "node:test";
 const SOURCE = "src";
 const LOCALES = join(SOURCE, "_locales");
 
-// English, plus every language Postulo itself offers: the core's catalogues at 100%.
-// Each is a BCP 47 tag in its canonical form, the way Postulo writes one (#12). The core
-// says fr-FR and en-GB where this says fr and en: the region is dropped where the core has
-// one variety of a language and kept where it has two (pt-BR, pt-PT), because the tag names
-// the catalogue that is served and a browser set to any French matches the fr folder.
-const OFFERED = [
-  "bg", "bs", "ca", "cs", "cy", "da", "de", "el", "en", "es", "et", "eu", "fi", "fr",
-  "ga", "gl", "hr", "hu", "hy", "is", "it", "ka", "lb", "lt", "lv", "mk", "mt", "nb",
-  "nl", "pl", "pt-BR", "pt-PT", "ro", "sk", "sl", "sq", "sr-Cyrl", "sv", "tr", "uk",
-];
+// English, plus every language the core has started: src/lib/languages.js, which
+// scripts/languages.py writes from the core's roll-out (the four codes the core spells
+// differently, and the rule for them, are in that script). Each is a BCP 47 tag in its
+// canonical form, the way Postulo writes one (#12).
+const { LANGUAGES } = await import("../src/lib/languages.js");
+const OFFERED = LANGUAGES.map((language) => language.tag);
 
 /** The folder the browser looks in for `tag`: the one place a language is not named by its
  *  tag. The WebExtension format names a folder by language and region, with an underscore,
@@ -27,6 +23,7 @@ function folderOf(tag) {
 }
 
 const tagOf = Object.fromEntries(OFFERED.map((tag) => [folderOf(tag), tag]));
+const directionOf = Object.fromEntries(LANGUAGES.map((language) => [language.folder, language.direction]));
 
 function read(path) {
   const text = readFileSync(path, "utf8");
@@ -43,6 +40,14 @@ const placeholdersIn = (message) => [...message.matchAll(/\$([A-Za-z_]+)\$/g)].m
 test("the extension speaks the languages Postulo does, English by default", () => {
   assert.deepEqual(folders, OFFERED.map(folderOf).sort());
   assert.equal(read(join(SOURCE, "manifest.json")).default_locale, folderOf("en"));
+});
+
+test("each folder is the one the list says, and the list is sorted by it", () => {
+  for (const language of LANGUAGES) {
+    assert.equal(folderOf(language.tag), language.folder, language.tag);
+  }
+  const named = LANGUAGES.map((language) => language.folder);
+  assert.deepEqual(named, [...named].sort());
 });
 
 test("a language is named by a BCP 47 tag in its canonical form, and its folder follows from it", () => {
@@ -74,7 +79,8 @@ test("placeholders are the same in every language, in the order the code passes 
 test("each translation names its own language, so the page's lang attribute is right", () => {
   for (const [folder, catalogue] of Object.entries(messages)) {
     assert.equal(catalogue.languageTag.message, tagOf[folder], folder);
-    assert.ok(["ltr", "rtl"].includes(catalogue.direction.message), folder);
+    assert.ok(["ltr", "rtl"].includes(directionOf[folder]), folder);
+    assert.equal(catalogue.direction.message, directionOf[folder], folder);
   }
 });
 

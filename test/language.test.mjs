@@ -4,6 +4,8 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { test } from "node:test";
 
+import { JSDOM } from "jsdom";
+
 const LOCALES = join("src", "_locales");
 
 // What the browser gives when no language is chosen: a stub that is plainly not any catalogue.
@@ -13,7 +15,7 @@ globalThis.chrome = {
 };
 const { resolveMessage } = await import("../src/lib/messages.js");
 const { LANGUAGES } = await import("../src/lib/languages.js");
-const { languageTag, t, useLanguage } = await import("../src/lib/i18n.js");
+const { languageTag, localise, t, useLanguage } = await import("../src/lib/i18n.js");
 const { whoAmI } = await import("../src/lib/api.js");
 
 const readCatalogue = (folder) => JSON.parse(readFileSync(join(LOCALES, folder, "messages.json"), "utf8"));
@@ -91,4 +93,23 @@ test("a catalogue that cannot be read leaves the browser's language in place", a
   });
   assert.equal(t("save"), "browser:save");
   assert.equal(languageTag(), "xx");
+});
+
+test("a right-to-left language sets the page's direction, and the style sheet names no physical side", async () => {
+  // No shipped language is written right to left yet; the first one the core starts (Arabic)
+  // arrives with its catalogue saying so, and the page must follow it.
+  const dom = new JSDOM("<!doctype html><p data-i18n=\"save\"></p>");
+  globalThis.document = dom.window.document;
+  const rtl = { languageTag: { message: "ar" }, direction: { message: "rtl" }, save: { message: "حفظ" } };
+  await useLanguage("de", async () => ({ json: async () => rtl }));
+  localise();
+  assert.equal(document.documentElement.dir, "rtl");
+  assert.equal(document.documentElement.lang, "ar");
+  assert.equal(document.querySelector("p").textContent, rtl.save.message);
+  await useLanguage("", fromDisk);
+  delete globalThis.document;
+
+  // What mirrors by itself is written in logical terms (inline-start, margin-inline, ...).
+  const css = readFileSync(join("src", "style.css"), "utf8");
+  assert.doesNotMatch(css, /\b(?:left|right)\b|-(?:left|right)\s*:/);
 });
