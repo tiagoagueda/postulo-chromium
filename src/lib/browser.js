@@ -39,6 +39,16 @@ export async function requestHostPermission(pattern) {
   return ext.permissions.request({ origins: [pattern] });
 }
 
+/** The key of the sentence that says why the current tab cannot be captured, or "" when it
+ *  can, or when the address cannot be read: the press of the button then decides. */
+export async function tabProblem() {
+  const [tab] = await ext.tabs.query({ active: true, currentWindow: true });
+  if (!tab || !tab.url) {
+    return "";
+  }
+  return /^https?:/.test(tab.url) ? "" : "notWebPage";
+}
+
 /** The current tab's address and source, read through a content script injected for this
  *  one call. Only activeTab is needed: nothing runs on any page until the person asks. */
 export async function readCurrentTab() {

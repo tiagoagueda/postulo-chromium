@@ -1,6 +1,6 @@
-import { describe, known, originPattern, pictureRefused, sendRendering } from "./lib/api.js";
+import { describe, known, newListingUrl, originPattern, pictureRefused, sendRendering } from "./lib/api.js";
 import { askAndKeep } from "./lib/allow.js";
-import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission } from "./lib/browser.js";
+import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission, tabProblem } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
 import { afterSending, deliverWaiting, learnFromCall, log, openCaptures, readWaitingList, showUnsentCount, store } from "./lib/local.js";
@@ -24,6 +24,9 @@ function show(section) {
   document.body.classList.toggle("wide", working);
   // And all the height a popup gets: the link to the list waits until it is done.
   $("captures-link").parentElement.hidden = working;
+  // The header's buttons follow: capturing waits for the list again, adding by hand for the form.
+  $("capture").hidden = section !== "ready";
+  $("add-listing").hidden = working || !connected;
   $("review-list").hidden = working || !reviewShown;
   // The notes about the connection too: what became of a capture is said once it is sent.
   for (const id of ["not-connected", "offline-on"]) {
@@ -31,6 +34,7 @@ function show(section) {
   }
 }
 
+let connected = false; // whether there is a Postulo to open
 let reviewShown = false; // whether the list of captures needing review has anything to say
 
 function say(text, isError = false) {
@@ -91,7 +95,7 @@ async function main() {
   await useStoredLanguage();
   localise();
   const settings = await loadSettings();
-  const connected = Boolean(settings.instance && settings.token);
+  connected = Boolean(settings.instance && settings.token);
   $("open-options").addEventListener("click", () => ext.runtime.openOptionsPage());
   $("options-link").addEventListener("click", () => ext.runtime.openOptionsPage());
   $("captures-link").addEventListener("click", (event) => {
@@ -111,6 +115,19 @@ async function main() {
     server.hidden = false;
   }
   show("ready");
+  // The tab is tested now, not on the press: a disabled button is not reached by the keyboard,
+  // so the sentence is text. Pages closed to extensions still refuse on the press.
+  tabProblem().then((key) => {
+    if (key) {
+      $("capture").disabled = true;
+      say(t(key), true);
+    }
+  }, () => {});
+  // Postulo's own page, in a tab: no request from here, the testing switch or not.
+  $("add-listing").addEventListener("click", () => {
+    ext.tabs.create({ url: newListingUrl(settings.instance) });
+    window.close();
+  });
   await showCount();
   // Whatever was waiting may go now; quietly, as the background would.
   // The list of what waits in Postulo is read too, unless it was read a moment ago.

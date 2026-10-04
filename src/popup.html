@@ -9,6 +9,23 @@
     <header>
       <img src="icons/postulo-32.png" alt="" width="20" height="20" />
       <h1>Postulo</h1>
+      <!-- Capture, then add by hand; lucide-static v1.41.0, ISC, like the gear below. -->
+      <div class="header-actions">
+        <button id="capture" type="button" class="icon" aria-label="Capture this posting" title="Capture this posting" data-i18n-label="capture">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M12 15V3" /><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5" />
+          </svg>
+        </button>
+        <button id="add-listing" type="button" class="icon" aria-label="Add a listing" title="Add a listing" data-i18n-label="addListing" hidden>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M5 12h14" /><path d="M12 5v14" />
+          </svg>
+        </button>
+      </div>
     </header>
 
     <!-- Not an obstacle: without a Postulo, captures are kept here until there is one. -->
@@ -19,7 +36,6 @@
     <p id="offline-on" class="note" data-i18n="offlineOn" hidden>The testing switch is on: nothing is sent to Postulo.</p>
 
     <section id="ready" hidden>
-      <button id="capture" type="button" class="primary" data-i18n="capture">Capture this posting</button>
       <p class="hint" data-i18n="captureHint">The page is read here, in your browser. Nothing is sent until you say so.</p>
     </section>
 

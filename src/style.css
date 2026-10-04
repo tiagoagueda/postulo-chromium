@@ -217,6 +217,25 @@ button.icon {
   color: var(--muted);
 }
 
+button.icon[hidden] {
+  display: none;
+}
+
+/* The two buttons at the header's end, whichever side that is: the wrapper takes the auto margin. */
+.header-actions {
+  display: flex;
+  gap: 4px;
+  margin-inline-start: auto;
+}
+
+.header-actions button.icon {
+  margin-inline-start: 0;
+}
+
+button.icon:disabled {
+  opacity: 0.5;
+}
+
 button.icon:hover {
   color: var(--ink);
   background: var(--line);

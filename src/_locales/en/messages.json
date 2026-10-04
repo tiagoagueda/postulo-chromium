@@ -68,7 +68,11 @@
   },
   "capture": {
     "message": "Capture this posting",
-    "description": "The popup's main button."
+    "description": "The popup's header button that captures the posting on the current page: its name and tooltip."
+  },
+  "addListing": {
+    "message": "Add a listing",
+    "description": "The popup's header button that opens Postulo's page for adding a job listing by hand. Postulo's own words for it."
   },
   "captureHint": {
     "message": "The page is read here, in your browser. Nothing is sent until you say so.",

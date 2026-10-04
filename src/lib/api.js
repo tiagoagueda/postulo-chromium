@@ -52,6 +52,11 @@ export function originPattern(instance) {
   return `${url.protocol}//${url.host}/*`;
 }
 
+/** Postulo's own page for adding a listing by hand. Only opened in a tab: no request is made. */
+export function newListingUrl(instance) {
+  return `${instance}/listings/new/`;
+}
+
 export function endpoint(instance, path) {
   return `${instance}${API}${path}`;
 }

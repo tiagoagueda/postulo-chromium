@@ -52,12 +52,22 @@ permanently once signed; see that repository).
 2. Click the extension's icon, then *Set it up*: paste your Postulo's address and the
    token. *Test* asks Postulo who the token is. *Save* asks the browser for permission to
    reach that address.
-3. On a job posting, click the icon and **Capture this posting**. The page is read there
+3. On a job posting, click the icon, then the first of the two icon buttons at the popup's
+   top right, **Capture this posting**. The page is read there
    and then, in the browser, and the popup shows what was read — title, company, location,
    arrangement, contract, salary, closing date, description. Correct what is wrong, then:
    - **Send for review**: it goes to Postulo's review queue as you left it, and the popup
      links to its review screen. If Postulo cannot be reached, it waits in the browser.
    - **Keep in this browser**: it stays here, not sent, until you send it.
+
+The second button, **Add a listing**, opens Postulo's own page for adding a listing by hand
+(`/listings/new/`) in a tab. The extension makes no request for it, so it works with the
+`captures`-only token; you must be signed in to Postulo in that browser, or it takes you to
+its sign-in page, and the listing goes straight into your listings, not the review queue. It
+shows only once a Postulo is set up, and opens with the testing switch on too, since that
+switch stops what the extension sends, not pages the browser opens. On a page that is not a
+web page (the browser's own settings, say) the capture button is greyed and the popup says
+why.
 
 Capturing does not need step 1 or 2: without a Postulo set up, captures are kept, and what
 you send goes once it is.
@@ -243,7 +253,7 @@ while the code asks for a key that `en` does not have.
 | Path | What |
 | --- | --- |
 | `src/manifest.json` | Manifest V3 for both browsers; the build strips what each one would complain about |
-| `src/popup.*` | The button, the list of postings needing review, the form showing what was read, *Send* and *Keep* |
+| `src/popup.*` | The two header buttons (capture, add a listing), the list of postings needing review, the form showing what was read, *Send* and *Keep* |
 | `src/captures.*` | Captures in this browser: the list, to edit, send, hold back or delete |
 | `src/options.*` | Address, token, *Test*, *Save*; the language; the testing switch and the log |
 | `src/background.js` | Opens the settings on first install; sends what is waiting, reads Postulo's list of captures waiting for review and asks whether Postulo answers, every five minutes and at start |

@@ -8,6 +8,7 @@ import {
   describe,
   kindOfFailure,
   endpoint,
+  newListingUrl,
   normaliseInstance,
   originPattern,
   problemOf,
@@ -251,4 +252,9 @@ test("a 2xx answer that is not Postulo's JSON is a refusal with no status, so a 
   const error = await readResponse(html).catch((caught) => caught);
   assert.equal(kindOfFailure(error), "later");
   await assert.rejects(readResponse(fakeResponse(200, null)), refusal("notPostulo"));
+});
+
+test("the page that adds a listing is Postulo's own, under its path prefix, with nothing of ours in it", () => {
+  assert.equal(newListingUrl("https://postulo.example"), "https://postulo.example/listings/new/");
+  assert.equal(newListingUrl("https://example.org/postulo"), "https://example.org/postulo/listings/new/");
 });
