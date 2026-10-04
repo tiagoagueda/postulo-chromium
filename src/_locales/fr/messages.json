@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "L'espace de stockage de ce navigateur pour Postulo est plein. Envoyez ou supprimez des captures, puis réessayez."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo est injoignable : ce que vous envoyez attend dans ce navigateur jusqu'à ce qu'il réponde."
+  },
+  "footerOnline": {
+    "message": "Postulo répond"
+  },
+  "footerSlow": {
+    "message": "Postulo répond lentement"
+  },
+  "reviewHeading": {
+    "message": "À vérifier"
+  },
+  "waitingInPostulo": {
+    "message": "En attente de vérification dans Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Rien n'attend d'être vérifié."
+  },
+  "lastListed": {
+    "message": "Telles que Postulo les a listées pour la dernière fois, le $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Captures de cette annonce : $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "En attente de vérification : $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Ajouter une annonce"
+  },
+  "pictureOffer": {
+    "message": "Postulo peut conserver une image de la page entière telle que vous la voyez, connecté ou non. En envoyer une ?"
+  },
+  "pictureSend": {
+    "message": "Envoyer l'image"
+  },
+  "pictureSkip": {
+    "message": "Pas d'image"
+  },
+  "pictureDrawing": {
+    "message": "Dessin de la page…"
+  },
+  "pictureSending": {
+    "message": "Envoi de l'image…"
+  },
+  "pictureSent": {
+    "message": "L'image a été envoyée."
+  },
+  "pictureNotKept": {
+    "message": "Postulo n'a pas conservé l'image. La capture elle-même n'est pas affectée."
+  },
+  "pictureTooBig": {
+    "message": "La page est trop grande pour être envoyée comme image."
+  },
+  "pictureFailed": {
+    "message": "La page n'a pas pu être dessinée. Est-ce toujours celle que vous avez capturée ?"
+  },
+  "languageLabel": {
+    "message": "Langue"
+  },
+  "languageFollow": {
+    "message": "Suivre le navigateur"
+  },
+  "languageHint": {
+    "message": "Toutes les langues sauf l'anglais sont des ébauches qu'aucun locuteur n'a encore relues. Prend effet immédiatement, sans Enregistrer."
+  },
+  "reviewPageTitle": {
+    "message": "Vérifier une capture"
   }
 }

@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Úložisko tohto prehliadača pre Postulo je plné. Odošlite alebo odstráňte niektoré zachytenia a skúste to znova."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo nie je dostupný: čo odošlete, čaká v tomto prehliadači, kým neodpovie."
+  },
+  "footerOnline": {
+    "message": "Postulo odpovedá"
+  },
+  "footerSlow": {
+    "message": "Postulo odpovedá pomaly"
+  },
+  "reviewHeading": {
+    "message": "Čaká na kontrolu"
+  },
+  "waitingInPostulo": {
+    "message": "Čaká na kontrolu v Postule"
+  },
+  "nothingWaiting": {
+    "message": "Nič nečaká na kontrolu."
+  },
+  "lastListed": {
+    "message": "Tak, ako ich Postulo naposledy uviedol, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Zachytenia tejto ponuky: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Čaká na kontrolu: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Pridať ponuku"
+  },
+  "pictureOffer": {
+    "message": "Postulo si môže uchovať obrázok celej stránky tak, ako ju vidíte, prihlásený aj neprihlásený. Odoslať ho?"
+  },
+  "pictureSend": {
+    "message": "Odoslať obrázok"
+  },
+  "pictureSkip": {
+    "message": "Bez obrázka"
+  },
+  "pictureDrawing": {
+    "message": "Kreslí sa stránka…"
+  },
+  "pictureSending": {
+    "message": "Odosiela sa obrázok…"
+  },
+  "pictureSent": {
+    "message": "Obrázok bol odoslaný."
+  },
+  "pictureNotKept": {
+    "message": "Postulo obrázok neuchoval. Samotné zachytenie to neovplyvní."
+  },
+  "pictureTooBig": {
+    "message": "Stránka je príliš veľká na odoslanie ako obrázok."
+  },
+  "pictureFailed": {
+    "message": "Stránku sa nepodarilo nakresliť. Je to ešte tá, ktorú ste zachytili?"
+  },
+  "languageLabel": {
+    "message": "Jazyk"
+  },
+  "languageFollow": {
+    "message": "Podľa prehliadača"
+  },
+  "languageHint": {
+    "message": "Každý jazyk okrem angličtiny je koncept, ktorý ešte žiadny hovoriaci nskontroloval. Prejaví sa okamžite, bez Uložiť."
+  },
+  "reviewPageTitle": {
+    "message": "Skontrolovať zachytenie"
   }
 }

@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Lo spazio di archiviazione di questo browser per Postulo è pieno. Invia o elimina alcune acquisizioni, poi riprova."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo non è raggiungibile: ciò che invii resta in attesa in questo browser finché non risponde."
+  },
+  "footerOnline": {
+    "message": "Postulo risponde"
+  },
+  "footerSlow": {
+    "message": "Postulo risponde lentamente"
+  },
+  "reviewHeading": {
+    "message": "Da rivedere"
+  },
+  "waitingInPostulo": {
+    "message": "In attesa di revisione in Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Niente è in attesa di revisione."
+  },
+  "lastListed": {
+    "message": "Come li ha elencati Postulo l'ultima volta, il $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Acquisizioni di questo annuncio: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "In attesa di revisione: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Aggiungi un annuncio"
+  },
+  "pictureOffer": {
+    "message": "Postulo può conservare un'immagine dell'intera pagina così come la vedi, con o senza accesso. Vuoi inviarla?"
+  },
+  "pictureSend": {
+    "message": "Invia l'immagine"
+  },
+  "pictureSkip": {
+    "message": "Nessuna immagine"
+  },
+  "pictureDrawing": {
+    "message": "Disegno della pagina…"
+  },
+  "pictureSending": {
+    "message": "Invio dell'immagine…"
+  },
+  "pictureSent": {
+    "message": "L'immagine è stata inviata."
+  },
+  "pictureNotKept": {
+    "message": "Postulo non ha conservato l'immagine. L'acquisizione in sé non è stata toccata."
+  },
+  "pictureTooBig": {
+    "message": "La pagina è troppo grande per essere inviata come immagine."
+  },
+  "pictureFailed": {
+    "message": "Non è stato possibile disegnare la pagina. È ancora quella che hai acquisito?"
+  },
+  "languageLabel": {
+    "message": "Lingua"
+  },
+  "languageFollow": {
+    "message": "Segui il browser"
+  },
+  "languageHint": {
+    "message": "Ogni lingua tranne l'inglese è una bozza che nessun madrelingua ha ancora rivisto. Ha effetto subito, senza Salva."
+  },
+  "reviewPageTitle": {
+    "message": "Rivedi un'acquisizione"
   }
 }

@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Ο χώρος αποθήκευσης αυτού του προγράμματος περιήγησης για το Postulo είναι γεμάτος. Στείλτε ή διαγράψτε μερικές καταγραφές και δοκιμάστε ξανά."
+  },
+  "postuloUnreachable": {
+    "message": "Δεν είναι δυνατή η επικοινωνία με το Postulo: ό,τι στέλνετε περιμένει σε αυτό το πρόγραμμα περιήγησης μέχρι να απαντήσει."
+  },
+  "footerOnline": {
+    "message": "Το Postulo απαντά"
+  },
+  "footerSlow": {
+    "message": "Το Postulo αργεί να απαντήσει"
+  },
+  "reviewHeading": {
+    "message": "Χρειάζονται έλεγχο"
+  },
+  "waitingInPostulo": {
+    "message": "Αναμένει έλεγχο στο Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Τίποτα δεν αναμένει έλεγχο."
+  },
+  "lastListed": {
+    "message": "Όπως τις είχε καταχωρίσει τελευταία φορά το Postulo, στις $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Συλλήψεις αυτής της αγγελίας: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Αναμένουν έλεγχο: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Προσθήκη αγγελίας"
+  },
+  "pictureOffer": {
+    "message": "Το Postulo μπορεί να φυλάξει μια εικόνα ολόκληρης της σελίδας όπως τη βλέπετε, με σύνδεση ή χωρίς. Να σταλεί μία;"
+  },
+  "pictureSend": {
+    "message": "Αποστολή εικόνας"
+  },
+  "pictureSkip": {
+    "message": "Χωρίς εικόνα"
+  },
+  "pictureDrawing": {
+    "message": "Σχεδίαση της σελίδας…"
+  },
+  "pictureSending": {
+    "message": "Αποστολή της εικόνας…"
+  },
+  "pictureSent": {
+    "message": "Η εικόνα στάλθηκε."
+  },
+  "pictureNotKept": {
+    "message": "Το Postulo δεν φύλαξε την εικόνα. Η ίδια η σύλληψη δεν επηρεάζεται."
+  },
+  "pictureTooBig": {
+    "message": "Η σελίδα είναι πολύ μεγάλη για αποστολή ως εικόνα."
+  },
+  "pictureFailed": {
+    "message": "Η σελίδα δεν μπόρεσε να σχεδιαστεί. Είναι ακόμη η σελίδα που συλλάβατε;"
+  },
+  "languageLabel": {
+    "message": "Γλώσσα"
+  },
+  "languageFollow": {
+    "message": "Ακολούθηση του προγράμματος περιήγησης"
+  },
+  "languageHint": {
+    "message": "Όλες οι γλώσσες εκτός από τα αγγλικά είναι πρόχειρες μεταφράσεις που δεν τις έχει ελέγξει ακόμη κάποιος ομιλητής. Ισχύει αμέσως, χωρίς Αποθήκευση."
+  },
+  "reviewPageTitle": {
+    "message": "Έλεγχος σύλληψης"
   }
 }

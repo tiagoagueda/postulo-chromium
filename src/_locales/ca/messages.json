@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "L'emmagatzematge d'aquest navegador per a Postulo està ple. Envieu o suprimiu algunes captures i torneu-ho a provar."
+  },
+  "postuloUnreachable": {
+    "message": "No es pot arribar al Postulo: el que envieu espera en aquest navegador fins que respongui."
+  },
+  "footerOnline": {
+    "message": "El Postulo respon"
+  },
+  "footerSlow": {
+    "message": "El Postulo triga a respondre"
+  },
+  "reviewHeading": {
+    "message": "Pendent de revisió"
+  },
+  "waitingInPostulo": {
+    "message": "Pendent de revisió al Postulo"
+  },
+  "nothingWaiting": {
+    "message": "No hi ha res pendent de revisió."
+  },
+  "lastListed": {
+    "message": "Tal com el Postulo les va llistar per última vegada, el $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Captures d'aquesta oferta: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Pendents de revisió: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Afegeix una oferta"
+  },
+  "pictureOffer": {
+    "message": "El Postulo pot guardar una imatge de la pàgina sencera tal com la veieu, amb la sessió iniciada o no. Voleu enviar-la?"
+  },
+  "pictureSend": {
+    "message": "Envia la imatge"
+  },
+  "pictureSkip": {
+    "message": "Sense imatge"
+  },
+  "pictureDrawing": {
+    "message": "Dibuixant la pàgina…"
+  },
+  "pictureSending": {
+    "message": "Enviant la imatge…"
+  },
+  "pictureSent": {
+    "message": "S'ha enviat la imatge."
+  },
+  "pictureNotKept": {
+    "message": "El Postulo no ha guardat la imatge. La captura en si no s'ha vist afectada."
+  },
+  "pictureTooBig": {
+    "message": "La pàgina és massa gran per enviar-la com a imatge."
+  },
+  "pictureFailed": {
+    "message": "No s'ha pogut dibuixar la pàgina. Encara és la mateixa que vau capturar?"
+  },
+  "languageLabel": {
+    "message": "Idioma"
+  },
+  "languageFollow": {
+    "message": "Segueix el navegador"
+  },
+  "languageHint": {
+    "message": "Tots els idiomes tret de l'anglès són esborranys que cap parlant no ha revisat encara. Té efecte a l'instant, sense Desa."
+  },
+  "reviewPageTitle": {
+    "message": "Revisa una captura"
   }
 }

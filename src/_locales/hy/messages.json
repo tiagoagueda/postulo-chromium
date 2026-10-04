@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Այս դիտարկիչի Postulo-ի պահոցը լի է։ Ուղարկեք կամ ջնջեք մի քանի որսված նյութ և նորից փորձեք։"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo-ն հասանելի չէ․ ձեր ուղարկածը սպասում է այս դիտարկիչում, մինչև այն պատասխանի։"
+  },
+  "footerOnline": {
+    "message": "Postulo-ն պատասխանում է"
+  },
+  "footerSlow": {
+    "message": "Postulo-ն դանդաղ է պատասխանում"
+  },
+  "reviewHeading": {
+    "message": "Սպասում է վերանայման"
+  },
+  "waitingInPostulo": {
+    "message": "Սպասում է վերանայման Postulo-ում"
+  },
+  "nothingWaiting": {
+    "message": "Ոչինչ չի սպասում վերանայման։"
+  },
+  "lastListed": {
+    "message": "Ինչպես Postulo-ն վերջին անգամ թվարկեց դրանք՝ $WHEN$։",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Այս հայտարարության որսումներ՝ $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Սպասում է վերանայման՝ $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Ավելացնել հայտարարություն"
+  },
+  "pictureOffer": {
+    "message": "Postulo-ն կարող է պահել ամբողջ էջի նկարը այնպես, ինչպես դուք եք տեսնում՝ մուտք գործած կամ ոչ։ Ուղարկե՞լ։"
+  },
+  "pictureSend": {
+    "message": "Ուղարկել նկարը"
+  },
+  "pictureSkip": {
+    "message": "Առանց նկարի"
+  },
+  "pictureDrawing": {
+    "message": "Էջը գծվում է…"
+  },
+  "pictureSending": {
+    "message": "Նկարն ուղարկվում է…"
+  },
+  "pictureSent": {
+    "message": "Նկարն ուղարկվեց։"
+  },
+  "pictureNotKept": {
+    "message": "Postulo-ն նկարը չպահեց։ Բուն որսումը չի տուժել։"
+  },
+  "pictureTooBig": {
+    "message": "Էջը չափազանց մեծ է նկարով ուղարկելու համար։"
+  },
+  "pictureFailed": {
+    "message": "Էջը հնարավոր չեղավ գծել։ Սա դեռ այն էջն է, որը որսացիք՞։"
+  },
+  "languageLabel": {
+    "message": "Լեզու"
+  },
+  "languageFollow": {
+    "message": "Հետևել դիտարկիչին"
+  },
+  "languageHint": {
+    "message": "Անգլերենից բացի յուրաքանչյուր լեզու սևագիր է, որը դեռ ոչ մի խոսող չի վերանայել։ Ուժի մեջ է մտնում անմիջապես, առանց Պահպանելու։"
+  },
+  "reviewPageTitle": {
+    "message": "Որսման վերանայում"
   }
 }

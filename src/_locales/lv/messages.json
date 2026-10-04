@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Šī pārlūka krātuve Postulo ir pilna. Nosūtiet vai izdzēsiet dažus tvērumus un mēģiniet vēlreiz."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo nav sasniedzams: tas, ko sūtāt, gaida šajā pārlūkā, līdz tas atbild."
+  },
+  "footerOnline": {
+    "message": "Postulo atbild"
+  },
+  "footerSlow": {
+    "message": "Postulo atbild lēni"
+  },
+  "reviewHeading": {
+    "message": "Jāpārskata"
+  },
+  "waitingInPostulo": {
+    "message": "Gaida pārskatīšanu Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Nekas negaida pārskatīšanu."
+  },
+  "lastListed": {
+    "message": "Kā Postulo pēdējoreiz uzskaitīja, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Šī sludinājuma tvērumi: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Gaida pārskatīšanu: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Pievienot sludinājumu"
+  },
+  "pictureOffer": {
+    "message": "Postulo var saglabāt visas lapas attēlu tādu, kādu to redzat, pierakstījies vai nē. Vai sūtīt?"
+  },
+  "pictureSend": {
+    "message": "Sūtīt attēlu"
+  },
+  "pictureSkip": {
+    "message": "Bez attēla"
+  },
+  "pictureDrawing": {
+    "message": "Lapa tiek zīmēta…"
+  },
+  "pictureSending": {
+    "message": "Attēls tiek sūtīts…"
+  },
+  "pictureSent": {
+    "message": "Attēls nosūtīts."
+  },
+  "pictureNotKept": {
+    "message": "Postulo attēlu nesaglabāja. Pats tvērums nav ietekmēts."
+  },
+  "pictureTooBig": {
+    "message": "Lapa ir pārāk liela, lai to sūtītu kā attēlu."
+  },
+  "pictureFailed": {
+    "message": "Lapu neizdevās uzzīmēt. Vai tā joprojām ir tā, ko tvērāt?"
+  },
+  "languageLabel": {
+    "message": "Valoda"
+  },
+  "languageFollow": {
+    "message": "Sekot pārlūkam"
+  },
+  "languageHint": {
+    "message": "Katra valoda, izņemot angļu, ir melnraksts, ko neviens runātājs vēl nav pārskatījis. Stājas spēkā uzreiz, bez Saglabāt."
+  },
+  "reviewPageTitle": {
+    "message": "Tvēruma pārskatīšana"
   }
 }

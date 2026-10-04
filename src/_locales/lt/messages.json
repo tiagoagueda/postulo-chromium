@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Šios naršyklės saugykla Postulo yra pilna. Išsiųskite arba ištrinkite kelis užfiksuotus įrašus ir bandykite dar kartą."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo nepasiekiamas: tai, ką siunčiate, laukia šioje naršyklėje, kol jis atsakys."
+  },
+  "footerOnline": {
+    "message": "Postulo atsako"
+  },
+  "footerSlow": {
+    "message": "Postulo atsako lėtai"
+  },
+  "reviewHeading": {
+    "message": "Reikia peržiūrėti"
+  },
+  "waitingInPostulo": {
+    "message": "Laukia peržiūros Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Nieko nelaukia peržiūros."
+  },
+  "lastListed": {
+    "message": "Kaip Postulo paskutinį kartą išvardijo, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Šio skelbimo fiksavimai: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Laukia peržiūros: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Pridėti skelbimą"
+  },
+  "pictureOffer": {
+    "message": "Postulo gali išsaugoti viso puslapio vaizdą tokį, kokį matote, prisijungus ar ne. Siųsti?"
+  },
+  "pictureSend": {
+    "message": "Siųsti vaizdą"
+  },
+  "pictureSkip": {
+    "message": "Be vaizdo"
+  },
+  "pictureDrawing": {
+    "message": "Piešiamas puslapis…"
+  },
+  "pictureSending": {
+    "message": "Siunčiamas vaizdas…"
+  },
+  "pictureSent": {
+    "message": "Vaizdas išsiųstas."
+  },
+  "pictureNotKept": {
+    "message": "Postulo vaizdo neišsaugojo. Pats fiksavimas nepaveiktas."
+  },
+  "pictureTooBig": {
+    "message": "Puslapis per didelis, kad būtų siunčiamas kaip vaizdas."
+  },
+  "pictureFailed": {
+    "message": "Puslapio nepavyko nupiešti. Ar tai vis dar tas puslapis, kurį užfiksavote?"
+  },
+  "languageLabel": {
+    "message": "Kalba"
+  },
+  "languageFollow": {
+    "message": "Pagal naršyklę"
+  },
+  "languageHint": {
+    "message": "Kiekviena kalba, išskyrus anglų, yra juodraštis, kurio dar neperžiūrėjo joks šnekėtojas. Įsigalioja iš karto, be išsaugojimo."
+  },
+  "reviewPageTitle": {
+    "message": "Fiksavimo peržiūra"
   }
 }

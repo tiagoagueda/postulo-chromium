@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Webbläsarens lagringsutrymme för Postulo är fullt. Skicka eller ta bort några fångster och försök igen."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo kan inte nås: det du skickar väntar i den här webbläsaren tills den svarar."
+  },
+  "footerOnline": {
+    "message": "Postulo svarar"
+  },
+  "footerSlow": {
+    "message": "Postulo svarar långsamt"
+  },
+  "reviewHeading": {
+    "message": "Behöver granskas"
+  },
+  "waitingInPostulo": {
+    "message": "Väntar på granskning i Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Inget väntar på granskning."
+  },
+  "lastListed": {
+    "message": "Så som Postulo senast listade dem, den $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Fångster av den här annonsen: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Väntar på granskning: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Lägg till en annons"
+  },
+  "pictureOffer": {
+    "message": "Postulo kan spara en bild av hela sidan så som du ser den, inloggad eller inte. Skicka en?"
+  },
+  "pictureSend": {
+    "message": "Skicka bilden"
+  },
+  "pictureSkip": {
+    "message": "Ingen bild"
+  },
+  "pictureDrawing": {
+    "message": "Ritar sidan…"
+  },
+  "pictureSending": {
+    "message": "Skickar bilden…"
+  },
+  "pictureSent": {
+    "message": "Bilden skickades."
+  },
+  "pictureNotKept": {
+    "message": "Postulo sparade inte bilden. Själva fångsten påverkas inte."
+  },
+  "pictureTooBig": {
+    "message": "Sidan är för stor för att skickas som bild."
+  },
+  "pictureFailed": {
+    "message": "Sidan kunde inte ritas. Är det fortfarande den du fångade?"
+  },
+  "languageLabel": {
+    "message": "Språk"
+  },
+  "languageFollow": {
+    "message": "Följ webbläsaren"
+  },
+  "languageHint": {
+    "message": "Alla språk utom engelska är utkast som ingen talare har granskat än. Gäller direkt, utan Spara."
+  },
+  "reviewPageTitle": {
+    "message": "Granska en fångst"
   }
 }

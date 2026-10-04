@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Nabigatzaile honek Postulorako duen biltegiratzea beteta dago. Bidali edo ezabatu harrapaketa batzuk eta saiatu berriro."
+  },
+  "postuloUnreachable": {
+    "message": "Ezin da Postulorekin harremanetan jarri: bidaltzen duzuna nabigatzaile honetan geratzen da erantzun arte."
+  },
+  "footerOnline": {
+    "message": "Postulok erantzuten du"
+  },
+  "footerSlow": {
+    "message": "Postulok mantso erantzuten du"
+  },
+  "reviewHeading": {
+    "message": "Berrikusi beharrekoak"
+  },
+  "waitingInPostulo": {
+    "message": "Postulon berrikusteko zain"
+  },
+  "nothingWaiting": {
+    "message": "Ez dago ezer berrikusteko zain."
+  },
+  "lastListed": {
+    "message": "Postulok azkenekoz zerrendatu zituen bezala, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Iragarki honen harrapaketak: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Berrikusteko zain: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Gehitu iragarki bat"
+  },
+  "pictureOffer": {
+    "message": "Postulok orriaren irudi osoa gorde dezake, zuk ikusten duzun bezala, saioa hasita edo ez. Bidali bat?"
+  },
+  "pictureSend": {
+    "message": "Bidali irudia"
+  },
+  "pictureSkip": {
+    "message": "Irudirik ez"
+  },
+  "pictureDrawing": {
+    "message": "Orria marrazten…"
+  },
+  "pictureSending": {
+    "message": "Irudia bidaltzen…"
+  },
+  "pictureSent": {
+    "message": "Irudia bidali da."
+  },
+  "pictureNotKept": {
+    "message": "Postulok ez du irudia gorde. Harrapaketa bera ez da aldatu."
+  },
+  "pictureTooBig": {
+    "message": "Orria handiegia da irudi gisa bidaltzeko."
+  },
+  "pictureFailed": {
+    "message": "Ezin izan da orria marraztu. Harrapatu zenuen berbera al da oraindik?"
+  },
+  "languageLabel": {
+    "message": "Hizkuntza"
+  },
+  "languageFollow": {
+    "message": "Jarraitu nabigatzailea"
+  },
+  "languageHint": {
+    "message": "Ingelesa ez beste hizkuntza guztiak zirriborroak dira, eta hiztunik ez da oraindik haiek berrikusten aritu. Berehala du eragina, Gorde sakatu gabe."
+  },
+  "reviewPageTitle": {
+    "message": "Berrikusi harrapaketa bat"
   }
 }

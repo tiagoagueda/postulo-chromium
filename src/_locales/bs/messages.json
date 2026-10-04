@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Pohrana ovog preglednika za Postulo je puna. Pošaljite ili izbrišite neka snimanja, pa pokušajte ponovo."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo nije dostupan: ono što pošaljete čeka u ovom pregledniku dok ne odgovori."
+  },
+  "footerOnline": {
+    "message": "Postulo odgovara"
+  },
+  "footerSlow": {
+    "message": "Postulo sporo odgovara"
+  },
+  "reviewHeading": {
+    "message": "Čeka pregled"
+  },
+  "waitingInPostulo": {
+    "message": "Čeka pregled u Postulu"
+  },
+  "nothingWaiting": {
+    "message": "Ništa ne čeka pregled."
+  },
+  "lastListed": {
+    "message": "Kako ih je Postulo zadnji put naveo, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Hvatanja ovog oglasa: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Čeka pregled: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Dodaj oglas"
+  },
+  "pictureOffer": {
+    "message": "Postulo može sačuvati sliku cijele stranice onako kako je vidite, prijavljeni ili ne. Poslati je?"
+  },
+  "pictureSend": {
+    "message": "Pošalji sliku"
+  },
+  "pictureSkip": {
+    "message": "Bez slike"
+  },
+  "pictureDrawing": {
+    "message": "Crtanje stranice…"
+  },
+  "pictureSending": {
+    "message": "Slanje slike…"
+  },
+  "pictureSent": {
+    "message": "Slika je poslana."
+  },
+  "pictureNotKept": {
+    "message": "Postulo nije sačuvao sliku. Samo hvatanje nije pogođeno."
+  },
+  "pictureTooBig": {
+    "message": "Stranica je prevelika za slanje kao slika."
+  },
+  "pictureFailed": {
+    "message": "Stranicu nije bilo moguće nacrtati. Je li to još uvijek ona koju ste uhvatili?"
+  },
+  "languageLabel": {
+    "message": "Jezik"
+  },
+  "languageFollow": {
+    "message": "Prati preglednik"
+  },
+  "languageHint": {
+    "message": "Svaki jezik osim engleskog je nacrt koji još nijedan govornik nije pregledao. Stupa na snagu odmah, bez Spremanja."
+  },
+  "reviewPageTitle": {
+    "message": "Pregled hvatanja"
   }
 }

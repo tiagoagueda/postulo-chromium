@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Mae storfa'r porwr hwn ar gyfer Postulo yn llawn. Anfonwch neu dilëwch rai dalfeydd, yna rhowch gynnig arall arni."
+  },
+  "postuloUnreachable": {
+    "message": "Does dim modd cyrraedd Postulo: mae'r hyn rydych chi'n ei anfon yn aros yn y porwr hwn nes iddo ateb."
+  },
+  "footerOnline": {
+    "message": "Mae Postulo'n ateb"
+  },
+  "footerSlow": {
+    "message": "Mae Postulo'n araf i ateb"
+  },
+  "reviewHeading": {
+    "message": "Angen adolygu"
+  },
+  "waitingInPostulo": {
+    "message": "Yn aros i gael ei adolygu yn Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Does dim byd yn aros i gael ei adolygu."
+  },
+  "lastListed": {
+    "message": "Fel y rhestrodd Postulo nhw ddiwethaf, ar $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Daliadau o'r hysbyseb hon: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Yn aros i gael eu hadolygu: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Ychwanegu hysbyseb"
+  },
+  "pictureOffer": {
+    "message": "Gall Postulo gadw llun o'r dudalen gyfan fel rydych chi'n ei gweld, wedi mewngofnodi neu beidio. Anfon un?"
+  },
+  "pictureSend": {
+    "message": "Anfon y llun"
+  },
+  "pictureSkip": {
+    "message": "Dim llun"
+  },
+  "pictureDrawing": {
+    "message": "Yn tynnu llun o'r dudalen…"
+  },
+  "pictureSending": {
+    "message": "Yn anfon y llun…"
+  },
+  "pictureSent": {
+    "message": "Anfonwyd y llun."
+  },
+  "pictureNotKept": {
+    "message": "Wnaeth Postulo ddim cadw'r llun. Dydy'r ddalfa ei hun ddim wedi'i heffeithio."
+  },
+  "pictureTooBig": {
+    "message": "Mae'r dudalen yn rhy fawr i'w hanfon fel llun."
+  },
+  "pictureFailed": {
+    "message": "Doedd dim modd tynnu llun o'r dudalen. Ai hon yw'r un a ddaliwyd gennych o hyd?"
+  },
+  "languageLabel": {
+    "message": "Iaith"
+  },
+  "languageFollow": {
+    "message": "Dilyn y porwr"
+  },
+  "languageHint": {
+    "message": "Mae pob iaith ac eithrio Saesneg yn ddrafft nad oes siaradwr wedi'i adolygu eto. Yn dod i rym ar unwaith, heb Gadw."
+  },
+  "reviewPageTitle": {
+    "message": "Adolygu dalfa"
   }
 }

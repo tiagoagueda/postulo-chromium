@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Nettleserens lagringsplass for Postulo er full. Send eller slett noen fangster, og prøv igjen."
+  },
+  "postuloUnreachable": {
+    "message": "Får ikke kontakt med Postulo: det du sender, venter i denne nettleseren til Postulo svarer."
+  },
+  "footerOnline": {
+    "message": "Postulo svarer"
+  },
+  "footerSlow": {
+    "message": "Postulo svarer tregt"
+  },
+  "reviewHeading": {
+    "message": "Trenger gjennomgang"
+  },
+  "waitingInPostulo": {
+    "message": "Venter på gjennomgang i Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Ingenting venter på gjennomgang."
+  },
+  "lastListed": {
+    "message": "Slik Postulo sist listet dem, den $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Fangster av denne annonsen: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Venter på gjennomgang: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Legg til en annonse"
+  },
+  "pictureOffer": {
+    "message": "Postulo kan beholde et bilde av hele siden slik du ser den, innlogget eller ikke. Sende ett?"
+  },
+  "pictureSend": {
+    "message": "Send bildet"
+  },
+  "pictureSkip": {
+    "message": "Ikke noe bilde"
+  },
+  "pictureDrawing": {
+    "message": "Tegner siden…"
+  },
+  "pictureSending": {
+    "message": "Sender bildet…"
+  },
+  "pictureSent": {
+    "message": "Bildet ble sendt."
+  },
+  "pictureNotKept": {
+    "message": "Postulo beholdt ikke bildet. Selve fangsten er upåvirket."
+  },
+  "pictureTooBig": {
+    "message": "Siden er for stor til å sendes som bilde."
+  },
+  "pictureFailed": {
+    "message": "Siden kunne ikke tegnes. Er det fortsatt den du fanget?"
+  },
+  "languageLabel": {
+    "message": "Språk"
+  },
+  "languageFollow": {
+    "message": "Følg nettleseren"
+  },
+  "languageHint": {
+    "message": "Alle språk unntatt engelsk er utkast som ingen som snakker språket har gjennomgått ennå. Trer i kraft med en gang, uten Lagre."
+  },
+  "reviewPageTitle": {
+    "message": "Gjennomgå en fangst"
   }
 }

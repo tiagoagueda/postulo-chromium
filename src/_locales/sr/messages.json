@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Складиште овог прегледача за Postulo је пуно. Пошаљите или обришите неколико снимака, па покушајте поново."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo није доступан: оно што пошаљете чека у овом прегледачу док не одговори."
+  },
+  "footerOnline": {
+    "message": "Postulo одговара"
+  },
+  "footerSlow": {
+    "message": "Postulo споро одговара"
+  },
+  "reviewHeading": {
+    "message": "Чека преглед"
+  },
+  "waitingInPostulo": {
+    "message": "Чека преглед у Postulo-у"
+  },
+  "nothingWaiting": {
+    "message": "Ништа не чека преглед."
+  },
+  "lastListed": {
+    "message": "Како их је Postulo последњи пут навео, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Снимака овог огласа: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Чека преглед: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Додај оглас"
+  },
+  "pictureOffer": {
+    "message": "Postulo може да сачува слику целе странице онако како је видите, пријављени или не. Послати једну?"
+  },
+  "pictureSend": {
+    "message": "Пошаљи слику"
+  },
+  "pictureSkip": {
+    "message": "Без слике"
+  },
+  "pictureDrawing": {
+    "message": "Исцртавање странице…"
+  },
+  "pictureSending": {
+    "message": "Слање слике…"
+  },
+  "pictureSent": {
+    "message": "Слика је послата."
+  },
+  "pictureNotKept": {
+    "message": "Postulo није сачувао слику. Сам снимак није погођен."
+  },
+  "pictureTooBig": {
+    "message": "Страница је превелика да би се послала као слика."
+  },
+  "pictureFailed": {
+    "message": "Страница није могла да се исцрта. Да ли је то још увек она коју сте ухватили?"
+  },
+  "languageLabel": {
+    "message": "Језик"
+  },
+  "languageFollow": {
+    "message": "Прати прегледач"
+  },
+  "languageHint": {
+    "message": "Сваки језик осим енглеског је нацрт који још ниједан говорник није прегледао. Ступа на снагу одмах, без чувања."
+  },
+  "reviewPageTitle": {
+    "message": "Преглед снимка"
   }
 }

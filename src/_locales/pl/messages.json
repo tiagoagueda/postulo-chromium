@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Pamięć tej przeglądarki dla Postulo jest pełna. Wyślij lub usuń część przechwyconych treści i spróbuj ponownie."
+  },
+  "postuloUnreachable": {
+    "message": "Nie można połączyć się z Postulo: to, co wyślesz, czeka w tej przeglądarce, aż Postulo odpowie."
+  },
+  "footerOnline": {
+    "message": "Postulo odpowiada"
+  },
+  "footerSlow": {
+    "message": "Postulo odpowiada wolno"
+  },
+  "reviewHeading": {
+    "message": "Do sprawdzenia"
+  },
+  "waitingInPostulo": {
+    "message": "Czeka na sprawdzenie w Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Nic nie czeka na sprawdzenie."
+  },
+  "lastListed": {
+    "message": "Tak, jak Postulo ostatnio je wyświetliło: $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Przechwycenia tego ogłoszenia: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Czeka na sprawdzenie: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Dodaj ogłoszenie"
+  },
+  "pictureOffer": {
+    "message": "Postulo może zachować obraz całej strony tak, jak ją widzisz, po zalogowaniu lub bez. Wysłać go?"
+  },
+  "pictureSend": {
+    "message": "Wyślij obraz"
+  },
+  "pictureSkip": {
+    "message": "Bez obrazu"
+  },
+  "pictureDrawing": {
+    "message": "Rysowanie strony…"
+  },
+  "pictureSending": {
+    "message": "Wysyłanie obrazu…"
+  },
+  "pictureSent": {
+    "message": "Obraz został wysłany."
+  },
+  "pictureNotKept": {
+    "message": "Postulo nie zachowało obrazu. Samo przechwycenie pozostaje bez zmian."
+  },
+  "pictureTooBig": {
+    "message": "Strona jest za duża, by wysłać ją jako obraz."
+  },
+  "pictureFailed": {
+    "message": "Nie udało się narysować strony. Czy to wciąż strona, która została przechwycona?"
+  },
+  "languageLabel": {
+    "message": "Język"
+  },
+  "languageFollow": {
+    "message": "Zgodnie z przeglądarką"
+  },
+  "languageHint": {
+    "message": "Każdy język poza angielskim to szkic, którego żaden użytkownik języka jeszcze nie sprawdził. Zmiana działa od razu, bez Zapisz."
+  },
+  "reviewPageTitle": {
+    "message": "Sprawdź przechwycenie"
   }
 }

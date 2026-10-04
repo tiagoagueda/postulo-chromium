@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "O almacenamento deste navegador para Postulo está cheo. Envía ou elimina algunhas capturas e téntao de novo."
+  },
+  "postuloUnreachable": {
+    "message": "Non se pode contactar con Postulo: o que envíes agarda neste navegador ata que responda."
+  },
+  "footerOnline": {
+    "message": "Postulo responde"
+  },
+  "footerSlow": {
+    "message": "Postulo tarda en responder"
+  },
+  "reviewHeading": {
+    "message": "Pendente de revisión"
+  },
+  "waitingInPostulo": {
+    "message": "Á espera de revisión en Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Non hai nada á espera de revisión."
+  },
+  "lastListed": {
+    "message": "Tal como Postulo as listou por última vez, o $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Capturas desta oferta: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Á espera de revisión: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Engadir unha oferta"
+  },
+  "pictureOffer": {
+    "message": "Postulo pode gardar unha imaxe da páxina enteira tal como a ves, con sesión iniciada ou non. Enviar unha?"
+  },
+  "pictureSend": {
+    "message": "Enviar a imaxe"
+  },
+  "pictureSkip": {
+    "message": "Sen imaxe"
+  },
+  "pictureDrawing": {
+    "message": "Debuxando a páxina…"
+  },
+  "pictureSending": {
+    "message": "Enviando a imaxe…"
+  },
+  "pictureSent": {
+    "message": "Enviouse a imaxe."
+  },
+  "pictureNotKept": {
+    "message": "Postulo non gardou a imaxe. A captura en si non se ve afectada."
+  },
+  "pictureTooBig": {
+    "message": "A páxina é demasiado grande para enviala como imaxe."
+  },
+  "pictureFailed": {
+    "message": "Non se puido debuxar a páxina. Segue a ser a que capturaches?"
+  },
+  "languageLabel": {
+    "message": "Idioma"
+  },
+  "languageFollow": {
+    "message": "Seguir o navegador"
+  },
+  "languageHint": {
+    "message": "Todos os idiomas agás o inglés son borradores que ningún falante revisou aínda. Ten efecto de inmediato, sen Gardar."
+  },
+  "reviewPageTitle": {
+    "message": "Revisar unha captura"
   }
 }

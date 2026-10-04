@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "De opslag van deze browser voor Postulo is vol. Verstuur of verwijder enkele vastleggingen en probeer het opnieuw."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo is niet bereikbaar: wat u verstuurt, wacht in deze browser tot Postulo antwoordt."
+  },
+  "footerOnline": {
+    "message": "Postulo antwoordt"
+  },
+  "footerSlow": {
+    "message": "Postulo antwoordt langzaam"
+  },
+  "reviewHeading": {
+    "message": "Nog te beoordelen"
+  },
+  "waitingInPostulo": {
+    "message": "Wacht op beoordeling in Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Er wacht niets op beoordeling."
+  },
+  "lastListed": {
+    "message": "Zoals Postulo ze het laatst weergaf, op $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Vastleggingen van deze vacature: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Wacht op beoordeling: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Vacature toevoegen"
+  },
+  "pictureOffer": {
+    "message": "Postulo kan een afbeelding van de hele pagina bewaren zoals u die ziet, ingelogd of niet. Er een versturen?"
+  },
+  "pictureSend": {
+    "message": "Afbeelding versturen"
+  },
+  "pictureSkip": {
+    "message": "Geen afbeelding"
+  },
+  "pictureDrawing": {
+    "message": "De pagina wordt getekend…"
+  },
+  "pictureSending": {
+    "message": "De afbeelding wordt verstuurd…"
+  },
+  "pictureSent": {
+    "message": "De afbeelding is verstuurd."
+  },
+  "pictureNotKept": {
+    "message": "Postulo heeft de afbeelding niet bewaard. De vastlegging zelf blijft ongewijzigd."
+  },
+  "pictureTooBig": {
+    "message": "De pagina is te groot om als afbeelding te versturen."
+  },
+  "pictureFailed": {
+    "message": "De pagina kon niet worden getekend. Is het nog steeds de pagina die u hebt vastgelegd?"
+  },
+  "languageLabel": {
+    "message": "Taal"
+  },
+  "languageFollow": {
+    "message": "De browser volgen"
+  },
+  "languageHint": {
+    "message": "Elke taal behalve Engels is een concept dat nog door geen enkele spreker is nagekeken. Gaat direct in, zonder Opslaan."
+  },
+  "reviewPageTitle": {
+    "message": "Een vastlegging beoordelen"
   }
 }

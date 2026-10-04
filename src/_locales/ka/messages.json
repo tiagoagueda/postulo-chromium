@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "ამ ბრაუზერის საცავი Postulo-სთვის სავსეა. გააგზავნეთ ან წაშალეთ რამდენიმე აღებული ჩანაწერი და სცადეთ ხელახლა."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo-სთან დაკავშირება ვერ ხერხდება: რასაც გაგზავნით, ამ ბრაუზერში დაელოდება, სანამ ის არ უპასუხებს."
+  },
+  "footerOnline": {
+    "message": "Postulo პასუხობს"
+  },
+  "footerSlow": {
+    "message": "Postulo ნელა პასუხობს"
+  },
+  "reviewHeading": {
+    "message": "საჭიროებს გადახედვას"
+  },
+  "waitingInPostulo": {
+    "message": "ელოდება გადახედვას Postulo-ში"
+  },
+  "nothingWaiting": {
+    "message": "გადახედვას არაფერი ელოდება."
+  },
+  "lastListed": {
+    "message": "როგორც Postulo-მ ბოლოს ჩამოთვალა, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "ამ განცხადების ჩანაწერები: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "გადახედვას ელოდება: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "განცხადების დამატება"
+  },
+  "pictureOffer": {
+    "message": "Postulo-ს შეუძლია შეინახოს მთელი გვერდის სურათი ისე, როგორც თქვენ ხედავთ, სისტემაში შესული თუ არა. გავაგზავნოთ?"
+  },
+  "pictureSend": {
+    "message": "სურათის გაგზავნა"
+  },
+  "pictureSkip": {
+    "message": "სურათის გარეშე"
+  },
+  "pictureDrawing": {
+    "message": "გვერდი იხატება…"
+  },
+  "pictureSending": {
+    "message": "სურათი იგზავნება…"
+  },
+  "pictureSent": {
+    "message": "სურათი გაიგზავნა."
+  },
+  "pictureNotKept": {
+    "message": "Postulo-მ სურათი არ შეინახა. თავად ჩანაწერს ეს არ ეხება."
+  },
+  "pictureTooBig": {
+    "message": "გვერდი ზედმეტად დიდია სურათად გასაგზავნად."
+  },
+  "pictureFailed": {
+    "message": "გვერდის დახატვა ვერ მოხერხდა. ის ხომ კვლავ ის გვერდია, რომელიც აიღეთ?"
+  },
+  "languageLabel": {
+    "message": "ენა"
+  },
+  "languageFollow": {
+    "message": "ბრაუზერის მიხედვით"
+  },
+  "languageHint": {
+    "message": "ინგლისურის გარდა ყველა ენა არის დრაფტი, რომელიც ჯერ არცერთ მცოდნეს არ გადაუხედავს. ძალაში შედის მაშინვე, შენახვის გარეშე."
+  },
+  "reviewPageTitle": {
+    "message": "ჩანაწერის გადახედვა"
   }
 }

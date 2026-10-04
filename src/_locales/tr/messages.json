@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Bu tarayıcının Postulo için ayırdığı depolama alanı dolu. Bazı yakalamaları gönderin veya silin, ardından tekrar deneyin."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo'ya ulaşılamıyor: gönderdikleriniz yanıt verene kadar bu tarayıcıda bekler."
+  },
+  "footerOnline": {
+    "message": "Postulo yanıt veriyor"
+  },
+  "footerSlow": {
+    "message": "Postulo geç yanıt veriyor"
+  },
+  "reviewHeading": {
+    "message": "İnceleme bekleyenler"
+  },
+  "waitingInPostulo": {
+    "message": "Postulo'da inceleme bekliyor"
+  },
+  "nothingWaiting": {
+    "message": "İnceleme bekleyen bir şey yok."
+  },
+  "lastListed": {
+    "message": "Postulo'nun son listelediği haliyle, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Bu ilanın yakalamaları: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "İnceleme bekleyen: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "İlan ekle"
+  },
+  "pictureOffer": {
+    "message": "Postulo, oturum açmış olsanız da olmasanız da sayfanın tamamının sizin gördüğünüz gibi bir resmini saklayabilir. Bir resim gönderilsin mi?"
+  },
+  "pictureSend": {
+    "message": "Resmi gönder"
+  },
+  "pictureSkip": {
+    "message": "Resim yok"
+  },
+  "pictureDrawing": {
+    "message": "Sayfa çiziliyor…"
+  },
+  "pictureSending": {
+    "message": "Resim gönderiliyor…"
+  },
+  "pictureSent": {
+    "message": "Resim gönderildi."
+  },
+  "pictureNotKept": {
+    "message": "Postulo resmi saklamadı. Yakalamanın kendisi etkilenmez."
+  },
+  "pictureTooBig": {
+    "message": "Sayfa resim olarak göndermek için çok büyük."
+  },
+  "pictureFailed": {
+    "message": "Sayfa çizilemedi. Hâlâ yakaladığınız sayfa mı?"
+  },
+  "languageLabel": {
+    "message": "Dil"
+  },
+  "languageFollow": {
+    "message": "Tarayıcıyı izle"
+  },
+  "languageHint": {
+    "message": "İngilizce dışındaki her dil, henüz hiçbir anadil konuşucusunun incelemediği bir taslaktır. Kaydet'e gerek kalmadan hemen geçerli olur."
+  },
+  "reviewPageTitle": {
+    "message": "Bir yakalamayı incele"
   }
 }

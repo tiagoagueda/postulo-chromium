@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "L-ispazju ta' dan il-brawżer għal Postulo mimli. Ibgħat jew ħassar xi qbid, imbagħad erġa' pprova."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo ma jistax jintlaħaq: dak li tibgħat jistenna f'dan il-brawżer sakemm iwieġeb."
+  },
+  "footerOnline": {
+    "message": "Postulo qed iwieġeb"
+  },
+  "footerSlow": {
+    "message": "Postulo qed iwieġeb bil-mod"
+  },
+  "reviewHeading": {
+    "message": "Jeħtieġ reviżjoni"
+  },
+  "waitingInPostulo": {
+    "message": "Qed jistenna r-reviżjoni f'Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Xejn ma qed jistenna r-reviżjoni."
+  },
+  "lastListed": {
+    "message": "Kif Postulo elenkahom l-aħħar, fi $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Qabdiet ta' dan l-anunzju: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Jistenna r-reviżjoni: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Żid anunzju"
+  },
+  "pictureOffer": {
+    "message": "Postulo jista' jżomm stampa tal-paġna kollha kif tarahha int, kemm jekk dħalt kemm jekk le. Tibgħat waħda?"
+  },
+  "pictureSend": {
+    "message": "Ibgħat l-istampa"
+  },
+  "pictureSkip": {
+    "message": "L-ebda stampa"
+  },
+  "pictureDrawing": {
+    "message": "Qed titfassal il-paġna…"
+  },
+  "pictureSending": {
+    "message": "Qed tintbagħat l-istampa…"
+  },
+  "pictureSent": {
+    "message": "L-istampa ntbagħtet."
+  },
+  "pictureNotKept": {
+    "message": "Postulo ma żammx l-istampa. Il-qbid innifsu ma jinbidilx."
+  },
+  "pictureTooBig": {
+    "message": "Il-paġna hi kbira wisq biex tintbagħat bħala stampa."
+  },
+  "pictureFailed": {
+    "message": "Il-paġna ma setgħetx titfassal. Għadha dik li qbadt?"
+  },
+  "languageLabel": {
+    "message": "Lingwa"
+  },
+  "languageFollow": {
+    "message": "Segwi l-brawżer"
+  },
+  "languageHint": {
+    "message": "Kull lingwa għajr l-Ingliż hi abbozz li għad ma reġa' ħadd mill-kelliema. Jaħdem minnufih, mingħajr Salva."
+  },
+  "reviewPageTitle": {
+    "message": "Irrevedi qbid"
   }
 }

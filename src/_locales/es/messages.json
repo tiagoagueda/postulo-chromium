@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "El almacenamiento de este navegador para Postulo está lleno. Envía o elimina algunas capturas e inténtalo de nuevo."
+  },
+  "postuloUnreachable": {
+    "message": "No se puede contactar con Postulo: lo que envíes espera en este navegador hasta que responda."
+  },
+  "footerOnline": {
+    "message": "Postulo responde"
+  },
+  "footerSlow": {
+    "message": "Postulo tarda en responder"
+  },
+  "reviewHeading": {
+    "message": "Pendientes de revisión"
+  },
+  "waitingInPostulo": {
+    "message": "Esperando revisión en Postulo"
+  },
+  "nothingWaiting": {
+    "message": "No hay nada pendiente de revisión."
+  },
+  "lastListed": {
+    "message": "Tal como Postulo las listó por última vez, el $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Capturas de esta oferta: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Pendientes de revisión: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Añadir una oferta"
+  },
+  "pictureOffer": {
+    "message": "Postulo puede guardar una imagen de toda la página tal como la ves, con sesión iniciada o no. ¿Enviar una?"
+  },
+  "pictureSend": {
+    "message": "Enviar la imagen"
+  },
+  "pictureSkip": {
+    "message": "Sin imagen"
+  },
+  "pictureDrawing": {
+    "message": "Dibujando la página…"
+  },
+  "pictureSending": {
+    "message": "Enviando la imagen…"
+  },
+  "pictureSent": {
+    "message": "Se ha enviado la imagen."
+  },
+  "pictureNotKept": {
+    "message": "Postulo no guardó la imagen. La captura en sí no se ve afectada."
+  },
+  "pictureTooBig": {
+    "message": "La página es demasiado grande para enviarla como imagen."
+  },
+  "pictureFailed": {
+    "message": "No se ha podido dibujar la página. ¿Sigue siendo la que capturaste?"
+  },
+  "languageLabel": {
+    "message": "Idioma"
+  },
+  "languageFollow": {
+    "message": "Seguir el navegador"
+  },
+  "languageHint": {
+    "message": "Todos los idiomas salvo el inglés son borradores que ningún hablante ha revisado aún. Se aplica al instante, sin Guardar."
+  },
+  "reviewPageTitle": {
+    "message": "Revisar una captura"
   }
 }

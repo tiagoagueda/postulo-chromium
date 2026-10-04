@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Hapësira ruajtëse e këtij shfletuesi për Postulo është plot. Dërgoni ose fshini disa kapje dhe provoni përsëri."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo nuk arrihet: ajo që dërgoni pret në këtë shfletues derisa të përgjigjet."
+  },
+  "footerOnline": {
+    "message": "Postulo përgjigjet"
+  },
+  "footerSlow": {
+    "message": "Postulo përgjigjet ngadalë"
+  },
+  "reviewHeading": {
+    "message": "Pret rishikim"
+  },
+  "waitingInPostulo": {
+    "message": "Pret rishikim në Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Asgjë nuk pret rishikim."
+  },
+  "lastListed": {
+    "message": "Siç i renditi Postulo për herë të fundit, më $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Kapje të këtij shpalljeje: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Pret rishikim: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Shto një shpallje"
+  },
+  "pictureOffer": {
+    "message": "Postulo mund të ruajë një pamje të gjithë faqes ashtu siç e shihni, të kyçur apo jo. Ta dërgoj?"
+  },
+  "pictureSend": {
+    "message": "Dërgo pamjen"
+  },
+  "pictureSkip": {
+    "message": "Pa pamje"
+  },
+  "pictureDrawing": {
+    "message": "Po vizatohet faqja…"
+  },
+  "pictureSending": {
+    "message": "Po dërgohet pamja…"
+  },
+  "pictureSent": {
+    "message": "Pamja u dërgua."
+  },
+  "pictureNotKept": {
+    "message": "Postulo nuk e ruajti pamjen. Vetë kapja nuk preket."
+  },
+  "pictureTooBig": {
+    "message": "Faqja është shumë e madhe për t'u dërguar si pamje."
+  },
+  "pictureFailed": {
+    "message": "Faqja nuk mund të vizatohej. A është ende ajo që kapët?"
+  },
+  "languageLabel": {
+    "message": "Gjuha"
+  },
+  "languageFollow": {
+    "message": "Ndiq shfletuesin"
+  },
+  "languageHint": {
+    "message": "Çdo gjuhë përveç anglishtes është draft që asnjë folës nuk e ka rishikuar ende. Hyn në fuqi menjëherë, pa Ruaj."
+  },
+  "reviewPageTitle": {
+    "message": "Rishiko një kapje"
   }
 }

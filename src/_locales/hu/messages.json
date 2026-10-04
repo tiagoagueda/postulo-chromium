@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "A böngésző Postulóhoz tartozó tárhelye megtelt. Küldjön el vagy törölzön néhány rögzítést, majd próbálja újra."
+  },
+  "postuloUnreachable": {
+    "message": "A Postulo nem érhető el: amit elküld, az ebben a böngészőben vár, amíg válaszol."
+  },
+  "footerOnline": {
+    "message": "A Postulo válaszol"
+  },
+  "footerSlow": {
+    "message": "A Postulo lassan válaszol"
+  },
+  "reviewHeading": {
+    "message": "Átnézésre vár"
+  },
+  "waitingInPostulo": {
+    "message": "Átnézésre vár a Postulóban"
+  },
+  "nothingWaiting": {
+    "message": "Semmi sem vár átnézésre."
+  },
+  "lastListed": {
+    "message": "Ahogy a Postulo legutóbb felsorolta őket: $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Ennek a hirdetésnek a rögzítései: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Átnézésre vár: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Hirdetés hozzáadása"
+  },
+  "pictureOffer": {
+    "message": "A Postulo megőrizheti az egész oldal képét úgy, ahogy Ön látja, bejelentkezve vagy anélkül. Elküldi?"
+  },
+  "pictureSend": {
+    "message": "Kép elküldése"
+  },
+  "pictureSkip": {
+    "message": "Nincs kép"
+  },
+  "pictureDrawing": {
+    "message": "Az oldal megrajzolása…"
+  },
+  "pictureSending": {
+    "message": "A kép küldése…"
+  },
+  "pictureSent": {
+    "message": "A kép elküldve."
+  },
+  "pictureNotKept": {
+    "message": "A Postulo nem őrizte meg a képet. Maga a rögzítés érintetlen."
+  },
+  "pictureTooBig": {
+    "message": "Az oldal túl nagy ahhoz, hogy képként elküldhető legyen."
+  },
+  "pictureFailed": {
+    "message": "Az oldalt nem sikerült megrajzolni. Még mindig az az oldal van megnyitva, amelyet rögzített?"
+  },
+  "languageLabel": {
+    "message": "Nyelv"
+  },
+  "languageFollow": {
+    "message": "A böngésző nyelvének követése"
+  },
+  "languageHint": {
+    "message": "Az angolon kívül minden nyelv olyan piszkozat, amelyet még egyetlen anyanyelvi beszélő sem nézett át. Azonnal érvénybe lép, Mentés nélkül."
+  },
+  "reviewPageTitle": {
+    "message": "Rögzítés átnézése"
   }
 }

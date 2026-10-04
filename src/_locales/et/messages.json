@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Selle brauseri Postulo salvestusruum on täis. Saatke või kustutage mõned püütud kirjed ja proovige siis uuesti."
+  },
+  "postuloUnreachable": {
+    "message": "Postuloga ei saa ühendust: see, mida saadate, ootab selles brauseris, kuni see vastab."
+  },
+  "footerOnline": {
+    "message": "Postulo vastab"
+  },
+  "footerSlow": {
+    "message": "Postulo vastab aeglaselt"
+  },
+  "reviewHeading": {
+    "message": "Vajab ülevaatamist"
+  },
+  "waitingInPostulo": {
+    "message": "Ootab Postulos ülevaatamist"
+  },
+  "nothingWaiting": {
+    "message": "Midagi ei oota ülevaatamist."
+  },
+  "lastListed": {
+    "message": "Nii nagu Postulo need viimati loetles, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Selle kuulutuse püüdmisi: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Ootab ülevaatamist: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Lisa kuulutus"
+  },
+  "pictureOffer": {
+    "message": "Postulo saab säilitada pildi kogu lehest, nii nagu te seda näete, sisse logituna või mitte. Kas saata üks?"
+  },
+  "pictureSend": {
+    "message": "Saada pilt"
+  },
+  "pictureSkip": {
+    "message": "Pilti ei ole"
+  },
+  "pictureDrawing": {
+    "message": "Leht joonistatakse…"
+  },
+  "pictureSending": {
+    "message": "Pilti saadetakse…"
+  },
+  "pictureSent": {
+    "message": "Pilt saadeti."
+  },
+  "pictureNotKept": {
+    "message": "Postulo ei säilitanud pilti. Püüdmist ennast see ei mõjuta."
+  },
+  "pictureTooBig": {
+    "message": "Leht on pildina saatmiseks liiga suur."
+  },
+  "pictureFailed": {
+    "message": "Lehte ei õnnestunud joonistada. Kas see on endiselt see leht, mille püüdsite?"
+  },
+  "languageLabel": {
+    "message": "Keel"
+  },
+  "languageFollow": {
+    "message": "Järgi brauserit"
+  },
+  "languageHint": {
+    "message": "Kõik keeled peale inglise keele on mustandid, mida ükski emakeelne kõneleja pole veel üle vaadanud. Jõustub kohe, ilma salvestamata."
+  },
+  "reviewPageTitle": {
+    "message": "Püütud kuulutuse ülevaatamine"
   }
 }

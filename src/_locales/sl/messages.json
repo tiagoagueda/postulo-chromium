@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Shramba tega brskalnika za Postulo je polna. Pošljite ali izbrišite nekaj zajemov in poskusite znova."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo ni dosegljiv: kar pošljete, čaka v tem brskalniku, dokler ne odgovori."
+  },
+  "footerOnline": {
+    "message": "Postulo odgovarja"
+  },
+  "footerSlow": {
+    "message": "Postulo odgovarja počasi"
+  },
+  "reviewHeading": {
+    "message": "Čaka na pregled"
+  },
+  "waitingInPostulo": {
+    "message": "Čaka na pregled v Postulu"
+  },
+  "nothingWaiting": {
+    "message": "Nič ne čaka na pregled."
+  },
+  "lastListed": {
+    "message": "Tako, kot jih je Postulo nazadnje navedel, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Zajemi tega oglasa: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Čaka na pregled: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Dodaj oglas"
+  },
+  "pictureOffer": {
+    "message": "Postulo lahko shrani sliko cele strani, kot jo vidite, prijavljeni ali ne. Jo pošljem?"
+  },
+  "pictureSend": {
+    "message": "Pošlji sliko"
+  },
+  "pictureSkip": {
+    "message": "Brez slike"
+  },
+  "pictureDrawing": {
+    "message": "Risanje strani …"
+  },
+  "pictureSending": {
+    "message": "Pošiljanje slike …"
+  },
+  "pictureSent": {
+    "message": "Slika je bila poslana."
+  },
+  "pictureNotKept": {
+    "message": "Postulo slike ni obdržal. Na sam zajem to ne vpliva."
+  },
+  "pictureTooBig": {
+    "message": "Stran je prevelika, da bi jo poslali kot sliko."
+  },
+  "pictureFailed": {
+    "message": "Strani ni bilo mogoče narisati. Je to še vedno tista, ki ste jo zajeli?"
+  },
+  "languageLabel": {
+    "message": "Jezik"
+  },
+  "languageFollow": {
+    "message": "Po brskalniku"
+  },
+  "languageHint": {
+    "message": "Vsak jezik razen angleščine je osnutek, ki ga noben govorec še ni pregledal. Začne veljati takoj, brez Shrani."
+  },
+  "reviewPageTitle": {
+    "message": "Pregled zajema"
   }
 }

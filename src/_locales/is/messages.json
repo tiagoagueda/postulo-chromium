@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Geymslupláss þessa vafra fyrir Postulo er fullt. Sendu eða eyddu nokkrum föngum og reyndu svo aftur."
+  },
+  "postuloUnreachable": {
+    "message": "Ekki næst í Postulo: það sem þú sendir bíður í þessum vafra þar til það svarar."
+  },
+  "footerOnline": {
+    "message": "Postulo svarar"
+  },
+  "footerSlow": {
+    "message": "Postulo er lengi að svara"
+  },
+  "reviewHeading": {
+    "message": "Bíður yfirferðar"
+  },
+  "waitingInPostulo": {
+    "message": "Bíður yfirferðar í Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Ekkert bíður yfirferðar."
+  },
+  "lastListed": {
+    "message": "Eins og Postulo taldi þau síðast upp, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Skráningar á þessari auglýsingu: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Bíður yfirferðar: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Bæta við auglýsingu"
+  },
+  "pictureOffer": {
+    "message": "Postulo getur geymt mynd af allri síðunni eins og þú sérð hana, innskráð(ur) eða ekki. Senda hana?"
+  },
+  "pictureSend": {
+    "message": "Senda myndina"
+  },
+  "pictureSkip": {
+    "message": "Engin mynd"
+  },
+  "pictureDrawing": {
+    "message": "Teikna síðuna…"
+  },
+  "pictureSending": {
+    "message": "Sendi myndina…"
+  },
+  "pictureSent": {
+    "message": "Myndin var send."
+  },
+  "pictureNotKept": {
+    "message": "Postulo geymdi ekki myndina. Skráningin sjálf er óbreytt."
+  },
+  "pictureTooBig": {
+    "message": "Síðan er of stór til að senda sem mynd."
+  },
+  "pictureFailed": {
+    "message": "Ekki tókst að teikna síðuna. Er þetta enn síðan sem þú greipst?"
+  },
+  "languageLabel": {
+    "message": "Tungumál"
+  },
+  "languageFollow": {
+    "message": "Fylgja vafranum"
+  },
+  "languageHint": {
+    "message": "Öll tungumál nema enska eru drög sem enginn málhafi hefur yfirfarið. Tekur gildi strax, án þess að vista."
+  },
+  "reviewPageTitle": {
+    "message": "Yfirfara skráningu"
   }
 }

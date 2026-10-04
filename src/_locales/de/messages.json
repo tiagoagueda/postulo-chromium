@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Der Speicher dieses Browsers für Postulo ist voll. Senden oder löschen Sie einige Erfassungen und versuchen Sie es dann erneut."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo ist nicht erreichbar: Was Sie senden, wartet in diesem Browser, bis es antwortet."
+  },
+  "footerOnline": {
+    "message": "Postulo antwortet"
+  },
+  "footerSlow": {
+    "message": "Postulo antwortet langsam"
+  },
+  "reviewHeading": {
+    "message": "Zu prüfen"
+  },
+  "waitingInPostulo": {
+    "message": "Wartet in Postulo auf Prüfung"
+  },
+  "nothingWaiting": {
+    "message": "Nichts wartet auf Prüfung."
+  },
+  "lastListed": {
+    "message": "So, wie Postulo sie zuletzt aufgelistet hat, am $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Erfassungen dieser Anzeige: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Wartet auf Prüfung: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Anzeige hinzufügen"
+  },
+  "pictureOffer": {
+    "message": "Postulo kann ein Bild der ganzen Seite aufbewahren, so wie Sie sie sehen, angemeldet oder nicht. Eines senden?"
+  },
+  "pictureSend": {
+    "message": "Bild senden"
+  },
+  "pictureSkip": {
+    "message": "Kein Bild"
+  },
+  "pictureDrawing": {
+    "message": "Seite wird gezeichnet…"
+  },
+  "pictureSending": {
+    "message": "Bild wird gesendet…"
+  },
+  "pictureSent": {
+    "message": "Das Bild wurde gesendet."
+  },
+  "pictureNotKept": {
+    "message": "Postulo hat das Bild nicht aufbewahrt. Die Erfassung selbst ist davon nicht betroffen."
+  },
+  "pictureTooBig": {
+    "message": "Die Seite ist zu groß, um sie als Bild zu senden."
+  },
+  "pictureFailed": {
+    "message": "Die Seite konnte nicht gezeichnet werden. Ist es noch die Seite, die Sie erfasst haben?"
+  },
+  "languageLabel": {
+    "message": "Sprache"
+  },
+  "languageFollow": {
+    "message": "Dem Browser folgen"
+  },
+  "languageHint": {
+    "message": "Alle Sprachen außer Englisch sind Entwürfe, die noch kein Muttersprachler geprüft hat. Wirkt sofort, ohne Speichern."
+  },
+  "reviewPageTitle": {
+    "message": "Erfassung prüfen"
   }
 }

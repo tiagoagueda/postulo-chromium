@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Úložiště tohoto prohlížeče pro Postulo je plné. Odešlete nebo smažte některé zachycené položky a zkuste to znovu."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo není dostupný: co odešlete, čeká v tomto prohlížeči, dokud neodpoví."
+  },
+  "footerOnline": {
+    "message": "Postulo odpovídá"
+  },
+  "footerSlow": {
+    "message": "Postulo odpovídá pomalu"
+  },
+  "reviewHeading": {
+    "message": "Čeká na kontrolu"
+  },
+  "waitingInPostulo": {
+    "message": "Čeká na kontrolu v Postulu"
+  },
+  "nothingWaiting": {
+    "message": "Nic nečeká na kontrolu."
+  },
+  "lastListed": {
+    "message": "Tak, jak je Postulo naposledy vypsal, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Zachycení tohoto inzerátu: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Čeká na kontrolu: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Přidat inzerát"
+  },
+  "pictureOffer": {
+    "message": "Postulo může uchovat obrázek celé stránky tak, jak ji vidíte, přihlášeni či nikoli. Odeslat ho?"
+  },
+  "pictureSend": {
+    "message": "Odeslat obrázek"
+  },
+  "pictureSkip": {
+    "message": "Bez obrázku"
+  },
+  "pictureDrawing": {
+    "message": "Vykresluje se stránka…"
+  },
+  "pictureSending": {
+    "message": "Odesílá se obrázek…"
+  },
+  "pictureSent": {
+    "message": "Obrázek byl odeslán."
+  },
+  "pictureNotKept": {
+    "message": "Postulo obrázek neuchoval. Samotné zachycení tím není dotčeno."
+  },
+  "pictureTooBig": {
+    "message": "Stránka je příliš velká na odeslání jako obrázek."
+  },
+  "pictureFailed": {
+    "message": "Stránku nešlo vykreslit. Je to stále ta, kterou jste zachytili?"
+  },
+  "languageLabel": {
+    "message": "Jazyk"
+  },
+  "languageFollow": {
+    "message": "Podle prohlížeče"
+  },
+  "languageHint": {
+    "message": "Každý jazyk kromě angličtiny je koncept, který zatím žádný rodilý mluvčí nezkontroloval. Projeví se okamžitě, bez Uložení."
+  },
+  "reviewPageTitle": {
+    "message": "Kontrola zachycení"
   }
 }

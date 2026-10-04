@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "O armazenamento deste navegador para o Postulo está cheio. Envie ou exclua algumas capturas e tente novamente."
+  },
+  "postuloUnreachable": {
+    "message": "Não foi possível acessar o Postulo: o que você enviar espera neste navegador até ele responder."
+  },
+  "footerOnline": {
+    "message": "O Postulo está respondendo"
+  },
+  "footerSlow": {
+    "message": "O Postulo está demorando para responder"
+  },
+  "reviewHeading": {
+    "message": "Aguardando revisão"
+  },
+  "waitingInPostulo": {
+    "message": "Aguardando revisão no Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Nada aguarda revisão."
+  },
+  "lastListed": {
+    "message": "Como o Postulo listou por último, em $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Capturas desta vaga: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Aguardando revisão: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Adicionar uma vaga"
+  },
+  "pictureOffer": {
+    "message": "O Postulo pode guardar uma imagem da página inteira como você a vê, com login ou sem. Enviar uma?"
+  },
+  "pictureSend": {
+    "message": "Enviar a imagem"
+  },
+  "pictureSkip": {
+    "message": "Sem imagem"
+  },
+  "pictureDrawing": {
+    "message": "Desenhando a página…"
+  },
+  "pictureSending": {
+    "message": "Enviando a imagem…"
+  },
+  "pictureSent": {
+    "message": "A imagem foi enviada."
+  },
+  "pictureNotKept": {
+    "message": "O Postulo não guardou a imagem. A captura em si não foi afetada."
+  },
+  "pictureTooBig": {
+    "message": "A página é grande demais para ser enviada como imagem."
+  },
+  "pictureFailed": {
+    "message": "Não foi possível desenhar a página. Ela ainda é a que você capturou?"
+  },
+  "languageLabel": {
+    "message": "Idioma"
+  },
+  "languageFollow": {
+    "message": "Seguir o navegador"
+  },
+  "languageHint": {
+    "message": "Todo idioma, exceto o inglês, é um rascunho que nenhum falante revisou ainda. Vale na hora, sem Salvar."
+  },
+  "reviewPageTitle": {
+    "message": "Revisar uma captura"
   }
 }

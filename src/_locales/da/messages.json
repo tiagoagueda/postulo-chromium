@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Denne browsers lager til Postulo er fyldt op. Send eller slet nogle indfangninger, og prøv igen."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo kan ikke nås: det, du sender, venter i denne browser, indtil den svarer."
+  },
+  "footerOnline": {
+    "message": "Postulo svarer"
+  },
+  "footerSlow": {
+    "message": "Postulo er langsom til at svare"
+  },
+  "reviewHeading": {
+    "message": "Skal gennemgås"
+  },
+  "waitingInPostulo": {
+    "message": "Venter på gennemgang i Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Intet venter på gennemgang."
+  },
+  "lastListed": {
+    "message": "Som Postulo senest viste dem, den $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Indfangninger af dette opslag: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Venter på gennemgang: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Tilføj et opslag"
+  },
+  "pictureOffer": {
+    "message": "Postulo kan gemme et billede af hele siden, som du ser den, logget ind eller ej. Vil du sende et?"
+  },
+  "pictureSend": {
+    "message": "Send billedet"
+  },
+  "pictureSkip": {
+    "message": "Intet billede"
+  },
+  "pictureDrawing": {
+    "message": "Tegner siden…"
+  },
+  "pictureSending": {
+    "message": "Sender billedet…"
+  },
+  "pictureSent": {
+    "message": "Billedet er sendt."
+  },
+  "pictureNotKept": {
+    "message": "Postulo gemte ikke billedet. Selve indfangningen er upåvirket."
+  },
+  "pictureTooBig": {
+    "message": "Siden er for stor til at sende som billede."
+  },
+  "pictureFailed": {
+    "message": "Siden kunne ikke tegnes. Er det stadig den side, du indfangede?"
+  },
+  "languageLabel": {
+    "message": "Sprog"
+  },
+  "languageFollow": {
+    "message": "Følg browseren"
+  },
+  "languageHint": {
+    "message": "Alle sprog undtagen engelsk er udkast, som endnu ikke er gennemgået af nogen, der taler sproget. Træder i kraft med det samme, uden Gem."
+  },
+  "reviewPageTitle": {
+    "message": "Gennemgå en indfangning"
   }
 }

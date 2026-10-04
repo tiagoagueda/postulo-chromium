@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Просторот на овој прелистувач за Postulo е полн. Испратете или избришете некои снимки, па обидете се повторно."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo не може да се достигне: она што го испраќате чека во овој прелистувач додека не одговори."
+  },
+  "footerOnline": {
+    "message": "Postulo одговара"
+  },
+  "footerSlow": {
+    "message": "Postulo бавно одговара"
+  },
+  "reviewHeading": {
+    "message": "Чека преглед"
+  },
+  "waitingInPostulo": {
+    "message": "Чека преглед во Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Ништо не чека преглед."
+  },
+  "lastListed": {
+    "message": "Како што Postulo последен пат ги наброи, на $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Фаќања на овој оглас: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Чека преглед: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Додај оглас"
+  },
+  "pictureOffer": {
+    "message": "Postulo може да чува слика од целата страница онака како што ја гледате, најавени или не. Да се испрати?"
+  },
+  "pictureSend": {
+    "message": "Испрати ја сликата"
+  },
+  "pictureSkip": {
+    "message": "Без слика"
+  },
+  "pictureDrawing": {
+    "message": "Страницата се црта…"
+  },
+  "pictureSending": {
+    "message": "Сликата се испраќа…"
+  },
+  "pictureSent": {
+    "message": "Сликата е испратена."
+  },
+  "pictureNotKept": {
+    "message": "Postulo не ја зачува сликата. Самото фаќање не е засегнато."
+  },
+  "pictureTooBig": {
+    "message": "Страницата е премногу голема за да се испрати како слика."
+  },
+  "pictureFailed": {
+    "message": "Страницата не можеше да се нацрта. Дали сè уште е онаа што ја фативте?"
+  },
+  "languageLabel": {
+    "message": "Јазик"
+  },
+  "languageFollow": {
+    "message": "Следи го прелистувачот"
+  },
+  "languageHint": {
+    "message": "Секој јазик освен англискиот е нацрт што сè уште ниту еден говорник не го прегледал. Важи веднаш, без Зачувај."
+  },
+  "reviewPageTitle": {
+    "message": "Преглед на фаќање"
   }
 }

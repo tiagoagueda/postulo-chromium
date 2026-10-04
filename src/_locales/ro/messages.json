@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Spațiul de stocare al acestui browser pentru Postulo este plin. Trimite sau șterge câteva capturi, apoi încearcă din nou."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo nu poate fi contactat: ce trimiți așteaptă în acest browser până când răspunde."
+  },
+  "footerOnline": {
+    "message": "Postulo răspunde"
+  },
+  "footerSlow": {
+    "message": "Postulo răspunde greu"
+  },
+  "reviewHeading": {
+    "message": "De verificat"
+  },
+  "waitingInPostulo": {
+    "message": "Așteaptă verificarea în Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Nimic nu așteaptă verificarea."
+  },
+  "lastListed": {
+    "message": "Așa cum le-a listat Postulo ultima dată, la $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Capturi ale acestui anunț: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Așteaptă verificarea: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Adaugă un anunț"
+  },
+  "pictureOffer": {
+    "message": "Postulo poate păstra o imagine a întregii pagini așa cum o vezi, cu sau fără autentificare. Trimiți una?"
+  },
+  "pictureSend": {
+    "message": "Trimite imaginea"
+  },
+  "pictureSkip": {
+    "message": "Fără imagine"
+  },
+  "pictureDrawing": {
+    "message": "Se desenează pagina…"
+  },
+  "pictureSending": {
+    "message": "Se trimite imaginea…"
+  },
+  "pictureSent": {
+    "message": "Imaginea a fost trimisă."
+  },
+  "pictureNotKept": {
+    "message": "Postulo nu a păstrat imaginea. Captura în sine nu este afectată."
+  },
+  "pictureTooBig": {
+    "message": "Pagina este prea mare pentru a fi trimisă ca imagine."
+  },
+  "pictureFailed": {
+    "message": "Pagina nu a putut fi desenată. Mai este cea pe care ai captat-o?"
+  },
+  "languageLabel": {
+    "message": "Limba"
+  },
+  "languageFollow": {
+    "message": "Urmează browserul"
+  },
+  "languageHint": {
+    "message": "Toate limbile în afară de engleză sunt ciorne pe care niciun vorbitor nu le-a verificat încă. Se aplică imediat, fără Salvare."
+  },
+  "reviewPageTitle": {
+    "message": "Verifică o captură"
   }
 }

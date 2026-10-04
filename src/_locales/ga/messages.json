@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Tá stór an bhrabhsálaí seo do Postulo lán. Seol nó scrios roinnt gabhálacha, ansin bain triail eile as."
+  },
+  "postuloUnreachable": {
+    "message": "Níl Postulo inrochtana: fanann an méid a sheolann tú sa bhrabhsálaí seo go dtí go bhfreagraíonn sé."
+  },
+  "footerOnline": {
+    "message": "Freagraíonn Postulo"
+  },
+  "footerSlow": {
+    "message": "Tá Postulo mall ag freagairt"
+  },
+  "reviewHeading": {
+    "message": "Ag teastáil athbhreithniú"
+  },
+  "waitingInPostulo": {
+    "message": "Ag fanacht le hathbhreithniú in Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Níl aon rud ag fanacht le hathbhreithniú."
+  },
+  "lastListed": {
+    "message": "Mar a liostaigh Postulo iad go deireanach, ar $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Gabhálacha den phost seo: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Ag fanacht le hathbhreithniú: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Cuir post leis"
+  },
+  "pictureOffer": {
+    "message": "Is féidir le Postulo pictiúr den leathanach iomlán a choinneáil mar a fheiceann tú é, sínithe isteach nó nach ea. An seolfar ceann?"
+  },
+  "pictureSend": {
+    "message": "Seol an pictiúr"
+  },
+  "pictureSkip": {
+    "message": "Gan pictiúr"
+  },
+  "pictureDrawing": {
+    "message": "Ag tarraingt an leathanaigh…"
+  },
+  "pictureSending": {
+    "message": "Ag seoladh an phictiúir…"
+  },
+  "pictureSent": {
+    "message": "Seoladh an pictiúr."
+  },
+  "pictureNotKept": {
+    "message": "Níor choinnigh Postulo an pictiúr. Níl tionchar ar an ngabháil féin."
+  },
+  "pictureTooBig": {
+    "message": "Tá an leathanach rómhór le seoladh mar phictiúr."
+  },
+  "pictureFailed": {
+    "message": "Níorbh fhéidir an leathanach a tharraingt. An é an leathanach a ghabh tú é fós?"
+  },
+  "languageLabel": {
+    "message": "Teanga"
+  },
+  "languageFollow": {
+    "message": "Lean an brabhsálaí"
+  },
+  "languageHint": {
+    "message": "Is dréachtaí iad gach teanga seachas an Béarla nár athbhreithnigh cainteoir ar bith go fóill. Tagann sé i bhfeidhm láithreach, gan Sábháil."
+  },
+  "reviewPageTitle": {
+    "message": "Athbhreithnigh gabháil"
   }
 }

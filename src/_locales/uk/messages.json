@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Сховище цього браузера для Postulo заповнене. Надішліть або видаліть кілька захоплень і повторіть спробу."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo недоступний: те, що ви надсилаєте, чекає в цьому браузері, доки він не відповість."
+  },
+  "footerOnline": {
+    "message": "Postulo відповідає"
+  },
+  "footerSlow": {
+    "message": "Postulo відповідає повільно"
+  },
+  "reviewHeading": {
+    "message": "Потребує перегляду"
+  },
+  "waitingInPostulo": {
+    "message": "Чекає перегляду в Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Нічого не чекає перегляду."
+  },
+  "lastListed": {
+    "message": "Так, як Postulo востаннє їх перелічив, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Захоплень цієї вакансії: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Чекає перегляду: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Додати вакансію"
+  },
+  "pictureOffer": {
+    "message": "Postulo може зберегти зображення всієї сторінки такою, як ви її бачите, із входом чи без. Надіслати його?"
+  },
+  "pictureSend": {
+    "message": "Надіслати зображення"
+  },
+  "pictureSkip": {
+    "message": "Без зображення"
+  },
+  "pictureDrawing": {
+    "message": "Малювання сторінки…"
+  },
+  "pictureSending": {
+    "message": "Надсилання зображення…"
+  },
+  "pictureSent": {
+    "message": "Зображення надіслано."
+  },
+  "pictureNotKept": {
+    "message": "Postulo не зберіг зображення. Саме захоплення не постраждало."
+  },
+  "pictureTooBig": {
+    "message": "Сторінка завелика, щоб надіслати її як зображення."
+  },
+  "pictureFailed": {
+    "message": "Не вдалося намалювати сторінку. Це все ще та, яку ви захопили?"
+  },
+  "languageLabel": {
+    "message": "Мова"
+  },
+  "languageFollow": {
+    "message": "Як у браузері"
+  },
+  "languageHint": {
+    "message": "Кожна мова, крім англійської, є чернеткою, яку ще не переглядав жоден носій мови. Набуває чинності одразу, без збереження."
+  },
+  "reviewPageTitle": {
+    "message": "Перегляд захоплення"
   }
 }

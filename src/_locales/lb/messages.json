@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "D'Späicherplaz vun dësem Browser fir Postulo ass voll. Schéckt oder läscht e puer Erfaassungen a probéiert dann nach eng Kéier."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo ass net erreechbar: wat Dir schéckt, waart an dësem Browser, bis et äntwert."
+  },
+  "footerOnline": {
+    "message": "Postulo äntwert"
+  },
+  "footerSlow": {
+    "message": "Postulo äntwert lues"
+  },
+  "reviewHeading": {
+    "message": "Muss nogekuckt ginn"
+  },
+  "waitingInPostulo": {
+    "message": "Waart am Postulo op Nokucken"
+  },
+  "nothingWaiting": {
+    "message": "Näischt waart op Nokucken."
+  },
+  "lastListed": {
+    "message": "Sou wéi de Postulo se zuletzt opgelëscht huet, den $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Erfaassunge vun dëser Annonce: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Waart op Nokucken: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Annonce derbäisetzen"
+  },
+  "pictureOffer": {
+    "message": "De Postulo kann e Bild vun der ganzer Säit behalen, esou wéi Dir se gesitt, ugemellt oder net. Schécken?"
+  },
+  "pictureSend": {
+    "message": "D'Bild schécken"
+  },
+  "pictureSkip": {
+    "message": "Kee Bild"
+  },
+  "pictureDrawing": {
+    "message": "D'Säit gëtt gezeechent…"
+  },
+  "pictureSending": {
+    "message": "D'Bild gëtt geschéckt…"
+  },
+  "pictureSent": {
+    "message": "D'Bild gouf geschéckt."
+  },
+  "pictureNotKept": {
+    "message": "De Postulo huet d'Bild net behalen. D'Erfaassung selwer ass dovunner net betraff."
+  },
+  "pictureTooBig": {
+    "message": "D'Säit ass ze grouss, fir als Bild geschéckt ze ginn."
+  },
+  "pictureFailed": {
+    "message": "D'Säit konnt net gezeechent ginn. Ass et nach ëmmer déi, déi Dir erfaasst hutt?"
+  },
+  "languageLabel": {
+    "message": "Sprooch"
+  },
+  "languageFollow": {
+    "message": "Dem Browser follegen"
+  },
+  "languageHint": {
+    "message": "All Sprooch ausser Englesch ass en Entworf, deen nach kee Mammesprécher nogekuckt huet. Gëllt direkt, ouni Späicheren."
+  },
+  "reviewPageTitle": {
+    "message": "Eng Erfaassung nokucken"
   }
 }

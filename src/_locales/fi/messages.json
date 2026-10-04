@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Tämän selaimen Postulo-tallennustila on täynnä. Lähetä tai poista joitakin kaappauksia ja yritä sitten uudelleen."
+  },
+  "postuloUnreachable": {
+    "message": "Postuloon ei saada yhteyttä: lähettämäsi odottaa tässä selaimessa, kunnes se vastaa."
+  },
+  "footerOnline": {
+    "message": "Postulo vastaa"
+  },
+  "footerSlow": {
+    "message": "Postulo vastaa hitaasti"
+  },
+  "reviewHeading": {
+    "message": "Odottaa tarkistusta"
+  },
+  "waitingInPostulo": {
+    "message": "Odottaa tarkistusta Postulossa"
+  },
+  "nothingWaiting": {
+    "message": "Mikään ei odota tarkistusta."
+  },
+  "lastListed": {
+    "message": "Sellaisina kuin Postulo ne viimeksi listasi, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Tämän ilmoituksen kaappauksia: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Odottaa tarkistusta: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Lisää ilmoitus"
+  },
+  "pictureOffer": {
+    "message": "Postulo voi tallentaa kuvan koko sivusta sellaisena kuin sen näet, kirjautuneena tai ei. Lähetetäänkö kuva?"
+  },
+  "pictureSend": {
+    "message": "Lähetä kuva"
+  },
+  "pictureSkip": {
+    "message": "Ei kuvaa"
+  },
+  "pictureDrawing": {
+    "message": "Piirretään sivua…"
+  },
+  "pictureSending": {
+    "message": "Lähetetään kuvaa…"
+  },
+  "pictureSent": {
+    "message": "Kuva lähetettiin."
+  },
+  "pictureNotKept": {
+    "message": "Postulo ei tallentanut kuvaa. Itse kaappaukseen tämä ei vaikuta."
+  },
+  "pictureTooBig": {
+    "message": "Sivu on liian suuri lähetettäväksi kuvana."
+  },
+  "pictureFailed": {
+    "message": "Sivua ei voitu piirtää. Onko se yhä sama, jonka kaappasit?"
+  },
+  "languageLabel": {
+    "message": "Kieli"
+  },
+  "languageFollow": {
+    "message": "Seuraa selainta"
+  },
+  "languageHint": {
+    "message": "Kaikki muut kielet kuin englanti ovat luonnoksia, joita yksikään kielenpuhuja ei ole vielä tarkistanut. Tulee voimaan heti, ilman Tallenna-painikkeen painamista."
+  },
+  "reviewPageTitle": {
+    "message": "Tarkista kaappaus"
   }
 }

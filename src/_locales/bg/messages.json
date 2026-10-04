@@ -436,5 +436,89 @@
   },
   "storageFull": {
     "message": "Хранилището на този браузър за Postulo е пълно. Изпратете или изтрийте част от прихванатото и опитайте отново."
+  },
+  "postuloUnreachable": {
+    "message": "Postulo не може да бъде достигнат: изпратеното от вас изчаква в този браузър, докато отговори."
+  },
+  "footerOnline": {
+    "message": "Postulo отговаря"
+  },
+  "footerSlow": {
+    "message": "Postulo отговаря бавно"
+  },
+  "reviewHeading": {
+    "message": "Чака преглед"
+  },
+  "waitingInPostulo": {
+    "message": "Чака преглед в Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Нищо не чака преглед."
+  },
+  "lastListed": {
+    "message": "Както Postulo ги изброи за последно, на $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Прихващания на тази обява: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Чакат преглед: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "addListing": {
+    "message": "Добавяне на обява"
+  },
+  "pictureOffer": {
+    "message": "Postulo може да запази снимка на цялата страница така, както я виждате, с вход или без. Да се изпрати ли?"
+  },
+  "pictureSend": {
+    "message": "Изпращане на снимката"
+  },
+  "pictureSkip": {
+    "message": "Без снимка"
+  },
+  "pictureDrawing": {
+    "message": "Страницата се изобразява…"
+  },
+  "pictureSending": {
+    "message": "Снимката се изпраща…"
+  },
+  "pictureSent": {
+    "message": "Снимката беше изпратена."
+  },
+  "pictureNotKept": {
+    "message": "Postulo не запази снимката. Самото прихващане не е засегнато."
+  },
+  "pictureTooBig": {
+    "message": "Страницата е твърде голяма, за да бъде изпратена като снимка."
+  },
+  "pictureFailed": {
+    "message": "Страницата не можа да бъде изобразена. Все още ли е същата, която прихванахте?"
+  },
+  "languageLabel": {
+    "message": "Език"
+  },
+  "languageFollow": {
+    "message": "Като браузъра"
+  },
+  "languageHint": {
+    "message": "Всеки език освен английския е чернова, която още не е прегледана от носител. Влиза в сила веднага, без Запазване."
+  },
+  "reviewPageTitle": {
+    "message": "Преглед на прихващане"
   }
 }
