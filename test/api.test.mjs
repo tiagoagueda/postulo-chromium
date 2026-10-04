@@ -195,6 +195,7 @@ test("what goes wrong says whether to try again later", async () => {
   assert.equal(kindOfFailure(new TypeError("Failed to fetch")), "later");
   assert.equal(kindOfFailure(await failure(503)), "later");
   assert.equal(kindOfFailure(await failure(429)), "later");
+  assert.equal(kindOfFailure(await failure(409)), "later");
   assert.equal(kindOfFailure(await failure(401)), "account");
   assert.equal(kindOfFailure(await failure(403, { detail: "No captures scope." })), "account");
   assert.equal(kindOfFailure(await failure(422, { detail: "Nothing there." })), "refused");

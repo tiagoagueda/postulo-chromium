@@ -168,7 +168,7 @@ export async function whoAmI(instance, token, fetchImpl = fetch) {
  *  Every field goes, not only the ones changed: what Postulo keeps is then exactly what the
  *  person looked at, whichever of its sources reads the page on its side. The page still
  *  goes too, because Postulo reads it to know which source did. */
-export async function capture(instance, token, { url, html, data, batch }, fetchImpl = fetch) {
+export async function capture(instance, token, { url, html, data, batch, key }, fetchImpl = fetch) {
   const payload = { url, html };
   if (data && Object.keys(data).length) {
     payload.data = data;
@@ -180,7 +180,9 @@ export async function capture(instance, token, { url, html, data, batch }, fetch
   }
   const response = await request(fetchImpl, endpoint(instance, "/captures"), {
     method: "POST",
-    headers: headers(token),
+    // The same key for the same capture: a request repeated after a lost answer gets the
+    // first answer back from Postulo instead of a second capture and notification.
+    headers: key ? { ...headers(token), "Idempotency-Key": key } : headers(token),
     body: JSON.stringify(payload),
   });
   return readResponse(response);
@@ -217,8 +219,8 @@ export async function known(instance, token, postings, fetchImpl = fetch) {
 
 /** Whether a failure means "try again later" rather than "this will not do".
  *
- *  No answer at all, a Postulo that is busy (429) or failing (5xx) is later. A token that
- *  is refused (401, 403) is the account's problem, not the capture's: later too, once it is
+ *  No answer at all, a Postulo that is busy (429), still answering an earlier try (409) or
+ *  failing (5xx) is later. A token that is refused (401, 403) is the account's problem, not the capture's: later too, once it is
  *  fixed. Anything else Postulo said about this one capture is final until it is changed. */
 export function kindOfFailure(error) {
   const status = error && error.status;
@@ -228,7 +230,8 @@ export function kindOfFailure(error) {
   if (status === 401 || status === 403) {
     return "account";
   }
-  if (status === 429 || status >= 500) {
+  // 409: the first attempt under this key is still being answered.
+  if (status === 409 || status === 429 || status >= 500) {
     return "later";
   }
   return "refused";

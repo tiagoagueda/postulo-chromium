@@ -67,7 +67,7 @@ const allowed = async () => true;
 function answering(...responses) {
   const calls = [];
   const fetchImpl = async (url, init) => {
-    calls.push({ url, body: JSON.parse(init.body) });
+    calls.push({ url, body: JSON.parse(init.body), headers: init.headers });
     const next = responses.shift();
     if (next instanceof Error) {
       throw next;
@@ -323,4 +323,17 @@ test("a capture is sent without the fragment of its address", async () => {
   const { calls, fetchImpl } = answering({ status: 201, body: { id: 1, review_url: "https://postulo.example.org/r/1" } });
   await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
   assert.equal(calls[0].body.url, "https://jobs.example/search?q=x");
+});
+
+test("a record sent again after a lost answer repeats its Idempotency-Key, and an edit changes it", async () => {
+  const { store, log } = setUp();
+  const record = await keep(store, "again", "waiting");
+  const { calls, fetchImpl } = answering(new TypeError("Failed to fetch"), new TypeError("Failed to fetch"), { status: 201, body: { id: 1, review_url: "r" } });
+  await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+  await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+  assert.ok(calls[0].headers["Idempotency-Key"]);
+  assert.equal(calls[1].headers["Idempotency-Key"], calls[0].headers["Idempotency-Key"]);
+  await store.update(record.id, { data: { ...POSTING("again"), title: "edited" } });
+  await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+  assert.notEqual(calls[2].headers["Idempotency-Key"], calls[0].headers["Idempotency-Key"]);
 });

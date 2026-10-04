@@ -16,6 +16,17 @@ export function exclusively(work) {
   return locks ? locks.request("postulo-outbox", work) : work();
 }
 
+/** The Idempotency-Key of a record as it stands: its id, and a digest of what is sent, so
+ *  that editing the record gives a new key (Postulo refuses a key reused with another
+ *  payload) while a retry of the same record repeats the key. */
+function keyOf(record, payload) {
+  let hash = 0x811c9dc5;
+  for (const char of JSON.stringify(payload)) {
+    hash = Math.imul(hash ^ char.charCodeAt(0), 0x01000193) >>> 0;
+  }
+  return `${record.id}-${hash.toString(16)}`;
+}
+
 /**
  * Send what is waiting, oldest first.
  *
@@ -53,10 +64,11 @@ export async function deliver({ store, log, settings, allowed, fetchImpl = fetch
     for (const record of waiting) {
       await log.add("send", { id: record.id, host: hostOf(record.url) });
       try {
+        const payload = { url: withoutFragment(record.url), html: await store.page(record.id), data: record.data, batch: record.batch };
         const result = await capture(
           settings.instance,
           settings.token,
-          { url: withoutFragment(record.url), html: await store.page(record.id), data: record.data, batch: record.batch },
+          { ...payload, key: keyOf(record, payload) },
           fetchImpl,
         );
         await store.update(record.id, {
