@@ -556,5 +556,41 @@
   "knownOpen": {
     "message": "Open it in Postulo",
     "description": "Link after the sentence above: opens the listing or the capture in Postulo."
+  },
+  "pictureOffer": {
+    "message": "Postulo can keep a picture of the whole page as you see it, signed in or not. Send one?",
+    "description": "Asks, after a capture was sent, whether to also send a picture of the whole page. The server keeps it."
+  },
+  "pictureSend": {
+    "message": "Send the picture",
+    "description": "Button: draw the whole page and send it as a picture."
+  },
+  "pictureSkip": {
+    "message": "No picture",
+    "description": "Button: do not send a picture of the page."
+  },
+  "pictureDrawing": {
+    "message": "Drawing the page…",
+    "description": "Status while the whole page is drawn; a long page takes a few seconds."
+  },
+  "pictureSending": {
+    "message": "Sending the picture…",
+    "description": "Status while the picture of the page is sent."
+  },
+  "pictureSent": {
+    "message": "The picture was sent.",
+    "description": "Status after Postulo kept the picture of the page."
+  },
+  "pictureNotKept": {
+    "message": "Postulo did not keep the picture. The capture itself is unaffected.",
+    "description": "Status when Postulo refused the picture of the page for good (switched off, already decided, no room, too large, wrong type)."
+  },
+  "pictureTooBig": {
+    "message": "The page is too large to send as a picture.",
+    "description": "Status when the picture cannot be made smaller than the limit Postulo set."
+  },
+  "pictureFailed": {
+    "message": "The page could not be drawn. Is it still the one you captured?",
+    "description": "Status when the picture of the page could not be made, or the tab has moved to another page."
   }
 }

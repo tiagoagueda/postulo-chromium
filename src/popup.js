@@ -1,4 +1,4 @@
-import { describe, known, originPattern } from "./lib/api.js";
+import { describe, known, originPattern, pictureRefused, sendRendering } from "./lib/api.js";
 import { askAndKeep } from "./lib/allow.js";
 import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
@@ -6,6 +6,8 @@ import { explain, localise, t } from "./lib/i18n.js";
 import { afterSending, deliverWaiting, log, openCaptures, showUnsentCount, store } from "./lib/local.js";
 import { hostOf } from "./lib/log.js";
 import { emptyPosting, readPosting, readPostings, slimPage } from "./lib/parse.js";
+import { drawPage, encodePicture } from "./lib/picture.js";
+import { renderingOffer } from "./lib/rendering.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -13,6 +15,7 @@ function show(section) {
   for (const id of ["ready", "edit", "pick", "result"]) {
     $(id).hidden = id !== section;
   }
+  $("picture").hidden = true;
   const working = section === "edit" || section === "pick";
   // The form needs more room than a button does, and so does a list.
   document.body.classList.toggle("wide", working);
@@ -66,7 +69,7 @@ async function main() {
 
   const editor = postingForm();
   $("form-slot").append(editor.form);
-  let page = null; // {url, html, source, read} of the page read this time
+  let page = null; // {url, html, source, read, tab} of the page read this time
   let current = null; // the capture's record, once it is kept
 
   $("capture").addEventListener("click", async () => {
@@ -83,6 +86,7 @@ async function main() {
         html: slimPage(doc),
         source: found ? found.source : "",
         read: found ? found.data : emptyPosting(tab.url),
+        tab: { tabId: tab.tabId, windowId: tab.windowId },
       };
       // A page listing several postings, none of them this page: a results page. The
       // ones it lists are offered to tick, each becoming its own capture off this one
@@ -179,6 +183,7 @@ async function main() {
         $("review").hidden = false;
         show("result");
         say(t("captured"));
+        offerPicture(current);
       } else if (current.state === "refused") {
         // Postulo said no to this one: the form stays, to fix it and send again.
         say(explain(current.problem), true);
@@ -192,6 +197,51 @@ async function main() {
       button.disabled = false;
     }
   });
+
+  // ------------------------------------------- a picture of the whole page
+
+  /** When Postulo keeps a picture of the page beside a capture, say so and offer to send
+   *  one -- the page as it is on the screen, which only the browser can draw. Only for a
+   *  capture made here and now: the page is this tab's, and a retry from the background has
+   *  no page to draw. Nothing is drawn until it is said yes to. */
+  function offerPicture(record) {
+    const offer = renderingOffer(settings.instance, record.page);
+    if (!offer) {
+      return;
+    }
+    const send = $("picture-send");
+    send.disabled = false;
+    $("picture").hidden = false;
+    send.onclick = async () => {
+      send.disabled = true;
+      try {
+        say(t("pictureDrawing"));
+        const picture = await encodePicture(await drawPage({ ...page.tab, url: page.url }), offer.types, offer.max);
+        if (!picture) {
+          say(t("pictureTooBig"), true);
+          return;
+        }
+        say(t("pictureSending"));
+        await sendRendering(settings.token, offer.url, picture);
+        await log.add("picture", { id: record.id, bytes: picture.size });
+        $("picture").hidden = true;
+        say(t("pictureSent"));
+      } catch (error) {
+        await log.add("error", { where: "picture", problem: error.key || error.message });
+        if (pictureRefused(error)) {
+          $("picture").hidden = true;
+          say(t("pictureNotKept"), true);
+        } else {
+          say(error instanceof Error && !error.key && !error.status ? t("pictureFailed") : explain(error), true);
+          send.disabled = false;
+        }
+      }
+    };
+    $("picture-skip").onclick = () => {
+      $("picture").hidden = true;
+      say(t("captured"));
+    };
+  }
 
   // -------------------------------------------------------- captured before
 

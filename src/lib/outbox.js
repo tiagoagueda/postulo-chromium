@@ -8,6 +8,7 @@
 
 import { capture, kindOfFailure, problemOf } from "./api.js";
 import { hostOf } from "./log.js";
+import { pageOf } from "./rendering.js";
 
 /** One delivery at a time across the popup, the pages and the background: they share an
  *  origin, so a Web Lock held by one holds for all. Tests pass their own. */
@@ -75,6 +76,9 @@ export async function deliver({ store, log, settings, allowed, fetchImpl = fetch
           state: "sent",
           sentAt: new Date().toISOString(),
           reviewUrl: result.review_url,
+          // What Postulo said about keeping a picture of the page, for the popup that is
+          // still open on it; the background can no longer see the page to draw it.
+          page: pageOf(result, record.batch),
           problem: null,
         });
         await store.dropPage(record.id);

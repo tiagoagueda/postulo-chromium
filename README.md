@@ -183,6 +183,8 @@ while the code asks for a key that `en` does not have.
 | `src/lib/form.js` | The posting as a form, for the popup and the list alike |
 | `src/lib/local.js` | The store, the log and delivery over `storage.local`, as every page uses them |
 | `src/lib/api.js` | Talking to `/api/v1`: pure functions, tested with `node --test` |
+| `src/lib/rendering.js` | The picture of the whole page Postulo may keep: whether it is wanted, screens, size |
+| `src/lib/picture.js` | Drawing the whole page: `captureTab` on Firefox, scrolling and stitching on Chromium |
 | `src/lib/browser.js` | `browser ?? chrome`, settings, permissions, reading the active tab |
 | `src/lib/i18n.js` | Fills the pages from `_locales` in the browser's language |
 | `src/_locales/` | One `messages.json` per language; `en` is the source |

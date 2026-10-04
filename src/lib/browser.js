@@ -53,5 +53,6 @@ export async function readCurrentTab() {
   if (!injected || !injected.result) {
     throw new Refusal("unreadable");
   }
-  return injected.result;
+  // Which tab it was, for a picture of it later (picture.js).
+  return { ...injected.result, tabId: tab.id, windowId: tab.windowId };
 }

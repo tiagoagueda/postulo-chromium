@@ -193,6 +193,27 @@ export async function capture(instance, token, { url, html, data, batch, key }, 
   return readResponse(response);
 }
 
+/** PUT the picture of the whole page to the address a capture's answer gave for it: the raw
+ *  bytes, their type and length, and not JSON. `blob` is a Blob, whose size the browser sends
+ *  as Content-Length. Resolves when Postulo has it (201), or already had these bytes (200);
+ *  anything else is thrown with its status, and 409, 413, 415 and 422 are final. */
+export async function sendRendering(token, url, blob, fetchImpl = fetch) {
+  const response = await request(fetchImpl, url, {
+    method: "PUT",
+    headers: { ...headers(token), "Content-Type": blob.type },
+    body: blob,
+  });
+  if (response.status === 200 || response.status === 201) {
+    return { kept: response.status === 201 };
+  }
+  return readResponse(response);
+}
+
+/** Whether Postulo refused a picture for good, so that sending it again would not help. */
+export function pictureRefused(error) {
+  return [409, 413, 415, 422].includes(error && error.status);
+}
+
 /** What Postulo's /captures/known takes: this many characters of a title or company, this many postings. */
 const KNOWN_TEXT = 250;
 const KNOWN_COMPANY = 250;

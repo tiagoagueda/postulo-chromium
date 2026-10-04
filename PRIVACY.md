@@ -1,7 +1,7 @@
 # Privacy policy
 
 **The Postulo browser extension** (Chromium and Firefox builds, one source). Last changed
-2026-09-16.
+2026-10-04.
 
 The extension has no server of its own, no account and no operator. There is nowhere for
 your data to go except the Postulo you host yourself, and it goes there only when you press
@@ -38,13 +38,14 @@ extension from your browser removes all of the above.
 
 Only to the address you configured, and to nothing else. Your token is sent as a bearer
 token in the `Authorization` header of those requests and of no others. There are exactly
-three:
+four:
 
 | When | Request | What goes |
 | --- | --- | --- |
 | You press *Test* in the settings | `GET /api/v1/me` | Nothing but the token, to ask Postulo who it is |
 | You press *Send*, or a waiting capture is retried | `POST /api/v1/captures` | The posting's address, the slimmed copy of the page, the fields as you reviewed them, and — for several captures read off one results page — how many there were and which this is |
 | The popup opens on a posting, with Postulo set up and reachable | `POST /api/v1/captures/known` | The address, title and company of the postings on the page, so the popup can say which your Postulo already holds. Postulo stores nothing on this request. |
+| You press *Send the picture*, offered after a capture was sent, and only when your Postulo says it keeps pictures | `PUT` to the address Postulo gave for it | A picture of the whole page as you see it in that tab, signed in or not: the page's image, and nothing else. Never for several captures read off one results page. |
 
 Retries of a capture you already sent happen in the background, every five minutes and when
 the browser starts, until Postulo takes it. Nothing is ever sent that you did not press
@@ -57,7 +58,10 @@ The extension has no content scripts and no standing permission to run on any si
 reads a page only when you click its toolbar button or press `Alt+Shift+P`, through a
 script injected into that one tab for that one call, under `activeTab`. It reads the page's
 address and its HTML, as your browser already has them. It cannot read a page you did not
-ask it to read, and it reads nothing in the background.
+ask it to read, and it reads nothing in the background. If you then say yes to sending a
+picture of the page, it draws that tab: on Firefox in one go, on Chromium by scrolling the
+page screen by screen, hiding what stays fixed in place, and putting everything back as it
+was. It does not use the `debugger` permission.
 
 Permission to reach your Postulo's address is asked for once, when you save the settings,
 and is granted for that one origin. The extension holds no permanent host permissions.

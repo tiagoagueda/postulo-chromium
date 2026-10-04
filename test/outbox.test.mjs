@@ -359,3 +359,24 @@ test("a full storage quota reaches the caller as a message that can be translate
   await assert.rejects(store.add({ url: "https://x.test/1", html: "<p>", source: "s", read: {}, data: {} }), { key: "storageFull" });
   await assert.rejects(store.addMany({ html: "<p>", entries: [{ url: "u", source: "s", read: {}, data: {} }] }), { key: "storageFull" });
 });
+
+test("what Postulo said about a picture of the page is kept with a sent capture, and only the offer", async () => {
+  const { store, log } = setUp();
+  const record = await keep(store, "one", "waiting");
+  const page = {
+    source: true,
+    accepts_rendering: true,
+    rendering_url: "https://postulo.example.org/api/v1/captures/7/rendering",
+    rendering_types: ["image/png"],
+    rendering_max_bytes: 100,
+  };
+  const { fetchImpl } = answering({ status: 201, body: { id: 7, review_url: "https://postulo.example.org/r/7", page } });
+  await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+  const { source, ...offer } = page;
+  assert.deepEqual((await store.get(record.id)).page, offer);
+
+  const older = await keep(store, "older server", "waiting");
+  const { fetchImpl: again } = answering({ status: 201, body: { id: 8, review_url: "https://postulo.example.org/r/8" } });
+  await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl: again, lock: noLock });
+  assert.equal((await store.get(older.id)).page, null, "an older server sends none, and nothing more is sent");
+});
