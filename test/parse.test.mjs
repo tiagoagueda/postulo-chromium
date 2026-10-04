@@ -4,7 +4,7 @@ import { test } from "node:test";
 
 import { JSDOM } from "jsdom";
 
-import { MAX_PAGE, jsonLd, metadata, readPosting, readPostings, slimPage, textOf } from "../src/lib/parse.js";
+import { MAX_PAGE, emptyPosting, jsonLd, metadata, readPosting, readPostings, slimPage, textOf, tidy } from "../src/lib/parse.js";
 
 const parse = (html) => new JSDOM(html).window.document;
 const page = (head, body = "") => parse(`<!doctype html><html><head>${head}</head><body>${body}</body></html>`);
@@ -161,4 +161,21 @@ test("a page too big to keep is cut, and what it declared survives the cut", () 
   // The posting is declared in the head, so it is still read out of what was kept.
   const again = new JSDOM(slim).window.document;
   assert.deepEqual(readPosting(again, URL_, parse), readPosting(doc, URL_, parse));
+});
+
+const LONE_SURROGATE = /[\ud800-\udbff](?![\udc00-\udfff])/;
+
+test("a field cut inside an emoji does not keep half of it", () => {
+  const tidied = tidy({ ...emptyPosting(URL_), title: `${"a".repeat(499)}\u{1f680}`, description: "x" });
+  assert.equal(tidied.title, "a".repeat(499));
+  assert.doesNotMatch(tidied.title, LONE_SURROGATE);
+});
+
+test("a page cut inside an emoji does not keep half of it", () => {
+  // Whichever parity the page head has, one of the two pads puts the cut inside the pair.
+  for (const pad of ["", "a"]) {
+    const doc = page("<title>T</title>", `<p>${pad}${"\u{1f680}".repeat(MAX_PAGE / 2)}</p>`);
+    const slim = slimPage(doc);
+    assert.doesNotMatch(slim, LONE_SURROGATE);
+  }
 });

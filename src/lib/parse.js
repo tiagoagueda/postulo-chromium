@@ -666,8 +666,8 @@ function pageMetadata(doc, url) {
   }
   return {
     ...emptyPosting(url),
-    title: title.slice(0, MAX_FIELD),
-    company_name: (meta["og:site_name"] || "").slice(0, MAX_FIELD),
+    title: cut(title, MAX_FIELD),
+    company_name: cut(meta["og:site_name"] || "", MAX_FIELD),
     description: mainText(doc),
   };
 }
@@ -692,16 +692,24 @@ export function emptyPosting(url = "") {
   };
 }
 
+/** The first `length` UTF-16 units of `value`, without a lone high surrogate at the end:
+ *  Postulo refuses any string holding one, and so the whole capture. */
+function cut(value, length) {
+  const kept = value.slice(0, length);
+  const last = kept.charCodeAt(kept.length - 1);
+  return last >= 0xd800 && last <= 0xdbff ? kept.slice(0, -1) : kept;
+}
+
 /** As Postulo's JobPostingData would take it: trimmed, and cut to its limits. */
 export function tidy(posting) {
   const tidied = { ...posting };
   for (const [field, value] of Object.entries(tidied)) {
     if (typeof value === "string") {
-      tidied[field] = value.trim().slice(0, LIMITS[field] ?? (field === "description" ? Infinity : MAX_FIELD));
+      tidied[field] = cut(value.trim(), LIMITS[field] ?? (field === "description" ? Infinity : MAX_FIELD));
     }
   }
   if (tidied.description.length > MAX_DESCRIPTION) {
-    tidied.description = `${tidied.description.slice(0, MAX_DESCRIPTION).trimEnd()}\n\n[…truncated]`;
+    tidied.description = `${cut(tidied.description, MAX_DESCRIPTION).trimEnd()}\n\n[…truncated]`;
   }
   return tidied;
 }
@@ -881,5 +889,5 @@ export function slimPage(doc) {
     }
   }
   const html = `<!doctype html>\n${copy.outerHTML}`;
-  return html.length > MAX_PAGE ? `${html.slice(0, MAX_PAGE)}\n<!-- truncated at ${MAX_PAGE} characters -->\n` : html;
+  return html.length > MAX_PAGE ? `${cut(html, MAX_PAGE)}\n<!-- truncated at ${MAX_PAGE} characters -->\n` : html;
 }
