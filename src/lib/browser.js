@@ -38,10 +38,18 @@ export async function readCurrentTab() {
   if (!/^https?:/.test(tab.url || "")) {
     throw new Refusal("notWebPage");
   }
-  const [injected] = await ext.scripting.executeScript({
-    target: { tabId: tab.id },
-    func: () => ({ url: location.href, html: document.documentElement.outerHTML }),
-  });
+  let injected;
+  try {
+    [injected] = await ext.scripting.executeScript({
+      target: { tabId: tab.id },
+      func: () => ({ url: location.href, html: document.documentElement.outerHTML }),
+    });
+  } catch (error) {
+    // The browser refuses some pages (its own store, policy-blocked hosts, error pages)
+    // with a developer message in English; say the translated sentence, keep the cause.
+    console.warn("Postulo could not script the page:", error && error.message);
+    throw new Refusal("unreadable");
+  }
   if (!injected || !injected.result) {
     throw new Refusal("unreadable");
   }

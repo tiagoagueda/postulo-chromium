@@ -76,6 +76,11 @@ export async function readResponse(response) {
     body = null;
   }
   if (response.ok) {
+    // A sign-in page, a captive portal or another site answers 2xx with something that is
+    // not Postulo's JSON. No status, so a capture waits rather than being refused.
+    if (!body || typeof body !== "object") {
+      throw new Refusal("notPostulo");
+    }
     return body;
   }
   throw withStatus(refusalFor(response.status, body), response.status);

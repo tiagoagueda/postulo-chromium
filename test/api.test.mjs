@@ -244,3 +244,11 @@ test("asking what is known keeps within the server's limits", async () => {
   });
   assert.deepEqual(sent, ["https://j.example/1", ""]);
 });
+
+test("a 2xx answer that is not Postulo's JSON is a refusal with no status, so a capture waits", async () => {
+  const html = { ok: true, status: 200, json: async () => { throw new SyntaxError("Unexpected token <"); } };
+  await assert.rejects(readResponse(html), (error) => refusal("notPostulo")(error) && error.status === undefined);
+  const error = await readResponse(html).catch((caught) => caught);
+  assert.equal(kindOfFailure(error), "later");
+  await assert.rejects(readResponse(fakeResponse(200, null)), refusal("notPostulo"));
+});

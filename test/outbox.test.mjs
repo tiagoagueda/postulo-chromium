@@ -337,3 +337,16 @@ test("a record sent again after a lost answer repeats its Idempotency-Key, and a
   await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
   assert.notEqual(calls[2].headers["Idempotency-Key"], calls[0].headers["Idempotency-Key"]);
 });
+
+test("a delivery answered 200 with a page that is not JSON leaves the capture waiting with a translatable problem", async () => {
+  const { store, log } = setUp();
+  const record = await keep(store, "first", "waiting");
+  const fetchImpl = async () => ({ ok: true, status: 200, json: async () => { throw new SyntaxError("Unexpected token <"); } });
+
+  const result = await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+
+  assert.equal(result.outcome, "unreachable");
+  const kept = await store.get(record.id);
+  assert.equal(kept.state, "waiting");
+  assert.deepEqual(kept.problem, { key: "notPostulo", substitutions: [] });
+});

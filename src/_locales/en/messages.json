@@ -223,6 +223,10 @@
     "message": "The page could not be read. Some pages block extensions.",
     "description": "Reading the page failed."
   },
+  "notPostulo": {
+    "message": "That address answered, but not as Postulo. Check the address, and any sign-in page in front of it.",
+    "description": "The instance answered successfully with something that is not Postulo's JSON."
+  },
   "reviewHint": {
     "message": "This is what was read from the page. Correct anything that is wrong; nothing leaves this browser until you send it.",
     "description": "Above the form showing what was read, before anything is sent."
