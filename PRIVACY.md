@@ -29,6 +29,7 @@ It keeps:
   (never its full address), and what Postulo answered — the most recent 1000 entries. You
   can read or download it from *Settings → Testing and troubleshooting*, and clear it there.
   The log never holds your token and never holds a page or anything read from one.
+- **The language you picked** for the extension, if you did, in the settings.
 - **A testing switch** and the outcome of the last delivery attempt.
 
 Deleting a capture from *Captures in this browser* removes it and its page. Removing the
@@ -46,6 +47,10 @@ four:
 | You press *Send*, or a waiting capture is retried | `POST /api/v1/captures` | The posting's address, the slimmed copy of the page, the fields as you reviewed them, and — for several captures read off one results page — how many there were and which this is |
 | The popup opens on a posting, with Postulo set up and reachable | `POST /api/v1/captures/known` | The address, title and company of the postings on the page, so the popup can say which your Postulo already holds. Postulo stores nothing on this request. |
 | You press *Send the picture*, offered after a capture was sent, and only when your Postulo says it keeps pictures | `PUT` to the address Postulo gave for it | A picture of the whole page as you see it in that tab, signed in or not: the page's image, and nothing else. Never for several captures read off one results page. |
+
+Each of these requests carries the tag of the language the extension is speaking (`de`,
+`pt-PT`) in the `Accept-Language` header, so that Postulo can word its refusals in it. Your
+browser sends that header to every site it visits anyway.
 
 Retries of a capture you already sent happen in the background, every five minutes and when
 the browser starts, until Postulo takes it. Nothing is ever sent that you did not press

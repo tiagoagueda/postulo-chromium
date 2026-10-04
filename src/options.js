@@ -1,6 +1,7 @@
 import { normaliseInstance, originPattern, whoAmI } from "./lib/api.js";
-import { ext, loadSettings, requestHostPermission, saveSettings, setOffline } from "./lib/browser.js";
-import { explain, localise, localiseWith, t } from "./lib/i18n.js";
+import { ext, loadSettings, requestHostPermission, saveSettings, setLanguage, setOffline } from "./lib/browser.js";
+import { explain, localise, localiseWith, t, useLanguage, useStoredLanguage } from "./lib/i18n.js";
+import { LANGUAGES } from "./lib/languages.js";
 import { log, store } from "./lib/local.js";
 import { hostOf } from "./lib/log.js";
 
@@ -34,6 +35,16 @@ function localiseHints() {
   localiseWith($("shortcut-hint"), "shortcutHint", [shortcut]);
 }
 
+/** The languages to pick from, each named in itself and marked as that language for a screen reader. */
+function listLanguages() {
+  for (const language of LANGUAGES) {
+    const option = element("option", language.name);
+    option.value = language.tag;
+    option.lang = language.tag;
+    $("language").append(option);
+  }
+}
+
 /** The log as a file, headed by what somebody helping would ask first. */
 async function downloadLog() {
   const settings = await loadSettings();
@@ -62,9 +73,14 @@ async function downloadLog() {
 }
 
 async function main() {
+  await useStoredLanguage();
   localise();
   localiseHints();
+  listLanguages();
   const settings = await loadSettings();
+  // A language stored but no longer shipped is not in the list: the select then shows "Follow
+  // the browser", the stored value stays as it is, and so does the language in use.
+  $("language").value = LANGUAGES.some((one) => one.tag === settings.language) ? settings.language : "";
   $("instance").value = settings.instance;
   $("token").value = settings.token;
   $("offline").checked = settings.offline;
@@ -121,6 +137,17 @@ async function main() {
     await setOffline(offline);
     await log.add("testing switch", { offline });
     say(offline ? t("offlineOn") : t("offlineOff"));
+  });
+
+  // Takes effect at once, like the switch above; the open pages follow through the storage change.
+  $("language").addEventListener("change", async () => {
+    const language = $("language").value;
+    await setLanguage(language);
+    await useLanguage(language);
+    localise();
+    localiseHints();
+    say("");
+    await log.add("language", { language: language || "(browser's)" });
   });
 
   $("download-log").addEventListener("click", downloadLog);

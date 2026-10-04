@@ -2,7 +2,7 @@ import { describe, known, originPattern, pictureRefused, sendRendering } from ".
 import { askAndKeep } from "./lib/allow.js";
 import { ext, hasHostPermission, loadSettings, readCurrentTab, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
-import { explain, localise, t } from "./lib/i18n.js";
+import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
 import { afterSending, deliverWaiting, log, openCaptures, showUnsentCount, store } from "./lib/local.js";
 import { hostOf } from "./lib/log.js";
 import { emptyPosting, readPosting, readPostings, slimPage } from "./lib/parse.js";
@@ -41,6 +41,7 @@ async function showCount() {
 }
 
 async function main() {
+  await useStoredLanguage();
   localise();
   const settings = await loadSettings();
   const connected = Boolean(settings.instance && settings.token);

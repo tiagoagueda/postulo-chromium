@@ -2,7 +2,7 @@ import { askAndKeep } from "./lib/allow.js";
 import { originPattern } from "./lib/api.js";
 import { ext, loadSettings, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
-import { explain, localise, t } from "./lib/i18n.js";
+import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
 import { afterSending, deliverWaiting, log, showUnsentCount, store } from "./lib/local.js";
 import { isCaptureKey, UNSENT } from "./lib/store.js";
 
@@ -229,6 +229,7 @@ async function draw() {
 }
 
 async function main() {
+  await useStoredLanguage();
   localise();
   settings = await loadSettings();
   $("not-connected").hidden = Boolean(settings.instance && settings.token);
@@ -252,6 +253,12 @@ async function main() {
   ext.storage.onChanged.addListener(async (changes, area) => {
     if (area !== "local") {
       return;
+    }
+    if (changes.language) {
+      // The list is drawn again once any edit in progress is closed, never under it.
+      await useStoredLanguage();
+      localise();
+      draw();
     }
     if (changes.offline || changes.instance || changes.token) {
       settings = await loadSettings();

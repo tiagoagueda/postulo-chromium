@@ -4,6 +4,8 @@
 // The token is sent as a bearer token to the instance the person configured, and to
 // nothing else. There is no analytics, no third-party request, no cache of pages.
 
+import { languageTag } from "./i18n.js";
+
 const API = "/api/v1";
 
 /** An error with a sentence to show, named by its key in _locales rather than written out.
@@ -55,8 +57,12 @@ export function endpoint(instance, path) {
 }
 
 function headers(token) {
+  // The language the extension is speaking, so that the sentences Postulo writes for a
+  // refusal come in it too; the browser's own header may name another.
+  const language = languageTag();
   return {
     Authorization: `Bearer ${token}`,
+    ...(language ? { "Accept-Language": language } : {}),
     // Postulo answers a refusal as `application/problem+json` (RFC 9457) and everything
     // else as `application/json`. Both are named so that neither is a surprise.
     Accept: "application/json, application/problem+json",

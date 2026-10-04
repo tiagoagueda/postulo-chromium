@@ -1,0 +1,48 @@
+// The languages the extension ships, each with the folder it lives in under _locales, its BCP 47
+// tag as the catalogue's `languageTag` says it, and its own name, as Postulo's picker shows it
+// (the core's NATIVE_NAMES). A language is named in itself so that somebody who cannot read the
+// page's present language can still find theirs. test/i18n.test.mjs keeps this list and the
+// folders in step.
+
+export const LANGUAGES = [
+  { folder: "bg", tag: "bg", name: "български" },
+  { folder: "bs", tag: "bs", name: "bosanski" },
+  { folder: "ca", tag: "ca", name: "català" },
+  { folder: "cs", tag: "cs", name: "čeština" },
+  { folder: "cy", tag: "cy", name: "Cymraeg" },
+  { folder: "da", tag: "da", name: "dansk" },
+  { folder: "de", tag: "de", name: "Deutsch" },
+  { folder: "el", tag: "el", name: "Ελληνικά" },
+  { folder: "en", tag: "en", name: "English (United Kingdom)" },
+  { folder: "es", tag: "es", name: "español" },
+  { folder: "et", tag: "et", name: "eesti" },
+  { folder: "eu", tag: "eu", name: "euskara" },
+  { folder: "fi", tag: "fi", name: "suomi" },
+  { folder: "fr", tag: "fr", name: "français (France)" },
+  { folder: "ga", tag: "ga", name: "Gaeilge" },
+  { folder: "gl", tag: "gl", name: "galego" },
+  { folder: "hr", tag: "hr", name: "hrvatski" },
+  { folder: "hu", tag: "hu", name: "magyar" },
+  { folder: "hy", tag: "hy", name: "հայերեն" },
+  { folder: "is", tag: "is", name: "íslenska" },
+  { folder: "it", tag: "it", name: "italiano" },
+  { folder: "ka", tag: "ka", name: "ქართული" },
+  { folder: "lb", tag: "lb", name: "Lëtzebuergesch" },
+  { folder: "lt", tag: "lt", name: "lietuvių" },
+  { folder: "lv", tag: "lv", name: "latviešu" },
+  { folder: "mk", tag: "mk", name: "македонски" },
+  { folder: "mt", tag: "mt", name: "Malti" },
+  { folder: "nb", tag: "nb", name: "norsk bokmål" },
+  { folder: "nl", tag: "nl", name: "Nederlands" },
+  { folder: "pl", tag: "pl", name: "polski" },
+  { folder: "pt_BR", tag: "pt-BR", name: "português (Brasil)" },
+  { folder: "pt_PT", tag: "pt-PT", name: "português (Portugal)" },
+  { folder: "ro", tag: "ro", name: "română" },
+  { folder: "sk", tag: "sk", name: "slovenčina" },
+  { folder: "sl", tag: "sl", name: "slovenščina" },
+  { folder: "sq", tag: "sq", name: "shqip" },
+  { folder: "sr", tag: "sr-Cyrl", name: "српски" },
+  { folder: "sv", tag: "sv", name: "svenska" },
+  { folder: "tr", tag: "tr", name: "Türkçe" },
+  { folder: "uk", tag: "uk", name: "українська" },
+];

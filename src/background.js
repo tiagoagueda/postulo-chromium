@@ -5,7 +5,7 @@
 // could not be reached then: every few minutes, and when the browser starts.
 
 import { ext } from "./lib/browser.js";
-import { deliverWaiting, showUnsentCount } from "./lib/local.js";
+import { deliverWaiting, showLanguage, showUnsentCount } from "./lib/local.js";
 import { isCaptureKey } from "./lib/store.js";
 
 const ALARM = "deliver";
@@ -19,6 +19,7 @@ function schedule() {
 ext.runtime.onInstalled.addListener((details) => {
   schedule();
   showUnsentCount();
+  showLanguage();
   if (details.reason === "install") {
     ext.runtime.openOptionsPage();
   }
@@ -27,6 +28,7 @@ ext.runtime.onInstalled.addListener((details) => {
 ext.runtime.onStartup.addListener(() => {
   schedule();
   showUnsentCount();
+  showLanguage();
   deliverWaiting();
 });
 
@@ -42,6 +44,9 @@ ext.storage.onChanged.addListener((changes, area) => {
   }
   if (Object.keys(changes).some(isCaptureKey)) {
     showUnsentCount();
+  }
+  if (changes.language) {
+    showLanguage();
   }
   // Turning the testing switch off, or saving an address, is a moment Postulo may be
   // reachable where it was not.

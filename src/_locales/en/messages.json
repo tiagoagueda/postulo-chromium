@@ -592,5 +592,17 @@
   "pictureFailed": {
     "message": "The page could not be drawn. Is it still the one you captured?",
     "description": "Status when the picture of the page could not be made, or the tab has moved to another page."
+  },
+  "languageLabel": {
+    "message": "Language",
+    "description": "Label of the settings page's list of languages for the extension. Each entry in the list is the language's own name; the first is languageFollow."
+  },
+  "languageFollow": {
+    "message": "Follow the browser",
+    "description": "First entry of the list of languages: the extension speaks the language the browser is set to, as it does until one is picked."
+  },
+  "languageHint": {
+    "message": "Every language but English is a draft that no speaker has reviewed yet. Takes effect at once, without Save.",
+    "description": "Under the list of languages: the translations are unreviewed drafts, and picking one needs no Save."
   }
 }

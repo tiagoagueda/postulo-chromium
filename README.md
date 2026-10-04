@@ -114,9 +114,27 @@ to attach to an issue. It holds no token and nothing from the pages.
 
 ## Languages
 
-The extension speaks the language the browser is set to; there is no setting for it. The
-browser matches its own language against `src/_locales/` and falls back to English for one
-that is not there.
+The extension speaks the language the browser is set to, unless one is picked in *Settings
+→ Language*. By default the browser matches its own language against `src/_locales/` and
+falls back to English for one that is not there.
+
+The list in the settings offers *Follow the browser* and every shipped language, each named
+in itself (`Deutsch`, `Gaeilge`, `српски`, as Postulo's own picker names them) and marked
+with its own `lang`. The choice is kept in `storage.local` as a BCP 47 tag, takes effect at
+once, and reaches the popup, the list of captures, the settings and the button's tooltip. It
+is there for someone who reads Postulo in a language other than the browser's, and for the
+languages Chrome has no interface in (`ga`, `mt` and `lb` on every platform), which the
+browser would never pick by itself.
+
+No browser lets an extension set its own language, so with one picked the extension reads
+`_locales/<folder>/messages.json` itself (`src/lib/i18n.js`) and puts a sentence together by
+the rules of `i18n.getMessage` (`src/lib/messages.js`: named placeholders, `$1` to `$9`,
+`$$`). Pages read the catalogue before they fill themselves in; the background reads it
+too, to word the tooltip again at every start (browsers forget it) and, in Firefox on a
+computer, the shortcut's description. What the browser words itself cannot follow: the
+extension's description in the add-on lists, and the shortcut's description in Chromium and
+Firefox for Android. Every request to Postulo carries the tag of the language in use as
+`Accept-Language`, so the sentences Postulo writes for a refusal come in it too.
 
 The languages are the ones Postulo itself offers: English plus the 39 European catalogues
 the core has complete. Where the core has a word for something — *Settings*, *API tokens*,
@@ -173,7 +191,7 @@ while the code asks for a key that `en` does not have.
 | `src/manifest.json` | Manifest V3 for both browsers; the build strips what each one would complain about |
 | `src/popup.*` | The button, the form showing what was read, *Send* and *Keep* |
 | `src/captures.*` | Captures in this browser: the list, to edit, send, hold back or delete |
-| `src/options.*` | Address, token, *Test*, *Save*; the testing switch and the log |
+| `src/options.*` | Address, token, *Test*, *Save*; the language; the testing switch and the log |
 | `src/background.js` | Opens the settings on first install; sends what is waiting, every five minutes and at start |
 | `src/lib/parse.js` | Reading a posting: Postulo's `schema.org` and `page-metadata` sources, carried over |
 | `src/lib/titles.js`, `src/lib/patterns.js` | What `page-metadata` reads from a title line (job, employer) and from the text (salary, closing date), as Postulo's `titles.py` and `patterns.py` do |
@@ -186,7 +204,9 @@ while the code asks for a key that `en` does not have.
 | `src/lib/rendering.js` | The picture of the whole page Postulo may keep: whether it is wanted, screens, size |
 | `src/lib/picture.js` | Drawing the whole page: `captureTab` on Firefox, scrolling and stitching on Chromium |
 | `src/lib/browser.js` | `browser ?? chrome`, settings, permissions, reading the active tab |
-| `src/lib/i18n.js` | Fills the pages from `_locales` in the browser's language |
+| `src/lib/i18n.js` | Fills the pages from `_locales`, in the browser's language or the one picked |
+| `src/lib/messages.js` | A sentence out of a catalogue by `getMessage`'s rules, for a picked language |
+| `src/lib/languages.js` | The shipped languages: folder, tag and own name, for the settings' list |
 | `src/_locales/` | One `messages.json` per language; `en` is the source |
 | `.forgejo/ISSUE_TEMPLATE/` | The bug and feature forms, and the links shown above them (security, translations) |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
