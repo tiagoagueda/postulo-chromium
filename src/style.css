@@ -4,9 +4,11 @@
   --muted: #6b7280;
   --brand: #2563eb;
   --brand-dark: #1d4ed8;
+  --on-brand: #ffffff;
   --error: #b91c1c;
   --paper: #ffffff;
   --line: #e5e7eb;
+  --field-line: #6b7280;
   --ok: #15803d;
 }
 
@@ -16,9 +18,11 @@
     --muted: #9ca3af;
     --brand: #60a5fa;
     --brand-dark: #3b82f6;
+    --on-brand: #111827;
     --error: #fca5a5;
     --paper: #111827;
     --line: #374151;
+    --field-line: #6b7280;
     --ok: #4ade80;
   }
 }
@@ -101,7 +105,7 @@ select,
 textarea {
   width: 100%;
   padding: 7px 9px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--field-line);
   border-radius: 6px;
   background: var(--paper);
   color: inherit;
@@ -141,7 +145,7 @@ button.primary,
 .button.primary {
   background: var(--brand);
   border-color: var(--brand);
-  color: #fff;
+  color: var(--on-brand);
 }
 
 button.primary:hover,
@@ -339,7 +343,7 @@ button.link {
   padding: 0 6px;
   border-radius: 999px;
   background: var(--line);
-  color: var(--muted);
+  color: var(--ink);
   font-size: 11px;
   white-space: nowrap;
 }
@@ -355,7 +359,7 @@ button.link {
   padding: 0 5px;
   border-radius: 999px;
   background: var(--brand);
-  color: #fff;
+  color: var(--on-brand);
   font-size: 11px;
   font-weight: 600;
   text-align: center;
