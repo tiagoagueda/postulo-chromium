@@ -380,3 +380,40 @@ test("what Postulo said about a picture of the page is kept with a sent capture,
   await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl: again, lock: noLock });
   assert.equal((await store.get(older.id)).page, null, "an older server sends none, and nothing more is sent");
 });
+
+test("an address still over Postulo's limit once its fragment is gone is not sent, and says why", async () => {
+  const { store, log } = setUp();
+  const long = `https://jobs.example/search?q=${"a".repeat(600)}#top`;
+  const stuck = await store.add({ url: long, html: "<title>x</title>", source: "schema.org", read: POSTING("x"), data: POSTING("x"), state: "waiting" });
+  const fine = await keep(store, "y", "waiting");
+  const { calls, fetchImpl } = answering({ status: 201, body: { id: 2, review_url: "https://postulo.example.org/r/2" } });
+  const result = await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+  assert.equal(calls.length, 1, "only the capture with an address that fits is asked about");
+  assert.equal(calls[0].body.url, "https://jobs.example/y");
+  assert.deepEqual(result, { outcome: "done", sent: 1 });
+  const refused = await store.get(stuck.id);
+  assert.equal(refused.state, "refused");
+  assert.deepEqual(refused.problem, { key: "addressTooLong", substitutions: [] });
+  assert.equal((await store.get(fine.id)).state, "sent");
+  assert.ok((await log.entries()).some((entry) => entry.event === "failed" && entry.id === stuck.id && entry.status === "not sent"));
+});
+
+test("an address that is empty, as tidy leaves one that was too long, is not sent either", async () => {
+  const { store, log } = setUp();
+  const nothing = await store.add({ url: "", html: "<title>x</title>", source: "schema.org", read: POSTING("x"), data: POSTING("x"), state: "waiting" });
+  const { calls, fetchImpl } = answering();
+  await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+  assert.equal(calls.length, 0);
+  assert.equal((await store.get(nothing.id)).problem.key, "addressTooLong");
+});
+
+test("an address of exactly the limit is sent", async () => {
+  const { store, log } = setUp();
+  const address = `https://jobs.example/${"a".repeat(500 - "https://jobs.example/".length)}`;
+  assert.equal(address.length, 500);
+  await store.add({ url: address, html: "<title>x</title>", source: "schema.org", read: POSTING("x"), data: POSTING("x"), state: "waiting" });
+  const { calls, fetchImpl } = answering({ status: 201, body: { id: 1, review_url: "https://postulo.example.org/r/1" } });
+  await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].body.url, address);
+});

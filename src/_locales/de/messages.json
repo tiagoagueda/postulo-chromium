@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Diese Adresse hat geantwortet, aber nicht als Postulo. Prüfen Sie die Adresse und jede Anmeldeseite, die davor liegt."
   },
+  "addressTooLong": {
+    "message": "Die Adresse dieser Seite ist länger, als Postulo zulässt, selbst ohne den Teil nach dem „#“, daher wurde die Erfassung nicht gesendet. Fügen Sie die Anzeige stattdessen von Hand in Postulo hinzu."
+  },
   "storageFull": {
     "message": "Der Speicher dieses Browsers für Postulo ist voll. Senden oder löschen Sie einige Erfassungen und versuchen Sie es dann erneut."
   },

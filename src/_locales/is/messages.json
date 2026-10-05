@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Þetta heimilisfang svaraði, en ekki sem Postulo. Athugaðu heimilisfangið og hvort innskráningarsíða standi fyrir framan það."
   },
+  "addressTooLong": {
+    "message": "Heimilisfang þessarar síðu er lengra en Postulo tekur við, jafnvel án hlutans á eftir „#“, svo gripið var ekki sent. Bættu auglýsingunni við í Postulo handvirkt í staðinn."
+  },
   "storageFull": {
     "message": "Geymslupláss þessa vafra fyrir Postulo er fullt. Sendu eða eyddu nokkrum föngum og reyndu svo aftur."
   },

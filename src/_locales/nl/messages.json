@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Dat adres antwoordde, maar niet als Postulo. Controleer het adres en eventuele inlogpagina's ervoor."
   },
+  "addressTooLong": {
+    "message": "Het adres van deze pagina is langer dan Postulo accepteert, zelfs zonder het deel na de ‘#’, dus de vastlegging is niet verstuurd. Voeg de vacature in plaats daarvan met de hand toe in Postulo."
+  },
   "storageFull": {
     "message": "De opslag van deze browser voor Postulo is vol. Verstuur of verwijder enkele vastleggingen en probeer het opnieuw."
   },

@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Dës Adress huet geäntwert, awer net als Postulo. Kontrolléiert d'Adress an eventuell Umeldesäiten doran."
   },
+  "addressTooLong": {
+    "message": "D'Adress vun dëser Säit ass méi laang, wéi de Postulo akzeptéiert, och ouni dat, wat no dem „#“ kënnt, dofir ass d'Erfaassung net geschéckt ginn. Setzt d'Annonce amplaz vun Hand am Postulo derbäi."
+  },
   "storageFull": {
     "message": "D'Späicherplaz vun dësem Browser fir Postulo ass voll. Schéckt oder läscht e puer Erfaassungen a probéiert dann nach eng Kéier."
   },

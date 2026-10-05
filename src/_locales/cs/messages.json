@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Tato adresa odpověděla, ale ne jako Postulo. Zkontrolujte adresu a případnou přihlašovací stránku před ní."
   },
+  "addressTooLong": {
+    "message": "Adresa této stránky je delší, než Postulo přijímá, i bez části za „#“, proto se zachycení neodeslalo. Přidejte inzerát do Postulu ručně."
+  },
   "storageFull": {
     "message": "Úložiště tohoto prohlížeče pro Postulo je plné. Odešlete nebo smažte některé zachycené položky a zkuste to znovu."
   },

@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Šī adrese atbildēja, bet ne kā Postulo. Pārbaudiet adresi un jebkuru pieteikšanās lapu tās priekšā."
   },
+  "addressTooLong": {
+    "message": "Šīs lapas adrese ir garāka, nekā Postulo pieņem, pat bez daļas aiz “#”, tāpēc tvērums netika nosūtīts. Pievienojiet sludinājumu Postulo manuāli."
+  },
   "storageFull": {
     "message": "Šī pārlūka krātuve Postulo ir pilna. Nosūtiet vai izdzēsiet dažus tvērumus un mēģiniet vēlreiz."
   },

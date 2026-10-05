@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Ten adres odpowiedział, ale nie jako Postulo. Sprawdź adres oraz ewentualną stronę logowania przed nim."
   },
+  "addressTooLong": {
+    "message": "Adres tej strony jest dłuższy, niż akceptuje Postulo, nawet bez części po „#”, więc przechwycenie nie zostało wysłane. Dodaj ogłoszenie w Postulo ręcznie."
+  },
   "storageFull": {
     "message": "Pamięć tej przeglądarki dla Postulo jest pełna. Wyślij lub usuń część przechwyconych treści i spróbuj ponownie."
   },

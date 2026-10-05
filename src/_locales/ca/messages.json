@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Aquesta adreça ha respost, però no com un Postulo. Comproveu l'adreça i qualsevol pàgina d'inici de sessió que hi hagi al davant."
   },
+  "addressTooLong": {
+    "message": "L'adreça d'aquesta pàgina és més llarga del que accepta el Postulo, fins i tot sense la part posterior al «#», per això la captura no s'ha enviat. Afegiu l'oferta al Postulo manualment."
+  },
   "storageFull": {
     "message": "L'emmagatzematge d'aquest navegador per a Postulo està ple. Envieu o suprimiu algunes captures i torneu-ho a provar."
   },

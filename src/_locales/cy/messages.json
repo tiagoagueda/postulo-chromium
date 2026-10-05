@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Atebodd y cyfeiriad hwnnw, ond nid fel Postulo. Gwiriwch y cyfeiriad, ac unrhyw dudalen mewngofnodi o'i flaen."
   },
+  "addressTooLong": {
+    "message": "Mae cyfeiriad y dudalen hon yn hirach nag y mae Postulo'n ei dderbyn, hyd yn oed heb y rhan ar ôl y “#”, felly ni anfonwyd y ddalfa. Ychwanegwch yr hysbyseb yn Postulo â llaw yn lle hynny."
+  },
   "storageFull": {
     "message": "Mae storfa'r porwr hwn ar gyfer Postulo yn llawn. Anfonwch neu dilëwch rai dalfeydd, yna rhowch gynnig arall arni."
   },

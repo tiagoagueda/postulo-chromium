@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Ajo adresë u përgjigj, por jo si Postulo. Kontrolloni adresën dhe çdo faqe hyrjeje që gjendet përpara saj."
   },
+  "addressTooLong": {
+    "message": "Adresa e kësaj faqeje është më e gjatë sesa pranon Postulo, edhe pa pjesën pas „#“, prandaj kapja nuk u dërgua. Në vend të kësaj, shtojeni shpalljen te Postulo-ja me dorë."
+  },
   "storageFull": {
     "message": "Hapësira ruajtëse e këtij shfletuesi për Postulo është plot. Dërgoni ose fshini disa kapje dhe provoni përsëri."
   },

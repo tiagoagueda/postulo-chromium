@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Ez a cím válaszolt, de nem Postuloként. Ellenőrizze a címet, és az előtte álló bejelentkezési oldalt is."
   },
+  "addressTooLong": {
+    "message": "Az oldal címe hosszabb, mint amit a Postulo elfogad, még a „#” utáni rész nélkül is, ezért a rögzítés nem lett elküldve. Adja hozzá inkább kézzel a hirdetést a Postulóban."
+  },
   "storageFull": {
     "message": "A böngésző Postulóhoz tartozó tárhelye megtelt. Küldjön el vagy törölzön néhány rögzítést, majd próbálja újra."
   },

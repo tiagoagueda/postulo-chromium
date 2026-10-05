@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Ta naslov se je odzval, vendar ne kot Postulo. Preverite naslov in morebitno prijavno stran pred njim."
   },
+  "addressTooLong": {
+    "message": "Naslov te strani je daljši, kot ga sprejme Postulo, tudi brez dela za „#“, zato zajem ni bil poslan. Oglas raje dodajte ročno v Postulo."
+  },
   "storageFull": {
     "message": "Shramba tega brskalnika za Postulo je polna. Pošljite ali izbrišite nekaj zajemov in poskusite znova."
   },

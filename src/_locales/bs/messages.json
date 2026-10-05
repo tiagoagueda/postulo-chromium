@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Ta adresa je odgovorila, ali ne kao Postulo. Provjerite adresu i eventualnu stranicu za prijavu ispred nje."
   },
+  "addressTooLong": {
+    "message": "Adresa ove stranice je duža nego što Postulo prihvata, čak i bez dijela iza „#“, pa hvatanje nije poslano. Umjesto toga dodajte oglas u Postulo ručno."
+  },
   "storageFull": {
     "message": "Pohrana ovog preglednika za Postulo je puna. Pošaljite ili izbrišite neka snimanja, pa pokušajte ponovo."
   },

@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Helbide horrek erantzun du, baina ez Postulo gisa. Egiaztatu helbidea eta haren aurrean dagoen saio-hasierako orriren bat."
   },
+  "addressTooLong": {
+    "message": "Orri honen helbidea Postulok onartzen duena baino luzeagoa da, «#» ikurraren ondorengo zatirik gabe ere, eta horregatik harrapaketa ez da bidali. Gehitu iragarkia Postulon eskuz."
+  },
   "storageFull": {
     "message": "Nabigatzaile honek Postulorako duen biltegiratzea beteta dago. Bidali edo ezabatu harrapaketa batzuk eta saiatu berriro."
   },

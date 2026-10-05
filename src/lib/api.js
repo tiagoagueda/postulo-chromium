@@ -245,10 +245,12 @@ export async function listCaptures(instance, token, { limit = 100, offset = 0 } 
   return readResponse(response);
 }
 
+/** The longest address Postulo takes, for a capture and for /captures/known alike. */
+export const ADDRESS_LIMIT = 500;
+
 /** What Postulo's /captures/known takes: this many characters of a title or company, this many postings. */
 const KNOWN_TEXT = 250;
 const KNOWN_COMPANY = 250;
-const KNOWN_URL = 500;
 const KNOWN_POSTINGS = 100;
 
 /** POST /captures/known: what Postulo already holds for these postings -- a listing at the
@@ -316,5 +318,5 @@ export function describe(result, untitled = "Untitled posting") {
 /** An address as /captures/known takes it: without its fragment, and left out when still too long. */
 function knownAddress(url) {
   const text = typeof url === "string" ? url.split("#")[0] : "";
-  return text.length > KNOWN_URL ? "" : text;
+  return text.length > ADDRESS_LIMIT ? "" : text;
 }

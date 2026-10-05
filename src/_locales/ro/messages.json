@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Adresa aceea a răspuns, dar nu ca un Postulo. Verifică adresa și orice pagină de autentificare aflată în fața ei."
   },
+  "addressTooLong": {
+    "message": "Adresa acestei pagini este mai lungă decât acceptă Postulo, chiar și fără partea de după „#”, așa că captura nu a fost trimisă. Adaugă în schimb anunțul manual în Postulo."
+  },
   "storageFull": {
     "message": "Spațiul de stocare al acestui browser pentru Postulo este plin. Trimite sau șterge câteva capturi, apoi încearcă din nou."
   },

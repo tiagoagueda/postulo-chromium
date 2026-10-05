@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Bu adres yanıt verdi, ancak Postulo olarak değil. Adresi ve önündeki oturum açma sayfasını varsa kontrol edin."
   },
+  "addressTooLong": {
+    "message": "Bu sayfanın adresi, “#” işaretinden sonraki kısım çıkarıldığında bile Postulo'nun kabul ettiğinden uzun, bu yüzden yakalama gönderilmedi. İlanı bunun yerine Postulo'ya elle ekleyin."
+  },
   "storageFull": {
     "message": "Bu tarayıcının Postulo için ayırdığı depolama alanı dolu. Bazı yakalamaları gönderin veya silin, ardından tekrar deneyin."
   },

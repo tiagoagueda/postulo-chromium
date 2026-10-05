@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Den adressen svarte, men ikke som en Postulo. Sjekk adressen, og eventuelle innloggingssider foran den."
   },
+  "addressTooLong": {
+    "message": "Adressen til denne siden er lengre enn Postulo godtar, selv uten delen etter «#», så fangsten ble ikke sendt. Legg i stedet til annonsen for hånd i Postulo."
+  },
   "storageFull": {
     "message": "Nettleserens lagringsplass for Postulo er full. Send eller slett noen fangster, og prøv igjen."
   },

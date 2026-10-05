@@ -282,6 +282,10 @@
     "message": "That address answered, but not as Postulo. Check the address, and any sign-in page in front of it.",
     "description": "The instance answered successfully with something that is not Postulo's JSON."
   },
+  "addressTooLong": {
+    "message": "This page's address is longer than Postulo accepts, even without the part after the “#”, so the capture was not sent. Add the posting in Postulo by hand instead.",
+    "description": "Shown on a capture that was not sent because its address is over the 500 characters Postulo takes (or was left out for being so). Postulo requires an address, so the capture cannot be sent without one."
+  },
   "reviewHint": {
     "message": "This is what was read from the page. Correct anything that is wrong; nothing leaves this browser until you send it.",
     "description": "Above the form showing what was read, before anything is sent."

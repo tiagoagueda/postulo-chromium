@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "See aadress vastas, kuid mitte Postulona. Kontrollige aadressi ja selle ees olevat sisselogimislehte."
   },
+  "addressTooLong": {
+    "message": "Selle lehe aadress on pikem, kui Postulo vastu võtab, isegi ilma „#“ järgse osata, seega püüdmist ei saadetud. Lisage kuulutus Postulosse käsitsi."
+  },
   "storageFull": {
     "message": "Selle brauseri Postulo salvestusruum on täis. Saatke või kustutage mõned püütud kirjed ja proovige siis uuesti."
   },

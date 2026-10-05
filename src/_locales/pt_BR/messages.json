@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Esse endereço respondeu, mas não como um Postulo. Verifique o endereço e qualquer página de login na frente dele."
   },
+  "addressTooLong": {
+    "message": "O endereço desta página é maior do que o Postulo aceita, mesmo sem a parte depois do “#”, então a captura não foi enviada. Adicione a vaga no Postulo manualmente."
+  },
   "storageFull": {
     "message": "O armazenamento deste navegador para o Postulo está cheio. Envie ou exclua algumas capturas e tente novamente."
   },

@@ -6,7 +6,7 @@
 // starts; the list of captures tries when it is opened. All of them come here, one at a
 // time, so the same capture is never sent twice by two of them at once.
 
-import { capture, kindOfFailure, problemOf } from "./api.js";
+import { ADDRESS_LIMIT, Refusal, capture, kindOfFailure, problemOf } from "./api.js";
 import { hostOf } from "./log.js";
 import { pageOf } from "./rendering.js";
 
@@ -33,7 +33,9 @@ function keyOf(record, payload) {
  *
  * Stops at the first sign Postulo cannot be reached, or will not take the token: the rest
  * would fail the same way, and trying them all against a server that is down helps nobody.
- * A capture Postulo refuses on its own account is marked refused, and the others go on.
+ * A capture Postulo refuses on its own account is marked refused, and the others go on. So is
+ * one whose address Postulo could not take however it was asked (see `addressFits`): it is not
+ * sent, and says so in a sentence of its own.
  *
  * Resolves to `{outcome, sent, problem?, status?}` (`status` being what Postulo answered with, when it did), `outcome` being one of `nothing` (none waiting),
  * `unconfigured`, `offline` (the testing switch), `noPermission`, `unreachable`, `account`
@@ -63,6 +65,12 @@ export async function deliver({ store, log, settings, allowed, fetchImpl = fetch
 
     let sent = 0;
     for (const record of waiting) {
+      if (!addressFits(withoutFragment(record.url))) {
+        const problem = problemOf(new Refusal("addressTooLong"));
+        await log.add("failed", { id: record.id, kind: "refused", status: "not sent", problem });
+        await store.update(record.id, { state: "refused", problem });
+        continue;
+      }
       await log.add("send", { id: record.id, host: hostOf(record.url) });
       try {
         const payload = { url: withoutFragment(record.url), html: await store.page(record.id), data: record.data, batch: record.batch };
@@ -107,4 +115,11 @@ export async function deliver({ store, log, settings, allowed, fetchImpl = fetch
 function withoutFragment(url) {
   const at = typeof url === "string" ? url.indexOf("#") : -1;
   return at < 0 ? url : url.slice(0, at);
+}
+
+/** Whether Postulo can be given this address at all: it requires one, and takes up to ADDRESS_LIMIT
+ *  characters. One that is empty is one `tidy` left out for being too long, and no sending can
+ *  make the core accept either, so the capture is stopped here instead of being refused there. */
+function addressFits(address) {
+  return typeof address === "string" && address.length > 0 && address.length <= ADDRESS_LIMIT;
 }

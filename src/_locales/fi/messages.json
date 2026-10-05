@@ -434,6 +434,9 @@
   "notPostulo": {
     "message": "Osoite vastasi, mutta ei Postulona. Tarkista osoite ja mahdollinen sen edessä oleva kirjautumissivu."
   },
+  "addressTooLong": {
+    "message": "Tämän sivun osoite on pidempi kuin Postulo hyväksyy, vaikka ”#”-merkin jälkeinen osa jätetään pois, joten kaappausta ei lähetetty. Lisää ilmoitus Postuloon käsin."
+  },
   "storageFull": {
     "message": "Tämän selaimen Postulo-tallennustila on täynnä. Lähetä tai poista joitakin kaappauksia ja yritä sitten uudelleen."
   },
