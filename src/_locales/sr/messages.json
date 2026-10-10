@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "sr-Cyrl"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Ухватите оглас за посао који гледате, чувајте га у свом прегледачу и пошаљите га у свој Postulo на преглед када кажете. Ништа не иде нигде другде."
   },

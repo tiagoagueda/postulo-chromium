@@ -18,8 +18,16 @@ const { LANGUAGES } = await import("../src/lib/languages.js");
 const { languageTag, localise, t, useLanguage } = await import("../src/lib/i18n.js");
 const { whoAmI } = await import("../src/lib/api.js");
 
-const readCatalogue = (folder) => JSON.parse(readFileSync(join(LOCALES, folder, "messages.json"), "utf8"));
-const fromDisk = async (path) => ({ json: async () => JSON.parse(readFileSync(path, "utf8")) });
+const { shipped } = await import("../scripts/build.mjs");
+
+// A catalogue as the package holds it: the build writes its language and direction in.
+const asShipped = (folder, catalogue) =>
+  shipped(catalogue, LANGUAGES.find((language) => language.folder === folder));
+const readCatalogue = (folder) =>
+  asShipped(folder, JSON.parse(readFileSync(join(LOCALES, folder, "messages.json"), "utf8")));
+const fromDisk = async (path) => ({
+  json: async () => asShipped(path.split(/[\\/]/).at(-2), JSON.parse(readFileSync(path, "utf8"))),
+});
 
 test("a message is put together as the browser would: named placeholders, then $1 to $9, then $$", () => {
   const catalogue = {

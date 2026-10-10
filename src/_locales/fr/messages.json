@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "fr"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Capturez l'annonce d'emploi que vous consultez, gardez-la dans votre navigateur et envoyez-la à votre propre Postulo pour vérification quand vous le décidez. Rien ne part ailleurs."
   },

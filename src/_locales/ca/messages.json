@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "ca"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Captureu l'oferta de feina que esteu mirant, deseu-la al vostre navegador i envieu-la al vostre propi Postulo perquè la reviseu quan ho digueu. No va enlloc més."
   },

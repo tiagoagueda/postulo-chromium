@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "de"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Erfassen Sie die Stellenanzeige, die Sie gerade ansehen, bewahren Sie sie in Ihrem Browser auf und senden Sie sie zur Prüfung an Ihr eigenes Postulo, wenn Sie es sagen. Nichts geht anderswohin."
   },

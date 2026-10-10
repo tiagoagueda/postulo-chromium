@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "hu"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Rögzítse a megtekintett álláshirdetést, őrizze meg a böngészőjében, és küldje el ellenőrzésre a saját Postulo-példányába, amikor úgy dönt. Semmi sem kerül máshová."
   },

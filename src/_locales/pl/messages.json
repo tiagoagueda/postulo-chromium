@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "pl"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Przechwyć ogłoszenie o pracę, które oglądasz, zachowaj je w przeglądarce i wyślij do własnego Postulo do sprawdzenia, kiedy zechcesz. Nic nie trafia nigdzie indziej."
   },

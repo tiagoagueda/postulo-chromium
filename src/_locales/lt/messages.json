@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "lt"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Užfiksuokite peržiūrimą darbo skelbimą, laikykite jį savo naršyklėje ir, kai nuspręsite, nusiųskite į savo Postulo peržiūrai. Niekas nekeliauja kitur."
   },

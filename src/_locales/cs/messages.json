@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "cs"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Zachyťte inzerát, na který se díváte, uchovejte ho ve svém prohlížeči, a až řeknete, pošlete ho ke kontrole na svůj vlastní Postulo. Nikam jinam nic nejde."
   },

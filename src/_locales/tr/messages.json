@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "tr"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Baktığınız iş ilanını yakalayın, tarayıcınızda saklayın ve siz söylediğinizde incelemek üzere kendi Postulo'nuza gönderin. Başka hiçbir yere bir şey gitmez."
   },

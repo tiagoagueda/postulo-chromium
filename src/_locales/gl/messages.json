@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "gl"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Captura a oferta de traballo que estás a ver, consérvaa no teu navegador e envíaa ao teu propio Postulo para revisala cando ti o digas. Nada vai a ningures máis."
   },

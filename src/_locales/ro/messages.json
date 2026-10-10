@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "ro"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Captează anunțul de angajare pe care îl vezi, păstrează-l în browserul tău și trimite-l spre revizuire către propriul tău Postulo când spui tu. Nimic nu ajunge în altă parte."
   },

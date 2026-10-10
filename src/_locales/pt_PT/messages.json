@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "pt-PT"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Capture o anúncio de emprego que está a ver, guarde-o no seu navegador e envie-o para o seu próprio Postulo para revisão quando o indicar. Nada segue para mais lado nenhum."
   },

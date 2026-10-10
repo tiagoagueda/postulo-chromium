@@ -1,12 +1,4 @@
 {
-  "languageTag": {
-    "message": "en",
-    "description": "This translation's language, as a BCP 47 tag in its canonical form: en, pt-PT, sr-Cyrl, nb. It is the page's lang attribute and the language dates are written in."
-  },
-  "direction": {
-    "message": "ltr",
-    "description": "ltr, or rtl for a language written right to left."
-  },
   "extensionDescription": {
     "message": "Capture the job posting you are looking at, keep it in your browser, and send it to your own Postulo for review when you say so. Nothing goes anywhere else.",
     "description": "The extension's description, in the browser's list of extensions and in the store."

@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "fi"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Kaappaa katsomasi työpaikkailmoitus, säilytä se selaimessasi ja lähetä se omaan Postuloosi tarkistettavaksi, kun itse haluat. Mitään ei lähetetä muualle."
   },

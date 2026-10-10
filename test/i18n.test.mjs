@@ -12,6 +12,9 @@ const LOCALES = join(SOURCE, "_locales");
 // differently, and the rule for them, are in that script). Each is a BCP 47 tag in its
 // canonical form, the way Postulo writes one (#12).
 const { LANGUAGES } = await import("../src/lib/languages.js");
+const { shipped } = await import("../scripts/build.mjs");
+// The keys the build writes into every catalogue that ships (scripts/build.mjs).
+const BUILT = new Set(["languageTag", "direction"]);
 const OFFERED = LANGUAGES.map((language) => language.tag);
 
 /** The folder the browser looks in for `tag`: the one place a language is not named by its
@@ -57,9 +60,14 @@ test("a language is named by a BCP 47 tag in its canonical form, and its folder 
   assert.equal(Object.keys(tagOf).length, OFFERED.length, "two languages would share a folder");
 });
 
-test("every language has every sentence, and nothing else", () => {
+test("no language has a sentence English lacks, and none is empty", () => {
+  // A sentence English has and a language lacks is Weblate's to fill, not the commit's:
+  // translations are made there and arrive as its pull request (postulo/postulo#706). The
+  // build leaves a language that lacks one out of the package (scripts/locales.mjs), so a
+  // half-done language never shows English in the gaps.
   for (const [folder, catalogue] of Object.entries(messages)) {
-    assert.deepEqual(Object.keys(catalogue).sort(), Object.keys(english).sort(), folder);
+    const extra = Object.keys(catalogue).filter((key) => !(key in english));
+    assert.deepEqual(extra, [], `${folder} has sentences English does not`);
     for (const [key, entry] of Object.entries(catalogue)) {
       assert.equal(typeof entry.message, "string", `${folder}.${key}`);
       assert.ok(entry.message.trim(), `${folder}.${key} is empty`);
@@ -76,11 +84,16 @@ test("placeholders are the same in every language, in the order the code passes 
   }
 });
 
-test("each translation names its own language, so the page's lang attribute is right", () => {
+test("each shipped translation names its own language, so the page's lang attribute is right", () => {
+  // Written by the build from src/lib/languages.js, never by a translator: machine
+  // translation would otherwise "translate" ltr (postulo/postulo#706).
   for (const [folder, catalogue] of Object.entries(messages)) {
-    assert.equal(catalogue.languageTag.message, tagOf[folder], folder);
+    assert.ok(!("languageTag" in catalogue) && !("direction" in catalogue), `${folder} holds what the build writes`);
+    const language = LANGUAGES.find((one) => one.folder === folder);
+    const built = shipped(catalogue, language);
+    assert.equal(built.languageTag.message, tagOf[folder], folder);
     assert.ok(["ltr", "rtl"].includes(directionOf[folder]), folder);
-    assert.equal(catalogue.direction.message, directionOf[folder], folder);
+    assert.equal(built.direction.message, directionOf[folder], folder);
   }
 });
 
@@ -116,7 +129,7 @@ test("every key the code asks for exists, and every sentence is asked for", () =
     .map((name) => readFileSync(join(SOURCE, name), "utf8"));
   const used = new Set(files.flatMap((text) => patterns.flatMap((pattern) => [...text.matchAll(pattern)].map((match) => match[1]))));
   for (const key of used) {
-    assert.ok(key in english, `the code asks for ${key}, which en does not have`);
+    assert.ok(key in english || BUILT.has(key), `the code asks for ${key}, which en does not have`);
   }
   for (const key of Object.keys(english)) {
     assert.ok(used.has(key), `en has ${key}, which nothing asks for`);

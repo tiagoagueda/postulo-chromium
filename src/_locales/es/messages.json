@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "es"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Captura el anuncio de empleo que estás viendo, guárdalo en tu navegador y envíalo a tu propio Postulo para revisarlo cuando tú digas. Nada va a ningún otro sitio."
   },

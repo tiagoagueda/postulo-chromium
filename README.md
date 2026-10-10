@@ -226,15 +226,17 @@ core's, so the button and the screen it points at agree.
 The list is `src/lib/languages.js` (folder, tag, direction, own name), and it is written,
 not kept by hand: `python scripts/languages.py` reads the core checked out beside this
 repository (`../postulo`, or `POSTULO_CORE`) and rewrites it; `--check` fails on a
-difference. Run it when the core starts a language, add the `_locales` folder with every
-key, and `npm test` fails until the folders equal the list and each catalogue's `direction`
-matches it. The first language written right to left (Arabic) is the first to need a look
+difference. Run it when the core starts a language and add an empty `_locales` folder for it;
+Weblate fills it, and `npm test` fails until the folders equal the list. The build writes each
+shipped catalogue's `languageTag` and `direction` from the list (`scripts/build.mjs`): they are
+not sentences, and a translator or a machine never sees them. The first language written right to left (Arabic) is the first to need a look
 in a real browser; the tests cover that the page's `dir` follows the catalogue and that the
 style sheet names no physical side.
 
 A language is named by a BCP 47 tag in its canonical form, as everywhere in Postulo: the
 language in lower case, a script with a capital, a region in capitals (`pt-BR`, `sr-Cyrl`,
-`nb`). Each catalogue says its own in `languageTag`, and that is what a page's `lang`
+`nb`). Each shipped catalogue says its own in `languageTag`, which the build writes, and that
+is what a page's `lang`
 attribute, every date and the log's header use. A language the extension comes to store
 or send is a tag too. The folders under `src/_locales/` are the one exception, because the browser
 demands it: a folder is named by language and region with an underscore (`pt_BR`) and
@@ -255,26 +257,28 @@ reviewed yet, as are the core's own new strings until one does.
 Translate in Weblate, in the `postulo` project at <https://translate.tiagoagueda.com/projects/postulo/>,
 in the component for this extension; nobody has to export or send a file. A sentence added
 to `src/_locales/en/messages.json` appears there, with its `description` as the context, and
-a translation saved there comes back as a commit that CI runs (`npm test`) before it reaches
-`main`.
+a translation saved there comes back as a pull request from Weblate's `weblate` branch, which
+CI runs (`npm test`) before it reaches `main`. **Nobody translates in a commit** (postulo/postulo#706):
+`node scripts/guard.mjs`, in CI, refuses a commit that writes or changes a sentence in another
+language than English unless Weblate made it.
 
 The component is set up as: file format *WebExtension JSON*; file mask
 `src/_locales/*/messages.json`; template and source `src/_locales/en/messages.json`;
 language code style *Chrome* or *Android* style so folders read `pt_PT`, not `pt-PT` (Serbian
-is the exception, `sr` for `sr-Cyrl`; the repository's `languageTag` message carries the tag).
+is the exception, `sr` for `sr-Cyrl`; the build writes the tag).
 
-Complete or absent: `npm test` demands every key in every shipped language, so a language
-that arrives half translated fails CI and is not merged until it is complete, and
-`npm run build` leaves any incomplete folder out of the package with a warning. Which
+Complete or absent: `npm run build` leaves a language that lacks a sentence out of the package,
+with a warning, so a half-translated language never shows English in the gaps. `npm test`
+refuses a sentence English does not have, an empty one, and different placeholders. Which
 languages ship at all is the core's list (#10).
 
 Drafts: the JSON format has no flag for a machine translation nobody has read. Weblate's
 own review state is the record: a string is a draft until a speaker marks it *Approved*
 there. Everything here except English counts as a draft, as stated above.
 
-To add or change a sentence, change `en` first, then every other language: `npm test`
-fails while any language lacks a key or has different placeholders from English, and
-while the code asks for a key that `en` does not have.
+To add or change a sentence, change `en` and nothing else: Weblate drafts the other languages
+by machine where it can, speakers correct them there, and they arrive with its next pull
+request. `npm test` fails while the code asks for a key that `en` does not have.
 
 ## Layout
 

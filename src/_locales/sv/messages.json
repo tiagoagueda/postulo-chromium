@@ -1,10 +1,4 @@
 {
-  "languageTag": {
-    "message": "sv"
-  },
-  "direction": {
-    "message": "ltr"
-  },
   "extensionDescription": {
     "message": "Fånga in jobbannonsen du tittar på, spara den i din webbläsare och skicka den till din egen Postulo för granskning när du säger till. Inget går någon annanstans."
   },
