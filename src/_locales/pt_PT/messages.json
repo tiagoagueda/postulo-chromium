@@ -33,7 +33,7 @@
     "message": "A enviar para o Postulo…"
   },
   "captured": {
-    "message": "Capturado. Reveja-o antes de passar para as suas ofertas."
+    "message": "Capturado. Reveja-o antes de passar para os seus anúncios."
   },
   "readBy": {
     "message": "Lido por $SOURCE$",
@@ -304,7 +304,7 @@
     "message": "Período"
   },
   "fieldCloses": {
-    "message": "Data de encerramento"
+    "message": "Data de fecho"
   },
   "fieldDescription": {
     "message": "Descrição"
@@ -429,7 +429,7 @@
     "message": "Esse endereço respondeu, mas não como um Postulo. Verifique o endereço e qualquer página de início de sessão que esteja à frente dele."
   },
   "addressTooLong": {
-    "message": "O endereço desta página é mais comprido do que o Postulo aceita, mesmo sem a parte a seguir ao «#», pelo que a captura não foi enviada. Adicione antes o anúncio no Postulo manualmente."
+    "message": "O endereço desta página é mais comprido do que o Postulo aceita, mesmo sem a parte a seguir ao «#», pelo que a captura não foi enviada. Adicione antes o anúncio no Postulo à mão."
   },
   "storageFull": {
     "message": "O armazenamento deste navegador para o Postulo está cheio. Envie ou elimine algumas capturas e tente novamente."
