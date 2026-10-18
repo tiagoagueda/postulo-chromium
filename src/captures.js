@@ -1,5 +1,6 @@
 import { askAndKeep } from "./lib/allow.js";
 import { originPattern } from "./lib/api.js";
+import { onInstance } from "./lib/rendering.js";
 import { ext, loadSettings, requestHostPermission } from "./lib/browser.js";
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
 import { afterSending, deliverWaiting, log, showUnsentCount, store } from "./lib/local.js";
@@ -49,6 +50,7 @@ function allowFromClick() {
 /** `ids` is a list, or a function giving the list: it is read after the request has started,
  *  because nothing may be awaited before that. */
 async function send(ids) {
+  let declined = false;
   try {
     // The request starts from the click, and the records are marked in the same tick.
     ids = await askAndKeep(allowFromClick(), async () => {
@@ -58,16 +60,18 @@ async function send(ids) {
         await log.add("to send", { id });
       }
       return list;
+    }, () => {
+      declined = true;
     });
     if (ids.length) {
-      await deliverAndSay(ids);
+      await deliverAndSay(ids, declined);
     }
   } catch (error) {
     say(explain(error), true);
   }
 }
 
-async function deliverAndSay(ids) {
+async function deliverAndSay(ids, declined = false) {
   say(t("sending"));
   const result = await deliverWaiting(ids);
   const records = await Promise.all(ids.map((id) => store.get(id)));
@@ -76,6 +80,8 @@ async function deliverAndSay(ids) {
     say(explain(refused[0].problem), true);
   } else if (records.every((record) => record && record.state === "sent")) {
     say(t("captured"));
+  } else if (declined) {
+    say(t("permissionRefused"), true);
   } else {
     say(...afterSending(result));
   }
@@ -105,14 +111,18 @@ function item(record, when) {
   );
 
   const actions = element("div", { className: "actions" });
+  const reviewAddress = record.state === "sent" ? onInstance(record.reviewUrl, settings && settings.instance) : "";
   if (record.state === "sent") {
-    // Postulo's own page opens in the review window, where its "Save and next" walks the queue.
-    const review = element("a", { href: record.reviewUrl, target: "_blank", rel: "noopener", className: "button primary" }, t("review"));
-    review.addEventListener("click", (event) => {
-      event.preventDefault();
-      openInReviewWindow(record.reviewUrl).catch((error) => say(explain(error), true));
-    });
-    actions.append(review);
+    // Postulo's own page opens in the review window, where its "Save and next" walks the
+    // queue. Only an address on the instance's own origin (SEC2-079).
+    if (reviewAddress) {
+      const review = element("a", { href: reviewAddress, target: "_blank", rel: "noopener", className: "button primary" }, t("review"));
+      review.addEventListener("click", (event) => {
+        event.preventDefault();
+        openInReviewWindow(reviewAddress).catch((error) => say(explain(error), true));
+      });
+      actions.append(review);
+    }
   } else if (record.state === "waiting") {
     actions.append(
       button(t("tryNow"), () => send([record.id]), true, "send"),

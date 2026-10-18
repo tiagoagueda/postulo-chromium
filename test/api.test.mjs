@@ -26,7 +26,12 @@ test("an instance address is cleaned and https is insisted on away from home", (
   assert.equal(normaliseInstance("https://postulo.example.org/api/v1/"), "https://postulo.example.org");
   assert.equal(normaliseInstance("https://host.example/postulo/?x=1#y"), "https://host.example/postulo");
   assert.equal(normaliseInstance("http://localhost:8000"), "http://localhost:8000");
-  assert.equal(normaliseInstance("http://pi.local"), "http://pi.local");
+  assert.throws(() => normaliseInstance("http://pi.local"), refusal("httpsOnly"));
+  assert.equal(normaliseInstance("https://pi.local"), "https://pi.local");
+  assert.throws(
+    () => normaliseInstance("https://user:secret@postulo.example.org"),
+    refusal("noCredentialsInAddress"),
+  );
   assert.throws(() => normaliseInstance("http://postulo.example.org"), refusal("httpsOnly"));
   assert.throws(() => normaliseInstance(""), refusal("enterAddress"));
   assert.throws(() => normaliseInstance("not a url at all :::"), refusal("notAnAddress"));

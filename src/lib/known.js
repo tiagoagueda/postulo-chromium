@@ -4,6 +4,7 @@
 import { known, originPattern } from "./api.js";
 import { hasHostPermission } from "./browser.js";
 import { t } from "./i18n.js";
+import { onInstance } from "./rendering.js";
 import { learnFromCall, log } from "./local.js";
 
 /** What Postulo already holds for these postings, or null when it cannot be asked --
@@ -31,7 +32,7 @@ export async function askKnown(settings, postings) {
 
 /** Say, in `element`, what one answer holds -- the address first, then the softer
  *  match on title and company -- with a link to it in Postulo; or nothing at all. */
-export function sayKnown(element, answer) {
+export function sayKnown(element, answer, instance = "") {
   // In the language of the catalogue in use, like every other date here. With no locale
   // named the browser's setting decides, and in a language nobody has translated that put
   // a date in one language inside a sentence in another.
@@ -56,9 +57,16 @@ export function sayKnown(element, answer) {
     element.hidden = true;
     return;
   }
+  // The link only where it is on the instance's own origin (SEC2-079); the sentence stands without.
+  const address = onInstance(link, instance);
+  if (!address) {
+    element.append(sentence);
+    element.hidden = false;
+    return;
+  }
   element.append(`${sentence} `);
   const open = document.createElement("a");
-  open.href = link;
+  open.href = address;
   open.target = "_blank";
   open.rel = "noopener";
   open.textContent = t("knownOpen");

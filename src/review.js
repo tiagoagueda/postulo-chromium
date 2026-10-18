@@ -11,7 +11,7 @@ import { askKnown, sayKnown } from "./lib/known.js";
 import { afterSending, deliverWaiting, log, showUnsentCount, store } from "./lib/local.js";
 import { hostOf } from "./lib/log.js";
 import { drawPage, encodePicture } from "./lib/picture.js";
-import { renderingOffer } from "./lib/rendering.js";
+import { onInstance, renderingOffer } from "./lib/rendering.js";
 import { openInReviewWindow } from "./lib/window.js";
 
 const $ = (id) => document.getElementById(id);
@@ -70,8 +70,10 @@ async function main() {
   /** The page is Postulo's own once the capture is there: shown in this same window. */
   const goToReview = (record) => {
     $("summary").textContent = describe(record.data, t("untitled"));
-    $("review").href = record.reviewUrl;
-    $("review").hidden = false;
+    // A record kept before the address was checked is checked again here (SEC2-079).
+    const address = onInstance(record.reviewUrl, settings.instance);
+    $("review").href = address;
+    $("review").hidden = !address;
     show("result");
   };
   $("review").addEventListener("click", (event) => {
@@ -89,7 +91,7 @@ async function main() {
   $("edit-read-by").textContent = current.source ? t("readBy", [current.source]) : "";
   // Captured before? Asked after the form is up, and said when the answer comes;
   // the form is usable meanwhile and stays usable if it never does (#178).
-  askKnown(settings, [current.read || current.data]).then((answers) => sayKnown($("edit-known"), answers && answers[0]), () => {});
+  askKnown(settings, [current.read || current.data]).then((answers) => sayKnown($("edit-known"), answers && answers[0], settings.instance), () => {});
   show("edit");
   editor.focus();
 
@@ -184,7 +186,10 @@ async function main() {
               return requestHostPermission(originPattern(settings.instance));
             }
           : null;
-      const record = await askAndKeep(ask, () => save("waiting"));
+      let declined = false;
+      const record = await askAndKeep(ask, () => save("waiting"), () => {
+        declined = true;
+      });
       say(t("sending"));
       const result = await deliverWaiting([record.id]);
       current = await store.get(record.id);
@@ -201,7 +206,11 @@ async function main() {
         $("summary").textContent = describe(current.data, t("untitled"));
         $("review").hidden = true;
         show("result");
-        say(...afterSending(result));
+        if (declined) {
+          say(t("permissionRefused"), true);
+        } else {
+          say(...afterSending(result));
+        }
       }
     } catch (error) {
       say(explain(error), true);

@@ -220,6 +220,23 @@
     "message": "It lacks the captures scope, so it cannot capture.",
     "description": "captures is the scope's name in Postulo: keep it as it is."
   },
+  "noCredentialsInAddress": {
+    "message": "Leave the user name and password out of the address: it would never connect, and the password would be shown in the popup.",
+    "description": "The typed address holds a user name or password, as in https://user:secret@host."
+  },
+  "tokenTooWide": {
+    "message": "This token can also: $SCOPES$. The extension needs the captures scope only: issue a token with that scope alone and revoke this one.",
+    "description": "SCOPES is the list of the other scopes the token holds, in Postulo's own words: keep them as they are.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulo's address was not allowed, so nothing was sent. The capture is kept and waits: allow the address and press Send again.",
+    "description": "The person refused the browser's permission prompt for their Postulo's address; the capture waits."
+  },
   "enterAddress": {
     "message": "Enter the address of your Postulo.",
     "description": "The address field is empty."

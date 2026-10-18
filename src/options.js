@@ -1,4 +1,4 @@
-import { normaliseInstance, originPattern, whoAmI } from "./lib/api.js";
+import { extraScopes, normaliseInstance, originPattern, whoAmI } from "./lib/api.js";
 import { ext, loadSettings, requestHostPermission, saveSettings, setLanguage, setOffline } from "./lib/browser.js";
 import { explain, localise, localiseWith, t, useLanguage, useStoredLanguage } from "./lib/i18n.js";
 import { LANGUAGES } from "./lib/languages.js";
@@ -57,7 +57,8 @@ async function downloadLog() {
     extension: ext.runtime.getManifest().version,
     browser: navigator.userAgent,
     language: t("languageTag"),
-    postulo: settings.instance || "(not set up)",
+    // The host alone: the log is the kind of file that gets attached to an issue (SEC2-076).
+    postulo: settings.instance ? hostOf(settings.instance) : "(not set up)",
     "testing switch": settings.offline ? "on" : "off",
     captures: JSON.stringify(counts),
     written: now.toISOString(),
@@ -139,6 +140,13 @@ async function main() {
       const canCapture = (me.scopes || []).includes("captures");
       await log.add("test", { postulo: hostOf(next.instance), scopes });
       const who = scopes ? t("tokenIsScoped", [me.name, me.owner, scopes]) : t("tokenIs", [me.name, me.owner]);
+      // The extension keeps its token unencrypted in the browser's storage, and the threat
+      // model assumes it holds `captures` and nothing else (SEC2-081).
+      const extra = extraScopes(me);
+      if (extra.length) {
+        say(`${who} ${t("tokenTooWide", [extra.join(", ")])}`, true);
+        return;
+      }
       say(canCapture ? who : `${who} ${t("lacksCaptures")}`, !canCapture);
     } catch (error) {
       await log.add("test", { outcome: "failed", status: error.status || "no answer", problem: error.key || error.message });

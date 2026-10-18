@@ -382,15 +382,64 @@ export function headingTitle(doc) {
   return text.length && text.length <= 200 ? text : "";
 }
 
+/** `html` split into text and tags alternately (text first, tags at the odd places): a tag
+ *  runs to its closing ">", and a quoted attribute may hold one of its own. Written as one
+ *  pass because the regular expression it replaces tried every "<" against the whole rest of
+ *  the string and backtracked, so a description of tag openers that never close took time
+ *  with the square of its length (SEC2-080). The work is also budgeted, in characters looked
+ *  at: past it the rest is text, which is what a page built to waste time deserves. */
+function splitTags(html) {
+  const pieces = [];
+  const opener = /<\/?[a-zA-Z]/g;
+  const special = /[>"']/g;
+  const budget = 16 * html.length + 1000;
+  let work = 0;
+  let kept = 0;
+  let found;
+  while ((found = opener.exec(html)) !== null) {
+    const start = found.index;
+    let at = start + found[0].length;
+    let end = -1;
+    for (;;) {
+      special.lastIndex = at;
+      const hit = special.exec(html);
+      if (!hit) {
+        work += html.length - at;
+        break;
+      }
+      work += hit.index - at + 1;
+      if (hit[0] === ">") {
+        end = hit.index;
+        break;
+      }
+      const close = html.indexOf(hit[0], hit.index + 1);
+      if (close < 0) {
+        work += html.length - hit.index;
+        break;
+      }
+      work += close - hit.index;
+      at = close + 1;
+    }
+    if (work > budget) {
+      break;
+    }
+    if (end >= 0) {
+      pieces.push(html.slice(kept, start), html.slice(start, end + 1));
+      kept = end + 1;
+      opener.lastIndex = kept;
+    }
+  }
+  pieces.push(html.slice(kept));
+  return pieces;
+}
+
 /** Text from an HTML fragment, as a description inside JSON is: often escaped once more.
  *
  *  As Postulo does it: decode the entities first, markup and all, so "&lt;p&gt;" becomes a
  *  paragraph, then read the result as HTML. Only the text between tags is decoded, each
  *  piece by the parser, so nothing is ever handed to innerHTML. */
 function fragmentText(parse, html) {
-  const unescaped = html
-    // A tag runs to its closing ">", and a quoted attribute may hold one of its own.
-    .split(/(<\/?[a-zA-Z][^>"']*(?:(?:"[^"]*"|'[^']*')[^>"']*)*>)/)
+  const unescaped = splitTags(html)
     .map((piece, index) =>
       index % 2 || !piece.includes("&") ? piece : parse(`<body>${piece.replaceAll("<", "&lt;")}`).body.textContent,
     )
@@ -661,7 +710,9 @@ function fromPosting(posting, url, parse, descriptionIsHtml) {
     place(posting.jobLocation) ||
     (organisation && typeof organisation === "object" ? onePlace({ address: organisation.address }) : "");
 
-  const described = typeof posting.description === "string" ? posting.description : "";
+  // Bounded before it is read, not only after: reading costs time, and what is kept is cut
+  // to MAX_DESCRIPTION later (SEC2-080).
+  const described = typeof posting.description === "string" ? cut(posting.description, 4 * MAX_DESCRIPTION) : "";
   const description = descriptionIsHtml ? fragmentText(parse, described) : described;
   return {
     title,

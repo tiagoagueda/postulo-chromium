@@ -31,10 +31,11 @@ const manifest = JSON.parse(readFileSync(join(SOURCE, "manifest.json"), "utf8"))
  *  could "translate" `ltr`. Translations are made in Weblate now (postulo/postulo#706), so
  *  they come from src/lib/languages.js and are written here, into what ships. */
 export function shipped(catalogue, language) {
+  // The build's values last, so a catalogue that carries either key cannot override them.
   return {
+    ...catalogue,
     languageTag: { message: language.tag, description: "This catalogue's language: set by the build." },
     direction: { message: language.direction, description: "ltr or rtl: set by the build." },
-    ...catalogue,
   };
 }
 
