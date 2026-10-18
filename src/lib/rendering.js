@@ -5,6 +5,22 @@
 /** The kinds of picture this extension can draw, best first. A PDF is not one of them. */
 const DRAWABLE = ["image/webp", "image/jpeg", "image/png"];
 
+/** `url` as an address on the instance's own origin, or "" when it is not one (SEC2-079).
+ *  Every address the server supplies for the person to open -- a review page, a listing --
+ *  goes through here: a path alone is resolved against the instance, and an address on
+ *  another origin leaves no link to it. */
+export function onInstance(url, instance) {
+  if (typeof url !== "string" || !url) {
+    return "";
+  }
+  try {
+    const given = new URL(url, instance);
+    return /^https?:$/.test(given.protocol) && given.origin === new URL(instance).origin ? given.toString() : "";
+  } catch {
+    return "";
+  }
+}
+
 /** What a capture's answer says about a picture of the page, or null when none is wanted:
  *  the server does not accept one, is older than the question, or asks for something this
  *  cannot give. The address must be on the instance's own origin, because the token goes

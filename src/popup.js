@@ -8,6 +8,7 @@ import { afterSending, checkPostulo, deliverWaiting, log, openCaptures, readWait
 import { CONNECTION, SLOW_MS, footerFor, toolbarFor } from "./lib/connection.js";
 import { hostOf } from "./lib/log.js";
 import { emptyPosting, readPosting, readPostings, slimPage } from "./lib/parse.js";
+import { onInstance } from "./lib/rendering.js";
 import { reviewRows } from "./lib/review.js";
 import { waitingCopy } from "./lib/waiting.js";
 import { openInReviewWindow, reviewPageUrl } from "./lib/window.js";
@@ -62,9 +63,9 @@ async function showReviewList() {
   $("review-stale").textContent = stale ? t("lastListed", [when.toLocaleString(t("languageTag"), { dateStyle: "long", timeStyle: "short" })]) : "";
   $("review-empty").hidden = total > 0;
   const day = (iso) => (Number.isFinite(Date.parse(iso)) ? new Date(iso).toLocaleDateString(t("languageTag")) : "");
-  // Only a web address is followed out of the popup; anything else Postulo's copy holds
-  // falls back to this extension's own list.
-  const web = (address) => /^https?:\/\//i.test(address || "");
+  // Only an address on the instance's own origin is followed out of the popup; anything
+  // else Postulo's copy holds falls back to this extension's own list (SEC2-079).
+  const web = (address) => Boolean(onInstance(address, settings.instance));
   $("review-rows").replaceChildren(
     ...rows.map((row) => {
       const where = [row.company_name, row.location].filter(Boolean).join(", ");
@@ -74,7 +75,7 @@ async function showReviewList() {
       // form of the capture kept here. Anything else Postulo's copy holds falls back to this
       // extension's own list, in a tab.
       const inWindow = row.kind !== "postulo" || web(row.link);
-      link.href = row.kind === "postulo" ? (web(row.link) ? row.link : ext.runtime.getURL("captures.html")) : reviewPageUrl(row.id);
+      link.href = row.kind === "postulo" ? (web(row.link) ? onInstance(row.link, settings.instance) : ext.runtime.getURL("captures.html")) : reviewPageUrl(row.id);
       if (inWindow) {
         link.addEventListener("click", (event) => {
           event.preventDefault();
@@ -340,7 +341,10 @@ async function main() {
     const button = $("send-picked");
     button.disabled = true;
     try {
-      const records = await askAndKeep(askFor(), () => savePicked("waiting"));
+      let declined = false;
+      const records = await askAndKeep(askFor(), () => savePicked("waiting"), () => {
+        declined = true;
+      });
       if (!records.length) {
         button.disabled = false;
         return;
@@ -357,6 +361,8 @@ async function main() {
         say(t("refusedSome", [String(refused)]), true);
       } else if (sent === records.length) {
         say(t("captured"));
+      } else if (declined) {
+        say(t("permissionRefused"), true);
       } else {
         say(...afterSending(result));
       }

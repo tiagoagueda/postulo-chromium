@@ -25,6 +25,10 @@ jobs:
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           node scripts/guard.mjs
+      - name: Refuse a high advisory in the dev chain
+        # web-ext and jsdom run on a contributor's machine, not in the extension; a new high
+        # or critical advisory should still be seen (scripts/audit.mjs lists what is allowed).
+        run: node scripts/audit.mjs
       - name: Test the pure parts
         run: npm test
       - name: Build both targets

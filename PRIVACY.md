@@ -44,7 +44,11 @@ extension from your browser removes all of the above.
 
 ## What it sends, and where
 
-Only to the address you configured, and to nothing else. Your token is sent as a bearer
+Only to the address you configured, and to nothing else: a redirect is refused, not followed, and
+an address with a user name or password in it is refused. Plain `http` is accepted only for an
+instance on this machine (`localhost`, `127.0.0.1`, `[::1]`); any other address, a `.local` name
+included, must be `https`. The address of a review page or listing that Postulo's answer names is
+opened only when it is on that same address. Your token is sent as a bearer
 token in the `Authorization` header of those requests and of no others. There are exactly
 five:
 

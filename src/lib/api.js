@@ -36,7 +36,14 @@ export function normaliseInstance(raw) {
   } catch {
     throw new Refusal("notAnAddress");
   }
-  const local = ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname) || url.hostname.endsWith(".local");
+  // A user name or password in the address would never connect (fetch refuses such a URL),
+  // would stand in the popup and would head the downloadable log (SEC2-076).
+  if (url.username || url.password) {
+    throw new Refusal("noCredentialsInAddress");
+  }
+  // Plain http only to this machine. A `.local` name is another machine on the network, and
+  // the token and the pages would cross it in clear (SEC2-077).
+  const local = ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname);
   if (url.protocol !== "https:" && !local) {
     throw new Refusal("httpsOnly");
   }
@@ -167,10 +174,19 @@ async function request(fetchImpl, url, init) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
-    return await fetchImpl(url, { ...init, signal: controller.signal });
+    // A redirect is an error, not something to follow with the token: the token goes to the
+    // address that was configured and to nothing else (SEC2-078).
+    return await fetchImpl(url, { ...init, redirect: "error", signal: controller.signal });
   } finally {
     clearTimeout(timer);
   }
+}
+
+/** The scopes a token holds besides `captures` (SEC2-081). The extension keeps its token
+ *  unencrypted in the browser's storage, and Postulo's threat model assumes it can capture
+ *  and do nothing else. */
+export function extraScopes(me) {
+  return ((me && me.scopes) || []).filter((scope) => scope !== "captures");
 }
 
 /** GET /me: who this token is, and what it may do. */
