@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Revisar una captura"
+  },
+  "noCredentialsInAddress": {
+    "message": "Deje el nombre de usuario y la contraseña fuera de la dirección: nunca se conectará, y la contraseña se mostrará en el popup."
+  },
+  "tokenTooWide": {
+    "message": "Esta ficha también puede: $SCOPES$. La extensión sólo necesita el alcance de capturas: expedir un token con ese alcance solo y revocar este.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "No se permitió la dirección de Postulo, así que nada fue enviado. La captura se mantiene y espera: permita la dirección y pulse Enviar de nuevo."
   }
 }

@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Kontrola zachycení"
+  },
+  "noCredentialsInAddress": {
+    "message": "Uživatelské jméno a heslo vynechte z adresy: nikdy se nespojí a heslo bude zobrazeno v popu."
+  },
+  "tokenTooWide": {
+    "message": "Tento symbol může také: $SCOPES$. Prodloužení vyžaduje pouze rozsah zachycení: vydejte token pouze s tímto rozsahem a tento.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Adresa Postula nebyla povolena, takže nic nebylo posláno. Zachycení je zachováno a čeká: povolte adresu a stiskněte Odeslat znovu."
   }
 }

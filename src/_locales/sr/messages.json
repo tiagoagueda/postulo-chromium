@@ -9,10 +9,10 @@
     "message": "Подешавања"
   },
   "setUp": {
-    "message": "Подеси"
+    "message": "Подесите га"
   },
   "capture": {
-    "message": "Ухвати овај оглас"
+    "message": "Прикупи овај оглас"
   },
   "captureHint": {
     "message": "Страница се чита овде, у вашем прегледачу. Ништа се не шаље док не кажете."
@@ -47,7 +47,7 @@
     "message": "Оглас без наслова"
   },
   "optionsTitle": {
-    "message": "Подешавања Postulo-а"
+    "message": "Postulo подешавања"
   },
   "instanceLabel": {
     "message": "Ваш Postulo"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Налепите токен који вам је Postulo показао."
+    "message": "Налепите токен који вам је Postulo приказао."
   },
   "saved": {
     "message": "Сачувано. Дугме ће сада слати странице на $HOST$.",
@@ -101,13 +101,13 @@
     "message": "Сачувано, али је прегледач одбио дозволу да дође до њега; дозволите је у дозволама проширења."
   },
   "asking": {
-    "message": "Питамо Postulo чији је овај токен…"
+    "message": "Питам Postulo чији је овај токен…"
   },
   "addressRefused": {
-    "message": "Дозвола да се дође до те адресе је одбијена."
+    "message": "Дозвола за приступ тој адреси је одбијена."
   },
   "tokenIs": {
-    "message": "Токен „$NAME$“ за $OWNER$.",
+    "message": "Токен “$NAME$” за $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Токен „$NAME$“ за $OWNER$ ($SCOPES$).",
+    "message": "Токен “$NAME$” за $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -132,19 +132,19 @@
     }
   },
   "lacksCaptures": {
-    "message": "Недостаје му опсег captures, па не може да хвата."
+    "message": "Нема опсег captures, па не може да прикупља."
   },
   "enterAddress": {
-    "message": "Унесите адресу свог Postulo-а."
+    "message": "Унесите адресу вашег Postulo-а."
   },
   "notAnAddress": {
-    "message": "Ово не личи на веб-адресу."
+    "message": "Ово не личи на веб адресу."
   },
   "httpsOnly": {
     "message": "Користите https за све што није на вашем рачунару: токен путује са сваким захтевом."
   },
   "tokenRefused": {
-    "message": "Postulo не прихвата овај токен. Проверите га у одељку $PATH$.",
+    "message": "Postulo не прихвата овај токен. Проверите га под $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -152,10 +152,10 @@
     }
   },
   "notAllowed": {
-    "message": "Овом токену није дозвољено да хвата."
+    "message": "Овом токену није дозвољено да прикупља."
   },
   "tooMany": {
-    "message": "Превише хватања за кратко време. Сачекајте минут и покушајте поново."
+    "message": "Превише прикупљања за кратко време. Сачекајте минут и покушајте поново."
   },
   "answered": {
     "message": "Postulo је одговорио $STATUS$.",

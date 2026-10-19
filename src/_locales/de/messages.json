@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Erfassung prüfen"
+  },
+  "noCredentialsInAddress": {
+    "message": "Lassen Sie den Benutzernamen und das Passwort aus der Adresse: Es würde sich niemals verbinden, und das Passwort würde im Popup angezeigt."
+  },
+  "tokenTooWide": {
+    "message": "Dieses Token kann auch: $SCOPES$. Die Erweiterung benötigt nur den Erfassungsbereich: Geben Sie ein Token mit diesem Bereich aus und widerrufen Sie diesen.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulos Adresse war nicht erlaubt, also wurde nichts gesendet. Die Erfassung wird beibehalten und wartet: Lassen Sie die Adresse und drücken Sie erneut senden."
   }
 }

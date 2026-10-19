@@ -12,7 +12,7 @@
     "message": "Beállítás"
   },
   "capture": {
-    "message": "A hirdetés rögzítése"
+    "message": "Hirdetés rögzítése"
   },
   "captureHint": {
     "message": "Az oldal beolvasása itt, a böngészőjében történik. Semmit sem küld el, amíg Ön nem szól."
@@ -47,10 +47,10 @@
     "message": "Cím nélküli hirdetés"
   },
   "optionsTitle": {
-    "message": "Postulo beállításai"
+    "message": "Postulo-beállítások"
   },
   "instanceLabel": {
-    "message": "Az Ön Postulója"
+    "message": "Az Ön Postuloja"
   },
   "instanceHint": {
     "message": "A cím, amelyen megnyitja. https, kivéve ha ezen a gépen fut."
@@ -76,7 +76,7 @@
     "message": "Mentés"
   },
   "test": {
-    "message": "Teszt"
+    "message": "Tesztelés"
   },
   "shortcutHint": {
     "message": "A gomb vagy a(z) $SHORTCUT$ megnyomásával a megtekintett oldal beolvasása itt, a böngészőben történik. Egyetlen oldalt sem olvas be, amíg nem kéri, és semmit sem küld máshová, csak a saját Postulo-példányába, amikor Ön szól.",
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Illessze be a tokent, amelyet a Postulo megmutatott."
+    "message": "Illessze be a tokent, amelyet a Postulo mutatott."
   },
   "saved": {
     "message": "Mentve. A gomb mostantól ide küldi az oldalakat: $HOST$.",
@@ -101,13 +101,13 @@
     "message": "Mentve, de a böngésző megtagadta a hozzáférési engedélyt; engedélyezze a bővítmény engedélyei között."
   },
   "asking": {
-    "message": "Megkérdezzük a Postulót, kié ez a token…"
+    "message": "A Postulo megkérdezése, kié ez a token…"
   },
   "addressRefused": {
-    "message": "A cím eléréséhez szükséges engedélyt megtagadták."
+    "message": "A cím elérésére vonatkozó engedélyt megtagadták."
   },
   "tokenIs": {
-    "message": "„$NAME$” token, tulajdonos: $OWNER$.",
+    "message": "„$NAME$” token – $OWNER$ részére.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "„$NAME$” token, tulajdonos: $OWNER$ ($SCOPES$).",
+    "message": "„$NAME$” token – $OWNER$ részére ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -132,16 +132,16 @@
     }
   },
   "lacksCaptures": {
-    "message": "Hiányzik belőle a captures hatókör, így nem tud rögzíteni."
+    "message": "Hiányzik belőle a captures hatókör, ezért nem tud rögzíteni."
   },
   "enterAddress": {
-    "message": "Adja meg a Postulója címét."
+    "message": "Adja meg a Postulo címét."
   },
   "notAnAddress": {
-    "message": "Ez nem úgy néz ki, mint egy webcím."
+    "message": "Ez nem tűnik webcímnek."
   },
   "httpsOnly": {
-    "message": "Használjon https-t mindenhez, ami nem a saját gépén fut: a token minden kéréssel együtt utazik."
+    "message": "Használjon https-t minden olyan címhez, amely nem az Ön gépén van: a token minden kéréssel együtt utazik."
   },
   "tokenRefused": {
     "message": "A Postulo nem fogadja el ezt a tokent. Ellenőrizze itt: $PATH$.",
@@ -158,7 +158,7 @@
     "message": "Túl sok rögzítés rövid idő alatt. Várjon egy percet, és próbálja újra."
   },
   "answered": {
-    "message": "A Postulo válasza: $STATUS$.",
+    "message": "A Postulo ezt válaszolta: $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Rögzítés átnézése"
+  },
+  "noCredentialsInAddress": {
+    "message": "Hagyja ki a felhasználónevet és a jelszót a címből: soha nem csatlakozna, és a jelszó megjelenik a megjelenítésben."
+  },
+  "tokenTooWide": {
+    "message": "Ez a jel is: $SCOPES$. A kiterjesztés csak a fogások hatókörét igényli: csak ezzel a hatókörrel adjon ki jelvényt, és ezt vonja vissza.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulo címe nem volt megengedett, így nem küldtek semmit. Az elfogás marad, és vár: lehetővé teszi a címet, és nyomja meg a Küldés újra."
   }
 }

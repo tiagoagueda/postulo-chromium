@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Berrikusi harrapaketa bat"
+  },
+  "noCredentialsInAddress": {
+    "message": "Utzi erabiltzaile-izena eta pasahitza helbidetik kanpo: ez da inoiz konektatuko, eta pasahitza laster-leihoan erakutsiko da."
+  },
+  "tokenTooWide": {
+    "message": "Hau ere bai: $SCOPES$. Hedapenak kaptura-esparrua bakarrik behar du: esparru hori bakarrik duen token bat eman eta hau errebokatu.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postuloren helbidea ez zen onartzen, beraz ez zen ezer bidali. Kaptura gorde eta itxaron egiten da: baimendu helbidea eta sakatu Bidali berriro."
   }
 }

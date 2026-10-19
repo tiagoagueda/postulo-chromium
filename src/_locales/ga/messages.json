@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Athbhreithnigh gabháil"
+  },
+  "noCredentialsInAddress": {
+    "message": "Fág an t-ainm úsáideora agus focal faire as an seoladh: ní bheadh sé ceangal, agus bheadh an focal faire a thaispeáint sa popup."
+  },
+  "tokenTooWide": {
+    "message": "Is féidir é seo a chomhartha freisin: $SCOPES$. Ní mór raon feidhme na ngabhálacha a bheith ag an síneadh ach amháin: chomhartha a eisiúint leis an raon feidhme sin amháin agus an ceann seo a chúlghairm.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Níor cheadaigh seoladh Postulo, mar sin níor seoladh aon rud. Coinnítear an ghabháil agus fanann sé: lig an seoladh agus an preas Seol arís."
   }
 }

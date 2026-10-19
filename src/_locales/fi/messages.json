@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Tarkista kaappaus"
+  },
+  "noCredentialsInAddress": {
+    "message": "Jätä käyttäjätunnus ja salasana pois osoitteesta: se ei koskaan yhdistäisi, ja salasana näytettäisiin ponnahdusikkunassa."
+  },
+  "tokenTooWide": {
+    "message": "Tämä merkki voi myös: $SCOPES$. Laajennus tarvitsee vain soveltamisalan: antaa vain tämän soveltamisalan ja peruuttaa tämän.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulon osoite ei ollut sallittu, joten mitään ei lähetetty. Nappaaminen pidetään ja odottaa: anna osoite ja paina Lähetä uudelleen."
   }
 }

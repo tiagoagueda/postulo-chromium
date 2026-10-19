@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Gennemgå en indfangning"
+  },
+  "noCredentialsInAddress": {
+    "message": "Efterlad brugernavn og adgangskode ud af adressen: det ville aldrig forbinde, og adgangskoden ville blive vist i popup."
+  },
+  "tokenTooWide": {
+    "message": "Denne token kan også: $SCOPES$. Forlængelsen har kun brug for indfangningsområdet: Udgiv et symbol med dette anvendelsesområde alene og fjern dette.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulos adresse var ikke tilladt, så intet blev sendt. Fanget holdes og venter: tillad adressen og tryk på Send igen."
   }
 }

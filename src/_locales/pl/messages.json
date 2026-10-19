@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Sprawdź przechwycenie"
+  },
+  "noCredentialsInAddress": {
+    "message": "Zostaw nazwę użytkownika i hasło w adresie: nigdy się nie połączy, a hasło zostanie wyświetlone w menu."
+  },
+  "tokenTooWide": {
+    "message": "Ten token może również: $SCOPES$. Rozszerzenie wymaga tylko zakresu przechwytywania: wystarczy wydać znak z tym zakresem i cofnąć ten zakres.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Adres Postulo nie był dozwolony, więc nic nie wysłano. Uchwyt jest przechowywany i czeka: niech adres i naciśnij Wyślij ponownie."
   }
 }

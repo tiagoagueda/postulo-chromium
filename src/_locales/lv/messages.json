@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Tvēruma pārskatīšana"
+  },
+  "noCredentialsInAddress": {
+    "message": "Atstājiet lietotāja vārdu un paroli no adreses: tas nekad nesavienotos, un parole tiktu parādīta izlecošajā."
+  },
+  "tokenTooWide": {
+    "message": "Šī marķierierīce var arī: $SCOPES$. Paplašinājumam ir nepieciešams tikai tvērums: izdot atzīmi tikai ar šo darbības jomu un atcelt šo.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulo adrese nebija atļauta, tāpēc nekas netika nosūtīts. Notveršana tiek turēta un gaida: atļaujiet adresi un nospiediet Sūtīt vēlreiz."
   }
 }

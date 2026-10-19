@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Verifică o captură"
+  },
+  "noCredentialsInAddress": {
+    "message": "Lăsați numele de utilizator și parola din adresa: nu s-ar conecta niciodată, iar parola ar fi afișată în popup."
+  },
+  "tokenTooWide": {
+    "message": "Acest jeton poate: $SCOPES$. Prelungirea are nevoie doar de domeniul de aplicare al capturilor: emite un semn numai cu acest domeniu de aplicare și revocă acesta.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Adresa lui Postulo nu era permisă, aşa că nu a fost trimis nimic. Capturarea este ţinută şi aşteaptă: permite adresa şi apasă din nou Trimite."
   }
 }
