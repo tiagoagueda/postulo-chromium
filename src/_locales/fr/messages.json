@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Vérifier une capture"
+  },
+  "noCredentialsInAddress": {
+    "message": "Laissez le nom d'utilisateur et le mot de passe hors de l'adresse : il ne se connecterait jamais, et le mot de passe serait affiché dans le popup."
+  },
+  "tokenTooWide": {
+    "message": "Ce jeton peut également : $SCOPES$. L'extension n'a besoin que de la portée de capture : délivrer un jeton avec cette seule portée et révoquer celle-ci.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "L'adresse de Postulo n'était pas autorisée, donc rien n'a été envoyé. La capture est conservée et attend : permet l'adresse et appuie à nouveau sur Envoyer."
   }
 }

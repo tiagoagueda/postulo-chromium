@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Revisa una captura"
+  },
+  "noCredentialsInAddress": {
+    "message": "Deixa el nom d' usuari i la contrasenya de l' adreça: mai es connectarà, i la contrasenya es mostrarà en el menú emergent."
+  },
+  "tokenTooWide": {
+    "message": "Aquesta fitxa també pot: $SCOPES$. L' extensió necessita només l' àmbit de captura: emet un testimoni amb aquest àmbit tot sol i emet aquesta.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "No es permet l'adreça de Postulo, així que no es va enviar res. La captura es manté i s'espera: permet l'adreça i premeu Envia de nou."
   }
 }

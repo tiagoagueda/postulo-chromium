@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Een vastlegging beoordelen"
+  },
+  "noCredentialsInAddress": {
+    "message": "Laat de gebruikersnaam en het wachtwoord buiten het adres: het zou nooit verbinden, en het wachtwoord zou worden weergegeven in de popup."
+  },
+  "tokenTooWide": {
+    "message": "Dit token kan ook: $SCOPES$. De uitbreiding heeft alleen het toepassingsgebied nodig: geef een token met die reikwijdte alleen en trek deze in.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulo's adres was niet toegestaan, dus er werd niets verstuurd. De vangst wordt bewaard en wacht: laat het adres toe en druk opnieuw op Verzenden."
   }
 }

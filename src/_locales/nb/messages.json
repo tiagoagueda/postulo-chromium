@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Gjennomgå en fangst"
+  },
+  "noCredentialsInAddress": {
+    "message": "La brukernavnet og passordet være ute av adressen: det ville aldri koble til, og passordet vil bli vist i popup."
+  },
+  "tokenTooWide": {
+    "message": "Dette symbolet kan også: $SCOPES$. Utvidelsen trenger kun omfang av opptak: utstede et tegn med det omfanget alene og trekke dette tilbake.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulos adresse var ikke tillatt, så ingenting ble sendt. Opptaket holdes og venter: la adressen og trykk på Send igjen."
   }
 }

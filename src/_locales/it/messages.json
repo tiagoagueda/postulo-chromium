@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Rivedi un'acquisizione"
+  },
+  "noCredentialsInAddress": {
+    "message": "Lasciare il nome utente e la password fuori dall'indirizzo: non si connetterebbe mai, e la password sarebbe mostrata nel popup."
+  },
+  "tokenTooWide": {
+    "message": "Questo segno può anche: $SCOPES$. L'estensione ha bisogno solo delle catture: emettere un token con quel solo scopo e revocarlo.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "L'indirizzo di Postulo non era consentito, quindi niente è stato inviato. La cattura è mantenuta e aspetta: consentire l'indirizzo e premere Invia di nuovo."
   }
 }

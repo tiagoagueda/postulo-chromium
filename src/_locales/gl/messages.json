@@ -9,7 +9,7 @@
     "message": "Configuración"
   },
   "setUp": {
-    "message": "Configurala"
+    "message": "Configuralo"
   },
   "capture": {
     "message": "Capturar esta oferta"
@@ -47,16 +47,16 @@
     "message": "Oferta sen título"
   },
   "optionsTitle": {
-    "message": "Configuración do Postulo"
+    "message": "Configuración de Postulo"
   },
   "instanceLabel": {
     "message": "O teu Postulo"
   },
   "instanceHint": {
-    "message": "O enderezo no que o abres. https, agás que funcione neste ordenador."
+    "message": "O enderezo no que o abres. https, a menos que funcione nesta máquina."
   },
   "tokenLabel": {
-    "message": "Testemuño de API"
+    "message": "Token da API"
   },
   "tokenHint": {
     "message": "Créase en $PATH$ no Postulo, co ámbito $SCOPE$ e nada máis. Gárdase só neste dispositivo e nunca se sincroniza cunha conta do navegador.",
@@ -70,7 +70,7 @@
     }
   },
   "tokenPath": {
-    "message": "Configuración → Testemuños de API"
+    "message": "Configuración → Tokens da API"
   },
   "save": {
     "message": "Gardar"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Pega o testemuño que che mostrou o Postulo."
+    "message": "Pega o token que che amosou Postulo."
   },
   "saved": {
     "message": "Gardado. O botón enviará agora as páxinas a $HOST$.",
@@ -101,13 +101,13 @@
     "message": "Gardado, pero o navegador denegou o permiso para chegar a el; permíteo nos permisos da extensión."
   },
   "asking": {
-    "message": "Preguntando ao Postulo de quen é este testemuño…"
+    "message": "Preguntándolle a Postulo de quen é este token…"
   },
   "addressRefused": {
-    "message": "Denegouse o permiso para chegar a ese enderezo."
+    "message": "Rexeitouse o permiso para acceder a ese enderezo."
   },
   "tokenIs": {
-    "message": "Testemuño «$NAME$» de $OWNER$.",
+    "message": "Token “$NAME$” de $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Testemuño «$NAME$» de $OWNER$ ($SCOPES$).",
+    "message": "Token “$NAME$” de $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -132,19 +132,19 @@
     }
   },
   "lacksCaptures": {
-    "message": "Non ten o ámbito captures, así que non pode capturar."
+    "message": "Carece do alcance captures, polo que non pode capturar."
   },
   "enterAddress": {
-    "message": "Escribe o enderezo do teu Postulo."
+    "message": "Introduce o enderezo do teu Postulo."
   },
   "notAnAddress": {
     "message": "Iso non parece un enderezo web."
   },
   "httpsOnly": {
-    "message": "Usa https para todo o que non estea no teu propio ordenador: o testemuño viaxa con cada petición."
+    "message": "Usa https para todo o que non estea na túa propia máquina: o token viaxa con cada solicitude."
   },
   "tokenRefused": {
-    "message": "O Postulo non acepta este testemuño. Compróbao en $PATH$.",
+    "message": "Postulo non acepta este token. Comproba en $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -152,13 +152,13 @@
     }
   },
   "notAllowed": {
-    "message": "Este testemuño non ten permiso para capturar."
+    "message": "Este token non ten permiso para capturar."
   },
   "tooMany": {
-    "message": "Demasiadas capturas en pouco tempo. Agarda un minuto e téntao de novo."
+    "message": "Demasiadas capturas nun curto período. Agarda un minuto e téntao de novo."
   },
   "answered": {
-    "message": "O Postulo respondeu $STATUS$.",
+    "message": "Postulo respondeu $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Revisar unha captura"
+  },
+  "noCredentialsInAddress": {
+    "message": "Deixar o nome de usuario e o contrasinal fóra do enderezo: nunca se conectaría, e o contrasinal mostraríase no popup."
+  },
+  "tokenTooWide": {
+    "message": "Tamén pode ser: $SCOPES$ A extensión só necesita o alcance de capturas: emitir un token con ese alcance e revogar este.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "O enderezo de Postulo non estaba permitido, polo que non se enviou nada. A captura mantense e espera: permite que o enderezo e prema Enviar de novo."
   }
 }

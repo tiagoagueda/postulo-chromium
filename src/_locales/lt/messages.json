@@ -12,7 +12,7 @@
     "message": "Nustatyti"
   },
   "capture": {
-    "message": "Fiksuoti šį skelbimą"
+    "message": "Užfiksuoti šį skelbimą"
   },
   "captureHint": {
     "message": "Puslapis skaitomas čia, jūsų naršyklėje. Nieko nesiunčiama, kol nepasakysite."
@@ -53,10 +53,10 @@
     "message": "Jūsų Postulo"
   },
   "instanceHint": {
-    "message": "Adresas, kuriuo jį atidarote. https, nebent jis veikia šiame kompiuteryje."
+    "message": "Adresas, kuriuo jį atidarote. https, nebent veikia šiame kompiuteryje."
   },
   "tokenLabel": {
-    "message": "API žetonas"
+    "message": "API prieigos raktas"
   },
   "tokenHint": {
     "message": "Sukuriamas Postulo skiltyje $PATH$, su teise $SCOPE$ ir niekuo daugiau. Laikomas tik šiame įrenginyje ir niekada nesinchronizuojamas per naršyklės paskyrą.",
@@ -70,10 +70,10 @@
     }
   },
   "tokenPath": {
-    "message": "Nustatymai → API žetonai"
+    "message": "Nustatymai → API prieigos raktai"
   },
   "save": {
-    "message": "Išsaugoti"
+    "message": "Įrašyti"
   },
   "test": {
     "message": "Išbandyti"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Įklijuokite žetoną, kurį jums parodė Postulo."
+    "message": "Įklijuokite raktą, kurį parodė Postulo."
   },
   "saved": {
     "message": "Išsaugota. Mygtukas dabar siųs puslapius į $HOST$.",
@@ -101,13 +101,13 @@
     "message": "Išsaugota, bet naršyklė atsisakė suteikti leidimą jį pasiekti; leiskite tai plėtinio leidimuose."
   },
   "asking": {
-    "message": "Klausiama Postulo, kieno šis žetonas…"
+    "message": "Klausiama Postulo, kam skirtas šis raktas…"
   },
   "addressRefused": {
-    "message": "Leidimas pasiekti tą adresą atmestas."
+    "message": "Leidimas pasiekti šį adresą buvo atmestas."
   },
   "tokenIs": {
-    "message": "Žetonas „$NAME$“, savininkas $OWNER$.",
+    "message": "Raktas „$NAME$“, skirtas $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Žetonas „$NAME$“, savininkas $OWNER$ ($SCOPES$).",
+    "message": "Raktas „$NAME$“, skirtas $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -132,19 +132,19 @@
     }
   },
   "lacksCaptures": {
-    "message": "Jam trūksta teisės captures, todėl jis negali fiksuoti."
+    "message": "Jam trūksta captures srities, todėl jis negali fiksuoti."
   },
   "enterAddress": {
     "message": "Įveskite savo Postulo adresą."
   },
   "notAnAddress": {
-    "message": "Tai nepanašu į žiniatinklio adresą."
+    "message": "Tai neatrodo kaip interneto adresas."
   },
   "httpsOnly": {
-    "message": "Naudokite https viskam, kas nėra jūsų kompiuteryje: žetonas keliauja su kiekviena užklausa."
+    "message": "Naudokite https visur, kas nėra jūsų kompiuteryje: raktas siunčiamas su kiekviena užklausa."
   },
   "tokenRefused": {
-    "message": "Postulo nepriima šio žetono. Patikrinkite jį skiltyje $PATH$.",
+    "message": "Postulo šio rakto nepriima. Patikrinkite jį skiltyje $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -152,7 +152,7 @@
     }
   },
   "notAllowed": {
-    "message": "Šiam žetonui neleidžiama fiksuoti."
+    "message": "Šiam raktui fiksuoti neleidžiama."
   },
   "tooMany": {
     "message": "Per daug fiksavimų per trumpą laiką. Palaukite minutę ir bandykite dar kartą."
@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Fiksavimo peržiūra"
+  },
+  "noCredentialsInAddress": {
+    "message": "Palikite vartotojo vardą ir slaptažodį iš adreso: jis niekada nesusijungtų, o slaptažodis būtų rodomas iškylančiame lange."
+  },
+  "tokenTooWide": {
+    "message": "$SCOPES$. Pratęsiant taikymo sritį, reikia tik įtraukti taikymo sritį: nustatyti tik šią taikymo sritį ir ją panaikinti.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulo adresas nebuvo leidžiamas, todėl nieko nebuvo išsiųstas. Sugavimas yra saugomi ir laukia: leisti adresą ir paspauskite Siųsti vėl."
   }
 }

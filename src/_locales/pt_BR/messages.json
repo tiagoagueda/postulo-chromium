@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Revisar uma captura"
+  },
+  "noCredentialsInAddress": {
+    "message": "Deixe o nome de usuário e senha fora do endereço: ele nunca se conectaria, e a senha seria mostrada no popup."
+  },
+  "tokenTooWide": {
+    "message": "Este símbolo também pode: $SCOPES$. A extensão só precisa do escopo das capturas: emitir um símbolo com esse escopo sozinho e revogar este.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "O endereço de Postulo não foi permitido, então nada foi enviado. A captura é mantida e espera: permita o endereço e pressione Enviar novamente."
   }
 }

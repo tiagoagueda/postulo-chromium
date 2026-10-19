@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Püütud kuulutuse ülevaatamine"
+  },
+  "noCredentialsInAddress": {
+    "message": "Jäta kasutajanimi ja parool aadressist välja: see ei ühenduks kunagi ja parooli näidatakse hüpikmenüüs."
+  },
+  "tokenTooWide": {
+    "message": "See märk võib ka: $SCOPES$. Laiendus vajab ainult pildistamise ulatust: väljastab ainult selle ulatusega märgi ja tühistab selle.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulo aadress ei olnud lubatud, seega ei saadetud midagi. Salvestamine säilitatakse ja ootab: lubage aadress ja vajutage nuppu Saada uuesti."
   }
 }
