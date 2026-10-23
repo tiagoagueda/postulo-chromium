@@ -15,7 +15,7 @@ workspace keeps it (or from `POSTULO_CORE`, for a checkout kept elsewhere), and 
 (that module needs no Django). The list is committed, so building and testing the extension
 need neither Python nor the core; only a new core release does.
 
-The core's codes become the extension's here and nowhere else: the four spelled differently
+The core's codes become the extension's here and nowhere else: the ones spelled differently
 are in `SPELLED`, every other code is kept as it is, and a code with a region or a script
 that has no entry stops the script rather than being guessed at.
 """
@@ -32,16 +32,25 @@ HERE = Path(__file__).resolve().parent.parent
 CORE = Path(os.environ.get("POSTULO_CORE") or HERE.parent / "postulo")
 OUT = HERE / "src" / "lib" / "languages.js"
 
-#: core code -> (folder under _locales, BCP 47 tag the catalogue says). The region is dropped
-#: where the core has one variety of a language, kept where it has two (pt-BR, pt-PT). A
-#: folder is named by language and region with an underscore and never by script, so
-#: Serbian's is `sr` and its tag `sr-Cyrl`.
+#: core code -> (folder under _locales, BCP 47 tag the catalogue says). English and French
+#: keep the bare folder, `en` and `fr`, which a browser falls back to from any region of
+#: theirs; a second variety of them, and of Spanish, is named by its region (`en_CA`,
+#: `fr_CA`, `es_MX`). Portuguese has no bare folder, its two varieties being equals (pt-BR,
+#: pt-PT). A folder is named by language and region with an underscore and never by script,
+#: so Serbian's is `sr` and its tag `sr-Cyrl`; Chinese, which is told apart by script and
+#: has no bare code, is named by the region each script is mostly read in, as Chrome names
+#: its own catalogues (`zh_CN`, `zh_TW`), and keeps the script in its tag (#43).
 SPELLED = {
     "en-GB": ("en", "en"),
+    "en-CA": ("en_CA", "en-CA"),
+    "es-MX": ("es_MX", "es-MX"),
     "fr-FR": ("fr", "fr"),
+    "fr-CA": ("fr_CA", "fr-CA"),
     "pt-PT": ("pt_PT", "pt-PT"),
     "pt-BR": ("pt_BR", "pt-BR"),
     "sr-Cyrl": ("sr", "sr-Cyrl"),
+    "zh-Hans": ("zh_CN", "zh-Hans"),
+    "zh-Hant": ("zh_TW", "zh-Hant"),
 }
 
 HEADER = """\
