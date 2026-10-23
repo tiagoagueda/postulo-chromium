@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Adolygu dalfa"
+  },
+  "tokenTooWide": {
+    "message": "Gall y tocyn hwn hefyd: $SCOPES$. Dim ond y cwmpas captures sydd ei angen ar yr estyniad: crëwch docyn gyda'r cwmpas hwnnw yn unig a dirymwch yr un hwn.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Gadewch yr enw defnyddiwr a'r cyfrinair allan o'r cyfeiriad: fyddai e byth yn cysylltu, a byddai'r cyfrinair yn cael ei ddangos yn y ffenestr naid."
+  },
+  "permissionRefused": {
+    "message": "Ni chafodd cyfeiriad Postulo ei ganiatáu, felly ni anfonwyd dim. Mae'r ddalfa'n cael ei chadw ac yn aros: caniatewch y cyfeiriad a phwyswch Anfon eto."
   }
 }

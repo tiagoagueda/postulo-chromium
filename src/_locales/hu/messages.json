@@ -426,7 +426,7 @@
     "message": "Megnyitás a Postulóban"
   },
   "notPostulo": {
-    "message": "Ez a cím válaszolt, de nem Postuloként. Ellenőrizze a címet, és az előtte álló bejelentkezési oldalt is."
+    "message": "Ez a cím válaszolt, de nem Postulóként. Ellenőrizze a címet és az előtte lévő bejelentkezési oldalt, ha van ilyen."
   },
   "addressTooLong": {
     "message": "Az oldal címe hosszabb, mint amit a Postulo elfogad, még a „#” utáni rész nélkül is, ezért a rögzítés nem lett elküldve. Adja hozzá inkább kézzel a hirdetést a Postulóban."
@@ -519,10 +519,10 @@
     "message": "Rögzítés átnézése"
   },
   "noCredentialsInAddress": {
-    "message": "Hagyja ki a felhasználónevet és a jelszót a címből: soha nem csatlakozna, és a jelszó megjelenik a megjelenítésben."
+    "message": "Hagyja ki a felhasználónevet és a jelszót a címből: így soha nem csatlakozna, és a jelszó megjelenne a felugró ablakban."
   },
   "tokenTooWide": {
-    "message": "Ez a jel is: $SCOPES$. A kiterjesztés csak a fogások hatókörét igényli: csak ezzel a hatókörrel adjon ki jelvényt, és ezt vonja vissza.",
+    "message": "Ez a token ezekre is képes: $SCOPES$. A bővítménynek csak a captures hatókörre van szüksége: hozzon létre egy csak ezzel a hatókörrel rendelkező tokent, és vonja vissza ezt.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulo címe nem volt megengedett, így nem küldtek semmit. Az elfogás marad, és vár: lehetővé teszi a címet, és nyomja meg a Küldés újra."
+    "message": "A Postulo címe nem lett engedélyezve, ezért semmi sem lett elküldve. A rögzítés megmarad, és várakozik: engedélyezze a címet, és nyomja meg újra a Küldés gombot."
   }
 }

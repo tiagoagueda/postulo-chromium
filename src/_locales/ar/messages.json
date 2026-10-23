@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "اقبضوا على الوظيفة التي ستنشرونها، واحتفظوا بها في منظفكم، وأرسلوها إلى مكتب البريد الخاص بك لاستعراضها عندما تقول ذلك. لا شيء يذهب إلى أي مكان آخر."
+  },
+  "actionTitle": {
+    "message": "التقط هذا البريد في بوستولو"
+  },
+  "postuloUnreachable": {
+    "message": "لا يمكن الوصول إلى البريد: ما ترسله ينتظر في هذا المستنقع حتى يجيب."
+  },
+  "footerOnline": {
+    "message": "إجابات"
+  },
+  "footerSlow": {
+    "message": "البريد الرئوي بطيء في الإجابة"
+  },
+  "reviewHeading": {
+    "message": "استعراض الاحتياجات"
+  },
+  "waitingInPostulo": {
+    "message": "في انتظار الاستعراض في بوستولو"
+  },
+  "nothingWaiting": {
+    "message": "لا شيء ينتظر المراجعة."
+  },
+  "lastListed": {
+    "message": "كما ذكرها (سولو) آخر مرة في $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Captures of this posting: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "انتظار الاستعراض: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "الترتيبات"
+  },
+  "setUp": {
+    "message": "أعدها"
+  },
+  "capture": {
+    "message": "التقط هذا الموقع"
+  },
+  "addListing": {
+    "message": "تضاف قائمة"
+  },
+  "captureHint": {
+    "message": "الصفحة تُقرأ هنا، في مصففِكَ. لا شيء يرسل حتى تقول ذلك."
+  },
+  "review": {
+    "message": "Review in Postulo"
+  },
+  "reading": {
+    "message": "قراءة الصفحة.."
+  },
+  "allowing": {
+    "message": "السماح للتمديد للوصول إلى البريد"
+  },
+  "noPermission": {
+    "message": "بدون إذن للوصول لـ \" بوستولو \" لا شيء يمكن إرساله."
+  },
+  "sending": {
+    "message": "إرسال إلى بوستولو.."
+  },
+  "captured": {
+    "message": "تم القبض عليه راجعها قبل أن تصبح قائمة."
+  },
+  "readBy": {
+    "message": "أقرأها $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "غير مترجم"
+  },
+  "optionsTitle": {
+    "message": "Postulo settings"
+  },
+  "instanceLabel": {
+    "message": "سول"
+  },
+  "instanceHint": {
+    "message": "العنوان الذي تفتحه ما لم يتم تشغيل هذه الآلة."
+  },
+  "tokenLabel": {
+    "message": "API token"
+  },
+  "tokenHint": {
+    "message": "صنع تحت $PATH$ في Postulo، مع نطاق $SCOPE$ ولا شيء أكثر. يُحتفظ به على هذا الجهاز فقط، لا يُتزامن أبداً من خلال حساب مُتصفح.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Settings s API tokens"
+  },
+  "save": {
+    "message": "أنقذ"
+  },
+  "test": {
+    "message": "الاختبار"
+  },
+  "shortcutHint": {
+    "message": "ضغط الزر، أو $SHORTCUT$، يقرأ الصفحة التي تنظر إليها، هنا في بروزر. لا يُقرأ أيّ صفحة حتى تسأل، ولا شيء يُرسل إلى أيّ مكان سوى بريدولو الخاص بك، عندما تقول ذلك.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "(أظهر لك (توكين بوستولو."
+  },
+  "saved": {
+    "message": "منقذ الزر سيرسل الآن صفحات إلى $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "وفّرَ، لكن الراعي رفضَ الأذنَ للوَصْل إليه؛ إسمحْه في تصريحِ التمديدِ."
+  },
+  "asking": {
+    "message": "أسأل (سولو) من هو هذا المُلكي.."
+  },
+  "addressRefused": {
+    "message": "ورُفض الإذن بالوصول إلى هذا العنوان."
+  },
+  "tokenIsScoped": {
+    "message": "Token “$NAME$” for $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "ينقصه نطاق captures، لذا لا يمكنه الالتقاط."
+  },
+  "noCredentialsInAddress": {
+    "message": "دع اسم المستخدم وكلمة السر خارج العنوان: لن يتواصل أبداً، وستظهر كلمة السر في البابا."
+  },
+  "tokenTooWide": {
+    "message": "ويمكن لهذا الرمز أيضا: $SCOPES$. The extension needs the captures scope only: issue a token with that scope alone and revoke this one.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "عنوان (سولو) غير مسموح به لذا لم يتم إرسال شيء ويُحتفظ بالقبض وينتظر: السماح بالعنوان والصحافة إرسال مرة أخرى."
+  },
+  "enterAddress": {
+    "message": "أدخل عنوان البريد."
+  },
+  "notAnAddress": {
+    "message": "هذا لا يبدو كعنوان على الشبكة."
+  },
+  "httpsOnly": {
+    "message": "استعملوا مواقعكم لأي شيء ليس على جهازكم الخاص.."
+  },
+  "tokenRefused": {
+    "message": "البريد لا يقبل هذا تحقق من ذلك تحت $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "ليس مسموحاً للقبض عليه."
+  },
+  "tooMany": {
+    "message": "الكثير من الأسر في وقت قصير انتظر لحظة وحاول مرة أخرى."
+  },
+  "noTab": {
+    "message": "لا تُقرأ."
+  },
+  "notWebPage": {
+    "message": "لا يمكن إلتقاط سوى صفحات الإنترنت."
+  },
+  "unreadable": {
+    "message": "ولا يمكن قراءة الصفحة. بعض الصفحات تمدد."
+  },
+  "notPostulo": {
+    "message": "ذلك العنوان أجاب، لكن ليس كـ (سولو). تحقق من العنوان، وأي صفحة أمامه."
+  },
+  "addressTooLong": {
+    "message": "عنوان هذه الصفحة هو أطول من موافقة (سولو) حتى بدون الجزء بعد الـ (ب) أضف الموقع في بوستولو باليد بدلاً من ذلك."
+  },
+  "reviewHint": {
+    "message": "هذا ما قرأته من الصفحة تصحيح أي شيء خاطئ، لا شيء يترك هذا بروزر حتى ترسله."
+  },
+  "sendForReview": {
+    "message": "إرسال للمراجعة"
+  },
+  "notConnected": {
+    "message": "ليس متصلاً بـ \" بوستولو \" بعد ما تقبض عليه يُحتفظ به في هذا المستنقع."
+  },
+  "keep": {
+    "message": "أبقوا في هذا المستنقع"
+  },
+  "kept": {
+    "message": "بقيت في هذا المستنقع أرسله إلى \" بوستولو \" عندما تكون مستعداً."
+  },
+  "storageFull": {
+    "message": "هذا مخزن بروزر لـ بوستولو ممتلئ إرسال أو حذف بعض القبضات، ثم محاولة مرة أخرى."
+  },
+  "alreadyKept": {
+    "message": "لقد احتفظت بهذه الصفحة ولم ترسلها هذه نسختك."
+  },
+  "nothingRead": {
+    "message": "لا يمكن قراءة شيء من هذه الصفحة املأ ما تعرفه، لا شيء يترك هذا المنظف حتى ترسله."
+  },
+  "waiting": {
+    "message": "لا يمكن الوصول إلى البريد الآن ويُحتفظ به في هذا المستنقع ويُرسل بمجرد إجابات (أستولو)."
+  },
+  "waitingOffline": {
+    "message": "مفتاح الإختبار يعمل، لذا فهو ينتظر في هذا المستنقع. يَذْهبُ حالما يُطفئ الزر."
+  },
+  "waitingAccount": {
+    "message": "يُحتفظ به في هذا المستنقع ويُرسل حالما يتم إصلاحه."
+  },
+  "sendNeedsSetup": {
+    "message": "أبقيت في هذا المستنقع، لإرسالها بمجرد أن يتم تعيينك."
+  },
+  "capturesTitle": {
+    "message": "التقطت في هذا المستنقع"
+  },
+  "capturesIntro": {
+    "message": "الملصقات التي أُسرت، وبقيت هنا حتى يصلوا إلى البريد ما سترسله حالما يتم الوصول إلى (سولو)."
+  },
+  "nothingKept": {
+    "message": "لا شيء يُحتفظ به في هذا المستنقع."
+  },
+  "sendAll": {
+    "message": "أرسل كل شيء"
+  },
+  "clearSent": {
+    "message": "أخلوا من أرسلوا"
+  },
+  "stateKept": {
+    "message": "لم ترسل"
+  },
+  "stateWaiting": {
+    "message": "في انتظار البريد"
+  },
+  "stateSent": {
+    "message": "Sent"
+  },
+  "stateRefused": {
+    "message": "Refused"
+  },
+  "tryNow": {
+    "message": "حاول الآن"
+  },
+  "holdBack": {
+    "message": "أبقيه هنا بدلاً منه"
+  },
+  "deleteConfirm": {
+    "message": "تحذف هذا التقاط؟ لم تصل إلى \" بوستولو \" لذا فهي موجودة هنا فقط."
+  },
+  "troubleshooting": {
+    "message": "الاختبار والتشويش"
+  },
+  "offlineLabel": {
+    "message": "تصرف كما لو أنه لا يمكن الوصول إلى البريد"
+  },
+  "offlineHint": {
+    "message": "للاختبار بينما هذا على، لا شيء يُرسل: يَنتظرُ في هذا المستنقعِ بالضبط كما هم يُمْكِنُ أَنْ يَذْهبوا مع بوستولو أسفل، ويَذْهبُ متى هو مِنْ."
+  },
+  "offlineOn": {
+    "message": "مفتاح الاختبار على: لا شيء يرسل إلى بوستولو."
+  },
+  "offlineOff": {
+    "message": "مُفتاح الإختبار مُغلق، ما الذي ينتظره يذهب إلى ( بوستولو) الآن."
+  },
+  "downloadLog": {
+    "message": "تحميل السجل"
+  },
+  "clearLog": {
+    "message": "أخلوا السجل"
+  },
+  "logCleared": {
+    "message": "السجل فارغ."
+  },
+  "logHint": {
+    "message": "ماذا فعل التمديد، لمعرفة لماذا لا يعمل شيء. إنها لا تحمل رمزاً ولا شيء من الصفحات."
+  },
+  "delete": {
+    "message": "تحذف"
+  },
+  "edit": {
+    "message": "Edit"
+  },
+  "fieldTitle": {
+    "message": "لقب العمل"
+  },
+  "fieldCompany": {
+    "message": "Company"
+  },
+  "fieldLocation": {
+    "message": "الموقع"
+  },
+  "fieldRemote": {
+    "message": "ترتيب العمل"
+  },
+  "fieldEmployment": {
+    "message": "نوع العمل"
+  },
+  "fieldSalaryFrom": {
+    "message": "المرتبات من"
+  },
+  "fieldSalaryTo": {
+    "message": "المرتبات"
+  },
+  "fieldCurrency": {
+    "message": "العملة"
+  },
+  "fieldPeriod": {
+    "message": "الفترة"
+  },
+  "fieldCloses": {
+    "message": "تاريخ اختتام الدورة"
+  },
+  "fieldDescription": {
+    "message": "الوصف"
+  },
+  "remoteOnsite": {
+    "message": "في الموقع"
+  },
+  "remoteHybrid": {
+    "message": "Hybrid"
+  },
+  "remoteRemote": {
+    "message": "Remote"
+  },
+  "employmentFullTime": {
+    "message": "الوقت الكامل"
+  },
+  "employmentPartTime": {
+    "message": "الوقت"
+  },
+  "employmentContract": {
+    "message": "العقد"
+  },
+  "employmentFreelance": {
+    "message": "التحرر"
+  },
+  "employmentInternship": {
+    "message": "التدريب الداخلي"
+  },
+  "employmentApprenticeship": {
+    "message": "التدريب"
+  },
+  "periodYear": {
+    "message": "السنة"
+  },
+  "periodMonth": {
+    "message": "الشهر"
+  },
+  "periodDay": {
+    "message": "يوميا"
+  },
+  "periodHour": {
+    "message": "الساعة"
+  },
+  "postingsFound": {
+    "message": "وتُدرج هذه الصفحة $COUNT$ الإعلانات.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "تذوق من يستحق الاحتفاظ به كل واحد يُصبحُ قبضته الخاصة، يَقْرأُ ثانيةً مِن قِبل بوستولو."
+  },
+  "tickAll": {
+    "message": "كل شيء"
+  },
+  "tickNone": {
+    "message": "لا"
+  },
+  "nothingTicked": {
+    "message": "لا شيء يدغدغ."
+  },
+  "keptMany": {
+    "message": "$COUNT$ التقاطات محفوظة في هذا المتصفح.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ قبضات أرسلت لإعادة النظر.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ were refused; the list of captures says why.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "مأخوذة من قبل: في قوائمكم منذ $WHEN$ كما $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "في انتظار الاستعراض في بوستولو، منذ $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "A listing with this title at this company exists: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "أسر من قبل"
+  },
+  "knownOpen": {
+    "message": "افتحه في بوستولو"
+  },
+  "pictureOffer": {
+    "message": "يمكن للبريدولو أن يحتفظ بصورة للصفحة بأكملها كما تراها، موقعة أو لا. أرسل واحدة؟?"
+  },
+  "pictureSend": {
+    "message": "أرسل الصورة"
+  },
+  "pictureSkip": {
+    "message": "لا توجد صورة"
+  },
+  "pictureDrawing": {
+    "message": "رسم الصفحة.."
+  },
+  "pictureSending": {
+    "message": "إرسال الصورة.."
+  },
+  "pictureSent": {
+    "message": "الصورة أرسلت."
+  },
+  "pictureNotKept": {
+    "message": "لم يحتفظ (سولو) بالصورة القبض على نفسه غير متأثر."
+  },
+  "pictureTooBig": {
+    "message": "الصفحة كبيرة جدا لإرسالها كصورة."
+  },
+  "pictureFailed": {
+    "message": "لا يمكن رسم الصفحة هل ما زال الشخص الذي قبضت عليه؟?"
+  },
+  "languageLabel": {
+    "message": "اللغة"
+  },
+  "languageFollow": {
+    "message": "إتبع المصفح"
+  },
+  "languageHint": {
+    "message": "وكل لغة غير الإنكليزية هي مشروع لم يستعرضه أي متكلم بعد. يُصبحُ نافذاً في آن واحد، بدون إنقاذِ."
+  },
+  "reviewPageTitle": {
+    "message": "استعراض التقاط"
+  },
+  "tokenIs": {
+    "message": "الرمز «$NAME$» لـ $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "answered": {
+    "message": "ردّ Postulo بـ $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  }
+}

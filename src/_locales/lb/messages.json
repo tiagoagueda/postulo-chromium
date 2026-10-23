@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Eng Erfaassung nokucken"
+  },
+  "tokenTooWide": {
+    "message": "Dësen Token kann och: $SCOPES$. D'Erweiderung brauch nëmmen de Beräich captures: stellt en Token mat just deem Beräich aus a widderrufft dësen.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Loosst de Benotzernumm an d'Passwuert aus der Adress eraus: domat géif ni eng Verbindung zustane kommen, an d'Passwuert géif am Popup ugewise ginn."
+  },
+  "permissionRefused": {
+    "message": "D'Adress vum Postulo gouf net erlaabt, dofir gouf näischt geschéckt. D'Erfaassung bleift a waart: erlaabt d'Adress an dréckt nach eng Kéier op Schécken."
   }
 }

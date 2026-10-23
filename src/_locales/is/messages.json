@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Yfirfara skráningu"
+  },
+  "tokenTooWide": {
+    "message": "Þetta teikn getur líka: $SCOPES$. Viðbótin þarf aðeins heimildina captures: búðu til teikn með þeirri heimild einni og afturkallaðu þetta.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Slepptu notandanafninu og lykilorðinu úr vistfanginu: það myndi aldrei tengjast og lykilorðið yrði sýnt í sprettiglugganum."
+  },
+  "permissionRefused": {
+    "message": "Vistfang Postulo var ekki leyft, svo ekkert var sent. Gripið er geymt og bíður: leyfðu vistfangið og ýttu aftur á Senda."
   }
 }

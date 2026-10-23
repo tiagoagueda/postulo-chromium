@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Pregled zajema"
+  },
+  "tokenTooWide": {
+    "message": "Ta žeton lahko tudi: $SCOPES$. Razširitev potrebuje samo obseg captures: izdajte žeton samo s tem obsegom in prekličite tega.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Uporabniškega imena in gesla ne vpisujte v naslov: povezava se ne bi nikoli vzpostavila, geslo pa bi bilo prikazano v pojavnem oknu."
+  },
+  "permissionRefused": {
+    "message": "Naslov Postula ni bil dovoljen, zato ni bilo nič poslano. Zajem je shranjen in čaka: dovolite naslov in znova pritisnite Pošlji."
   }
 }

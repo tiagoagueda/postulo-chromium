@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Kukamata kazi posting wewe ni kuangalia, kuweka katika browser yako, na kutuma kwa Postulo yako mwenyewe kwa ajili ya ukaguzi wakati wewe kusema hivyo. Hakuna chochote kinachokwenda mahali pengine."
+  },
+  "actionTitle": {
+    "message": "Soma makala hii katika Postulo"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo hawezi kufikiwa: nini kutuma kusubiri katika browser hii mpaka majibu."
+  },
+  "footerOnline": {
+    "message": "Majibu ya maswali"
+  },
+  "footerSlow": {
+    "message": "Postulo ni mwepesi wa kujibu"
+  },
+  "reviewHeading": {
+    "message": "Mahitaji ya ukaguzi"
+  },
+  "waitingInPostulo": {
+    "message": "Kuangalia kwa ajili ya Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Hakuna kitu cha kusubiri kufanyiwa uchunguzi."
+  },
+  "lastListed": {
+    "message": "Kama Postulo ilivyoziorodhesha mara ya mwisho, tarehe $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Vinaso vya tangazo hili: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Vinasubiri kukaguliwa: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Mipangilio ya Mipangilio"
+  },
+  "setUp": {
+    "message": "Kuweka juu"
+  },
+  "capture": {
+    "message": "Kupata barua hii"
+  },
+  "addListing": {
+    "message": "Ongeza orodha"
+  },
+  "captureHint": {
+    "message": "Bofya hapa kusoma kwenye browser yako. Hakuna haja ya kutuma kitu chochote mpaka wewe kusema hivyo."
+  },
+  "review": {
+    "message": "Maoni kwenye Postulo"
+  },
+  "reading": {
+    "message": "Kusoma ukurasa wa.."
+  },
+  "allowing": {
+    "message": "Kuruhusu kuongeza muda wa kufikia Postulo yako .."
+  },
+  "noPermission": {
+    "message": "Bila ruhusa ya kufikia Postulo yako, hakuna kitu kinachoweza kutumwa."
+  },
+  "sending": {
+    "message": "Ujumbe wa Postulo .."
+  },
+  "captured": {
+    "message": "Kukamatwa. Angalia hii kabla ya kuwa orodha."
+  },
+  "readBy": {
+    "message": "Kwa mfano: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Orodha ya majina"
+  },
+  "optionsTitle": {
+    "message": "Mipangilio ya Postulo"
+  },
+  "instanceLabel": {
+    "message": "Ujumbe wako"
+  },
+  "instanceHint": {
+    "message": "Anwani ambayo unaweza kufungua.  https . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+  },
+  "tokenLabel": {
+    "message": "API ya API"
+  },
+  "tokenHint": {
+    "message": "Imetengenezwa chini ya $PATH$ katika Postulo, ikiwa na wigo wa $SCOPE$ tu na si zaidi. Inahifadhiwa kwenye kifaa hiki pekee, haisawazishwi kamwe kupitia akaunti ya kivinjari.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Mipangilio ya API"
+  },
+  "save": {
+    "message": "Kuokoa kuokoa kuokoa"
+  },
+  "test": {
+    "message": "Jaribio la majaribio"
+  },
+  "shortcutHint": {
+    "message": "Bonyeza kitufe, au $SHORTCUT$, soma ukurasa unaotazama, hapa kwenye kivinjari. Hakuna ukurasa unaosoma mpaka uulize, na hakuna kitu kilichotumwa mahali popote isipokuwa Postulo yako mwenyewe, unaposema hivyo.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Bonyeza kitufe cha \"Postulo\" kuonyesha wewe."
+  },
+  "saved": {
+    "message": "Imehifadhiwa. Sasa kitufe kitatuma kurasa kwa $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Na Kuokoa: Ni kuashiria kwenye mambo waliyo tihaniwa nayo watu wale."
+  },
+  "asking": {
+    "message": "Kwa wale ambao ni postulo, hii ni.."
+  },
+  "addressRefused": {
+    "message": "Ruhusa ya kuingia kwenye akaunti hiyo ilikataliwa."
+  },
+  "lacksCaptures": {
+    "message": "Haina wigo wa captures, kwa hiyo haiwezi kunasa."
+  },
+  "noCredentialsInAddress": {
+    "message": "Acha jina la mtumiaji na nenosiri nje ya anwani: haiwezi kuunganisha, na nenosiri litaonyeshwa kwenye popup."
+  },
+  "tokenTooWide": {
+    "message": "Hii inaweza kuwa sawa na $SCOPES$. Upanuzi unahitaji wigo wa kukamata tu: kutoa ishara na upeo huo peke yake na kufuta hii.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Anwani ya Postulo haikuruhusiwa, kwa hivyo hakuna chochote kilichotumwa. Kukamatwa kunahifadhiwa na kusubiri: kuruhusu anwani na vyombo vya habari kutuma tena."
+  },
+  "enterAddress": {
+    "message": "Ingiza anwani yako ya barua pepe."
+  },
+  "notAnAddress": {
+    "message": "Hii haionekani kama anwani ya wavuti."
+  },
+  "httpsOnly": {
+    "message": "Tumia https kwa kitu chochote kisicho kwenye mashine yako mwenyewe: ishara husafiri na kila ombi."
+  },
+  "notAllowed": {
+    "message": "Alama hii haiwezi kuruhusiwa kuingia."
+  },
+  "tooMany": {
+    "message": "Kuna mengi ya kuchukua katika muda mfupi. Subiri kwa dakika moja na ujaribu tena."
+  },
+  "noTab": {
+    "message": "Hakuna cha kusoma."
+  },
+  "notWebPage": {
+    "message": "Ukurasa wa wavuti pekee unaweza kufungwa."
+  },
+  "unreadable": {
+    "message": "Ukurasa haukuweza kusomwa. Baadhi ya kurasa zinazuia upanuzi."
+  },
+  "notPostulo": {
+    "message": "Barua hiyo ilijibu, lakini sio kama barua pepe. Angalia anwani, na ukurasa wowote wa kuingia mbele yake."
+  },
+  "addressTooLong": {
+    "message": "Anwani ya ukurasa huu ni ndefu kuliko Postulo inakubali, hata bila sehemu baada ya \"#\", hivyo kukamata hakutumwa. Ongeza ujumbe kwenye Postulo kwa mkono."
+  },
+  "reviewHint": {
+    "message": "Hii ni nini kusoma kutoka ukurasa. Kusahihisha kitu chochote kibaya; hakuna kitu kinachoacha kivinjari hiki mpaka utuma."
+  },
+  "sendForReview": {
+    "message": "Tuma kwa ajili ya ukaguzi"
+  },
+  "notConnected": {
+    "message": "Si kushikamana na Postulo bado: nini kukamata ni kuweka katika browser hii."
+  },
+  "keep": {
+    "message": "Nenda kwenye browser hii"
+  },
+  "kept": {
+    "message": "Nenda kwenye browser hii. Fanya zoezi hili wakati wowote unapokuwa tayari."
+  },
+  "storageFull": {
+    "message": "Hifadhi ya kivinjari hiki kwa Postulo ni kamili. Tuma au kufuta baadhi ya faili, kisha jaribu tena."
+  },
+  "alreadyKept": {
+    "message": "Umeweka ukurasa huu tayari na haujatuma: hii ni toleo lako."
+  },
+  "nothingRead": {
+    "message": "Hakuna chochote kinachoweza kusomwa kutoka kwenye ukurasa huu. Kwa hiyo, ni lazima ujue kwamba hakuna kitu ambacho unakifanya kwa ajili yake."
+  },
+  "waiting": {
+    "message": "Postulo haiwezi kupatikana kwa sasa. Imehifadhiwa kwenye kivinjari hiki na kutumwa mara tu Postulo itakapojibu."
+  },
+  "waitingOffline": {
+    "message": "Mabadiliko ya mtihani ni juu, hivyo kusubiri katika browser hii. Hii hutokea mara baada ya kubadili."
+  },
+  "waitingAccount": {
+    "message": "Ni kuhifadhiwa katika browser hii na kutumwa mara moja kwamba ni fasta."
+  },
+  "sendNeedsSetup": {
+    "message": "Kept katika kivinjari hiki, kutumwa mara moja Postulo yako imeanzishwa."
+  },
+  "capturesTitle": {
+    "message": "Pakua kwenye browser hii"
+  },
+  "capturesIntro": {
+    "message": "Kwa mfano, unaweza kutuma barua pepe yako mpaka itakapokuwa imekamilika. Kile unachotuma kinakwenda haraka kama Postulo inaweza kufikiwa."
+  },
+  "nothingKept": {
+    "message": "Hakuna kitu kilichohifadhiwa katika browser hii."
+  },
+  "sendAll": {
+    "message": "Andika kila kitu ambacho hakijatumwa"
+  },
+  "clearSent": {
+    "message": "Kuwa wazi kwa wale walio karibu"
+  },
+  "stateKept": {
+    "message": "Haikutumwa"
+  },
+  "stateWaiting": {
+    "message": "Kuangalia kwa ajili ya Postulo"
+  },
+  "stateSent": {
+    "message": "Ujumbe wake"
+  },
+  "stateRefused": {
+    "message": "Kukataliwa"
+  },
+  "tryNow": {
+    "message": "Jaribu sasa"
+  },
+  "holdBack": {
+    "message": "Endelea kuwa hapa badala ya"
+  },
+  "deleteConfirm": {
+    "message": "Je, unauzuia ukamataji huu? Hii haijafikia Postulo, kwa hivyo iko hapa tu."
+  },
+  "troubleshooting": {
+    "message": "Majaribio na ufumbuzi wa matatizo"
+  },
+  "offlineLabel": {
+    "message": "Fanya kama Postulo haiwezi kufikiwa"
+  },
+  "offlineHint": {
+    "message": "Kwa ajili ya majaribio. Wakati hii ni juu, hakuna kitu ni alimtuma: kukamata kusubiri katika browser hii hasa kama wao ingekuwa na Postulo chini, na kwenda mara moja ni mbali."
+  },
+  "offlineOn": {
+    "message": "Mabadiliko ya mtihani ni juu: hakuna kutumwa kwa Postulo."
+  },
+  "offlineOff": {
+    "message": "Mabadiliko ya mtihani ni mbali: nini ni kusubiri kwenda Postulo sasa."
+  },
+  "downloadLog": {
+    "message": "Download ya ya ya ya ya"
+  },
+  "clearLog": {
+    "message": "Bonyeza kwenye logi"
+  },
+  "logCleared": {
+    "message": "Chombo ni tupu."
+  },
+  "logHint": {
+    "message": "Ni nini kilichofanya, ili kujua kwa nini kitu hakifanyi kazi. Haina alama yoyote na hakuna chochote kutoka kwenye kurasa."
+  },
+  "delete": {
+    "message": "Kuondoa"
+  },
+  "edit": {
+    "message": "Edit"
+  },
+  "fieldTitle": {
+    "message": "Jina la kazi"
+  },
+  "fieldCompany": {
+    "message": "Kampuni ya Kampuni"
+  },
+  "fieldLocation": {
+    "message": "Mahali ya eneo"
+  },
+  "fieldRemote": {
+    "message": "Mpango wa Kazi"
+  },
+  "fieldEmployment": {
+    "message": "Aina ya ajira"
+  },
+  "fieldSalaryFrom": {
+    "message": "Malipo kutoka"
+  },
+  "fieldSalaryTo": {
+    "message": "Malipo ya"
+  },
+  "fieldCurrency": {
+    "message": "Fedha za sarafu"
+  },
+  "fieldPeriod": {
+    "message": "Kipindi cha Muda"
+  },
+  "fieldCloses": {
+    "message": "Tarehe ya kufunga"
+  },
+  "fieldDescription": {
+    "message": "Maelezo ya ufafanuzi"
+  },
+  "remoteOnsite": {
+    "message": "Kwenye tovuti"
+  },
+  "remoteHybrid": {
+    "message": "Mchanganyiko wa Hybrid"
+  },
+  "remoteRemote": {
+    "message": "Remote"
+  },
+  "employmentFullTime": {
+    "message": "Muda kamili"
+  },
+  "employmentPartTime": {
+    "message": "Sehemu ya muda"
+  },
+  "employmentContract": {
+    "message": "Mkataba wa Mkataba"
+  },
+  "employmentFreelance": {
+    "message": "Freelance"
+  },
+  "employmentInternship": {
+    "message": "Mafunzo ya Mafunzo"
+  },
+  "employmentApprenticeship": {
+    "message": "Mafunzo ya"
+  },
+  "periodYear": {
+    "message": "Kwa mwaka"
+  },
+  "periodMonth": {
+    "message": "Kwa mwezi"
+  },
+  "periodDay": {
+    "message": "Kwa siku"
+  },
+  "periodHour": {
+    "message": "Kwa saa"
+  },
+  "postingsFound": {
+    "message": "Ukurasa huu una maelezo ya $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Kuwapa wale thamani ya kuhifadhi. Kila mmoja anachukuliwa na postulo."
+  },
+  "tickAll": {
+    "message": "Yote kwa yote"
+  },
+  "tickNone": {
+    "message": "Hakuna hata mmoja"
+  },
+  "nothingTicked": {
+    "message": "Hakuna kitu kilichofichwa."
+  },
+  "keptMany": {
+    "message": "Vinaso $COUNT$ vimehifadhiwa katika kivinjari hiki.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "Vinaso $COUNT$ vimetumwa kwa ukaguzi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ vimekataliwa; orodha ya vinaso inaeleza sababu.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Kilinaswa awali: kipo katika matangazo yako tangu $WHEN$ kama $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Tayari kusubiri mapitio katika Postulo, tangu $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Orodha iliyo na jina hili katika kampuni hii ipo: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "kabla ya kukamatwa"
+  },
+  "knownOpen": {
+    "message": "Kujiandikisha katika Postulo"
+  },
+  "pictureOffer": {
+    "message": "Postulo inaweza kuweka picha ya ukurasa wote kama unaweza kuona, saini katika au la. Unawasilisha moja?"
+  },
+  "pictureSend": {
+    "message": "Tuma picha"
+  },
+  "pictureSkip": {
+    "message": "Hakuna picha"
+  },
+  "pictureDrawing": {
+    "message": "Kuchora ukurasa wa .."
+  },
+  "pictureSending": {
+    "message": "Akitoa picha ya .."
+  },
+  "pictureSent": {
+    "message": "Picha ilipigwa."
+  },
+  "pictureNotKept": {
+    "message": "Magufuli hakuweka picha hiyo. Utekaji wenyewe hauna mipaka."
+  },
+  "pictureTooBig": {
+    "message": "Ukurasa ni kubwa sana kwa kutuma kama picha."
+  },
+  "pictureFailed": {
+    "message": "Ukurasa haukuweza kuchapishwa. Je, bado ni yule aliyekudanganya?"
+  },
+  "languageLabel": {
+    "message": "Lugha ya lugha"
+  },
+  "languageFollow": {
+    "message": "Kufuatilia browser yako"
+  },
+  "languageHint": {
+    "message": "Kila lugha lakini Kiingereza ni kitabu ambacho hakuna msemaji aliyekisoma. Inaanza mara moja, bila kuokoa."
+  },
+  "reviewPageTitle": {
+    "message": "Uchunguzi wa kukamata"
+  },
+  "tokenIs": {
+    "message": "Tokeni “$NAME$” ya $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Tokeni “$NAME$” ya $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "tokenRefused": {
+    "message": "Postulo haikubali tokeni hii. Ikague chini ya $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "answered": {
+    "message": "Postulo ilijibu $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  }
+}

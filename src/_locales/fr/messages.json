@@ -426,7 +426,7 @@
     "message": "L'ouvrir dans Postulo"
   },
   "notPostulo": {
-    "message": "Cette adresse a répondu, mais pas en tant que Postulo. Vérifiez l'adresse, ainsi que toute page de connexion placée devant."
+    "message": "Cette adresse a répondu, mais pas comme Postulo. Vérifiez l'adresse, et toute page de connexion placée devant."
   },
   "addressTooLong": {
     "message": "L'adresse de cette page est plus longue que ce que Postulo accepte, même sans la partie située après « # », donc la capture n'a pas été envoyée. Ajoutez plutôt l'annonce dans Postulo à la main."
@@ -519,10 +519,10 @@
     "message": "Vérifier une capture"
   },
   "noCredentialsInAddress": {
-    "message": "Laissez le nom d'utilisateur et le mot de passe hors de l'adresse : il ne se connecterait jamais, et le mot de passe serait affiché dans le popup."
+    "message": "Laissez le nom d'utilisateur et le mot de passe en dehors de l'adresse : la connexion n'aboutirait jamais, et le mot de passe serait affiché dans la fenêtre contextuelle."
   },
   "tokenTooWide": {
-    "message": "Ce jeton peut également : $SCOPES$. L'extension n'a besoin que de la portée de capture : délivrer un jeton avec cette seule portée et révoquer celle-ci.",
+    "message": "Ce jeton peut aussi : $SCOPES$. L'extension n'a besoin que de la portée captures : créez un jeton avec cette seule portée et révoquez celui-ci.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "L'adresse de Postulo n'était pas autorisée, donc rien n'a été envoyé. La capture est conservée et attend : permet l'adresse et appuie à nouveau sur Envoyer."
+    "message": "L'adresse de Postulo n'a pas été autorisée, donc rien n'a été envoyé. La capture est conservée et en attente : autorisez l'adresse et appuyez à nouveau sur Envoyer."
   }
 }

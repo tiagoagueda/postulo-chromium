@@ -107,7 +107,7 @@
     "message": "Povolenie na prístup k tejto adrese bolo zamietnuté."
   },
   "tokenIs": {
-    "message": "Token „$NAME$“ používateľa $OWNER$.",
+    "message": "Token „$NAME$“ pre $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Token „$NAME$“ používateľa $OWNER$ ($SCOPES$).",
+    "message": "Token „$NAME$“ pre $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Skontrolovať zachytenie"
+  },
+  "tokenTooWide": {
+    "message": "Tento token dokáže aj: $SCOPES$. Rozšírenie potrebuje len rozsah captures: vydajte token len s týmto rozsahom a tento zrušte.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Meno používateľa a heslo do adresy nezadávajte: spojenie by sa nikdy nenadviazalo a heslo by sa zobrazilo vo vyskakovacom okne."
+  },
+  "permissionRefused": {
+    "message": "Adresa Postula nebola povolená, takže sa nič neodoslalo. Zachytenie zostáva uložené a čaká: povoľte adresu a znova stlačte Odoslať."
   }
 }

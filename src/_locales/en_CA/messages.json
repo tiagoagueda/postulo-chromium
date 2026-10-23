@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Capture the job posting you are looking at, keep it in your browser, and send it to your own Postulo for review when you say so. Nothing goes anywhere else."
+  },
+  "actionTitle": {
+    "message": "Capture this posting in Postulo"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo cannot be reached: what you send waits in this browser until it answers."
+  },
+  "footerOnline": {
+    "message": "Postulo answers"
+  },
+  "footerSlow": {
+    "message": "Postulo is slow to answer"
+  },
+  "reviewHeading": {
+    "message": "Needs review"
+  },
+  "waitingInPostulo": {
+    "message": "Waiting for review in Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Nothing is waiting for review."
+  },
+  "lastListed": {
+    "message": "As Postulo last listed them, on $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Captures of this posting: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Waiting for review: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "setUp": {
+    "message": "Set it up"
+  },
+  "capture": {
+    "message": "Capture this posting"
+  },
+  "addListing": {
+    "message": "Add a listing"
+  },
+  "captureHint": {
+    "message": "The page is read here, in your browser. Nothing is sent until you say so."
+  },
+  "review": {
+    "message": "Review in Postulo"
+  },
+  "reading": {
+    "message": "Reading the page…"
+  },
+  "allowing": {
+    "message": "Allowing the extension to reach your Postulo…"
+  },
+  "noPermission": {
+    "message": "Without permission to reach your Postulo, nothing can be sent."
+  },
+  "sending": {
+    "message": "Sending to Postulo…"
+  },
+  "captured": {
+    "message": "Captured. Review it before it becomes a listing."
+  },
+  "readBy": {
+    "message": "Read by $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Untitled posting"
+  },
+  "optionsTitle": {
+    "message": "Postulo settings"
+  },
+  "instanceLabel": {
+    "message": "Your Postulo"
+  },
+  "instanceHint": {
+    "message": "The address you open it at. https, unless it runs on this machine."
+  },
+  "tokenLabel": {
+    "message": "API token"
+  },
+  "tokenHint": {
+    "message": "Made under $PATH$ in Postulo, with the $SCOPE$ scope and nothing more. It is kept on this device only, never synced through a browser account.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Settings → API tokens"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "test": {
+    "message": "Test"
+  },
+  "shortcutHint": {
+    "message": "Pressing the button, or $SHORTCUT$, reads the page you are looking at, here in the browser. No page is read until you ask, and nothing is sent anywhere but your own Postulo, when you say so.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Paste the token Postulo showed you."
+  },
+  "saved": {
+    "message": "Saved. The button will now send pages to $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Saved, but the browser refused permission to reach it; allow it in the extension's permissions."
+  },
+  "asking": {
+    "message": "Asking Postulo who this token is…"
+  },
+  "addressRefused": {
+    "message": "Permission to reach that address was refused."
+  },
+  "tokenIs": {
+    "message": "Token “$NAME$” for $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token “$NAME$” for $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "It lacks the captures scope, so it cannot capture."
+  },
+  "noCredentialsInAddress": {
+    "message": "Leave the user name and password out of the address: it would never connect, and the password would be shown in the popup."
+  },
+  "tokenTooWide": {
+    "message": "This token can also: $SCOPES$. The extension needs the captures scope only: issue a token with that scope alone and revoke this one.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulo's address was not allowed, so nothing was sent. The capture is kept and waits: allow the address and press Send again."
+  },
+  "enterAddress": {
+    "message": "Enter the address of your Postulo."
+  },
+  "notAnAddress": {
+    "message": "That does not look like a web address."
+  },
+  "httpsOnly": {
+    "message": "Use https for anything that is not on your own machine: the token travels with every request."
+  },
+  "tokenRefused": {
+    "message": "Postulo does not accept this token. Check it under $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "This token is not allowed to capture."
+  },
+  "tooMany": {
+    "message": "Too many captures in a short time. Wait a minute and try again."
+  },
+  "answered": {
+    "message": "Postulo answered $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "No tab to read."
+  },
+  "notWebPage": {
+    "message": "Only web pages can be captured."
+  },
+  "unreadable": {
+    "message": "The page could not be read. Some pages block extensions."
+  },
+  "notPostulo": {
+    "message": "That address answered, but not as Postulo. Check the address, and any sign-in page in front of it."
+  },
+  "addressTooLong": {
+    "message": "This page's address is longer than Postulo accepts, even without the part after the “#”, so the capture was not sent. Add the posting in Postulo by hand instead."
+  },
+  "reviewHint": {
+    "message": "This is what was read from the page. Correct anything that is wrong; nothing leaves this browser until you send it."
+  },
+  "sendForReview": {
+    "message": "Send for review"
+  },
+  "notConnected": {
+    "message": "Not connected to a Postulo yet: what you capture is kept in this browser."
+  },
+  "keep": {
+    "message": "Keep in this browser"
+  },
+  "kept": {
+    "message": "Kept in this browser. Send it to Postulo whenever you are ready."
+  },
+  "storageFull": {
+    "message": "This browser's storage for Postulo is full. Send or delete some captures, then try again."
+  },
+  "alreadyKept": {
+    "message": "You kept this page already and have not sent it: this is your version."
+  },
+  "nothingRead": {
+    "message": "Nothing could be read from this page. Fill in what you know; nothing leaves this browser until you send it."
+  },
+  "waiting": {
+    "message": "Postulo cannot be reached right now. It is kept in this browser and sent as soon as Postulo answers."
+  },
+  "waitingOffline": {
+    "message": "The testing switch is on, so it waits in this browser. It goes once the switch is off."
+  },
+  "waitingAccount": {
+    "message": "It is kept in this browser and sent once that is fixed."
+  },
+  "sendNeedsSetup": {
+    "message": "Kept in this browser, to be sent once your Postulo is set up."
+  },
+  "capturesTitle": {
+    "message": "Captures in this browser"
+  },
+  "capturesIntro": {
+    "message": "Postings you captured, kept here until they reach your Postulo. What you send goes as soon as Postulo can be reached."
+  },
+  "nothingKept": {
+    "message": "Nothing is kept in this browser."
+  },
+  "sendAll": {
+    "message": "Send everything not sent"
+  },
+  "clearSent": {
+    "message": "Clear the ones sent"
+  },
+  "stateKept": {
+    "message": "Not sent"
+  },
+  "stateWaiting": {
+    "message": "Waiting for Postulo"
+  },
+  "stateSent": {
+    "message": "Sent"
+  },
+  "stateRefused": {
+    "message": "Refused"
+  },
+  "tryNow": {
+    "message": "Try now"
+  },
+  "holdBack": {
+    "message": "Keep it here instead"
+  },
+  "deleteConfirm": {
+    "message": "Delete this capture? It has not reached Postulo, so it exists only here."
+  },
+  "troubleshooting": {
+    "message": "Testing and troubleshooting"
+  },
+  "offlineLabel": {
+    "message": "Act as if Postulo cannot be reached"
+  },
+  "offlineHint": {
+    "message": "For testing. While this is on, nothing is sent: captures wait in this browser exactly as they would with Postulo down, and go once it is off."
+  },
+  "offlineOn": {
+    "message": "The testing switch is on: nothing is sent to Postulo."
+  },
+  "offlineOff": {
+    "message": "The testing switch is off: what is waiting goes to Postulo now."
+  },
+  "downloadLog": {
+    "message": "Download the log"
+  },
+  "clearLog": {
+    "message": "Clear the log"
+  },
+  "logCleared": {
+    "message": "The log is empty."
+  },
+  "logHint": {
+    "message": "What the extension did, to find out why something did not work. It holds no token and nothing from the pages."
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "edit": {
+    "message": "Edit"
+  },
+  "fieldTitle": {
+    "message": "Job title"
+  },
+  "fieldCompany": {
+    "message": "Company"
+  },
+  "fieldLocation": {
+    "message": "Location"
+  },
+  "fieldRemote": {
+    "message": "Working arrangement"
+  },
+  "fieldEmployment": {
+    "message": "Employment type"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salary from"
+  },
+  "fieldSalaryTo": {
+    "message": "Salary to"
+  },
+  "fieldCurrency": {
+    "message": "Currency"
+  },
+  "fieldPeriod": {
+    "message": "Period"
+  },
+  "fieldCloses": {
+    "message": "Closing date"
+  },
+  "fieldDescription": {
+    "message": "Description"
+  },
+  "remoteOnsite": {
+    "message": "On site"
+  },
+  "remoteHybrid": {
+    "message": "Hybrid"
+  },
+  "remoteRemote": {
+    "message": "Remote"
+  },
+  "employmentFullTime": {
+    "message": "Full time"
+  },
+  "employmentPartTime": {
+    "message": "Part time"
+  },
+  "employmentContract": {
+    "message": "Contract"
+  },
+  "employmentFreelance": {
+    "message": "Freelance"
+  },
+  "employmentInternship": {
+    "message": "Internship"
+  },
+  "employmentApprenticeship": {
+    "message": "Apprenticeship"
+  },
+  "periodYear": {
+    "message": "Per year"
+  },
+  "periodMonth": {
+    "message": "Per month"
+  },
+  "periodDay": {
+    "message": "Per day"
+  },
+  "periodHour": {
+    "message": "Per hour"
+  },
+  "postingsFound": {
+    "message": "This page lists $COUNT$ postings.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Tick the ones worth keeping. Each becomes its own capture, read again by Postulo."
+  },
+  "tickAll": {
+    "message": "All"
+  },
+  "tickNone": {
+    "message": "None"
+  },
+  "nothingTicked": {
+    "message": "Nothing is ticked."
+  },
+  "keptMany": {
+    "message": "$COUNT$ captures kept in this browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ captures sent for review.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ were refused; the list of captures says why.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Captured before: in your listings since $WHEN$ as $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Already waiting for review in Postulo, since $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "A listing with this title at this company exists: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "captured before"
+  },
+  "knownOpen": {
+    "message": "Open it in Postulo"
+  },
+  "pictureOffer": {
+    "message": "Postulo can keep a picture of the whole page as you see it, signed in or not. Send one?"
+  },
+  "pictureSend": {
+    "message": "Send the picture"
+  },
+  "pictureSkip": {
+    "message": "No picture"
+  },
+  "pictureDrawing": {
+    "message": "Drawing the page…"
+  },
+  "pictureSending": {
+    "message": "Sending the picture…"
+  },
+  "pictureSent": {
+    "message": "The picture was sent."
+  },
+  "pictureNotKept": {
+    "message": "Postulo did not keep the picture. The capture itself is unaffected."
+  },
+  "pictureTooBig": {
+    "message": "The page is too large to send as a picture."
+  },
+  "pictureFailed": {
+    "message": "The page could not be drawn. Is it still the one you captured?"
+  },
+  "languageLabel": {
+    "message": "Language"
+  },
+  "languageFollow": {
+    "message": "Follow the browser"
+  },
+  "languageHint": {
+    "message": "Every language but English is a draft that no speaker has reviewed yet. Takes effect at once, without Save."
+  },
+  "reviewPageTitle": {
+    "message": "Review a capture"
+  }
+}

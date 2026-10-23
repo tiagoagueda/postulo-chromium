@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Captura el trabajo que publicas que estás mirando, manténgalo en tu navegador, y envíalo a tu propio Postulo para que lo revises cuando lo digas. Nada va a otro lugar."
+  },
+  "actionTitle": {
+    "message": "Captura esta publicación en Postulo"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo no se puede alcanzar: lo que envía espera en este navegador hasta que responda."
+  },
+  "footerOnline": {
+    "message": "Respuestas de posulo"
+  },
+  "footerSlow": {
+    "message": "Postulo es lento para responder"
+  },
+  "reviewHeading": {
+    "message": "Examen de las necesidades"
+  },
+  "waitingInPostulo": {
+    "message": "Esperando revisión en Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Nada está esperando revisión."
+  },
+  "lastListed": {
+    "message": "Como Postulo la última lista, en $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Capturas de esta publicación: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Esperando su revisión: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Ajustes"
+  },
+  "setUp": {
+    "message": "Arréglalo"
+  },
+  "capture": {
+    "message": "Captura esta publicación"
+  },
+  "addListing": {
+    "message": "Agregar un listado"
+  },
+  "captureHint": {
+    "message": "La página se lee aquí, en su navegador. Nada se envía hasta que tú lo digas."
+  },
+  "review": {
+    "message": "Revisión en Postulo"
+  },
+  "reading": {
+    "message": "Leyendo la página.."
+  },
+  "allowing": {
+    "message": "Permitiendo que la extensión llegue a su Postulo.."
+  },
+  "noPermission": {
+    "message": "Sin permiso para llegar a su Postulo, no se puede enviar nada."
+  },
+  "sending": {
+    "message": "Enviando a Postulo.."
+  },
+  "captured": {
+    "message": "Capturado. Reviselo antes de que se convierta en un listado."
+  },
+  "readBy": {
+    "message": "Read by $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Publicación sin título"
+  },
+  "optionsTitle": {
+    "message": "Ajustes de posulo"
+  },
+  "instanceLabel": {
+    "message": "Su Postulo"
+  },
+  "instanceHint": {
+    "message": "La dirección en la que la abres. https, a menos que funcione en esta máquina."
+  },
+  "tokenLabel": {
+    "message": "API token"
+  },
+  "tokenHint": {
+    "message": "Hecho bajo $PATH$ en Postulo, con el alcance $SCOPE$ y nada más. Se mantiene en este dispositivo sólo, nunca se sincroniza a través de una cuenta del navegador.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Ajustes → fichas de API"
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "test": {
+    "message": "Prueba"
+  },
+  "shortcutHint": {
+    "message": "Presionando el botón, o $SHORTCUT$, lee la página que está mirando, aquí en el navegador. No se lee ninguna página hasta que pregunte, y nada se envía en cualquier lugar excepto su propio Postulo, cuando usted lo dice.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Pruebe el Postulo token le mostró."
+  },
+  "saved": {
+    "message": "Salvado. El botón enviará ahora páginas a $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Guardado, pero el navegador rehusó el permiso para llegar a él; permitirlo en los permisos de la extensión."
+  },
+  "asking": {
+    "message": "Preguntando a Postulo quién es este token.."
+  },
+  "addressRefused": {
+    "message": "Se rechazó la autorización para llegar a esa dirección."
+  },
+  "tokenIs": {
+    "message": "Token “$NAME$” para $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token “$NAME$” para $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Le falta el alcance captures, así que no puede capturar."
+  },
+  "noCredentialsInAddress": {
+    "message": "Deje el nombre de usuario y la contraseña fuera de la dirección: nunca se conectará, y la contraseña se mostrará en el popup."
+  },
+  "tokenTooWide": {
+    "message": "Esta ficha también puede: $SCOPES$. La extensión sólo necesita el alcance de capturas: expedir un token con ese alcance solo y revocar este.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "No se permitió la dirección de Postulo, así que nada fue enviado. La captura se mantiene y espera: permita la dirección y pulse Enviar de nuevo."
+  },
+  "enterAddress": {
+    "message": "Introduzca la dirección de su Postulo."
+  },
+  "notAnAddress": {
+    "message": "Eso no parece una dirección web."
+  },
+  "httpsOnly": {
+    "message": "Utilice https para cualquier cosa que no esté en su propia máquina: el token viaja con cada solicitud."
+  },
+  "tokenRefused": {
+    "message": "Postulo no acepta este token. Compruébalo bajo $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Este token no se permite capturar."
+  },
+  "tooMany": {
+    "message": "Demasiados capturas en poco tiempo. Espera un minuto y vuelve a intentarlo."
+  },
+  "answered": {
+    "message": "Postulo respondió $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "No hay ficha para leer."
+  },
+  "notWebPage": {
+    "message": "Sólo las páginas web pueden ser capturadas."
+  },
+  "unreadable": {
+    "message": "La página no podía leerse. Algunas páginas bloquean extensiones."
+  },
+  "notPostulo": {
+    "message": "Esa dirección respondió, pero no como Postulo. Compruebe la dirección y cualquier página de inicio de sesión delante de ella."
+  },
+  "addressTooLong": {
+    "message": "La dirección de esta página es más larga de lo que Postulo acepta, incluso sin la parte después del \"#\", por lo que la captura no fue enviada. Añadir la publicación en Postulo a mano."
+  },
+  "reviewHint": {
+    "message": "Esto es lo que se leía de la página. Corrige todo lo que está mal; nada deja este navegador hasta que lo envíes."
+  },
+  "sendForReview": {
+    "message": "Enviar para revisión"
+  },
+  "notConnected": {
+    "message": "Aún no conectado a un Postulo: lo que capturas se mantiene en este navegador."
+  },
+  "keep": {
+    "message": "Mantenga en este navegador"
+  },
+  "kept": {
+    "message": "Se quedó en este navegador. Envíelo a Postulo cuando esté listo."
+  },
+  "storageFull": {
+    "message": "El almacenamiento de este navegador para Postulo está lleno. Enviar o eliminar algunas capturas, luego intentarlo de nuevo."
+  },
+  "alreadyKept": {
+    "message": "Ya guardaste esta página y no la has enviado: esta es tu versión."
+  },
+  "nothingRead": {
+    "message": "No se puede leer nada de esta página. Llena lo que sabes; nada deja este navegador hasta que lo envíes."
+  },
+  "waiting": {
+    "message": "Postulo no se puede llegar ahora mismo. Se guarda en este navegador y se envía tan pronto como Postulo responde."
+  },
+  "waitingOffline": {
+    "message": "El interruptor de prueba está encendido, por lo que espera en este navegador. Va una vez que se apaga el interruptor."
+  },
+  "waitingAccount": {
+    "message": "Se guarda en este navegador y se envía una vez que se fija."
+  },
+  "sendNeedsSetup": {
+    "message": "Guardado en este navegador, para ser enviado una vez que su Postulo está establecido."
+  },
+  "capturesTitle": {
+    "message": "Capturas en este navegador"
+  },
+  "capturesIntro": {
+    "message": "Postings you captured, kept here until they reach your Postulo. Lo que envías va tan pronto como se puede llegar a Postulo."
+  },
+  "nothingKept": {
+    "message": "Nada se guarda en este navegador."
+  },
+  "sendAll": {
+    "message": "Enviar todo no enviado"
+  },
+  "clearSent": {
+    "message": "Despejen los enviados"
+  },
+  "stateKept": {
+    "message": "No enviado"
+  },
+  "stateWaiting": {
+    "message": "Esperando a Postulo"
+  },
+  "stateSent": {
+    "message": "Sent"
+  },
+  "stateRefused": {
+    "message": "Refiriéndose"
+  },
+  "tryNow": {
+    "message": "Prueba ahora"
+  },
+  "holdBack": {
+    "message": "Quédate aquí"
+  },
+  "deleteConfirm": {
+    "message": "Eliminar esta captura? No ha llegado a Postulo, así que sólo existe aquí."
+  },
+  "troubleshooting": {
+    "message": "Pruebas y solución de problemas"
+  },
+  "offlineLabel": {
+    "message": "Actúa como si no se pudiera llegar a Postulo"
+  },
+  "offlineHint": {
+    "message": "Para probar. Mientras esto está encendido, nada se envía: capturas esperar en este navegador exactamente como lo harían con Postulo hacia abajo, y ir una vez que está apagado."
+  },
+  "offlineOn": {
+    "message": "El interruptor de prueba está encendido: nada se envía a Postulo."
+  },
+  "offlineOff": {
+    "message": "El interruptor de prueba está apagado: lo que está esperando va a Postulo ahora."
+  },
+  "downloadLog": {
+    "message": "Descargar el registro"
+  },
+  "clearLog": {
+    "message": "Limpiar el registro"
+  },
+  "logCleared": {
+    "message": "El tronco está vacío."
+  },
+  "logHint": {
+    "message": "Lo que hizo la extensión, para averiguar por qué algo no funcionó. No tiene token ni nada de las páginas."
+  },
+  "delete": {
+    "message": "Suprimir"
+  },
+  "edit": {
+    "message": "Editar"
+  },
+  "fieldTitle": {
+    "message": "Título de trabajo"
+  },
+  "fieldCompany": {
+    "message": "Company"
+  },
+  "fieldLocation": {
+    "message": "Ubicación"
+  },
+  "fieldRemote": {
+    "message": "Arreglos de trabajo"
+  },
+  "fieldEmployment": {
+    "message": "Tipo de empleo"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salario"
+  },
+  "fieldSalaryTo": {
+    "message": "Sueldos"
+  },
+  "fieldCurrency": {
+    "message": "Moneda"
+  },
+  "fieldPeriod": {
+    "message": "Período"
+  },
+  "fieldCloses": {
+    "message": "Fecha de cierre"
+  },
+  "fieldDescription": {
+    "message": "Descripción"
+  },
+  "remoteOnsite": {
+    "message": "En el sitio"
+  },
+  "remoteHybrid": {
+    "message": "Híbrido"
+  },
+  "remoteRemote": {
+    "message": "Remoto"
+  },
+  "employmentFullTime": {
+    "message": "Tiempo completo"
+  },
+  "employmentPartTime": {
+    "message": "Tiempo parcial"
+  },
+  "employmentContract": {
+    "message": "Contrato"
+  },
+  "employmentFreelance": {
+    "message": "Freelance"
+  },
+  "employmentInternship": {
+    "message": "Prácticas"
+  },
+  "employmentApprenticeship": {
+    "message": "Aprendiz"
+  },
+  "periodYear": {
+    "message": "Por año"
+  },
+  "periodMonth": {
+    "message": "Por mes"
+  },
+  "periodDay": {
+    "message": "Por día"
+  },
+  "periodHour": {
+    "message": "Por hora"
+  },
+  "postingsFound": {
+    "message": "Esta página enumera las publicaciones $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Ata los que vale la pena guardar. Cada uno se convierte en su propia captura, leída de nuevo por Postulo."
+  },
+  "tickAll": {
+    "message": "Todos"
+  },
+  "tickNone": {
+    "message": "Ninguno"
+  },
+  "nothingTicked": {
+    "message": "Nada está marcado."
+  },
+  "keptMany": {
+    "message": "$COUNT$ capturas guardadas en este navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ capturas enviadas para su revisión.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ fueron rechazados; la lista de capturas dice por qué.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Capturado antes: en sus listados desde $WHEN$ como $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Ya está esperando su revisión en Postulo, desde $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Existe un listado con este título en esta empresa: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "capturado antes"
+  },
+  "knownOpen": {
+    "message": "Ábrelo en Postulo"
+  },
+  "pictureOffer": {
+    "message": "Postulo puede mantener una imagen de toda la página como la vea, firmada o no. ¿Enviar uno?"
+  },
+  "pictureSend": {
+    "message": "Enviar la foto"
+  },
+  "pictureSkip": {
+    "message": "No hay imagen"
+  },
+  "pictureDrawing": {
+    "message": "Dibujo la página.."
+  },
+  "pictureSending": {
+    "message": "Enviando la foto.."
+  },
+  "pictureSent": {
+    "message": "La foto fue enviada."
+  },
+  "pictureNotKept": {
+    "message": "Postulo no guardó la foto. La captura en sí misma no es afectada."
+  },
+  "pictureTooBig": {
+    "message": "La página es demasiado grande para enviar como imagen."
+  },
+  "pictureFailed": {
+    "message": "La página no se puede dibujar. ¿Aún es el que capturaste?"
+  },
+  "languageLabel": {
+    "message": "Idioma"
+  },
+  "languageFollow": {
+    "message": "Siga el navegador"
+  },
+  "languageHint": {
+    "message": "Cada idioma, pero el inglés es un borrador que ningún orador ha examinado. Efectúa inmediatamente, sin Guardar."
+  },
+  "reviewPageTitle": {
+    "message": "Revisar una captura"
+  }
+}

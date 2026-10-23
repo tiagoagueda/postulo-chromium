@@ -107,7 +107,7 @@
     "message": "Permisiunea de a ajunge la acea adresă a fost refuzată."
   },
   "tokenIs": {
-    "message": "Tokenul „$NAME$” al lui $OWNER$.",
+    "message": "Tokenul „$NAME$” pentru $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Tokenul „$NAME$” al lui $OWNER$ ($SCOPES$).",
+    "message": "Tokenul „$NAME$” pentru $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"

@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "আপনি যে কাজ দেখছেন তা ধারণ করুন, আপনার ব্রাউজারের মধ্যে রাখুন, এবং আপনি যখন তা বলেন তখন সেটি নিজের পোস্টুলোর কাছে পাঠান। অন্য কোথাও যায় না।।"
+  },
+  "actionTitle": {
+    "message": "পোস্টুলোতে এই পোস্ট ধারণ করুন"
+  },
+  "postuloUnreachable": {
+    "message": "পোস্টুলোঃ উত্তর না পাওয়া পর্যন্ত আপনি এই ব্রাউজারের মধ্যে অপেক্ষা করতে পারবেন না।।"
+  },
+  "footerOnline": {
+    "message": "পোস্টুলো উত্তর"
+  },
+  "footerSlow": {
+    "message": "পোস্টুলোর উত্তর ধীর গতির"
+  },
+  "reviewHeading": {
+    "message": "পর্যালোচনা ব্যবস্থা"
+  },
+  "waitingInPostulo": {
+    "message": "পোস্টুলোতে পর্যালোচনার জন্য অপেক্ষা করা হচ্ছে"
+  },
+  "nothingWaiting": {
+    "message": "রিভিউর জন্য কিছু অপেক্ষা করছে না।।"
+  },
+  "lastListed": {
+    "message": "Postulo শেষবার যেমন তালিকা দিয়েছিল, $WHEN$-এ।",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "এই পোস্টিংয়ের ক্যাপচার: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "পর্যালোচনার জন্য অপেক্ষা করা হচ্ছে: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "বৈশিষ্ট্য"
+  },
+  "setUp": {
+    "message": "সেট আপ"
+  },
+  "capture": {
+    "message": "এই পোস্ট আটক করুন"
+  },
+  "addListing": {
+    "message": "অনুসন্ধান হচ্ছেঃ"
+  },
+  "captureHint": {
+    "message": "আপনার ব্রাউজারের মধ্যে এই পাতাটি পড়া হয়েছে । আপনি না বলা পর্যন্ত কিছুই পাঠানো হয়।"
+  },
+  "review": {
+    "message": "পোস্টুলটোতে পর্যালোচনা"
+  },
+  "reading": {
+    "message": "পৃষ্ঠা পড়া হচ্ছে.."
+  },
+  "allowing": {
+    "message": "তোমার পোস্টুলোতে যাওয়ার অনুমতি দিচ্ছি.."
+  },
+  "noPermission": {
+    "message": "তোমার পোস্টুলোতে যাওয়ার অনুমতি ছাড়া, কোন কিছুই পাঠানো যাবে না।।"
+  },
+  "sending": {
+    "message": "পোস্টুলোকে পাঠানো হচ্ছে.."
+  },
+  "captured": {
+    "message": "আটক. তালিকা পড়ার আগে এটা পর্যালোচনা করুন।।"
+  },
+  "readBy": {
+    "message": "$SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "শিরোনামহীন পোস্ট"
+  },
+  "optionsTitle": {
+    "message": "পোস্ট করার বৈশিষ্ট্য"
+  },
+  "instanceLabel": {
+    "message": "আপনার পোস্টুলো"
+  },
+  "instanceHint": {
+    "message": "ঠিকানা দিয়ে তুমি এটা খুলতে পারবে। যদি এটা এই মেশিন চালায়।"
+  },
+  "tokenLabel": {
+    "message": "API টোকেন"
+  },
+  "tokenHint": {
+    "message": "Postulo-তে $PATH$-এর অধীনে তৈরি, শুধু $SCOPE$ স্কোপ দিয়ে, আর কিছু নয়। এটি শুধু এই ডিভাইসে রাখা হয়, কখনও কোনো ব্রাউজার অ্যাকাউন্টের মাধ্যমে সিঙ্ক হয় না।",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Wdfs API টোকেন সেটিং"
+  },
+  "save": {
+    "message": "সংরক্ষণ"
+  },
+  "test": {
+    "message": "পরীক্ষা"
+  },
+  "shortcutHint": {
+    "message": "বোতাম চাপলে, বা $SHORTCUT$ চাপলে, আপনি যে পৃষ্ঠাটি দেখছেন তা এখানে ব্রাউজারেই পড়া হয়। আপনি না চাওয়া পর্যন্ত কোনো পৃষ্ঠা পড়া হয় না, আর আপনি বললে শুধু আপনার নিজের Postulo-তেই পাঠানো হয়, অন্য কোথাও নয়।",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "টোকেন পোস্টুলো তোমাকে দেখাও।।"
+  },
+  "saved": {
+    "message": "সংরক্ষিত। বাটন এখন $HOST$- এ পাঠাতে হবে ।।",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "সংরক্ষিত, কিন্তু ব্রাউজার দ্বারা এটি পৌঁছানোর অনুমতি প্রদান করা হয়নি। অনুমোদন সংক্রান্ত অনুমতি প্রদান করুন।।"
+  },
+  "asking": {
+    "message": "পোস্টুলৌকে জিজ্ঞেস করছি এই টোকেনটা কে.."
+  },
+  "addressRefused": {
+    "message": "ঠিকানার সাথে যোগাযোগ করতে দেওয়া হয়নি।।"
+  },
+  "lacksCaptures": {
+    "message": "এতে captures স্কোপ নেই, তাই এটি ক্যাপচার করতে পারে না।"
+  },
+  "noCredentialsInAddress": {
+    "message": "ব্যবহারকারীর নাম ও পাসওয়ার্ডগুলি লিখুন: এটি কখনো সংযোগ করা হবে না, এবং পাসওয়ার্ড পপ-আপ করে প্রদর্শন করা হবে না।।"
+  },
+  "tokenTooWide": {
+    "message": "এই টোকেনটিও হতে পারে: $SCOPES$ । এক্সটেনশনটি শুধুমাত্র প্রাপ্ত হওয়ার সম্ভাবনা রয়েছে: এই ক্ষেত্রে একটি টোকেন উল্লেখ করা আবশ্যক এবং এটি প্রত্যাখ্যান করা হল।।",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "পোস্টুলোর ঠিকানা দেয়া হয়নি, তাই কিছুই পাঠানো হয়নি। আটক করা হয়েছে এবং অপেক্ষা করা হচ্ছে: ঠিকানা পুনরায় প্রেরণ করা হবে ও পুনরায় প্রেরণ করা হবে।।"
+  },
+  "enterAddress": {
+    "message": "আপনার পোস্টুলোর ঠিকানা লিখুন।।"
+  },
+  "notAnAddress": {
+    "message": "এটি কোনো ওয়েব ঠিকানা বলে মনে হচ্ছে না।।"
+  },
+  "httpsOnly": {
+    "message": "আপনার নিজের মেশিনের সাথে যে কোন কিছু ব্যবহার করার জন্য এইচ এস ব্যবহার করুন।।"
+  },
+  "notAllowed": {
+    "message": "এই টোকেনটি ধরতে অনুমোদিত নয় ।।"
+  },
+  "tooMany": {
+    "message": "অল্প সময়ের মধ্যে অনেক ধরা পড়ে। এক মিনিট অপেক্ষা করুন।"
+  },
+  "answered": {
+    "message": "পোস্টুলো উত্তর দিয়েছেন $STATUS$।",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "পড়ার উদ্দেশ্যে কোনো ট্যাব পাওয়া যায়নি।।"
+  },
+  "notWebPage": {
+    "message": "শুধুমাত্র ওয়েব পেজ ধরা যাবে।।"
+  },
+  "unreadable": {
+    "message": "পৃষ্ঠা পড়তে ব্যর্থ। কিছু পৃষ্ঠা ব্লক এক্সটেনশন।।"
+  },
+  "notPostulo": {
+    "message": "এর উত্তর ছিল, কিন্তু পোস্টুলোর মতো নয়। ঠিকানা চেক করুন, এবং এর সামনে কোনো সাইন ইন করুন।।"
+  },
+  "addressTooLong": {
+    "message": "এই পাতার ঠিকানা পোস্টুলো গ্রহণের চেয়ে অনেক বেশি, এমনকি “###” – এর অংশ ছাড়া। এর পরিবর্তে পোস্ট পোস্টের পোস্টগুলো যোগ করুন।।"
+  },
+  "reviewHint": {
+    "message": "পাতা থেকে এই লেখা পাঠ করা হয়েছে। কোন কিছু ঠিক আছে; যতক্ষণ না আপনি এটা পাঠাতে চান ততক্ষণ পর্যন্ত এই ব্রাউজারটি ছেড়ে দেবেন না ।।"
+  },
+  "sendForReview": {
+    "message": "পরিমার্জনার জন্য প্রেরণ"
+  },
+  "notConnected": {
+    "message": "পোস্টুলো-এর সাথে এখনো সংযুক্ত নয়: এই ব্রাউজারের মধ্যে আপনি যা ধারণ করেছেন, তার সাথে যুক্ত নয়।।"
+  },
+  "keep": {
+    "message": "এই ব্রাউজারের মধ্যে স্থাপিত হবে"
+  },
+  "kept": {
+    "message": "ব্রাউজারের মধ্যে ঢুকেছি। আপনি তৈরি থাকলে এটা পোস্টুলো পাঠান।।"
+  },
+  "storageFull": {
+    "message": "পোস্টুলোর জন্য এই ব্রাউজারটি পূর্ণ। কিছু ধরা অথবা অপসারণ করুন, তারপর পুনরায় চেষ্টা করুন।।"
+  },
+  "alreadyKept": {
+    "message": "এই ওয়েবপেজটি আপনি ইতিমধ্যে সংরক্ষণ করেছেন এবং এটি প্রেরিত হয়নি । এটি আপনার সংস্করণ ।।"
+  },
+  "nothingRead": {
+    "message": "এই পৃষ্ঠা থেকে কিছু পড়া সম্ভব নয় । আপনি যা জানেন, তা পূরণ করুন; এটি পাঠাতে না হওয়া পর্যন্ত এই ব্রাউজারটি ছেড়ে দেবেন না।।"
+  },
+  "waiting": {
+    "message": "এই মুহূর্তে পোস্টুলোকে পাওয়া যাবে না। এটি এই ব্রাউজারে রাখা হয়েছে এবং পোস্টুলো উত্তর দেয়ার সাথে সাথেই এটি পাঠানো হয়েছে।।"
+  },
+  "waitingOffline": {
+    "message": "পরীক্ষার সুইচ চলছে, তাই এই ব্রাউজারের মধ্যে অপেক্ষা করা হচ্ছে। একবার সুইচ বন্ধ হয়ে যাবে।।"
+  },
+  "waitingAccount": {
+    "message": "এই ব্রাউজারটিতে রাখা হয়েছে এবং একবার এটি নির্ধারিত অবস্থায় পাঠানো হয়েছে।।"
+  },
+  "sendNeedsSetup": {
+    "message": "এই ব্রাউজারের ভেতর ঢুকে, তোমার পোস্টুলোর কাছে পাঠানো হবে।।"
+  },
+  "capturesTitle": {
+    "message": "এই ব্রাউজারের মধ্যে ক্যাপচার"
+  },
+  "capturesIntro": {
+    "message": "আপনার ধরা পড়া পোস্ট, যতক্ষণ না আপনার পোস্টুলোর কাছে আসে। পোস্টুলোর সাথে যত দ্রুত সম্ভব আপনি যা পাঠান।।"
+  },
+  "nothingKept": {
+    "message": "এই ব্রাউজার- এ কিছু রাখা হয়নি ।।"
+  },
+  "sendAll": {
+    "message": "সমগ্র বার্তা পাঠানো হবে না"
+  },
+  "clearSent": {
+    "message": "প্রেরিত বার্তা মুছে ফেলুন"
+  },
+  "stateKept": {
+    "message": "প্রেরিত হয়নি"
+  },
+  "stateWaiting": {
+    "message": "পোস্টুলো এর জন্য অপেক্ষা করা হচ্ছে"
+  },
+  "stateSent": {
+    "message": "প্রেরণ করা বস্তু"
+  },
+  "stateRefused": {
+    "message": "অবনিত করা হয়েছে"
+  },
+  "tryNow": {
+    "message": "এখন চেষ্টা করুন"
+  },
+  "holdBack": {
+    "message": "এখানে রেখে দে"
+  },
+  "deleteConfirm": {
+    "message": "এই মুছে ফেলা হবে কি? এটি পোস্টুলো পর্যন্ত পৌঁছে নি, তাই এখানে শুধু বিদ্যমান।।"
+  },
+  "troubleshooting": {
+    "message": "পরীক্ষা এবং সমস্যা সমাধান"
+  },
+  "offlineLabel": {
+    "message": "পোস্টুলোকে এভাবে দেখা যাবে না"
+  },
+  "offlineHint": {
+    "message": "পরীক্ষার জন্য। যখন এটা শুরু হয়, তখন কিছুই পাঠানো হয় নি: এই ব্রাউজারটিতে পোস্টুলোর মতো অপেক্ষা করা হয়।।"
+  },
+  "offlineOn": {
+    "message": "পরীক্ষার পরিবর্তন চলছে: পোস্টুলোর কাছে পাঠানো হয়নি।।"
+  },
+  "offlineOff": {
+    "message": "পরীক্ষা বন্ধ হয়ে গেছে: পোস্টুলোর অপেক্ষায় কি আছে।।"
+  },
+  "downloadLog": {
+    "message": "ডাউনলোড করুন"
+  },
+  "clearLog": {
+    "message": "লগ মুছে ফেলুন"
+  },
+  "logCleared": {
+    "message": "লগ ফাঁকা।।"
+  },
+  "logHint": {
+    "message": "( ২ করি. পৃষ্ঠা থেকে কোন টোকেন নেই।।"
+  },
+  "delete": {
+    "message": "মুছে ফেলুন"
+  },
+  "edit": {
+    "message": "সম্পাদনা"
+  },
+  "fieldTitle": {
+    "message": "কাজের শিরোনাম"
+  },
+  "fieldCompany": {
+    "message": "কোম্পানি"
+  },
+  "fieldLocation": {
+    "message": "অবস্থান"
+  },
+  "fieldRemote": {
+    "message": "কাজের পরিকল্পনা"
+  },
+  "fieldEmployment": {
+    "message": "চাকরির ধরন"
+  },
+  "fieldSalaryFrom": {
+    "message": "সাল থেকে"
+  },
+  "fieldSalaryTo": {
+    "message": "সাল থেকে"
+  },
+  "fieldCurrency": {
+    "message": "মুদ্রা"
+  },
+  "fieldPeriod": {
+    "message": "প্রদানের মেয়াদ"
+  },
+  "fieldCloses": {
+    "message": "তারিখ বন্ধ করা হচ্ছে"
+  },
+  "fieldDescription": {
+    "message": "বিবরণ"
+  },
+  "remoteOnsite": {
+    "message": "অবস্থানের মধ্যে"
+  },
+  "remoteHybrid": {
+    "message": "হাইব্রিড"
+  },
+  "remoteRemote": {
+    "message": "দূরবর্তী"
+  },
+  "employmentFullTime": {
+    "message": "সম্পূর্ণ সময়"
+  },
+  "employmentPartTime": {
+    "message": "সময় নির্ধারণ করুন"
+  },
+  "employmentContract": {
+    "message": "ক্লীব"
+  },
+  "employmentFreelance": {
+    "message": "ফ্রীসেল"
+  },
+  "employmentInternship": {
+    "message": "ইন্টারনশিপ"
+  },
+  "employmentApprenticeship": {
+    "message": "অ্যাক্রোনিসশিপ"
+  },
+  "periodYear": {
+    "message": "প্রতি বছর"
+  },
+  "periodMonth": {
+    "message": "প্রতি মাস"
+  },
+  "periodDay": {
+    "message": "পের দিন"
+  },
+  "periodHour": {
+    "message": "প্রতি ঘন্টা"
+  },
+  "postingsFound": {
+    "message": "এই পৃষ্ঠাটি $COUNT$ পোস্টিং তালিকা।",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "যাদের মূল্য দিতে হবে তাদের চেক করুন। পোস্টুলোর লেখা আবার পড়ুন।।"
+  },
+  "tickAll": {
+    "message": "সকল"
+  },
+  "tickNone": {
+    "message": "শূণ্য"
+  },
+  "nothingTicked": {
+    "message": "কিছুই চেক করা হয় নি ।।"
+  },
+  "keptMany": {
+    "message": "$COUNT$টি ক্যাপচার এই ব্রাউজারে রাখা হয়েছে।",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$টি ক্যাপচার পর্যালোচনার জন্য পাঠানো হয়েছে।",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ প্রত্যাখ্যান করা হয়েছে; আটকের তালিকা বলছে কেন।।",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "আগে ক্যাপচার করা হয়েছে: $WHEN$ থেকে আপনার পোস্টিংগুলোতে $TITLE$ নামে আছে।",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "$WHEN$ থেকে Postulo-তে পর্যালোচনার অপেক্ষায় আছে।",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "এই কোম্পানির এই শিরোনামে একটি তালিকা তৈরি করা হয়েছে: $TITLE$ ।।",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "পূর্বে ধরা হয়েছে"
+  },
+  "knownOpen": {
+    "message": "পোস্টুলোতে খোলো"
+  },
+  "pictureOffer": {
+    "message": "পোস্টুলো পুরো পাতার ছবি রাখতে পারবেন যেমন আপনি দেখতে পাচ্ছেন, স্বাক্ষর করেছেন। পাঠিয়ে দাও?"
+  },
+  "pictureSend": {
+    "message": "ছবি পাঠান"
+  },
+  "pictureSkip": {
+    "message": "কোনো ছবি উপস্থিত নেই"
+  },
+  "pictureDrawing": {
+    "message": "পৃষ্ঠা আঁকা হচ্ছে.."
+  },
+  "pictureSending": {
+    "message": "ছবি পাঠানো হচ্ছে.."
+  },
+  "pictureSent": {
+    "message": "ছবি পাঠানো হয়েছে।।"
+  },
+  "pictureNotKept": {
+    "message": "পোস্টুলো ছবি রেখে যায়নি। আটক করা হয়েছে নিজে।।"
+  },
+  "pictureTooBig": {
+    "message": "ছবিটিকে ছবির জন্য অত্যাধিক বড়।।"
+  },
+  "pictureFailed": {
+    "message": "পৃষ্ঠা আঁকা যায়নি। এটা কি এখনো ধরা পড়েছে?"
+  },
+  "languageLabel": {
+    "message": "ভাষা"
+  },
+  "languageFollow": {
+    "message": "ব্রাউজার অনুসরণ করুন"
+  },
+  "languageHint": {
+    "message": "ইংরেজি ভাষা হচ্ছে এমন এক খসড়া, যা এখনো কোন বক্তার আলোচনা হয়নি। সংরক্ষণ না করে একবার প্রভাব ফেলে।।"
+  },
+  "reviewPageTitle": {
+    "message": "একটি ক্যাপচার পর্যালোচনা করুন"
+  },
+  "tokenIs": {
+    "message": "$OWNER$-এর জন্য টোকেন “$NAME$”।",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "$OWNER$-এর জন্য টোকেন “$NAME$” ($SCOPES$)।",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "tokenRefused": {
+    "message": "Postulo এই টোকেনটি গ্রহণ করে না। $PATH$-এর অধীনে এটি যাচাই করুন।",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  }
+}

@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "获取您正在查看的工作, 保存在您的浏览器中, 并发送到您自己的 Postulo 供您审查 。 无所去也."
+  },
+  "actionTitle": {
+    "message": "获取 Postulo 的贴出"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo 无法到达 : 您发送的内容在此浏览器中等待到它给出答案 ."
+  },
+  "footerOnline": {
+    "message": "Postulo 答案"
+  },
+  "footerSlow": {
+    "message": "波斯图洛回答很慢"
+  },
+  "reviewHeading": {
+    "message": "需要审查"
+  },
+  "waitingInPostulo": {
+    "message": "在波斯图洛等待审查"
+  },
+  "nothingWaiting": {
+    "message": "没有什么东西等待审查."
+  },
+  "lastListed": {
+    "message": "正如波斯图洛最后列出的,在 $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "截取此帖: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "等待审查: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "setUp": {
+    "message": "准备好了"
+  },
+  "capture": {
+    "message": "抓取此邮件"
+  },
+  "addListing": {
+    "message": "添加一个列表"
+  },
+  "captureHint": {
+    "message": "在您的浏览器中读取此页面 。 在你说之前什么也不要寄出去."
+  },
+  "review": {
+    "message": "在波斯图洛进行的审查"
+  },
+  "reading": {
+    "message": "读取页面.."
+  },
+  "allowing": {
+    "message": "允许扩展到您的 Postulo.."
+  },
+  "noPermission": {
+    "message": "没有许可到达您的波斯图洛, 任何信息都无法发送."
+  },
+  "sending": {
+    "message": "发送到波斯图洛.."
+  },
+  "captured": {
+    "message": "被俘虏了 在列入清单之前先审查一下."
+  },
+  "readBy": {
+    "message": "由$SOURCE$读取",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "无标题的张贴"
+  },
+  "optionsTitle": {
+    "message": "Postulo 设置"
+  },
+  "instanceLabel": {
+    "message": "您的波图洛"
+  },
+  "instanceHint": {
+    "message": "你打开的地址 https,除非它运行在这个机器上."
+  },
+  "tokenLabel": {
+    "message": "API 令牌"
+  },
+  "tokenHint": {
+    "message": "由$PATH$在波斯图洛制造,有$SCOPE$范围而无更. 它只保存在这个设备上,从未通过浏览器账户同步.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "设置 ~ API 令牌"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "test": {
+    "message": "测试"
+  },
+  "shortcutHint": {
+    "message": "按下按钮,或$SHORTCUT$,读取您正在浏览的页面,这里是浏览器. 在你问之前没有读过任何页面,除了你自己的波斯图洛之外,没有别的地方被发送,当你这么说的时候.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "粘上Postulo给你看的标志."
+  },
+  "saved": {
+    "message": "救过. 按钮现在将把页面发送到 $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "已保存,但浏览器拒绝允许访问;允许在扩展权限中访问."
+  },
+  "asking": {
+    "message": "问波斯图洛这个标志是谁.."
+  },
+  "addressRefused": {
+    "message": "未能获准前往该地址."
+  },
+  "tokenIs": {
+    "message": "Token $NAME$)用于$OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "用于$OWNER$($SCOPES$)的Token $NAME$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "它缺少 captures 范围，因此无法采集。"
+  },
+  "noCredentialsInAddress": {
+    "message": "离开地址的用户名和密码:它永远不会连接,密码会在弹出中显示."
+  },
+  "tokenTooWide": {
+    "message": "此符也: $SCOPES$. 扩展仅需要捕捉范围:仅发出一个带有这个范围的迹象并取消这个范围.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "波斯图洛的地址是不允许的,所以没有寄出任何东西. 抓取保存并等待:允许地址再按\"发送\"."
+  },
+  "enterAddress": {
+    "message": "输入您的 Postulo 地址 ."
+  },
+  "notAnAddress": {
+    "message": "这看起来不像一个网址."
+  },
+  "httpsOnly": {
+    "message": "使用 https 来获取您自己的机器上以外的任何信息: 信使会随每个请求一起旅行 ."
+  },
+  "tokenRefused": {
+    "message": "Postulo不接受这个标志。 请检查date=中的日期值 (帮助) $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "此符相出不得取取."
+  },
+  "tooMany": {
+    "message": "短时间内抓取过多. 等一下 再试一次."
+  },
+  "answered": {
+    "message": "波斯图洛回答 $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "无分页可读 ."
+  },
+  "notWebPage": {
+    "message": "只能抓取网页."
+  },
+  "unreadable": {
+    "message": "页面无法读取 。 一些页面块扩展名 ."
+  },
+  "notPostulo": {
+    "message": "地址是回答的,但不是波斯图洛。 检查地址, 和任何登录页 在它的前面."
+  },
+  "addressTooLong": {
+    "message": "这页的地址比波斯图洛所接受的要长,即使没有\"#\"之后的部分,因此抓取没有被发送. 换句话说."
+  },
+  "reviewHint": {
+    "message": "这是从网页上读到的。 纠正任何错误; 在发送之前, 任何内容都不会离开浏览器 ."
+  },
+  "sendForReview": {
+    "message": "发送审查"
+  },
+  "notConnected": {
+    "message": "尚未连接到 Postulo : 您所捕捉的内容保存在这个浏览器中 ."
+  },
+  "keep": {
+    "message": "在此浏览器中保留"
+  },
+  "kept": {
+    "message": "固定在这个浏览器中 。 准备好就发给波斯图罗."
+  },
+  "storageFull": {
+    "message": "此浏览器用于 Postulo 的存储已满. 发送或删除一些抓取,然后再次尝试."
+  },
+  "alreadyKept": {
+    "message": "您已经保存了此页面, 但尚未发送 : 这是您的版本 ."
+  },
+  "nothingRead": {
+    "message": "任何内容都无法从这一页读取。 填写您知道的内容; 在您发送之前, 任何内容都不会离开浏览器 ."
+  },
+  "waiting": {
+    "message": "现在无法到达波斯图洛 它保存在这个浏览器中,并在波斯图洛回答后立即发送."
+  },
+  "waitingOffline": {
+    "message": "测试开关已经打开,所以它在这个浏览器中等待. 开关关关了就动了."
+  },
+  "waitingAccount": {
+    "message": "它被保存在这个浏览器中,一旦固定就发送."
+  },
+  "sendNeedsSetup": {
+    "message": "放在这个浏览器中, 等您的 Postulo 建立后再发送 ."
+  },
+  "capturesTitle": {
+    "message": "在此浏览器中抓取"
+  },
+  "capturesIntro": {
+    "message": "贴出你俘虏的海报 一直留在这里直到他们到达你的波斯图洛 只要波斯图洛能到达,你就会送去."
+  },
+  "nothingKept": {
+    "message": "浏览器里没有保存任何东西 ."
+  },
+  "sendAll": {
+    "message": "发送全部未发送"
+  },
+  "clearSent": {
+    "message": "清除送来的"
+  },
+  "stateKept": {
+    "message": "未发送"
+  },
+  "stateWaiting": {
+    "message": "等待波斯图洛"
+  },
+  "stateSent": {
+    "message": "发送"
+  },
+  "stateRefused": {
+    "message": "拒绝"
+  },
+  "tryNow": {
+    "message": "试试看"
+  },
+  "holdBack": {
+    "message": "留着吧"
+  },
+  "deleteConfirm": {
+    "message": "删除此抓取吗 ? 它还没有到达波斯图洛,所以它只存在于此处."
+  },
+  "troubleshooting": {
+    "message": "测试和故障排除"
+  },
+  "offlineLabel": {
+    "message": "装作无法到达 Postulo"
+  },
+  "offlineHint": {
+    "message": "为了测试 当这个开始时,没有寄出任何信息: 捕捉到这个浏览器的等待 完全和Postulo一样,一旦关闭就去."
+  },
+  "offlineOn": {
+    "message": "测试开关开通:没有寄出给波斯图洛."
+  },
+  "offlineOff": {
+    "message": "测试开关已关闭: 等待的到波斯图洛."
+  },
+  "downloadLog": {
+    "message": "下载日志"
+  },
+  "clearLog": {
+    "message": "清除日志"
+  },
+  "logCleared": {
+    "message": "日志为空."
+  },
+  "logHint": {
+    "message": "延长期限是为了找出什么是行不通的。 它没有任何标志 没有任何内容."
+  },
+  "delete": {
+    "message": "删除"
+  },
+  "edit": {
+    "message": "编辑"
+  },
+  "fieldTitle": {
+    "message": "职称"
+  },
+  "fieldCompany": {
+    "message": "企业"
+  },
+  "fieldLocation": {
+    "message": "地点"
+  },
+  "fieldRemote": {
+    "message": "工作安排"
+  },
+  "fieldEmployment": {
+    "message": "就业类型"
+  },
+  "fieldSalaryFrom": {
+    "message": "薪金从"
+  },
+  "fieldSalaryTo": {
+    "message": "薪金"
+  },
+  "fieldCurrency": {
+    "message": "货币"
+  },
+  "fieldPeriod": {
+    "message": "期间"
+  },
+  "fieldCloses": {
+    "message": "闭幕日期"
+  },
+  "fieldDescription": {
+    "message": "说明"
+  },
+  "remoteOnsite": {
+    "message": "现场"
+  },
+  "remoteHybrid": {
+    "message": "混合"
+  },
+  "remoteRemote": {
+    "message": "远程"
+  },
+  "employmentFullTime": {
+    "message": "全职"
+  },
+  "employmentPartTime": {
+    "message": "非全时"
+  },
+  "employmentContract": {
+    "message": "合同"
+  },
+  "employmentFreelance": {
+    "message": "自由主义"
+  },
+  "employmentInternship": {
+    "message": "实习"
+  },
+  "employmentApprenticeship": {
+    "message": "学徒"
+  },
+  "periodYear": {
+    "message": "每年"
+  },
+  "periodMonth": {
+    "message": "每个月"
+  },
+  "periodDay": {
+    "message": "每日费用"
+  },
+  "periodHour": {
+    "message": "每小时"
+  },
+  "postingsFound": {
+    "message": "本页列出$COUNT$发帖.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "勾选那些值得保存的 每一个都成为自己的捕捉器,由波斯图洛再读."
+  },
+  "tickAll": {
+    "message": "全体"
+  },
+  "tickNone": {
+    "message": "无"
+  },
+  "nothingTicked": {
+    "message": "什么都没有."
+  },
+  "keptMany": {
+    "message": "$COUNT$此浏览器所保存的抓取.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$收录被送审.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$被拒;被俘名单说明原因.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "抓取前:在自$WHEN$起的列表中为$TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "自$WHEN$起,已经在波斯图洛等待审查.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "本公司存在带有此标题的上市:$TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "之前被抓获的"
+  },
+  "knownOpen": {
+    "message": "在波斯图洛打开"
+  },
+  "pictureOffer": {
+    "message": "Postulo可以保留一幅你所看到的整页相片,是否签名. 派一个?"
+  },
+  "pictureSend": {
+    "message": "发送图片"
+  },
+  "pictureSkip": {
+    "message": "没有图片"
+  },
+  "pictureDrawing": {
+    "message": "绘制页面.."
+  },
+  "pictureSending": {
+    "message": "正在发送图片.."
+  },
+  "pictureSent": {
+    "message": "照片已经发送."
+  },
+  "pictureNotKept": {
+    "message": "Postulo没有保留照片。 捕捉本身没有受到影响."
+  },
+  "pictureTooBig": {
+    "message": "该页面太大,无法作为图片发送."
+  },
+  "pictureFailed": {
+    "message": "无法绘制页面 。 还是你抓的那个?"
+  },
+  "languageLabel": {
+    "message": "语言"
+  },
+  "languageFollow": {
+    "message": "跟随浏览器"
+  },
+  "languageHint": {
+    "message": "除英语外,每种语言都是还没有发言者审查过的草案。 立即生效,不用Save."
+  },
+  "reviewPageTitle": {
+    "message": "审查抓取"
+  }
+}

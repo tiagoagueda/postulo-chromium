@@ -107,7 +107,7 @@
     "message": "Toestemming om dat adres te bereiken is geweigerd."
   },
   "tokenIs": {
-    "message": "Token ‘$NAME$’ van $OWNER$.",
+    "message": "Token ‘$NAME$’ voor $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Token ‘$NAME$’ van $OWNER$ ($SCOPES$).",
+    "message": "Token ‘$NAME$’ voor $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"

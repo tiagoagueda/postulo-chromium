@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Capturez l'annonce d'emploi que vous consultez, gardez-la dans votre navigateur et envoyez-la à votre propre Postulo pour vérification quand vous le décidez. Rien ne part ailleurs."
+  },
+  "actionTitle": {
+    "message": "Capturer cette annonce dans Postulo"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo est injoignable : ce que vous envoyez attend dans ce navigateur jusqu'à ce qu'il réponde."
+  },
+  "footerOnline": {
+    "message": "Postulo répond"
+  },
+  "footerSlow": {
+    "message": "Postulo répond lentement"
+  },
+  "reviewHeading": {
+    "message": "À vérifier"
+  },
+  "waitingInPostulo": {
+    "message": "En attente de vérification dans Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Rien n'attend d'être vérifié."
+  },
+  "lastListed": {
+    "message": "Telles que Postulo les a listées pour la dernière fois, le $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Captures de cette annonce : $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "En attente de vérification : $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Paramètres"
+  },
+  "setUp": {
+    "message": "La configurer"
+  },
+  "capture": {
+    "message": "Capturer cette annonce"
+  },
+  "addListing": {
+    "message": "Ajouter une annonce"
+  },
+  "captureHint": {
+    "message": "La page est lue ici, dans votre navigateur. Rien n'est envoyé avant que vous le décidiez."
+  },
+  "review": {
+    "message": "Vérifier dans Postulo"
+  },
+  "reading": {
+    "message": "Lecture de la page…"
+  },
+  "allowing": {
+    "message": "Autorisation de l'extension à joindre votre Postulo…"
+  },
+  "noPermission": {
+    "message": "Sans autorisation de joindre votre Postulo, rien ne peut être envoyé."
+  },
+  "sending": {
+    "message": "Envoi à Postulo…"
+  },
+  "captured": {
+    "message": "Capturée. Vérifiez-la avant qu'elle ne rejoigne vos offres."
+  },
+  "readBy": {
+    "message": "Lue par $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Annonce sans titre"
+  },
+  "optionsTitle": {
+    "message": "Paramètres de Postulo"
+  },
+  "instanceLabel": {
+    "message": "Votre Postulo"
+  },
+  "instanceHint": {
+    "message": "L'adresse à laquelle vous l'ouvrez. En https, sauf s'il tourne sur cette machine."
+  },
+  "tokenLabel": {
+    "message": "Jeton d'API"
+  },
+  "tokenHint": {
+    "message": "Créé dans $PATH$ dans Postulo, avec la portée $SCOPE$ et rien de plus. Il est conservé sur cet appareil uniquement, jamais synchronisé par un compte de navigateur.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Paramètres → Jetons d'API"
+  },
+  "save": {
+    "message": "Enregistrer"
+  },
+  "test": {
+    "message": "Tester"
+  },
+  "shortcutHint": {
+    "message": "Appuyer sur le bouton, ou sur $SHORTCUT$, lit la page que vous consultez, ici dans le navigateur. Aucune page n'est lue avant que vous le demandiez, et rien n'est envoyé ailleurs qu'à votre propre Postulo, quand vous le décidez.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Collez le jeton que Postulo vous a montré."
+  },
+  "saved": {
+    "message": "Enregistré. Le bouton enverra désormais les pages à $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Enregistré, mais le navigateur a refusé l'autorisation de le joindre; autorisez-la dans les permissions de l'extension."
+  },
+  "asking": {
+    "message": "Postulo est interrogé sur le propriétaire de ce jeton…"
+  },
+  "addressRefused": {
+    "message": "L'autorisation de joindre cette adresse a été refusée."
+  },
+  "tokenIs": {
+    "message": "Jeton « $NAME$ » de $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Jeton « $NAME$ » de $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Il lui manque la portée captures, il ne peut donc pas capturer."
+  },
+  "noCredentialsInAddress": {
+    "message": "Laissez le nom d'utilisateur et le mot de passe en dehors de l'adresse : la connexion n'aboutirait jamais, et le mot de passe serait affiché dans la fenêtre contextuelle."
+  },
+  "tokenTooWide": {
+    "message": "Ce jeton peut aussi : $SCOPES$. L'extension n'a besoin que de la portée captures : créez un jeton avec cette seule portée et révoquez celui-ci.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "L'adresse de Postulo n'a pas été autorisée, donc rien n'a été envoyé. La capture est conservée et en attente : autorisez l'adresse et appuyez à nouveau sur Envoyer."
+  },
+  "enterAddress": {
+    "message": "Saisissez l'adresse de votre Postulo."
+  },
+  "notAnAddress": {
+    "message": "Cela ne ressemble pas à une adresse web."
+  },
+  "httpsOnly": {
+    "message": "Utilisez https pour tout ce qui n'est pas sur votre propre machine : le jeton voyage avec chaque requête."
+  },
+  "tokenRefused": {
+    "message": "Postulo n'accepte pas ce jeton. Vérifiez-le dans $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Ce jeton n'est pas autorisé à capturer."
+  },
+  "tooMany": {
+    "message": "Trop de captures en peu de temps. Attendez une minute et réessayez."
+  },
+  "answered": {
+    "message": "Postulo a répondu $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Aucun onglet à lire."
+  },
+  "notWebPage": {
+    "message": "Seules les pages web peuvent être capturées."
+  },
+  "unreadable": {
+    "message": "La page n'a pas pu être lue. Certaines pages bloquent les extensions."
+  },
+  "notPostulo": {
+    "message": "Cette adresse a répondu, mais pas comme Postulo. Vérifiez l'adresse, et toute page de connexion placée devant."
+  },
+  "addressTooLong": {
+    "message": "L'adresse de cette page est plus longue que ce que Postulo accepte, même sans la partie située après « # », donc la capture n'a pas été envoyée. Ajoutez plutôt l'annonce dans Postulo à la main."
+  },
+  "reviewHint": {
+    "message": "Voici ce qui a été lu sur la page. Corrigez ce qui est faux; rien ne quitte ce navigateur avant que vous l'envoyiez."
+  },
+  "sendForReview": {
+    "message": "Envoyer pour vérification"
+  },
+  "notConnected": {
+    "message": "Aucun Postulo n'est encore connecté : ce que vous capturez est gardé dans ce navigateur."
+  },
+  "keep": {
+    "message": "Garder dans ce navigateur"
+  },
+  "kept": {
+    "message": "Gardée dans ce navigateur. Envoyez-la à Postulo quand vous le souhaitez."
+  },
+  "storageFull": {
+    "message": "L'espace de stockage de ce navigateur pour Postulo est plein. Envoyez ou supprimez des captures, puis réessayez."
+  },
+  "alreadyKept": {
+    "message": "Vous avez déjà gardé cette page sans l'envoyer : voici votre version."
+  },
+  "nothingRead": {
+    "message": "Rien n'a pu être lu sur cette page. Remplissez ce que vous savez; rien ne quitte ce navigateur avant que vous l'envoyiez."
+  },
+  "waiting": {
+    "message": "Postulo est injoignable pour le moment. Elle est gardée dans ce navigateur et sera envoyée dès que Postulo répondra."
+  },
+  "waitingOffline": {
+    "message": "L'interrupteur de test est activé, elle attend donc dans ce navigateur. Elle partira dès qu'il sera désactivé."
+  },
+  "waitingAccount": {
+    "message": "Elle est gardée dans ce navigateur et sera envoyée dès que ce sera réglé."
+  },
+  "sendNeedsSetup": {
+    "message": "Gardée dans ce navigateur, elle sera envoyée dès que votre Postulo sera configuré."
+  },
+  "capturesTitle": {
+    "message": "Captures dans ce navigateur"
+  },
+  "capturesIntro": {
+    "message": "Les annonces que vous avez capturées, gardées ici jusqu'à ce qu'elles parviennent à votre Postulo. Ce que vous envoyez part dès que Postulo est joignable."
+  },
+  "nothingKept": {
+    "message": "Rien n'est gardé dans ce navigateur."
+  },
+  "sendAll": {
+    "message": "Envoyer les non envoyées"
+  },
+  "clearSent": {
+    "message": "Effacer les envoyées"
+  },
+  "stateKept": {
+    "message": "Non envoyée"
+  },
+  "stateWaiting": {
+    "message": "En attente de Postulo"
+  },
+  "stateSent": {
+    "message": "Envoyée"
+  },
+  "stateRefused": {
+    "message": "Refusée"
+  },
+  "tryNow": {
+    "message": "Essayer maintenant"
+  },
+  "holdBack": {
+    "message": "Plutôt la garder ici"
+  },
+  "deleteConfirm": {
+    "message": "Supprimer cette capture? Elle n'a pas atteint Postulo, elle n'existe donc qu'ici."
+  },
+  "troubleshooting": {
+    "message": "Tests et dépannage"
+  },
+  "offlineLabel": {
+    "message": "Faire comme si Postulo était injoignable"
+  },
+  "offlineHint": {
+    "message": "Pour les tests. Tant que cette option est activée, rien n'est envoyé : les captures attendent dans ce navigateur exactement comme si Postulo était en panne, et partent dès qu'elle est désactivée."
+  },
+  "offlineOn": {
+    "message": "L'interrupteur de test est activé : rien n'est envoyé à Postulo."
+  },
+  "offlineOff": {
+    "message": "L'interrupteur de test est désactivé : ce qui attendait part maintenant vers Postulo."
+  },
+  "downloadLog": {
+    "message": "Télécharger le journal"
+  },
+  "clearLog": {
+    "message": "Vider le journal"
+  },
+  "logCleared": {
+    "message": "Le journal est vide."
+  },
+  "logHint": {
+    "message": "Ce qu'a fait l'extension, pour comprendre pourquoi quelque chose n'a pas fonctionné. Il ne contient aucun jeton et rien des pages."
+  },
+  "delete": {
+    "message": "Supprimer"
+  },
+  "edit": {
+    "message": "Modifier"
+  },
+  "fieldTitle": {
+    "message": "Intitulé du poste"
+  },
+  "fieldCompany": {
+    "message": "Entreprise"
+  },
+  "fieldLocation": {
+    "message": "Lieu"
+  },
+  "fieldRemote": {
+    "message": "Modalité de travail"
+  },
+  "fieldEmployment": {
+    "message": "Type de contrat"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salaire à partir de"
+  },
+  "fieldSalaryTo": {
+    "message": "Salaire jusqu'à"
+  },
+  "fieldCurrency": {
+    "message": "Devise"
+  },
+  "fieldPeriod": {
+    "message": "Période"
+  },
+  "fieldCloses": {
+    "message": "Date de clôture"
+  },
+  "fieldDescription": {
+    "message": "Description"
+  },
+  "remoteOnsite": {
+    "message": "Sur site"
+  },
+  "remoteHybrid": {
+    "message": "Hybride"
+  },
+  "remoteRemote": {
+    "message": "À distance"
+  },
+  "employmentFullTime": {
+    "message": "Temps plein"
+  },
+  "employmentPartTime": {
+    "message": "Temps partiel"
+  },
+  "employmentContract": {
+    "message": "Contractuel"
+  },
+  "employmentFreelance": {
+    "message": "Indépendant"
+  },
+  "employmentInternship": {
+    "message": "Stage"
+  },
+  "employmentApprenticeship": {
+    "message": "Apprentissage"
+  },
+  "periodYear": {
+    "message": "Par an"
+  },
+  "periodMonth": {
+    "message": "Par mois"
+  },
+  "periodDay": {
+    "message": "Par jour"
+  },
+  "periodHour": {
+    "message": "Par heure"
+  },
+  "postingsFound": {
+    "message": "Cette page liste $COUNT$ annonces.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Cochez celles qui valent la peine d'être gardées. Chacune devient une capture à part, relue par Postulo."
+  },
+  "tickAll": {
+    "message": "Toutes"
+  },
+  "tickNone": {
+    "message": "Aucune"
+  },
+  "nothingTicked": {
+    "message": "Rien n'est coché."
+  },
+  "keptMany": {
+    "message": "$COUNT$ captures gardées dans ce navigateur.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ captures envoyées pour relecture.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ ont été refusées; la liste des captures dit pourquoi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Déjà capturée : dans vos annonces depuis le $WHEN$ sous $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Attend déjà d'être relue dans Postulo, depuis le $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Une annonce avec ce titre chez cette entreprise existe : $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "déjà capturée"
+  },
+  "knownOpen": {
+    "message": "L'ouvrir dans Postulo"
+  },
+  "pictureOffer": {
+    "message": "Postulo peut conserver une image de la page entière telle que vous la voyez, connecté ou non. En envoyer une?"
+  },
+  "pictureSend": {
+    "message": "Envoyer l'image"
+  },
+  "pictureSkip": {
+    "message": "Pas d'image"
+  },
+  "pictureDrawing": {
+    "message": "Dessin de la page…"
+  },
+  "pictureSending": {
+    "message": "Envoi de l'image…"
+  },
+  "pictureSent": {
+    "message": "L'image a été envoyée."
+  },
+  "pictureNotKept": {
+    "message": "Postulo n'a pas conservé l'image. La capture elle-même n'est pas affectée."
+  },
+  "pictureTooBig": {
+    "message": "La page est trop grande pour être envoyée comme image."
+  },
+  "pictureFailed": {
+    "message": "La page n'a pas pu être dessinée. Est-ce toujours celle que vous avez capturée?"
+  },
+  "languageLabel": {
+    "message": "Langue"
+  },
+  "languageFollow": {
+    "message": "Suivre le navigateur"
+  },
+  "languageHint": {
+    "message": "Toutes les langues sauf l'anglais sont des ébauches qu'aucun locuteur n'a encore relues. Prend effet immédiatement, sans Enregistrer."
+  },
+  "reviewPageTitle": {
+    "message": "Vérifier une capture"
+  }
+}

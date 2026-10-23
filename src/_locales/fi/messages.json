@@ -106,31 +106,6 @@
   "addressRefused": {
     "message": "Lupa tavoittaa tuo osoite evättiin."
   },
-  "tokenIs": {
-    "message": "Avain ”$NAME$” käyttäjälle $OWNER$.",
-    "placeholders": {
-      "name": {
-        "content": "$1"
-      },
-      "owner": {
-        "content": "$2"
-      }
-    }
-  },
-  "tokenIsScoped": {
-    "message": "Avain ”$NAME$” käyttäjälle $OWNER$ ($SCOPES$).",
-    "placeholders": {
-      "name": {
-        "content": "$1"
-      },
-      "owner": {
-        "content": "$2"
-      },
-      "scopes": {
-        "content": "$3"
-      }
-    }
-  },
   "lacksCaptures": {
     "message": "Siltä puuttuu oikeus captures, joten se ei voi kaapata."
   },
@@ -531,5 +506,30 @@
   },
   "permissionRefused": {
     "message": "Postulon osoite ei ollut sallittu, joten mitään ei lähetetty. Nappaaminen pidetään ja odottaa: anna osoite ja paina Lähetä uudelleen."
+  },
+  "tokenIs": {
+    "message": "Tunnus ”$NAME$” käyttäjälle $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Tunnus ”$NAME$” käyttäjälle $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
   }
 }

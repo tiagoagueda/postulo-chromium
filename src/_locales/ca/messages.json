@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Testimoni «$NAME$» de $OWNER$ ($SCOPES$).",
+    "message": "Testimoni «$NAME$» per a $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
