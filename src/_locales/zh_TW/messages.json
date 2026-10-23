@@ -1,1 +1,529 @@
-{}
+{
+  "extensionDescription": {
+    "message": "取取您所看到的工作, 在您的瀏覽器上保留它, 在您所說出的時候被寄去給您自己的 Postulo 審查。 有活可干."
+  },
+  "actionTitle": {
+    "message": "在 Postulo 取取此文章"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo 無法被接通: 在瀏覽器中您所寄出的東西等它被接通后再接通 ."
+  },
+  "footerOnline": {
+    "message": "Pposdulo 答案"
+  },
+  "footerSlow": {
+    "message": "就快接了"
+  },
+  "reviewHeading": {
+    "message": "二. 需要审查"
+  },
+  "waitingInPostulo": {
+    "message": "在 Postulo 等審查"
+  },
+  "nothingWaiting": {
+    "message": "有活要等了."
+  },
+  "lastListed": {
+    "message": "在$WHEN$上出名了.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "取取此帖: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "在等待審查: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "設定值"
+  },
+  "setUp": {
+    "message": "就地取出"
+  },
+  "capture": {
+    "message": "抓取此文章"
+  },
+  "addListing": {
+    "message": "新增列表"
+  },
+  "captureHint": {
+    "message": "在您的瀏覽器中可以讀取此頁面 。 在你出發前是一文不值."
+  },
+  "review": {
+    "message": "在 Postulo 有評論"
+  },
+  "reading": {
+    "message": "在看一頁.."
+  },
+  "allowing": {
+    "message": "允許延伸到您的 Postulo.."
+  },
+  "noPermission": {
+    "message": "在沒有被允許去接通你的波斯圖克后 就什麼也無法接通了."
+  },
+  "sending": {
+    "message": "正在被送去波斯都洛.."
+  },
+  "captured": {
+    "message": "有被俘. 在上市前再去想一想."
+  },
+  "readBy": {
+    "message": "由 $SOURCE$ 讀取",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "未命名的放入"
+  },
+  "optionsTitle": {
+    "message": "Postulo 設定值"
+  },
+  "instanceLabel": {
+    "message": "您的 Pposulo"
+  },
+  "instanceHint": {
+    "message": "有你打開的地址 有相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相相關相關相相相相相關相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相."
+  },
+  "tokenLabel": {
+    "message": "API 令牌"
+  },
+  "tokenHint": {
+    "message": "在波斯圖洛由 $PATH$所制取 有 $SCOPE$ 範圍 就再沒有了. 它只被保存于此裝置上, 從未同步到瀏覽器帳號 .",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "設定 ~ API 令牌"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "test": {
+    "message": "測試"
+  },
+  "shortcutHint": {
+    "message": "按下按鈕,或 $SHORTCUT$ 在瀏覽器上讀取您所看到的頁面 。 在你問起前是不會被讀取的 一分一分都不會被取出 就只有你的波斯圖洛了.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "貼上所展示的花花公子."
+  },
+  "saved": {
+    "message": "有被取出. 按鍵會把頁面傳到 $HOST$ .",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "已儲存, 但瀏覽器拒絕取用; 在延伸權限中允許取用 ."
+  },
+  "asking": {
+    "message": "在問波斯圖克到底是誰"
+  },
+  "addressRefused": {
+    "message": "有被拒絕去取取地址."
+  },
+  "tokenIs": {
+    "message": "“$NAME$”指$OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "2. “$NAME$”指$OWNER$($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "它缺少 captures 範圍，因此無法擷取。"
+  },
+  "noCredentialsInAddress": {
+    "message": "在通訊錄中放出使用者名和口令: 它永遠不會接通 ."
+  },
+  "tokenTooWide": {
+    "message": "此符也: $SCOPES$. 延伸只需要捕捉範圍: 就這個範圍出一個符號并取出這個符號 .",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "普斯圖洛的住址被禁止 因此沒有被寄出 抓取被保留并等待: 允許地址再按下 Send ."
+  },
+  "enterAddress": {
+    "message": "輸入您的 Postulo 地址 ."
+  },
+  "notAnAddress": {
+    "message": "它看起來不像是網址."
+  },
+  "httpsOnly": {
+    "message": "使用 https 在您自有相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相相關相關相相關相相相關相相關相相相相關相關相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相."
+  },
+  "tokenRefused": {
+    "message": "Postulo 不接受此符號 。 在 $PATH$下取取.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "它不能被取出."
+  },
+  "tooMany": {
+    "message": "有太多的捕捉 在很短的时间内。 等一下再想一想."
+  },
+  "answered": {
+    "message": "波斯都洛接了 $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "有分頁可讀取 ."
+  },
+  "notWebPage": {
+    "message": "只有網頁可以被取取."
+  },
+  "unreadable": {
+    "message": "该頁面無法被讀取 。 有的頁面區塊延伸 ."
+  },
+  "notPostulo": {
+    "message": "他的住址被接通了 但是不是波斯圖洛所接通的 查下地址和前面的任何登入頁面."
+  },
+  "addressTooLong": {
+    "message": "就連\"#\"后的部分也接受, 因此抓取沒有被傳出。 在 Postulo 有手相接相接."
+  },
+  "reviewHint": {
+    "message": "這是從一頁所讀到的. 校正任何錯誤; 在您發出前, 沒有任何東西會留下此瀏覽器 ."
+  },
+  "sendForReview": {
+    "message": "第 二 部 分"
+  },
+  "notConnected": {
+    "message": "尚未連接到 Postulo : 您所抓取到的東西被保存在此瀏覽器中 ."
+  },
+  "keep": {
+    "message": "保留在此瀏覽器中"
+  },
+  "kept": {
+    "message": "就放入此瀏覽器中 。 就快去波斯圖了."
+  },
+  "storageFull": {
+    "message": "Postulo 的瀏覽器已放滿 。 傳出或刪除一些抓取,再試一次."
+  },
+  "alreadyKept": {
+    "message": "您已保留了此頁面而尚未傳出: 這是您的版本 ."
+  },
+  "nothingRead": {
+    "message": "就這一頁想都想不通了 填入您所知道的; 在您發出之前, 任何東西都不要放出此瀏覽器 ."
+  },
+  "waiting": {
+    "message": "接通了波斯杜洛站就不行了 它被保存于此瀏覽器中并一接波斯圖洛就被發出."
+  },
+  "waitingOffline": {
+    "message": "測試開關已啟用, 因此它會被等入到這個瀏覽器中 。 一關上就出事了."
+  },
+  "waitingAccount": {
+    "message": "它被保存于此瀏覽器中并被固定后傳出 ."
+  },
+  "sendNeedsSetup": {
+    "message": "就放入這個瀏覽器 在您的 Postulo 建立后被發出 ."
+  },
+  "capturesTitle": {
+    "message": "在此瀏覽器中抓取"
+  },
+  "capturesIntro": {
+    "message": "有被你抓走的郵報 就被留在這裡等他們到達了你的波斯圖洛 只要能接通波斯圖就送出去."
+  },
+  "nothingKept": {
+    "message": "此瀏覽器中沒有任何東西被保存 ."
+  },
+  "sendAll": {
+    "message": "傳出所有未發出的東西"
+  },
+  "clearSent": {
+    "message": "清除被送去的"
+  },
+  "stateKept": {
+    "message": "未發出"
+  },
+  "stateWaiting": {
+    "message": "在等 Postulo"
+  },
+  "stateSent": {
+    "message": "已送出"
+  },
+  "stateRefused": {
+    "message": "被拒絕"
+  },
+  "deleteConfirm": {
+    "message": "要刪除此抓取嗎 ? 它尚未通到波斯圖洛 因此它只存在于此地."
+  },
+  "troubleshooting": {
+    "message": "測試和排除出錯"
+  },
+  "offlineLabel": {
+    "message": "就當是接通了波斯圖"
+  },
+  "offlineHint": {
+    "message": "有活干活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活 在這個相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相關相相關相關相關相關相關相相相關相相關相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相."
+  },
+  "offlineOn": {
+    "message": "測試開關已開通: 沒有被寄出到 Postulo ."
+  },
+  "offlineOff": {
+    "message": "有活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活."
+  },
+  "downloadLog": {
+    "message": "下載紀錄"
+  },
+  "clearLog": {
+    "message": "清除日志"
+  },
+  "logCleared": {
+    "message": "日志已空出."
+  },
+  "logHint": {
+    "message": "就想搞出出出出事出事了 它一無是處 有名無實 有名無實."
+  },
+  "delete": {
+    "message": "刪除"
+  },
+  "edit": {
+    "message": "編輯"
+  },
+  "fieldTitle": {
+    "message": "工作名"
+  },
+  "fieldCompany": {
+    "message": "公司"
+  },
+  "fieldLocation": {
+    "message": "位置"
+  },
+  "fieldRemote": {
+    "message": "工作安排"
+  },
+  "fieldEmployment": {
+    "message": "工作类型"
+  },
+  "fieldSalaryFrom": {
+    "message": "从"
+  },
+  "fieldSalaryTo": {
+    "message": "薪金至"
+  },
+  "fieldCurrency": {
+    "message": "貨幣"
+  },
+  "fieldPeriod": {
+    "message": "周期"
+  },
+  "fieldCloses": {
+    "message": "收尾日期"
+  },
+  "fieldDescription": {
+    "message": "描述"
+  },
+  "remoteOnsite": {
+    "message": "就地"
+  },
+  "remoteHybrid": {
+    "message": "混合"
+  },
+  "remoteRemote": {
+    "message": "遠端"
+  },
+  "employmentFullTime": {
+    "message": "全职"
+  },
+  "employmentPartTime": {
+    "message": "非全时"
+  },
+  "employmentContract": {
+    "message": "合同"
+  },
+  "employmentFreelance": {
+    "message": "自由"
+  },
+  "employmentInternship": {
+    "message": "实习"
+  },
+  "employmentApprenticeship": {
+    "message": "学徒"
+  },
+  "periodYear": {
+    "message": "每年"
+  },
+  "periodMonth": {
+    "message": "每月"
+  },
+  "periodDay": {
+    "message": "每天"
+  },
+  "periodHour": {
+    "message": "每小時"
+  },
+  "postingsFound": {
+    "message": "本頁列出$COUNT$出站.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "有活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活 二人相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相接相相接相接相接相接相接相接相相接相接相接相相接相相相相接相相接相接相相相相相接相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相相."
+  },
+  "tickAll": {
+    "message": "全部"
+  },
+  "tickNone": {
+    "message": "無"
+  },
+  "nothingTicked": {
+    "message": "沒有被勾住."
+  },
+  "keptMany": {
+    "message": "$COUNT$ 此瀏覽器所保存的抓取 .",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$收取被送去審查.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$被拒絕;被俘名單上有說出原因.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "在您自 $WHEN$ 以 $TITLE$ 为名的名單中 .",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "从$WHEN$起 就已經等了去波斯圖了.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "有此名的上市公司: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "在被俘之前"
+  },
+  "knownOpen": {
+    "message": "在波斯都洛取出"
+  },
+  "pictureOffer": {
+    "message": "Postulo能保留一整頁相片, 有出?"
+  },
+  "pictureSend": {
+    "message": "傳出相片"
+  },
+  "pictureSkip": {
+    "message": "有相片"
+  },
+  "pictureDrawing": {
+    "message": "畫出頁面.."
+  },
+  "pictureSending": {
+    "message": "正在傳出相片.."
+  },
+  "pictureSent": {
+    "message": "有相片被寄出."
+  },
+  "pictureNotKept": {
+    "message": "普斯圖洛沒有保留相片. 有活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活."
+  },
+  "pictureTooBig": {
+    "message": "頁面太大而無法以相片形式寄出 ."
+  },
+  "pictureFailed": {
+    "message": "無法畫出頁面 。 它還是被你抓住了?"
+  },
+  "languageLabel": {
+    "message": "語言"
+  },
+  "languageFollow": {
+    "message": "跟隨瀏覽器"
+  },
+  "languageHint": {
+    "message": "除了英文外, 有效果了 就沒有了\"存\"了."
+  },
+  "reviewPageTitle": {
+    "message": "檢視抓取"
+  }
+}

@@ -107,7 +107,7 @@
     "message": "Leja për të arritur atë adresë u refuzua."
   },
   "tokenIs": {
-    "message": "Tokeni “$NAME$” për $OWNER$.",
+    "message": "Token-i “$NAME$” për $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Tokeni “$NAME$” për $OWNER$ ($SCOPES$).",
+    "message": "Token-i “$NAME$” për $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -156,14 +156,6 @@
   },
   "tooMany": {
     "message": "Shumë kapje në kohë të shkurtër. Prisni një minutë dhe provoni sërish."
-  },
-  "answered": {
-    "message": "Postulo u përgjigj me $STATUS$.",
-    "placeholders": {
-      "status": {
-        "content": "$1"
-      }
-    }
   },
   "noTab": {
     "message": "Nuk ka skedë për t'u lexuar."
@@ -517,5 +509,27 @@
   },
   "reviewPageTitle": {
     "message": "Rishiko një kapje"
+  },
+  "tokenTooWide": {
+    "message": "Ky token mund të bëjë edhe: $SCOPES$. Zgjerimit i duhet vetëm fushëveprimi captures: lëshoni një token vetëm me atë fushëveprim dhe shfuqizojeni këtë.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Mos e vendosni emrin e përdoruesit dhe fjalëkalimin në adresë: nuk do të lidhej kurrë, dhe fjalëkalimi do të shfaqej në dritaren kërcyese."
+  },
+  "permissionRefused": {
+    "message": "Adresa e Postulo-s nuk u lejua, prandaj nuk u dërgua asgjë. Kapja ruhet dhe pret: lejojeni adresën dhe shtypni sërish Dërgo."
+  },
+  "answered": {
+    "message": "Postulo u përgjigj me $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -426,7 +426,7 @@
     "message": "Atidaryti Postulo"
   },
   "notPostulo": {
-    "message": "Tas adresas atsakė, bet ne kaip Postulo. Patikrinkite adresą ir bet kokį prisijungimo puslapį prieš jį."
+    "message": "Šiuo adresu gautas atsakymas, bet ne Postulo. Patikrinkite adresą ir bet kokį prisijungimo puslapį prieš jį."
   },
   "addressTooLong": {
     "message": "Šio puslapio adresas ilgesnis, nei Postulo priima, net be dalies po „#“, todėl fiksavimas nebuvo išsiųstas. Pridėkite skelbimą Postulo rankiniu būdu."
@@ -519,10 +519,10 @@
     "message": "Fiksavimo peržiūra"
   },
   "noCredentialsInAddress": {
-    "message": "Palikite vartotojo vardą ir slaptažodį iš adreso: jis niekada nesusijungtų, o slaptažodis būtų rodomas iškylančiame lange."
+    "message": "Neįrašykite naudotojo vardo ir slaptažodžio į adresą: ryšys niekada nebūtų užmegztas, o slaptažodis būtų rodomas iškylančiajame lange."
   },
   "tokenTooWide": {
-    "message": "$SCOPES$. Pratęsiant taikymo sritį, reikia tik įtraukti taikymo sritį: nustatyti tik šią taikymo sritį ir ją panaikinti.",
+    "message": "Šis raktas dar gali: $SCOPES$. Plėtiniui reikia tik captures aprėpties: sukurkite raktą tik su šia aprėptimi ir atšaukite šį.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulo adresas nebuvo leidžiamas, todėl nieko nebuvo išsiųstas. Sugavimas yra saugomi ir laukia: leisti adresą ir paspauskite Siųsti vėl."
+    "message": "Postulo adresas nebuvo leistas, todėl nieko neišsiųsta. Fiksavimas išsaugotas ir laukia: leiskite adresą ir dar kartą paspauskite Siųsti."
   }
 }

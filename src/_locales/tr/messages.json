@@ -106,31 +106,6 @@
   "addressRefused": {
     "message": "Bu adrese erişim izni reddedildi."
   },
-  "tokenIs": {
-    "message": "$OWNER$ için \"$NAME$\" jetonu.",
-    "placeholders": {
-      "name": {
-        "content": "$1"
-      },
-      "owner": {
-        "content": "$2"
-      }
-    }
-  },
-  "tokenIsScoped": {
-    "message": "$OWNER$ için \"$NAME$\" jetonu ($SCOPES$).",
-    "placeholders": {
-      "name": {
-        "content": "$1"
-      },
-      "owner": {
-        "content": "$2"
-      },
-      "scopes": {
-        "content": "$3"
-      }
-    }
-  },
   "lacksCaptures": {
     "message": "captures kapsamı eksik, bu yüzden yakalayamaz."
   },
@@ -517,5 +492,44 @@
   },
   "reviewPageTitle": {
     "message": "Bir yakalamayı incele"
+  },
+  "tokenTooWide": {
+    "message": "Bu token da olabilir: $SCOPES$. uzatma sadece yakalama kapsamına ihtiyaç duyar: bu kapsamı tek başına bir token sorun ve bunu geri döndürür.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Kullanıcı adını ve şifreyi adres dışında bırakın: asla bağlantı kurmayacak ve şifre popup'da gösterilecekti."
+  },
+  "permissionRefused": {
+    "message": "Postulo'nun adresi izin verilmedi, bu yüzden hiçbir şey gönderilmedi. yakalama devam ediyor ve bekler: adresi ve basın tekrar gönder."
+  },
+  "tokenIs": {
+    "message": "$OWNER$ için “$NAME$” belirteci.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "$OWNER$ için “$NAME$” belirteci ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
   }
 }

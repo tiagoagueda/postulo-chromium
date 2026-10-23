@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Pregled hvatanja"
+  },
+  "tokenTooWide": {
+    "message": "Ovaj token može i sljedeće: $SCOPES$. Proširenju treba samo opseg captures: izdajte token samo s tim opsegom i opozovite ovaj.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Izostavite korisničko ime i lozinku iz adrese: veza se nikad ne bi uspostavila, a lozinka bi se prikazala u skočnom prozoru."
+  },
+  "permissionRefused": {
+    "message": "Adresa Postula nije dozvoljena, pa ništa nije poslano. Hvatanje je sačuvano i čeka: dozvolite adresu i ponovo pritisnite Pošalji."
   }
 }

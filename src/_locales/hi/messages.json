@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "जिस नौकरी को आप देख रहे हैं उसे कैप्चर करें, उसे अपने ब्राउज़र में रखें, और जब आप ऐसा करते हैं तो उसे समीक्षा के लिए अपने खुद के पोस्टुलो को भेजें। कुछ भी कहीं नहीं जाता है।।"
+  },
+  "actionTitle": {
+    "message": "पोस्टुलो में इस पोस्ट को कैप्चर करें"
+  },
+  "postuloUnreachable": {
+    "message": "पोस्टुलो तक नहीं पहुंच सकता: आप इस ब्राउज़र में क्या इंतजार करते हैं जब तक कि यह जवाब नहीं देता।।"
+  },
+  "footerOnline": {
+    "message": "Postulo उत्तर"
+  },
+  "footerSlow": {
+    "message": "पोस्टुलो जवाब देने में धीमा है"
+  },
+  "reviewHeading": {
+    "message": "आवश्यकता समीक्षा"
+  },
+  "waitingInPostulo": {
+    "message": "Postulo में समीक्षा के लिए प्रतीक्षा"
+  },
+  "nothingWaiting": {
+    "message": "समीक्षा के लिए इंतजार नहीं कर रहा है।।"
+  },
+  "lastListed": {
+    "message": "पोस्टुलो ने उन्हें $WHEN$ पर सूचीबद्ध किया।।",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "इस पोस्टिंग के कैप्चर: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "समीक्षा के लिए प्रतीक्षा: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "सेटिंग्स"
+  },
+  "setUp": {
+    "message": "इसे सेट करें"
+  },
+  "capture": {
+    "message": "इस पोस्ट को कैप्चर करें"
+  },
+  "addListing": {
+    "message": "लिस्टिंग जोड़ें"
+  },
+  "captureHint": {
+    "message": "यहाँ पृष्ठ पढ़ा गया है, अपने ब्राउज़र में। जब तक आप कहते हैं तो कुछ भी नहीं भेजा जाता है।।"
+  },
+  "review": {
+    "message": "Postulo में समीक्षा"
+  },
+  "reading": {
+    "message": "पेज पढ़ना"
+  },
+  "allowing": {
+    "message": "अपने पोस्टुलो तक पहुंचने के लिए एक्सटेंशन की अनुमति .."
+  },
+  "noPermission": {
+    "message": "अपने पोस्टुलो तक पहुंचने की अनुमति के बिना, कुछ भी नहीं भेजा जा सकता है।।"
+  },
+  "sending": {
+    "message": "Postulo को भेजना.."
+  },
+  "captured": {
+    "message": "कब्जा कर लिया। इससे पहले कि यह एक लिस्टिंग बन जाए इसकी समीक्षा करें।।"
+  },
+  "readBy": {
+    "message": "द्वारा पढ़ें $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Untitled posting"
+  },
+  "optionsTitle": {
+    "message": "Postulo सेटिंग्स"
+  },
+  "instanceLabel": {
+    "message": "आपका Postulo"
+  },
+  "instanceHint": {
+    "message": "जिस पते पर आप इसे खोलते हैं। जब तक यह इस मशीन पर नहीं चल पाता।।"
+  },
+  "tokenLabel": {
+    "message": "एपीआई टोकन"
+  },
+  "tokenHint": {
+    "message": "पोस्टुलो में $PATH$ के तहत बनाया गया, $SCOPE$ गुंजाइश और अधिक कुछ नहीं। इसे केवल इस उपकरण पर रखा जाता है, कभी भी ब्राउज़र खाते के माध्यम से सिंक नहीं किया जाता है।।",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "सेटिंग्स → एपीआई टोकन"
+  },
+  "save": {
+    "message": "सहेजें"
+  },
+  "test": {
+    "message": "टेस्ट"
+  },
+  "shortcutHint": {
+    "message": "बटन दबाना, या $SHORTCUT$, उस पृष्ठ को पढ़ता है जिसे आप देख रहे हैं, यहाँ ब्राउज़र में। जब तक आप पूछते हैं, तब तक कोई पृष्ठ नहीं पढ़ा जाता है और कुछ भी नहीं भेजा जाता है, लेकिन आपका खुद का पोस्टुलो, जब आप ऐसा कहते हैं।।",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "पेस्ट करें token Postulo आपको दिखाया गया है।।"
+  },
+  "saved": {
+    "message": "सहेजा गया। बटन अब $HOST$ को पेज भेजेगा।।",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "सहेजा गया, लेकिन ब्राउज़र ने इसे पहुंचने की अनुमति से इनकार कर दिया; इसे एक्सटेंशन की अनुमति में अनुमति दें।।"
+  },
+  "asking": {
+    "message": "पोस्टुलो से पूछो कि यह क्या है"
+  },
+  "addressRefused": {
+    "message": "उस पते तक पहुंचने की अनुमति मना कर दी गई थी।।"
+  },
+  "tokenIs": {
+    "message": "$OWNER$ के लिए टोकन \"$NAME$\"।।",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "$OWNER$ ($SCOPES$) के लिए टोकन \"$NAME$\"।।",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "इसमें captures स्कोप नहीं है, इसलिए यह कैप्चर नहीं कर सकता।"
+  },
+  "noCredentialsInAddress": {
+    "message": "उपयोगकर्ता नाम और पासवर्ड को पते से बाहर छोड़ दें: यह कभी कनेक्ट नहीं होगा, और पासवर्ड पॉपअप में दिखाया जाएगा।।"
+  },
+  "tokenTooWide": {
+    "message": "यह टोकन भी कर सकते हैं: $SCOPES$। एक्सटेंशन को केवल कैप्चर गुंजाइश की आवश्यकता होती है: अकेले उस गुंजाइश के साथ एक टोकन जारी करें और इसे रद्द करें।।",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "पोस्टुलो के पते की अनुमति नहीं थी, इसलिए कुछ भी नहीं भेजा गया था। कब्जा रखा जाता है और इंतजार करता है: पता और प्रेस फिर से भेजें।।"
+  },
+  "enterAddress": {
+    "message": "अपने पोस्टुलो का पता दर्ज करें।।"
+  },
+  "notAnAddress": {
+    "message": "यह वेब पते की तरह नहीं दिखता है।।"
+  },
+  "httpsOnly": {
+    "message": "अपनी खुद की मशीन पर नहीं है कि कुछ के लिए https का उपयोग करें: टोकन हर अनुरोध के साथ यात्रा करता है।।"
+  },
+  "tokenRefused": {
+    "message": "पोस्टुलो इस टोकन को स्वीकार नहीं करता है। इसे $PATH$ के तहत देखें।।",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "इस टोकन को पकड़ने की अनुमति नहीं है।।"
+  },
+  "tooMany": {
+    "message": "बहुत कम समय में कब्जा। एक मिनट की प्रतीक्षा करें और फिर से प्रयास करें।।"
+  },
+  "answered": {
+    "message": "Postulo उत्तर $STATUS$।।",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "पढ़ने के लिए कोई टैब नहीं।।"
+  },
+  "notWebPage": {
+    "message": "केवल वेब पेज पर कब्जा कर लिया जा सकता है।।"
+  },
+  "unreadable": {
+    "message": "पृष्ठ पढ़ा नहीं जा सकता। कुछ पृष्ठ ब्लॉक एक्सटेंशन।।"
+  },
+  "notPostulo": {
+    "message": "यह पता उत्तर दिया, लेकिन पोस्टुलो के रूप में नहीं। पता की जाँच करें, और इसके सामने किसी भी साइन-इन पृष्ठ।।"
+  },
+  "addressTooLong": {
+    "message": "इस पृष्ठ का पता पोस्टुलो की तुलना में लंबा है, यहां तक कि \"#\" के बाद भाग के बिना भी स्वीकार करता है। इसके बजाय Postulo में पोस्टिंग जोड़ें।।"
+  },
+  "reviewHint": {
+    "message": "यह क्या पृष्ठ से पढ़ा गया था। कुछ भी गलत है; कुछ भी इस ब्राउज़र को छोड़ देता है जब तक आप इसे भेजते हैं।।"
+  },
+  "sendForReview": {
+    "message": "समीक्षा के लिए भेजें"
+  },
+  "notConnected": {
+    "message": "अभी तक एक पोस्टुलो से जुड़ा नहीं है: आप इस ब्राउज़र में क्या कैप्चर करते हैं।।"
+  },
+  "keep": {
+    "message": "इस ब्राउज़र में रखें"
+  },
+  "kept": {
+    "message": "इस ब्राउज़र में विभाग। जब भी आप तैयार हों तो इसे पोस्टुलो में भेजें।।"
+  },
+  "storageFull": {
+    "message": "पोस्टुलो के लिए यह ब्राउज़र पूर्ण है। कुछ कैप्चर को भेजें या हटा दें, फिर फिर से कोशिश करें।।"
+  },
+  "alreadyKept": {
+    "message": "आपने पहले ही इस पृष्ठ को रखा था और इसे नहीं भेजा है: यह आपका संस्करण है।।"
+  },
+  "nothingRead": {
+    "message": "इस पृष्ठ से कुछ नहीं पढ़ा जा सकता। क्या आप जानते हैं।"
+  },
+  "waiting": {
+    "message": "पोस्टुलो अभी तक नहीं पहुंच सकता है। इसे इस ब्राउज़र में रखा गया है और जल्द ही पोस्टुलो जवाब के रूप में भेजा गया है।।"
+  },
+  "waitingOffline": {
+    "message": "परीक्षण स्विच चालू है, इसलिए यह इस ब्राउज़र में प्रतीक्षा करता है। यह एक बार स्विच बंद हो जाता है।।"
+  },
+  "waitingAccount": {
+    "message": "इसे इस ब्राउज़र में रखा जाता है और एक बार भेजा जाता है।।"
+  },
+  "sendNeedsSetup": {
+    "message": "इस ब्राउज़र में, एक बार जब आपका पोस्टुलो सेट हो जाता है तो भेजा जाएगा।।"
+  },
+  "capturesTitle": {
+    "message": "इस ब्राउज़र में कब्जा"
+  },
+  "capturesIntro": {
+    "message": "जब तक वे आपके पोस्टुलो तक नहीं पहुंचते, तब तक आपको कब्ज़ा हुआ। जैसा कि पोस्टुलो पहुँच सकता है, आप क्या भेजते हैं।"
+  },
+  "nothingKept": {
+    "message": "इस ब्राउज़र में कुछ भी नहीं रखा गया है।।"
+  },
+  "sendAll": {
+    "message": "सब कुछ नहीं भेजा"
+  },
+  "clearSent": {
+    "message": "भेजे गए लोगों को साफ़ करें"
+  },
+  "stateKept": {
+    "message": "नहीं भेजा"
+  },
+  "stateWaiting": {
+    "message": "Postulo के लिए प्रतीक्षा"
+  },
+  "stateSent": {
+    "message": "सैंट"
+  },
+  "stateRefused": {
+    "message": "इनकार"
+  },
+  "tryNow": {
+    "message": "अब कोशिश करो"
+  },
+  "holdBack": {
+    "message": "इसके बजाय इसे यहां रखें"
+  },
+  "deleteConfirm": {
+    "message": "इस कैप्चर को हटाएं? यह पोस्टलूलो तक नहीं पहुंची है, इसलिए यह केवल यहां मौजूद है।।"
+  },
+  "troubleshooting": {
+    "message": "परीक्षण और समस्या निवारण"
+  },
+  "offlineLabel": {
+    "message": "अगर पोस्टुलो नहीं पहुंचा जा सकता"
+  },
+  "offlineHint": {
+    "message": "परीक्षण के लिए जबकि यह चालू है, कुछ भी नहीं भेजा जाता है: इस ब्राउज़र को वास्तव में इंतजार करते हैं क्योंकि वे पोस्टुलो डाउन के साथ होंगे, और एक बार इसे बंद कर दें।।"
+  },
+  "offlineOn": {
+    "message": "परीक्षण स्विच पर है: पोस्टुलो को कुछ भी नहीं भेजा जाता है।।"
+  },
+  "offlineOff": {
+    "message": "परीक्षण स्विच बंद है: अब Postulo के लिए क्या इंतजार कर रहा है।।"
+  },
+  "downloadLog": {
+    "message": "लॉग डाउनलोड करें"
+  },
+  "clearLog": {
+    "message": "लॉग साफ़ करें"
+  },
+  "logCleared": {
+    "message": "लॉग खाली है।।"
+  },
+  "logHint": {
+    "message": "क्या विस्तार किया, यह जानने के लिए कि कुछ क्यों काम नहीं करता था। इसमें कोई टोकन नहीं है और पृष्ठों से कुछ नहीं है।।"
+  },
+  "delete": {
+    "message": "डिलीट"
+  },
+  "edit": {
+    "message": "संपादित करें"
+  },
+  "fieldTitle": {
+    "message": "नौकरी का शीर्षक"
+  },
+  "fieldCompany": {
+    "message": "कंपनी"
+  },
+  "fieldLocation": {
+    "message": "स्थान"
+  },
+  "fieldRemote": {
+    "message": "कार्य व्यवस्था"
+  },
+  "fieldEmployment": {
+    "message": "रोजगार का प्रकार"
+  },
+  "fieldSalaryFrom": {
+    "message": "से वेतन"
+  },
+  "fieldSalaryTo": {
+    "message": "वेतन"
+  },
+  "fieldCurrency": {
+    "message": "मुद्रा"
+  },
+  "fieldPeriod": {
+    "message": "अवधि"
+  },
+  "fieldCloses": {
+    "message": "समापन तिथि"
+  },
+  "fieldDescription": {
+    "message": "विवरण"
+  },
+  "remoteOnsite": {
+    "message": "साइट पर"
+  },
+  "remoteHybrid": {
+    "message": "हाइब्रिड"
+  },
+  "remoteRemote": {
+    "message": "रिमोट"
+  },
+  "employmentFullTime": {
+    "message": "समय"
+  },
+  "employmentPartTime": {
+    "message": "अंशकालिक"
+  },
+  "employmentContract": {
+    "message": "अनुबंध"
+  },
+  "employmentFreelance": {
+    "message": "फ्रीलांस"
+  },
+  "employmentInternship": {
+    "message": "इंटर्नशिप"
+  },
+  "employmentApprenticeship": {
+    "message": "शिक्षुता"
+  },
+  "periodYear": {
+    "message": "प्रति वर्ष"
+  },
+  "periodMonth": {
+    "message": "प्रति माह"
+  },
+  "periodDay": {
+    "message": "प्रति दिन"
+  },
+  "periodHour": {
+    "message": "प्रति घंटे"
+  },
+  "postingsFound": {
+    "message": "यह पृष्ठ $COUNT$ पोस्टिंग को सूचीबद्ध करता है।।",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "ध्यान रखने योग्य लोगों को बीमार करना। प्रत्येक अपना खुद का कब्जा बन जाता है, फिर से पोस्टुलो द्वारा पढ़ा जाता है।।"
+  },
+  "tickAll": {
+    "message": "सब"
+  },
+  "tickNone": {
+    "message": "कोई नहीं"
+  },
+  "nothingTicked": {
+    "message": "कुछ भी नहीं है।।"
+  },
+  "keptMany": {
+    "message": "$COUNT$ इस ब्राउज़र में रखा कब्जा।।",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ समीक्षा के लिए भेजे गए कैप्चर।।",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ को मना कर दिया गया; कैप्चर की सूची क्यों कहती है।।",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "पहले कब्जा कर लिया: $WHEN$ के बाद से अपनी लिस्टिंग में $TITLE$ के रूप में।।",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "पोस्टुलो में पहले से ही समीक्षा के लिए इंतजार कर रहा है, क्योंकि $WHEN$।।",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "इस कंपनी में इस शीर्षक के साथ एक सूची मौजूद है: $TITLE$।।",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "पहले कब्जा कर लिया"
+  },
+  "knownOpen": {
+    "message": "इसे Postulo में खोलें"
+  },
+  "pictureOffer": {
+    "message": "पोस्टुलो पूरे पृष्ठ की एक तस्वीर रख सकते हैं जैसा कि आप इसे देखते हैं, साइन इन करते हैं या नहीं। एक भेजें?"
+  },
+  "pictureSend": {
+    "message": "चित्र भेजें"
+  },
+  "pictureSkip": {
+    "message": "कोई चित्र नहीं"
+  },
+  "pictureDrawing": {
+    "message": "पृष्ठ ड्राइंग.."
+  },
+  "pictureSending": {
+    "message": "तस्वीर भेजना"
+  },
+  "pictureSent": {
+    "message": "चित्र भेजा गया था।।"
+  },
+  "pictureNotKept": {
+    "message": "पोस्टुलो ने तस्वीर नहीं रखी थी। स्वयं कब्जा करना अप्रभावित है।।"
+  },
+  "pictureTooBig": {
+    "message": "पृष्ठ एक चित्र के रूप में भेजने के लिए बहुत बड़ा है।।"
+  },
+  "pictureFailed": {
+    "message": "पृष्ठ तैयार नहीं किया जा सकता है। क्या आपने अभी भी कब्जा कर लिया है?"
+  },
+  "languageLabel": {
+    "message": "भाषा"
+  },
+  "languageFollow": {
+    "message": "ब्राउज़र का पालन करें"
+  },
+  "languageHint": {
+    "message": "प्रत्येक भाषा लेकिन अंग्रेजी एक मसौदा है कि कोई स्पीकर अभी तक समीक्षा नहीं की है। बिना सेव के, एक बार में प्रभाव पड़ता है।।"
+  },
+  "reviewPageTitle": {
+    "message": "एक कैप्चर की समीक्षा करें"
+  }
+}

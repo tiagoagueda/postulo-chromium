@@ -517,5 +517,19 @@
   },
   "reviewPageTitle": {
     "message": "Irrevedi qbid"
+  },
+  "tokenTooWide": {
+    "message": "Dan it-token jista' wkoll: $SCOPES$. L-estensjoni teħtieġ biss l-ambitu captures: oħroġ token b'dak l-ambitu biss u rrevoka dan.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Ħalli l-isem tal-utent u l-password barra mill-indirizz: qatt ma jikkonnettja, u l-password tintwera fil-popup."
+  },
+  "permissionRefused": {
+    "message": "L-indirizz tal-Postulo ma ġiex permess, għalhekk xejn ma ntbagħat. Il-qbid jinżamm u jistenna: ippermetti l-indirizz u erġa' agħfas Ibgħat."
   }
 }

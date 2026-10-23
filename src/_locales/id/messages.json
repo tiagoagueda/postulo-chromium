@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Ambil posting pekerjaan yang Anda lihat, simpan dalam browser Anda, dan kirim ke Postulo Anda sendiri untuk tinjauan ketika Anda berkata begitu. Tidak ada yang pergi ke tempat lain."
+  },
+  "actionTitle": {
+    "message": "Menangkap posting ini di Postulo"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo tidak dapat dicapai: apa yang Anda kirim menunggu di browser ini sampai jawabannya."
+  },
+  "footerOnline": {
+    "message": "Postulo jawaban"
+  },
+  "footerSlow": {
+    "message": "Postulo lambat untuk menjawab"
+  },
+  "reviewHeading": {
+    "message": "Butuh ulasan"
+  },
+  "waitingInPostulo": {
+    "message": "Menunggu ulasan di Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Tidak ada yang menunggu untuk meninjau."
+  },
+  "lastListed": {
+    "message": "Seperti Postulo terakhir terdaftar mereka, pada $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Menangkap posting ini: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Menunggu ulasan: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Pengaturan"
+  },
+  "setUp": {
+    "message": "Atur"
+  },
+  "capture": {
+    "message": "Tangkap posting ini"
+  },
+  "addListing": {
+    "message": "Tambahkan suatu daftar"
+  },
+  "captureHint": {
+    "message": "Halaman ini dibaca di sini, dalam browser Anda. Tidak ada yang dikirim sampai Anda mengatakan demikian."
+  },
+  "review": {
+    "message": "Ulasan di Postulo"
+  },
+  "reading": {
+    "message": "Membaca halaman.."
+  },
+  "allowing": {
+    "message": "Membiarkan perpanjangan untuk mencapai Postulo Anda.."
+  },
+  "noPermission": {
+    "message": "Tanpa izin untuk mencapai Postulo Anda, tidak ada yang dapat dikirim."
+  },
+  "sending": {
+    "message": "Mengirim ke Postulo.."
+  },
+  "captured": {
+    "message": "Ditangkap. Tinjau itu sebelum menjadi daftar."
+  },
+  "readBy": {
+    "message": "Baca oleh $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Postingan tanpa judul"
+  },
+  "optionsTitle": {
+    "message": "Pengaturan postulo"
+  },
+  "instanceLabel": {
+    "message": "Postulo Anda"
+  },
+  "instanceHint": {
+    "message": "Alamat Anda membukanya di. https, kecuali itu berjalan di mesin ini."
+  },
+  "tokenLabel": {
+    "message": "Token API"
+  },
+  "tokenHint": {
+    "message": "Dibuat di bawah $PATH$ di Postulo, dengan scope $SCOPE$ dan tidak lebih. Ini disimpan di perangkat ini saja, tidak pernah sinkronisasi melalui akun browser.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Pengaturan token API"
+  },
+  "save": {
+    "message": "Simpan"
+  },
+  "test": {
+    "message": "Uji"
+  },
+  "shortcutHint": {
+    "message": "Menekan tombol, atau $SHORTCUT$, membaca halaman yang Anda lihat, di sini di browser. Tidak ada halaman yang dibaca sampai Anda bertanya, dan tidak ada yang dikirim di mana saja kecuali Postulo Anda sendiri, ketika Anda mengatakan demikian.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Paste Postulo token menunjukkan Anda."
+  },
+  "saved": {
+    "message": "Selamat. Tombol sekarang akan mengirim halaman ke $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Tersimpan, tapi peramban menolak izin untuk mencapainya; ijinkan dalam izin ekstensi."
+  },
+  "asking": {
+    "message": "Meminta Postulo siapa token ini.."
+  },
+  "addressRefused": {
+    "message": "Izin untuk mencapai alamat yang ditolak."
+  },
+  "tokenIs": {
+    "message": "Token \"$NAME$\" for $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token \"$NAME$\" for $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Token ini tidak memiliki cakupan captures, jadi tidak dapat menangkap."
+  },
+  "noCredentialsInAddress": {
+    "message": "Biarkan nama pengguna dan kata sandi keluar dari alamat: itu tidak akan pernah terhubung, dan kata sandi akan ditampilkan dalam popup."
+  },
+  "tokenTooWide": {
+    "message": "Token ini juga bisa: $SCOPES$. Ekstensi hanya memerlukan jangkauan penangkapan: keluarkan token dengan lingkup itu saja dan batalkan yang satu ini.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Alamat Postulo tidak diperbolehkan, jadi tidak ada yang dikirim. Penangkapan disimpan dan menunggu: memungkinkan alamat dan tekan Kirim lagi."
+  },
+  "enterAddress": {
+    "message": "Masukkan alamat Postulo Anda."
+  },
+  "notAnAddress": {
+    "message": "Itu tidak terlihat seperti alamat web."
+  },
+  "httpsOnly": {
+    "message": "Gunakan https untuk apapun yang tidak pada mesin Anda sendiri: token perjalanan dengan setiap permintaan."
+  },
+  "tokenRefused": {
+    "message": "Postulo tidak menerima token ini. Periksa dibawah $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Tanda ini tidak diperbolehkan untuk menangkap."
+  },
+  "tooMany": {
+    "message": "Terlalu banyak penangkapan dalam waktu singkat. Tunggu sebentar dan coba lagi."
+  },
+  "answered": {
+    "message": "Postulo menjawab $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Tidak ada tab untuk dibaca."
+  },
+  "notWebPage": {
+    "message": "Hanya halaman web yang bisa ditangkap."
+  },
+  "unreadable": {
+    "message": "Halaman tidak dapat dibaca. Beberapa halaman blok ekstensi."
+  },
+  "notPostulo": {
+    "message": "Alamat yang menjawab, tapi tidak sebagai Postulo. Periksa alamatnya, dan tanda apapun di halaman depannya."
+  },
+  "addressTooLong": {
+    "message": "Alamat halaman ini lebih panjang dari Postulo menerima, bahkan tanpa bagian setelah \"#\", sehingga penangkapan tidak dikirim. Tambahkan posting dalam Postulo dengan tangan sebagai gantinya."
+  },
+  "reviewHint": {
+    "message": "Ini adalah apa yang dibaca dari halaman. Koreksi semua yang salah; tak ada yang meninggalkan peramban ini sampai Anda mengirimkannya."
+  },
+  "sendForReview": {
+    "message": "Kirim untuk ulasan"
+  },
+  "notConnected": {
+    "message": "Belum terhubung ke Postulo: apa yang Anda tangkap disimpan dalam peramban ini."
+  },
+  "keep": {
+    "message": "Simpan di peramban ini"
+  },
+  "kept": {
+    "message": "Disimpan di browser ini. Kirim ke Postulo setiap kali Anda siap."
+  },
+  "storageFull": {
+    "message": "Penyimpanan browser ini untuk Postulo penuh. Kirim atau hapus beberapa penangkapan, kemudian coba lagi."
+  },
+  "alreadyKept": {
+    "message": "Anda menyimpan halaman ini dan belum mengirimkannya: ini adalah versi Anda."
+  },
+  "nothingRead": {
+    "message": "Tidak ada yang bisa dibaca dari halaman ini. Isi apa yang Anda ketahui; tidak ada yang meninggalkan browser ini sampai Anda mengirimkannya."
+  },
+  "waiting": {
+    "message": "Postulo tidak dapat dicapai sekarang. Hal ini disimpan dalam browser ini dan dikirim segera setelah Postulo jawaban."
+  },
+  "waitingOffline": {
+    "message": "Saklar pengujian menyala, jadi menunggu di browser ini. It goes setelah saklar dimatikan."
+  },
+  "waitingAccount": {
+    "message": "Hal ini disimpan dalam browser ini dan dikirim sekali yang tetap."
+  },
+  "sendNeedsSetup": {
+    "message": "Disimpan di browser ini, untuk dikirim setelah Postulo Anda diatur."
+  },
+  "capturesTitle": {
+    "message": "Captures in this browser"
+  },
+  "capturesIntro": {
+    "message": "Posisi Anda ditangkap, terus di sini sampai mereka mencapai Postulo Anda. Apa yang Anda kirim berjalan segera setelah Postulo dapat dicapai."
+  },
+  "nothingKept": {
+    "message": "Tidak ada yang disimpan di browser ini."
+  },
+  "sendAll": {
+    "message": "Kirim semuanya tidak dikirim"
+  },
+  "clearSent": {
+    "message": "Bersihkan yang dikirim"
+  },
+  "stateKept": {
+    "message": "Tidak dikirim"
+  },
+  "stateWaiting": {
+    "message": "Menunggu Postulo"
+  },
+  "stateSent": {
+    "message": "Dikirim"
+  },
+  "stateRefused": {
+    "message": "Menolak"
+  },
+  "tryNow": {
+    "message": "Coba sekarang"
+  },
+  "holdBack": {
+    "message": "Simpan saja di sini"
+  },
+  "deleteConfirm": {
+    "message": "Hapus penangkapan ini? Hal ini tidak mencapai Postulo, sehingga hanya ada di sini."
+  },
+  "troubleshooting": {
+    "message": "Pengujian dan penyerapan"
+  },
+  "offlineLabel": {
+    "message": "Bertindak seolah-olah Postulo tidak dapat dicapai"
+  },
+  "offlineHint": {
+    "message": "Untuk pengujian. Sementara ini pada, tidak ada yang dikirim: menangkap menunggu di browser ini persis seperti yang mereka akan dengan Postulo turun, dan pergi setelah itu mati."
+  },
+  "offlineOn": {
+    "message": "Saklar pengujian aktif: tidak ada yang dikirim ke Postulo."
+  },
+  "offlineOff": {
+    "message": "Pengujian dimatikan: apa yang menunggu pergi ke Postulo sekarang."
+  },
+  "downloadLog": {
+    "message": "Unduh log"
+  },
+  "clearLog": {
+    "message": "Bersihkan log"
+  },
+  "logCleared": {
+    "message": "Log kosong."
+  },
+  "logHint": {
+    "message": "Apa ekstensi lakukan, untuk mengetahui mengapa sesuatu tidak bekerja. Tidak ada tanda dan tidak ada dari halaman."
+  },
+  "delete": {
+    "message": "Hapus"
+  },
+  "edit": {
+    "message": "Sunting"
+  },
+  "fieldTitle": {
+    "message": "Judul tugas"
+  },
+  "fieldCompany": {
+    "message": "Perusahaan"
+  },
+  "fieldLocation": {
+    "message": "Lokasi"
+  },
+  "fieldRemote": {
+    "message": "Pengaturan kerja"
+  },
+  "fieldEmployment": {
+    "message": "Tipe pekerja"
+  },
+  "fieldSalaryFrom": {
+    "message": "Gaji dari"
+  },
+  "fieldSalaryTo": {
+    "message": "Gaji untuk"
+  },
+  "fieldCurrency": {
+    "message": "Mata Uang"
+  },
+  "fieldPeriod": {
+    "message": "Periode"
+  },
+  "fieldCloses": {
+    "message": "Tanggal tutup"
+  },
+  "fieldDescription": {
+    "message": "Deskripsi"
+  },
+  "remoteOnsite": {
+    "message": "Di situs"
+  },
+  "remoteHybrid": {
+    "message": "Hibrida"
+  },
+  "remoteRemote": {
+    "message": "Jauh"
+  },
+  "employmentFullTime": {
+    "message": "Full time"
+  },
+  "employmentPartTime": {
+    "message": "Part time"
+  },
+  "employmentContract": {
+    "message": "Kontrak"
+  },
+  "employmentFreelance": {
+    "message": "Bebas"
+  },
+  "employmentInternship": {
+    "message": "Internship"
+  },
+  "employmentApprenticeship": {
+    "message": "Tampil"
+  },
+  "periodYear": {
+    "message": "Per tahun"
+  },
+  "periodMonth": {
+    "message": "Per bulan"
+  },
+  "periodDay": {
+    "message": "Per hari"
+  },
+  "periodHour": {
+    "message": "Per jam"
+  },
+  "postingsFound": {
+    "message": "Daftar halaman ini $COUNT$ posting.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Centang yang layak dijaga. Masing-masing menjadi menangkap sendiri, membaca lagi oleh Postulo."
+  },
+  "tickAll": {
+    "message": "Semua"
+  },
+  "tickNone": {
+    "message": "Nihil"
+  },
+  "nothingTicked": {
+    "message": "Tidak ada yang berdetak."
+  },
+  "keptMany": {
+    "message": "$COUNT$ tangkapan disimpan di peramban ini.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ tangkapan dikirim untuk ditinjau.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ ditolak; daftar tangkapan menjelaskan alasannya.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Ditangkap sebelumnya: dalam daftar Anda sejak $WHEN$ sebagai $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Sudah menunggu ulasan di Postulo, sejak $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Daftar dengan judul ini ada: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "ditangkap sebelum"
+  },
+  "knownOpen": {
+    "message": "Buka di Postulo"
+  },
+  "pictureOffer": {
+    "message": "Postulo dapat menyimpan gambar seluruh halaman seperti yang Anda lihat, ditandatangani atau tidak. Kirim satu?"
+  },
+  "pictureSend": {
+    "message": "Kirim gambar"
+  },
+  "pictureSkip": {
+    "message": "Tidak ada gambar"
+  },
+  "pictureDrawing": {
+    "message": "Menggambar halaman.."
+  },
+  "pictureSending": {
+    "message": "Mengirim gambar.."
+  },
+  "pictureSent": {
+    "message": "Gambar itu dikirim."
+  },
+  "pictureNotKept": {
+    "message": "Postulo tidak menyimpan fotonya. Penangkapan itu sendiri tidak terpengaruh."
+  },
+  "pictureTooBig": {
+    "message": "Halaman ini terlalu besar untuk dikirim sebagai gambar."
+  },
+  "pictureFailed": {
+    "message": "Halamannya tidak bisa ditarik. Apa itu masih yang kau tangkap?"
+  },
+  "languageLabel": {
+    "message": "Bahasa"
+  },
+  "languageFollow": {
+    "message": "Ikuti peramban"
+  },
+  "languageHint": {
+    "message": "Setiap bahasa tapi bahasa Inggris adalah draft yang belum pernah ditinjau oleh pembicara. Mengambil efek sekaligus, tanpa Save."
+  },
+  "reviewPageTitle": {
+    "message": "Tinjau penangkapan"
+  }
+}

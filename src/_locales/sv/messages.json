@@ -106,31 +106,6 @@
   "addressRefused": {
     "message": "Tillåtelse att nå den adressen nekades."
   },
-  "tokenIs": {
-    "message": "Token ”$NAME$” för $OWNER$.",
-    "placeholders": {
-      "name": {
-        "content": "$1"
-      },
-      "owner": {
-        "content": "$2"
-      }
-    }
-  },
-  "tokenIsScoped": {
-    "message": "Token ”$NAME$” för $OWNER$ ($SCOPES$).",
-    "placeholders": {
-      "name": {
-        "content": "$1"
-      },
-      "owner": {
-        "content": "$2"
-      },
-      "scopes": {
-        "content": "$3"
-      }
-    }
-  },
   "lacksCaptures": {
     "message": "Den saknar behörigheten captures, så den kan inte fånga in."
   },
@@ -517,5 +492,44 @@
   },
   "reviewPageTitle": {
     "message": "Granska en fångst"
+  },
+  "tokenTooWide": {
+    "message": "Den här token kan också: $SCOPES$. Tillägget behöver bara behörigheten captures: utfärda en token med enbart den behörigheten och återkalla den här.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "noCredentialsInAddress": {
+    "message": "Lämna användarnamn och lösenord utanför adressen: den skulle aldrig ansluta, och lösenordet skulle visas i popup-fönstret."
+  },
+  "permissionRefused": {
+    "message": "Postulos adress tilläts inte, så ingenting skickades. Infångningen sparas och väntar: tillåt adressen och tryck på Skicka igen."
+  },
+  "tokenIs": {
+    "message": "Token ”$NAME$” för $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token ”$NAME$” för $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
   }
 }

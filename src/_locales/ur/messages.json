@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "اس کام کو دوبارہ شروع کریں جو آپ دیکھ رہے ہیں، اپنے براؤزر میں رکھ رہے ہیں، اور جب آپ یہ کہتے ہیں تو اپنے پوسٹلؤ میں بھیج دیں۔ کوئی اور نہیں جاتا."
+  },
+  "actionTitle": {
+    "message": "پوسٹولو میں اس واقعے کو یاد کریں"
+  },
+  "postuloUnreachable": {
+    "message": "Populo تک رسائی نہیں ہو سکتی: جو آپ اس براؤزر میں انتظار کرتے ہیں وہ جواب تک."
+  },
+  "footerOnline": {
+    "message": "جواب"
+  },
+  "footerSlow": {
+    "message": "جواب دینے میں پوسٹلو سست ہے۔"
+  },
+  "reviewHeading": {
+    "message": "ضرورت کا جائزہ"
+  },
+  "waitingInPostulo": {
+    "message": "پوسٹلو میں جائزے کا انتظار"
+  },
+  "nothingWaiting": {
+    "message": "کچھ بھی نہیں جائزہ لینے کا انتظار ہے."
+  },
+  "lastListed": {
+    "message": "جیسا کہ Postulo نے انہیں آخری بار $WHEN$ کو درج کیا تھا۔",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "$COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "ملاحظہ فرمائیں: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "ترتیبات"
+  },
+  "setUp": {
+    "message": "اسے نیچے رکھو"
+  },
+  "capture": {
+    "message": "اِس سوال کا جواب دیں"
+  },
+  "addListing": {
+    "message": "فہرست شامل کریں"
+  },
+  "captureHint": {
+    "message": "صفحہ یہاں، آپ کے براؤزر میں پڑھی جاتی ہے۔ آپ ایسا کرنے تک کچھ نہیں بھیجا گیا ہے."
+  },
+  "review": {
+    "message": "پوسٹولو میں اعادہ"
+  },
+  "reading": {
+    "message": "صفحہ پڑھیں.."
+  },
+  "allowing": {
+    "message": "آپ کے پوسٹل تک رسائی حاصل کرنے کے لئے توسیع کی اجازت .."
+  },
+  "noPermission": {
+    "message": "آپ کے پوسٹل تک پہنچنے کی اجازت کے بغیر کچھ بھی نہیں بھیج سکتا۔."
+  },
+  "sending": {
+    "message": "پوسٹلو کے لئے بھیجا گیا.."
+  },
+  "captured": {
+    "message": "ٹھیک. اس کی فہرست بننے سے پہلے اسے اعادہ کریں۔."
+  },
+  "readBy": {
+    "message": "$SOURCE$ پڑھیے",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "غیر متصل"
+  },
+  "optionsTitle": {
+    "message": "فوری ترتیبات"
+  },
+  "instanceLabel": {
+    "message": "آپکا پوسٹ"
+  },
+  "instanceHint": {
+    "message": "آپ اسے کھلا. ایس ."
+  },
+  "tokenLabel": {
+    "message": "علامات"
+  },
+  "tokenHint": {
+    "message": "Postulo میں $PATH$ کے تحت بنایا گیا، صرف $SCOPE$ اسکوپ کے ساتھ اور کچھ نہیں۔ یہ صرف اسی ڈیوائس پر رکھا جاتا ہے، کبھی کسی براؤزر اکاؤنٹ کے ذریعے سنک نہیں ہوتا۔",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "ترتیبات کی علامات"
+  },
+  "save": {
+    "message": "محفوظ کریں"
+  },
+  "test": {
+    "message": "جانچ"
+  },
+  "shortcutHint": {
+    "message": "بٹن دبانے سے، یا $SHORTCUT$ سے، وہ صفحہ جو آپ دیکھ رہے ہیں یہیں براؤزر میں پڑھا جاتا ہے۔ جب تک آپ نہ کہیں کوئی صفحہ نہیں پڑھا جاتا، اور آپ کے کہنے پر صرف آپ کے اپنے Postulo کو بھیجا جاتا ہے، کہیں اور نہیں۔",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "علامہ اقبال نے آپ کو دکھا دیا۔."
+  },
+  "saved": {
+    "message": "محفوظ. بٹن اب $HOST$ کے لیے صفحات بھیج دے گا۔.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "محفوظ رہے لیکن براؤزر نے اس تک پہنچنے کی اجازت دینے سے انکار کر دیا؛ اسے توسیع کے اجازت دے دے۔."
+  },
+  "asking": {
+    "message": "یہ نشان کون ہے .."
+  },
+  "addressRefused": {
+    "message": "اس پتہ تک پہنچنے کی اجازت نہیں دی گئی تھی ۔."
+  },
+  "lacksCaptures": {
+    "message": "اس میں captures اسکوپ نہیں ہے، اس لیے یہ کیپچر نہیں کر سکتا۔"
+  },
+  "noCredentialsInAddress": {
+    "message": "صارف کا نام اور پاس ورڈ چھوڑنے کو: یہ کبھی بھی متصل نہیں ہوگا اور پاپ اپ میں پاس ورڈ دکھائی دے گا۔."
+  },
+  "tokenTooWide": {
+    "message": "یہ ٹوکن یہ بھی کر سکتا ہے: $SCOPES$۔ ایکسٹینشن کو صرف captures اسکوپ درکار ہے: صرف اسی اسکوپ کے ساتھ ایک ٹوکن جاری کریں اور اسے منسوخ کر دیں۔",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "پوسٹلؤ کا پتہ اجازت نہ دی گئی تو کچھ نہ بھیجا گیا۔ قبضے کو برقرار رکھا اور انتظار کیا جاتا ہے: پتے اور پریس بھیجنے کی اجازت دے۔."
+  },
+  "enterAddress": {
+    "message": "اپنے پوسٹلؤ کے پتہ میں داخل."
+  },
+  "notAnAddress": {
+    "message": "یہ ویب سائٹ کی طرح نہیں لگتا."
+  },
+  "httpsOnly": {
+    "message": "کسی بھی ایسی چیز کے لیے استعمال کریں جو آپ کی مشین پر نہیں ہے: علامہ اقبال ہر درخواست کے ساتھ سفر کرتے ہیں۔."
+  },
+  "notAllowed": {
+    "message": "اس نشان کو پکڑنے کی اجازت نہیں ہے۔."
+  },
+  "tooMany": {
+    "message": "بہت سے لوگ مختصر عرصے میں قبضہ کر لیتے ہیں۔ ایک منٹ رکو اور پھر کوشش کریں۔."
+  },
+  "answered": {
+    "message": "پوسٹلؤ نے $STATUS$ جواب دیا۔.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "پڑھنے کے لئے کوئی ٹیبل نہیں."
+  },
+  "notWebPage": {
+    "message": "صرف ویب صفحات پر قبضہ کیا جا سکتا ہے۔."
+  },
+  "unreadable": {
+    "message": "صفحہ پڑھ نہ سکے۔ بعض صفحات بلاک توسیع کرتے ہیں۔."
+  },
+  "notPostulo": {
+    "message": "اِس سوال کا جواب لیکن پوسٹلو کے طور پر نہیں ۔ پتہ چیک کریں، اور اس کے سامنے کسی بھی علامت کا صفحہ۔."
+  },
+  "addressTooLong": {
+    "message": "اس صفحے کا پتہ پوسٹلو سے زیادہ طویل ہے، اس حصے کے بغیر بھی \"#‘‘ کے بعد بھی، اس طرح گرفتاری نہیں بھیجی گئی۔ اس کی بجائے پوسٹولو میں شمولیت شامل کریں ۔."
+  },
+  "reviewHint": {
+    "message": "یہ صفحہ سے پڑھی گئی ہے۔ کوئی بھی چیز غلط ہے ۔."
+  },
+  "sendForReview": {
+    "message": "تجزیے کے لیے بھیجیں"
+  },
+  "notConnected": {
+    "message": "ابھی تک ایک پوسٹلو سے وابستہ نہیں: جس چیز پر قبضہ کیا جائے اسے اس براؤزر میں رکھا جاتا ہے۔."
+  },
+  "keep": {
+    "message": "اس براؤزر میں رکھو"
+  },
+  "kept": {
+    "message": "اس براؤزر میں شمولیت. جب بھی تم تیار ہو اسے پوسٹلو کے لئے بھیج دو."
+  },
+  "storageFull": {
+    "message": "اس براؤزر کا ذخیرہ پوسٹو کے لیے مکمل ہے۔ کچھ گرفتار کرنے یا ختم کرنے، پھر دوبارہ کوشش کریں۔."
+  },
+  "alreadyKept": {
+    "message": "آپ نے یہ صفحہ پہلے ہی رکھا تھا اور اسے نہیں بھیجا تھا: یہ آپ کا نسخہ ہے."
+  },
+  "nothingRead": {
+    "message": "اس صفحے سے کچھ نہیں پڑھا جا سکا۔ جب تک آپ اُسے بھیج نہ دیں اُس وقت تک اِس کے بارے میں کچھ نہ سوچیں ۔."
+  },
+  "waiting": {
+    "message": "اب پوسٹول نہیں ہو سکتا۔ اس کو اس براؤزر میں رکھا جاتا ہے اور پوسٹلو جوابات کے فوراً بعد بھیج دیا جاتا ہے۔."
+  },
+  "waitingOffline": {
+    "message": "امتحان کا تبادلہ ہو رہا ہے، تو وہ اس براؤزر میں انتظار کر رہا ہے. یہ ایک بار ہٹ جاتا ہے."
+  },
+  "waitingAccount": {
+    "message": "اس کو اس براؤزر میں رکھا جاتا ہے اور ایک مرتبہ بھیجا جاتا ہے جو درست ہے۔."
+  },
+  "sendNeedsSetup": {
+    "message": "اس براؤزر میں ایک بار آپ کے پوسٹلو کو بھیجا جائے گا."
+  },
+  "capturesTitle": {
+    "message": "اس براؤزر میں لاگ ان"
+  },
+  "capturesIntro": {
+    "message": "پوسٹنگ آپ کو گرفتار کیا، یہاں تک کہ وہ آپ کے پوسٹلورو تک پہنچ گئے۔ جو آپ کو بھیجتے ہیں جیسے ہی پوسٹلؤ تک پہنچ سکتا ہے۔."
+  },
+  "nothingKept": {
+    "message": "اس براؤزر میں کچھ بھی نہیں رکھا جاتا."
+  },
+  "sendAll": {
+    "message": "سب کچھ بھیج نہیں دیا گیا"
+  },
+  "clearSent": {
+    "message": "رسولوں کو صاف صاف پیغام پہنچایا گیا ہے"
+  },
+  "stateKept": {
+    "message": "بھیجے گئے نہیں"
+  },
+  "stateWaiting": {
+    "message": "پوسٹلو کا انتظار"
+  },
+  "stateSent": {
+    "message": "نازل ہوا ہے"
+  },
+  "stateRefused": {
+    "message": "منسوخ"
+  },
+  "tryNow": {
+    "message": "اب کوشش کریں"
+  },
+  "holdBack": {
+    "message": "اسے بجائے یہاں رکھیں"
+  },
+  "deleteConfirm": {
+    "message": "اس قبضے کو حذف؟ یہ پوسٹولو تک نہیں پہنچ سکا لہذا یہ صرف یہاں موجود ہے۔."
+  },
+  "troubleshooting": {
+    "message": "آزمائش اور مشکلات کا سامنا کرنا"
+  },
+  "offlineLabel": {
+    "message": "گویا پوسٹلو تک رسائی نہیں ہو سکتی۔"
+  },
+  "offlineHint": {
+    "message": "جانچنے کے لئے. جب کہ یہ کچھ نہیں ہے، کچھ نہیں بھیجا گیا ہے،."
+  },
+  "offlineOn": {
+    "message": "امتحانی تبدیلی پر ہے: پوسٹلؤ میں کچھ نہیں بھیجا گیا ہے."
+  },
+  "offlineOff": {
+    "message": "امتحانی تبدیلی ختم ہو گئی ہے: اب پوسٹلو کے لئے کیا انتظار کر رہا ہے."
+  },
+  "downloadLog": {
+    "message": "لاگ ان"
+  },
+  "clearLog": {
+    "message": "لاگ صاف کريں"
+  },
+  "logCleared": {
+    "message": "لاگ خالی ہے."
+  },
+  "logHint": {
+    "message": "یہ جاننے کے لئے کہ کچھ کام کیوں نہیں کِیا گیا ۔ اس کا کوئی ثبوت نہیں اور نہ ہی کتابوں سے کچھ حاصل ہوتا ہے۔."
+  },
+  "delete": {
+    "message": "حذف"
+  },
+  "edit": {
+    "message": "مرتب"
+  },
+  "fieldTitle": {
+    "message": "ایوب"
+  },
+  "fieldCompany": {
+    "message": "کمپنی"
+  },
+  "fieldLocation": {
+    "message": "جگہ"
+  },
+  "fieldRemote": {
+    "message": "کام کا انتظام"
+  },
+  "fieldEmployment": {
+    "message": "ملازمت کی نوعیت"
+  },
+  "fieldSalaryFrom": {
+    "message": "مٹی سے"
+  },
+  "fieldSalaryTo": {
+    "message": "سریاری"
+  },
+  "fieldCurrency": {
+    "message": "کرسر"
+  },
+  "fieldPeriod": {
+    "message": "بند"
+  },
+  "fieldCloses": {
+    "message": "کالنگ"
+  },
+  "fieldDescription": {
+    "message": "تفصیل"
+  },
+  "remoteOnsite": {
+    "message": "جگہ"
+  },
+  "remoteHybrid": {
+    "message": "حیدر"
+  },
+  "remoteRemote": {
+    "message": "دور دراز"
+  },
+  "employmentFullTime": {
+    "message": "بند"
+  },
+  "employmentPartTime": {
+    "message": "حصہ وقت"
+  },
+  "employmentContract": {
+    "message": "غیر متصل"
+  },
+  "employmentFreelance": {
+    "message": "آزادی"
+  },
+  "employmentInternship": {
+    "message": "آمدورفت"
+  },
+  "employmentApprenticeship": {
+    "message": "پیشہ ورانہ"
+  },
+  "periodYear": {
+    "message": "پیر سال"
+  },
+  "periodMonth": {
+    "message": "پیر ماہ"
+  },
+  "periodDay": {
+    "message": "پر دن"
+  },
+  "periodHour": {
+    "message": "پیر گھنٹے"
+  },
+  "postingsFound": {
+    "message": "یہ صفحہ $COUNT$ کی فہرست ہے.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "اُن کی دیکھ‌بھال کریں ۔ ہر شخص اپنے قبضے میں ہوجاتا ہے، جسے دوبارہ پوسٹلو پڑھ لیتا ہے۔."
+  },
+  "tickAll": {
+    "message": "تمام"
+  },
+  "tickNone": {
+    "message": "کچھ نہیں"
+  },
+  "nothingTicked": {
+    "message": "کچھ بھی نہیں ہے."
+  },
+  "keptMany": {
+    "message": "$COUNT$ اس براؤزر میں قبضہ رکھتے ہیں۔.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ جائزہ لینے کے لئے بھیجے گئے گرفتار.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ انکار کر دیا گیا؛ اخذ کردہ فہرست میں بتایا گیا ہے کہ کیوں.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "پہلے کیپچر کیا گیا: $WHEN$ سے آپ کے اشتہارات میں $TITLE$ کے نام سے موجود ہے۔",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "$WHEN$ سے پہلے بھی پوسٹلو میں جائزہ لینے کا انتظار کر چکے ہیں۔.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "اس کمپنی میں اس عنوان کا ایک اشتہار موجود ہے: $TITLE$۔",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "پہلے قبضہ کر لیا"
+  },
+  "knownOpen": {
+    "message": "پوسٹلو میں اسے کھولیں"
+  },
+  "pictureOffer": {
+    "message": "پوسٹو پورے صفحہ کی تصویر رکھ سکتا ہے جیسا کہ آپ دیکھ رہے ہیں، دستخط یا نہیں. ایک بھیجو؟?"
+  },
+  "pictureSend": {
+    "message": "تصویر بھیجو"
+  },
+  "pictureSkip": {
+    "message": "کوئی تصویر"
+  },
+  "pictureDrawing": {
+    "message": "صفحہ پر تصویر بنام:"
+  },
+  "pictureSending": {
+    "message": "تصویر بھیجنے والی.."
+  },
+  "pictureSent": {
+    "message": "تصویر بھیجی گئی۔."
+  },
+  "pictureNotKept": {
+    "message": "پوسٹلؤ نے تصویر کو برقرار نہیں رکھا۔ خود پر قبضہ کرنا ناگزیر ہے۔."
+  },
+  "pictureTooBig": {
+    "message": "تصویر کے طور پر بھیجنے کا صفحہ بہت بڑا ہے۔."
+  },
+  "pictureFailed": {
+    "message": "صفحہ کو کھینچنے کے قابل نہیں تھا۔ کیا یہ اب بھی آپ نے قبضہ کر لیا ہے؟?"
+  },
+  "languageLabel": {
+    "message": "زبان"
+  },
+  "languageFollow": {
+    "message": "صارف کی پیروی کریں"
+  },
+  "languageHint": {
+    "message": "ہر زبان مگر انگریزی ایک ڈرافٹ ہے جسے مقرر نے ابھی تک کوئی تجزیہ نہیں کیا۔ محفوظ کیے بغیر ایک ہی وقت میں اثر انداز ہوتا ہے۔."
+  },
+  "reviewPageTitle": {
+    "message": "قبضہ کا اعادہ کریں"
+  },
+  "tokenIs": {
+    "message": "$OWNER$ کے لیے ٹوکن “$NAME$”۔",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "$OWNER$ کے لیے ٹوکن “$NAME$” ($SCOPES$)۔",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "tokenRefused": {
+    "message": "Postulo یہ ٹوکن قبول نہیں کرتا۔ اسے $PATH$ کے تحت چیک کریں۔",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  }
+}

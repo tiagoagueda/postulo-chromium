@@ -519,10 +519,10 @@
     "message": "Revisar unha captura"
   },
   "noCredentialsInAddress": {
-    "message": "Deixar o nome de usuario e o contrasinal fóra do enderezo: nunca se conectaría, e o contrasinal mostraríase no popup."
+    "message": "Deixa o nome de usuario e o contrasinal fóra do enderezo: nunca conectaría e o contrasinal mostraríase na xanela emerxente."
   },
   "tokenTooWide": {
-    "message": "Tamén pode ser: $SCOPES$ A extensión só necesita o alcance de capturas: emitir un token con ese alcance e revogar este.",
+    "message": "Este token tamén pode: $SCOPES$. A extensión só precisa o ámbito captures: emite un token só con ese ámbito e revoga este.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "O enderezo de Postulo non estaba permitido, polo que non se enviou nada. A captura mantense e espera: permite que o enderezo e prema Enviar de novo."
+    "message": "Non se permitiu o enderezo do Postulo, así que non se enviou nada. A captura consérvase e agarda: permite o enderezo e preme Enviar de novo."
   }
 }
