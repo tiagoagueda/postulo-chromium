@@ -3,10 +3,12 @@
     python scripts/languages.py            # rewrite src/lib/languages.js
     python scripts/languages.py --check    # fail if that file is not what the core says
 
-Postulo offers a language once its catalogue is started (`translated` above 0 in the core's
-`src/postulo/locale/status.json`). The extension follows the core release it is released
-beside: every language the core has started, in draft, English included. `en-GB`, the
-source, has no row there and is always in. An administrator's narrowing of a site's list
+Postulo's roll-out is the core's `src/postulo/locale/status.json`. The extension follows the
+core release it is released beside: every language the core has a catalogue for, started or
+not, English included, as every component does (each scaffolds all the core's languages). A
+catalogue Weblate has not filled yet is left out of the package by the build
+(scripts/locales.mjs), so it ships once it is complete. `en-GB`, the source, has no row there
+and is always in. An administrator's narrowing of a site's list
 plays no part, and neither does how far a catalogue has got; the extension carries all its
 keys in every language at once, as drafts (test/i18n.test.mjs).
 
@@ -79,12 +81,12 @@ def core_languages():
 
 
 def started(core) -> list[str]:
-    """The source, then every code whose catalogue has at least one translation."""
+    """The source, then every code the core has a catalogue for, started or not."""
     status = json.loads((CORE / "src" / "postulo" / "locale" / "status.json").read_text("utf-8"))
-    codes = [core.SOURCE] + [code for code, row in status.items() if row["translated"] > 0]
+    codes = [core.SOURCE] + list(status)
     unknown = [code for code in codes if code not in core.NATIVE_NAMES]
     if unknown:
-        raise SystemExit(f"The core started {unknown} but has no own name for them.")
+        raise SystemExit(f"The core has a catalogue for {unknown} but no own name for them.")
     return codes
 
 

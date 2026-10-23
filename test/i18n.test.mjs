@@ -7,7 +7,7 @@ import { test } from "node:test";
 const SOURCE = "src";
 const LOCALES = join(SOURCE, "_locales");
 
-// English, plus every language the core has started: src/lib/languages.js, which
+// English, plus every language the core has a catalogue for: src/lib/languages.js, which
 // scripts/languages.py writes from the core's roll-out (the codes the core spells
 // differently, and the rule for them, are in that script). Each is a BCP 47 tag in its
 // canonical form, the way Postulo writes one (#12).
