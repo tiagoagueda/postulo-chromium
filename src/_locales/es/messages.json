@@ -9,7 +9,7 @@
     "message": "Ajustes"
   },
   "setUp": {
-    "message": "Configurarla"
+    "message": "Configurar"
   },
   "capture": {
     "message": "Capturar este anuncio"
@@ -50,10 +50,10 @@
     "message": "Ajustes de Postulo"
   },
   "instanceLabel": {
-    "message": "Tu Postulo"
+    "message": "Su Postulo"
   },
   "instanceHint": {
-    "message": "La dirección en la que lo abres. https, salvo que funcione en este equipo."
+    "message": "La dirección en la que lo abre. https, salvo que se ejecute en este equipo."
   },
   "tokenLabel": {
     "message": "Token de API"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Pega el token que te mostró Postulo."
+    "message": "Pegue el token que Postulo le mostró."
   },
   "saved": {
     "message": "Guardado. El botón enviará ahora las páginas a $HOST$.",
@@ -104,7 +104,7 @@
     "message": "Preguntando a Postulo de quién es este token…"
   },
   "addressRefused": {
-    "message": "Se ha denegado el permiso para llegar a esa dirección."
+    "message": "Se denegó el permiso para acceder a esa dirección."
   },
   "tokenIs": {
     "message": "Token «$NAME$» de $OWNER$.",
@@ -135,16 +135,16 @@
     "message": "No tiene el ámbito captures, así que no puede capturar."
   },
   "enterAddress": {
-    "message": "Escribe la dirección de tu Postulo."
+    "message": "Introduzca la dirección de su Postulo."
   },
   "notAnAddress": {
     "message": "Eso no parece una dirección web."
   },
   "httpsOnly": {
-    "message": "Usa https para todo lo que no esté en tu propio equipo: el token viaja con cada petición."
+    "message": "Utilice https para cualquier cosa que no esté en su propia máquina: el token viaja con cada solicitud."
   },
   "tokenRefused": {
-    "message": "Postulo no acepta este token. Compruébalo en $PATH$.",
+    "message": "Postulo no acepta este token. Compruébelo en $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -155,10 +155,10 @@
     "message": "Este token no tiene permiso para capturar."
   },
   "tooMany": {
-    "message": "Demasiadas capturas en poco tiempo. Espera un minuto y vuelve a intentarlo."
+    "message": "Demasiadas capturas en poco tiempo. Espere un minuto y vuelva a intentarlo."
   },
   "answered": {
-    "message": "Postulo ha respondido $STATUS$.",
+    "message": "Postulo respondió $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -426,7 +426,7 @@
     "message": "Abrir en Postulo"
   },
   "notPostulo": {
-    "message": "Esa dirección ha respondido, pero no como Postulo. Comprueba la dirección y cualquier página de inicio de sesión que haya delante."
+    "message": "Esa dirección respondió, pero no como Postulo. Compruebe la dirección y cualquier página de inicio de sesión delante de ella."
   },
   "addressTooLong": {
     "message": "La dirección de esta página es más larga de lo que admite Postulo, incluso sin la parte que sigue a «#», así que la captura no se ha enviado. Añade el anuncio en Postulo a mano."
@@ -519,10 +519,10 @@
     "message": "Revisar una captura"
   },
   "noCredentialsInAddress": {
-    "message": "Deje el nombre de usuario y la contraseña fuera de la dirección: nunca se conectará, y la contraseña se mostrará en el popup."
+    "message": "Deje el nombre de usuario y la contraseña fuera de la dirección: nunca se conectaría, y la contraseña se mostraría en la ventana emergente."
   },
   "tokenTooWide": {
-    "message": "Esta ficha también puede: $SCOPES$. La extensión sólo necesita el alcance de capturas: expedir un token con ese alcance solo y revocar este.",
+    "message": "Este token también puede: $SCOPES$. La extensión solo necesita el ámbito de capturas: cree un token solo con ese ámbito y revoque este.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "No se permitió la dirección de Postulo, así que nada fue enviado. La captura se mantiene y espera: permita la dirección y pulse Enviar de nuevo."
+    "message": "No se permitió la dirección de Postulo, así que no se envió nada. La captura se conserva a la espera: permita la dirección y vuelva a pulsar Enviar."
   }
 }

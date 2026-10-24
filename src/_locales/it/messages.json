@@ -9,7 +9,7 @@
     "message": "Impostazioni"
   },
   "setUp": {
-    "message": "Configurala"
+    "message": "Configura"
   },
   "capture": {
     "message": "Acquisisci questo annuncio"
@@ -53,7 +53,7 @@
     "message": "Il tuo Postulo"
   },
   "instanceHint": {
-    "message": "L'indirizzo a cui lo apri. https, a meno che non giri su questo computer."
+    "message": "L'indirizzo a cui lo apri. https, a meno che non sia in esecuzione su questa macchina."
   },
   "tokenLabel": {
     "message": "Token API"
@@ -104,10 +104,10 @@
     "message": "Chiedo a Postulo di chi è questo token…"
   },
   "addressRefused": {
-    "message": "Il permesso di raggiungere quell'indirizzo è stato negato."
+    "message": "Il permesso di raggiungere quell'indirizzo è stato rifiutato."
   },
   "tokenIs": {
-    "message": "Token «$NAME$» di $OWNER$.",
+    "message": "Token «$NAME$» per $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Token «$NAME$» di $OWNER$ ($SCOPES$).",
+    "message": "Token «$NAME$» per $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -138,10 +138,10 @@
     "message": "Inserisci l'indirizzo del tuo Postulo."
   },
   "notAnAddress": {
-    "message": "Non sembra un indirizzo web."
+    "message": "Questo non sembra un indirizzo web."
   },
   "httpsOnly": {
-    "message": "Usa https per tutto ciò che non è sul tuo computer: il token viaggia con ogni richiesta."
+    "message": "Usa https per tutto ciò che non si trova sulla tua macchina: il token viaggia con ogni richiesta."
   },
   "tokenRefused": {
     "message": "Postulo non accetta questo token. Controllalo in $PATH$.",
@@ -426,7 +426,7 @@
     "message": "Aprila in Postulo"
   },
   "notPostulo": {
-    "message": "Quell'indirizzo ha risposto, ma non come Postulo. Controlla l'indirizzo ed eventuali pagine di accesso davanti a esso."
+    "message": "Quell'indirizzo ha risposto, ma non come Postulo. Controlla l'indirizzo ed eventuali pagine di accesso che lo precedono."
   },
   "addressTooLong": {
     "message": "L'indirizzo di questa pagina è più lungo di quanto Postulo accetti, anche senza la parte dopo «#», quindi l'acquisizione non è stata inviata. Aggiungi invece l'annuncio a mano in Postulo."
@@ -519,10 +519,10 @@
     "message": "Rivedi un'acquisizione"
   },
   "noCredentialsInAddress": {
-    "message": "Lasciare il nome utente e la password fuori dall'indirizzo: non si connetterebbe mai, e la password sarebbe mostrata nel popup."
+    "message": "Togli nome utente e password dall'indirizzo: la connessione non riuscirebbe mai e la password verrebbe mostrata nel popup."
   },
   "tokenTooWide": {
-    "message": "Questo segno può anche: $SCOPES$. L'estensione ha bisogno solo delle catture: emettere un token con quel solo scopo e revocarlo.",
+    "message": "Questo token può anche: $SCOPES$. All'estensione serve solo l'ambito delle acquisizioni: crea un token con solo quell'ambito e revoca questo.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "L'indirizzo di Postulo non era consentito, quindi niente è stato inviato. La cattura è mantenuta e aspetta: consentire l'indirizzo e premere Invia di nuovo."
+    "message": "L'indirizzo di Postulo non è stato consentito, quindi non è stato inviato nulla. L'acquisizione viene conservata e resta in attesa: consenti l'indirizzo e premi di nuovo Invia."
   }
 }

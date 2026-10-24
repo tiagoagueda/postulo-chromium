@@ -47,10 +47,10 @@
     "message": "Inzerát bez názvu"
   },
   "optionsTitle": {
-    "message": "Nastavení Postula"
+    "message": "Nastavení Postulo"
   },
   "instanceLabel": {
-    "message": "Váš Postulo"
+    "message": "Vaše Postulo"
   },
   "instanceHint": {
     "message": "Adresa, na které ho otevíráte. https, pokud neběží na tomto počítači."
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Vložte token, který vám Postulo ukázal."
+    "message": "Vložte token, který vám Postulo zobrazilo."
   },
   "saved": {
     "message": "Uloženo. Tlačítko teď bude posílat stránky na $HOST$.",
@@ -101,10 +101,10 @@
     "message": "Uloženo, ale prohlížeč odmítl oprávnění k přístupu; povolte ho v oprávněních rozšíření."
   },
   "asking": {
-    "message": "Ptáme se Postula, čí je tento token…"
+    "message": "Zjišťuji u Postulo, komu tento token patří…"
   },
   "addressRefused": {
-    "message": "Oprávnění k přístupu na tuto adresu bylo odmítnuto."
+    "message": "Přístup k této adrese byl zamítnut."
   },
   "tokenIs": {
     "message": "Token „$NAME$“ pro $OWNER$.",
@@ -135,13 +135,13 @@
     "message": "Chybí mu rozsah captures, takže nemůže zachytávat."
   },
   "enterAddress": {
-    "message": "Zadejte adresu svého Postula."
+    "message": "Zadejte adresu svého Postulo."
   },
   "notAnAddress": {
-    "message": "Tohle nevypadá jako webová adresa."
+    "message": "To nevypadá jako webová adresa."
   },
   "httpsOnly": {
-    "message": "Pro vše, co neběží na vašem vlastním počítači, použijte https: token putuje s každým požadavkem."
+    "message": "Pro vše, co není na vašem vlastním počítači, použijte https: token se posílá s každým požadavkem."
   },
   "tokenRefused": {
     "message": "Postulo tento token nepřijímá. Zkontrolujte ho v $PATH$.",
@@ -152,13 +152,13 @@
     }
   },
   "notAllowed": {
-    "message": "Tento token nesmí zachytávat."
+    "message": "Tento token nemá oprávnění k zachycování."
   },
   "tooMany": {
     "message": "Příliš mnoho zachycení v krátké době. Počkejte minutu a zkuste to znovu."
   },
   "answered": {
-    "message": "Postulo odpověděl $STATUS$.",
+    "message": "Postulo odpovědělo $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -426,7 +426,7 @@
     "message": "Otevřít v Postulu"
   },
   "notPostulo": {
-    "message": "Tato adresa odpověděla, ale ne jako Postulo. Zkontrolujte adresu a případnou přihlašovací stránku před ní."
+    "message": "Adresa odpověděla, ale ne jako Postulo. Zkontrolujte adresu a případnou přihlašovací stránku, která je před ní."
   },
   "addressTooLong": {
     "message": "Adresa této stránky je delší, než Postulo přijímá, i bez části za „#“, proto se zachycení neodeslalo. Přidejte inzerát do Postulu ručně."
@@ -519,10 +519,10 @@
     "message": "Kontrola zachycení"
   },
   "noCredentialsInAddress": {
-    "message": "Uživatelské jméno a heslo vynechte z adresy: nikdy se nespojí a heslo bude zobrazeno v popu."
+    "message": "Uživatelské jméno a heslo do adresy nepište: spojení by se nikdy nenavázalo a heslo by se zobrazilo ve vyskakovacím okně."
   },
   "tokenTooWide": {
-    "message": "Tento symbol může také: $SCOPES$. Prodloužení vyžaduje pouze rozsah zachycení: vydejte token pouze s tímto rozsahem a tento.",
+    "message": "Tento token umí také: $SCOPES$. Rozšíření potřebuje pouze rozsah pro zachycování: vydejte token jen s tímto rozsahem a tento odvolejte.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Adresa Postula nebyla povolena, takže nic nebylo posláno. Zachycení je zachováno a čeká: povolte adresu a stiskněte Odeslat znovu."
+    "message": "Adresa vašeho Postulo nebyla povolena, takže se nic neodeslalo. Zachycení zůstává uloženo a čeká: povolte adresu a znovu stiskněte Odeslat."
   }
 }

@@ -12,7 +12,7 @@
     "message": "Seadista"
   },
   "capture": {
-    "message": "Püüa see kuulutus"
+    "message": "Jäädvusta see kuulutus"
   },
   "captureHint": {
     "message": "Lehte loetakse siin, teie brauseris. Midagi ei saadeta enne, kui te seda ütlete."
@@ -53,10 +53,10 @@
     "message": "Teie Postulo"
   },
   "instanceHint": {
-    "message": "Aadress, millelt te selle avate. https, välja arvatud juhul, kui see töötab selles arvutis."
+    "message": "Aadress, millel te selle avate. https, välja arvatud juhul, kui see töötab selles arvutis."
   },
   "tokenLabel": {
-    "message": "API tõend"
+    "message": "API-tõend"
   },
   "tokenHint": {
     "message": "Luuakse Postulos jaotises $PATH$, ulatusega $SCOPE$ ja mitte millegi muuga. Seda hoitakse ainult selles seadmes ja seda ei sünkroonita kunagi brauserikonto kaudu.",
@@ -70,7 +70,7 @@
     }
   },
   "tokenPath": {
-    "message": "Seaded → API tõendid"
+    "message": "Seaded → API-tõendid"
   },
   "save": {
     "message": "Salvesta"
@@ -101,10 +101,10 @@
     "message": "Salvestatud, kuid brauser keeldus sellele ligipääsu lubamast; lubage see laienduse õigustes."
   },
   "asking": {
-    "message": "Postulolt küsitakse, kellele see tõend kuulub…"
+    "message": "Küsin Postulolt, kelle tõend see on…"
   },
   "addressRefused": {
-    "message": "Luba sellele aadressile jõuda keelati."
+    "message": "Sellele aadressile pääsemise luba ei antud."
   },
   "tokenIs": {
     "message": "Tõend „$NAME$“ kasutajale $OWNER$.",
@@ -141,7 +141,7 @@
     "message": "See ei näe välja nagu veebiaadress."
   },
   "httpsOnly": {
-    "message": "Kasutage https-i kõige jaoks, mis ei ole teie enda arvutis: tõend liigub iga päringuga kaasa."
+    "message": "Kasutage https-i kõige jaoks, mis ei asu teie enda arvutis: tõend liigub kaasa iga päringuga."
   },
   "tokenRefused": {
     "message": "Postulo ei aktsepteeri seda tõendit. Kontrollige seda jaotises $PATH$.",
@@ -152,13 +152,13 @@
     }
   },
   "notAllowed": {
-    "message": "Sellel tõendil ei ole lubatud püüda."
+    "message": "Sellel tõendil puudub jäädvustamise õigus."
   },
   "tooMany": {
-    "message": "Liiga palju püüdmisi lühikese aja jooksul. Oodake minut ja proovige uuesti."
+    "message": "Liiga palju jäädvustusi lühikese aja jooksul. Oodake minut ja proovige uuesti."
   },
   "answered": {
-    "message": "Postulo vastas $STATUS$.",
+    "message": "Postulo vastas: $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -426,7 +426,7 @@
     "message": "Ava Postulos"
   },
   "notPostulo": {
-    "message": "See aadress vastas, kuid mitte Postulona. Kontrollige aadressi ja selle ees olevat sisselogimislehte."
+    "message": "See aadress vastas, kuid mitte nagu Postulo. Kontrollige aadressi ja selle ees olevat sisselogimislehte."
   },
   "addressTooLong": {
     "message": "Selle lehe aadress on pikem, kui Postulo vastu võtab, isegi ilma „#“ järgse osata, seega püüdmist ei saadetud. Lisage kuulutus Postulosse käsitsi."
@@ -519,10 +519,10 @@
     "message": "Püütud kuulutuse ülevaatamine"
   },
   "noCredentialsInAddress": {
-    "message": "Jäta kasutajanimi ja parool aadressist välja: see ei ühenduks kunagi ja parooli näidatakse hüpikmenüüs."
+    "message": "Jätke kasutajanimi ja parool aadressist välja: sellega ei saaks kunagi ühendust ja parool kuvataks hüpikaknas."
   },
   "tokenTooWide": {
-    "message": "See märk võib ka: $SCOPES$. Laiendus vajab ainult pildistamise ulatust: väljastab ainult selle ulatusega märgi ja tühistab selle.",
+    "message": "See tõend lubab ka: $SCOPES$. Laiendus vajab ainult jäädvustuste õigust: väljastage tõend ainult selle õigusega ja tühistage see.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulo aadress ei olnud lubatud, seega ei saadetud midagi. Salvestamine säilitatakse ja ootab: lubage aadress ja vajutage nuppu Saada uuesti."
+    "message": "Postulo aadressi ei lubatud, seega ei saadetud midagi. Jäädvustus on alles ja ootab: lubage aadress ja vajutage uuesti „Saada“."
   }
 }

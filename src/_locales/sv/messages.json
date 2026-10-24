@@ -47,7 +47,7 @@
     "message": "Annons utan titel"
   },
   "optionsTitle": {
-    "message": "Inställningar för Postulo"
+    "message": "Postulo-inställningar"
   },
   "instanceLabel": {
     "message": "Din Postulo"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Klistra in token som Postulo visade dig."
+    "message": "Klistra in den token som Postulo visade dig."
   },
   "saved": {
     "message": "Sparat. Knappen skickar nu sidor till $HOST$.",
@@ -101,10 +101,10 @@
     "message": "Sparat, men webbläsaren nekade åtkomst; tillåt det i tilläggets behörigheter."
   },
   "asking": {
-    "message": "Frågar Postulo vems den här token är …"
+    "message": "Frågar Postulo vem den här token tillhör…"
   },
   "addressRefused": {
-    "message": "Tillåtelse att nå den adressen nekades."
+    "message": "Behörighet att nå den adressen nekades."
   },
   "lacksCaptures": {
     "message": "Den saknar behörigheten captures, så den kan inte fånga in."
@@ -116,10 +116,10 @@
     "message": "Det ser inte ut som en webbadress."
   },
   "httpsOnly": {
-    "message": "Använd https för allt som inte finns på din egen dator: token följer med varje förfrågan."
+    "message": "Använd https för allt som inte finns på din egen dator: token skickas med varje förfrågan."
   },
   "tokenRefused": {
-    "message": "Postulo godtar inte den här token. Kontrollera den under $PATH$.",
+    "message": "Postulo godkänner inte den här token. Kontrollera den under $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -401,7 +401,7 @@
     "message": "Öppna i Postulo"
   },
   "notPostulo": {
-    "message": "Adressen svarade, men inte som Postulo. Kontrollera adressen och eventuell inloggningssida framför den."
+    "message": "Den adressen svarade, men inte som Postulo. Kontrollera adressen och eventuella inloggningssidor framför den."
   },
   "addressTooLong": {
     "message": "Sidans adress är längre än Postulo godtar, även utan delen efter ”#”, så fångsten skickades inte. Lägg i stället till annonsen i Postulo manuellt."

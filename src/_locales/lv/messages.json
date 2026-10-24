@@ -56,7 +56,7 @@
     "message": "Adrese, kurā to atverat. https, ja vien tas nedarbojas šajā datorā."
   },
   "tokenLabel": {
-    "message": "API žetons"
+    "message": "API marķieris"
   },
   "tokenHint": {
     "message": "Tiek izveidots Postulo sadaļā $PATH$ ar tvērumu $SCOPE$ un neko vairāk. Tas tiek glabāts tikai šajā ierīcē un nekad netiek sinhronizēts ar pārlūka kontu.",
@@ -70,7 +70,7 @@
     }
   },
   "tokenPath": {
-    "message": "Iestatījumi → API žetoni"
+    "message": "Iestatījumi → API marķieri"
   },
   "save": {
     "message": "Saglabāt"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Ielīmējiet žetonu, ko jums parādīja Postulo."
+    "message": "Ielīmējiet marķieri, ko jums parādīja Postulo."
   },
   "saved": {
     "message": "Saglabāts. Poga tagad sūtīs lapas uz $HOST$.",
@@ -101,13 +101,13 @@
     "message": "Saglabāts, bet pārlūks atteica atļauju to sasniegt; atļaujiet to paplašinājuma atļaujās."
   },
   "asking": {
-    "message": "Postulo tiek jautāts, kam pieder šis žetons…"
+    "message": "Jautā Postulo, kam pieder šis marķieris…"
   },
   "addressRefused": {
     "message": "Atļauja sasniegt šo adresi tika atteikta."
   },
   "tokenIs": {
-    "message": "Žetons “$NAME$” lietotājam $OWNER$.",
+    "message": "Marķieris “$NAME$” lietotājam $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Žetons “$NAME$” lietotājam $OWNER$ ($SCOPES$).",
+    "message": "Marķieris “$NAME$” lietotājam $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -135,16 +135,16 @@
     "message": "Tam trūkst tvēruma captures, tāpēc tas nevar tvert."
   },
   "enterAddress": {
-    "message": "Ievadiet sava Postulo adresi."
+    "message": "Ievadiet Postulo adresi."
   },
   "notAnAddress": {
     "message": "Tas neizskatās pēc tīmekļa adreses."
   },
   "httpsOnly": {
-    "message": "Izmantojiet https visam, kas nav jūsu datorā: žetons ceļo līdzi katram pieprasījumam."
+    "message": "Izmantojiet https visam, kas nav jūsu paša datorā: marķieris tiek sūtīts līdz ar katru pieprasījumu."
   },
   "tokenRefused": {
-    "message": "Postulo nepieņem šo žetonu. Pārbaudiet to sadaļā $PATH$.",
+    "message": "Postulo nepieņem šo marķieri. Pārbaudiet to sadaļā $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -152,10 +152,10 @@
     }
   },
   "notAllowed": {
-    "message": "Šim žetonam nav atļauts tvert."
+    "message": "Šim marķierim nav atļauts tvert."
   },
   "tooMany": {
-    "message": "Pārāk daudz tvērumu īsā laikā. Uzgaidiet minūti un mēģiniet vēlreiz."
+    "message": "Pārāk daudz tvērumu īsā laikā. Pagaidiet minūti un mēģiniet vēlreiz."
   },
   "answered": {
     "message": "Postulo atbildēja $STATUS$.",
@@ -426,7 +426,7 @@
     "message": "Atvērt Postulo"
   },
   "notPostulo": {
-    "message": "Šī adrese atbildēja, bet ne kā Postulo. Pārbaudiet adresi un jebkuru pieteikšanās lapu tās priekšā."
+    "message": "Šī adrese atbildēja, bet ne kā Postulo. Pārbaudiet adresi un jebkuru pierakstīšanās lapu, kas atrodas pirms tās."
   },
   "addressTooLong": {
     "message": "Šīs lapas adrese ir garāka, nekā Postulo pieņem, pat bez daļas aiz “#”, tāpēc tvērums netika nosūtīts. Pievienojiet sludinājumu Postulo manuāli."
@@ -519,10 +519,10 @@
     "message": "Tvēruma pārskatīšana"
   },
   "noCredentialsInAddress": {
-    "message": "Atstājiet lietotāja vārdu un paroli no adreses: tas nekad nesavienotos, un parole tiktu parādīta izlecošajā."
+    "message": "Neiekļaujiet adresē lietotājvārdu un paroli: savienojums nekad neizdotos, un parole tiktu parādīta uznirstošajā logā."
   },
   "tokenTooWide": {
-    "message": "Šī marķierierīce var arī: $SCOPES$. Paplašinājumam ir nepieciešams tikai tvērums: izdot atzīmi tikai ar šo darbības jomu un atcelt šo.",
+    "message": "Šis marķieris var arī: $SCOPES$. Paplašinājumam vajadzīga tikai tvērumu darbības joma: izsniedziet marķieri tikai ar šo darbības jomu un atsauciet šo.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulo adrese nebija atļauta, tāpēc nekas netika nosūtīts. Notveršana tiek turēta un gaida: atļaujiet adresi un nospiediet Sūtīt vēlreiz."
+    "message": "Postulo adrese netika atļauta, tāpēc nekas netika nosūtīts. Tvērums ir saglabāts un gaida: atļaujiet adresi un vēlreiz nospiediet “Sūtīt”."
   }
 }

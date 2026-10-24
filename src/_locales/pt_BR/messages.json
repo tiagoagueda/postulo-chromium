@@ -53,7 +53,7 @@
     "message": "Seu Postulo"
   },
   "instanceHint": {
-    "message": "O endereço em que você o abre. https, a menos que ele rode neste computador."
+    "message": "O endereço em que você o abre. https, a menos que ele rode nesta máquina."
   },
   "tokenLabel": {
     "message": "Token de API"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Cole o token que o Postulo mostrou para você."
+    "message": "Cole o token que o Postulo mostrou a você."
   },
   "saved": {
     "message": "Salvo. Agora o botão vai enviar as páginas para $HOST$.",
@@ -141,10 +141,10 @@
     "message": "Isso não parece um endereço da web."
   },
   "httpsOnly": {
-    "message": "Use https para tudo o que não estiver no seu próprio computador: o token viaja com cada solicitação."
+    "message": "Use https para tudo o que não estiver na sua própria máquina: o token vai junto em cada requisição."
   },
   "tokenRefused": {
-    "message": "O Postulo não aceita este token. Confira-o em $PATH$.",
+    "message": "O Postulo não aceita este token. Verifique-o em $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -155,7 +155,7 @@
     "message": "Este token não tem permissão para capturar."
   },
   "tooMany": {
-    "message": "Capturas demais em pouco tempo. Espere um minuto e tente de novo."
+    "message": "Muitas capturas em pouco tempo. Espere um minuto e tente de novo."
   },
   "answered": {
     "message": "O Postulo respondeu $STATUS$.",
@@ -426,7 +426,7 @@
     "message": "Abrir no Postulo"
   },
   "notPostulo": {
-    "message": "Esse endereço respondeu, mas não como um Postulo. Verifique o endereço e qualquer página de login na frente dele."
+    "message": "Esse endereço respondeu, mas não como o Postulo. Verifique o endereço e qualquer página de login na frente dele."
   },
   "addressTooLong": {
     "message": "O endereço desta página é maior do que o Postulo aceita, mesmo sem a parte depois do “#”, então a captura não foi enviada. Adicione a vaga no Postulo manualmente."
@@ -519,10 +519,10 @@
     "message": "Revisar uma captura"
   },
   "noCredentialsInAddress": {
-    "message": "Deixe o nome de usuário e senha fora do endereço: ele nunca se conectaria, e a senha seria mostrada no popup."
+    "message": "Deixe o nome de usuário e a senha fora do endereço: com eles, a conexão nunca funcionaria e a senha apareceria no pop-up."
   },
   "tokenTooWide": {
-    "message": "Este símbolo também pode: $SCOPES$. A extensão só precisa do escopo das capturas: emitir um símbolo com esse escopo sozinho e revogar este.",
+    "message": "Este token também pode: $SCOPES$. A extensão só precisa do escopo de capturas: emita um token apenas com esse escopo e revogue este.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "O endereço de Postulo não foi permitido, então nada foi enviado. A captura é mantida e espera: permita o endereço e pressione Enviar novamente."
+    "message": "O endereço do seu Postulo não foi permitido, então nada foi enviado. A captura foi mantida e está aguardando: permita o endereço e clique em Enviar novamente."
   }
 }

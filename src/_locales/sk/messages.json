@@ -47,10 +47,10 @@
     "message": "Inzerát bez názvu"
   },
   "optionsTitle": {
-    "message": "Nastavenia Postula"
+    "message": "Nastavenia Postulo"
   },
   "instanceLabel": {
-    "message": "Váš Postulo"
+    "message": "Vaše Postulo"
   },
   "instanceHint": {
     "message": "Adresa, na ktorej ho otvárate. https, pokiaľ nebeží na tomto počítači."
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Vložte token, ktorý vám ukázal Postulo."
+    "message": "Vložte token, ktorý vám Postulo zobrazilo."
   },
   "saved": {
     "message": "Uložené. Tlačidlo teraz bude posielať stránky na $HOST$.",
@@ -101,7 +101,7 @@
     "message": "Uložené, ale prehliadač odmietol povolenie na prístup; povoľte ho v povoleniach rozšírenia."
   },
   "asking": {
-    "message": "Postulo sa pýta, komu patrí tento token…"
+    "message": "Zisťujem v Postulo, komu patrí tento token…"
   },
   "addressRefused": {
     "message": "Povolenie na prístup k tejto adrese bolo zamietnuté."
@@ -135,13 +135,13 @@
     "message": "Chýba mu rozsah captures, takže nemôže zachytávať."
   },
   "enterAddress": {
-    "message": "Zadajte adresu svojho Postula."
+    "message": "Zadajte adresu vášho Postulo."
   },
   "notAnAddress": {
-    "message": "Toto nevyzerá ako webová adresa."
+    "message": "To nevyzerá ako webová adresa."
   },
   "httpsOnly": {
-    "message": "Používajte https pre všetko, čo nie je na vašom vlastnom počítači: token putuje s každou požiadavkou."
+    "message": "Pre všetko, čo nie je na vašom vlastnom počítači, použite https: token sa posiela s každou požiadavkou."
   },
   "tokenRefused": {
     "message": "Postulo tento token neprijíma. Skontrolujte ho v časti $PATH$.",
@@ -152,13 +152,13 @@
     }
   },
   "notAllowed": {
-    "message": "Tento token nemá povolené zachytávať."
+    "message": "Tento token nemá povolenie zachytávať."
   },
   "tooMany": {
     "message": "Príliš veľa zachytení za krátky čas. Počkajte minútu a skúste to znova."
   },
   "answered": {
-    "message": "Postulo odpovedal $STATUS$.",
+    "message": "Postulo odpovedalo $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -530,6 +530,6 @@
     "message": "Meno používateľa a heslo do adresy nezadávajte: spojenie by sa nikdy nenadviazalo a heslo by sa zobrazilo vo vyskakovacom okne."
   },
   "permissionRefused": {
-    "message": "Adresa Postula nebola povolená, takže sa nič neodoslalo. Zachytenie zostáva uložené a čaká: povoľte adresu a znova stlačte Odoslať."
+    "message": "Adresa vášho Postulo nebola povolená, takže sa nič neodoslalo. Zachytenie zostáva uložené a čaká: povoľte adresu a znova stlačte Odoslať."
   }
 }
