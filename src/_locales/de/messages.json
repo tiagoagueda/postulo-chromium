@@ -53,7 +53,7 @@
     "message": "Ihr Postulo"
   },
   "instanceHint": {
-    "message": "Die Adresse, unter der Sie es öffnen. https, außer es läuft auf diesem Rechner."
+    "message": "Die Adresse, unter der Sie es öffnen. https, es sei denn, es läuft auf diesem Rechner."
   },
   "tokenLabel": {
     "message": "API-Token"
@@ -101,10 +101,10 @@
     "message": "Gespeichert, aber der Browser hat den Zugriff darauf verweigert; erlauben Sie ihn in den Berechtigungen der Erweiterung."
   },
   "asking": {
-    "message": "Postulo wird gefragt, wem dieses Token gehört …"
+    "message": "Postulo wird gefragt, wem dieses Token gehört…"
   },
   "addressRefused": {
-    "message": "Die Erlaubnis, diese Adresse zu erreichen, wurde verweigert."
+    "message": "Die Erlaubnis, diese Adresse zu erreichen, wurde abgelehnt."
   },
   "tokenIs": {
     "message": "Token „$NAME$“ für $OWNER$.",
@@ -138,13 +138,13 @@
     "message": "Geben Sie die Adresse Ihres Postulo ein."
   },
   "notAnAddress": {
-    "message": "Das sieht nicht wie eine Webadresse aus."
+    "message": "Das sieht nicht nach einer Webadresse aus."
   },
   "httpsOnly": {
-    "message": "Verwenden Sie https für alles, was nicht auf Ihrem eigenen Rechner läuft: Das Token reist mit jeder Anfrage mit."
+    "message": "Verwenden Sie https für alles, was nicht auf Ihrem eigenen Rechner läuft: Das Token wird bei jeder Anfrage mitgesendet."
   },
   "tokenRefused": {
-    "message": "Postulo akzeptiert dieses Token nicht. Prüfen Sie es unter $PATH$.",
+    "message": "Postulo akzeptiert dieses Token nicht. Überprüfen Sie es unter $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -426,7 +426,7 @@
     "message": "In Postulo öffnen"
   },
   "notPostulo": {
-    "message": "Diese Adresse hat geantwortet, aber nicht als Postulo. Prüfen Sie die Adresse und jede Anmeldeseite, die davor liegt."
+    "message": "Diese Adresse hat geantwortet, aber nicht als Postulo. Prüfen Sie die Adresse und eine eventuell vorgeschaltete Anmeldeseite."
   },
   "addressTooLong": {
     "message": "Die Adresse dieser Seite ist länger, als Postulo zulässt, selbst ohne den Teil nach dem „#“, daher wurde die Erfassung nicht gesendet. Fügen Sie die Anzeige stattdessen von Hand in Postulo hinzu."
@@ -519,10 +519,10 @@
     "message": "Erfassung prüfen"
   },
   "noCredentialsInAddress": {
-    "message": "Lassen Sie den Benutzernamen und das Passwort aus der Adresse: Es würde sich niemals verbinden, und das Passwort würde im Popup angezeigt."
+    "message": "Lassen Sie Benutzername und Passwort aus der Adresse weg: Damit käme nie eine Verbindung zustande, und das Passwort würde im Popup angezeigt."
   },
   "tokenTooWide": {
-    "message": "Dieses Token kann auch: $SCOPES$. Die Erweiterung benötigt nur den Erfassungsbereich: Geben Sie ein Token mit diesem Bereich aus und widerrufen Sie diesen.",
+    "message": "Dieses Token kann außerdem: $SCOPES$. Die Erweiterung braucht nur die Berechtigung für Erfassungen: Erstellen Sie ein Token nur mit dieser Berechtigung und widerrufen Sie dieses.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulos Adresse war nicht erlaubt, also wurde nichts gesendet. Die Erfassung wird beibehalten und wartet: Lassen Sie die Adresse und drücken Sie erneut senden."
+    "message": "Die Adresse Ihres Postulo wurde nicht erlaubt, daher wurde nichts gesendet. Die Erfassung bleibt erhalten und wartet: Erlauben Sie die Adresse und drücken Sie erneut auf „Senden“."
   }
 }

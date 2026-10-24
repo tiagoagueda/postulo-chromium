@@ -53,7 +53,7 @@
     "message": "Vaš Postulo"
   },
   "instanceHint": {
-    "message": "Naslov, na katerem ga odprete. https, razen če teče na tem računalniku."
+    "message": "Naslov, na katerem ga odpirate. Naslov mora biti https, razen če Postulo teče na tem računalniku."
   },
   "tokenLabel": {
     "message": "Žeton API"
@@ -101,7 +101,7 @@
     "message": "Shranjeno, vendar je brskalnik zavrnil dovoljenje za dostop; dovolite ga v dovoljenjih razširitve."
   },
   "asking": {
-    "message": "Postulo sprašujemo, čigav je ta žeton …"
+    "message": "Preverjam žeton pri Postulu…"
   },
   "addressRefused": {
     "message": "Dovoljenje za dostop do tega naslova je bilo zavrnjeno."
@@ -141,7 +141,7 @@
     "message": "To ni videti kot spletni naslov."
   },
   "httpsOnly": {
-    "message": "Uporabite https za vse, kar ni na vašem lastnem računalniku: žeton potuje z vsako zahtevo."
+    "message": "Za vse, kar ni na vašem računalniku, uporabite https: žeton potuje z vsako zahtevo."
   },
   "tokenRefused": {
     "message": "Postulo tega žetona ne sprejme. Preverite ga pod $PATH$.",
@@ -158,7 +158,7 @@
     "message": "Preveč zajemov v kratkem času. Počakajte minuto in poskusite znova."
   },
   "answered": {
-    "message": "Postulo je odgovoril $STATUS$.",
+    "message": "Postulo je odgovoril s kodo $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -426,7 +426,7 @@
     "message": "Odpri v Postulu"
   },
   "notPostulo": {
-    "message": "Ta naslov se je odzval, vendar ne kot Postulo. Preverite naslov in morebitno prijavno stran pred njim."
+    "message": "Naslov se je odzval, vendar ne kot Postulo. Preverite naslov in morebitno stran za prijavo pred njim."
   },
   "addressTooLong": {
     "message": "Naslov te strani je daljši, kot ga sprejme Postulo, tudi brez dela za „#“, zato zajem ni bil poslan. Oglas raje dodajte ročno v Postulo."
@@ -530,6 +530,6 @@
     "message": "Uporabniškega imena in gesla ne vpisujte v naslov: povezava se ne bi nikoli vzpostavila, geslo pa bi bilo prikazano v pojavnem oknu."
   },
   "permissionRefused": {
-    "message": "Naslov Postula ni bil dovoljen, zato ni bilo nič poslano. Zajem je shranjen in čaka: dovolite naslov in znova pritisnite Pošlji."
+    "message": "Naslov vašega Postula ni bil dovoljen, zato ni bilo nič poslano. Zajem je shranjen in čaka: dovolite naslov in znova pritisnite Pošlji."
   }
 }

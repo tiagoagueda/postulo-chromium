@@ -9,10 +9,10 @@
     "message": "Configuració"
   },
   "setUp": {
-    "message": "Configura-la"
+    "message": "Configura'l"
   },
   "capture": {
-    "message": "Captura aquesta oferta"
+    "message": "Captura aquest anunci"
   },
   "captureHint": {
     "message": "La pàgina es llegeix aquí, al vostre navegador. No s'envia res fins que ho digueu."
@@ -47,13 +47,13 @@
     "message": "Oferta sense títol"
   },
   "optionsTitle": {
-    "message": "Configuració del Postulo"
+    "message": "Configuració de Postulo"
   },
   "instanceLabel": {
     "message": "El vostre Postulo"
   },
   "instanceHint": {
-    "message": "L'adreça on l'obriu. https, tret que funcioni en aquest ordinador."
+    "message": "L'adreça on l'obriu. Amb https, tret que s'executi en aquesta màquina."
   },
   "tokenLabel": {
     "message": "Testimoni d'API"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Enganxeu el testimoni que us va mostrar el Postulo."
+    "message": "Enganxeu el testimoni que us ha mostrat Postulo."
   },
   "saved": {
     "message": "Desat. Ara el botó enviarà les pàgines a $HOST$.",
@@ -101,13 +101,13 @@
     "message": "Desat, però el navegador ha denegat el permís per arribar-hi; permeteu-ho als permisos de l'extensió."
   },
   "asking": {
-    "message": "S'està preguntant al Postulo de qui és aquest testimoni…"
+    "message": "S'està preguntant a Postulo a qui pertany aquest testimoni…"
   },
   "addressRefused": {
-    "message": "S'ha denegat el permís per arribar a aquesta adreça."
+    "message": "S'ha denegat el permís per accedir a aquesta adreça."
   },
   "tokenIs": {
-    "message": "Testimoni «$NAME$» de $OWNER$.",
+    "message": "Testimoni «$NAME$» per a $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -141,10 +141,10 @@
     "message": "Això no sembla una adreça web."
   },
   "httpsOnly": {
-    "message": "Feu servir https per a tot el que no sigui al vostre propi ordinador: el testimoni viatja amb cada petició."
+    "message": "Utilitzeu https per a tot el que no sigui a la vostra pròpia màquina: el testimoni viatja amb cada petició."
   },
   "tokenRefused": {
-    "message": "El Postulo no accepta aquest testimoni. Comproveu-lo a $PATH$.",
+    "message": "Postulo no accepta aquest testimoni. Comproveu-lo a $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -158,7 +158,7 @@
     "message": "Massa captures en poc temps. Espereu un minut i torneu-ho a provar."
   },
   "answered": {
-    "message": "El Postulo ha respost $STATUS$.",
+    "message": "Postulo ha respost $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -426,7 +426,7 @@
     "message": "Obre-la al Postulo"
   },
   "notPostulo": {
-    "message": "Aquesta adreça ha respost, però no com un Postulo. Comproveu l'adreça i qualsevol pàgina d'inici de sessió que hi hagi al davant."
+    "message": "Aquesta adreça ha respost, però no com ho fa Postulo. Comproveu l'adreça i qualsevol pàgina d'inici de sessió que hi hagi al davant."
   },
   "addressTooLong": {
     "message": "L'adreça d'aquesta pàgina és més llarga del que accepta el Postulo, fins i tot sense la part posterior al «#», per això la captura no s'ha enviat. Afegiu l'oferta al Postulo manualment."
@@ -519,10 +519,10 @@
     "message": "Revisa una captura"
   },
   "noCredentialsInAddress": {
-    "message": "Deixa el nom d' usuari i la contrasenya de l' adreça: mai es connectarà, i la contrasenya es mostrarà en el menú emergent."
+    "message": "Traieu el nom d'usuari i la contrasenya de l'adreça: no es connectaria mai, i la contrasenya es mostraria a la finestra emergent."
   },
   "tokenTooWide": {
-    "message": "Aquesta fitxa també pot: $SCOPES$. L' extensió necessita només l' àmbit de captura: emet un testimoni amb aquest àmbit tot sol i emet aquesta.",
+    "message": "Aquest testimoni també pot: $SCOPES$. L'extensió només necessita l'àmbit de captures: creeu un testimoni només amb aquest àmbit i revoqueu aquest.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "No es permet l'adreça de Postulo, així que no es va enviar res. La captura es manté i s'espera: permet l'adreça i premeu Envia de nou."
+    "message": "No s'ha permès l'adreça de Postulo, així que no s'ha enviat res. La captura es conserva i queda en espera: permeteu l'adreça i torneu a prémer Envia."
   }
 }

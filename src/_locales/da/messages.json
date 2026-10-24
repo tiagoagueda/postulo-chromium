@@ -9,7 +9,7 @@
     "message": "Indstillinger"
   },
   "setUp": {
-    "message": "Sæt den op"
+    "message": "Konfigurer"
   },
   "capture": {
     "message": "Indfang dette opslag"
@@ -47,7 +47,7 @@
     "message": "Opslag uden titel"
   },
   "optionsTitle": {
-    "message": "Indstillinger for Postulo"
+    "message": "Postulo-indstillinger"
   },
   "instanceLabel": {
     "message": "Din Postulo"
@@ -104,7 +104,7 @@
     "message": "Spørger Postulo, hvem dette token tilhører…"
   },
   "addressRefused": {
-    "message": "Tilladelse til at nå den adresse blev nægtet."
+    "message": "Tilladelse til at nå den adresse blev afvist."
   },
   "tokenIs": {
     "message": "Token »$NAME$« for $OWNER$.",
@@ -135,13 +135,13 @@
     "message": "Det mangler omfanget captures, så det kan ikke indfange."
   },
   "enterAddress": {
-    "message": "Skriv adressen på din Postulo."
+    "message": "Indtast adressen på din Postulo."
   },
   "notAnAddress": {
     "message": "Det ligner ikke en webadresse."
   },
   "httpsOnly": {
-    "message": "Brug https til alt, der ikke er på din egen maskine: tokenet følger med hver forespørgsel."
+    "message": "Brug https til alt, der ikke er på din egen maskine: tokenet sendes med hver anmodning."
   },
   "tokenRefused": {
     "message": "Postulo accepterer ikke dette token. Tjek det under $PATH$.",
@@ -152,7 +152,7 @@
     }
   },
   "notAllowed": {
-    "message": "Dette token må ikke indfange."
+    "message": "Dette token har ikke tilladelse til at indfange."
   },
   "tooMany": {
     "message": "For mange indfangninger på kort tid. Vent et minut, og prøv igen."
@@ -426,7 +426,7 @@
     "message": "Åbn i Postulo"
   },
   "notPostulo": {
-    "message": "Adressen svarede, men ikke som en Postulo. Tjek adressen og en eventuel login-side foran den."
+    "message": "Adressen svarede, men ikke som Postulo. Tjek adressen og en eventuel loginside foran den."
   },
   "addressTooLong": {
     "message": "Adressen på denne side er længere, end Postulo accepterer, selv uden delen efter »#«, så indfangningen blev ikke sendt. Tilføj i stedet opslaget i Postulo manuelt."
@@ -519,10 +519,10 @@
     "message": "Gennemgå en indfangning"
   },
   "noCredentialsInAddress": {
-    "message": "Efterlad brugernavn og adgangskode ud af adressen: det ville aldrig forbinde, og adgangskoden ville blive vist i popup."
+    "message": "Udelad brugernavn og adgangskode fra adressen: den ville aldrig kunne forbinde, og adgangskoden ville blive vist i pop op-vinduet."
   },
   "tokenTooWide": {
-    "message": "Denne token kan også: $SCOPES$. Forlængelsen har kun brug for indfangningsområdet: Udgiv et symbol med dette anvendelsesområde alene og fjern dette.",
+    "message": "Dette token kan også: $SCOPES$. Udvidelsen behøver kun adgangsområdet captures: opret et token med kun det adgangsområde, og tilbagekald dette.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulos adresse var ikke tilladt, så intet blev sendt. Fanget holdes og venter: tillad adressen og tryk på Send igen."
+    "message": "Postulos adresse blev ikke tilladt, så intet blev sendt. Indfangningen er gemt og venter: tillad adressen, og tryk på Send igen."
   }
 }

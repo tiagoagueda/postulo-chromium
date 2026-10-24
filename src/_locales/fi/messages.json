@@ -53,10 +53,10 @@
     "message": "Postulosi"
   },
   "instanceHint": {
-    "message": "Osoite, josta avaat sen. https, ellei se toimi tällä koneella."
+    "message": "Osoite, josta avaat sen. Käytä https:ää, ellei se toimi tällä koneella."
   },
   "tokenLabel": {
-    "message": "API-avain"
+    "message": "API-tunnus"
   },
   "tokenHint": {
     "message": "Luodaan Postulossa kohdassa $PATH$, oikeudella $SCOPE$ eikä millään muulla. Se säilytetään vain tällä laitteella, eikä sitä koskaan synkronoida selaintilin kautta.",
@@ -70,7 +70,7 @@
     }
   },
   "tokenPath": {
-    "message": "Asetukset → API-avaimet"
+    "message": "Asetukset → API-tunnukset"
   },
   "save": {
     "message": "Tallenna"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Liitä avain, jonka Postulo näytti sinulle."
+    "message": "Liitä tunnus, jonka Postulo näytti sinulle."
   },
   "saved": {
     "message": "Tallennettu. Painike lähettää nyt sivut osoitteeseen $HOST$.",
@@ -101,25 +101,25 @@
     "message": "Tallennettu, mutta selain ei antanut lupaa tavoittaa sitä; salli se laajennuksen käyttöoikeuksissa."
   },
   "asking": {
-    "message": "Kysytään Postulolta, kenen avain tämä on…"
+    "message": "Kysytään Postulolta, kenen tunnus tämä on…"
   },
   "addressRefused": {
-    "message": "Lupa tavoittaa tuo osoite evättiin."
+    "message": "Lupa ottaa yhteys tuohon osoitteeseen evättiin."
   },
   "lacksCaptures": {
     "message": "Siltä puuttuu oikeus captures, joten se ei voi kaapata."
   },
   "enterAddress": {
-    "message": "Anna Postulosi osoite."
+    "message": "Anna Postulon osoite."
   },
   "notAnAddress": {
     "message": "Tuo ei näytä verkko-osoitteelta."
   },
   "httpsOnly": {
-    "message": "Käytä https:ää kaikessa, mikä ei ole omalla koneellasi: avain kulkee jokaisen pyynnön mukana."
+    "message": "Käytä https:ää kaikkeen, mikä ei ole omalla koneellasi: tunnus kulkee jokaisen pyynnön mukana."
   },
   "tokenRefused": {
-    "message": "Postulo ei hyväksy tätä avainta. Tarkista se kohdassa $PATH$.",
+    "message": "Postulo ei hyväksy tätä tunnusta. Tarkista se kohdassa $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -127,13 +127,13 @@
     }
   },
   "notAllowed": {
-    "message": "Tällä avaimella ei saa kaapata."
+    "message": "Tällä tunnuksella ei ole lupaa kaapata."
   },
   "tooMany": {
-    "message": "Liian monta kaappausta lyhyessä ajassa. Odota minuutti ja yritä uudelleen."
+    "message": "Liian monta kaappausta lyhyessä ajassa. Odota hetki ja yritä uudelleen."
   },
   "answered": {
-    "message": "Postulo vastasi $STATUS$.",
+    "message": "Postulo vastasi: $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -494,10 +494,10 @@
     "message": "Tarkista kaappaus"
   },
   "noCredentialsInAddress": {
-    "message": "Jätä käyttäjätunnus ja salasana pois osoitteesta: se ei koskaan yhdistäisi, ja salasana näytettäisiin ponnahdusikkunassa."
+    "message": "Jätä käyttäjätunnus ja salasana pois osoitteesta: yhteys ei koskaan toimisi, ja salasana näkyisi ponnahdusikkunassa."
   },
   "tokenTooWide": {
-    "message": "Tämä merkki voi myös: $SCOPES$. Laajennus tarvitsee vain soveltamisalan: antaa vain tämän soveltamisalan ja peruuttaa tämän.",
+    "message": "Tällä tunnuksella on myös nämä käyttöoikeudet: $SCOPES$. Laajennus tarvitsee vain captures-käyttöoikeuden: luo tunnus, jolla on vain se, ja peruuta tämä.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -505,7 +505,7 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulon osoite ei ollut sallittu, joten mitään ei lähetetty. Nappaaminen pidetään ja odottaa: anna osoite ja paina Lähetä uudelleen."
+    "message": "Postulon osoitetta ei sallittu, joten mitään ei lähetetty. Kaappaus säilytetään ja se odottaa: salli osoite ja paina Lähetä uudelleen."
   },
   "tokenIs": {
     "message": "Tunnus ”$NAME$” käyttäjälle $OWNER$.",

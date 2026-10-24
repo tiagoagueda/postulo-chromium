@@ -53,7 +53,7 @@
     "message": "Uw Postulo"
   },
   "instanceHint": {
-    "message": "Het adres waarop u hem opent. https, tenzij hij op deze computer draait."
+    "message": "Het adres waarop u het opent. https, tenzij het op deze computer draait."
   },
   "tokenLabel": {
     "message": "API-token"
@@ -104,10 +104,10 @@
     "message": "Postulo wordt gevraagd van wie dit token is…"
   },
   "addressRefused": {
-    "message": "Toestemming om dat adres te bereiken is geweigerd."
+    "message": "Toestemming om dat adres te bereiken werd geweigerd."
   },
   "tokenIs": {
-    "message": "Token ‘$NAME$’ voor $OWNER$.",
+    "message": "Token “$NAME$” voor $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Token ‘$NAME$’ voor $OWNER$ ($SCOPES$).",
+    "message": "Token “$NAME$” voor $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -138,10 +138,10 @@
     "message": "Voer het adres van uw Postulo in."
   },
   "notAnAddress": {
-    "message": "Dat lijkt geen webadres."
+    "message": "Dat lijkt niet op een webadres."
   },
   "httpsOnly": {
-    "message": "Gebruik https voor alles wat niet op uw eigen computer staat: het token reist met elk verzoek mee."
+    "message": "Gebruik https voor alles wat niet op uw eigen computer staat: het token gaat mee met elk verzoek."
   },
   "tokenRefused": {
     "message": "Postulo accepteert dit token niet. Controleer het onder $PATH$.",
@@ -158,7 +158,7 @@
     "message": "Te veel vastleggingen in korte tijd. Wacht een minuut en probeer het opnieuw."
   },
   "answered": {
-    "message": "Postulo antwoordde met $STATUS$.",
+    "message": "Postulo antwoordde $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -426,7 +426,7 @@
     "message": "Openen in Postulo"
   },
   "notPostulo": {
-    "message": "Dat adres antwoordde, maar niet als Postulo. Controleer het adres en eventuele inlogpagina's ervoor."
+    "message": "Dat adres antwoordde, maar niet als Postulo. Controleer het adres en een eventuele inlogpagina die ervoor staat."
   },
   "addressTooLong": {
     "message": "Het adres van deze pagina is langer dan Postulo accepteert, zelfs zonder het deel na de ‘#’, dus de vastlegging is niet verstuurd. Voeg de vacature in plaats daarvan met de hand toe in Postulo."
@@ -519,10 +519,10 @@
     "message": "Een vastlegging beoordelen"
   },
   "noCredentialsInAddress": {
-    "message": "Laat de gebruikersnaam en het wachtwoord buiten het adres: het zou nooit verbinden, en het wachtwoord zou worden weergegeven in de popup."
+    "message": "Laat de gebruikersnaam en het wachtwoord weg uit het adres: daarmee wordt nooit verbinding gemaakt, en het wachtwoord zou in de pop-up worden getoond."
   },
   "tokenTooWide": {
-    "message": "Dit token kan ook: $SCOPES$. De uitbreiding heeft alleen het toepassingsgebied nodig: geef een token met die reikwijdte alleen en trek deze in.",
+    "message": "Dit token kan ook: $SCOPES$. De extensie heeft alleen de scope captures nodig: maak een token aan met alleen die scope en trek dit token in.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulo's adres was niet toegestaan, dus er werd niets verstuurd. De vangst wordt bewaard en wacht: laat het adres toe en druk opnieuw op Verzenden."
+    "message": "Het adres van Postulo is niet toegestaan, dus er is niets verstuurd. De vastlegging blijft bewaard en wacht: sta het adres toe en druk opnieuw op Verzenden."
   }
 }

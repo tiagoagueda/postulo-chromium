@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulo adresas nebuvo leistas, todėl nieko neišsiųsta. Fiksavimas išsaugotas ir laukia: leiskite adresą ir dar kartą paspauskite Siųsti."
+    "message": "Prieiga prie Postulo adreso neleista, todėl nieko neišsiųsta. Fiksavimas išsaugotas ir laukia: leiskite prieigą prie adreso ir dar kartą paspauskite Siųsti."
   }
 }

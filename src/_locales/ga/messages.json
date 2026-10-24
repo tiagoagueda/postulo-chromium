@@ -12,7 +12,7 @@
     "message": "Socraigh é"
   },
   "capture": {
-    "message": "Gabh an fógra seo"
+    "message": "Gabh an fógra poist seo"
   },
   "captureHint": {
     "message": "Léitear an leathanach anseo, i do bhrabhsálaí. Ní sheoltar aon rud go dtí go ndeir tú é."
@@ -53,7 +53,7 @@
     "message": "Do Postulo"
   },
   "instanceHint": {
-    "message": "An seoladh ag a n-osclaíonn tú é. https, mura bhfuil sé ag rith ar an meaisín seo."
+    "message": "An seoladh ag a n-osclaíonn tú é. https, mura ritheann sé ar an ríomhaire seo."
   },
   "tokenLabel": {
     "message": "Comhartha API"
@@ -104,7 +104,7 @@
     "message": "Ag fiafraí de Postulo cé leis an comhartha seo…"
   },
   "addressRefused": {
-    "message": "Diúltaíodh cead an seoladh sin a bhaint amach."
+    "message": "Diúltaíodh cead chun an seoladh sin a bhaint amach."
   },
   "tokenIs": {
     "message": "Comhartha “$NAME$” do $OWNER$.",
@@ -141,7 +141,7 @@
     "message": "Ní cosúil gur seoladh gréasáin é sin."
   },
   "httpsOnly": {
-    "message": "Úsáid https le haghaidh aon rud nach bhfuil ar do mheaisín féin: taistealaíonn an comhartha le gach iarratas."
+    "message": "Úsáid https d’aon rud nach bhfuil ar do ríomhaire féin: téann an comhartha le gach iarratas."
   },
   "tokenRefused": {
     "message": "Ní ghlacann Postulo leis an gcomhartha seo. Seiceáil é faoi $PATH$.",
@@ -152,10 +152,10 @@
     }
   },
   "notAllowed": {
-    "message": "Níl cead ag an gcomhartha seo gabháil."
+    "message": "Níl cead ag an gcomhartha seo gabháil a dhéanamh."
   },
   "tooMany": {
-    "message": "An iomarca gabhálacha in achar gearr. Fan nóiméad agus bain triail eile as."
+    "message": "An iomarca gabhálacha i mbeagán ama. Fan nóiméad agus bain triail eile as."
   },
   "answered": {
     "message": "D'fhreagair Postulo $STATUS$.",
@@ -426,7 +426,7 @@
     "message": "Oscail in Postulo"
   },
   "notPostulo": {
-    "message": "D'fhreagair an seoladh sin, ach ní mar Postulo. Seiceáil an seoladh, agus aon leathanach síniúcháin atá os a chomhair."
+    "message": "D’fhreagair an seoladh sin, ach ní mar Postulo. Seiceáil an seoladh, agus aon leathanach sínithe isteach atá roimhe."
   },
   "addressTooLong": {
     "message": "Tá seoladh an leathanaigh seo níos faide ná mar a ghlacann Postulo leis, fiú gan an chuid tar éis an “#”, mar sin níor seoladh an ghabháil. Cuir an post le Postulo de láimh ina ionad."
@@ -519,10 +519,10 @@
     "message": "Athbhreithnigh gabháil"
   },
   "noCredentialsInAddress": {
-    "message": "Fág an t-ainm úsáideora agus focal faire as an seoladh: ní bheadh sé ceangal, agus bheadh an focal faire a thaispeáint sa popup."
+    "message": "Fág an t-ainm úsáideora agus an pasfhocal as an seoladh: ní dhéanfaí ceangal choíche, agus thaispeánfaí an pasfhocal sa phreabfhuinneog."
   },
   "tokenTooWide": {
-    "message": "Is féidir é seo a chomhartha freisin: $SCOPES$. Ní mór raon feidhme na ngabhálacha a bheith ag an síneadh ach amháin: chomhartha a eisiúint leis an raon feidhme sin amháin agus an ceann seo a chúlghairm.",
+    "message": "Is féidir leis an gcomhartha seo freisin: $SCOPES$. Níl ag teastáil ón síneadh ach raon na ngabhálacha: eisigh comhartha nach bhfuil aige ach an raon sin agus cúlghair an ceann seo.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Níor cheadaigh seoladh Postulo, mar sin níor seoladh aon rud. Coinnítear an ghabháil agus fanann sé: lig an seoladh agus an preas Seol arís."
+    "message": "Níor ceadaíodh seoladh Postulo, mar sin níor seoladh aon rud. Coinnítear an ghabháil agus tá sí ag fanacht: ceadaigh an seoladh agus brúigh Seol arís."
   }
 }

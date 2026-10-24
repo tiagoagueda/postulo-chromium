@@ -53,7 +53,7 @@
     "message": "Il-Postulo tiegħek"
   },
   "instanceHint": {
-    "message": "L-indirizz li tiftħu fih. https, sakemm ma jkunx qed jaħdem fuq din il-magna."
+    "message": "L-indirizz fejn tiftħu. https, sakemm ma jkunx qed jaħdem fuq din il-magna."
   },
   "tokenLabel": {
     "message": "Token tal-API"
@@ -152,7 +152,7 @@
     }
   },
   "notAllowed": {
-    "message": "Dan it-token mhux permess jaqbad."
+    "message": "Dan it-token m'għandux permess jaqbad."
   },
   "tooMany": {
     "message": "Wisq qbid f'ħin qasir. Stenna minuta u erġa' pprova."
@@ -426,7 +426,7 @@
     "message": "Iftaħ f'Postulo"
   },
   "notPostulo": {
-    "message": "Dak l-indirizz wieġeb, iżda mhux bħala Postulo. Iċċekkja l-indirizz, u kwalunkwe paġna tal-illoggjar quddiemu."
+    "message": "Dak l-indirizz wieġeb, iżda mhux bħala Postulo. Iċċekkja l-indirizz, u kwalunkwe paġna tad-dħul quddiemu."
   },
   "addressTooLong": {
     "message": "L-indirizz ta' din il-paġna huwa itwal minn dak li jaċċetta Postulo, anke mingħajr il-parti ta' wara l-“#”, għalhekk il-qbida ma ntbagħtitx. Żid l-anunzju f'Postulo bl-idejn minflok."

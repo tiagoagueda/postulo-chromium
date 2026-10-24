@@ -101,13 +101,13 @@
     "message": "Zapisano, ale przeglądarka odmówiła pozwolenia na dostęp; zezwól na to w uprawnieniach rozszerzenia."
   },
   "asking": {
-    "message": "Pytanie Postulo, czyj jest ten token…"
+    "message": "Pytam Postulo, czyj jest ten token…"
   },
   "addressRefused": {
-    "message": "Odmówiono pozwolenia na dostęp do tego adresu."
+    "message": "Odmówiono uprawnienia dostępu do tego adresu."
   },
   "tokenIs": {
-    "message": "Token „$NAME$” użytkownika $OWNER$.",
+    "message": "Token „$NAME$” dla $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Token „$NAME$” użytkownika $OWNER$ ($SCOPES$).",
+    "message": "Token „$NAME$” dla $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -138,13 +138,13 @@
     "message": "Wpisz adres swojego Postulo."
   },
   "notAnAddress": {
-    "message": "To nie wygląda na adres internetowy."
+    "message": "To nie wygląda jak adres internetowy."
   },
   "httpsOnly": {
-    "message": "Używaj https do wszystkiego, co nie jest na Twoim własnym komputerze: token podróżuje z każdym żądaniem."
+    "message": "Używaj https dla wszystkiego, co nie znajduje się na Twoim własnym komputerze: token jest przesyłany z każdym żądaniem."
   },
   "tokenRefused": {
-    "message": "Postulo nie akceptuje tego tokenu. Sprawdź go w $PATH$.",
+    "message": "Postulo nie akceptuje tego tokena. Sprawdź go w $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -152,13 +152,13 @@
     }
   },
   "notAllowed": {
-    "message": "Ten token nie może przechwytywać."
+    "message": "Ten token nie ma uprawnienia do przechwytywania."
   },
   "tooMany": {
-    "message": "Za dużo przechwyceń w krótkim czasie. Poczekaj minutę i spróbuj ponownie."
+    "message": "Za dużo przechwyceń w krótkim czasie. Odczekaj minutę i spróbuj ponownie."
   },
   "answered": {
-    "message": "Postulo odpowiedziało $STATUS$.",
+    "message": "Postulo odpowiedziało: $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -426,7 +426,7 @@
     "message": "Otwórz w Postulo"
   },
   "notPostulo": {
-    "message": "Ten adres odpowiedział, ale nie jako Postulo. Sprawdź adres oraz ewentualną stronę logowania przed nim."
+    "message": "Ten adres odpowiedział, ale nie jako Postulo. Sprawdź adres i ewentualną stronę logowania, która go poprzedza."
   },
   "addressTooLong": {
     "message": "Adres tej strony jest dłuższy, niż akceptuje Postulo, nawet bez części po „#”, więc przechwycenie nie zostało wysłane. Dodaj ogłoszenie w Postulo ręcznie."
@@ -519,10 +519,10 @@
     "message": "Sprawdź przechwycenie"
   },
   "noCredentialsInAddress": {
-    "message": "Zostaw nazwę użytkownika i hasło w adresie: nigdy się nie połączy, a hasło zostanie wyświetlone w menu."
+    "message": "Nie podawaj w adresie nazwy użytkownika ani hasła: połączenie nigdy by się nie udało, a hasło byłoby widoczne w okienku rozszerzenia."
   },
   "tokenTooWide": {
-    "message": "Ten token może również: $SCOPES$. Rozszerzenie wymaga tylko zakresu przechwytywania: wystarczy wydać znak z tym zakresem i cofnąć ten zakres.",
+    "message": "Ten token może również: $SCOPES$. Rozszerzenie potrzebuje tylko zakresu przechwytywania: wydaj token wyłącznie z tym zakresem i unieważnij ten.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Adres Postulo nie był dozwolony, więc nic nie wysłano. Uchwyt jest przechowywany i czeka: niech adres i naciśnij Wyślij ponownie."
+    "message": "Adres Postulo nie został dopuszczony, więc nic nie wysłano. Przechwycenie zostało zachowane i czeka: zezwól na dostęp do adresu i ponownie naciśnij Wyślij."
   }
 }
