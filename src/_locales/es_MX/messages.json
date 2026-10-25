@@ -1,30 +1,30 @@
 {
   "extensionDescription": {
-    "message": "Captura el trabajo que publicas que estás mirando, manténgalo en tu navegador, y envíalo a tu propio Postulo para que lo revises cuando lo digas. Nada va a otro lugar."
+    "message": "Capture la vacante que está viendo, consérvela en su navegador y envíela a su propio Postulo para revisarla cuando usted lo indique. Nada se envía a ningún otro lugar."
   },
   "actionTitle": {
-    "message": "Captura esta publicación en Postulo"
+    "message": "Capturar esta vacante en Postulo"
   },
   "postuloUnreachable": {
-    "message": "Postulo no se puede alcanzar: lo que envía espera en este navegador hasta que responda."
+    "message": "No se puede conectar con Postulo: lo que envíe espera en este navegador hasta que responda."
   },
   "footerOnline": {
-    "message": "Respuestas de posulo"
+    "message": "Postulo responde"
   },
   "footerSlow": {
-    "message": "Postulo es lento para responder"
+    "message": "Postulo tarda en responder"
   },
   "reviewHeading": {
-    "message": "Examen de las necesidades"
+    "message": "Por revisar"
   },
   "waitingInPostulo": {
-    "message": "Esperando revisión en Postulo"
+    "message": "En espera de revisión en Postulo"
   },
   "nothingWaiting": {
-    "message": "Nada está esperando revisión."
+    "message": "No hay nada en espera de revisión."
   },
   "lastListed": {
-    "message": "Como Postulo la última lista, en $WHEN$.",
+    "message": "Tal como Postulo las mostró por última vez, el $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -32,7 +32,7 @@
     }
   },
   "capturesOfPosting": {
-    "message": "Capturas de esta publicación: $COUNT$",
+    "message": "Capturas de esta vacante: $COUNT$",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -40,7 +40,7 @@
     }
   },
   "waitingForReview": {
-    "message": "Esperando su revisión: $COUNT$",
+    "message": "En espera de revisión: $COUNT$",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -48,40 +48,40 @@
     }
   },
   "settings": {
-    "message": "Ajustes"
+    "message": "Configuración"
   },
   "setUp": {
-    "message": "Arréglalo"
+    "message": "Configurar"
   },
   "capture": {
-    "message": "Captura esta publicación"
+    "message": "Capturar esta vacante"
   },
   "addListing": {
-    "message": "Agregar un listado"
+    "message": "Agregar una oferta"
   },
   "captureHint": {
-    "message": "La página se lee aquí, en su navegador. Nada se envía hasta que tú lo digas."
+    "message": "La página se lee aquí, en su navegador. No se envía nada hasta que usted lo indique."
   },
   "review": {
-    "message": "Revisión en Postulo"
+    "message": "Revisar en Postulo"
   },
   "reading": {
-    "message": "Leyendo la página.."
+    "message": "Leyendo la página…"
   },
   "allowing": {
-    "message": "Permitiendo que la extensión llegue a su Postulo.."
+    "message": "Permitiendo que la extensión se conecte con su Postulo…"
   },
   "noPermission": {
-    "message": "Sin permiso para llegar a su Postulo, no se puede enviar nada."
+    "message": "Sin permiso para conectarse con su Postulo, no se puede enviar nada."
   },
   "sending": {
-    "message": "Enviando a Postulo.."
+    "message": "Enviando a Postulo…"
   },
   "captured": {
-    "message": "Capturado. Reviselo antes de que se convierta en un listado."
+    "message": "Capturada. Revísela antes de que se convierta en una oferta."
   },
   "readBy": {
-    "message": "Read by $SOURCE$",
+    "message": "Leída por $SOURCE$",
     "placeholders": {
       "source": {
         "content": "$1"
@@ -89,22 +89,22 @@
     }
   },
   "untitled": {
-    "message": "Publicación sin título"
+    "message": "Vacante sin título"
   },
   "optionsTitle": {
-    "message": "Ajustes de posulo"
+    "message": "Configuración de Postulo"
   },
   "instanceLabel": {
     "message": "Su Postulo"
   },
   "instanceHint": {
-    "message": "La dirección en la que la abres. https, a menos que funcione en esta máquina."
+    "message": "La dirección con la que lo abre. https, salvo que se ejecute en esta computadora."
   },
   "tokenLabel": {
-    "message": "API token"
+    "message": "Token de API"
   },
   "tokenHint": {
-    "message": "Hecho bajo $PATH$ en Postulo, con el alcance $SCOPE$ y nada más. Se mantiene en este dispositivo sólo, nunca se sincroniza a través de una cuenta del navegador.",
+    "message": "Se crea en $PATH$ en Postulo, con el alcance $SCOPE$ y nada más. Se guarda solo en este dispositivo y nunca se sincroniza mediante una cuenta del navegador.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -115,16 +115,16 @@
     }
   },
   "tokenPath": {
-    "message": "Ajustes → fichas de API"
+    "message": "Configuración → Tokens de API"
   },
   "save": {
     "message": "Guardar"
   },
   "test": {
-    "message": "Prueba"
+    "message": "Probar"
   },
   "shortcutHint": {
-    "message": "Presionando el botón, o $SHORTCUT$, lee la página que está mirando, aquí en el navegador. No se lee ninguna página hasta que pregunte, y nada se envía en cualquier lugar excepto su propio Postulo, cuando usted lo dice.",
+    "message": "Al presionar el botón, o $SHORTCUT$, se lee la página que está viendo, aquí en el navegador. No se lee ninguna página hasta que usted lo pida, y no se envía nada a ningún lugar que no sea su propio Postulo, cuando usted lo indique.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -132,10 +132,10 @@
     }
   },
   "tokenMissing": {
-    "message": "Pruebe el Postulo token le mostró."
+    "message": "Pegue el token que le mostró Postulo."
   },
   "saved": {
-    "message": "Salvado. El botón enviará ahora páginas a $HOST$.",
+    "message": "Guardado. Ahora el botón enviará las páginas a $HOST$.",
     "placeholders": {
       "host": {
         "content": "$1"
@@ -143,16 +143,16 @@
     }
   },
   "savedNoPermission": {
-    "message": "Guardado, pero el navegador rehusó el permiso para llegar a él; permitirlo en los permisos de la extensión."
+    "message": "Guardado, pero el navegador denegó el permiso para conectarse con ella; permítalo en los permisos de la extensión."
   },
   "asking": {
-    "message": "Preguntando a Postulo quién es este token.."
+    "message": "Preguntando a Postulo de quién es este token…"
   },
   "addressRefused": {
-    "message": "Se rechazó la autorización para llegar a esa dirección."
+    "message": "Se denegó el permiso para conectarse con esa dirección."
   },
   "tokenIs": {
-    "message": "Token “$NAME$” para $OWNER$.",
+    "message": "Token “$NAME$” de $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -163,7 +163,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Token “$NAME$” para $OWNER$ ($SCOPES$).",
+    "message": "Token “$NAME$” de $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -177,13 +177,13 @@
     }
   },
   "lacksCaptures": {
-    "message": "Le falta el alcance captures, así que no puede capturar."
+    "message": "No tiene el alcance captures, así que no puede capturar."
   },
   "noCredentialsInAddress": {
-    "message": "Deje el nombre de usuario y la contraseña fuera de la dirección: nunca se conectará, y la contraseña se mostrará en el popup."
+    "message": "Deje el nombre de usuario y la contraseña fuera de la dirección: nunca se conectaría, y la contraseña se mostraría en la ventana emergente."
   },
   "tokenTooWide": {
-    "message": "Esta ficha también puede: $SCOPES$. La extensión sólo necesita el alcance de capturas: expedir un token con ese alcance solo y revocar este.",
+    "message": "Este token también puede: $SCOPES$. La extensión solo necesita el alcance captures: cree un token solo con ese alcance y revoque este.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -191,19 +191,19 @@
     }
   },
   "permissionRefused": {
-    "message": "No se permitió la dirección de Postulo, así que nada fue enviado. La captura se mantiene y espera: permita la dirección y pulse Enviar de nuevo."
+    "message": "No se permitió la dirección de Postulo, así que no se envió nada. La captura se conserva en espera: permita la dirección y vuelva a presionar Enviar."
   },
   "enterAddress": {
-    "message": "Introduzca la dirección de su Postulo."
+    "message": "Ingrese la dirección de su Postulo."
   },
   "notAnAddress": {
     "message": "Eso no parece una dirección web."
   },
   "httpsOnly": {
-    "message": "Utilice https para cualquier cosa que no esté en su propia máquina: el token viaja con cada solicitud."
+    "message": "Use https para todo lo que no esté en su propia computadora: el token viaja con cada solicitud."
   },
   "tokenRefused": {
-    "message": "Postulo no acepta este token. Compruébalo bajo $PATH$.",
+    "message": "Postulo no acepta este token. Revíselo en $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -211,13 +211,13 @@
     }
   },
   "notAllowed": {
-    "message": "Este token no se permite capturar."
+    "message": "Este token no tiene permiso para capturar."
   },
   "tooMany": {
-    "message": "Demasiados capturas en poco tiempo. Espera un minuto y vuelve a intentarlo."
+    "message": "Demasiadas capturas en poco tiempo. Espere un minuto y vuelva a intentarlo."
   },
   "answered": {
-    "message": "Postulo respondió $STATUS$.",
+    "message": "Postulo respondió con $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -225,145 +225,145 @@
     }
   },
   "noTab": {
-    "message": "No hay ficha para leer."
+    "message": "No hay ninguna pestaña que leer."
   },
   "notWebPage": {
-    "message": "Sólo las páginas web pueden ser capturadas."
+    "message": "Solo se pueden capturar páginas web."
   },
   "unreadable": {
-    "message": "La página no podía leerse. Algunas páginas bloquean extensiones."
+    "message": "No se pudo leer la página. Algunas páginas bloquean las extensiones."
   },
   "notPostulo": {
     "message": "Esa dirección respondió, pero no como Postulo. Compruebe la dirección y cualquier página de inicio de sesión delante de ella."
   },
   "addressTooLong": {
-    "message": "La dirección de esta página es más larga de lo que Postulo acepta, incluso sin la parte después del \"#\", por lo que la captura no fue enviada. Añadir la publicación en Postulo a mano."
+    "message": "La dirección de esta página es más larga de lo que Postulo acepta, incluso sin la parte que va después de “#”, así que la captura no se envió. Mejor agregue la vacante en Postulo a mano."
   },
   "reviewHint": {
-    "message": "Esto es lo que se leía de la página. Corrige todo lo que está mal; nada deja este navegador hasta que lo envíes."
+    "message": "Esto es lo que se leyó de la página. Corrija lo que esté mal; nada sale de este navegador hasta que usted lo envíe."
   },
   "sendForReview": {
     "message": "Enviar para revisión"
   },
   "notConnected": {
-    "message": "Aún no conectado a un Postulo: lo que capturas se mantiene en este navegador."
+    "message": "Aún no está conectado a ningún Postulo: lo que capture se conserva en este navegador."
   },
   "keep": {
-    "message": "Mantenga en este navegador"
+    "message": "Conservar en este navegador"
   },
   "kept": {
-    "message": "Se quedó en este navegador. Envíelo a Postulo cuando esté listo."
+    "message": "Se conservó en este navegador. Envíela a Postulo cuando quiera."
   },
   "storageFull": {
-    "message": "El almacenamiento de este navegador para Postulo está lleno. Enviar o eliminar algunas capturas, luego intentarlo de nuevo."
+    "message": "El almacenamiento de este navegador para Postulo está lleno. Envíe o elimine algunas capturas y vuelva a intentarlo."
   },
   "alreadyKept": {
-    "message": "Ya guardaste esta página y no la has enviado: esta es tu versión."
+    "message": "Ya había conservado esta página y no la ha enviado: esta es su versión."
   },
   "nothingRead": {
-    "message": "No se puede leer nada de esta página. Llena lo que sabes; nada deja este navegador hasta que lo envíes."
+    "message": "No se pudo leer nada de esta página. Complete lo que sepa; nada sale de este navegador hasta que usted lo envíe."
   },
   "waiting": {
-    "message": "Postulo no se puede llegar ahora mismo. Se guarda en este navegador y se envía tan pronto como Postulo responde."
+    "message": "No se puede conectar con Postulo en este momento. Se conserva en este navegador y se enviará en cuanto Postulo responda."
   },
   "waitingOffline": {
-    "message": "El interruptor de prueba está encendido, por lo que espera en este navegador. Va una vez que se apaga el interruptor."
+    "message": "El interruptor de prueba está activado, así que espera en este navegador. Se enviará en cuanto se desactive el interruptor."
   },
   "waitingAccount": {
-    "message": "Se guarda en este navegador y se envía una vez que se fija."
+    "message": "Se conserva en este navegador y se enviará en cuanto eso se resuelva."
   },
   "sendNeedsSetup": {
-    "message": "Guardado en este navegador, para ser enviado una vez que su Postulo está establecido."
+    "message": "Se conservó en este navegador, para enviarse en cuanto su Postulo esté configurado."
   },
   "capturesTitle": {
     "message": "Capturas en este navegador"
   },
   "capturesIntro": {
-    "message": "Postings you captured, kept here until they reach your Postulo. Lo que envías va tan pronto como se puede llegar a Postulo."
+    "message": "Vacantes que capturó, conservadas aquí hasta que lleguen a su Postulo. Lo que envíe se va en cuanto se pueda conectar con Postulo."
   },
   "nothingKept": {
-    "message": "Nada se guarda en este navegador."
+    "message": "No hay nada conservado en este navegador."
   },
   "sendAll": {
-    "message": "Enviar todo no enviado"
+    "message": "Enviar todo lo no enviado"
   },
   "clearSent": {
-    "message": "Despejen los enviados"
+    "message": "Quitar las enviadas"
   },
   "stateKept": {
-    "message": "No enviado"
+    "message": "No enviada"
   },
   "stateWaiting": {
-    "message": "Esperando a Postulo"
+    "message": "En espera de Postulo"
   },
   "stateSent": {
-    "message": "Sent"
+    "message": "Enviada"
   },
   "stateRefused": {
-    "message": "Refiriéndose"
+    "message": "Rechazada"
   },
   "tryNow": {
-    "message": "Prueba ahora"
+    "message": "Intentar ahora"
   },
   "holdBack": {
-    "message": "Quédate aquí"
+    "message": "Mejor conservarla aquí"
   },
   "deleteConfirm": {
-    "message": "Eliminar esta captura? No ha llegado a Postulo, así que sólo existe aquí."
+    "message": "¿Eliminar esta captura? No ha llegado a Postulo, así que solo existe aquí."
   },
   "troubleshooting": {
     "message": "Pruebas y solución de problemas"
   },
   "offlineLabel": {
-    "message": "Actúa como si no se pudiera llegar a Postulo"
+    "message": "Simular que no se puede conectar con Postulo"
   },
   "offlineHint": {
-    "message": "Para probar. Mientras esto está encendido, nada se envía: capturas esperar en este navegador exactamente como lo harían con Postulo hacia abajo, y ir una vez que está apagado."
+    "message": "Para pruebas. Mientras esté activado, no se envía nada: las capturas esperan en este navegador exactamente como lo harían si Postulo no estuviera disponible, y se envían en cuanto se desactiva."
   },
   "offlineOn": {
-    "message": "El interruptor de prueba está encendido: nada se envía a Postulo."
+    "message": "El interruptor de prueba está activado: no se envía nada a Postulo."
   },
   "offlineOff": {
-    "message": "El interruptor de prueba está apagado: lo que está esperando va a Postulo ahora."
+    "message": "El interruptor de prueba está desactivado: lo que estaba en espera se envía ahora a Postulo."
   },
   "downloadLog": {
     "message": "Descargar el registro"
   },
   "clearLog": {
-    "message": "Limpiar el registro"
+    "message": "Borrar el registro"
   },
   "logCleared": {
-    "message": "El tronco está vacío."
+    "message": "El registro está vacío."
   },
   "logHint": {
-    "message": "Lo que hizo la extensión, para averiguar por qué algo no funcionó. No tiene token ni nada de las páginas."
+    "message": "Lo que hizo la extensión, para averiguar por qué algo no funcionó. No contiene ningún token ni nada de las páginas."
   },
   "delete": {
-    "message": "Suprimir"
+    "message": "Eliminar"
   },
   "edit": {
     "message": "Editar"
   },
   "fieldTitle": {
-    "message": "Título de trabajo"
+    "message": "Título del puesto"
   },
   "fieldCompany": {
-    "message": "Company"
+    "message": "Empresa"
   },
   "fieldLocation": {
     "message": "Ubicación"
   },
   "fieldRemote": {
-    "message": "Arreglos de trabajo"
+    "message": "Modalidad de trabajo"
   },
   "fieldEmployment": {
     "message": "Tipo de empleo"
   },
   "fieldSalaryFrom": {
-    "message": "Salario"
+    "message": "Salario desde"
   },
   "fieldSalaryTo": {
-    "message": "Sueldos"
+    "message": "Salario hasta"
   },
   "fieldCurrency": {
     "message": "Moneda"
@@ -378,7 +378,7 @@
     "message": "Descripción"
   },
   "remoteOnsite": {
-    "message": "En el sitio"
+    "message": "Presencial"
   },
   "remoteHybrid": {
     "message": "Híbrido"
@@ -393,16 +393,16 @@
     "message": "Tiempo parcial"
   },
   "employmentContract": {
-    "message": "Contrato"
+    "message": "Contrato temporal"
   },
   "employmentFreelance": {
     "message": "Freelance"
   },
   "employmentInternship": {
-    "message": "Prácticas"
+    "message": "Prácticas profesionales"
   },
   "employmentApprenticeship": {
-    "message": "Aprendiz"
+    "message": "Aprendizaje"
   },
   "periodYear": {
     "message": "Por año"
@@ -417,7 +417,7 @@
     "message": "Por hora"
   },
   "postingsFound": {
-    "message": "Esta página enumera las publicaciones $COUNT$.",
+    "message": "Esta página muestra $COUNT$ vacantes.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -425,19 +425,19 @@
     }
   },
   "tickHint": {
-    "message": "Ata los que vale la pena guardar. Cada uno se convierte en su propia captura, leída de nuevo por Postulo."
+    "message": "Marque las que valga la pena conservar. Cada una se convierte en su propia captura, que Postulo vuelve a leer."
   },
   "tickAll": {
-    "message": "Todos"
+    "message": "Todas"
   },
   "tickNone": {
-    "message": "Ninguno"
+    "message": "Ninguna"
   },
   "nothingTicked": {
-    "message": "Nada está marcado."
+    "message": "No hay nada marcado."
   },
   "keptMany": {
-    "message": "$COUNT$ capturas guardadas en este navegador.",
+    "message": "$COUNT$ capturas conservadas en este navegador.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -445,7 +445,7 @@
     }
   },
   "sentMany": {
-    "message": "$COUNT$ capturas enviadas para su revisión.",
+    "message": "$COUNT$ capturas enviadas a revisión.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -453,7 +453,7 @@
     }
   },
   "refusedSome": {
-    "message": "$COUNT$ fueron rechazados; la lista de capturas dice por qué.",
+    "message": "Se rechazaron $COUNT$; la lista de capturas indica por qué.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -461,7 +461,7 @@
     }
   },
   "knownListing": {
-    "message": "Capturado antes: en sus listados desde $WHEN$ como $TITLE$.",
+    "message": "Ya se capturó: está en sus ofertas desde el $WHEN$ como $TITLE$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -472,7 +472,7 @@
     }
   },
   "knownCapture": {
-    "message": "Ya está esperando su revisión en Postulo, desde $WHEN$.",
+    "message": "Ya está en espera de revisión en Postulo, desde el $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -480,7 +480,7 @@
     }
   },
   "knownSimilar": {
-    "message": "Existe un listado con este título en esta empresa: $TITLE$.",
+    "message": "Ya existe una oferta con este título en esta empresa: $TITLE$.",
     "placeholders": {
       "title": {
         "content": "$1"
@@ -488,46 +488,46 @@
     }
   },
   "knownTag": {
-    "message": "capturado antes"
+    "message": "ya capturada"
   },
   "knownOpen": {
-    "message": "Ábrelo en Postulo"
+    "message": "Abrir en Postulo"
   },
   "pictureOffer": {
-    "message": "Postulo puede mantener una imagen de toda la página como la vea, firmada o no. ¿Enviar uno?"
+    "message": "Postulo puede conservar una imagen de toda la página tal como usted la ve, con o sin sesión iniciada. ¿Enviar una?"
   },
   "pictureSend": {
-    "message": "Enviar la foto"
+    "message": "Enviar la imagen"
   },
   "pictureSkip": {
-    "message": "No hay imagen"
+    "message": "Sin imagen"
   },
   "pictureDrawing": {
-    "message": "Dibujo la página.."
+    "message": "Dibujando la página…"
   },
   "pictureSending": {
-    "message": "Enviando la foto.."
+    "message": "Enviando la imagen…"
   },
   "pictureSent": {
-    "message": "La foto fue enviada."
+    "message": "Se envió la imagen."
   },
   "pictureNotKept": {
-    "message": "Postulo no guardó la foto. La captura en sí misma no es afectada."
+    "message": "Postulo no conservó la imagen. La captura en sí no se ve afectada."
   },
   "pictureTooBig": {
-    "message": "La página es demasiado grande para enviar como imagen."
+    "message": "La página es demasiado grande para enviarla como imagen."
   },
   "pictureFailed": {
-    "message": "La página no se puede dibujar. ¿Aún es el que capturaste?"
+    "message": "No se pudo dibujar la página. ¿Sigue siendo la que capturó?"
   },
   "languageLabel": {
     "message": "Idioma"
   },
   "languageFollow": {
-    "message": "Siga el navegador"
+    "message": "Usar el idioma del navegador"
   },
   "languageHint": {
-    "message": "Cada idioma, pero el inglés es un borrador que ningún orador ha examinado. Efectúa inmediatamente, sin Guardar."
+    "message": "Todos los idiomas excepto el inglés son borradores que ningún hablante ha revisado todavía. Se aplica de inmediato, sin Guardar."
   },
   "reviewPageTitle": {
     "message": "Revisar una captura"

@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Fanga starvslýsingina, tú hyggur at, goym hana í kaganum og send hana til tína egnu Postulo til eftirkanningar, tá ið tú sigur tað. Einki fer nakrastaðni annars."
+  },
+  "actionTitle": {
+    "message": "Fanga hesa starvslýsingina í Postulo"
+  },
+  "postuloUnreachable": {
+    "message": "Ikki ber til at fáa samband við Postulo: tað, tú sendir, bíðar í hesum kaganum, til Postulo svarar."
+  },
+  "footerOnline": {
+    "message": "Postulo svarar"
+  },
+  "footerSlow": {
+    "message": "Postulo svarar seint"
+  },
+  "reviewHeading": {
+    "message": "Skal eftirkannast"
+  },
+  "waitingInPostulo": {
+    "message": "Bíðar eftir eftirkanning í Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Einki bíðar eftir eftirkanning."
+  },
+  "lastListed": {
+    "message": "Sum Postulo seinast listaði tær, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Fangingar av hesi starvslýsingini: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Bíða eftir eftirkanning: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Stillingar"
+  },
+  "setUp": {
+    "message": "Set tað upp"
+  },
+  "capture": {
+    "message": "Fanga hesa starvslýsingina"
+  },
+  "addListing": {
+    "message": "Legg eina starvslýsing afturat"
+  },
+  "captureHint": {
+    "message": "Síðan verður lisin her, í kaganum hjá tær. Einki verður sent, fyrr enn tú sigur tað."
+  },
+  "review": {
+    "message": "Eftirkanna í Postulo"
+  },
+  "reading": {
+    "message": "Lesur síðuna…"
+  },
+  "allowing": {
+    "message": "Loyvir ískoytinum at fáa samband við tína Postulo…"
+  },
+  "noPermission": {
+    "message": "Uttan loyvi at fáa samband við tína Postulo kann einki sendast."
+  },
+  "sending": {
+    "message": "Sendir til Postulo…"
+  },
+  "captured": {
+    "message": "Fangað. Eftirkanna hana, áðrenn hon verður ein starvslýsing."
+  },
+  "readBy": {
+    "message": "Lisið av $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Starvslýsing uttan heiti"
+  },
+  "optionsTitle": {
+    "message": "Postulo-stillingar"
+  },
+  "instanceLabel": {
+    "message": "Tín Postulo"
+  },
+  "instanceHint": {
+    "message": "Vevbústaðurin, tú letur hana upp á. https, uttan so at hon koyrir á hesi teldu."
+  },
+  "tokenLabel": {
+    "message": "API-tekin"
+  },
+  "tokenHint": {
+    "message": "Gjørt undir $PATH$ í Postulo, við heimildini $SCOPE$ og ongari aðrari. Tað verður bert goymt á hesum tóli og ongantíð samstillað gjøgnum eina kagakontu.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Stillingar → API-tekin"
+  },
+  "save": {
+    "message": "Goym"
+  },
+  "test": {
+    "message": "Royn"
+  },
+  "shortcutHint": {
+    "message": "Trýstir tú á knøttin, ella $SHORTCUT$, verður síðan, tú hyggur at, lisin her í kaganum. Eingin síða verður lisin, fyrr enn tú biður um tað, og einki verður sent nakrastaðni uttan til tína egnu Postulo, tá ið tú sigur tað.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Set inn tekinið, sum Postulo vísti tær."
+  },
+  "saved": {
+    "message": "Goymt. Knøtturin sendir nú síður til $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Goymt, men kagin noktaði loyvi at fáa samband við hann; loyv tað í loyvunum hjá ískoytinum."
+  },
+  "asking": {
+    "message": "Spyr Postulo, hvørjum hetta tekinið hoyrir til…"
+  },
+  "addressRefused": {
+    "message": "Loyvi at fáa samband við hendan vevbústaðin varð noktað."
+  },
+  "tokenIs": {
+    "message": "Tekinið „$NAME$“ hjá $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Tekinið „$NAME$“ hjá $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Tað vantar heimildina captures, so tað kann ikki fanga."
+  },
+  "noCredentialsInAddress": {
+    "message": "Tak brúkaranavnið og loyniorðið burtur úr vevbústaðinum: hann hevði ongantíð fingið samband, og loyniorðið hevði verið víst í gluggaskjalinum."
+  },
+  "tokenTooWide": {
+    "message": "Hetta tekinið kann eisini: $SCOPES$. Ískoytið hevur bert brúk fyri heimildini captures: skriva út eitt tekin við bert teirri heimildini og tak hetta aftur.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Vevbústaðurin hjá Postulo varð ikki loyvdur, so einki varð sent. Fangingin er goymd og bíðar: loyv vevbústaðin og trýst á Send aftur."
+  },
+  "enterAddress": {
+    "message": "Skriva vevbústaðin hjá tínari Postulo."
+  },
+  "notAnAddress": {
+    "message": "Tað sær ikki út sum ein vevbústaður."
+  },
+  "httpsOnly": {
+    "message": "Brúka https til alt, sum ikki er á tínari egnu teldu: tekinið fylgir við hvørji umbøn."
+  },
+  "tokenRefused": {
+    "message": "Postulo góðtekur ikki hetta tekinið. Kanna tað undir $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Hetta tekinið hevur ikki loyvi at fanga."
+  },
+  "tooMany": {
+    "message": "Ov nógvar fangingar í stuttari tíð. Bíða ein minutt og royn aftur."
+  },
+  "answered": {
+    "message": "Postulo svaraði $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Eingin flipi at lesa."
+  },
+  "notWebPage": {
+    "message": "Bert vevsíður kunnu fangast."
+  },
+  "unreadable": {
+    "message": "Ikki bar til at lesa síðuna. Summar síður forða ískoytum."
+  },
+  "notPostulo": {
+    "message": "Vevbústaðurin svaraði, men ikki sum Postulo. Kanna vevbústaðin og eina møguliga innritanarsíðu framman fyri hann."
+  },
+  "addressTooLong": {
+    "message": "Vevbústaðurin hjá hesi síðuni er longri, enn Postulo góðtekur, eisini uttan partin aftan á „#“, so fangingin varð ikki send. Legg heldur starvslýsingina afturat í Postulo við hond."
+  },
+  "reviewHint": {
+    "message": "Hetta er tað, sum varð lisið av síðuni. Rætta alt, sum er skeivt; einki fer úr hesum kaganum, fyrr enn tú sendir tað."
+  },
+  "sendForReview": {
+    "message": "Send til eftirkanningar"
+  },
+  "notConnected": {
+    "message": "Enn ikki í sambandi við nakra Postulo: tað, tú fangar, verður goymt í hesum kaganum."
+  },
+  "keep": {
+    "message": "Goym í hesum kaganum"
+  },
+  "kept": {
+    "message": "Goymt í hesum kaganum. Send tað til Postulo, nær tú ert til reiðar."
+  },
+  "storageFull": {
+    "message": "Goymslan í hesum kaganum til Postulo er full. Send ella strika nakrar fangingar, og royn so aftur."
+  },
+  "alreadyKept": {
+    "message": "Tú hevur longu goymt hesa síðuna og ikki sent hana: hetta er tín útgáva."
+  },
+  "nothingRead": {
+    "message": "Einki bar til at lesa av hesi síðuni. Fyll út tað, tú veitst; einki fer úr hesum kaganum, fyrr enn tú sendir tað."
+  },
+  "waiting": {
+    "message": "Ikki ber til at fáa samband við Postulo júst nú. Tað verður goymt í hesum kaganum og sent, so skjótt sum Postulo svarar."
+  },
+  "waitingOffline": {
+    "message": "Royndarknøtturin er tendraður, so tað bíðar í hesum kaganum. Tað verður sent, tá ið hann er sløktur."
+  },
+  "waitingAccount": {
+    "message": "Tað verður goymt í hesum kaganum og sent, tá ið hetta er greitt."
+  },
+  "sendNeedsSetup": {
+    "message": "Goymt í hesum kaganum, verður sent, tá ið tín Postulo er sett upp."
+  },
+  "capturesTitle": {
+    "message": "Fangingar í hesum kaganum"
+  },
+  "capturesIntro": {
+    "message": "Starvslýsingar, tú hevur fangað, goymdar her, til tær náa tínari Postulo. Tað, tú sendir, fer, so skjótt sum samband fæst við Postulo."
+  },
+  "nothingKept": {
+    "message": "Einki er goymt í hesum kaganum."
+  },
+  "sendAll": {
+    "message": "Send alt, sum ikki er sent"
+  },
+  "clearSent": {
+    "message": "Tak tær sendu burtur"
+  },
+  "stateKept": {
+    "message": "Ikki sent"
+  },
+  "stateWaiting": {
+    "message": "Bíðar eftir Postulo"
+  },
+  "stateSent": {
+    "message": "Sent"
+  },
+  "stateRefused": {
+    "message": "Noktað"
+  },
+  "tryNow": {
+    "message": "Royn nú"
+  },
+  "holdBack": {
+    "message": "Goym hana her í staðin"
+  },
+  "deleteConfirm": {
+    "message": "Strika hesa fangingina? Hon er ikki komin til Postulo, so hon er bert her."
+  },
+  "troubleshooting": {
+    "message": "Royndir og feilfinning"
+  },
+  "offlineLabel": {
+    "message": "Lat sum um samband ikki fæst við Postulo"
+  },
+  "offlineHint": {
+    "message": "Til royndar. Meðan hetta er tendrað, verður einki sent: fangingar bíða í hesum kaganum júst sum tær høvdu gjørt, um Postulo var niðri, og verða sendar, tá ið tað er sløkt."
+  },
+  "offlineOn": {
+    "message": "Royndarknøtturin er tendraður: einki verður sent til Postulo."
+  },
+  "offlineOff": {
+    "message": "Royndarknøtturin er sløktur: tað, sum bíðar, verður nú sent til Postulo."
+  },
+  "downloadLog": {
+    "message": "Tak loggin niður"
+  },
+  "clearLog": {
+    "message": "Tøm loggin"
+  },
+  "logCleared": {
+    "message": "Loggurin er tómur."
+  },
+  "logHint": {
+    "message": "Tað, sum ískoytið gjørdi, fyri at finna út av, hví okkurt ikki riggaði. Hann inniheldur einki tekin og einki úr síðunum."
+  },
+  "delete": {
+    "message": "Strika"
+  },
+  "edit": {
+    "message": "Broyt"
+  },
+  "fieldTitle": {
+    "message": "Starvsheiti"
+  },
+  "fieldCompany": {
+    "message": "Fyritøka"
+  },
+  "fieldLocation": {
+    "message": "Staðseting"
+  },
+  "fieldRemote": {
+    "message": "Arbeiðsskipan"
+  },
+  "fieldEmployment": {
+    "message": "Setanarslag"
+  },
+  "fieldSalaryFrom": {
+    "message": "Løn frá"
+  },
+  "fieldSalaryTo": {
+    "message": "Løn til"
+  },
+  "fieldCurrency": {
+    "message": "Gjaldoyra"
+  },
+  "fieldPeriod": {
+    "message": "Tíðarskeið"
+  },
+  "fieldCloses": {
+    "message": "Umsóknarfreist"
+  },
+  "fieldDescription": {
+    "message": "Lýsing"
+  },
+  "remoteOnsite": {
+    "message": "Á arbeiðsstaðnum"
+  },
+  "remoteHybrid": {
+    "message": "Blandað"
+  },
+  "remoteRemote": {
+    "message": "Fjararbeiði"
+  },
+  "employmentFullTime": {
+    "message": "Fulla tíð"
+  },
+  "employmentPartTime": {
+    "message": "Hálva tíð"
+  },
+  "employmentContract": {
+    "message": "Tíðaravmarkað"
+  },
+  "employmentFreelance": {
+    "message": "Sjálvstøðugur"
+  },
+  "employmentInternship": {
+    "message": "Starvsvenjing"
+  },
+  "employmentApprenticeship": {
+    "message": "Læra"
+  },
+  "periodYear": {
+    "message": "Um árið"
+  },
+  "periodMonth": {
+    "message": "Um mánaðin"
+  },
+  "periodDay": {
+    "message": "Um dagin"
+  },
+  "periodHour": {
+    "message": "Um tíman"
+  },
+  "postingsFound": {
+    "message": "Henda síðan listar $COUNT$ starvslýsingar.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Krossa av tær, sum eru verdar at goyma. Hvør teirra verður ein fanging fyri seg, sum Postulo lesur aftur."
+  },
+  "tickAll": {
+    "message": "Allar"
+  },
+  "tickNone": {
+    "message": "Ongar"
+  },
+  "nothingTicked": {
+    "message": "Einki er krossað av."
+  },
+  "keptMany": {
+    "message": "$COUNT$ fangingar goymdar í hesum kaganum.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ fangingar sendar til eftirkanningar.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ vórðu noktaðar; listin yvir fangingar sigur hví.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Fangað áður: í starvslýsingum tínum síðan $WHEN$ sum $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Bíðar longu eftir eftirkanning í Postulo, síðan $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Ein starvslýsing við hesum heiti hjá hesi fyritøkuni er til: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "fangað áður"
+  },
+  "knownOpen": {
+    "message": "Lat upp í Postulo"
+  },
+  "pictureOffer": {
+    "message": "Postulo kann goyma eina mynd av allari síðuni, sum tú sært hana, innritaður ella ikki. Senda eina?"
+  },
+  "pictureSend": {
+    "message": "Send myndina"
+  },
+  "pictureSkip": {
+    "message": "Onga mynd"
+  },
+  "pictureDrawing": {
+    "message": "Teknar síðuna…"
+  },
+  "pictureSending": {
+    "message": "Sendir myndina…"
+  },
+  "pictureSent": {
+    "message": "Myndin varð send."
+  },
+  "pictureNotKept": {
+    "message": "Postulo goymdi ikki myndina. Sjálv fangingin er óávirkað."
+  },
+  "pictureTooBig": {
+    "message": "Síðan er ov stór at senda sum mynd."
+  },
+  "pictureFailed": {
+    "message": "Ikki bar til at tekna síðuna. Er tað enn tann, tú fangaði?"
+  },
+  "languageLabel": {
+    "message": "Mál"
+  },
+  "languageFollow": {
+    "message": "Fylg kaganum"
+  },
+  "languageHint": {
+    "message": "Øll mál uttan enskt eru uppkast, sum eingin, ið talar málið, hevur eftirkannað enn. Fær virknað beinanvegin, uttan Goym."
+  },
+  "reviewPageTitle": {
+    "message": "Eftirkanna eina fanging"
+  }
+}

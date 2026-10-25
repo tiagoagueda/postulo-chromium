@@ -9,7 +9,7 @@
     "message": "Ayarlar"
   },
   "setUp": {
-    "message": "Kur"
+    "message": "Ayarla"
   },
   "capture": {
     "message": "Bu ilanı yakala"
@@ -53,10 +53,10 @@
     "message": "Postulo'nuz"
   },
   "instanceHint": {
-    "message": "Onu açtığınız adres. Bu bilgisayarda çalışmıyorsa https."
+    "message": "Postulo'yu açtığınız adres. Bu makinede çalışmıyorsa https olmalı."
   },
   "tokenLabel": {
-    "message": "API jetonu"
+    "message": "API belirteci"
   },
   "tokenHint": {
     "message": "Postulo'da $PATH$ altında, yalnızca $SCOPE$ kapsamıyla oluşturulur. Yalnızca bu cihazda saklanır ve hiçbir zaman bir tarayıcı hesabı üzerinden eşitlenmez.",
@@ -70,13 +70,13 @@
     }
   },
   "tokenPath": {
-    "message": "Ayarlar → API jetonları"
+    "message": "Ayarlar → API belirteçleri"
   },
   "save": {
     "message": "Kaydet"
   },
   "test": {
-    "message": "Sına"
+    "message": "Test et"
   },
   "shortcutHint": {
     "message": "Düğmeye ya da $SHORTCUT$ tuşlarına basmak, baktığınız sayfayı burada, tarayıcıda okur. Siz istemeden hiçbir sayfa okunmaz; bir şey yalnızca siz söylediğinizde ve yalnızca kendi Postulo'nuza gönderilir.",
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Postulo'nun size gösterdiği jetonu yapıştırın."
+    "message": "Postulo'nun size gösterdiği belirteci yapıştırın."
   },
   "saved": {
     "message": "Kaydedildi. Düğme artık sayfaları $HOST$ adresine gönderecek.",
@@ -101,10 +101,10 @@
     "message": "Kaydedildi, ancak tarayıcı erişim iznini reddetti; uzantının izinlerinden buna izin verin."
   },
   "asking": {
-    "message": "Postulo'ya bu jetonun kime ait olduğu soruluyor…"
+    "message": "Postulo'ya bu belirtecin kime ait olduğu soruluyor…"
   },
   "addressRefused": {
-    "message": "Bu adrese erişim izni reddedildi."
+    "message": "Bu adrese ulaşma izni reddedildi."
   },
   "lacksCaptures": {
     "message": "captures kapsamı eksik, bu yüzden yakalayamaz."
@@ -113,13 +113,13 @@
     "message": "Postulo'nuzun adresini girin."
   },
   "notAnAddress": {
-    "message": "Bu bir web adresine benzemiyor."
+    "message": "Bu bir web adresi gibi görünmüyor."
   },
   "httpsOnly": {
-    "message": "Kendi bilgisayarınızda olmayan her şey için https kullanın: jeton her istekle birlikte gider."
+    "message": "Kendi makinenizde olmayan her şey için https kullanın: belirteç her istekle birlikte gönderilir."
   },
   "tokenRefused": {
-    "message": "Postulo bu jetonu kabul etmiyor. $PATH$ altında kontrol edin.",
+    "message": "Postulo bu belirteci kabul etmiyor. $PATH$ bölümünden kontrol edin.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -127,13 +127,13 @@
     }
   },
   "notAllowed": {
-    "message": "Bu jetonun yakalama izni yok."
+    "message": "Bu belirtecin yakalama yapma izni yok."
   },
   "tooMany": {
-    "message": "Kısa sürede çok fazla yakalama. Bir dakika bekleyip yeniden deneyin."
+    "message": "Kısa sürede çok fazla yakalama yapıldı. Bir dakika bekleyip yeniden deneyin."
   },
   "answered": {
-    "message": "Postulo $STATUS$ ile yanıt verdi.",
+    "message": "Postulo şu yanıtı verdi: $STATUS$.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -401,7 +401,7 @@
     "message": "Postulo'da aç"
   },
   "notPostulo": {
-    "message": "Bu adres yanıt verdi, ancak Postulo olarak değil. Adresi ve önündeki oturum açma sayfasını varsa kontrol edin."
+    "message": "Bu adres yanıt verdi, ama Postulo olarak değil. Adresi ve önündeki olası giriş sayfalarını kontrol edin."
   },
   "addressTooLong": {
     "message": "Bu sayfanın adresi, “#” işaretinden sonraki kısım çıkarıldığında bile Postulo'nun kabul ettiğinden uzun, bu yüzden yakalama gönderilmedi. İlanı bunun yerine Postulo'ya elle ekleyin."
@@ -494,7 +494,7 @@
     "message": "Bir yakalamayı incele"
   },
   "tokenTooWide": {
-    "message": "Bu token da olabilir: $SCOPES$. uzatma sadece yakalama kapsamına ihtiyaç duyar: bu kapsamı tek başına bir token sorun ve bunu geri döndürür.",
+    "message": "Bu belirteç şunları da yapabilir: $SCOPES$. Uzantının yalnızca yakalama kapsamına ihtiyacı var: yalnızca bu kapsamı içeren bir belirteç oluşturun ve bunu iptal edin.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -502,10 +502,10 @@
     }
   },
   "noCredentialsInAddress": {
-    "message": "Kullanıcı adını ve şifreyi adres dışında bırakın: asla bağlantı kurmayacak ve şifre popup'da gösterilecekti."
+    "message": "Kullanıcı adını ve parolayı adrese yazmayın: bağlantı hiç kurulamaz ve parola açılır pencerede görünür."
   },
   "permissionRefused": {
-    "message": "Postulo'nun adresi izin verilmedi, bu yüzden hiçbir şey gönderilmedi. yakalama devam ediyor ve bekler: adresi ve basın tekrar gönder."
+    "message": "Postulo'nuzun adresine izin verilmedi, bu yüzden hiçbir şey gönderilmedi. Yakalama saklanıyor ve bekliyor: adrese izin verin ve yeniden Gönder'e basın."
   },
   "tokenIs": {
     "message": "$OWNER$ için “$NAME$” belirteci.",

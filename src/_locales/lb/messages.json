@@ -426,7 +426,7 @@
     "message": "Am Postulo opmaachen"
   },
   "notPostulo": {
-    "message": "Dës Adress huet geäntwert, awer net als Postulo. Kontrolléiert d'Adress an eventuell Umeldesäiten doran."
+    "message": "Dës Adress huet geäntwert, awer net als Postulo. Kontrolléiert d'Adress an eng eventuell Umeldesäit dovir."
   },
   "addressTooLong": {
     "message": "D'Adress vun dëser Säit ass méi laang, wéi de Postulo akzeptéiert, och ouni dat, wat no dem „#“ kënnt, dofir ass d'Erfaassung net geschéckt ginn. Setzt d'Annonce amplaz vun Hand am Postulo derbäi."
@@ -519,7 +519,7 @@
     "message": "Eng Erfaassung nokucken"
   },
   "tokenTooWide": {
-    "message": "Dësen Token kann och: $SCOPES$. D'Erweiderung brauch nëmmen de Beräich captures: stellt en Token mat just deem Beräich aus a widderrufft dësen.",
+    "message": "Dësen Token kann och: $SCOPES$. D'Erweiderung brauch nëmmen d'Berechtegung captures: stellt en Token mat just där Berechtegung aus a widderrufft dësen.",
     "placeholders": {
       "scopes": {
         "content": "$1"

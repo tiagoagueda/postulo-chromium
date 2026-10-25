@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Uhvatite oglas za posao koji gledate, sačuvajte ga u pregledaču i pošaljite ga svom Postulu na pregled kad vi to kažete. Ništa ne ide nigdje drugdje."
+  },
+  "actionTitle": {
+    "message": "Uhvati ovaj oglas u Postulo"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo nije dostupan: ono što pošaljete čeka u ovom pregledaču dok ne odgovori."
+  },
+  "footerOnline": {
+    "message": "Postulo odgovara"
+  },
+  "footerSlow": {
+    "message": "Postulo sporo odgovara"
+  },
+  "reviewHeading": {
+    "message": "Čeka pregled"
+  },
+  "waitingInPostulo": {
+    "message": "Čeka pregled u Postulu"
+  },
+  "nothingWaiting": {
+    "message": "Ništa ne čeka pregled."
+  },
+  "lastListed": {
+    "message": "Kako ih je Postulo posljednji put naveo, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Uhvaćeni primjerci ovog oglasa: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Čeka pregled: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Podešavanja"
+  },
+  "setUp": {
+    "message": "Podesi"
+  },
+  "capture": {
+    "message": "Uhvati ovaj oglas"
+  },
+  "addListing": {
+    "message": "Dodaj oglas"
+  },
+  "captureHint": {
+    "message": "Stranica se čita ovdje, u vašem pregledaču. Ništa se ne šalje dok vi to ne kažete."
+  },
+  "review": {
+    "message": "Pregledaj u Postulu"
+  },
+  "reading": {
+    "message": "Čitanje stranice…"
+  },
+  "allowing": {
+    "message": "Proširenju se dozvoljava pristup vašem Postulu…"
+  },
+  "noPermission": {
+    "message": "Bez dozvole za pristup vašem Postulu ništa se ne može poslati."
+  },
+  "sending": {
+    "message": "Slanje u Postulo…"
+  },
+  "captured": {
+    "message": "Uhvaćeno. Pregledajte ga prije nego što postane oglas."
+  },
+  "readBy": {
+    "message": "Pročitao: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Oglas bez naslova"
+  },
+  "optionsTitle": {
+    "message": "Podešavanja Postula"
+  },
+  "instanceLabel": {
+    "message": "Vaš Postulo"
+  },
+  "instanceHint": {
+    "message": "Adresa na kojoj ga otvarate. https, osim ako radi na ovom računaru."
+  },
+  "tokenLabel": {
+    "message": "API token"
+  },
+  "tokenHint": {
+    "message": "Napravljen u Postulu pod $PATH$, s opsegom $SCOPE$ i ničim više. Čuva se samo na ovom uređaju i nikad se ne sinhronizuje preko naloga u pregledaču.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Podešavanja → API tokeni"
+  },
+  "save": {
+    "message": "Sačuvaj"
+  },
+  "test": {
+    "message": "Provjeri"
+  },
+  "shortcutHint": {
+    "message": "Pritisak na dugme ili $SHORTCUT$ čita stranicu koju gledate, ovdje u pregledaču. Nijedna stranica se ne čita dok to ne zatražite, i ništa se ne šalje nigdje osim u vaš Postulo, kad vi to kažete.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Nalijepite token koji vam je Postulo prikazao."
+  },
+  "saved": {
+    "message": "Sačuvano. Dugme će sada slati stranice na $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Sačuvano, ali je pregledač odbio dozvolu za pristup; dozvolite ga u dozvolama proširenja."
+  },
+  "asking": {
+    "message": "Postulo se pita čiji je ovo token…"
+  },
+  "addressRefused": {
+    "message": "Dozvola za pristup toj adresi je odbijena."
+  },
+  "tokenIs": {
+    "message": "Token „$NAME$“ za $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token „$NAME$“ za $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Nema opseg captures, pa ne može hvatati oglase."
+  },
+  "noCredentialsInAddress": {
+    "message": "Izostavite korisničko ime i lozinku iz adrese: veza se nikad ne bi uspostavila, a lozinka bi se prikazala u iskačućem prozoru."
+  },
+  "tokenTooWide": {
+    "message": "Ovaj token može i: $SCOPES$. Proširenju je potreban samo opseg captures: izdajte token samo s tim opsegom i opozovite ovaj.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Adresa Postula nije dozvoljena, pa ništa nije poslato. Uhvaćeni oglas je sačuvan i čeka: dozvolite adresu i ponovo pritisnite „Pošalji“."
+  },
+  "enterAddress": {
+    "message": "Unesite adresu svog Postula."
+  },
+  "notAnAddress": {
+    "message": "To ne izgleda kao veb-adresa."
+  },
+  "httpsOnly": {
+    "message": "Koristite https za sve što nije na vašem računaru: token putuje sa svakim zahtjevom."
+  },
+  "tokenRefused": {
+    "message": "Postulo ne prihvata ovaj token. Provjerite ga pod $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Ovaj token nema dozvolu za hvatanje oglasa."
+  },
+  "tooMany": {
+    "message": "Previše hvatanja za kratko vrijeme. Sačekajte minut i pokušajte ponovo."
+  },
+  "answered": {
+    "message": "Postulo je odgovorio: $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nema kartice za čitanje."
+  },
+  "notWebPage": {
+    "message": "Mogu se hvatati samo veb-stranice."
+  },
+  "unreadable": {
+    "message": "Stranica se nije mogla pročitati. Neke stranice blokiraju proširenja."
+  },
+  "notPostulo": {
+    "message": "Ta adresa je odgovorila, ali ne kao Postulo. Provjerite adresu i eventualnu stranicu za prijavljivanje ispred nje."
+  },
+  "addressTooLong": {
+    "message": "Adresa ove stranice duža je nego što Postulo prihvata, čak i bez dijela iza „#“, pa uhvaćeni oglas nije poslat. Umjesto toga dodajte oglas u Postulo ručno."
+  },
+  "reviewHint": {
+    "message": "Ovo je pročitano sa stranice. Ispravite sve što je pogrešno; ništa ne napušta ovaj pregledač dok to ne pošaljete."
+  },
+  "sendForReview": {
+    "message": "Pošalji na pregled"
+  },
+  "notConnected": {
+    "message": "Još nije povezano s Postulom: ono što uhvatite čuva se u ovom pregledaču."
+  },
+  "keep": {
+    "message": "Sačuvaj u ovom pregledaču"
+  },
+  "kept": {
+    "message": "Sačuvano u ovom pregledaču. Pošaljite ga u Postulo kad god budete spremni."
+  },
+  "storageFull": {
+    "message": "Prostor ovog pregledača za Postulo je pun. Pošaljite ili obrišite neke uhvaćene oglase, pa pokušajte ponovo."
+  },
+  "alreadyKept": {
+    "message": "Ovu stranicu ste već sačuvali i niste je poslali: ovo je vaša verzija."
+  },
+  "nothingRead": {
+    "message": "Sa ove stranice se ništa nije moglo pročitati. Popunite ono što znate; ništa ne napušta ovaj pregledač dok to ne pošaljete."
+  },
+  "waiting": {
+    "message": "Postulo trenutno nije dostupan. Uhvaćeni oglas se čuva u ovom pregledaču i šalje čim Postulo odgovori."
+  },
+  "waitingOffline": {
+    "message": "Probni prekidač je uključen, pa uhvaćeni oglas čeka u ovom pregledaču. Šalje se kad se prekidač isključi."
+  },
+  "waitingAccount": {
+    "message": "Čuva se u ovom pregledaču i šalje kad se to popravi."
+  },
+  "sendNeedsSetup": {
+    "message": "Sačuvano u ovom pregledaču, šalje se kad podesite svoj Postulo."
+  },
+  "capturesTitle": {
+    "message": "Uhvaćeni oglasi u ovom pregledaču"
+  },
+  "capturesIntro": {
+    "message": "Oglasi koje ste uhvatili, sačuvani ovdje dok ne stignu u vaš Postulo. Ono što pošaljete odlazi čim Postulo postane dostupan."
+  },
+  "nothingKept": {
+    "message": "U ovom pregledaču ništa nije sačuvano."
+  },
+  "sendAll": {
+    "message": "Pošalji sve što nije poslato"
+  },
+  "clearSent": {
+    "message": "Ukloni poslate"
+  },
+  "stateKept": {
+    "message": "Nije poslato"
+  },
+  "stateWaiting": {
+    "message": "Čeka Postulo"
+  },
+  "stateSent": {
+    "message": "Poslato"
+  },
+  "stateRefused": {
+    "message": "Odbijeno"
+  },
+  "tryNow": {
+    "message": "Pokušaj sada"
+  },
+  "holdBack": {
+    "message": "Ipak zadrži ovdje"
+  },
+  "deleteConfirm": {
+    "message": "Obrisati ovaj uhvaćeni oglas? Nije stigao u Postulo, pa postoji samo ovdje."
+  },
+  "troubleshooting": {
+    "message": "Testiranje i rješavanje problema"
+  },
+  "offlineLabel": {
+    "message": "Ponašaj se kao da Postulo nije dostupan"
+  },
+  "offlineHint": {
+    "message": "Za testiranje. Dok je ovo uključeno, ništa se ne šalje: uhvaćeni oglasi čekaju u ovom pregledaču tačno kao kad Postulo ne radi i šalju se kad se ovo isključi."
+  },
+  "offlineOn": {
+    "message": "Probni prekidač je uključen: ništa se ne šalje u Postulo."
+  },
+  "offlineOff": {
+    "message": "Probni prekidač je isključen: ono što čeka sada odlazi u Postulo."
+  },
+  "downloadLog": {
+    "message": "Preuzmi dnevnik"
+  },
+  "clearLog": {
+    "message": "Očisti dnevnik"
+  },
+  "logCleared": {
+    "message": "Dnevnik je prazan."
+  },
+  "logHint": {
+    "message": "Šta je proširenje radilo, da biste otkrili zašto nešto nije uspjelo. Ne sadrži nijedan token niti išta sa stranica."
+  },
+  "delete": {
+    "message": "Obriši"
+  },
+  "edit": {
+    "message": "Uredi"
+  },
+  "fieldTitle": {
+    "message": "Naziv radnog mjesta"
+  },
+  "fieldCompany": {
+    "message": "Kompanija"
+  },
+  "fieldLocation": {
+    "message": "Lokacija"
+  },
+  "fieldRemote": {
+    "message": "Način rada"
+  },
+  "fieldEmployment": {
+    "message": "Vrsta zaposlenja"
+  },
+  "fieldSalaryFrom": {
+    "message": "Plata od"
+  },
+  "fieldSalaryTo": {
+    "message": "Plata do"
+  },
+  "fieldCurrency": {
+    "message": "Valuta"
+  },
+  "fieldPeriod": {
+    "message": "Period"
+  },
+  "fieldCloses": {
+    "message": "Rok za prijavu"
+  },
+  "fieldDescription": {
+    "message": "Opis"
+  },
+  "remoteOnsite": {
+    "message": "Na lokaciji"
+  },
+  "remoteHybrid": {
+    "message": "Hibridno"
+  },
+  "remoteRemote": {
+    "message": "Na daljinu"
+  },
+  "employmentFullTime": {
+    "message": "Puno radno vrijeme"
+  },
+  "employmentPartTime": {
+    "message": "Nepuno radno vrijeme"
+  },
+  "employmentContract": {
+    "message": "Ugovor na određeno"
+  },
+  "employmentFreelance": {
+    "message": "Frilens"
+  },
+  "employmentInternship": {
+    "message": "Praksa"
+  },
+  "employmentApprenticeship": {
+    "message": "Učenje kroz rad"
+  },
+  "periodYear": {
+    "message": "Godišnje"
+  },
+  "periodMonth": {
+    "message": "Mjesečno"
+  },
+  "periodDay": {
+    "message": "Dnevno"
+  },
+  "periodHour": {
+    "message": "Po satu"
+  },
+  "postingsFound": {
+    "message": "Broj oglasa na ovoj stranici: $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Označite one koje vrijedi zadržati. Svaki postaje zaseban uhvaćeni oglas, koji Postulo ponovo čita."
+  },
+  "tickAll": {
+    "message": "Sve"
+  },
+  "tickNone": {
+    "message": "Ništa"
+  },
+  "nothingTicked": {
+    "message": "Ništa nije označeno."
+  },
+  "keptMany": {
+    "message": "Uhvaćeni oglasi sačuvani u ovom pregledaču: $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "Uhvaćeni oglasi poslati na pregled: $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "Odbijeno: $COUNT$; u listi uhvaćenih oglasa piše zašto.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Već uhvaćeno: među vašim oglasima od $WHEN$ kao $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Već čeka pregled u Postulu, od $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Oglas s ovim naslovom u ovoj kompaniji već postoji: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "već uhvaćeno"
+  },
+  "knownOpen": {
+    "message": "Otvori u Postulu"
+  },
+  "pictureOffer": {
+    "message": "Postulo može sačuvati sliku cijele stranice onako kako je vi vidite, prijavljeni ili ne. Poslati je?"
+  },
+  "pictureSend": {
+    "message": "Pošalji sliku"
+  },
+  "pictureSkip": {
+    "message": "Bez slike"
+  },
+  "pictureDrawing": {
+    "message": "Iscrtavanje stranice…"
+  },
+  "pictureSending": {
+    "message": "Slanje slike…"
+  },
+  "pictureSent": {
+    "message": "Slika je poslata."
+  },
+  "pictureNotKept": {
+    "message": "Postulo nije sačuvao sliku. To ne utiče na sam uhvaćeni oglas."
+  },
+  "pictureTooBig": {
+    "message": "Stranica je prevelika da bi se poslala kao slika."
+  },
+  "pictureFailed": {
+    "message": "Stranica se nije mogla iscrtati. Da li je to još uvijek ona koju ste uhvatili?"
+  },
+  "languageLabel": {
+    "message": "Jezik"
+  },
+  "languageFollow": {
+    "message": "Prati pregledač"
+  },
+  "languageHint": {
+    "message": "Svaki jezik osim engleskog je nacrt koji još nije pregledao nijedan izvorni govornik. Primjenjuje se odmah, bez čuvanja."
+  },
+  "reviewPageTitle": {
+    "message": "Pregled uhvaćenog oglasa"
+  }
+}

@@ -9,10 +9,10 @@
     "message": "Cilësimet"
   },
   "setUp": {
-    "message": "Konfigurojeni"
+    "message": "Konfiguroje"
   },
   "capture": {
-    "message": "Kape këtë shpallje"
+    "message": "Kap këtë shpallje"
   },
   "captureHint": {
     "message": "Faqja lexohet këtu, në shfletuesin tuaj. Asgjë nuk dërgohet derisa ta thoni ju."
@@ -53,7 +53,7 @@
     "message": "Postulo-ja juaj"
   },
   "instanceHint": {
-    "message": "Adresa ku e hapni. https, përveç nëse punon në këtë kompjuter."
+    "message": "Adresa ku e hapni. https, përveç nëse funksionon në këtë makinë."
   },
   "tokenLabel": {
     "message": "Token API"
@@ -70,7 +70,7 @@
     }
   },
   "tokenPath": {
-    "message": "Cilësimet → Tokena API"
+    "message": "Cilësimet → Tokenë API"
   },
   "save": {
     "message": "Ruaj"
@@ -107,7 +107,7 @@
     "message": "Leja për të arritur atë adresë u refuzua."
   },
   "tokenIs": {
-    "message": "Token-i “$NAME$” për $OWNER$.",
+    "message": "Tokeni “$NAME$” për $OWNER$.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "Token-i “$NAME$” për $OWNER$ ($SCOPES$).",
+    "message": "Tokeni “$NAME$” për $OWNER$ ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -135,13 +135,13 @@
     "message": "I mungon fushëveprimi captures, prandaj nuk mund të kapë."
   },
   "enterAddress": {
-    "message": "Jepni adresën e Postulo-s suaj."
+    "message": "Shkruani adresën e Postulo-s tuaj."
   },
   "notAnAddress": {
     "message": "Kjo nuk duket si adresë uebi."
   },
   "httpsOnly": {
-    "message": "Përdorni https për çdo gjë që nuk është në kompjuterin tuaj: tokeni udhëton me çdo kërkesë."
+    "message": "Përdorni https për çdo gjë që nuk është në makinën tuaj: tokeni udhëton me çdo kërkesë."
   },
   "tokenRefused": {
     "message": "Postulo nuk e pranon këtë token. Kontrollojeni te $PATH$.",
@@ -152,10 +152,10 @@
     }
   },
   "notAllowed": {
-    "message": "Ky token nuk lejohet të kapë."
+    "message": "Ky token nuk ka leje për të kapur."
   },
   "tooMany": {
-    "message": "Shumë kapje në kohë të shkurtër. Prisni një minutë dhe provoni sërish."
+    "message": "Shumë kapje brenda një kohe të shkurtër. Prisni një minutë dhe provoni sërish."
   },
   "noTab": {
     "message": "Nuk ka skedë për t'u lexuar."
@@ -418,7 +418,7 @@
     "message": "Hape në Postulo"
   },
   "notPostulo": {
-    "message": "Ajo adresë u përgjigj, por jo si Postulo. Kontrolloni adresën dhe çdo faqe hyrjeje që gjendet përpara saj."
+    "message": "Ajo adresë u përgjigj, por jo si Postulo. Kontrolloni adresën dhe çdo faqe hyrjeje që qëndron përpara saj."
   },
   "addressTooLong": {
     "message": "Adresa e kësaj faqeje është më e gjatë sesa pranon Postulo, edhe pa pjesën pas „#“, prandaj kapja nuk u dërgua. Në vend të kësaj, shtojeni shpalljen te Postulo-ja me dorë."
@@ -519,7 +519,7 @@
     }
   },
   "noCredentialsInAddress": {
-    "message": "Mos e vendosni emrin e përdoruesit dhe fjalëkalimin në adresë: nuk do të lidhej kurrë, dhe fjalëkalimi do të shfaqej në dritaren kërcyese."
+    "message": "Mos i vendosni emrin e përdoruesit dhe fjalëkalimin në adresë: nuk do të lidhej kurrë, dhe fjalëkalimi do të shfaqej në dritaren kërcyese."
   },
   "permissionRefused": {
     "message": "Adresa e Postulo-s nuk u lejua, prandaj nuk u dërgua asgjë. Kapja ruhet dhe pret: lejojeni adresën dhe shtypni sërish Dërgo."

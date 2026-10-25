@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Захоплівайце аб'яву, якую праглядаеце, захоўвайце яе ў браўзеры і адпраўляйце ў свой Postulo на разгляд, калі скажаце. Больш нікуды нічога не трапляе."
+  },
+  "actionTitle": {
+    "message": "Захапіць гэтую аб'яву ў Postulo"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo недаступны: тое, што вы адпраўляеце, чакае ў гэтым браўзеры, пакуль ён не адкажа."
+  },
+  "footerOnline": {
+    "message": "Postulo адказвае"
+  },
+  "footerSlow": {
+    "message": "Postulo адказвае павольна"
+  },
+  "reviewHeading": {
+    "message": "Патрабуюць разгляду"
+  },
+  "waitingInPostulo": {
+    "message": "Чакае разгляду ў Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Нічога не чакае разгляду."
+  },
+  "lastListed": {
+    "message": "Як іх апошні раз паказаў Postulo, $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Захопы гэтай аб'явы: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Чакаюць разгляду: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Налады"
+  },
+  "setUp": {
+    "message": "Наладзіць"
+  },
+  "capture": {
+    "message": "Захапіць гэтую аб'яву"
+  },
+  "addListing": {
+    "message": "Дадаць аб'яву"
+  },
+  "captureHint": {
+    "message": "Старонка чытаецца тут, у вашым браўзеры. Нічога не адпраўляецца, пакуль вы не скажаце."
+  },
+  "review": {
+    "message": "Разгледзець у Postulo"
+  },
+  "reading": {
+    "message": "Чытанне старонкі…"
+  },
+  "allowing": {
+    "message": "Атрыманне дазволу на доступ да вашага Postulo…"
+  },
+  "noPermission": {
+    "message": "Без дазволу на доступ да вашага Postulo нічога нельга адправіць."
+  },
+  "sending": {
+    "message": "Адпраўка ў Postulo…"
+  },
+  "captured": {
+    "message": "Захоплена. Разгледзьце захоп, перш чым ён стане аб'явай."
+  },
+  "readBy": {
+    "message": "Прачытана з дапамогай $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Аб'ява без назвы"
+  },
+  "optionsTitle": {
+    "message": "Налады Postulo"
+  },
+  "instanceLabel": {
+    "message": "Ваш Postulo"
+  },
+  "instanceHint": {
+    "message": "Адрас, па якім вы яго адкрываеце. https, калі ён працуе не на гэтым камп'ютары."
+  },
+  "tokenLabel": {
+    "message": "Токен API"
+  },
+  "tokenHint": {
+    "message": "Ствараецца ў раздзеле $PATH$ у Postulo з вобласцю доступу $SCOPE$ і больш нічым. Захоўваецца толькі на гэтай прыладзе і ніколі не сінхранізуецца праз уліковы запіс браўзера.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Налады → Токены API"
+  },
+  "save": {
+    "message": "Захаваць"
+  },
+  "test": {
+    "message": "Праверыць"
+  },
+  "shortcutHint": {
+    "message": "Націсканне кнопкі або $SHORTCUT$ чытае старонку, якую вы праглядаеце, тут, у браўзеры. Ніводная старонка не чытаецца, пакуль вы не папросіце, і нічога не адпраўляецца нікуды, акрамя вашага ўласнага Postulo, і толькі калі вы скажаце.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Устаўце токен, які паказаў вам Postulo."
+  },
+  "saved": {
+    "message": "Захавана. Цяпер кнопка будзе адпраўляць старонкі на $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Захавана, але браўзер не даў дазволу на доступ да гэтага адраса; дазвольце яго ў дазволах пашырэння."
+  },
+  "asking": {
+    "message": "Пытаемся ў Postulo, чый гэта токен…"
+  },
+  "addressRefused": {
+    "message": "Дазвол на доступ да гэтага адраса не дадзены."
+  },
+  "tokenIs": {
+    "message": "Токен «$NAME$» для $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Токен «$NAME$» для $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "У яго няма вобласці доступу captures, таму ён не можа захопліваць."
+  },
+  "noCredentialsInAddress": {
+    "message": "Не ўключайце ў адрас імя карыстальніка і пароль: з імі падключэнне ніколі не атрымаецца, а пароль паказваўся б ва ўсплывальным акне."
+  },
+  "tokenTooWide": {
+    "message": "Гэты токен таксама дазваляе: $SCOPES$. Пашырэнню патрэбна толькі вобласць доступу captures: выдайце токен толькі з ёй і адклічце гэты.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Адрас Postulo не дазволены, таму нічога не адпраўлена. Захоп захаваны і чакае: дазвольце адрас і зноў націсніце «Адправіць»."
+  },
+  "enterAddress": {
+    "message": "Увядзіце адрас вашага Postulo."
+  },
+  "notAnAddress": {
+    "message": "Гэта не падобна на вэб-адрас."
+  },
+  "httpsOnly": {
+    "message": "Выкарыстоўвайце https для ўсяго, што не на вашым уласным камп'ютары: токен перадаецца з кожным запытам."
+  },
+  "tokenRefused": {
+    "message": "Postulo не прымае гэты токен. Праверце яго ў раздзеле $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Гэтаму токену не дазволена захопліваць."
+  },
+  "tooMany": {
+    "message": "Занадта шмат захопаў за кароткі час. Пачакайце хвіліну і паспрабуйце зноў."
+  },
+  "answered": {
+    "message": "Postulo адказаў: $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Няма ўкладкі для чытання."
+  },
+  "notWebPage": {
+    "message": "Захапіць можна толькі вэб-старонкі."
+  },
+  "unreadable": {
+    "message": "Не ўдалося прачытаць старонку. Некаторыя старонкі блакуюць пашырэнні."
+  },
+  "notPostulo": {
+    "message": "Па гэтым адрасе адказалі, але не як Postulo. Праверце адрас і старонку ўваходу перад ім, калі яна ёсць."
+  },
+  "addressTooLong": {
+    "message": "Адрас гэтай старонкі даўжэйшы, чым прымае Postulo, нават без часткі пасля «#», таму захоп не адпраўлены. Дадайце аб'яву ў Postulo ўручную."
+  },
+  "reviewHint": {
+    "message": "Вось што прачытана са старонкі. Выпраўце ўсё, што няправільна; нічога не пакідае гэты браўзер, пакуль вы гэта не адправіце."
+  },
+  "sendForReview": {
+    "message": "Адправіць на разгляд"
+  },
+  "notConnected": {
+    "message": "Яшчэ не падключана да Postulo: тое, што вы захопліваеце, захоўваецца ў гэтым браўзеры."
+  },
+  "keep": {
+    "message": "Захаваць у гэтым браўзеры"
+  },
+  "kept": {
+    "message": "Захавана ў гэтым браўзеры. Адпраўце ў Postulo, калі будзеце гатовыя."
+  },
+  "storageFull": {
+    "message": "Сховішча гэтага браўзера для Postulo запоўнена. Адпраўце або выдаліце некалькі захопаў і паспрабуйце зноў."
+  },
+  "alreadyKept": {
+    "message": "Вы ўжо захавалі гэтую старонку і не адправілі яе: гэта ваша версія."
+  },
+  "nothingRead": {
+    "message": "З гэтай старонкі нічога не ўдалося прачытаць. Запоўніце тое, што ведаеце; нічога не пакідае гэты браўзер, пакуль вы гэта не адправіце."
+  },
+  "waiting": {
+    "message": "Postulo зараз недаступны. Захоп захоўваецца ў гэтым браўзеры і будзе адпраўлены, як толькі Postulo адкажа."
+  },
+  "waitingOffline": {
+    "message": "Тэставы пераключальнік уключаны, таму захоп чакае ў гэтым браўзеры. Ён будзе адпраўлены, калі пераключальнік выключыць."
+  },
+  "waitingAccount": {
+    "message": "Захоп захоўваецца ў гэтым браўзеры і будзе адпраўлены пасля выпраўлення."
+  },
+  "sendNeedsSetup": {
+    "message": "Захавана ў гэтым браўзеры; будзе адпраўлена, калі вы наладзіце свой Postulo."
+  },
+  "capturesTitle": {
+    "message": "Захопы ў гэтым браўзеры"
+  },
+  "capturesIntro": {
+    "message": "Аб'явы, якія вы захапілі; яны захоўваюцца тут, пакуль не трапяць у ваш Postulo. Тое, што вы адпраўляеце, ідзе, як толькі Postulo стане даступны."
+  },
+  "nothingKept": {
+    "message": "У гэтым браўзеры нічога не захоўваецца."
+  },
+  "sendAll": {
+    "message": "Адправіць усё неадпраўленае"
+  },
+  "clearSent": {
+    "message": "Прыбраць адпраўленыя"
+  },
+  "stateKept": {
+    "message": "Не адпраўлена"
+  },
+  "stateWaiting": {
+    "message": "Чакае Postulo"
+  },
+  "stateSent": {
+    "message": "Адпраўлена"
+  },
+  "stateRefused": {
+    "message": "Адхілена"
+  },
+  "tryNow": {
+    "message": "Паспрабаваць зараз"
+  },
+  "holdBack": {
+    "message": "Пакінуць тут"
+  },
+  "deleteConfirm": {
+    "message": "Выдаліць гэты захоп? Ён не трапіў у Postulo, таму існуе толькі тут."
+  },
+  "troubleshooting": {
+    "message": "Тэставанне і пошук праблем"
+  },
+  "offlineLabel": {
+    "message": "Паводзіць сябе так, быццам Postulo недаступны"
+  },
+  "offlineHint": {
+    "message": "Для тэставання. Пакуль гэта ўключана, нічога не адпраўляецца: захопы чакаюць у гэтым браўзеры дакладна так, як калі б Postulo не працаваў, і адпраўляюцца, калі гэта выключыць."
+  },
+  "offlineOn": {
+    "message": "Тэставы пераключальнік уключаны: у Postulo нічога не адпраўляецца."
+  },
+  "offlineOff": {
+    "message": "Тэставы пераключальнік выключаны: тое, што чакала, цяпер адпраўляецца ў Postulo."
+  },
+  "downloadLog": {
+    "message": "Спампаваць журнал"
+  },
+  "clearLog": {
+    "message": "Ачысціць журнал"
+  },
+  "logCleared": {
+    "message": "Журнал пусты."
+  },
+  "logHint": {
+    "message": "Што рабіла пашырэнне — каб высветліць, чаму нешта не спрацавала. Журнал не змяшчае ні токена, ні нічога са старонак."
+  },
+  "delete": {
+    "message": "Выдаліць"
+  },
+  "edit": {
+    "message": "Рэдагаваць"
+  },
+  "fieldTitle": {
+    "message": "Назва пасады"
+  },
+  "fieldCompany": {
+    "message": "Кампанія"
+  },
+  "fieldLocation": {
+    "message": "Месцазнаходжанне"
+  },
+  "fieldRemote": {
+    "message": "Фармат работы"
+  },
+  "fieldEmployment": {
+    "message": "Тып занятасці"
+  },
+  "fieldSalaryFrom": {
+    "message": "Заробак ад"
+  },
+  "fieldSalaryTo": {
+    "message": "Заробак да"
+  },
+  "fieldCurrency": {
+    "message": "Валюта"
+  },
+  "fieldPeriod": {
+    "message": "Перыяд"
+  },
+  "fieldCloses": {
+    "message": "Тэрмін падачы"
+  },
+  "fieldDescription": {
+    "message": "Апісанне"
+  },
+  "remoteOnsite": {
+    "message": "У офісе"
+  },
+  "remoteHybrid": {
+    "message": "Гібрыдны"
+  },
+  "remoteRemote": {
+    "message": "Аддалена"
+  },
+  "employmentFullTime": {
+    "message": "Поўная занятасць"
+  },
+  "employmentPartTime": {
+    "message": "Частковая занятасць"
+  },
+  "employmentContract": {
+    "message": "Тэрміновы кантракт"
+  },
+  "employmentFreelance": {
+    "message": "Фрыланс"
+  },
+  "employmentInternship": {
+    "message": "Стажыроўка"
+  },
+  "employmentApprenticeship": {
+    "message": "Вучнёўства"
+  },
+  "periodYear": {
+    "message": "У год"
+  },
+  "periodMonth": {
+    "message": "У месяц"
+  },
+  "periodDay": {
+    "message": "У дзень"
+  },
+  "periodHour": {
+    "message": "У гадзіну"
+  },
+  "postingsFound": {
+    "message": "Аб'яў на гэтай старонцы: $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Адзначце тыя, што варта захаваць. Кожная стане асобным захопам, які Postulo прачытае зноў."
+  },
+  "tickAll": {
+    "message": "Усе"
+  },
+  "tickNone": {
+    "message": "Ніводнай"
+  },
+  "nothingTicked": {
+    "message": "Нічога не адзначана."
+  },
+  "keptMany": {
+    "message": "Захопаў захавана ў гэтым браўзеры: $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "Захопаў адпраўлена на разгляд: $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "Адхілена: $COUNT$; чаму — паказана ў спісе захопаў.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Ужо захоплена: у вашых аб'явах з $WHEN$ як «$TITLE$».",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Ужо чакае разгляду ў Postulo з $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Аб'ява з такой назвай у гэтай кампаніі ўжо ёсць: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "ужо захоплена"
+  },
+  "knownOpen": {
+    "message": "Адкрыць у Postulo"
+  },
+  "pictureOffer": {
+    "message": "Postulo можа захаваць выяву ўсёй старонкі такой, якой вы яе бачыце, з уваходам ці без. Адправіць?"
+  },
+  "pictureSend": {
+    "message": "Адправіць выяву"
+  },
+  "pictureSkip": {
+    "message": "Без выявы"
+  },
+  "pictureDrawing": {
+    "message": "Адмалёўка старонкі…"
+  },
+  "pictureSending": {
+    "message": "Адпраўка выявы…"
+  },
+  "pictureSent": {
+    "message": "Выява адпраўлена."
+  },
+  "pictureNotKept": {
+    "message": "Postulo не захаваў выяву. На сам захоп гэта не ўплывае."
+  },
+  "pictureTooBig": {
+    "message": "Старонка занадта вялікая, каб адправіць яе як выяву."
+  },
+  "pictureFailed": {
+    "message": "Не ўдалося адмаляваць старонку. Гэта ўсё яшчэ тая, якую вы захапілі?"
+  },
+  "languageLabel": {
+    "message": "Мова"
+  },
+  "languageFollow": {
+    "message": "Як у браўзеры"
+  },
+  "languageHint": {
+    "message": "Усе мовы, акрамя англійскай, — чарнавікі, якія яшчэ не праверыў ніводзін носьбіт мовы. Дзейнічае адразу, без націскання «Захаваць»."
+  },
+  "reviewPageTitle": {
+    "message": "Разгляд захопу"
+  }
+}
