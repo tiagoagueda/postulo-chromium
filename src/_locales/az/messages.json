@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Baxdığınız iş elanını götürün, onu brauzerinizdə saxlayın və istədiyiniz zaman baxış üçün öz Postulo-nuza göndərin. Heç nə başqa yerə getmir."
+  },
+  "actionTitle": {
+    "message": "Bu elanı Postulo üçün götür"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo-ya qoşulmaq mümkün deyil: göndərdikləriniz o cavab verənə qədər bu brauzerdə gözləyir."
+  },
+  "footerOnline": {
+    "message": "Postulo cavab verir"
+  },
+  "footerSlow": {
+    "message": "Postulo gec cavab verir"
+  },
+  "reviewHeading": {
+    "message": "Baxış tələb olunur"
+  },
+  "waitingInPostulo": {
+    "message": "Postulo-da baxış gözləyir"
+  },
+  "nothingWaiting": {
+    "message": "Baxış gözləyən heç nə yoxdur."
+  },
+  "lastListed": {
+    "message": "Postulo-nun $WHEN$ tarixində verdiyi son siyahıya görə.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Bu elanın götürmələri: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Baxış gözləyir: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Ayarlar"
+  },
+  "setUp": {
+    "message": "Ayarla"
+  },
+  "capture": {
+    "message": "Bu elanı götür"
+  },
+  "addListing": {
+    "message": "Elan əlavə et"
+  },
+  "captureHint": {
+    "message": "Səhifə burada, brauzerinizdə oxunur. Siz istəməyənə qədər heç nə göndərilmir."
+  },
+  "review": {
+    "message": "Postulo-da nəzərdən keçir"
+  },
+  "reading": {
+    "message": "Səhifə oxunur…"
+  },
+  "allowing": {
+    "message": "Genişləndirməyə Postulo-nuza qoşulmaq icazəsi verilir…"
+  },
+  "noPermission": {
+    "message": "Postulo-nuza qoşulmaq icazəsi olmadan heç nə göndərilə bilməz."
+  },
+  "sending": {
+    "message": "Postulo-ya göndərilir…"
+  },
+  "captured": {
+    "message": "Götürüldü. Elana çevrilməzdən əvvəl onu nəzərdən keçirin."
+  },
+  "readBy": {
+    "message": "Oxuyan: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Adsız elan"
+  },
+  "optionsTitle": {
+    "message": "Postulo ayarları"
+  },
+  "instanceLabel": {
+    "message": "Sizin Postulo"
+  },
+  "instanceHint": {
+    "message": "Onu açdığınız ünvan. Bu kompüterdə işləmirsə, https olmalıdır."
+  },
+  "tokenLabel": {
+    "message": "API tokeni"
+  },
+  "tokenHint": {
+    "message": "Postulo-da $PATH$ bölməsində, yalnız $SCOPE$ icazə sahəsi ilə yaradılır. Yalnız bu cihazda saxlanılır, brauzer hesabı vasitəsilə heç vaxt sinxronlaşdırılmır.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Ayarlar → API tokenləri"
+  },
+  "save": {
+    "message": "Yadda saxla"
+  },
+  "test": {
+    "message": "Sına"
+  },
+  "shortcutHint": {
+    "message": "Düyməni və ya $SHORTCUT$ düymələrini basdıqda baxdığınız səhifə burada, brauzerdə oxunur. Siz istəməyənə qədər heç bir səhifə oxunmur və heç nə sizin öz Postulo-nuzdan başqa yerə göndərilmir, o da yalnız siz istədiyiniz zaman.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Postulo-nun sizə göstərdiyi tokeni yapışdırın."
+  },
+  "saved": {
+    "message": "Yadda saxlanıldı. Düymə indi səhifələri $HOST$ ünvanına göndərəcək.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Yadda saxlanıldı, lakin brauzer ora qoşulmaq icazəsini rədd etdi; genişləndirmənin icazələrində buna icazə verin."
+  },
+  "asking": {
+    "message": "Postulo-dan bu tokenin kimə aid olduğu soruşulur…"
+  },
+  "addressRefused": {
+    "message": "O ünvana qoşulmaq icazəsi rədd edildi."
+  },
+  "tokenIs": {
+    "message": "$OWNER$ üçün «$NAME$» tokeni.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "$OWNER$ üçün «$NAME$» tokeni ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Onda captures icazə sahəsi yoxdur, ona görə götürə bilməz."
+  },
+  "noCredentialsInAddress": {
+    "message": "İstifadəçi adını və parolu ünvana daxil etməyin: bağlantı heç vaxt qurulmaz, parol isə açılan pəncərədə göstərilərdi."
+  },
+  "tokenTooWide": {
+    "message": "Bu token bunları da edə bilər: $SCOPES$. Genişləndirməyə yalnız captures icazə sahəsi lazımdır: yalnız bu icazə sahəsi ilə token yaradın və bunu ləğv edin.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulo-nun ünvanına icazə verilmədi, ona görə heç nə göndərilmədi. Götürmə saxlanılır və gözləyir: ünvana icazə verin və yenidən «Göndər» düyməsini basın."
+  },
+  "enterAddress": {
+    "message": "Postulo-nuzun ünvanını daxil edin."
+  },
+  "notAnAddress": {
+    "message": "Bu, veb ünvana oxşamır."
+  },
+  "httpsOnly": {
+    "message": "Öz kompüterinizdə olmayan hər şey üçün https istifadə edin: token hər sorğu ilə birlikdə göndərilir."
+  },
+  "tokenRefused": {
+    "message": "Postulo bu tokeni qəbul etmir. Onu $PATH$ bölməsində yoxlayın.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Bu tokenin götürməyə icazəsi yoxdur."
+  },
+  "tooMany": {
+    "message": "Qısa müddətdə həddindən çox götürmə. Bir dəqiqə gözləyin və yenidən cəhd edin."
+  },
+  "answered": {
+    "message": "Postulo $STATUS$ cavabını verdi.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Oxunacaq tab yoxdur."
+  },
+  "notWebPage": {
+    "message": "Yalnız veb səhifələr götürülə bilər."
+  },
+  "unreadable": {
+    "message": "Səhifəni oxumaq mümkün olmadı. Bəzi səhifələr genişləndirmələri bloklayır."
+  },
+  "notPostulo": {
+    "message": "Bu ünvan cavab verdi, amma Postulo kimi yox. Ünvanı və onun qarşısındakı istənilən giriş səhifəsini yoxlayın."
+  },
+  "addressTooLong": {
+    "message": "Bu səhifənin ünvanı, hətta «#» işarəsindən sonrakı hissə olmadan belə, Postulo-nun qəbul etdiyindən uzundur, ona görə götürmə göndərilmədi. Bunun əvəzinə elanı Postulo-da əl ilə əlavə edin."
+  },
+  "reviewHint": {
+    "message": "Səhifədən oxunan budur. Səhv olan hər şeyi düzəldin; siz göndərməyənə qədər heç nə bu brauzerdən çıxmır."
+  },
+  "sendForReview": {
+    "message": "Baxışa göndər"
+  },
+  "notConnected": {
+    "message": "Hələ heç bir Postulo-ya qoşulmayıb: götürdükləriniz bu brauzerdə saxlanılır."
+  },
+  "keep": {
+    "message": "Bu brauzerdə saxla"
+  },
+  "kept": {
+    "message": "Bu brauzerdə saxlanıldı. Hazır olduğunuz zaman onu Postulo-ya göndərin."
+  },
+  "storageFull": {
+    "message": "Bu brauzerin Postulo üçün yaddaşı doludur. Bəzi götürmələri göndərin və ya silin, sonra yenidən cəhd edin."
+  },
+  "alreadyKept": {
+    "message": "Bu səhifəni artıq saxlamısınız və göndərməmisiniz: bu, sizin versiyanızdır."
+  },
+  "nothingRead": {
+    "message": "Bu səhifədən heç nə oxunmadı. Bildiklərinizi doldurun; siz göndərməyənə qədər heç nə bu brauzerdən çıxmır."
+  },
+  "waiting": {
+    "message": "Postulo-ya hazırda qoşulmaq mümkün deyil. Götürmə bu brauzerdə saxlanılır və Postulo cavab verən kimi göndəriləcək."
+  },
+  "waitingOffline": {
+    "message": "Test açarı aktivdir, ona görə götürmə bu brauzerdə gözləyir. Açar deaktiv ediləndə göndəriləcək."
+  },
+  "waitingAccount": {
+    "message": "Götürmə bu brauzerdə saxlanılır və problem həll olunanda göndəriləcək."
+  },
+  "sendNeedsSetup": {
+    "message": "Bu brauzerdə saxlanıldı; Postulo-nuz ayarlandıqdan sonra göndəriləcək."
+  },
+  "capturesTitle": {
+    "message": "Bu brauzerdəki götürmələr"
+  },
+  "capturesIntro": {
+    "message": "Götürdüyünüz elanlar Postulo-nuza çatana qədər burada saxlanılır. Göndərdikləriniz Postulo-ya qoşulmaq mümkün olan kimi gedir."
+  },
+  "nothingKept": {
+    "message": "Bu brauzerdə heç nə saxlanılmayıb."
+  },
+  "sendAll": {
+    "message": "Göndərilməyənlərin hamısını göndər"
+  },
+  "clearSent": {
+    "message": "Göndərilənləri təmizlə"
+  },
+  "stateKept": {
+    "message": "Göndərilməyib"
+  },
+  "stateWaiting": {
+    "message": "Postulo gözlənilir"
+  },
+  "stateSent": {
+    "message": "Göndərilib"
+  },
+  "stateRefused": {
+    "message": "Rədd edilib"
+  },
+  "tryNow": {
+    "message": "İndi cəhd et"
+  },
+  "holdBack": {
+    "message": "Bunun əvəzinə burada saxla"
+  },
+  "deleteConfirm": {
+    "message": "Bu götürmə silinsin? O, Postulo-ya çatmayıb, ona görə yalnız burada mövcuddur."
+  },
+  "troubleshooting": {
+    "message": "Test və problemlərin həlli"
+  },
+  "offlineLabel": {
+    "message": "Postulo-ya qoşulmaq mümkün deyilmiş kimi davran"
+  },
+  "offlineHint": {
+    "message": "Test üçün. Bu aktiv olduqda heç nə göndərilmir: götürmələr Postulo işləmədiyi zamankı kimi bu brauzerdə gözləyir və bu deaktiv ediləndə göndərilir."
+  },
+  "offlineOn": {
+    "message": "Test açarı aktivdir: Postulo-ya heç nə göndərilmir."
+  },
+  "offlineOff": {
+    "message": "Test açarı deaktivdir: gözləyənlər indi Postulo-ya göndərilir."
+  },
+  "downloadLog": {
+    "message": "Jurnalı endir"
+  },
+  "clearLog": {
+    "message": "Jurnalı təmizlə"
+  },
+  "logCleared": {
+    "message": "Jurnal boşdur."
+  },
+  "logHint": {
+    "message": "Genişləndirmənin etdikləri, nəyinsə niyə işləmədiyini aydınlaşdırmaq üçün. Jurnalda heç bir token və səhifələrdən heç nə yoxdur."
+  },
+  "delete": {
+    "message": "Sil"
+  },
+  "edit": {
+    "message": "Redaktə et"
+  },
+  "fieldTitle": {
+    "message": "Vəzifə adı"
+  },
+  "fieldCompany": {
+    "message": "Şirkət"
+  },
+  "fieldLocation": {
+    "message": "Yer"
+  },
+  "fieldRemote": {
+    "message": "İş rejimi"
+  },
+  "fieldEmployment": {
+    "message": "Məşğulluq növü"
+  },
+  "fieldSalaryFrom": {
+    "message": "Əmək haqqı, ən az"
+  },
+  "fieldSalaryTo": {
+    "message": "Əmək haqqı, ən çox"
+  },
+  "fieldCurrency": {
+    "message": "Valyuta"
+  },
+  "fieldPeriod": {
+    "message": "Dövr"
+  },
+  "fieldCloses": {
+    "message": "Son müraciət tarixi"
+  },
+  "fieldDescription": {
+    "message": "Təsvir"
+  },
+  "remoteOnsite": {
+    "message": "Ofisdə"
+  },
+  "remoteHybrid": {
+    "message": "Hibrid"
+  },
+  "remoteRemote": {
+    "message": "Uzaqdan"
+  },
+  "employmentFullTime": {
+    "message": "Tam ştat"
+  },
+  "employmentPartTime": {
+    "message": "Yarımştat"
+  },
+  "employmentContract": {
+    "message": "Müddətli müqavilə"
+  },
+  "employmentFreelance": {
+    "message": "Frilans"
+  },
+  "employmentInternship": {
+    "message": "Təcrübə proqramı"
+  },
+  "employmentApprenticeship": {
+    "message": "Şagirdlik"
+  },
+  "periodYear": {
+    "message": "İldə"
+  },
+  "periodMonth": {
+    "message": "Ayda"
+  },
+  "periodDay": {
+    "message": "Gündə"
+  },
+  "periodHour": {
+    "message": "Saatda"
+  },
+  "postingsFound": {
+    "message": "Bu səhifədə $COUNT$ elan var.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Saxlamağa dəyənləri işarələyin. Hər biri ayrıca götürməyə çevrilir və Postulo tərəfindən yenidən oxunur."
+  },
+  "tickAll": {
+    "message": "Hamısı"
+  },
+  "tickNone": {
+    "message": "Heç biri"
+  },
+  "nothingTicked": {
+    "message": "Heç nə işarələnməyib."
+  },
+  "keptMany": {
+    "message": "$COUNT$ götürmə bu brauzerdə saxlanıldı.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ götürmə baxış üçün göndərildi.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ götürmə rədd edildi; səbəbi götürmələr siyahısında göstərilir.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Əvvəl götürülüb: $WHEN$ tarixindən bəri elanlarınızda $TITLE$ adı ilə var.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "$WHEN$ tarixindən bəri Postulo-da artıq baxış gözləyir.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Bu şirkətdə bu adda elan artıq var: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "əvvəl götürülüb"
+  },
+  "knownOpen": {
+    "message": "Postulo-da aç"
+  },
+  "pictureOffer": {
+    "message": "Postulo, daxil olub-olmamağınızdan asılı olmayaraq, bütün səhifənin sizin gördüyünüz kimi şəklini saxlaya bilər. Göndərilsin?"
+  },
+  "pictureSend": {
+    "message": "Şəkli göndər"
+  },
+  "pictureSkip": {
+    "message": "Şəkilsiz"
+  },
+  "pictureDrawing": {
+    "message": "Səhifənin görüntüsü yaradılır…"
+  },
+  "pictureSending": {
+    "message": "Şəkil göndərilir…"
+  },
+  "pictureSent": {
+    "message": "Şəkil göndərildi."
+  },
+  "pictureNotKept": {
+    "message": "Postulo şəkli saxlamadı. Bu, götürmənin özünə təsir etmir."
+  },
+  "pictureTooBig": {
+    "message": "Səhifə şəkil kimi göndərmək üçün çox böyükdür."
+  },
+  "pictureFailed": {
+    "message": "Səhifənin görüntüsünü yaratmaq mümkün olmadı. Bu, hələ də götürdüyünüz səhifədir?"
+  },
+  "languageLabel": {
+    "message": "Dil"
+  },
+  "languageFollow": {
+    "message": "Brauzerin dilinə uyğun"
+  },
+  "languageHint": {
+    "message": "İngilis dilindən başqa bütün dillər hələ heç bir dil daşıyıcısının nəzərdən keçirmədiyi qaralamalardır. Seçim «Yadda saxla» olmadan dərhal qüvvəyə minir."
+  },
+  "reviewPageTitle": {
+    "message": "Götürməyə baxış"
+  }
+}

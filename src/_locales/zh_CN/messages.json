@@ -1,30 +1,30 @@
 {
   "extensionDescription": {
-    "message": "获取您正在查看的工作, 保存在您的浏览器中, 并发送到您自己的 Postulo 供您审查 。 无所去也."
+    "message": "抓取你正在查看的招聘信息，保存在浏览器中，并在你决定时发送到你自己的 Postulo 进行审核。数据不会发送到其他任何地方。"
   },
   "actionTitle": {
-    "message": "获取 Postulo 的贴出"
+    "message": "在 Postulo 中抓取此招聘信息"
   },
   "postuloUnreachable": {
-    "message": "Postulo 无法到达 : 您发送的内容在此浏览器中等待到它给出答案 ."
+    "message": "无法连接 Postulo：你发送的内容会保留在此浏览器中，直到它响应。"
   },
   "footerOnline": {
-    "message": "Postulo 答案"
+    "message": "Postulo 有响应"
   },
   "footerSlow": {
-    "message": "波斯图洛回答很慢"
+    "message": "Postulo 响应缓慢"
   },
   "reviewHeading": {
-    "message": "需要审查"
+    "message": "待审核"
   },
   "waitingInPostulo": {
-    "message": "在波斯图洛等待审查"
+    "message": "在 Postulo 中等待审核"
   },
   "nothingWaiting": {
-    "message": "没有什么东西等待审查."
+    "message": "没有等待审核的内容。"
   },
   "lastListed": {
-    "message": "正如波斯图洛最后列出的,在 $WHEN$.",
+    "message": "以下为 Postulo 在$WHEN$最后列出的内容。",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -32,7 +32,7 @@
     }
   },
   "capturesOfPosting": {
-    "message": "截取此帖: $COUNT$",
+    "message": "此招聘信息的抓取项：$COUNT$",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -40,7 +40,7 @@
     }
   },
   "waitingForReview": {
-    "message": "等待审查: $COUNT$",
+    "message": "等待审核：$COUNT$",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -51,34 +51,34 @@
     "message": "设置"
   },
   "setUp": {
-    "message": "准备好了"
+    "message": "去设置"
   },
   "capture": {
-    "message": "抓取此邮件"
+    "message": "抓取此招聘信息"
   },
   "addListing": {
-    "message": "添加一个列表"
+    "message": "添加职位"
   },
   "captureHint": {
-    "message": "在您的浏览器中读取此页面 。 在你说之前什么也不要寄出去."
+    "message": "页面在你的浏览器中读取。在你确认之前，不会发送任何内容。"
   },
   "review": {
-    "message": "在波斯图洛进行的审查"
+    "message": "在 Postulo 中审核"
   },
   "reading": {
-    "message": "读取页面.."
+    "message": "正在读取页面……"
   },
   "allowing": {
-    "message": "允许扩展到您的 Postulo.."
+    "message": "正在允许扩展访问你的 Postulo……"
   },
   "noPermission": {
-    "message": "没有许可到达您的波斯图洛, 任何信息都无法发送."
+    "message": "没有访问你的 Postulo 的权限，无法发送任何内容。"
   },
   "sending": {
-    "message": "发送到波斯图洛.."
+    "message": "正在发送到 Postulo……"
   },
   "captured": {
-    "message": "被俘虏了 在列入清单之前先审查一下."
+    "message": "已抓取。请先审核，它才会成为职位。"
   },
   "readBy": {
     "message": "由$SOURCE$读取",
@@ -89,22 +89,22 @@
     }
   },
   "untitled": {
-    "message": "无标题的张贴"
+    "message": "无标题的招聘信息"
   },
   "optionsTitle": {
     "message": "Postulo 设置"
   },
   "instanceLabel": {
-    "message": "您的波图洛"
+    "message": "你的 Postulo"
   },
   "instanceHint": {
-    "message": "你打开的地址 https,除非它运行在这个机器上."
+    "message": "你打开它时使用的地址。除非它运行在本机上，否则须使用 https。"
   },
   "tokenLabel": {
     "message": "API 令牌"
   },
   "tokenHint": {
-    "message": "由$PATH$在波斯图洛制造,有$SCOPE$范围而无更. 它只保存在这个设备上,从未通过浏览器账户同步.",
+    "message": "在 Postulo 的$PATH$中创建，仅授予$SCOPE$权限范围，不含其他权限。它只保存在此设备上，绝不会通过浏览器账户同步。",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -115,7 +115,7 @@
     }
   },
   "tokenPath": {
-    "message": "设置 ~ API 令牌"
+    "message": "设置 → API 令牌"
   },
   "save": {
     "message": "保存"
@@ -124,7 +124,7 @@
     "message": "测试"
   },
   "shortcutHint": {
-    "message": "按下按钮,或$SHORTCUT$,读取您正在浏览的页面,这里是浏览器. 在你问之前没有读过任何页面,除了你自己的波斯图洛之外,没有别的地方被发送,当你这么说的时候.",
+    "message": "按下此按钮或$SHORTCUT$，即可在浏览器中读取你正在查看的页面。在你要求之前不会读取任何页面；只有在你确认时，内容才会发送，而且只发送到你自己的 Postulo。",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -132,10 +132,10 @@
     }
   },
   "tokenMissing": {
-    "message": "粘上Postulo给你看的标志."
+    "message": "请粘贴 Postulo 显示给你的令牌。"
   },
   "saved": {
-    "message": "救过. 按钮现在将把页面发送到 $HOST$.",
+    "message": "已保存。此按钮现在会将页面发送到$HOST$。",
     "placeholders": {
       "host": {
         "content": "$1"
@@ -143,16 +143,16 @@
     }
   },
   "savedNoPermission": {
-    "message": "已保存,但浏览器拒绝允许访问;允许在扩展权限中访问."
+    "message": "已保存，但浏览器拒绝授予访问该地址的权限；请在扩展的权限设置中允许。"
   },
   "asking": {
-    "message": "问波斯图洛这个标志是谁.."
+    "message": "正在向 Postulo 查询此令牌的身份……"
   },
   "addressRefused": {
-    "message": "未能获准前往该地址."
+    "message": "访问该地址的权限被拒绝。"
   },
   "tokenIs": {
-    "message": "Token $NAME$)用于$OWNER$.",
+    "message": "$OWNER$的令牌“$NAME$”。",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -163,7 +163,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "用于$OWNER$($SCOPES$)的Token $NAME$.",
+    "message": "$OWNER$的令牌“$NAME$”（$SCOPES$）。",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -177,13 +177,13 @@
     }
   },
   "lacksCaptures": {
-    "message": "它缺少 captures 范围，因此无法采集。"
+    "message": "它缺少 captures 权限范围，因此无法抓取。"
   },
   "noCredentialsInAddress": {
-    "message": "离开地址的用户名和密码:它永远不会连接,密码会在弹出中显示."
+    "message": "请不要在地址中填写用户名和密码：这样永远无法连接，而且密码会显示在弹出窗口中。"
   },
   "tokenTooWide": {
-    "message": "此符也: $SCOPES$. 扩展仅需要捕捉范围:仅发出一个带有这个范围的迹象并取消这个范围.",
+    "message": "此令牌还可以：$SCOPES$。扩展只需要 captures 权限范围：请创建一个仅含该权限范围的令牌，并撤销此令牌。",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -191,19 +191,19 @@
     }
   },
   "permissionRefused": {
-    "message": "波斯图洛的地址是不允许的,所以没有寄出任何东西. 抓取保存并等待:允许地址再按\"发送\"."
+    "message": "未允许访问 Postulo 的地址，因此没有发送任何内容。抓取项已保留并等待发送：请允许该地址，然后再次点击“发送”。"
   },
   "enterAddress": {
-    "message": "输入您的 Postulo 地址 ."
+    "message": "请输入你的 Postulo 的地址。"
   },
   "notAnAddress": {
-    "message": "这看起来不像一个网址."
+    "message": "这看起来不像一个网址。"
   },
   "httpsOnly": {
-    "message": "使用 https 来获取您自己的机器上以外的任何信息: 信使会随每个请求一起旅行 ."
+    "message": "凡不在你本机上的地址都请使用 https：每个请求都会携带令牌。"
   },
   "tokenRefused": {
-    "message": "Postulo不接受这个标志。 请检查date=中的日期值 (帮助) $PATH$.",
+    "message": "Postulo 不接受此令牌。请在$PATH$中检查。",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -211,13 +211,13 @@
     }
   },
   "notAllowed": {
-    "message": "此符相出不得取取."
+    "message": "此令牌无权抓取。"
   },
   "tooMany": {
-    "message": "短时间内抓取过多. 等一下 再试一次."
+    "message": "短时间内抓取次数过多。请等一分钟后再试。"
   },
   "answered": {
-    "message": "波斯图洛回答 $STATUS$.",
+    "message": "Postulo 返回了$STATUS$。",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -225,106 +225,106 @@
     }
   },
   "noTab": {
-    "message": "无分页可读 ."
+    "message": "没有可读取的标签页。"
   },
   "notWebPage": {
-    "message": "只能抓取网页."
+    "message": "只能抓取网页。"
   },
   "unreadable": {
-    "message": "页面无法读取 。 一些页面块扩展名 ."
+    "message": "无法读取此页面。有些页面会阻止扩展。"
   },
   "notPostulo": {
-    "message": "地址是回答的,但不是波斯图洛。 检查地址, 和任何登录页 在它的前面."
+    "message": "该地址有响应，但不是 Postulo。请检查地址，以及它前面是否有登录页面。"
   },
   "addressTooLong": {
-    "message": "这页的地址比波斯图洛所接受的要长,即使没有\"#\"之后的部分,因此抓取没有被发送. 换句话说."
+    "message": "即使去掉“#”之后的部分，此页面的地址仍超过 Postulo 接受的长度，因此抓取项未发送。请改为在 Postulo 中手动添加此招聘信息。"
   },
   "reviewHint": {
-    "message": "这是从网页上读到的。 纠正任何错误; 在发送之前, 任何内容都不会离开浏览器 ."
+    "message": "以下是从页面读取的内容。请更正任何错误；在你发送之前，任何内容都不会离开此浏览器。"
   },
   "sendForReview": {
-    "message": "发送审查"
+    "message": "发送以供审核"
   },
   "notConnected": {
-    "message": "尚未连接到 Postulo : 您所捕捉的内容保存在这个浏览器中 ."
+    "message": "尚未连接到 Postulo：你抓取的内容会保存在此浏览器中。"
   },
   "keep": {
-    "message": "在此浏览器中保留"
+    "message": "保留在此浏览器中"
   },
   "kept": {
-    "message": "固定在这个浏览器中 。 准备好就发给波斯图罗."
+    "message": "已保留在此浏览器中。准备好后随时发送到 Postulo。"
   },
   "storageFull": {
-    "message": "此浏览器用于 Postulo 的存储已满. 发送或删除一些抓取,然后再次尝试."
+    "message": "此浏览器为 Postulo 提供的存储空间已满。请发送或删除一些抓取项，然后重试。"
   },
   "alreadyKept": {
-    "message": "您已经保存了此页面, 但尚未发送 : 这是您的版本 ."
+    "message": "你之前已保留此页面但尚未发送：这是你的版本。"
   },
   "nothingRead": {
-    "message": "任何内容都无法从这一页读取。 填写您知道的内容; 在您发送之前, 任何内容都不会离开浏览器 ."
+    "message": "无法从此页面读取任何内容。请填写你知道的信息；在你发送之前，任何内容都不会离开此浏览器。"
   },
   "waiting": {
-    "message": "现在无法到达波斯图洛 它保存在这个浏览器中,并在波斯图洛回答后立即发送."
+    "message": "目前无法连接 Postulo。内容已保留在此浏览器中，Postulo 一响应就会发送。"
   },
   "waitingOffline": {
-    "message": "测试开关已经打开,所以它在这个浏览器中等待. 开关关关了就动了."
+    "message": "测试开关已打开，因此内容在此浏览器中等待。关闭开关后即会发送。"
   },
   "waitingAccount": {
-    "message": "它被保存在这个浏览器中,一旦固定就发送."
+    "message": "内容已保留在此浏览器中，问题解决后即会发送。"
   },
   "sendNeedsSetup": {
-    "message": "放在这个浏览器中, 等您的 Postulo 建立后再发送 ."
+    "message": "已保留在此浏览器中，设置好你的 Postulo 后即会发送。"
   },
   "capturesTitle": {
-    "message": "在此浏览器中抓取"
+    "message": "此浏览器中的抓取项"
   },
   "capturesIntro": {
-    "message": "贴出你俘虏的海报 一直留在这里直到他们到达你的波斯图洛 只要波斯图洛能到达,你就会送去."
+    "message": "你抓取的招聘信息会保留在这里，直到送达你的 Postulo。你发送的内容会在能连接 Postulo 时立即发出。"
   },
   "nothingKept": {
-    "message": "浏览器里没有保存任何东西 ."
+    "message": "此浏览器中没有保留任何内容。"
   },
   "sendAll": {
-    "message": "发送全部未发送"
+    "message": "发送所有未发送的内容"
   },
   "clearSent": {
-    "message": "清除送来的"
+    "message": "清除已发送的内容"
   },
   "stateKept": {
     "message": "未发送"
   },
   "stateWaiting": {
-    "message": "等待波斯图洛"
+    "message": "等待 Postulo"
   },
   "stateSent": {
-    "message": "发送"
+    "message": "已发送"
   },
   "stateRefused": {
-    "message": "拒绝"
+    "message": "已拒绝"
   },
   "tryNow": {
-    "message": "试试看"
+    "message": "立即尝试"
   },
   "holdBack": {
-    "message": "留着吧"
+    "message": "改为保留在这里"
   },
   "deleteConfirm": {
-    "message": "删除此抓取吗 ? 它还没有到达波斯图洛,所以它只存在于此处."
+    "message": "删除此抓取项？它尚未送达 Postulo，因此只存在于这里。"
   },
   "troubleshooting": {
     "message": "测试和故障排除"
   },
   "offlineLabel": {
-    "message": "装作无法到达 Postulo"
+    "message": "模拟无法连接 Postulo"
   },
   "offlineHint": {
-    "message": "为了测试 当这个开始时,没有寄出任何信息: 捕捉到这个浏览器的等待 完全和Postulo一样,一旦关闭就去."
+    "message": "用于测试。开启时不会发送任何内容：抓取项会像 Postulo 宕机时一样在此浏览器中等待，关闭后即会发送。"
   },
   "offlineOn": {
-    "message": "测试开关开通:没有寄出给波斯图洛."
+    "message": "测试开关已打开：不会向 Postulo 发送任何内容。"
   },
   "offlineOff": {
-    "message": "测试开关已关闭: 等待的到波斯图洛."
+    "message": "测试开关已关闭：等待中的内容现在会发送到 Postulo。"
   },
   "downloadLog": {
     "message": "下载日志"
@@ -333,10 +333,10 @@
     "message": "清除日志"
   },
   "logCleared": {
-    "message": "日志为空."
+    "message": "日志已清空。"
   },
   "logHint": {
-    "message": "延长期限是为了找出什么是行不通的。 它没有任何标志 没有任何内容."
+    "message": "记录扩展执行的操作，用于排查问题原因。日志中不含令牌，也不含任何页面内容。"
   },
   "delete": {
     "message": "删除"
@@ -345,37 +345,37 @@
     "message": "编辑"
   },
   "fieldTitle": {
-    "message": "职称"
+    "message": "职位名称"
   },
   "fieldCompany": {
-    "message": "企业"
+    "message": "公司"
   },
   "fieldLocation": {
     "message": "地点"
   },
   "fieldRemote": {
-    "message": "工作安排"
+    "message": "工作方式"
   },
   "fieldEmployment": {
-    "message": "就业类型"
+    "message": "雇佣类型"
   },
   "fieldSalaryFrom": {
-    "message": "薪金从"
+    "message": "最低薪资"
   },
   "fieldSalaryTo": {
-    "message": "薪金"
+    "message": "最高薪资"
   },
   "fieldCurrency": {
     "message": "货币"
   },
   "fieldPeriod": {
-    "message": "期间"
+    "message": "计薪周期"
   },
   "fieldCloses": {
-    "message": "闭幕日期"
+    "message": "截止日期"
   },
   "fieldDescription": {
-    "message": "说明"
+    "message": "描述"
   },
   "remoteOnsite": {
     "message": "现场"
@@ -390,34 +390,34 @@
     "message": "全职"
   },
   "employmentPartTime": {
-    "message": "非全时"
+    "message": "兼职"
   },
   "employmentContract": {
-    "message": "合同"
+    "message": "合同工"
   },
   "employmentFreelance": {
-    "message": "自由主义"
+    "message": "自由职业"
   },
   "employmentInternship": {
     "message": "实习"
   },
   "employmentApprenticeship": {
-    "message": "学徒"
+    "message": "学徒制"
   },
   "periodYear": {
     "message": "每年"
   },
   "periodMonth": {
-    "message": "每个月"
+    "message": "每月"
   },
   "periodDay": {
-    "message": "每日费用"
+    "message": "每天"
   },
   "periodHour": {
     "message": "每小时"
   },
   "postingsFound": {
-    "message": "本页列出$COUNT$发帖.",
+    "message": "此页面列出了$COUNT$条招聘信息。",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -425,19 +425,19 @@
     }
   },
   "tickHint": {
-    "message": "勾选那些值得保存的 每一个都成为自己的捕捉器,由波斯图洛再读."
+    "message": "勾选值得保留的项目。每一项都会成为单独的抓取项，由 Postulo 重新读取。"
   },
   "tickAll": {
-    "message": "全体"
+    "message": "全选"
   },
   "tickNone": {
-    "message": "无"
+    "message": "全不选"
   },
   "nothingTicked": {
-    "message": "什么都没有."
+    "message": "未勾选任何项目。"
   },
   "keptMany": {
-    "message": "$COUNT$此浏览器所保存的抓取.",
+    "message": "已在此浏览器中保留$COUNT$个抓取项。",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -445,7 +445,7 @@
     }
   },
   "sentMany": {
-    "message": "$COUNT$收录被送审.",
+    "message": "已发送$COUNT$个抓取项以供审核。",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -453,7 +453,7 @@
     }
   },
   "refusedSome": {
-    "message": "$COUNT$被拒;被俘名单说明原因.",
+    "message": "$COUNT$个被拒绝；抓取项列表中注明了原因。",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -461,7 +461,7 @@
     }
   },
   "knownListing": {
-    "message": "抓取前:在自$WHEN$起的列表中为$TITLE$.",
+    "message": "之前已抓取：自$WHEN$起以“$TITLE$”列在你的职位中。",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -472,7 +472,7 @@
     }
   },
   "knownCapture": {
-    "message": "自$WHEN$起,已经在波斯图洛等待审查.",
+    "message": "自$WHEN$起已在 Postulo 中等待审核。",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -480,7 +480,7 @@
     }
   },
   "knownSimilar": {
-    "message": "本公司存在带有此标题的上市:$TITLE$.",
+    "message": "该公司已有同名职位：$TITLE$。",
     "placeholders": {
       "title": {
         "content": "$1"
@@ -488,37 +488,37 @@
     }
   },
   "knownTag": {
-    "message": "之前被抓获的"
+    "message": "之前已抓取"
   },
   "knownOpen": {
-    "message": "在波斯图洛打开"
+    "message": "在 Postulo 中打开"
   },
   "pictureOffer": {
-    "message": "Postulo可以保留一幅你所看到的整页相片,是否签名. 派一个?"
+    "message": "无论是否已登录，Postulo 都可以按你所见保存整个页面的图片。要发送吗？"
   },
   "pictureSend": {
     "message": "发送图片"
   },
   "pictureSkip": {
-    "message": "没有图片"
+    "message": "不发送图片"
   },
   "pictureDrawing": {
-    "message": "绘制页面.."
+    "message": "正在绘制页面……"
   },
   "pictureSending": {
-    "message": "正在发送图片.."
+    "message": "正在发送图片……"
   },
   "pictureSent": {
-    "message": "照片已经发送."
+    "message": "图片已发送。"
   },
   "pictureNotKept": {
-    "message": "Postulo没有保留照片。 捕捉本身没有受到影响."
+    "message": "Postulo 未保存该图片。抓取项本身不受影响。"
   },
   "pictureTooBig": {
-    "message": "该页面太大,无法作为图片发送."
+    "message": "页面太大，无法作为图片发送。"
   },
   "pictureFailed": {
-    "message": "无法绘制页面 。 还是你抓的那个?"
+    "message": "无法绘制页面。它还是你抓取的那个页面吗？"
   },
   "languageLabel": {
     "message": "语言"
@@ -527,9 +527,9 @@
     "message": "跟随浏览器"
   },
   "languageHint": {
-    "message": "除英语外,每种语言都是还没有发言者审查过的草案。 立即生效,不用Save."
+    "message": "除英语外，所有语言都是尚未经母语者审核的草稿。选择后立即生效，无需保存。"
   },
   "reviewPageTitle": {
-    "message": "审查抓取"
+    "message": "审核抓取项"
   }
 }

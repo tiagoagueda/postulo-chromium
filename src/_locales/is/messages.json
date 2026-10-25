@@ -50,7 +50,7 @@
     "message": "Stillingar Postulo"
   },
   "instanceLabel": {
-    "message": "Postulo-ið þitt"
+    "message": "Postulo-uppsetningin þín"
   },
   "instanceHint": {
     "message": "Vistfangið sem þú opnar það á. https, nema það keyri á þessari vél."
@@ -135,7 +135,7 @@
     "message": "Það vantar heimildina captures, svo það getur ekki gripið."
   },
   "enterAddress": {
-    "message": "Sláðu inn vistfang Postulo-sins þíns."
+    "message": "Sláðu inn vistfang Postulo-uppsetningarinnar þinnar."
   },
   "notAnAddress": {
     "message": "Þetta lítur ekki út eins og vefvistfang."
@@ -426,7 +426,7 @@
     "message": "Opna í Postulo"
   },
   "notPostulo": {
-    "message": "Þetta heimilisfang svaraði, en ekki sem Postulo. Athugaðu heimilisfangið og hvort innskráningarsíða standi fyrir framan það."
+    "message": "Þetta vistfang svaraði, en ekki sem Postulo. Athugaðu vistfangið og hvort innskráningarsíða sé fyrir framan það."
   },
   "addressTooLong": {
     "message": "Heimilisfang þessarar síðu er lengra en Postulo tekur við, jafnvel án hlutans á eftir „#“, svo gripið var ekki sent. Bættu auglýsingunni við í Postulo handvirkt í staðinn."

@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Өзіңіз қарап отырған вакансияны түсіріп, браузеріңізде сақтаңыз және қалаған кезде оны қарап шығу үшін өз Postulo данаңызға жіберіңіз. Басқа ешқайда ештеңе жіберілмейді."
+  },
+  "actionTitle": {
+    "message": "Бұл вакансияны Postulo-ға түсіру"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo-ға қосылу мүмкін емес: жіберген нәрселеріңіз ол жауап бергенше осы браузерде күтеді."
+  },
+  "footerOnline": {
+    "message": "Postulo жауап береді"
+  },
+  "footerSlow": {
+    "message": "Postulo баяу жауап береді"
+  },
+  "reviewHeading": {
+    "message": "Қарап шығуды қажет етеді"
+  },
+  "waitingInPostulo": {
+    "message": "Postulo-да қарап шығуды күтуде"
+  },
+  "nothingWaiting": {
+    "message": "Қарап шығуды күтіп тұрған ештеңе жоқ."
+  },
+  "lastListed": {
+    "message": "Postulo соңғы рет тізімдеген күйі, уақыты: $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Осы вакансияның түсірілімдері: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Қарап шығуды күтуде: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Параметрлер"
+  },
+  "setUp": {
+    "message": "Баптау"
+  },
+  "capture": {
+    "message": "Бұл вакансияны түсіру"
+  },
+  "addListing": {
+    "message": "Вакансия қосу"
+  },
+  "captureHint": {
+    "message": "Бет осында, браузеріңізде оқылады. Сіз айтпайынша ештеңе жіберілмейді."
+  },
+  "review": {
+    "message": "Postulo-да қарап шығу"
+  },
+  "reading": {
+    "message": "Бет оқылуда…"
+  },
+  "allowing": {
+    "message": "Кеңейтімге Postulo данаңызға қосылуға рұқсат берілуде…"
+  },
+  "noPermission": {
+    "message": "Postulo данаңызға қосылуға рұқсат болмаса, ештеңе жіберу мүмкін емес."
+  },
+  "sending": {
+    "message": "Postulo-ға жіберілуде…"
+  },
+  "captured": {
+    "message": "Түсірілді. Вакансияға айналмас бұрын оны қарап шығыңыз."
+  },
+  "readBy": {
+    "message": "Оқыған дереккөз: $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Атаусыз вакансия"
+  },
+  "optionsTitle": {
+    "message": "Postulo параметрлері"
+  },
+  "instanceLabel": {
+    "message": "Сіздің Postulo"
+  },
+  "instanceHint": {
+    "message": "Оны ашатын мекенжайыңыз. Осы компьютерде жұмыс істемесе, https болуы керек."
+  },
+  "tokenLabel": {
+    "message": "API токені"
+  },
+  "tokenHint": {
+    "message": "Postulo-да $PATH$ бөлімінде, тек $SCOPE$ рұқсат аясымен жасалады. Ол тек осы құрылғыда сақталады, браузер тіркелгісі арқылы ешқашан синхрондалмайды.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Параметрлер → API токендері"
+  },
+  "save": {
+    "message": "Сақтау"
+  },
+  "test": {
+    "message": "Сынау"
+  },
+  "shortcutHint": {
+    "message": "Түймені немесе $SHORTCUT$ пернелерін басқанда, қарап отырған бетіңіз осында, браузерде оқылады. Сіз сұрамайынша ешбір бет оқылмайды және сіз айтқан кезде ғана, тек өз Postulo данаңызға жіберіледі.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Postulo көрсеткен токенді қойыңыз."
+  },
+  "saved": {
+    "message": "Сақталды. Енді түйме беттерді мына хостқа жібереді: $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Сақталды, бірақ браузер оған қосылуға рұқсат бермеді; оны кеңейтімнің рұқсаттарында рұқсат етіңіз."
+  },
+  "asking": {
+    "message": "Бұл токеннің кімдікі екені Postulo-дан сұралуда…"
+  },
+  "addressRefused": {
+    "message": "Ол мекенжайға қосылуға рұқсат берілмеді."
+  },
+  "tokenIs": {
+    "message": "«$NAME$» токені, иесі: $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "«$NAME$» токені, иесі: $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Онда captures рұқсат аясы жоқ, сондықтан ол түсіре алмайды."
+  },
+  "noCredentialsInAddress": {
+    "message": "Пайдаланушы аты мен құпия сөзді мекенжайға жазбаңыз: ол ешқашан қосылмайды, ал құпия сөз қалқымалы терезеде көрсетіледі."
+  },
+  "tokenTooWide": {
+    "message": "Бұл токен мыналарды да істей алады: $SCOPES$. Кеңейтімге тек captures рұқсат аясы қажет: тек сол рұқсат аясы бар токен жасап, бұл токеннің күшін жойыңыз.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "Postulo мекенжайына рұқсат берілмеді, сондықтан ештеңе жіберілмеді. Түсірілім сақталып, күтіп тұр: мекенжайға рұқсат беріп, «Жіберу» түймесін қайта басыңыз."
+  },
+  "enterAddress": {
+    "message": "Postulo данаңыздың мекенжайын енгізіңіз."
+  },
+  "notAnAddress": {
+    "message": "Бұл веб-мекенжайға ұқсамайды."
+  },
+  "httpsOnly": {
+    "message": "Өз компьютеріңізде емес кез келген нәрсе үшін https пайдаланыңыз: токен әр сұраумен бірге жіберіледі."
+  },
+  "tokenRefused": {
+    "message": "Postulo бұл токенді қабылдамайды. Оны мына жерден тексеріңіз: $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Бұл токенге түсіруге рұқсат жоқ."
+  },
+  "tooMany": {
+    "message": "Қысқа уақытта тым көп түсірілім жасалды. Бір минут күтіп, қайталап көріңіз."
+  },
+  "answered": {
+    "message": "Postulo жауабы: $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Оқитын қойынды жоқ."
+  },
+  "notWebPage": {
+    "message": "Тек веб-беттерді түсіруге болады."
+  },
+  "unreadable": {
+    "message": "Бетті оқу мүмкін болмады. Кейбір беттер кеңейтімдерді бұғаттайды."
+  },
+  "notPostulo": {
+    "message": "Бұл мекенжай жауап берді, бірақ Postulo ретінде емес. Мекенжайды және оның алдындағы кез келген кіру бетін тексеріңіз."
+  },
+  "addressTooLong": {
+    "message": "Бұл беттің мекенжайы «#» белгісінен кейінгі бөлігінсіз де Postulo қабылдайтыннан ұзын, сондықтан түсірілім жіберілмеді. Оның орнына вакансияны Postulo-ға қолмен қосыңыз."
+  },
+  "reviewHint": {
+    "message": "Беттен оқылғаны осы. Қате нәрсені түзетіңіз; сіз жібермейінше ештеңе осы браузерден шықпайды."
+  },
+  "sendForReview": {
+    "message": "Қарап шығуға жіберу"
+  },
+  "notConnected": {
+    "message": "Әзірге ешбір Postulo данасына қосылмаған: түсіргендеріңіз осы браузерде сақталады."
+  },
+  "keep": {
+    "message": "Осы браузерде сақтау"
+  },
+  "kept": {
+    "message": "Осы браузерде сақталды. Дайын болғанда оны Postulo-ға жіберіңіз."
+  },
+  "storageFull": {
+    "message": "Бұл браузердің Postulo-ға арналған жады толы. Бірнеше түсірілімді жіберіп немесе жойып, қайталап көріңіз."
+  },
+  "alreadyKept": {
+    "message": "Бұл бетті бұрын сақтағансыз, бірақ жібермегенсіз: бұл — сіздің нұсқаңыз."
+  },
+  "nothingRead": {
+    "message": "Бұл беттен ештеңе оқылмады. Білетініңізді толтырыңыз; сіз жібермейінше ештеңе осы браузерден шықпайды."
+  },
+  "waiting": {
+    "message": "Postulo-ға қазір қосылу мүмкін емес. Ол осы браузерде сақталды және Postulo жауап бере салысымен жіберіледі."
+  },
+  "waitingOffline": {
+    "message": "Сынақ ауыстырғышы қосулы, сондықтан ол осы браузерде күтеді. Ауыстырғыш өшірілгенде жіберіледі."
+  },
+  "waitingAccount": {
+    "message": "Ол осы браузерде сақталды және мәселе шешілгенде жіберіледі."
+  },
+  "sendNeedsSetup": {
+    "message": "Осы браузерде сақталды, Postulo данаңыз бапталғанда жіберіледі."
+  },
+  "capturesTitle": {
+    "message": "Осы браузердегі түсірілімдер"
+  },
+  "capturesIntro": {
+    "message": "Сіз түсірген вакансиялар Postulo данаңызға жеткенше осында сақталады. Жібергендеріңіз Postulo-ға қосылу мүмкін болған бойда кетеді."
+  },
+  "nothingKept": {
+    "message": "Бұл браузерде ештеңе сақталмаған."
+  },
+  "sendAll": {
+    "message": "Жіберілмегеннің бәрін жіберу"
+  },
+  "clearSent": {
+    "message": "Жіберілгендерін тазалау"
+  },
+  "stateKept": {
+    "message": "Жіберілмеген"
+  },
+  "stateWaiting": {
+    "message": "Postulo-ны күтуде"
+  },
+  "stateSent": {
+    "message": "Жіберілген"
+  },
+  "stateRefused": {
+    "message": "Қабылданбаған"
+  },
+  "tryNow": {
+    "message": "Қазір жіберіп көру"
+  },
+  "holdBack": {
+    "message": "Оның орнына осында сақтау"
+  },
+  "deleteConfirm": {
+    "message": "Бұл түсірілімді жою керек пе? Ол Postulo-ға жетпеген, сондықтан тек осында бар."
+  },
+  "troubleshooting": {
+    "message": "Сынау және ақауларды жою"
+  },
+  "offlineLabel": {
+    "message": "Postulo-ға қосылу мүмкін емес сияқты әрекет ету"
+  },
+  "offlineHint": {
+    "message": "Сынау үшін. Бұл қосулы тұрғанда ештеңе жіберілмейді: түсірілімдер Postulo істемей тұрғандағыдай осы браузерде күтеді және бұл өшірілгенде жіберіледі."
+  },
+  "offlineOn": {
+    "message": "Сынақ ауыстырғышы қосулы: Postulo-ға ештеңе жіберілмейді."
+  },
+  "offlineOff": {
+    "message": "Сынақ ауыстырғышы өшірулі: күтіп тұрғандар қазір Postulo-ға жіберіледі."
+  },
+  "downloadLog": {
+    "message": "Журналды жүктеп алу"
+  },
+  "clearLog": {
+    "message": "Журналды тазалау"
+  },
+  "logCleared": {
+    "message": "Журнал бос."
+  },
+  "logHint": {
+    "message": "Бір нәрсенің неге істемегенін анықтау үшін кеңейтімнің не істегені. Онда ешбір токен және беттерден ештеңе жоқ."
+  },
+  "delete": {
+    "message": "Жою"
+  },
+  "edit": {
+    "message": "Өңдеу"
+  },
+  "fieldTitle": {
+    "message": "Лауазым атауы"
+  },
+  "fieldCompany": {
+    "message": "Компания"
+  },
+  "fieldLocation": {
+    "message": "Орналасқан жері"
+  },
+  "fieldRemote": {
+    "message": "Жұмыс форматы"
+  },
+  "fieldEmployment": {
+    "message": "Жұмыспен қамту түрі"
+  },
+  "fieldSalaryFrom": {
+    "message": "Жалақы (бастап)"
+  },
+  "fieldSalaryTo": {
+    "message": "Жалақы (дейін)"
+  },
+  "fieldCurrency": {
+    "message": "Валюта"
+  },
+  "fieldPeriod": {
+    "message": "Уақыт аралығы"
+  },
+  "fieldCloses": {
+    "message": "Жабылу күні"
+  },
+  "fieldDescription": {
+    "message": "Сипаттама"
+  },
+  "remoteOnsite": {
+    "message": "Кеңседе"
+  },
+  "remoteHybrid": {
+    "message": "Аралас"
+  },
+  "remoteRemote": {
+    "message": "Қашықтан"
+  },
+  "employmentFullTime": {
+    "message": "Толық жұмыс күні"
+  },
+  "employmentPartTime": {
+    "message": "Толық емес жұмыс күні"
+  },
+  "employmentContract": {
+    "message": "Келісімшарт"
+  },
+  "employmentFreelance": {
+    "message": "Фриланс"
+  },
+  "employmentInternship": {
+    "message": "Тағылымдама"
+  },
+  "employmentApprenticeship": {
+    "message": "Шәкірттік"
+  },
+  "periodYear": {
+    "message": "Жылына"
+  },
+  "periodMonth": {
+    "message": "Айына"
+  },
+  "periodDay": {
+    "message": "Күніне"
+  },
+  "periodHour": {
+    "message": "Сағатына"
+  },
+  "postingsFound": {
+    "message": "Бұл бетте тізімделген вакансиялар саны: $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Сақтауға тұрарлықтарын белгілеңіз. Әрқайсысы жеке түсірілімге айналады және Postulo оны қайта оқиды."
+  },
+  "tickAll": {
+    "message": "Барлығы"
+  },
+  "tickNone": {
+    "message": "Ешқайсысы"
+  },
+  "nothingTicked": {
+    "message": "Ештеңе белгіленбеген."
+  },
+  "keptMany": {
+    "message": "Осы браузерде сақталған түсірілімдер: $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "Қарап шығуға жіберілген түсірілімдер: $COUNT$.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "Қабылданбағандар: $COUNT$; себебі түсірілімдер тізімінде көрсетілген.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Бұрын түсірілген: $WHEN$ бастап вакансияларыңызда, атауы: $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Postulo-да қарап шығуды күтіп тұр, күтуі басталған уақыт: $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "Осы компанияда осындай атаулы вакансия бар: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "бұрын түсірілген"
+  },
+  "knownOpen": {
+    "message": "Оны Postulo-да ашу"
+  },
+  "pictureOffer": {
+    "message": "Postulo бүкіл беттің суретін сіз көріп тұрғандай, кіріп тұрсаңыз да, кірмесеңіз де сақтай алады. Суретті жіберу керек пе?"
+  },
+  "pictureSend": {
+    "message": "Суретті жіберу"
+  },
+  "pictureSkip": {
+    "message": "Суретсіз"
+  },
+  "pictureDrawing": {
+    "message": "Бет салынуда…"
+  },
+  "pictureSending": {
+    "message": "Сурет жіберілуде…"
+  },
+  "pictureSent": {
+    "message": "Сурет жіберілді."
+  },
+  "pictureNotKept": {
+    "message": "Postulo суретті сақтамады. Түсірілімнің өзіне бұл әсер етпейді."
+  },
+  "pictureTooBig": {
+    "message": "Бет сурет ретінде жіберу үшін тым үлкен."
+  },
+  "pictureFailed": {
+    "message": "Бетті салу мүмкін болмады. Бұл әлі сіз түсірген бет пе?"
+  },
+  "languageLabel": {
+    "message": "Тіл"
+  },
+  "languageFollow": {
+    "message": "Браузер тілі бойынша"
+  },
+  "languageHint": {
+    "message": "Ағылшын тілінен басқа барлық тіл — әлі ешбір тіл иесі тексермеген жоба. Өзгеріс «Сақтау» түймесінсіз бірден күшіне енеді."
+  },
+  "reviewPageTitle": {
+    "message": "Түсірілімді қарап шығу"
+  }
+}

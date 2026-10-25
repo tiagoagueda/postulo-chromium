@@ -12,7 +12,7 @@
     "message": "Konfiguratu"
   },
   "capture": {
-    "message": "Harrapatu iragarki hau"
+    "message": "Kapturatu iragarki hau"
   },
   "captureHint": {
     "message": "Orria hemen irakurtzen da, zure nabigatzailean. Ez da ezer bidaltzen zuk esan arte."
@@ -53,7 +53,7 @@
     "message": "Zure Postulo"
   },
   "instanceHint": {
-    "message": "Irekitzen duzun helbidea. https, makina honetan exekutatzen ez bada behintzat."
+    "message": "Postulo irekitzeko erabiltzen duzun helbidea. https, makina honetan exekutatzen ez bada."
   },
   "tokenLabel": {
     "message": "API tokena"
@@ -87,7 +87,7 @@
     }
   },
   "tokenMissing": {
-    "message": "Itsatsi Postulok erakutsi zizun tokena."
+    "message": "Itsatsi Postulok erakutsi dizun tokena."
   },
   "saved": {
     "message": "Gordeta. Botoiak orriak $HOST$ helbidera bidaliko ditu orain.",
@@ -101,13 +101,13 @@
     "message": "Gordeta, baina nabigatzaileak ukatu egin du bertara iristeko baimena; eman baimena hedapenaren baimenetan."
   },
   "asking": {
-    "message": "Postului galdetzen token hau norena den…"
+    "message": "Postulori galdetzen token hau norena den…"
   },
   "addressRefused": {
-    "message": "Helbide horretara iristeko baimena ukatu da."
+    "message": "Helbide horretara iristeko baimena ukatu egin da."
   },
   "tokenIs": {
-    "message": "$OWNER$ erabiltzailearen «$NAME$» tokena.",
+    "message": "$OWNER$ kontuaren «$NAME$» tokena.",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -118,7 +118,7 @@
     }
   },
   "tokenIsScoped": {
-    "message": "$OWNER$ erabiltzailearen «$NAME$» tokena ($SCOPES$).",
+    "message": "$OWNER$ kontuaren «$NAME$» tokena ($SCOPES$).",
     "placeholders": {
       "name": {
         "content": "$1"
@@ -135,16 +135,16 @@
     "message": "Ez du captures esparrua, beraz ezin du harrapatu."
   },
   "enterAddress": {
-    "message": "Idatzi zure Postuloren helbidea."
+    "message": "Sartu zure Postuloren helbidea."
   },
   "notAnAddress": {
-    "message": "Horrek ez du web-helbide baten itxurarik."
+    "message": "Ez dirudi web-helbide bat denik."
   },
   "httpsOnly": {
-    "message": "Erabili https zure makinan ez dagoen guztirako: tokena eskaera bakoitzarekin bidaiatzen da."
+    "message": "Erabili https zure makinan ez dagoen edozertarako: tokena eskaera guztiekin batera bidaltzen da."
   },
   "tokenRefused": {
-    "message": "Postulok ez du token hau onartzen. Egiaztatu $PATH$ atalean.",
+    "message": "Postulok ez du token hau onartzen. Egiaztatu hemen: $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -152,13 +152,13 @@
     }
   },
   "notAllowed": {
-    "message": "Token honek ez du harrapatzeko baimenik."
+    "message": "Token honek ez du kapturatzeko baimenik."
   },
   "tooMany": {
-    "message": "Harrapaketa gehiegi denbora gutxian. Itxaron minutu bat eta saiatu berriro."
+    "message": "Kaptura gehiegi denbora laburrean. Itxaron minutu bat eta saiatu berriro."
   },
   "answered": {
-    "message": "Postulok $STATUS$ erantzun du.",
+    "message": "Postulok $STATUS$ egoera-kodearekin erantzun du.",
     "placeholders": {
       "status": {
         "content": "$1"
@@ -426,7 +426,7 @@
     "message": "Ireki Postulon"
   },
   "notPostulo": {
-    "message": "Helbide horrek erantzun du, baina ez Postulo gisa. Egiaztatu helbidea eta haren aurrean dagoen saio-hasierako orriren bat."
+    "message": "Helbide horrek erantzun du, baina ez Postulok bezala. Egiaztatu helbidea, eta haren aurrean saio-hasierako orririk dagoen."
   },
   "addressTooLong": {
     "message": "Orri honen helbidea Postulok onartzen duena baino luzeagoa da, «#» ikurraren ondorengo zatirik gabe ere, eta horregatik harrapaketa ez da bidali. Gehitu iragarkia Postulon eskuz."
@@ -522,7 +522,7 @@
     "message": "Utzi erabiltzaile-izena eta pasahitza helbidetik kanpo: ez da inoiz konektatuko, eta pasahitza laster-leihoan erakutsiko da."
   },
   "tokenTooWide": {
-    "message": "Hau ere bai: $SCOPES$. Hedapenak kaptura-esparrua bakarrik behar du: esparru hori bakarrik duen token bat eman eta hau errebokatu.",
+    "message": "Token honek hau ere egin dezake: $SCOPES$. Hedapenak kapturen esparrua soilik behar du: sortu esparru hori soilik duen token bat eta baliogabetu hau.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postuloren helbidea ez zen onartzen, beraz ez zen ezer bidali. Kaptura gorde eta itxaron egiten da: baimendu helbidea eta sakatu Bidali berriro."
+    "message": "Postuloren helbidea ez da baimendu; beraz, ez da ezer bidali. Kaptura gordeta dago eta zain geratzen da: baimendu helbidea eta sakatu Bidali berriro."
   }
 }

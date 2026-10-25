@@ -12,7 +12,7 @@
     "message": "Ei osod"
   },
   "capture": {
-    "message": "Dal yr hysbyseb hon"
+    "message": "Cipio'r hysbyseb hon"
   },
   "captureHint": {
     "message": "Caiff y dudalen ei darllen yma, yn eich porwr. Does dim yn cael ei anfon nes i chi ddweud."
@@ -53,7 +53,7 @@
     "message": "Eich Postulo"
   },
   "instanceHint": {
-    "message": "Y cyfeiriad rydych chi'n ei agor arno. https, oni bai ei fod yn rhedeg ar y peiriant hwn."
+    "message": "Y cyfeiriad a ddefnyddiwch i'w agor. https, oni bai ei fod yn rhedeg ar y peiriant hwn."
   },
   "tokenLabel": {
     "message": "Tocyn API"
@@ -138,13 +138,13 @@
     "message": "Rhowch gyfeiriad eich Postulo."
   },
   "notAnAddress": {
-    "message": "Dydy hwnna ddim yn edrych fel cyfeiriad gwe."
+    "message": "Nid yw hynny'n edrych fel cyfeiriad gwe."
   },
   "httpsOnly": {
     "message": "Defnyddiwch https ar gyfer unrhyw beth nad yw ar eich peiriant eich hun: mae'r tocyn yn teithio gyda phob cais."
   },
   "tokenRefused": {
-    "message": "Dydy Postulo ddim yn derbyn y tocyn hwn. Gwiriwch ef o dan $PATH$.",
+    "message": "Nid yw Postulo yn derbyn y tocyn hwn. Gwiriwch ef o dan $PATH$.",
     "placeholders": {
       "path": {
         "content": "$1"
@@ -152,10 +152,10 @@
     }
   },
   "notAllowed": {
-    "message": "Does gan y tocyn hwn ddim caniatâd i ddal."
+    "message": "Nid oes gan y tocyn hwn ganiatâd i gipio."
   },
   "tooMany": {
-    "message": "Gormod o ddalfeydd mewn amser byr. Arhoswch funud a rhowch gynnig arall arni."
+    "message": "Gormod o gipiadau mewn amser byr. Arhoswch funud a rhowch gynnig arall arni."
   },
   "answered": {
     "message": "Atebodd Postulo $STATUS$.",
@@ -527,9 +527,9 @@
     }
   },
   "noCredentialsInAddress": {
-    "message": "Gadewch yr enw defnyddiwr a'r cyfrinair allan o'r cyfeiriad: fyddai e byth yn cysylltu, a byddai'r cyfrinair yn cael ei ddangos yn y ffenestr naid."
+    "message": "Gadewch yr enw defnyddiwr a'r cyfrinair allan o'r cyfeiriad: ni fyddai byth yn cysylltu, a byddai'r cyfrinair yn cael ei ddangos yn y ffenestr naid."
   },
   "permissionRefused": {
-    "message": "Ni chafodd cyfeiriad Postulo ei ganiatáu, felly ni anfonwyd dim. Mae'r ddalfa'n cael ei chadw ac yn aros: caniatewch y cyfeiriad a phwyswch Anfon eto."
+    "message": "Ni chafodd cyfeiriad Postulo ei ganiatáu, felly ni anfonwyd dim. Mae'r cipiad yn cael ei gadw ac yn aros: caniatewch y cyfeiriad a phwyswch Anfon eto."
   }
 }

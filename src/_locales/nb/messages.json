@@ -519,10 +519,10 @@
     "message": "Gjennomgå en fangst"
   },
   "noCredentialsInAddress": {
-    "message": "La brukernavnet og passordet være ute av adressen: det ville aldri koble til, og passordet vil bli vist i popup."
+    "message": "Ikke ta med brukernavnet og passordet i adressen: den ville aldri koble til, og passordet ville blitt vist i popup-vinduet."
   },
   "tokenTooWide": {
-    "message": "Dette symbolet kan også: $SCOPES$. Utvidelsen trenger kun omfang av opptak: utstede et tegn med det omfanget alene og trekke dette tilbake.",
+    "message": "Dette tokenet kan også: $SCOPES$. Utvidelsen trenger bare tilgangsområdet for fangster: opprett et token med bare det tilgangsområdet, og tilbakekall dette.",
     "placeholders": {
       "scopes": {
         "content": "$1"
@@ -530,6 +530,6 @@
     }
   },
   "permissionRefused": {
-    "message": "Postulos adresse var ikke tillatt, så ingenting ble sendt. Opptaket holdes og venter: la adressen og trykk på Send igjen."
+    "message": "Adressen til Postulo ble ikke tillatt, så ingenting ble sendt. Fangsten er tatt vare på og venter: tillat adressen og trykk Send igjen."
   }
 }

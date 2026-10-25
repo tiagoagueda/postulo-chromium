@@ -1,1 +1,535 @@
-{}
+{
+  "extensionDescription": {
+    "message": "Capturai l'inserat che Vus guardais, conservai el en Voss navigatur e tramettai el a Voss agen Postulo per l'examinaziun, cura che Vus vulais. Nagut na va insanua auter."
+  },
+  "actionTitle": {
+    "message": "Capturar quest inserat en Postulo"
+  },
+  "postuloUnreachable": {
+    "message": "Postulo n'è betg cuntanschibel: quai che Vus tramettais spetga en quest navigatur, fin ch'el respunda."
+  },
+  "footerOnline": {
+    "message": "Postulo respunda"
+  },
+  "footerSlow": {
+    "message": "Postulo respunda plaun"
+  },
+  "reviewHeading": {
+    "message": "Examinaziun necessaria"
+  },
+  "waitingInPostulo": {
+    "message": "Spetga sin l'examinaziun en Postulo"
+  },
+  "nothingWaiting": {
+    "message": "Nagut na spetga sin l'examinaziun."
+  },
+  "lastListed": {
+    "message": "Sco che Postulo als ha mussads l'ultima giada, ils $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "capturesOfPosting": {
+    "message": "Capturas da quest inserat: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "waitingForReview": {
+    "message": "Spetgan sin l'examinaziun: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "settings": {
+    "message": "Parameters"
+  },
+  "setUp": {
+    "message": "Configurar"
+  },
+  "capture": {
+    "message": "Capturar quest inserat"
+  },
+  "addListing": {
+    "message": "Agiuntar in inserat"
+  },
+  "captureHint": {
+    "message": "La pagina vegn legida qua, en Voss navigatur. Nagut na vegn tramess avant che Vus decidais quai."
+  },
+  "review": {
+    "message": "Examinar en Postulo"
+  },
+  "reading": {
+    "message": "La pagina vegn legida…"
+  },
+  "allowing": {
+    "message": "Dumonda la permissiun da cuntanscher Voss Postulo…"
+  },
+  "noPermission": {
+    "message": "Senza permissiun da cuntanscher Voss Postulo na po nagut vegnir tramess."
+  },
+  "sending": {
+    "message": "Vegn tramess a Postulo…"
+  },
+  "captured": {
+    "message": "Capturà. Examinai la captura avant ch'ella daventa in inserat."
+  },
+  "readBy": {
+    "message": "Legì da $SOURCE$",
+    "placeholders": {
+      "source": {
+        "content": "$1"
+      }
+    }
+  },
+  "untitled": {
+    "message": "Inserat senza titel"
+  },
+  "optionsTitle": {
+    "message": "Parameters da Postulo"
+  },
+  "instanceLabel": {
+    "message": "Voss Postulo"
+  },
+  "instanceHint": {
+    "message": "L'adressa cun la quala Vus avris Postulo. https, nun ch'el funcziunia sin quest computer."
+  },
+  "tokenLabel": {
+    "message": "Token d'API"
+  },
+  "tokenHint": {
+    "message": "Creà sut $PATH$ en Postulo, cun la cumpetenza $SCOPE$ e nagut auter. El vegn arcunà mo sin quest apparat e mai sincronisà via in conto dal navigatur.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      },
+      "scope": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenPath": {
+    "message": "Parameters → Tokens API"
+  },
+  "save": {
+    "message": "Arcunar"
+  },
+  "test": {
+    "message": "Testar"
+  },
+  "shortcutHint": {
+    "message": "Cun smatgar il buttun u $SHORTCUT$ vegn la pagina che Vus guardais legida, qua en il navigatur. Nagina pagina na vegn legida avant che Vus al dumandais, e nagut na vegn tramess insanua auter che a Voss agen Postulo, cura che Vus decidais quai.",
+    "placeholders": {
+      "shortcut": {
+        "content": "$1"
+      }
+    }
+  },
+  "tokenMissing": {
+    "message": "Encollai il token che Postulo As ha mussà."
+  },
+  "saved": {
+    "message": "Arcunà. Il buttun trametta ussa las paginas a $HOST$.",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      }
+    }
+  },
+  "savedNoPermission": {
+    "message": "Arcunà, ma il navigatur ha refusà la permissiun da cuntanscher l'adressa; permettai quai en las permissiuns da l'extensiun."
+  },
+  "asking": {
+    "message": "Dumonda Postulo a tgi che quest token appartegna…"
+  },
+  "addressRefused": {
+    "message": "La permissiun da cuntanscher questa adressa è vegnida refusada."
+  },
+  "tokenIs": {
+    "message": "Token «$NAME$» per $OWNER$.",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      }
+    }
+  },
+  "tokenIsScoped": {
+    "message": "Token «$NAME$» per $OWNER$ ($SCOPES$).",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "owner": {
+        "content": "$2"
+      },
+      "scopes": {
+        "content": "$3"
+      }
+    }
+  },
+  "lacksCaptures": {
+    "message": "Al manca la cumpetenza captures, perquai na po el betg capturar."
+  },
+  "noCredentialsInAddress": {
+    "message": "Laschai davent il num d'utilisader ed il pled-clav da l'adressa: la connexiun na funcziunass mai, ed il pled-clav vegniss mussà en il pop-up."
+  },
+  "tokenTooWide": {
+    "message": "Quest token po er: $SCOPES$. L'extensiun dovra mo la cumpetenza captures: creai in token cun mo questa cumpetenza e revocai quest.",
+    "placeholders": {
+      "scopes": {
+        "content": "$1"
+      }
+    }
+  },
+  "permissionRefused": {
+    "message": "L'adressa da Postulo n'è betg vegnida permessa, perquai n'è nagut vegnì tramess. La captura vegn conservada e spetga: permettai l'adressa e smatgai danovamain Trametter."
+  },
+  "enterAddress": {
+    "message": "Endatai l'adressa da Voss Postulo."
+  },
+  "notAnAddress": {
+    "message": "Quai na para betg d'esser in'adressa web."
+  },
+  "httpsOnly": {
+    "message": "Utilisai https per tut quai che n'è betg sin Voss agen computer: il token viagia cun mintga dumonda."
+  },
+  "tokenRefused": {
+    "message": "Postulo n'accepta betg quest token. Controllai el sut $PATH$.",
+    "placeholders": {
+      "path": {
+        "content": "$1"
+      }
+    }
+  },
+  "notAllowed": {
+    "message": "Quest token n'ha betg il dretg da capturar."
+  },
+  "tooMany": {
+    "message": "Memia bleras capturas en curt temp. Spetgai ina minuta ed empruvai anc ina giada."
+  },
+  "answered": {
+    "message": "Postulo ha respundì $STATUS$.",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "noTab": {
+    "message": "Nagin tab da leger."
+  },
+  "notWebPage": {
+    "message": "Mo paginas web pon vegnir capturadas."
+  },
+  "unreadable": {
+    "message": "La pagina n'ha betg pudì vegnir legida. Intginas paginas blocheschan extensiuns."
+  },
+  "notPostulo": {
+    "message": "Questa adressa ha respundì, ma betg sco Postulo. Controllai l'adressa e mintga pagina d'annunzia che stat avant ella."
+  },
+  "addressTooLong": {
+    "message": "L'adressa da questa pagina è pli lunga che quai che Postulo accepta, er senza la part suenter il «#», perquai n'è la captura betg vegnida tramessa. Agiuntai enstagl l'inserat a maun en Postulo."
+  },
+  "reviewHint": {
+    "message": "Quai è quai ch'è vegnì legì da la pagina. Rectifitgai tut quai ch'è fauss; nagut na banduna quest navigatur avant che Vus al tramettais."
+  },
+  "sendForReview": {
+    "message": "Trametter per l'examinaziun"
+  },
+  "notConnected": {
+    "message": "Anc betg collià cun in Postulo: quai che Vus capturais vegn conservà en quest navigatur."
+  },
+  "keep": {
+    "message": "Conservar en quest navigatur"
+  },
+  "kept": {
+    "message": "Conservà en quest navigatur. Tramettai la captura a Postulo, cura che Vus vulais."
+  },
+  "storageFull": {
+    "message": "La memoria da quest navigatur per Postulo è plaina. Tramettai u stizzai intginas capturas ed empruvai lura anc ina giada."
+  },
+  "alreadyKept": {
+    "message": "Vus avais gia conservà questa pagina, ma n'avais anc betg tramess ella: quai è Vossa versiun."
+  },
+  "nothingRead": {
+    "message": "Da questa pagina n'ha nagut pudì vegnir legì. Emplenai quai che Vus savais; nagut na banduna quest navigatur avant che Vus al tramettais."
+  },
+  "waiting": {
+    "message": "Postulo n'è betg cuntanschibel en quest mument. La captura vegn conservada en quest navigatur e tramessa uschespert che Postulo respunda."
+  },
+  "waitingOffline": {
+    "message": "Il cumutatur da test è activà, perquai spetga la captura en quest navigatur. Ella vegn tramessa uschespert ch'il cumutatur è deactivà."
+  },
+  "waitingAccount": {
+    "message": "La captura vegn conservada en quest navigatur e tramessa uschespert che quai è reparà."
+  },
+  "sendNeedsSetup": {
+    "message": "Conservà en quest navigatur, per vegnir tramess uschespert che Voss Postulo è configurà."
+  },
+  "capturesTitle": {
+    "message": "Capturas en quest navigatur"
+  },
+  "capturesIntro": {
+    "message": "Inserats che Vus avais capturà, conservads qua fin ch'els arrivan en Voss Postulo. Quai che Vus tramettais parta uschespert che Postulo è cuntanschibel."
+  },
+  "nothingKept": {
+    "message": "Nagut n'è conservà en quest navigatur."
+  },
+  "sendAll": {
+    "message": "Trametter tut quai che n'è anc betg tramess"
+  },
+  "clearSent": {
+    "message": "Allontanar las capturas tramessas"
+  },
+  "stateKept": {
+    "message": "Betg tramess"
+  },
+  "stateWaiting": {
+    "message": "Spetga sin Postulo"
+  },
+  "stateSent": {
+    "message": "Tramess"
+  },
+  "stateRefused": {
+    "message": "Refusà"
+  },
+  "tryNow": {
+    "message": "Empruvar ussa"
+  },
+  "holdBack": {
+    "message": "Conservar qua enstagl"
+  },
+  "deleteConfirm": {
+    "message": "Stizzar questa captura? Ella n'è betg arrivada en Postulo ed exista perquai mo qua."
+  },
+  "troubleshooting": {
+    "message": "Test e soluziun da problems"
+  },
+  "offlineLabel": {
+    "message": "Far sco sche Postulo na fiss betg cuntanschibel"
+  },
+  "offlineHint": {
+    "message": "Per testar. Durant che quai è activà, na vegn nagut tramess: las capturas spetgan en quest navigatur exactamain sco sche Postulo na funcziunass betg, e partan uschespert ch'il cumutatur è deactivà."
+  },
+  "offlineOn": {
+    "message": "Il cumutatur da test è activà: nagut na vegn tramess a Postulo."
+  },
+  "offlineOff": {
+    "message": "Il cumutatur da test è deactivà: quai che spetga va ussa a Postulo."
+  },
+  "downloadLog": {
+    "message": "Telechargiar il protocol"
+  },
+  "clearLog": {
+    "message": "Svidar il protocol"
+  },
+  "logCleared": {
+    "message": "Il protocol è vid."
+  },
+  "logHint": {
+    "message": "Quai che l'extensiun ha fatg, per chattar ora pertge ch'insatge n'ha betg funcziunà. El na cuntegna nagin token e nagut da las paginas."
+  },
+  "delete": {
+    "message": "Stizzar"
+  },
+  "edit": {
+    "message": "Modifitgar"
+  },
+  "fieldTitle": {
+    "message": "Titel da la funcziun"
+  },
+  "fieldCompany": {
+    "message": "Interpresa"
+  },
+  "fieldLocation": {
+    "message": "Lieu"
+  },
+  "fieldRemote": {
+    "message": "Modalitad da lavur"
+  },
+  "fieldEmployment": {
+    "message": "Tip d'engaschament"
+  },
+  "fieldSalaryFrom": {
+    "message": "Salari da"
+  },
+  "fieldSalaryTo": {
+    "message": "Salari fin"
+  },
+  "fieldCurrency": {
+    "message": "Valuta"
+  },
+  "fieldPeriod": {
+    "message": "Perioda"
+  },
+  "fieldCloses": {
+    "message": "Termin"
+  },
+  "fieldDescription": {
+    "message": "Descripziun"
+  },
+  "remoteOnsite": {
+    "message": "Sin plazza"
+  },
+  "remoteHybrid": {
+    "message": "Hibrid"
+  },
+  "remoteRemote": {
+    "message": "A distanza"
+  },
+  "employmentFullTime": {
+    "message": "Temp cumplain"
+  },
+  "employmentPartTime": {
+    "message": "Temp parzial"
+  },
+  "employmentContract": {
+    "message": "Engaschament limità"
+  },
+  "employmentFreelance": {
+    "message": "Independent"
+  },
+  "employmentInternship": {
+    "message": "Praticum"
+  },
+  "employmentApprenticeship": {
+    "message": "Emprendissadi"
+  },
+  "periodYear": {
+    "message": "Per onn"
+  },
+  "periodMonth": {
+    "message": "Per mais"
+  },
+  "periodDay": {
+    "message": "Per di"
+  },
+  "periodHour": {
+    "message": "Per ura"
+  },
+  "postingsFound": {
+    "message": "Questa pagina mussa $COUNT$ inserats.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "tickHint": {
+    "message": "Marcai quels che valan la paina da conservar. Mintgin daventa in'atgna captura, legida danovamain da Postulo."
+  },
+  "tickAll": {
+    "message": "Tuts"
+  },
+  "tickNone": {
+    "message": "Nagin"
+  },
+  "nothingTicked": {
+    "message": "Nagut n'è marcà."
+  },
+  "keptMany": {
+    "message": "$COUNT$ capturas conservadas en quest navigatur.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "sentMany": {
+    "message": "$COUNT$ capturas tramessas per l'examinaziun.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "refusedSome": {
+    "message": "$COUNT$ èn vegnidas refusadas; la glista da las capturas di pertge.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownListing": {
+    "message": "Gia capturà: en Voss inserats dapi ils $WHEN$ sco $TITLE$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      },
+      "title": {
+        "content": "$2"
+      }
+    }
+  },
+  "knownCapture": {
+    "message": "Spetga gia sin l'examinaziun en Postulo, dapi ils $WHEN$.",
+    "placeholders": {
+      "when": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownSimilar": {
+    "message": "I dat gia in inserat cun quest titel tar questa interpresa: $TITLE$.",
+    "placeholders": {
+      "title": {
+        "content": "$1"
+      }
+    }
+  },
+  "knownTag": {
+    "message": "gia capturà"
+  },
+  "knownOpen": {
+    "message": "L'avrir en Postulo"
+  },
+  "pictureOffer": {
+    "message": "Postulo po conservar in maletg da l'entira pagina sco che Vus la vesais, annunzià u betg. Trametter in?"
+  },
+  "pictureSend": {
+    "message": "Trametter il maletg"
+  },
+  "pictureSkip": {
+    "message": "Nagin maletg"
+  },
+  "pictureDrawing": {
+    "message": "La pagina vegn dissegnada…"
+  },
+  "pictureSending": {
+    "message": "Il maletg vegn tramess…"
+  },
+  "pictureSent": {
+    "message": "Il maletg è vegnì tramess."
+  },
+  "pictureNotKept": {
+    "message": "Postulo n'ha betg conservà il maletg. La captura sezza n'è betg pertutgada."
+  },
+  "pictureTooBig": {
+    "message": "La pagina è memia gronda per vegnir tramessa sco maletg."
+  },
+  "pictureFailed": {
+    "message": "La pagina n'ha betg pudì vegnir dissegnada. È quai anc adina quella che Vus avais capturà?"
+  },
+  "languageLabel": {
+    "message": "Lingua"
+  },
+  "languageFollow": {
+    "message": "Suandar il navigatur"
+  },
+  "languageHint": {
+    "message": "Mintga lingua auter che l'englais è in sboz che nagin che discurra la lingua n'ha anc examinà. Ha effect immediatamain, senza Arcunar."
+  },
+  "reviewPageTitle": {
+    "message": "Examinar ina captura"
+  }
+}
