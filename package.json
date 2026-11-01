@@ -1,6 +1,6 @@
 {
   "name": "postulo-chromium",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "private": true,
   "description": "Browser extension that sends the job posting you are looking at to your own Postulo. One source, built for Chromium-based browsers and for Firefox.",
   "type": "module",
