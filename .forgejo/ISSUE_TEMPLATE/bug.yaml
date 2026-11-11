@@ -1,55 +1,64 @@
 name: Bug report
 about: Something in the extension does not work, or a posting was read wrongly.
+title: "[Bug] "
 labels:
   - bug
 body:
   - type: markdown
     attributes:
       value: |
-        **Remove personal details before you paste anything.** Postulo holds CVs, home
-        addresses and the names of the people somebody is applying to. Logs and
-        screenshots are where they leak. Blank them out first.
+        Thank you for taking the time. Write in whatever language you can; English is easiest for the maintainer to act on, but a report in another language is better than none.
 
-        A **security problem is not a bug report**: do not post it here. Follow the
-        link above, "Security problem".
+        **Is it a security problem?** Do not post it here, this page is public. Follow [SECURITY.md](https://source.tiagoagueda.com/postulo/postulo/src/branch/main/SECURITY.md).
+
+        **Remove personal details before you paste anything.** Postulo holds CVs, home addresses and the names of the people somebody is applying to. A log or a screenshot is where those leak: blank out names, addresses, e-mail addresses, company and listing details, tokens and cookies first.
+
+        The Firefox extension is built from this code, so a posting read wrongly in Firefox is reported here too. A problem with the Firefox package itself (installing, signing, permissions) belongs in [postulo-firefox](https://source.tiagoagueda.com/postulo/postulo-firefox/issues/new/choose).
   - type: input
     id: extension-version
     attributes:
       label: Extension version
       description: Shown on the browser's extensions page.
+      placeholder: "0.5.0"
     validations:
       required: true
   - type: input
     id: browser
     attributes:
       label: Browser and its version
-      description: For example Chrome 130, Edge 130, Firefox 140.
+      placeholder: Chrome 142
     validations:
       required: true
   - type: input
     id: os
     attributes:
       label: Operating system
+      placeholder: Windows 11
     validations:
       required: true
   - type: input
     id: postulo-version
     attributes:
       label: Postulo version it sends to
-      description: Shown in Postulo's footer or on its about page.
+      description: The foot of every page shows the version. On the `:dev` image, give the pinned tag (`<version>-dev.<short sha>`), because `:dev` moves.
+      placeholder: "0.5.0"
     validations:
       required: true
   - type: input
     id: job-board
     attributes:
       label: Which job board or kind of page
-      description: The name of the site is enough. Please do not paste the address; a posting's address can say where somebody is applying.
+      description: The name of the site is enough. Do not paste the address; a posting's address can say where somebody is applying.
+      placeholder: A company's own careers page
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
       label: What you did, step by step
+      placeholder: |
+        1. Open ...
+        2. Press ...
     validations:
       required: true
   - type: textarea
@@ -69,6 +78,6 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Logs or error messages (personal details removed)
-      description: From the extension's console, if there is anything. Leave empty if not.
+      label: Logs
+      description: "*Settings → Testing and troubleshooting → Download the log* saves what the extension did, without the token or anything from the pages. Attach it, or paste the part that bears on it, with personal details removed first."
       render: text

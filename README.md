@@ -191,7 +191,8 @@ and not `unlimitedStorage`, and a page is dropped as soon as Postulo has it.
 reached* has the extension send nothing while it is on, exactly as if Postulo were down;
 turn it off and what is waiting goes. **Download the log** from the same place saves what
 the extension did — reads, keeps, send attempts and what Postulo answered — as a text file
-to attach to an issue. It holds no token and nothing from the pages.
+to attach to an issue. It holds no token and nothing from the pages. *New issue* offers a
+*Bug report* form that asks for it and for what else a fix needs.
 
 ## Languages
 
@@ -312,7 +313,7 @@ request. `npm test` fails while the code asks for a key that `en` does not have.
 | `src/lib/languages.js` | The shipped languages: folder, tag, direction and own name; written by `scripts/languages.py` |
 | `scripts/languages.py` | Writes that list from the core's roll-out (`../postulo`) |
 | `src/_locales/` | One `messages.json` per language; `en` is the source |
-| `.forgejo/ISSUE_TEMPLATE/` | The bug and feature forms, and the links shown above them (security, translations) |
+| `.forgejo/ISSUE_TEMPLATE/` | The bug and feature forms, and the links shown above them (security, translations, questions) |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
 | `scripts/locales.mjs` | Which language folders are incomplete, so the build leaves them out |
 | `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, and the grey 16 and 32 for the toolbar, made by `scripts/icons.py` |

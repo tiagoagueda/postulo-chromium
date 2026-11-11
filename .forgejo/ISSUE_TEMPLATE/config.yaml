@@ -1,8 +1,11 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Security problem (do not file it here)
+  - name: A security problem is not a public issue
     url: https://source.tiagoagueda.com/postulo/postulo/src/branch/main/SECURITY.md
-    about: A vulnerability is reported privately, never as a public issue. SECURITY.md says how.
-  - name: Wrong or missing translation
-    url: https://translate.tiagoagueda.com/projects/postulo/
-    about: Correct a word in Weblate rather than reporting it here.
+    about: Report a vulnerability privately, as SECURITY.md describes. Do not open an issue.
+  - name: A wrong or missing translation
+    url: https://source.tiagoagueda.com/postulo/postulo-chromium/src/branch/main/README.md#translating
+    about: Correct a word in Weblate, where the extension's translations are kept, rather than reporting it here.
+  - name: A question about using the extension
+    url: https://source.tiagoagueda.com/postulo/postulo-chromium/src/branch/main/README.md#set-it-up
+    about: The README says how to install it, set it up and what it sends.
