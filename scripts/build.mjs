@@ -39,13 +39,22 @@ export function shipped(catalogue, language) {
   };
 }
 
-function manifestFor(target) {
-  const copy = structuredClone(manifest);
+/** The mark as a vector, which Firefox takes for the extension's icons (MDN, manifest.json
+ *  `icons`: "You can use SVG, and the browser scales your icon appropriately", given a
+ *  viewBox and the sizes still listed). Chromium does not (crbug.com/29683), so the source
+ *  manifest names the PNGs rendered from it (postulo/postulo#1238). The toolbar button
+ *  stays PNG in both: its grey "offline" state is a raster set at run time, and the button in
+ *  colour is the same picture as that grey one. */
+export const VECTOR_ICON = "icons/postulo.svg";
+
+export function manifestFor(target, source = manifest) {
+  const copy = structuredClone(source);
   if (target === "chromium") {
     delete copy.background.scripts;
     delete copy.browser_specific_settings;
   } else if (target === "firefox") {
     delete copy.background.service_worker;
+    copy.icons = Object.fromEntries(Object.keys(copy.icons).map((size) => [size, VECTOR_ICON]));
   } else {
     throw new Error(`Unknown target ${target}; chromium or firefox.`);
   }
@@ -64,6 +73,11 @@ if (process.argv[1]?.endsWith("build.mjs")) for (const target of targets) {
     const catalogue = JSON.parse(readFileSync(file, "utf8"));
     writeFileSync(file, JSON.stringify(shipped(catalogue, language), null, 2) + "\n");
   }
-  writeFileSync(join(out, "manifest.json"), JSON.stringify(manifestFor(target), null, 2) + "\n");
+  const built = manifestFor(target);
+  writeFileSync(join(out, "manifest.json"), JSON.stringify(built, null, 2) + "\n");
+  // A rendered icon the build's manifest no longer names (Firefox's take the vector) is not
+  // shipped; the toolbar's, coloured and grey, always are.
+  const named = new Set([...Object.values(built.icons), ...Object.values(built.action.default_icon)]);
+  for (const path of Object.values(manifest.icons)) if (!named.has(path)) rmSync(join(out, path));
   console.log(`${target}: ${out}`);
 }

@@ -321,7 +321,7 @@ request. `npm test` fails while the code asks for a key that `en` does not have.
 | `scripts/corpus.mjs` | What is read off a saved page (`node scripts/corpus.mjs <page.html> <address>`), for adding a board to the corpus in `test/fixtures/` |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
 | `scripts/locales.mjs` | Which language folders are incomplete, so the build leaves them out |
-| `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, and the grey 16 and 32 for the toolbar, made by `scripts/icons.py` |
+| `src/icons/` | Postulo's mark as a vector (`postulo.svg`), and rendered from it at 16, 32, 48, 96 and 128 pixels with the grey 16 and 32 for the toolbar, made by `scripts/icons.py` |
 
 ```sh
 npm test               # the reader, the store and delivery, the API, and every language against en
@@ -329,12 +329,18 @@ npm run lint:firefox   # web-ext lint on the Firefox build
 npm run package        # zips under dist/artifacts/
 ```
 
-The icons are Postulo's mark, derived with the core's own recipe from
-`assets/brand/postulo.png` in the core repository, and committed. When the mark changes,
-regenerate them from a checkout of the core beside this one:
+The icons are Postulo's mark, whose source is the vector `assets/brand/postulo.svg` in the
+core repository (postulo/postulo#1238). `src/icons/postulo.svg` is a byte-for-byte copy of
+the core's served `src/postulo/static/brand/logo.svg`, and it is what the extension's own
+pages show and what the Firefox build names as its icons (Firefox takes SVG icons; Chromium
+does not). The PNGs exist only where a raster is needed (Chromium's manifest, and the
+toolbar button in colour and in grey) and are rendered from that vector by the core's own
+recipe, Chromium through Playwright. All of it is committed. When the mark changes,
+regenerate it from a checkout of the core beside this one, in the core's environment:
 
 ```sh
-uv run --with pillow python scripts/icons.py
+uv run --project ../postulo python scripts/icons.py
+# a core elsewhere: --core <path>, or POSTULO_CORE=<path>
 ```
 
 ## Licence
