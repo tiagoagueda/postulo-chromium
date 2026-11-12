@@ -137,3 +137,49 @@ export async function lastWaiting(area, settings) {
   const copy = (await area.get(WAITING))[WAITING];
   return copy && Array.isArray(copy.rows) ? copy.rows : [];
 }
+
+/** `work`, run once for any number of calls made before it starts, and once more for the
+ *  calls made while it runs: the last run always starts after the last call, so it sees
+ *  the latest state, and a burst of calls costs two runs at most rather than one each.
+ *  `gate(run)` decides when a run may start (see `afterDelivery`). For the toolbar number,
+ *  recounted on every storage change of a capture, which a delivery makes one or two of per
+ *  capture (#53). */
+export function coalesce(work, gate = (run) => run()) {
+  let pending = null; // a run asked for and not started: later calls join it
+  let current = null; // the run under way
+  return function call() {
+    if (pending) {
+      return pending.promise;
+    }
+    const run = {};
+    pending = run;
+    run.promise = (async () => {
+      try {
+        // Never at once: the calls made in the same turn join this run.
+        await null;
+        while (current) {
+          await current.catch(() => {});
+        }
+        return await gate(async () => {
+          if (pending === run) {
+            pending = null;
+          }
+          const working = Promise.resolve().then(work);
+          current = working;
+          try {
+            return await working;
+          } finally {
+            if (current === working) {
+              current = null;
+            }
+          }
+        });
+      } finally {
+        if (pending === run) {
+          pending = null;
+        }
+      }
+    })();
+    return run.promise;
+  };
+}

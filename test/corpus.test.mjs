@@ -11,13 +11,16 @@
 // else's copyright and it goes stale the week the posting closes — but every quirk in them
 // was taken from a live page of that board and the file says which.
 //
-// Adding a board: save its page, run `node scripts/corpus.mjs <url>` to see what is read
-// off it now, reduce it to the smallest page that still shows the quirk, and write down
-// what should come out. A fixture nobody can explain is a fixture nobody can fix.
+// Adding a board: save its page, run `node scripts/corpus.mjs <page.html> <address>` to see
+// what is read off it now (the address it was read at; a fixture's own `.json` gives it),
+// reduce it to the smallest page that still shows the quirk, and write down what should
+// come out, starting from the `posting` the script prints. A fixture nobody can explain is
+// a fixture nobody can fix.
 
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 
@@ -79,3 +82,15 @@ for (const { stem, expected, html } of cases) {
     );
   });
 }
+
+// The script the paragraph above names prints what this test reads (#20).
+test("scripts/corpus.mjs prints what is read off a fixture", () => {
+  const script = path.join(path.dirname(FIXTURES), "..", "scripts", "corpus.mjs");
+  const { expected } = cases.find((each) => each.stem === "greenhouse");
+  const run = spawnSync(process.execPath, [script, path.join(FIXTURES, "greenhouse.html")], { encoding: "utf8" });
+  assert.equal(run.status, 0, run.stderr);
+  const printed = JSON.parse(run.stdout);
+  assert.equal(printed.posting.url, expected.url);
+  assert.equal(printed.posting.source, expected.source);
+  assert.deepEqual(printed.posting.data, expected.data);
+});

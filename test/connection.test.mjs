@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
 import { test } from "node:test";
 
-import { CONNECTION, checkConnection, footerFor, learn, outcomeOfDelivery, stateOfFailure, toolbarFor, toolbarTitle } from "../src/lib/connection.js";
+import { CONNECTION, checkConnection, deliverAndRead, footerFor, learn, outcomeOfDelivery, stateOfFailure, toolbarFor, toolbarTitle } from "../src/lib/connection.js";
 
 const SET = { instance: "https://p.example", token: "t", offline: false };
 const record = (state, extra = {}) => ({ state, at: "2026-10-04T10:00:00Z", how: "send", tokenChecked: true, ...extra });
@@ -241,4 +241,42 @@ test("the check keeps how long /healthz took, and a failed one keeps none", asyn
   const down = await checkConnection({ area: memoryArea(), settings: SET, allowed: async () => true, fetchImpl: refused, now: clock });
   assert.equal(down.state, "unreachable");
   assert.equal("ms" in down, false);
+});
+
+// ------------------------------------------------------------------ the background's beat (#53)
+
+async function beat(delivered, checked) {
+  const asked = [];
+  await deliverAndRead({
+    deliver: async () => {
+      asked.push("deliver");
+      return delivered;
+    },
+    check: async () => {
+      asked.push("check");
+      return checked === undefined ? null : { state: checked };
+    },
+    read: async () => {
+      asked.push("read");
+    },
+  });
+  return asked;
+}
+
+test("the list is read on a beat only when Postulo was not just found out of reach", async () => {
+  const nothing = { outcome: "nothing", sent: 0 };
+  assert.deepEqual(await beat(nothing, "reachable"), ["deliver", "check", "read"]);
+  for (const state of ["unreachable", "noPermission", "tokenRefused"]) {
+    assert.deepEqual(await beat(nothing, state), ["deliver", "check"], state);
+  }
+  // Not set up or the testing switch: the check says nothing and the read decides for itself.
+  assert.deepEqual(await beat(nothing, undefined), ["deliver", "check", "read"]);
+  // A send that failed has said it already: neither a check nor a read after it.
+  assert.deepEqual(await beat({ outcome: "unreachable", sent: 0 }), ["deliver"]);
+  assert.deepEqual(await beat({ outcome: "account", sent: 0 }), ["deliver"]);
+  assert.deepEqual(await beat({ outcome: "noPermission", sent: 0 }), ["deliver"]);
+  // Busy (429) is reachable: the list is still asked for.
+  assert.deepEqual(await beat({ outcome: "unreachable", sent: 0, status: 429 }), ["deliver", "read"]);
+  // Something sent: the delivery read the list already.
+  assert.deepEqual(await beat({ outcome: "done", sent: 2 }), ["deliver"]);
 });

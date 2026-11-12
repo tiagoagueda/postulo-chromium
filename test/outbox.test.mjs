@@ -3,8 +3,9 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import { makeLog } from "../src/lib/log.js";
-import { deliver } from "../src/lib/outbox.js";
-import { makeStore } from "../src/lib/store.js";
+import { afterDelivery, deliver, exclusively } from "../src/lib/outbox.js";
+import { isCaptureKey, makeStore } from "../src/lib/store.js";
+import { coalesce } from "../src/lib/waiting.js";
 
 /** storage.local's shape, in memory: get a key or a list of keys, set many, remove some. */
 function memoryArea() {
@@ -416,4 +417,229 @@ test("an address of exactly the limit is sent", async () => {
   await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
   assert.equal(calls.length, 1);
   assert.equal(calls[0].body.url, address);
+});
+
+// ------------------------------------------------------------------ what a sent capture keeps (#54)
+
+/** Count the writes that touch one key of the area. */
+function countingWrites(area, key) {
+  const counted = { writes: 0 };
+  const set = area.set.bind(area);
+  area.set = async (items) => {
+    if (key in items) {
+      counted.writes += 1;
+    }
+    return set(items);
+  };
+  return counted;
+}
+
+test("a sent capture keeps only what the lists show of it, and the way back to Postulo", async () => {
+  const { area, store, log } = setUp();
+  const record = await keep(store, "slim", "waiting");
+  await store.update(record.id, { data: { ...POSTING("slim"), description: "x".repeat(20_000) } });
+  const { fetchImpl } = answering({ status: 201, body: { id: 7, review_url: "https://postulo.example.org/r/7" } });
+  await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+
+  const sent = await store.get(record.id);
+  assert.equal(sent.state, "sent");
+  assert.equal(sent.read, null, "the reading is Postulo's now");
+  assert.deepEqual(sent.data, { title: "slim", company_name: "Black Mesa", location: "Lyon", url: "https://jobs.example/slim" });
+  assert.equal(sent.reviewUrl, "https://postulo.example.org/r/7");
+  assert.ok(JSON.stringify(area.data.get(`capture:${record.id}`)).length < 1000, "a few hundred bytes, not the description");
+});
+
+test("sent captures past their days are removed, older ones slimmed, and nothing unsent is touched", async () => {
+  const { area, store } = setUp();
+  const old = await keep(store, "old");
+  const fat = await keep(store, "fat");
+  const kept = await keep(store, "kept");
+  const [first, second] = await store.addMany({
+    html: "<title>results</title>",
+    entries: ["1", "2"].map((n) => ({ url: `https://jobs.example/${n}`, source: "schema.org", read: POSTING(n), data: POSTING(n) })),
+    state: "waiting",
+  });
+  // Sent before captures were slimmed on sending: the whole reading still there.
+  await store.update(old.id, { state: "sent", sentAt: "2026-07-01T00:00:00.000Z" });
+  await store.update(fat.id, { state: "sent", sentAt: "2026-09-01T00:00:00.000Z" });
+  // The first of a batch, under whose id the page of the batch is kept, sent long ago.
+  await store.update(first.id, { state: "sent", sentAt: "2026-07-01T00:00:00.000Z" });
+
+  const done = await store.tidySent({ before: "2026-08-01T00:00:00.000Z" });
+
+  assert.deepEqual(done, { removed: 2, slimmed: 1 });
+  assert.deepEqual((await store.list()).map((record) => record.id), [second.id, kept.id, fat.id]);
+  assert.ok(!area.data.has(`capture:${old.id}`) && !area.data.has(`capture:${first.id}`));
+  assert.deepEqual((await store.get(fat.id)).data, { title: "fat", company_name: "Black Mesa", location: "Lyon", url: "https://jobs.example/fat" });
+  assert.deepEqual((await store.get(kept.id)).data, POSTING("kept"), "a kept capture keeps everything");
+  assert.equal(await store.page(second.id), "<title>results</title>", "the batch's page stays for the one still to go");
+  assert.deepEqual(await store.tidySent({ before: "2026-08-01T00:00:00.000Z" }), { removed: 0, slimmed: 0 }, "nothing more to do");
+});
+
+test("a delivery writes the log once, however many captures it sends", async () => {
+  const { area, store, log } = setUp();
+  for (const title of ["a", "b", "c", "d", "e"]) {
+    await keep(store, title, "waiting");
+  }
+  const counted = countingWrites(area, "log");
+  const { fetchImpl } = answering(...[1, 2, 3, 4, 5].map((id) => ({ status: 201, body: { id, review_url: `r${id}` } })));
+  const result = await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+
+  assert.equal(result.sent, 5);
+  assert.equal(counted.writes, 1);
+  const events = (await log.entries()).map((entry) => entry.event);
+  assert.deepEqual(events, [...Array(5)].flatMap(() => ["send", "sent"]).concat("delivery"));
+  const stamps = (await log.entries()).map((entry) => entry.at);
+  assert.deepEqual([...stamps].sort(), stamps, "each stamped when it happened, in order");
+});
+
+test("a delivery that stops early still writes what it noted, once", async () => {
+  const { area, store, log } = setUp();
+  await keep(store, "a", "waiting");
+  await keep(store, "b", "waiting");
+  const counted = countingWrites(area, "log");
+  const { fetchImpl } = answering({ status: 201, body: { id: 1, review_url: "r" } }, new TypeError("Failed to fetch"));
+  const result = await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: noLock });
+
+  assert.equal(result.outcome, "unreachable");
+  assert.equal(counted.writes, 1);
+  assert.deepEqual((await log.entries()).map((entry) => entry.event), ["send", "sent", "send", "failed", "delivery"]);
+});
+
+test("the log never throws, written one entry or several at a time", async () => {
+  const { area, log } = setUp();
+  area.set = async () => {
+    throw new Error("QuotaExceededError");
+  };
+  await log.add("x");
+  await log.addMany([{ at: "t", event: "y" }]);
+  const journal = log.batch();
+  journal.add("z");
+  await journal.flush();
+});
+
+// ------------------------------------------------------------------ reading less while sending (#53)
+
+/** Count the capture records read from the area. */
+function countingRecordReads(area) {
+  const counted = { records: 0 };
+  const get = area.get.bind(area);
+  area.get = async (keys) => {
+    counted.records += (Array.isArray(keys) ? keys : [keys]).filter((key) => key.startsWith("capture:")).length;
+    return get(keys);
+  };
+  return counted;
+}
+
+test("dropping a sent capture's page reads its batch's neighbours, not every capture", async () => {
+  const { area, store } = setUp();
+  for (let i = 0; i < 100; i += 1) {
+    await keep(store, `other${i}`);
+  }
+  const [a, b, c] = await store.addMany({
+    html: "<title>results</title>",
+    entries: ["1", "2", "3"].map((n) => ({ url: `https://jobs.example/${n}`, source: "schema.org", read: POSTING(n), data: POSTING(n) })),
+    state: "waiting",
+  });
+  await keep(store, "after");
+  const single = await keep(store, "single", "waiting");
+  const counted = countingRecordReads(area);
+
+  await store.update(c.id, { state: "sent" });
+  await store.dropPage(c.id);
+  assert.equal(await store.page(a.id), "<title>results</title>", "still needed by the first two");
+  await store.update(a.id, { state: "sent" });
+  await store.dropPage(a.id);
+  assert.equal(await store.page(b.id), "<title>results</title>", "still needed by the second");
+  await store.update(b.id, { state: "sent" });
+  await store.dropPage(b.id);
+  assert.equal(await store.page(b.id), "", "gone with the last of them");
+  await store.update(single.id, { state: "sent" });
+  await store.dropPage(single.id);
+  assert.ok(!area.data.has(`page:${single.id}`));
+
+  // Each update and each page() reads its record once, each drop its own and at most
+  // 2 × (size − 1) neighbours; listing every capture would read 105 per drop.
+  assert.ok(counted.records <= 4 + 3 + 4 + 3 * 4, `${counted.records} records read`);
+});
+
+/** The Web Locks the extension runs under (`navigator.locks`), in memory: one lock, held
+ *  exclusively or shared, granted in the order asked. Node has no `navigator.locks` before
+ *  24, where `exclusively` and `afterDelivery` would run at once, so the test brings its own
+ *  rather than depending on the Node it runs on. */
+function webLocks() {
+  const queue = [];
+  const held = [];
+  const grant = () => {
+    while (queue.length) {
+      const next = queue[0];
+      const free = next.mode === "shared" ? held.every((mode) => mode === "shared") : !held.length;
+      if (!free) {
+        return;
+      }
+      queue.shift();
+      held.push(next.mode);
+      Promise.resolve()
+        .then(next.work)
+        .then(next.resolve, next.reject)
+        .finally(() => {
+          held.splice(held.indexOf(next.mode), 1);
+          grant();
+        });
+    }
+  };
+  return {
+    request(name, options, work) {
+      if (typeof options === "function") {
+        [work, options] = [options, {}];
+      }
+      return new Promise((resolve, reject) => {
+        queue.push({ mode: options.mode || "exclusive", work, resolve, reject });
+        grant();
+      });
+    },
+  };
+}
+
+test("a delivery of forty is recounted once on the toolbar, at its end", async () => {
+  const { area, store, log } = setUp();
+  const locks = webLocks();
+  for (let i = 0; i < 40; i += 1) {
+    await keep(store, `p${i}`, "waiting");
+  }
+  // The background's listener, over the area: a recount for each change of a capture key.
+  const counts = [];
+  const recount = coalesce(async () => counts.push(await store.unsentCount()), (run) => afterDelivery(run, locks));
+  const pending = [];
+  const set = area.set.bind(area);
+  const remove = area.remove.bind(area);
+  const changed = (keys) => {
+    if (keys.some(isCaptureKey)) {
+      pending.push(recount());
+    }
+  };
+  area.set = async (items) => {
+    await set(items);
+    changed(Object.keys(items));
+  };
+  area.remove = async (keys) => {
+    await remove(keys);
+    changed(Array.isArray(keys) ? keys : [keys]);
+  };
+  let id = 0;
+  const fetchImpl = async () => {
+    // An answer that takes a few turns, so a recount could run between two captures.
+    for (let turn = 0; turn < 10; turn += 1) {
+      await null;
+    }
+    id += 1;
+    return { ok: true, status: 201, json: async () => ({ id, review_url: `r${id}` }) };
+  };
+
+  const result = await deliver({ store, log, settings: SETTINGS, allowed, fetchImpl, lock: (work) => exclusively(work, locks) });
+  await Promise.all(pending);
+
+  assert.equal(result.sent, 40);
+  assert.ok(pending.length >= 40, `${pending.length} changes`);
+  assert.deepEqual(counts, [0], "one recount, after the last capture was sent");
 });

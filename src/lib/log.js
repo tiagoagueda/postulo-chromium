@@ -12,13 +12,37 @@ export function makeLog(area, { now = () => new Date().toISOString() } = {}) {
   const log = {
     /** Record an event. Never throws: a log that fails must not take the capture with it. */
     async add(event, details = {}) {
+      await log.addMany([{ at: now(), event, ...details }]);
+    },
+
+    /** Record several entries, each already stamped, in one read and one write of the log.
+     *  Never throws, as `add`. */
+    async addMany(fresh) {
+      if (!fresh.length) {
+        return;
+      }
       try {
         const entries = (await area.get(KEY))[KEY] || [];
-        entries.push({ at: now(), event, ...details });
+        entries.push(...fresh);
         await area.set({ [KEY]: entries.slice(-LIMIT) });
       } catch {
         // Nothing to do: the log is a convenience.
       }
+    },
+
+    /** Entries noted in memory, each stamped when it happened, and written in one go by
+     *  `flush` -- for a delivery, which notes about three per capture and would otherwise
+     *  rewrite the whole log each time (#54). */
+    batch() {
+      const pending = [];
+      return {
+        add(event, details = {}) {
+          pending.push({ at: now(), event, ...details });
+        },
+        flush() {
+          return log.addMany(pending.splice(0));
+        },
+      };
     },
 
     async entries() {

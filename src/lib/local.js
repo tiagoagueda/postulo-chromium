@@ -6,7 +6,7 @@ import { ext, hasHostPermission, loadSettings } from "./browser.js";
 import { explain, t, useStoredLanguage } from "./i18n.js";
 import { makeLog } from "./log.js";
 import { deliver } from "./outbox.js";
-import { makeStore } from "./store.js";
+import { makeStore, SENT_KEPT_DAYS } from "./store.js";
 import { CONNECTION, checkConnection, learn, outcomeOfDelivery, stateOfFailure, toolbarFor, toolbarTitle } from "./connection.js";
 import { badgeText, countPostings, lastWaiting, refreshWaiting, WAITING } from "./waiting.js";
 
@@ -63,6 +63,17 @@ export function readWaitingList({ maxAgeMs = 0 } = {}) {
     await showUnsentCount();
   })();
   return reading;
+}
+
+/** Remove the sent captures older than SENT_KEPT_DAYS, and slim any sent before captures
+ *  were slimmed on sending (#54); noted in the log when it changed something. */
+export async function tidySent(now = Date.now()) {
+  const before = new Date(now - SENT_KEPT_DAYS * 24 * 60 * 60 * 1000).toISOString();
+  const done = await store.tidySent({ before });
+  if (done.removed || done.slimmed) {
+    await log.add("tidied", done);
+  }
+  return done;
 }
 
 /** Forget the list read from the Postulo that was set up before, and read the new one. */

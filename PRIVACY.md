@@ -1,11 +1,14 @@
 # Privacy policy
 
 **The Postulo browser extension** (Chromium and Firefox builds, one source). Last changed
-2026-10-04.
+2026-11-11.
 
 The extension has no server of its own, no account and no operator. There is nowhere for
-your data to go except the Postulo you host yourself, and your captures go there only when
-you press *Send*. Nobody, including the author, receives anything from it.
+your data to go except the Postulo you host yourself. Your captures go there only when you
+press *Send*: the page and the fields as you reviewed them. Before that, the extension asks
+your Postulo whether it already holds the postings on a page you read, giving only their
+address, title and company (see the table below). Nobody, including the author, receives
+anything from it.
 
 ## What it keeps, and where
 
@@ -21,7 +24,9 @@ It keeps:
   is the one you issued in Postulo, and you can revoke it there at any time.
 - **Your captures**: kept as soon as a page is read, before you decide anything, so that closing the review window loses nothing; for each, the posting's address, the fields that were read and the
   fields as you corrected them, which source read it, when, and where it stands — kept,
-  waiting, sent or refused, with Postulo's reason when it refused.
+  waiting, sent or refused, with Postulo's reason when it refused. Once Postulo has a
+  capture, only its title, company, place and address are kept of it, with the address of
+  its review screen, and it is removed by itself 30 days after it was sent.
 - **A slimmed copy of each captured page**, at most 512 thousand characters, kept only until Postulo has the
   capture and deleted the moment it does. Scripts, styles, stylesheet links, frames and
   inline graphics are stripped before it is stored.
@@ -49,8 +54,8 @@ an address with a user name or password in it is refused. Plain `http` is accept
 instance on this machine (`localhost`, `127.0.0.1`, `[::1]`); any other address, a `.local` name
 included, must be `https`. The address of a review page or listing that Postulo's answer names is
 opened only when it is on that same address. Your token is sent as a bearer
-token in the `Authorization` header of those requests and of no others. There are exactly
-five:
+token in the `Authorization` header of those requests, except `GET /healthz`, and of no
+others. There are exactly six:
 
 | When | Request | What goes |
 | --- | --- | --- |
@@ -58,7 +63,7 @@ five:
 | You press *Send*, or a waiting capture is retried | `POST /api/v1/captures` | The posting's address, the slimmed copy of the page, the fields as you reviewed them, and — for several captures read off one results page — how many there were and which this is |
 | Every five minutes, when the browser starts, when the popup opens, and after something was sent | `GET /api/v1/captures` | Nothing but the token, to read the list of captures waiting for review, for the number on the toolbar button. Not made with no Postulo set up, with the testing switch on, or before the address is allowed. |
 | Every five minutes, each time the popup opens, when the browser starts, and when the address is saved, the permission given or the testing switch turned off | `GET /healthz` | Nothing. No token and no cookies: only that your server is asked whether it is up, so it learns the browser is running and from where. It is how the toolbar button knows to turn grey. Not made with no Postulo set up, with the testing switch on, or before the address is allowed. |
-| The review window opens on a capture, or the popup on a page of results, with Postulo set up and reachable | `POST /api/v1/captures/known` | The address, title and company of the postings on the page, so the window can say which your Postulo already holds. Postulo stores nothing on this request. |
+| Before anything is sent: each time the review window opens on a capture not sent yet, and when the popup reads a page of results, with Postulo set up, the testing switch off and the address allowed | `POST /api/v1/captures/known` | The address (without any `#` part), title and company of the postings on the page, as read off it and not as you corrected them, so the window can say which your Postulo already holds. From a page of results, every posting it lists, in one request per hundred. Nothing else from the page. Postulo stores nothing on this request. |
 | You press *Send the picture*, offered in the review window after a capture was sent, and only when your Postulo says it keeps pictures | `PUT` to the address Postulo gave for it | A picture of the whole page as you see it in that tab, signed in or not: the page's image, and nothing else. Never for several captures read off one results page. |
 
 Each of these requests carries the tag of the language the extension is speaking (`de`,
@@ -66,8 +71,10 @@ Each of these requests carries the tag of the language the extension is speaking
 browser sends that header to every site it visits anyway.
 
 Retries of a capture you already sent happen in the background, every five minutes and when
-the browser starts, until Postulo takes it. Nothing of yours is ever sent that you did not press
-*Send* on; the `GET /healthz` asks, and carries, nothing of yours. With no Postulo configured, or with the testing switch on, nothing is sent at
+the browser starts, until Postulo takes it. No page and no field you corrected is ever sent
+that you did not press *Send* on. What does go before *Send* is the question to
+`/api/v1/captures/known` above — the address, title and company of what you read, to your
+own Postulo only — and `GET /healthz`, which asks, and carries, nothing of yours. With no Postulo configured, or with the testing switch on, nothing is sent at
 all and captures simply stay in the browser.
 
 ## What it reads, and when

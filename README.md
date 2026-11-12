@@ -19,7 +19,8 @@ carries what Firefox and addons.mozilla.org need and nothing else.
 ## Privacy, in one paragraph
 
 The extension sends a capture to **your** server and nowhere else, and only when you
-press *Send*. It reads a page only when you press the button (or `Alt+Shift+P`), through a
+press *Send*. Before that, it asks your server only whether it already holds the postings
+on the page, by their address, title and company (`POST /api/v1/captures/known`). It reads a page only when you press the button (or `Alt+Shift+P`), through a
 script injected for that one call — it has no permission to run on any site, only
 `activeTab`. It asks for permission to reach your instance's address once, when you save
 it. There are no analytics, no third-party requests and no permanent host permissions.
@@ -171,7 +172,10 @@ decided in the meantime. Without a Postulo set up it lists only what is kept her
 Everything the extension keeps is listed under **Captures in this browser** — the link at
 the bottom of the popup. Each is *Not sent*, *Waiting for Postulo*, *Sent* (with a
 link to its review screen) or *Refused* (with Postulo's reason); from there you edit one
-(it opens in the review window), send it, hold it back, or delete it.
+(it opens in the review window), send it, hold it back, or delete it. A sent capture keeps
+only what the list shows of it (title, company, place, address and review link: Postulo
+has the rest), and leaves the browser by itself 30 days after it was sent, checked every
+five minutes and when the browser starts.
 
 A capture you sent is sent as soon as Postulo answers: the popup tries at once, the list
 tries when it is opened, and the background tries every five minutes and when the browser
@@ -314,6 +318,7 @@ request. `npm test` fails while the code asks for a key that `en` does not have.
 | `scripts/languages.py` | Writes that list from the core's roll-out (`../postulo`) |
 | `src/_locales/` | One `messages.json` per language; `en` is the source |
 | `.forgejo/ISSUE_TEMPLATE/` | The bug and feature forms, and the links shown above them (security, translations, questions) |
+| `scripts/corpus.mjs` | What is read off a saved page (`node scripts/corpus.mjs <page.html> <address>`), for adding a board to the corpus in `test/fixtures/` |
 | `scripts/build.mjs` | `dist/chromium` and `dist/firefox` from the one source |
 | `scripts/locales.mjs` | Which language folders are incomplete, so the build leaves them out |
 | `src/icons/` | Postulo's mark at 16, 32, 48, 96 and 128 pixels, and the grey 16 and 32 for the toolbar, made by `scripts/icons.py` |

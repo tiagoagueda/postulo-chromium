@@ -2,7 +2,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { badgeText, countPostings, lastWaiting, readWaiting, refreshWaiting, WAITING } from "../src/lib/waiting.js";
+import { badgeText, coalesce, countPostings, lastWaiting, readWaiting, refreshWaiting, WAITING } from "../src/lib/waiting.js";
 
 const row = (id, url) => ({ id, url, title: `T${id}`, company_name: "Black Mesa", location: "Lyon", created_at: "2026-10-01T09:00:00Z", review_url: `https://p.example/r/${id}`, page: { big: "x" }, status: "pending" });
 const here = (id, url, state = "kept") => ({ id, url, state });
@@ -132,4 +132,64 @@ test("not set up, the copy is not counted", async () => {
   const area = memoryArea();
   await area.set({ [WAITING]: { at: "x", rows: [row(1, "https://example.org/1")] } });
   assert.deepEqual(await lastWaiting(area, { ...SETTINGS, token: "" }), []);
+});
+
+// ------------------------------------------------------------------ recounting once (#53)
+
+const tick = () => new Promise((resolve) => setTimeout(resolve, 0));
+
+test("a burst of recounts runs twice at most, the last starting after the last call", async () => {
+  let state = 0;
+  const seen = [];
+  const recount = coalesce(async () => {
+    const at = state;
+    await tick();
+    seen.push(at);
+  });
+  const calls = [];
+  for (let i = 1; i <= 40; i += 1) {
+    state = i;
+    calls.push(recount());
+    if (i % 7 === 0) {
+      await tick();
+    }
+  }
+  await Promise.all(calls);
+  assert.ok(seen.length <= 2 * Math.ceil(40 / 7), `${seen.length} runs`);
+  assert.equal(seen.at(-1), 40, "the last run saw the last state");
+
+  // Calls all made before the first run starts: one run.
+  seen.length = 0;
+  await Promise.all([recount(), recount(), recount()]);
+  assert.equal(seen.length, 1);
+});
+
+test("a recount waits for its gate, and every call made meanwhile joins it", async () => {
+  let open;
+  const gate = (run) => new Promise((resolve) => (open = resolve)).then(run);
+  let runs = 0;
+  const recount = coalesce(async () => {
+    runs += 1;
+  }, gate);
+  const calls = [recount(), recount(), recount()];
+  await tick();
+  assert.equal(runs, 0, "nothing before the gate opens");
+  open();
+  await Promise.all(calls);
+  assert.equal(runs, 1);
+});
+
+test("a recount that fails does not stop the next", async () => {
+  let fail = true;
+  let runs = 0;
+  const recount = coalesce(async () => {
+    runs += 1;
+    if (fail) {
+      throw new Error("no badge");
+    }
+  });
+  await assert.rejects(recount());
+  fail = false;
+  await recount();
+  assert.equal(runs, 2);
 });

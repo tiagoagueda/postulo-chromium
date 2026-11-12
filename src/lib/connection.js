@@ -192,3 +192,29 @@ export async function checkConnection({ area, settings, allowed, fetchImpl = fet
     return learn(area, { ...stateOfFailure(error), how: "me", ms }, now);
   }
 }
+
+/** States in which Postulo's list is not worth asking for straight after: it would fail
+ *  as what was just learnt did, and the last list read stays (#53). */
+const NOT_ASKED_AFTER = new Set(["unreachable", "noPermission", "tokenRefused"]);
+
+/**
+ * The background's beat: send what is waiting, then read Postulo's list unless sending
+ * already did. With nothing to send, ask whether Postulo answers: a send that was made
+ * showed it already. The list is not asked for when the send or the check has just found
+ * Postulo unreachable, the address not allowed or the token refused: one failing request
+ * a beat, not two (#53).
+ *
+ * `deliver` resolves to a delivery's result (see `deliver` in outbox.js), `check` to the
+ * connection record learnt (or null), `read` reads the list.
+ */
+export async function deliverAndRead({ deliver, check, read }) {
+  const result = await deliver();
+  let learnt = outcomeOfDelivery(result);
+  if (result.outcome === "nothing" || (result.outcome === "done" && !result.sent)) {
+    learnt = await check();
+  }
+  if (!result.sent && !(learnt && NOT_ASKED_AFTER.has(learnt.state))) {
+    await read();
+  }
+  return result;
+}

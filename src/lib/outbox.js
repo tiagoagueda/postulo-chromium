@@ -9,12 +9,21 @@
 import { ADDRESS_LIMIT, Refusal, capture, kindOfFailure, problemOf } from "./api.js";
 import { hostOf } from "./log.js";
 import { onInstance, pageOf } from "./rendering.js";
+import { slimmed } from "./store.js";
+
+const OUTBOX = "postulo-outbox";
 
 /** One delivery at a time across the popup, the pages and the background: they share an
  *  origin, so a Web Lock held by one holds for all. Tests pass their own. */
-export function exclusively(work) {
-  const locks = globalThis.navigator && globalThis.navigator.locks;
-  return locks ? locks.request("postulo-outbox", work) : work();
+export function exclusively(work, locks = globalThis.navigator && globalThis.navigator.locks) {
+  return locks ? locks.request(OUTBOX, work) : work();
+}
+
+/** Run `work` once no delivery is under way, wherever it runs: a shared hold on the same
+ *  lock, granted at once when nothing is being sent. For what only the end of a delivery
+ *  needs, such as the toolbar number (#53). Never call it while holding the lock. */
+export function afterDelivery(work, locks = globalThis.navigator && globalThis.navigator.locks) {
+  return locks ? locks.request(OUTBOX, { mode: "shared" }, work) : work();
 }
 
 /** The Idempotency-Key of a record as it stands: its id, and a digest of what is sent, so
@@ -43,72 +52,86 @@ function keyOf(record, payload) {
  */
 export async function deliver({ store, log, settings, allowed, fetchImpl = fetch, only = null, lock = exclusively }) {
   return lock(async () => {
-    const waiting = (await store.list())
-      .filter((record) => record.state === "waiting" && (!only || only.includes(record.id)))
-      .reverse();
-    if (!waiting.length) {
-      return { outcome: "nothing", sent: 0 };
+    // What a delivery notes is written to the log once, at the end, whatever the outcome:
+    // about three entries a capture, each a rewrite of the whole log if written apart (#54).
+    const journal = log.batch();
+    try {
+      return await send({ store, log: journal, settings, allowed, fetchImpl, only });
+    } finally {
+      await journal.flush();
     }
-    const stop = async (outcome, problem) => {
-      await log.add("delivery", { outcome, waiting: waiting.length, ...(problem ? { problem } : {}) });
-      return { outcome, sent: 0, ...(problem ? { problem } : {}) };
-    };
-    if (!settings.instance || !settings.token) {
-      return stop("unconfigured");
-    }
-    if (settings.offline) {
-      return stop("offline");
-    }
-    if (!(await allowed())) {
-      return stop("noPermission");
-    }
+  });
+}
 
-    let sent = 0;
-    for (const record of waiting) {
-      if (!addressFits(withoutFragment(record.url))) {
-        const problem = problemOf(new Refusal("addressTooLong"));
-        await log.add("failed", { id: record.id, kind: "refused", status: "not sent", problem });
+/** The delivery itself, under the lock, noting into `log` (the delivery's own batch). */
+async function send({ store, log, settings, allowed, fetchImpl, only }) {
+  const waiting = (await store.list())
+    .filter((record) => record.state === "waiting" && (!only || only.includes(record.id)))
+    .reverse();
+  if (!waiting.length) {
+    return { outcome: "nothing", sent: 0 };
+  }
+  const stop = async (outcome, problem) => {
+    await log.add("delivery", { outcome, waiting: waiting.length, ...(problem ? { problem } : {}) });
+    return { outcome, sent: 0, ...(problem ? { problem } : {}) };
+  };
+  if (!settings.instance || !settings.token) {
+    return stop("unconfigured");
+  }
+  if (settings.offline) {
+    return stop("offline");
+  }
+  if (!(await allowed())) {
+    return stop("noPermission");
+  }
+
+  let sent = 0;
+  for (const record of waiting) {
+    if (!addressFits(withoutFragment(record.url))) {
+      const problem = problemOf(new Refusal("addressTooLong"));
+      await log.add("failed", { id: record.id, kind: "refused", status: "not sent", problem });
+      await store.update(record.id, { state: "refused", problem });
+      continue;
+    }
+    await log.add("send", { id: record.id, host: hostOf(record.url) });
+    try {
+      const payload = { url: withoutFragment(record.url), html: await store.page(record.id), data: record.data, batch: record.batch };
+      const result = await capture(
+        settings.instance,
+        settings.token,
+        { ...payload, key: keyOf(record, payload) },
+        fetchImpl,
+      );
+      await store.update(record.id, {
+        state: "sent",
+        sentAt: new Date().toISOString(),
+        reviewUrl: onInstance(result.review_url, settings.instance),
+        // What Postulo said about keeping a picture of the page, for the popup that is
+        // still open on it; the background can no longer see the page to draw it.
+        page: pageOf(result, record.batch),
+        problem: null,
+        // Postulo has the reading now: the browser keeps what its lists show (#54).
+        ...slimmed(record.data),
+      });
+      await store.dropPage(record.id);
+      await log.add("sent", { id: record.id, capture: result.id });
+      sent += 1;
+    } catch (error) {
+      const problem = problemOf(error);
+      const kind = kindOfFailure(error);
+      await log.add("failed", { id: record.id, kind, status: error.status || "no answer", problem });
+      if (kind === "refused") {
         await store.update(record.id, { state: "refused", problem });
         continue;
       }
-      await log.add("send", { id: record.id, host: hostOf(record.url) });
-      try {
-        const payload = { url: withoutFragment(record.url), html: await store.page(record.id), data: record.data, batch: record.batch };
-        const result = await capture(
-          settings.instance,
-          settings.token,
-          { ...payload, key: keyOf(record, payload) },
-          fetchImpl,
-        );
-        await store.update(record.id, {
-          state: "sent",
-          sentAt: new Date().toISOString(),
-          reviewUrl: onInstance(result.review_url, settings.instance),
-          // What Postulo said about keeping a picture of the page, for the popup that is
-          // still open on it; the background can no longer see the page to draw it.
-          page: pageOf(result, record.batch),
-          problem: null,
-        });
-        await store.dropPage(record.id);
-        await log.add("sent", { id: record.id, capture: result.id });
-        sent += 1;
-      } catch (error) {
-        const problem = problemOf(error);
-        const kind = kindOfFailure(error);
-        await log.add("failed", { id: record.id, kind, status: error.status || "no answer", problem });
-        if (kind === "refused") {
-          await store.update(record.id, { state: "refused", problem });
-          continue;
-        }
-        await store.update(record.id, { problem });
-        const outcome = kind === "account" ? "account" : "unreachable";
-        await log.add("delivery", { outcome, sent, waiting: waiting.length - sent });
-        return { outcome, sent, problem, status: error.status };
-      }
+      await store.update(record.id, { problem });
+      const outcome = kind === "account" ? "account" : "unreachable";
+      await log.add("delivery", { outcome, sent, waiting: waiting.length - sent });
+      return { outcome, sent, problem, status: error.status };
     }
-    await log.add("delivery", { outcome: "done", sent });
-    return { outcome: "done", sent };
-  });
+  }
+  await log.add("delivery", { outcome: "done", sent });
+  return { outcome: "done", sent };
 }
 
 /** The address as Postulo wants it: a fragment never identifies a posting, and can be very long. */
