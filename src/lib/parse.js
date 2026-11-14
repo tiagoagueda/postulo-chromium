@@ -926,6 +926,11 @@ export function readPosting(doc, url, parse) {
   return null;
 }
 
+/** A site as one thing: its host, less a leading "www.". */
+function siteOf(url) {
+  return hostOf(url).replace(/^www./i, "").toLowerCase();
+}
+
 /** The address a posting states for itself, when it states one: `url`, or an `@id` that is one. */
 function ownUrl(posting) {
   for (const key of ["url", "@id"]) {
@@ -964,6 +969,13 @@ export function readPostings(doc, url, parse) {
       const data = fromPosting(posting, own, parse, descriptionIsHtml);
       if (data) {
         const tidied = tidy(data);
+        // The source is the page that was read, not the site a posting claims to live on
+        // (#62); the stated address stays, and `elsewhere` lets the person see it.
+        const elsewhere = Boolean(stated) && siteOf(stated) !== siteOf(url);
+        if (elsewhere) {
+          tidied.source = hostOf(url);
+        }
+        const host = elsewhere ? hostOf(stated) : "";
         // The other spelling may state the address and this one not (or the reverse), which
         // keys them apart; the same title and company is the same posting.
         const twin = listed.findIndex(
@@ -974,12 +986,12 @@ export function readPostings(doc, url, parse) {
         );
         if (twin >= 0) {
           if (stated && !listed[twin].stated) {
-            listed[twin] = { data: tidied, source: "schema.org", here: matchesUrl(posting, url), stated, title: title.toLowerCase() };
+            listed[twin] = { data: tidied, source: "schema.org", here: matchesUrl(posting, url), elsewhere, host, stated, title: title.toLowerCase() };
           }
           continue;
         }
         seen.add(key);
-        listed.push({ data: tidied, source: "schema.org", here: matchesUrl(posting, url), stated, title: title.toLowerCase() });
+        listed.push({ data: tidied, source: "schema.org", here: matchesUrl(posting, url), elsewhere, host, stated, title: title.toLowerCase() });
       }
     }
   };
@@ -994,7 +1006,7 @@ export function readPostings(doc, url, parse) {
   } catch {
     // nothing to list from the markup
   }
-  return listed.map(({ data, source, here }) => ({ data, source, here }));
+  return listed.map(({ data, source, here, elsewhere, host }) => ({ data, source, here, elsewhere, host }));
 }
 
 /** How much of one page is kept in the browser.

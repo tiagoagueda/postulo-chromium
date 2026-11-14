@@ -270,6 +270,13 @@ async function main() {
       words.textContent = describe(posting.data, t("untitled"));
       const label = document.createElement("label");
       label.append(box, words);
+      if (posting.elsewhere && posting.host) {
+        // A posting that states an address on another site: its host is shown before it is ticked (#62).
+        const where = document.createElement("span");
+        where.className = "tag";
+        where.textContent = posting.host;
+        label.append(where);
+      }
       const item = document.createElement("li");
       item.append(label);
       list.append(item);

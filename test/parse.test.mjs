@@ -152,6 +152,18 @@ test("the page kept is lighter but reads the same", () => {
   assert.deepEqual(readPosting(again, URL_, parse), readPosting(doc, URL_, parse));
 });
 
+test("a listed posting stating an address on another site is marked, with its host, and read as this page's", () => {
+  const listing = (title, url) => ({ "@type": "JobPosting", title, url });
+  const doc = page(`<title>Jobs</title>${ld([listing("Welder", "https://www.a.example/jobs/1"), listing("Guard", "https://b.example/jobs/2")])}`);
+  const listed = readPostings(doc, "https://a.example/jobs", parse);
+  const [welder, guard] = listed;
+  assert.equal(welder.elsewhere, false);
+  assert.equal(guard.elsewhere, true);
+  assert.equal(guard.host, "b.example");
+  assert.equal(guard.data.source, "a.example");
+  assert.equal(guard.data.url, "https://b.example/jobs/2");
+});
+
 test("a page too big to keep is cut, and what it declared survives the cut", () => {
   const doc = page(`<title>Research Engineer</title>${ld(POSTING)}`, `<p>${"filler ".repeat(MAX_PAGE / 4)}</p>`);
   const slim = slimPage(doc);
