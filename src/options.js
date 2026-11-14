@@ -1,8 +1,9 @@
 import { extraScopes, normaliseInstance, originPattern, whoAmI } from "./lib/api.js";
-import { ext, loadSettings, requestHostPermission, saveSettings, setLanguage, setOffline } from "./lib/browser.js";
+import { ext, loadSettings, requestHostPermission, setLanguage, setOffline } from "./lib/browser.js";
 import { explain, localise, localiseWith, t, useLanguage, useStoredLanguage } from "./lib/i18n.js";
 import { LANGUAGES } from "./lib/languages.js";
 import { learnFromCall, log, store } from "./lib/local.js";
+import { forgetPostulo, saveConnection } from "./lib/settings.js";
 import { hostOf } from "./lib/log.js";
 
 const $ = (id) => document.getElementById(id);
@@ -97,12 +98,30 @@ async function main() {
       // is asked for here, from the click that saves it. Firefox insists on this; Chromium
       // is happy either way.
       const granted = await requestHostPermission(originPattern(next.instance));
-      await saveSettings(next);
-      await log.add("settings saved", { postulo: hostOf(next.instance), permission: granted });
-      say(
-        granted ? t("saved", [new URL(next.instance).host]) : t("savedNoPermission"),
-        !granted
-      );
+      // What waited for another address goes back to kept first: saving wakes the delivery.
+      const released = await saveConnection({ area: ext.storage.local, store, next });
+      await log.add("settings saved", { postulo: hostOf(next.instance), permission: granted, released });
+      if (released) {
+        say(t("savedOtherAddress", [String(released)]), !granted);
+      } else {
+        say(granted ? t("saved", [new URL(next.instance).host]) : t("savedNoPermission"), !granted);
+      }
+    } catch (error) {
+      say(explain(error), true);
+    }
+  });
+
+  // Leaving a Postulo: its address, token and host permission go, the captures stay (SEC3-015).
+  $("forget").addEventListener("click", async () => {
+    try {
+      const origin = await forgetPostulo({ area: ext.storage.local, store });
+      if (origin) {
+        await ext.permissions.remove({ origins: [originPattern(origin)] }).catch(() => {});
+      }
+      $("instance").value = "";
+      $("token").value = "";
+      await log.add("forgotten", {});
+      say(t("forgotten"));
     } catch (error) {
       say(explain(error), true);
     }

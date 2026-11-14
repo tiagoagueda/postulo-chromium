@@ -155,6 +155,10 @@
     "message": "Test",
     "description": "Button that checks the address and the token."
   },
+  "forgetPostulo": {
+    "message": "Forget this Postulo",
+    "description": "Button in the settings that removes the saved address and token from this browser."
+  },
   "shortcutHint": {
     "message": "Pressing the button, or $SHORTCUT$, reads the page you are looking at, here in the browser. No page is read until you ask, and nothing goes anywhere but your own Postulo: it is asked whether it already holds the posting, by its address, title and company, and is sent the page when you say so.",
     "description": "SHORTCUT is the key combination, Alt+Shift+P.",
@@ -180,6 +184,19 @@
   "savedNoPermission": {
     "message": "Saved, but the browser refused permission to reach it; allow it in the extension's permissions.",
     "description": "Saved without the permission to reach the address."
+  },
+  "savedOtherAddress": {
+    "message": "Saved. $COUNT$ captures were waiting for the other address: send them again from Captures in this browser.",
+    "description": "COUNT is how many captures that waited to be sent were put back to kept because the address changed.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Forgotten. This browser no longer holds an address or a token. The captures are kept, and none will be sent.",
+    "description": "Said after the person made the extension forget its Postulo."
   },
   "asking": {
     "message": "Asking Postulo who this token is…",

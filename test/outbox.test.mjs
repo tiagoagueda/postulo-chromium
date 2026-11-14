@@ -643,3 +643,47 @@ test("a delivery of forty is recounted once on the toolbar, at its end", async (
   assert.ok(pending.length >= 40, `${pending.length} changes`);
   assert.deepEqual(counts, [0], "one recount, after the last capture was sent");
 });
+
+test("a capture that waited for one Postulo is kept, not sent, when the address changes (SEC3-015)", async () => {
+  const { saveConnection } = await import("../src/lib/settings.js");
+  const { area, store } = setUp();
+  await area.set({ instance: "https://a.example", token: "t" });
+  const { id } = await keep(store, "one", "waiting");
+  const released = await saveConnection({ area, store, next: { instance: "https://b.example", token: "t" } });
+  assert.equal(released, 1);
+  assert.equal((await store.get(id)).state, "kept");
+  assert.equal((await area.get("instance")).instance, "https://b.example");
+  const { fetchImpl, calls } = answering({ status: 201, body: { id: 1, review_url: "https://b.example/r" } });
+  const result = await deliver({ store, log: setUp().log, settings: { instance: "https://b.example", token: "t" }, allowed, fetchImpl, lock: noLock });
+  assert.equal(result.outcome, "nothing");
+  assert.equal(calls.length, 0, "no POST /captures was made");
+});
+
+test("a renewed token, or the same origin under another path, leaves what waits waiting (SEC3-015)", async () => {
+  const { saveConnection } = await import("../src/lib/settings.js");
+  const { area, store } = setUp();
+  await area.set({ instance: "https://a.example", token: "old" });
+  const { id } = await keep(store, "one", "waiting");
+  assert.equal(await saveConnection({ area, store, next: { instance: "https://a.example", token: "new" } }), 0);
+  assert.equal(await saveConnection({ area, store, next: { instance: "https://a.example/postulo", token: "new" } }), 0);
+  assert.equal((await store.get(id)).state, "waiting");
+  // A first setup has no other address to have waited for.
+  const fresh = setUp();
+  const { id: first } = await keep(fresh.store, "two", "waiting");
+  assert.equal(await saveConnection({ area: fresh.area, store: fresh.store, next: { instance: "https://a.example", token: "t" } }), 0);
+  assert.equal((await fresh.store.get(first)).state, "waiting");
+});
+
+test("Forget this Postulo removes the address, the token and what was learnt, and keeps the captures (SEC3-015)", async () => {
+  const { forgetPostulo } = await import("../src/lib/settings.js");
+  const { area, store } = setUp();
+  await area.set({ instance: "https://a.example/postulo", token: "t", connection: { state: "reachable" }, waiting: { count: 3 }, offline: false, language: "fr" });
+  const { id } = await keep(store, "one", "waiting");
+  const origin = await forgetPostulo({ area, store });
+  assert.equal(origin, "https://a.example");
+  for (const key of ["instance", "token", "connection", "waiting"]) {
+    assert.equal(area.data.has(key), false, key);
+  }
+  assert.equal(area.data.get("language"), "fr");
+  assert.equal((await store.get(id)).state, "kept");
+});

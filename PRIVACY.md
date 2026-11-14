@@ -21,7 +21,8 @@ disk encryption you use.
 It keeps:
 
 - **Your Postulo's address and API token**, as you typed them into the settings. The token
-  is the one you issued in Postulo, and you can revoke it there at any time.
+  is the one you issued in Postulo, and you can revoke it there at any time, or press
+  *Forget this Postulo* in the settings to remove both, and the permission to reach it, from this browser.
 - **Your captures**: kept as soon as a page is read, before you decide anything, so that closing the review window loses nothing; for each, the posting's address, the fields that were read and the
   fields as you corrected them, which source read it, when, and where it stands — kept,
   waiting, sent or refused, with Postulo's reason when it refused. Once Postulo has a
@@ -72,7 +73,8 @@ browser sends that header to every site it visits anyway.
 
 Retries of a capture you already sent happen in the background, every five minutes and when
 the browser starts, until Postulo takes it. No page and no field you corrected is ever sent
-that you did not press *Send* on. What does go before *Send* is the question to
+that you did not press *Send* on: if you change the address to another Postulo, what waited
+for the old one is kept again, and is sent only when you press *Send* anew. What does go before *Send* is the question to
 `/api/v1/captures/known` above — the address, title and company of what you read, to your
 own Postulo only — and `GET /healthz`, which asks, and carries, nothing of yours. With no Postulo configured, or with the testing switch on, nothing is sent at
 all and captures simply stay in the browser.
