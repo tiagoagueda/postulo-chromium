@@ -7,7 +7,7 @@ import { askKnown } from "./lib/known.js";
 import { afterSending, checkPostulo, deliverWaiting, log, openCaptures, readWaitingList, showUnsentCount, store } from "./lib/local.js";
 import { CONNECTION, SLOW_MS, footerFor, toolbarFor } from "./lib/connection.js";
 import { hostOf } from "./lib/log.js";
-import { emptyPosting, readPosting, readPostings, slimPage } from "./lib/parse.js";
+import { emptyPosting, MAX_PAGE, readPosting, readPostings, slimPage } from "./lib/parse.js";
 import { onInstance } from "./lib/rendering.js";
 import { reviewRows } from "./lib/review.js";
 import { waitingCopy } from "./lib/waiting.js";
@@ -197,7 +197,8 @@ async function main() {
     try {
       const tab = await readCurrentTab();
       const parse = (html) => new DOMParser().parseFromString(html, "text/html");
-      const doc = parse(tab.html);
+      // Only so much of a page is parsed; past it is a page that wants the popup to freeze.
+      const doc = parse(tab.html.slice(0, 8 * MAX_PAGE));
       const found = readPosting(doc, tab.url, parse);
       page = {
         url: tab.url,

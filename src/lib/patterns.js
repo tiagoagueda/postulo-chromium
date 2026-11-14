@@ -208,16 +208,54 @@ function labelling(before) {
   let tail = before.slice(-LABEL_REACH);
   const stop = Math.max(...[".", "!", "?", ";", "|", "\n", "•"].map((mark) => tail.lastIndexOf(mark)));
   tail = tail.slice(stop + 1);
-  const found = /(?:\p{L}+[\s:]{0,3}){1,3}$/u.exec(tail);
-  return found ? found[0] : "";
+  return lastWords(tail);
+}
+
+// What /(?:\p{L}+[\s:]{0,3}){1,3}$/u finds in `tail`, walked from the end in one pass: the
+// expression is tried from every start, and it is asked for every hit on a long page.
+const LETTER = /\p{L}/u;
+const SEPARATOR = /[\s:]/u;
+function lastWords(tail) {
+  let start = tail.length;
+  for (let group = 0; group < 3; group += 1) {
+    let at = start;
+    while (at > 0 && start - at <= 3 && SEPARATOR.test(tail[at - 1])) {
+      at -= 1;
+    }
+    if (start - at > 3) {
+      break;
+    }
+    const wordEnd = at;
+    for (;;) {
+      // A letter outside the first plane is two units long.
+      const pair = at > 1 && /[\udc00-\udfff]/.test(tail[at - 1]) && /[\ud800-\udbff]/.test(tail[at - 2]);
+      if (at > 0 && LETTER.test(pair ? tail.slice(at - 2, at) : tail[at - 1])) {
+        at -= pair ? 2 : 1;
+      } else {
+        break;
+      }
+    }
+    if (at === wordEnd) {
+      break;
+    }
+    start = at;
+  }
+  return start === tail.length ? "" : tail.slice(start);
 }
 
 // Each `[label, what follows it]` in `text`: the label's own words with the word before
 // them, and the stretch after it where the value it labels has to start.
 function* after(spellings, text) {
+  // The start of each hit's line is kept while walking the hits, not searched back for: on a
+  // paragraph with no line break that search read the whole text again for every hit.
+  let line = 0;
+  let nextBreak = text.indexOf("\n");
   for (const hit of text.matchAll(patternFor(spellings, "giu"))) {
-    const line = text.lastIndexOf("\n", hit.index - 1) + 1;
-    const before = labelling(text.slice(line, hit.index));
+    while (nextBreak !== -1 && nextBreak < hit.index) {
+      line = nextBreak + 1;
+      nextBreak = text.indexOf("\n", line);
+    }
+    const before = labelling(text.slice(Math.max(line, hit.index - LABEL_REACH), hit.index));
     yield [`${before}${hit[0]}`, text.slice(hit.index + hit[0].length, hit.index + hit[0].length + WINDOW)];
   }
 }

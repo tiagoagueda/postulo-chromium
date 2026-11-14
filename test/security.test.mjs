@@ -8,7 +8,7 @@ import { JSDOM } from "jsdom";
 import { shipped } from "../scripts/build.mjs";
 import { askAndKeep } from "../src/lib/allow.js";
 import { capture, extraScopes, health, known, whoAmI } from "../src/lib/api.js";
-import { readPosting } from "../src/lib/parse.js";
+import { readPosting, readPostings } from "../src/lib/parse.js";
 import { onInstance } from "../src/lib/rendering.js";
 
 const INSTANCE = "https://postulo.example.org";
@@ -104,4 +104,45 @@ test("a refused permission prompt is reported once, and the capture is still kep
   await askAndKeep(async () => true, async () => "r", () => (silent += 1));
   await askAndKeep(null, async () => "r", () => (silent += 1));
   assert.equal(silent, 0);
+});
+
+// SEC3-009 (#63): three places that grew with the square of what a page supplies.
+// One window's DOMParser, as the popup has: a new JSDOM per call would be what is timed.
+function parser() {
+  const { DOMParser } = new JSDOM("").window;
+  return (value) => new DOMParser().parseFromString(value, "text/html");
+}
+
+function within(ms, work) {
+  const start = performance.now();
+  const result = work();
+  const took = performance.now() - start;
+  assert.ok(took < ms, `took ${Math.round(took)} ms, more than ${ms}`);
+  return result;
+}
+
+test("a page whose one paragraph repeats a label word for a megabyte is read within two seconds", () => {
+  const body = "salary ".repeat(150_000);
+  const html = `<html><head><title>Engineer</title><meta property="og:title" content="Engineer at Acme"></head><body><main><p>${body}</p></main></body></html>`;
+  const parse = parser();
+  const doc = parse(html);
+  within(2000, () => readPosting(doc, "https://a.example/j/1", parse));
+});
+
+test("a stated address carrying twenty thousand tracking parameters is read within two seconds", () => {
+  const address = `https://a.example/j/1?${Array.from({ length: 20_000 }, (_, i) => `utm_${i}=1`).join("&")}`;
+  const ld = JSON.stringify({ "@type": "JobPosting", title: "Engineer", url: address, description: "x" });
+  const html = `<html><head><script type="application/ld+json">${ld}</script></head><body></body></html>`;
+  const parse = parser();
+  const doc = parse(html);
+  within(2000, () => readPostings(doc, "https://a.example/list", parse));
+});
+
+test("a page listing fifty thousand postings offers no more than 500, within two seconds", () => {
+  const items = Array.from({ length: 50_000 }, (_, i) => ({ "@type": "JobPosting", title: `Job ${i}`, url: `https://a.example/j/${i}` }));
+  const html = `<html><head><script type="application/ld+json">${JSON.stringify(items)}</script></head><body></body></html>`;
+  const parse = parser();
+  const doc = parse(html);
+  const listed = within(2000, () => readPostings(doc, "https://a.example/list", parse));
+  assert.equal(listed.length, 500);
 });

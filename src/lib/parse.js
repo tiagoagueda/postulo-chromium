@@ -59,6 +59,9 @@ const VOID = new Set(["br", "hr"]);
 /** Postulo's limits on a posting (JobPostingData): what it would refuse, cut to fit instead. */
 const MAX_FIELD = 500;
 const MAX_DESCRIPTION = 40_000;
+const MAX_LISTED = 500; // the most captures Postulo takes in one batch
+const MAX_ADDRESS = 8192; // a small multiple of the 500 an address may have once tidied
+const TRACKING = /^(utm_|fbclid$|gclid$|mc_[ce]id$|ref$|ref_src$)/i;
 const LIMITS = { remote_type: 20, employment_type: 20, salary_currency: 3, salary_period: 10, source: 120 };
 
 // ------------------------------------------------------------------ the page's parts
@@ -591,13 +594,18 @@ function hostOf(url) {
 
 /** A URL reduced to what identifies the posting: no scheme, no "www.", no trailing slash. */
 function sameUrl(raw) {
+  // A posting states its address at any length; one this long is not an address to compare.
+  if (typeof raw !== "string" || raw.length > MAX_ADDRESS) {
+    return "";
+  }
   try {
     const parsed = new URL(raw);
     // A campaign's tracking parameters say where the visitor came from, not which advert.
-    for (const name of [...parsed.searchParams.keys()]) {
-      if (/^(utm_|fbclid$|gclid$|mc_[ce]id$|ref$|ref_src$)/i.test(name)) {
-        parsed.searchParams.delete(name);
-      }
+    // The query is rebuilt in one pass: deleting one name at a time rewrites it every time.
+    const pairs = [...parsed.searchParams];
+    const kept = pairs.filter(([name]) => !TRACKING.test(name));
+    if (kept.length !== pairs.length) {
+      parsed.search = new URLSearchParams(kept).toString();
     }
     return `${parsed.host.replace(/^www\./, "")}${parsed.pathname.replace(/\/+$/, "")}${parsed.search}`.toLowerCase();
   } catch {
@@ -954,8 +962,12 @@ function ownUrl(posting) {
 export function readPostings(doc, url, parse) {
   const listed = [];
   const seen = new Set();
+  const byTitle = new Map(); // lower-cased title -> the entries listed under it
   const take = (objects, descriptionIsHtml) => {
     for (const posting of postings(objects)) {
+      if (listed.length >= MAX_LISTED) {
+        break;
+      }
       const title = text(posting.title);
       if (!title) {
         continue;
@@ -978,20 +990,24 @@ export function readPostings(doc, url, parse) {
         const host = elsewhere ? hostOf(stated) : "";
         // The other spelling may state the address and this one not (or the reverse), which
         // keys them apart; the same title and company is the same posting.
-        const twin = listed.findIndex(
+        const lower = title.toLowerCase();
+        const sameTitle = byTitle.get(lower) || [];
+        const twin = sameTitle.find(
           (entry) =>
             (!stated || !entry.stated) &&
-            entry.title === title.toLowerCase() &&
             (!entry.data.company_name || !tidied.company_name || entry.data.company_name === tidied.company_name),
         );
-        if (twin >= 0) {
-          if (stated && !listed[twin].stated) {
-            listed[twin] = { data: tidied, source: "schema.org", here: matchesUrl(posting, url), elsewhere, host, stated, title: title.toLowerCase() };
+        if (twin) {
+          if (stated && !twin.stated) {
+            Object.assign(twin, { data: tidied, here: matchesUrl(posting, url), elsewhere, host, stated });
           }
           continue;
         }
         seen.add(key);
-        listed.push({ data: tidied, source: "schema.org", here: matchesUrl(posting, url), elsewhere, host, stated, title: title.toLowerCase() });
+        const entry = { data: tidied, source: "schema.org", here: matchesUrl(posting, url), elsewhere, host, stated, title: lower };
+        listed.push(entry);
+        sameTitle.push(entry);
+        byTitle.set(lower, sameTitle);
       }
     }
   };
