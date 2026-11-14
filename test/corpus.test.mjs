@@ -26,7 +26,7 @@ import { test } from "node:test";
 
 import { JSDOM } from "jsdom";
 
-import { readPosting, readPostings } from "../src/lib/parse.js";
+import { readPosting, readPostings, slimPage } from "../src/lib/parse.js";
 
 const FIXTURES = path.join(path.dirname(fileURLToPath(import.meta.url)), "fixtures");
 const parse = (html) => new JSDOM(html).window.document;
@@ -80,6 +80,15 @@ for (const { stem, expected, html } of cases) {
       Object.keys(expected.data).sort(),
       `${stem}: the fixture states every field Postulo has`,
     );
+  });
+}
+
+// The kept copy of a page is read as the page was (#68): what it drops is not what a posting
+// is read from.
+for (const { stem, expected, html } of cases) {
+  test(`${stem}: the slimmed page reads as the page does`, () => {
+    const doc = parse(html);
+    assert.deepEqual(readPosting(parse(slimPage(doc)), expected.url, parse), readPosting(doc, expected.url, parse));
   });
 }
 

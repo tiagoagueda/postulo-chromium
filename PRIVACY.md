@@ -30,7 +30,8 @@ It keeps:
   its review screen, and it is removed by itself 30 days after it was sent.
 - **A slimmed copy of each captured page**, at most 512 thousand characters, kept only until Postulo has the
   capture and deleted the moment it does. Scripts, styles, stylesheet links, frames and
-  inline graphics are stripped before it is stored.
+  inline graphics, hidden and password form fields, the value of every input and button,
+  meta tags that hold a token or a session, and comments are stripped before it is stored.
 - **A log** of what the extension did — the time, the event, a capture's id, a page's host
   (never its full address), and what Postulo answered — the most recent 1000 entries. You
   can read or download it from *Settings → Testing and troubleshooting*, and clear it there.

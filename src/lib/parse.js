@@ -1036,6 +1036,27 @@ export function slimPage(doc) {
       element.remove();
     }
   }
+  // What a form and its page carry for the site's own use, and nothing a posting is read
+  // from: hidden and password inputs, the value of any input or button, the meta tags that
+  // hold anti-forgery tokens and sessions, and comments (#68).
+  for (const element of copy.querySelectorAll('input[type="hidden" i], input[type="password" i]')) {
+    element.remove();
+  }
+  for (const element of copy.querySelectorAll("input[value], button[value]")) {
+    element.removeAttribute("value");
+  }
+  for (const element of copy.querySelectorAll("meta[name], meta[property]")) {
+    const name = element.getAttribute("name") || element.getAttribute("property") || "";
+    if (/csrf|xsrf|token|nonce|session/i.test(name) && !element.hasAttribute("itemprop")) {
+      element.remove();
+    }
+  }
+  const comments = doc.createTreeWalker(copy, 128 /* NodeFilter.SHOW_COMMENT */);
+  const gone = [];
+  while (comments.nextNode()) {
+    gone.push(comments.currentNode);
+  }
+  gone.forEach((comment) => comment.remove());
   const html = `<!doctype html>\n${copy.outerHTML}`;
   return html.length > MAX_PAGE ? `${cut(html, MAX_PAGE)}\n<!-- truncated at ${MAX_PAGE} characters -->\n` : html;
 }

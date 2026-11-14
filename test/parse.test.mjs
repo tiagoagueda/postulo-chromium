@@ -164,6 +164,18 @@ test("a listed posting stating an address on another site is marked, with its ho
   assert.equal(guard.data.url, "https://b.example/jobs/2");
 });
 
+test("a kept page holds no hidden field, token meta tag, input value or comment, and reads the same", () => {
+  const doc = page(
+    `<title>Research Engineer</title><meta name="csrf-token" content="SECRET-META"><meta name="description" content="kept">${ld(POSTING)}<!-- SECRET-COMMENT -->`,
+    '<form><input type="hidden" name="t" value="SECRET-HIDDEN"><input type="PASSWORD" value="SECRET-PASS"><input type="text" value="SECRET-VALUE"><button value="SECRET-BUTTON">Go</button></form>',
+  );
+  const slim = slimPage(doc);
+  assert.doesNotMatch(slim, /SECRET/);
+  assert.ok(slim.includes('name="description"'));
+  const again = new JSDOM(slim).window.document;
+  assert.deepEqual(readPosting(again, URL_, parse), readPosting(doc, URL_, parse));
+});
+
 test("a page too big to keep is cut, and what it declared survives the cut", () => {
   const doc = page(`<title>Research Engineer</title>${ld(POSTING)}`, `<p>${"filler ".repeat(MAX_PAGE / 4)}</p>`);
   const slim = slimPage(doc);
