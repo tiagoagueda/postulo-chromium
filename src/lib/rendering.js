@@ -21,6 +21,9 @@ export function onInstance(url, instance) {
   }
 }
 
+/** The most of a picture this extension will ever make, whatever Postulo says it takes. */
+export const RENDERING_CEILING = 32 * 1024 * 1024;
+
 /** What a capture's answer says about a picture of the page, or null when none is wanted:
  *  the server does not accept one, is older than the question, or asks for something this
  *  cannot give. The address must be on the instance's own origin, because the token goes
@@ -43,7 +46,7 @@ export function renderingOffer(instance, page) {
   } catch {
     return null;
   }
-  return { url: url.toString(), types, max };
+  return { url: url.toString(), types, max: Math.min(max, RENDERING_CEILING) };
 }
 
 /** The part of a capture's answer worth keeping until the person decides: no more than the

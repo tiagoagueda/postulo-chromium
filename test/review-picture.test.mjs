@@ -34,7 +34,7 @@ async function reviewAfterSend({ search, accepts }) {
   globalThis.HTMLSelectElement = dom.window.HTMLSelectElement;
   globalThis.Option = dom.window.Option;
   const page = accepts ? { accepts_rendering: true, rendering_url: "/api/v1/captures/a/rendering", rendering_types: ["image/png"], rendering_max_bytes: 1000 } : { accepts_rendering: false };
-  globalThis.fetch = async () => ({ ok: true, status: 201, json: async () => ({ review_url: "https://postulo.example/review/a", page }) });
+  globalThis.fetch = async () => ({ ok: true, status: 201, json: async () => ({ id: 1, review_url: "https://postulo.example/review/a", page }) });
   globalThis.chrome = {
     i18n: { getMessage: (key) => (key === "languageTag" ? "en" : key) },
     storage: { local: area, onChanged: { addListener() {} } },

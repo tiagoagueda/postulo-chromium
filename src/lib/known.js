@@ -37,9 +37,10 @@ export function sayKnown(element, answer, instance = "") {
   // named the browser's setting decides, and in a language nobody has translated that put
   // a date in one language inside a sentence in another.
   const when = (iso) => new Date(iso).toLocaleDateString(t("languageTag"));
-  const listing = answer && answer.listings[0];
-  const waiting = answer && answer.captures[0];
-  const similar = answer && answer.similar[0];
+  const first = (key) => (answer && Array.isArray(answer[key]) ? answer[key][0] : undefined);
+  const listing = first("listings");
+  const waiting = first("captures");
+  const similar = first("similar");
   let sentence = "";
   let link = "";
   if (listing) {

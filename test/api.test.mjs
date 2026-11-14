@@ -143,7 +143,7 @@ test("a capture posts the page to the configured instance with the token, and to
   const calls = [];
   const fetchImpl = async (url, init) => {
     calls.push({ url, init });
-    return fakeResponse(201, { title: "Research Engineer", company_name: "Black Mesa", location: "Lyon", source: "schema.org", review_url: "https://postulo.example.org/jobs/captures/7/review/" });
+    return fakeResponse(201, { id: 7, title: "Research Engineer", company_name: "Black Mesa", location: "Lyon", source: "schema.org", review_url: "https://postulo.example.org/jobs/captures/7/review/" });
   };
   const result = await capture("https://postulo.example.org", "tok", { url: "https://jobs.example/1", html: "<html>" }, fetchImpl);
   assert.equal(calls.length, 1);
@@ -214,7 +214,7 @@ test("a capture carries what was reviewed, and nothing when there is nothing", a
   const bodies = [];
   const fetchImpl = async (url, init) => {
     bodies.push(JSON.parse(init.body));
-    return fakeResponse(201, { title: "Senior Research Engineer", review_url: "https://postulo.example.org/r/1" });
+    return fakeResponse(201, { id: 1, title: "Senior Research Engineer", review_url: "https://postulo.example.org/r/1" });
   };
   await capture("https://postulo.example.org", "tok", { url: "u", html: "h", data: { title: "Senior Research Engineer" } }, fetchImpl);
   await capture("https://postulo.example.org", "tok", { url: "u", html: "h", data: {} }, fetchImpl);
@@ -262,4 +262,46 @@ test("a 2xx answer that is not Postulo's JSON is a refusal with no status, so a 
 test("the page that adds a listing is Postulo's own, under its path prefix, with nothing of ours in it", () => {
   assert.equal(newListingUrl("https://postulo.example"), "https://postulo.example/listings/new/");
   assert.equal(newListingUrl("https://example.org/postulo"), "https://example.org/postulo/listings/new/");
+});
+
+test("a 2xx JSON answer that is not a capture is not delivery: the capture waits (SEC3-017)", async () => {
+  for (const [status, body] of [[200, {}], [200, { ok: true }], [201, { review_url: "https://x.example/r" }], [204, { id: 3 }], [201, { id: "3" }]]) {
+    const error = await capture("https://postulo.example.org", "tok", { url: "u", html: "h" }, async () => fakeResponse(status, body)).catch((caught) => caught);
+    assert.ok(refusal("notPostulo")(error), `${status} ${JSON.stringify(body)}`);
+    assert.equal(error.status, undefined);
+    assert.equal(kindOfFailure(error), "later");
+  }
+  assert.equal((await capture("https://postulo.example.org", "tok", { url: "u", html: "h" }, async () => fakeResponse(200, { id: 4 }))).id, 4);
+});
+
+test("a body that never ends is given up on, not waited for (SEC3-017)", async () => {
+  // The 20-second wait is shortened for the test, and only for that wait.
+  const real = globalThis.setTimeout;
+  globalThis.setTimeout = (fn, ms, ...rest) => real(fn, ms === 20_000 ? 5 : ms, ...rest);
+  try {
+    const fetchImpl = async (url, init) => ({
+      ok: true,
+      status: 201,
+      json: () => new Promise((resolve, reject) => init.signal.addEventListener("abort", () => reject(new Error("aborted")))),
+    });
+    const error = await capture("https://postulo.example.org", "tok", { url: "u", html: "h" }, fetchImpl).catch((caught) => caught);
+    // The aborted read is an answer that is not Postulo's: no status, so the capture waits.
+    assert.ok(refusal("notPostulo")(error));
+    assert.equal(kindOfFailure(error), "later");
+  } finally {
+    globalThis.setTimeout = real;
+  }
+});
+
+test("a malformed answer to /captures/known is a refusal, and the sentence reads no shape it does not have", async () => {
+  const { known } = await import("../src/lib/api.js");
+  for (const body of [{ listings: [] }, [null], "no"]) {
+    await assert.rejects(known("https://postulo.example.org", "tok", [{ url: "https://e.org/1" }], async () => fakeResponse(200, body)), refusal("notPostulo"));
+  }
+});
+
+test("a picture is never offered larger than the extension's own ceiling", async () => {
+  const { renderingOffer, RENDERING_CEILING } = await import("../src/lib/rendering.js");
+  const page = { accepts_rendering: true, rendering_url: "/r", rendering_types: ["image/png"], rendering_max_bytes: 10 ** 12 };
+  assert.equal(renderingOffer("https://postulo.example.org", page).max, RENDERING_CEILING);
 });
