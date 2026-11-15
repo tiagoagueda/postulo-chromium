@@ -12,6 +12,7 @@
     "96": "icons/postulo-96.png",
     "128": "icons/postulo-128.png"
   },
+  "incognito": "not_allowed",
   "permissions": ["activeTab", "alarms", "scripting", "storage"],
   "optional_host_permissions": ["https://*/*", "http://*/*"],
   "content_security_policy": {

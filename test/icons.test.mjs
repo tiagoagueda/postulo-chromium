@@ -45,3 +45,9 @@ test("every icon the manifest names is there", () => {
     }
   }
 });
+
+test("the extension cannot be switched on in private windows: what it keeps outlasts them (SEC3-016)", () => {
+  for (const target of ["chromium", "firefox"]) {
+    assert.equal(manifestFor(target, source).incognito, "not_allowed");
+  }
+});

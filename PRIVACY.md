@@ -49,6 +49,10 @@ It keeps:
 Deleting a capture from *Captures in this browser* or from the review window removes it and its page. Removing the
 extension from your browser removes all of the above.
 
+The extension cannot be switched on in private windows (`"incognito": "not_allowed"` in its
+manifest), because what it keeps is in the ordinary profile and outlasts a private window:
+a page captured there would leave its address, title and source on this device.
+
 ## What it sends, and where
 
 Only to the address you configured, and to nothing else: a redirect is refused, not followed, and
