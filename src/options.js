@@ -101,6 +101,21 @@ async function main() {
       // is asked for here, from the click that saves it. Firefox insists on this; Chromium
       // is happy either way.
       const granted = await requestHostPermission(originPattern(next.instance));
+      // The token's scopes are asked while the address is allowed: one wider than `captures`
+      // is not stored. A Postulo that cannot be reached is no reason to refuse: the
+      // background's own check says it later (SEC3-011).
+      if (granted) {
+        let me = null;
+        try {
+          me = await whoAmI(next.instance, next.token);
+        } catch {
+          // Stored as before.
+        }
+        const extra = extraScopes(me);
+        if (extra.length) {
+          throw new Error(t("tokenTooWide", [extra.join(", ")]));
+        }
+      }
       // What waited for another address goes back to kept first: saving wakes the delivery.
       const released = await saveConnection({ area: ext.storage.local, store, next });
       await log.add("settings saved", { postulo: hostOf(next.instance), permission: granted, released });

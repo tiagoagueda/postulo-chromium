@@ -93,7 +93,7 @@ function memoryArea(start = {}) {
 }
 
 /** A Postulo answering each path as told (a status, or an Error for no answer), recording what was asked. */
-function postulo(answers) {
+function postulo(answers, scopes = ["captures"]) {
   const calls = [];
   const fetchImpl = async (url, init) => {
     const path = new URL(url).pathname;
@@ -102,7 +102,7 @@ function postulo(answers) {
     if (answer instanceof Error) {
       throw answer;
     }
-    return new Response(JSON.stringify({ scopes: ["captures"] }), { status: answer, headers: { "Content-Type": "application/json" } });
+    return new Response(JSON.stringify({ scopes }), { status: answer, headers: { "Content-Type": "application/json" } });
   };
   return { calls, fetchImpl };
 }
@@ -279,4 +279,19 @@ test("the list is read on a beat only when Postulo was not just found out of rea
   assert.deepEqual(await beat({ outcome: "unreachable", sent: 0, status: 429 }), ["deliver", "read"]);
   // Something sent: the delivery read the list already.
   assert.deepEqual(await beat({ outcome: "done", sent: 2 }), ["deliver"]);
+});
+
+test("what /me says of a token wider than captures is kept on the record, and none when it is not (SEC3-011)", async () => {
+  const wide = postulo({ "/healthz": 200, "/api/v1/me": 200 }, ["captures", "read"]);
+  const area = memoryArea();
+  const kept = await checkConnection({ area, settings: SET, allowed: yes, fetchImpl: wide.fetchImpl, now: NOW });
+  assert.deepEqual(kept.wide, ["read"]);
+
+  const narrow = postulo({ "/healthz": 200, "/api/v1/me": 200 });
+  const plain = await checkConnection({ area: memoryArea(), settings: SET, allowed: yes, fetchImpl: narrow.fetchImpl, now: NOW });
+  assert.equal("wide" in plain, false);
+
+  // A beat that only asks /healthz leaves it, until /me says otherwise.
+  const again = await checkConnection({ area, settings: SET, allowed: yes, fetchImpl: narrow.fetchImpl, now: NOW });
+  assert.deepEqual(again.wide, ["read"]);
 });

@@ -15,7 +15,7 @@
 // and proves the host answers but not that the token is still good. So the token's state
 // is the last real call's, and `GET /me` is spent only when it is not known yet.
 
-import { whoAmI, health } from "./api.js";
+import { extraScopes, whoAmI, health } from "./api.js";
 
 /** The storage key of the record. */
 export const CONNECTION = "connection";
@@ -126,6 +126,12 @@ export async function learn(area, outcome, now = () => Date.now()) {
     how: outcome.how,
     tokenChecked: outcome.tokenChecked ?? (outcome.state === "noPermission" ? false : Boolean(before && before.tokenChecked)),
   };
+  // The scopes the token holds beyond `captures`, as `GET /me` last said them; kept until the
+  // next answer of `/me`, and gone with the record when the token changes (SEC3-011).
+  const wide = outcome.wide ?? (before && before.wide) ?? [];
+  if (wide.length && outcome.state !== "tokenRefused") {
+    record.wide = wide;
+  }
   if (Number.isFinite(outcome.ms)) {
     record.ms = outcome.ms;
   }
@@ -186,8 +192,8 @@ export async function checkConnection({ area, settings, allowed, fetchImpl = fet
     return learn(area, { state: before.state === "tokenRefused" ? "tokenRefused" : "reachable", how: "healthz", ms }, now);
   }
   try {
-    await whoAmI(settings.instance, settings.token, fetchImpl);
-    return learn(area, { state: "reachable", tokenChecked: true, how: "me", ms }, now);
+    const me = await whoAmI(settings.instance, settings.token, fetchImpl);
+    return learn(area, { state: "reachable", tokenChecked: true, how: "me", ms, wide: extraScopes(me) }, now);
   } catch (error) {
     return learn(area, { ...stateOfFailure(error), how: "me", ms }, now);
   }

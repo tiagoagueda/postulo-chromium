@@ -111,6 +111,10 @@ async function showState(settings, live = {}) {
   if (turn !== drawing) {
     return;
   }
+  // A token wider than `captures`, as the last `GET /me` said (SEC3-011).
+  const wide = (record && record.wide) || [];
+  $("token-wide").hidden = !wide.length;
+  $("token-wide").textContent = wide.length ? t("tokenTooWide", [wide.join(", ")]) : "";
   const shown = footerFor(settings, record, live);
   const state = $("state");
   state.hidden = !shown;

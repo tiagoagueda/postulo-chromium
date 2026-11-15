@@ -4,6 +4,7 @@
 
 import { askAndKeep } from "./lib/allow.js";
 import { describe, originPattern, pictureRefused, sendRendering } from "./lib/api.js";
+import { CONNECTION } from "./lib/connection.js";
 import { ext, loadSettings, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
@@ -53,6 +54,9 @@ async function main() {
   const connected = Boolean(settings.instance && settings.token);
   $("not-connected").hidden = connected;
   $("offline-on").hidden = !settings.offline;
+  const wide = ((await ext.storage.local.get(CONNECTION))[CONNECTION] || {}).wide || [];
+  $("token-wide").hidden = !wide.length;
+  $("token-wide").textContent = wide.length ? t("tokenTooWide", [wide.join(", ")]) : "";
   $("open-options").addEventListener("click", () => ext.runtime.openOptionsPage());
 
   const query = new URLSearchParams(location.search);
