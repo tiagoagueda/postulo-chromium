@@ -13,6 +13,11 @@ import { badgeText, countPostings, lastWaiting, refreshWaiting, WAITING } from "
 export const store = makeStore(ext.storage.local);
 export const log = makeLog(ext.storage.local);
 
+// Only the extension's own pages and its background read what is kept: the scripts injected
+// into a web page never need it, so the token and the kept pages are not offered to them.
+// Chromium only; Firefox has no such call (SEC3-013).
+ext.storage.local.setAccessLevel?.({ accessLevel: "TRUSTED_CONTEXTS" })?.catch?.(() => {});
+
 /** Send what is waiting (or only the captures in `only`), and remember how it went. */
 export async function deliverWaiting(only = null) {
   // The background wakes with no language loaded, and what it asks Postulo for is worded by it.
