@@ -15,16 +15,16 @@
     "message": "Postulo gec cavab verir"
   },
   "reviewHeading": {
-    "message": "Baxış tələb olunur"
+    "message": "Baxılmalıdır"
   },
   "waitingInPostulo": {
-    "message": "Postulo-da baxış gözləyir"
+    "message": "Postuloda baxılmağı gözləyir"
   },
   "nothingWaiting": {
-    "message": "Baxış gözləyən heç nə yoxdur."
+    "message": "Baxılmağı gözləyən heç nə yoxdur."
   },
   "lastListed": {
-    "message": "Postulo-nun $WHEN$ tarixində verdiyi son siyahıya görə.",
+    "message": "Postulonun sonuncu dəfə siyahıya aldığı kimi, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -72,7 +72,7 @@
     "message": "Genişləndirməyə Postulo-nuza qoşulmaq icazəsi verilir…"
   },
   "noPermission": {
-    "message": "Postulo-nuza qoşulmaq icazəsi olmadan heç nə göndərilə bilməz."
+    "message": "Postuloya çatmaq icazəsi olmadan heç nə göndərmək olmaz."
   },
   "sending": {
     "message": "Postulo-ya göndərilir…"
@@ -89,7 +89,7 @@
     }
   },
   "untitled": {
-    "message": "Adsız elan"
+    "message": "Başlıqsız elan"
   },
   "optionsTitle": {
     "message": "Postulo ayarları"
@@ -243,7 +243,7 @@
     "message": "Səhifədən oxunan budur. Səhv olan hər şeyi düzəldin; siz göndərməyənə qədər heç nə bu brauzerdən çıxmır."
   },
   "sendForReview": {
-    "message": "Baxışa göndər"
+    "message": "Nəzərdən keçirməyə göndər"
   },
   "notConnected": {
     "message": "Hələ heç bir Postulo-ya qoşulmayıb: götürdükləriniz bu brauzerdə saxlanılır."
@@ -315,13 +315,13 @@
     "message": "Test və problemlərin həlli"
   },
   "offlineLabel": {
-    "message": "Postulo-ya qoşulmaq mümkün deyilmiş kimi davran"
+    "message": "Postuloya çatmaq mümkün deyilmiş kimi davran"
   },
   "offlineHint": {
     "message": "Test üçün. Bu aktiv olduqda heç nə göndərilmir: götürmələr Postulo işləmədiyi zamankı kimi bu brauzerdə gözləyir və bu deaktiv ediləndə göndərilir."
   },
   "offlineOn": {
-    "message": "Test açarı aktivdir: Postulo-ya heç nə göndərilmir."
+    "message": "Test açarı yandırılıb: Postuloya heç nə göndərilmir."
   },
   "offlineOff": {
     "message": "Test açarı deaktivdir: gözləyənlər indi Postulo-ya göndərilir."
@@ -531,5 +531,19 @@
   },
   "reviewPageTitle": {
     "message": "Götürməyə baxış"
+  },
+  "forgetPostulo": {
+    "message": "Bu Postulo-nu unut"
+  },
+  "savedOtherAddress": {
+    "message": "Yadda saxlanıldı. $COUNT$ götürmə digər ünvanı gözləyirdi: onları bu brauzerdə «Götürmələr» bölməsindən yenidən göndərin.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Unuduldu. Bu brauzerdə artıq nə ünvan, nə də token saxlanılır. Götürmələr saxlanılır və heç biri göndərilməyəcək."
   }
 }

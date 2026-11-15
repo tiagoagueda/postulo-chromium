@@ -12,19 +12,19 @@
     "message": "Postulo جواب دے رہا ہے"
   },
   "footerSlow": {
-    "message": "Postulo جواب دینے میں سست ہے"
+    "message": "Postulo سست جواب دے رہا ہے"
   },
   "reviewHeading": {
-    "message": "جائزہ درکار"
+    "message": "جائزہ درکار ہے"
   },
   "waitingInPostulo": {
-    "message": "Postulo میں جائزے کا منتظر"
+    "message": "Postulo میں جائزے کے منتظر"
   },
   "nothingWaiting": {
     "message": "جائزے کے لیے کچھ بھی منتظر نہیں۔"
   },
   "lastListed": {
-    "message": "جیسا کہ Postulo نے آخری بار $WHEN$ کو انہیں درج کیا تھا۔",
+    "message": "جیسا کہ Postulo نے آخری بار فہرست بنائی تھی، $WHEN$ پر۔",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -72,7 +72,7 @@
     "message": "ایکسٹینشن کو آپ کے Postulo تک رسائی کی اجازت دی جا رہی ہے…"
   },
   "noPermission": {
-    "message": "آپ کے Postulo تک رسائی کی اجازت کے بغیر کچھ نہیں بھیجا جا سکتا۔"
+    "message": "آپ کے Postulo تک رسائی کی اجازت کے بغیر کچھ بھی بھیجا نہیں جا سکتا۔"
   },
   "sending": {
     "message": "Postulo کو بھیجا جا رہا ہے…"
@@ -282,13 +282,13 @@
     "message": "جانچ اور مسائل کا حل"
   },
   "offlineLabel": {
-    "message": "ایسے برتاؤ کریں جیسے Postulo تک رسائی نہ ہو"
+    "message": "ایسے برتاؤ کریں جیسے Postulo تک رسائی ممکن نہ ہو"
   },
   "offlineHint": {
     "message": "جانچ کے لیے۔ جب تک یہ آن ہے، کچھ نہیں بھیجا جاتا: کیپچر اس براؤزر میں بالکل اسی طرح انتظار کرتے ہیں جیسے Postulo بند ہونے پر کرتے، اور اس کے آف ہوتے ہی بھیج دیے جاتے ہیں۔"
   },
   "offlineOn": {
-    "message": "جانچ کا سوئچ آن ہے: Postulo کو کچھ نہیں بھیجا جاتا۔"
+    "message": "ٹیسٹنگ سوئچ آن ہے: Postulo کو کچھ نہیں بھیجا جا رہا۔"
   },
   "offlineOff": {
     "message": "جانچ کا سوئچ آف ہے: جو انتظار میں ہے وہ اب Postulo کو جا رہا ہے۔"
@@ -531,5 +531,19 @@
         "content": "$1"
       }
     }
+  },
+  "forgetPostulo": {
+    "message": "اس Postulo کو بھلا دیں"
+  },
+  "savedOtherAddress": {
+    "message": "محفوظ ہو گیا۔ $COUNT$ کیپچر دوسرے پتے کے انتظار میں تھے: انہیں اس براؤزر کے کیپچرز سے دوبارہ بھیجیں۔",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "بھلا دیا گیا۔ اس براؤزر میں اب کوئی پتا یا ٹوکن نہیں ہے۔ کیپچرز محفوظ ہیں، اور کوئی بھی نہیں بھیجا جائے گا۔"
   }
 }

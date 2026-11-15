@@ -12,19 +12,19 @@
     "message": "Postulo svarar"
   },
   "footerSlow": {
-    "message": "Postulo svarar seint"
+    "message": "Postulo er seinur at svara"
   },
   "reviewHeading": {
-    "message": "Skal eftirkannast"
+    "message": "Skal eftirhyggjast"
   },
   "waitingInPostulo": {
-    "message": "Bíðar eftir eftirkanning í Postulo"
+    "message": "Bíðar eftir eftirliti í Postulo"
   },
   "nothingWaiting": {
-    "message": "Einki bíðar eftir eftirkanning."
+    "message": "Einki bíðar eftir eftirliti."
   },
   "lastListed": {
-    "message": "Sum Postulo seinast listaði tær, $WHEN$.",
+    "message": "Soleiðis sum Postulo skrásetti tær seinast, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -72,7 +72,7 @@
     "message": "Loyvir ískoytinum at fáa samband við tína Postulo…"
   },
   "noPermission": {
-    "message": "Uttan loyvi at fáa samband við tína Postulo kann einki sendast."
+    "message": "Uttan loyvi at røkka títt Postulo kann einki sendast."
   },
   "sending": {
     "message": "Sendir til Postulo…"
@@ -243,7 +243,7 @@
     "message": "Hetta er tað, sum varð lisið av síðuni. Rætta alt, sum er skeivt; einki fer úr hesum kaganum, fyrr enn tú sendir tað."
   },
   "sendForReview": {
-    "message": "Send til eftirkanningar"
+    "message": "Send til eftirkanning"
   },
   "notConnected": {
     "message": "Enn ikki í sambandi við nakra Postulo: tað, tú fangar, verður goymt í hesum kaganum."
@@ -315,13 +315,13 @@
     "message": "Royndir og feilfinning"
   },
   "offlineLabel": {
-    "message": "Lat sum um samband ikki fæst við Postulo"
+    "message": "Hegna teg, sum um Postulo ikki kundi røkkast"
   },
   "offlineHint": {
     "message": "Til royndar. Meðan hetta er tendrað, verður einki sent: fangingar bíða í hesum kaganum júst sum tær høvdu gjørt, um Postulo var niðri, og verða sendar, tá ið tað er sløkt."
   },
   "offlineOn": {
-    "message": "Royndarknøtturin er tendraður: einki verður sent til Postulo."
+    "message": "Royndarbrotin er tendraður: einki verður sent til Postulo."
   },
   "offlineOff": {
     "message": "Royndarknøtturin er sløktur: tað, sum bíðar, verður nú sent til Postulo."
@@ -531,5 +531,19 @@
   },
   "reviewPageTitle": {
     "message": "Eftirkanna eina fanging"
+  },
+  "forgetPostulo": {
+    "message": "Gloym hesa Postulo-uppsetingina"
+  },
+  "savedOtherAddress": {
+    "message": "Goymt. $COUNT$ fangingar biðu eftir hinari vevadressuni: send tær aftur frá Fangingar í hesum kaga.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Gloymt. Hesin kagin hevur ikki longur nakra vevadressu ella nakað tekin. Fangingarnar eru varðveittar, og eingin verður send."
   }
 }

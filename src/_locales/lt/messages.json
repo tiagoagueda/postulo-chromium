@@ -27,7 +27,7 @@
     "message": "Plėtiniui leidžiama pasiekti jūsų Postulo…"
   },
   "noPermission": {
-    "message": "Be leidimo pasiekti jūsų Postulo nieko negalima išsiųsti."
+    "message": "Be leidimo pasiekti jūsų Postulo nieko negalima siųsti."
   },
   "sending": {
     "message": "Siunčiama į Postulo…"
@@ -247,13 +247,13 @@
     "message": "Testavimas ir trikčių šalinimas"
   },
   "offlineLabel": {
-    "message": "Elgtis taip, lyg Postulo būtų nepasiekiamas"
+    "message": "Elgtis taip, lyg Postulo nebūtų galima pasiekti"
   },
   "offlineHint": {
     "message": "Testavimui. Kol tai įjungta, nieko nesiunčiama: fiksavimai laukia šioje naršyklėje lygiai taip, kaip lauktų neveikiant Postulo, ir iškeliauja, kai tai išjungiama."
   },
   "offlineOn": {
-    "message": "Testavimo jungiklis įjungtas: į Postulo nieko nesiunčiama."
+    "message": "Bandymo jungiklis įjungtas: į Postulo nieko nesiunčiama."
   },
   "offlineOff": {
     "message": "Testavimo jungiklis išjungtas: tai, kas laukia, dabar keliauja į Postulo."
@@ -453,7 +453,7 @@
     "message": "Nieko nelaukia peržiūros."
   },
   "lastListed": {
-    "message": "Kaip Postulo paskutinį kartą išvardijo, $WHEN$.",
+    "message": "Kaip Postulo paskutinį kartą juos išvardijo, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Prieiga prie Postulo adreso neleista, todėl nieko neišsiųsta. Fiksavimas išsaugotas ir laukia: leiskite prieigą prie adreso ir dar kartą paspauskite Siųsti."
+  },
+  "forgetPostulo": {
+    "message": "Pamiršti šį Postulo egzempliorių"
+  },
+  "savedOtherAddress": {
+    "message": "Išsaugota. $COUNT$ fiksavimų laukė kito adreso: nusiųskite juos dar kartą skiltyje „Fiksavimai“ šioje naršyklėje.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Pamiršta. Ši naršyklė nebelaiko nei adreso, nei prieigos rakto. Fiksavimai išsaugoti, bet nė vienas nebus išsiųstas."
   }
 }

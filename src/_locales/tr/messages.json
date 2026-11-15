@@ -222,7 +222,7 @@
     "message": "Test ve sorun giderme"
   },
   "offlineLabel": {
-    "message": "Postulo'ya erişilemiyormuş gibi davran"
+    "message": "Postulo'ya ulaşılamıyormuş gibi davran"
   },
   "offlineHint": {
     "message": "Test için. Bu açıkken hiçbir şey gönderilmez: yakalamalar tıpkı Postulo çöktüğünde olacağı gibi bu tarayıcıda bekler ve bu kapatılınca gider."
@@ -428,7 +428,7 @@
     "message": "İnceleme bekleyen bir şey yok."
   },
   "lastListed": {
-    "message": "Postulo'nun son listelediği haliyle, $WHEN$.",
+    "message": "Postulo'nun bunları en son listelediği hâliyle, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
         "content": "$3"
       }
     }
+  },
+  "forgetPostulo": {
+    "message": "Bu Postulo'yu unut"
+  },
+  "savedOtherAddress": {
+    "message": "Kaydedildi. $COUNT$ yakalama diğer adresi bekliyordu: bunları bu tarayıcıdaki Yakalamalar bölümünden yeniden gönderin.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Unutuldu. Bu tarayıcı artık bir adres veya belirteç tutmuyor. Yakalamalar saklanır ve hiçbiri gönderilmez."
   }
 }

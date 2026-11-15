@@ -27,7 +27,7 @@
     "message": "Ag ligean don síneadh do Postulo a bhaint amach…"
   },
   "noPermission": {
-    "message": "Gan cead do Postulo a bhaint amach, ní féidir aon rud a sheoladh."
+    "message": "Gan cead teacht ar do Postulo, ní féidir aon rud a sheoladh."
   },
   "sending": {
     "message": "Á sheoladh chuig Postulo…"
@@ -44,7 +44,7 @@
     }
   },
   "untitled": {
-    "message": "Fógra gan teideal"
+    "message": "Fógra poist gan teideal"
   },
   "optionsTitle": {
     "message": "Socruithe Postulo"
@@ -247,13 +247,13 @@
     "message": "Tástáil agus réiteach fadhbanna"
   },
   "offlineLabel": {
-    "message": "Lig ort nach féidir Postulo a bhaint amach"
+    "message": "Gníomhaigh amhail is nach bhféadfaí teacht ar Postulo"
   },
   "offlineHint": {
     "message": "Le haghaidh tástála. Fad atá sé seo ar siúl, ní sheoltar aon rud: fanann gabhálacha sa bhrabhsálaí seo díreach mar a d'fhanfaidís dá mbeadh Postulo as feidhm, agus imíonn siad nuair a mhúchtar é."
   },
   "offlineOn": {
-    "message": "Tá an lasc tástála ar siúl: ní sheoltar aon rud chuig Postulo."
+    "message": "Tá an lasc tástála air: ní sheoltar aon rud chuig Postulo."
   },
   "offlineOff": {
     "message": "Tá an lasc tástála múchta: téann a bhfuil ag fanacht chuig Postulo anois."
@@ -447,7 +447,7 @@
     "message": "Ag teastáil athbhreithniú"
   },
   "waitingInPostulo": {
-    "message": "Ag fanacht le hathbhreithniú in Postulo"
+    "message": "Ag fanacht le hathbhreithniú i Postulo"
   },
   "nothingWaiting": {
     "message": "Níl aon rud ag fanacht le hathbhreithniú."
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Níor ceadaíodh seoladh Postulo, mar sin níor seoladh aon rud. Coinnítear an ghabháil agus tá sí ag fanacht: ceadaigh an seoladh agus brúigh Seol arís."
+  },
+  "forgetPostulo": {
+    "message": "Déan dearmad ar an Postulo seo"
+  },
+  "savedOtherAddress": {
+    "message": "Sábháilte. Gabhálacha a bhí ag fanacht leis an seoladh eile: $COUNT$. Seol arís iad ó Gabhálacha sa bhrabhsálaí seo.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Dearmadta. Níl seoladh ná comhartha ag an mbrabhsálaí seo a thuilleadh. Coinnítear na gabhálacha, agus ní sheolfar aon cheann acu."
   }
 }

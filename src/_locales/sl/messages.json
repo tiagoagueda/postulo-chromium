@@ -27,7 +27,7 @@
     "message": "Razširitev dobiva dovoljenje za dostop do vašega Postula …"
   },
   "noPermission": {
-    "message": "Brez dovoljenja za dostop do vašega Postula ni mogoče poslati ničesar."
+    "message": "Brez dovoljenja za dostop do vašega Postula ni mogoče ničesar poslati."
   },
   "sending": {
     "message": "Pošiljanje v Postulo …"
@@ -247,13 +247,13 @@
     "message": "Preizkušanje in odpravljanje težav"
   },
   "offlineLabel": {
-    "message": "Ravnaj, kot da Postulo ni dosegljiv"
+    "message": "Delaj, kot da Postula ni mogoče doseči"
   },
   "offlineHint": {
     "message": "Za preizkušanje. Dokler je to vklopljeno, se nič ne pošlje: zajemi čakajo v tem brskalniku natanko tako, kot bi, če Postulo ne bi deloval, in gredo, ko se izklopi."
   },
   "offlineOn": {
-    "message": "Preizkusno stikalo je vklopljeno: v Postulo se nič ne pošlje."
+    "message": "Preizkusno stikalo je vklopljeno: Postulu se ne pošilja nič."
   },
   "offlineOff": {
     "message": "Preizkusno stikalo je izklopljeno: kar čaka, gre zdaj v Postulo."
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Naslov vašega Postula ni bil dovoljen, zato ni bilo nič poslano. Zajem je shranjen in čaka: dovolite naslov in znova pritisnite Pošlji."
+  },
+  "forgetPostulo": {
+    "message": "Pozabi tega Postula"
+  },
+  "savedOtherAddress": {
+    "message": "Zajemi, ki so čakali na drug naslov: $COUNT$. Znova jih pošljite iz razdelka Zajemi v tem brskalniku.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Pozabljeno. Ta brskalnik ne hrani več naslova ali žetona. Zajemi so ohranjeni, nobeden pa ne bo poslan."
   }
 }

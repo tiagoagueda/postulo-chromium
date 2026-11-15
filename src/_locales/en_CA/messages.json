@@ -531,5 +531,19 @@
   },
   "reviewPageTitle": {
     "message": "Review a capture"
+  },
+  "forgetPostulo": {
+    "message": "Forget this Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Saved. $COUNT$ captures were waiting for the other address: send them again from Captures in this browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Forgotten. This browser no longer holds an address or a token. The captures are kept, and none will be sent."
   }
 }

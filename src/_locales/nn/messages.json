@@ -12,7 +12,7 @@
     "message": "Postulo svarar"
   },
   "footerSlow": {
-    "message": "Postulo er treg til å svare"
+    "message": "Postulo svarar sakte"
   },
   "reviewHeading": {
     "message": "Treng gjennomgang"
@@ -24,7 +24,7 @@
     "message": "Ingenting ventar på gjennomgang."
   },
   "lastListed": {
-    "message": "Slik Postulo sist viste dei, $WHEN$.",
+    "message": "Slik Postulo sist lista dei, den $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -72,7 +72,7 @@
     "message": "Gjev utvidinga løyve til å nå Postulo-en din…"
   },
   "noPermission": {
-    "message": "Utan løyve til å nå Postulo-en din kan ingenting sendast."
+    "message": "Utan løyve til å nå Postulo din kan ingenting sendast."
   },
   "sending": {
     "message": "Sender til Postulo…"
@@ -315,7 +315,7 @@
     "message": "Testing og feilsøking"
   },
   "offlineLabel": {
-    "message": "Lat som om Postulo ikkje kan nåast"
+    "message": "Opptre som om Postulo ikkje kan nåast"
   },
   "offlineHint": {
     "message": "For testing. Medan dette er på, blir ingenting sendt: fangstane ventar i denne nettlesaren nøyaktig slik dei ville gjort om Postulo var nede, og blir sende når det er slått av."
@@ -531,5 +531,19 @@
   },
   "reviewPageTitle": {
     "message": "Gå gjennom ein fangst"
+  },
+  "forgetPostulo": {
+    "message": "Gløym denne Postulo-installasjonen"
+  },
+  "savedOtherAddress": {
+    "message": "Lagra. $COUNT$ fangstar venta på den andre adressa: send dei på nytt frå Fangstar i denne nettlesaren.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Gløymd. Denne nettlesaren har ikkje lenger ei adresse eller eit token. Fangstane er teke vare på, og ingen blir sende."
   }
 }

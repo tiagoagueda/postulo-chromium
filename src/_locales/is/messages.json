@@ -27,7 +27,7 @@
     "message": "Leyfi viðbótinni að ná í Postulo-ið þitt…"
   },
   "noPermission": {
-    "message": "Án leyfis til að ná í Postulo-ið þitt er ekki hægt að senda neitt."
+    "message": "Án heimildar til að ná í Postulo þinn er ekki hægt að senda neitt."
   },
   "sending": {
     "message": "Sendi í Postulo…"
@@ -247,13 +247,13 @@
     "message": "Prófanir og bilanaleit"
   },
   "offlineLabel": {
-    "message": "Láta sem ekki náist í Postulo"
+    "message": "Láta eins og ekki náist í Postulo"
   },
   "offlineHint": {
     "message": "Til prófunar. Á meðan kveikt er á þessu er ekkert sent: grípur bíða í þessum vafra nákvæmlega eins og þær myndu gera ef Postulo lægi niðri, og fara þegar slökkt er á þessu."
   },
   "offlineOn": {
-    "message": "Kveikt er á prófunarrofanum: ekkert er sent í Postulo."
+    "message": "Prófunarrofinn er á: ekkert er sent til Postulo."
   },
   "offlineOff": {
     "message": "Slökkt er á prófunarrofanum: það sem bíður fer nú í Postulo."
@@ -444,7 +444,7 @@
     "message": "Postulo er lengi að svara"
   },
   "reviewHeading": {
-    "message": "Bíður yfirferðar"
+    "message": "Þarf yfirferð"
   },
   "waitingInPostulo": {
     "message": "Bíður yfirferðar í Postulo"
@@ -453,7 +453,7 @@
     "message": "Ekkert bíður yfirferðar."
   },
   "lastListed": {
-    "message": "Eins og Postulo taldi þau síðast upp, $WHEN$.",
+    "message": "Eins og Postulo taldi þær síðast, þann $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Vistfang Postulo var ekki leyft, svo ekkert var sent. Gripið er geymt og bíður: leyfðu vistfangið og ýttu aftur á Senda."
+  },
+  "forgetPostulo": {
+    "message": "Gleyma þessari Postulo-uppsetningu"
+  },
+  "savedOtherAddress": {
+    "message": "Vistað. $COUNT$ grip biðu eftir hinu vistfanginu: sendu þau aftur úr Gripum í þessum vafra.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Gleymt. Þessi vafri geymir ekki lengur vistfang eða teikn. Gripin eru geymd og engin verða send."
   }
 }

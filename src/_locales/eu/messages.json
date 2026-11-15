@@ -178,7 +178,7 @@
     "message": "Hau da orritik irakurri dena. Zuzendu gaizki dagoena; ez da ezer nabigatzaile honetatik ateratzen zuk bidali arte."
   },
   "sendForReview": {
-    "message": "Bidali berrikusteko"
+    "message": "Bidali berrikustera"
   },
   "notConnected": {
     "message": "Oraindik ez dago Postulorik konektatuta: harrapatzen duzuna nabigatzaile honetan gordetzen da."
@@ -247,13 +247,13 @@
     "message": "Probak eta arazoen konponketa"
   },
   "offlineLabel": {
-    "message": "Jokatu Postulora iritsi ezin balitz bezala"
+    "message": "Jokatu Postulorekin ezin dela konektatu balitz bezala"
   },
   "offlineHint": {
     "message": "Probak egiteko. Piztuta dagoen bitartean, ez da ezer bidaltzen: harrapaketak nabigatzaile honetan zain geratzen dira, Postulo erorita balego bezala hain zuzen, eta itzaltzean joaten dira."
   },
   "offlineOn": {
-    "message": "Proba-etengailua piztuta dago: ez da ezer bidaltzen Postulora."
+    "message": "Proba-etengailua aktibatuta dago: ez da ezer bidaltzen Postulora."
   },
   "offlineOff": {
     "message": "Proba-etengailua itzalita dago: zain zegoena Postulora doa orain."
@@ -441,19 +441,19 @@
     "message": "Postulok erantzuten du"
   },
   "footerSlow": {
-    "message": "Postulok mantso erantzuten du"
+    "message": "Postulok poliki erantzuten du"
   },
   "reviewHeading": {
-    "message": "Berrikusi beharrekoak"
+    "message": "Berrikusi behar da"
   },
   "waitingInPostulo": {
     "message": "Postulon berrikusteko zain"
   },
   "nothingWaiting": {
-    "message": "Ez dago ezer berrikusteko zain."
+    "message": "Ez dago berrikusteko ezer."
   },
   "lastListed": {
-    "message": "Postulok azkenekoz zerrendatu zituen bezala, $WHEN$.",
+    "message": "Postulok azkenekoz zerrendatu zituen moduan, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Postuloren helbidea ez da baimendu; beraz, ez da ezer bidali. Kaptura gordeta dago eta zain geratzen da: baimendu helbidea eta sakatu Bidali berriro."
+  },
+  "forgetPostulo": {
+    "message": "Ahaztu Postulo hau"
+  },
+  "savedOtherAddress": {
+    "message": "Gordeta. Beste helbidearen zain zeuden kapturak: $COUNT$. Bidali berriro nabigatzaile honetako «Kapturak» atalean.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Ahaztuta. Nabigatzaile honek ez du dagoeneko helbiderik ez tokenik gordetzen. Kapturak gordeta daude, eta bat ere ez da bidaliko."
   }
 }

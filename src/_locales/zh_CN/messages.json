@@ -24,7 +24,7 @@
     "message": "没有等待审核的内容。"
   },
   "lastListed": {
-    "message": "以下为 Postulo 在$WHEN$最后列出的内容。",
+    "message": "按 Postulo 上次列出的情况，时间为 $WHEN$。",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -89,7 +89,7 @@
     }
   },
   "untitled": {
-    "message": "无标题的招聘信息"
+    "message": "无标题招聘信息"
   },
   "optionsTitle": {
     "message": "Postulo 设置"
@@ -315,13 +315,13 @@
     "message": "测试和故障排除"
   },
   "offlineLabel": {
-    "message": "模拟无法连接 Postulo"
+    "message": "表现得如同无法连接到 Postulo"
   },
   "offlineHint": {
     "message": "用于测试。开启时不会发送任何内容：抓取项会像 Postulo 宕机时一样在此浏览器中等待，关闭后即会发送。"
   },
   "offlineOn": {
-    "message": "测试开关已打开：不会向 Postulo 发送任何内容。"
+    "message": "测试开关已开启：不会向 Postulo 发送任何内容。"
   },
   "offlineOff": {
     "message": "测试开关已关闭：等待中的内容现在会发送到 Postulo。"
@@ -531,5 +531,19 @@
   },
   "reviewPageTitle": {
     "message": "审核抓取项"
+  },
+  "forgetPostulo": {
+    "message": "忘记此 Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "已保存。有 $COUNT$ 条抓取项在等待发送到另一个地址：请在此浏览器的“抓取项”中重新发送。",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "已忘记。此浏览器不再保存地址或令牌。抓取项会保留，但不会发送。"
   }
 }

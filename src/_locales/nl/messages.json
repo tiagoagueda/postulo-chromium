@@ -27,7 +27,7 @@
     "message": "De extensie krijgt toegang tot uw Postulo…"
   },
   "noPermission": {
-    "message": "Zonder toestemming om uw Postulo te bereiken, kan er niets worden verstuurd."
+    "message": "Zonder toestemming om je Postulo te bereiken, kan er niets worden verstuurd."
   },
   "sending": {
     "message": "Wordt naar Postulo gestuurd…"
@@ -441,19 +441,19 @@
     "message": "Postulo antwoordt"
   },
   "footerSlow": {
-    "message": "Postulo antwoordt langzaam"
+    "message": "Postulo antwoordt traag"
   },
   "reviewHeading": {
-    "message": "Nog te beoordelen"
+    "message": "Te controleren"
   },
   "waitingInPostulo": {
-    "message": "Wacht op beoordeling in Postulo"
+    "message": "Wacht op controle in Postulo"
   },
   "nothingWaiting": {
-    "message": "Er wacht niets op beoordeling."
+    "message": "Er wacht niets op controle."
   },
   "lastListed": {
-    "message": "Zoals Postulo ze het laatst weergaf, op $WHEN$.",
+    "message": "Zoals Postulo ze het laatst heeft opgesomd, op $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Het adres van Postulo is niet toegestaan, dus er is niets verstuurd. De vastlegging blijft bewaard en wacht: sta het adres toe en druk opnieuw op Verzenden."
+  },
+  "forgetPostulo": {
+    "message": "Deze Postulo vergeten"
+  },
+  "savedOtherAddress": {
+    "message": "Opgeslagen. $COUNT$ vastleggingen wachtten op het andere adres: verstuur ze opnieuw via Vastleggingen in deze browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Vergeten. Deze browser bewaart geen adres en geen token meer. De vastleggingen blijven bewaard en er wordt er geen verstuurd."
   }
 }

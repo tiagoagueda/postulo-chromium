@@ -247,13 +247,13 @@
     "message": "Testování a řešení potíží"
   },
   "offlineLabel": {
-    "message": "Chovat se, jako by Postulo nebyl dostupný"
+    "message": "Chovat se, jako by Postulo nebylo dostupné"
   },
   "offlineHint": {
     "message": "Pro testování. Dokud je to zapnuté, nic se neodesílá: zachycení čekají v tomto prohlížeči přesně tak, jako kdyby Postulo nefungoval, a odejdou, jakmile to vypnete."
   },
   "offlineOn": {
-    "message": "Testovací přepínač je zapnutý: na Postulo se nic neposílá."
+    "message": "Testovací přepínač je zapnutý: nic se do Postula neodesílá."
   },
   "offlineOff": {
     "message": "Testovací přepínač je vypnutý: co čeká, teď odchází na Postulo."
@@ -444,7 +444,7 @@
     "message": "Postulo odpovídá pomalu"
   },
   "reviewHeading": {
-    "message": "Čeká na kontrolu"
+    "message": "Ke kontrole"
   },
   "waitingInPostulo": {
     "message": "Čeká na kontrolu v Postulu"
@@ -453,7 +453,7 @@
     "message": "Nic nečeká na kontrolu."
   },
   "lastListed": {
-    "message": "Tak, jak je Postulo naposledy vypsal, $WHEN$.",
+    "message": "Tak, jak je Postulo naposledy vypsal, dne $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Adresa vašeho Postulo nebyla povolena, takže se nic neodeslalo. Zachycení zůstává uloženo a čeká: povolte adresu a znovu stiskněte Odeslat."
+  },
+  "forgetPostulo": {
+    "message": "Zapomenout tuto instanci Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Uloženo. Zachycení čekající na jinou adresu: $COUNT$ – odešlete je znovu ze sekce Zachycení v tomto prohlížeči.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Zapomenuto. Tento prohlížeč už nemá uloženou adresu ani token. Zachycení zůstávají zachována a žádné se neodešle."
   }
 }

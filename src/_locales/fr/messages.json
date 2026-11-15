@@ -27,7 +27,7 @@
     "message": "Autorisation de l'extension à joindre votre Postulo…"
   },
   "noPermission": {
-    "message": "Sans autorisation de joindre votre Postulo, rien ne peut être envoyé."
+    "message": "Sans l’autorisation d’accéder à votre Postulo, rien ne peut être envoyé."
   },
   "sending": {
     "message": "Envoi à Postulo…"
@@ -178,7 +178,7 @@
     "message": "Voici ce qui a été lu sur la page. Corrigez ce qui est faux ; rien ne quitte ce navigateur avant que vous l'envoyiez."
   },
   "sendForReview": {
-    "message": "Envoyer pour vérification"
+    "message": "Envoyer pour examen"
   },
   "notConnected": {
     "message": "Aucun Postulo n'est encore connecté : ce que vous capturez est gardé dans ce navigateur."
@@ -253,7 +253,7 @@
     "message": "Pour les tests. Tant que cette option est activée, rien n'est envoyé : les captures attendent dans ce navigateur exactement comme si Postulo était en panne, et partent dès qu'elle est désactivée."
   },
   "offlineOn": {
-    "message": "L'interrupteur de test est activé : rien n'est envoyé à Postulo."
+    "message": "L’interrupteur de test est activé : rien n’est envoyé à Postulo."
   },
   "offlineOff": {
     "message": "L'interrupteur de test est désactivé : ce qui attendait part maintenant vers Postulo."
@@ -441,16 +441,16 @@
     "message": "Postulo répond"
   },
   "footerSlow": {
-    "message": "Postulo répond lentement"
+    "message": "Postulo met du temps à répondre"
   },
   "reviewHeading": {
-    "message": "À vérifier"
+    "message": "À examiner"
   },
   "waitingInPostulo": {
-    "message": "En attente de vérification dans Postulo"
+    "message": "En attente d’examen dans Postulo"
   },
   "nothingWaiting": {
-    "message": "Rien n'attend d'être vérifié."
+    "message": "Rien n’attend d’être examiné."
   },
   "lastListed": {
     "message": "Telles que Postulo les a listées pour la dernière fois, le $WHEN$.",
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "L'adresse de Postulo n'a pas été autorisée, donc rien n'a été envoyé. La capture est conservée et en attente : autorisez l'adresse et appuyez à nouveau sur Envoyer."
+  },
+  "forgetPostulo": {
+    "message": "Oublier ce Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Enregistré. $COUNT$ captures attendaient l'autre adresse : envoyez-les de nouveau depuis Captures dans ce navigateur.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Oublié. Ce navigateur ne conserve plus ni adresse ni jeton. Les captures sont conservées et aucune ne sera envoyée."
   }
 }

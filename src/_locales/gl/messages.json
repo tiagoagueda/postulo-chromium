@@ -27,7 +27,7 @@
     "message": "Permitindo que a extensión chegue ao teu Postulo…"
   },
   "noPermission": {
-    "message": "Sen permiso para chegar ao teu Postulo, non se pode enviar nada."
+    "message": "Sen permiso para acceder ao teu Postulo, non se pode enviar nada."
   },
   "sending": {
     "message": "Enviando ao Postulo…"
@@ -178,7 +178,7 @@
     "message": "Isto é o que se leu da páxina. Corrixe o que estea mal; nada sae deste navegador ata que o envíes."
   },
   "sendForReview": {
-    "message": "Enviar a revisión"
+    "message": "Enviar para revisión"
   },
   "notConnected": {
     "message": "Aínda non hai ningún Postulo conectado: o que captures consérvase neste navegador."
@@ -247,13 +247,13 @@
     "message": "Probas e resolución de problemas"
   },
   "offlineLabel": {
-    "message": "Actuar como se non se puidese chegar ao Postulo"
+    "message": "Actuar como se non se puidese acceder a Postulo"
   },
   "offlineHint": {
     "message": "Para probas. Mentres isto estea activado, non se envía nada: as capturas agardan neste navegador exactamente como farían co Postulo caído, e saen en canto se desactive."
   },
   "offlineOn": {
-    "message": "O interruptor de proba está activado: non se envía nada ao Postulo."
+    "message": "O interruptor de probas está activado: non se envía nada a Postulo."
   },
   "offlineOff": {
     "message": "O interruptor de proba está desactivado: o que agardaba vai agora ao Postulo."
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Non se permitiu o enderezo do Postulo, así que non se enviou nada. A captura consérvase e agarda: permite o enderezo e preme Enviar de novo."
+  },
+  "forgetPostulo": {
+    "message": "Esquecer este Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Gardado. $COUNT$ capturas agardaban o outro enderezo: envíaas de novo desde «Capturas» neste navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Esquecido. Este navegador xa non garda un enderezo nin un token. As capturas consérvanse e non se enviará ningunha."
   }
 }

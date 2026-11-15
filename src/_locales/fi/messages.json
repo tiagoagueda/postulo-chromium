@@ -27,7 +27,7 @@
     "message": "Annetaan laajennukselle lupa tavoittaa Postulosi…"
   },
   "noPermission": {
-    "message": "Ilman lupaa tavoittaa Postulosi mitään ei voi lähettää."
+    "message": "Ilman lupaa ottaa yhteys Postuloosi mitään ei voi lähettää."
   },
   "sending": {
     "message": "Lähetetään Postuloon…"
@@ -44,7 +44,7 @@
     }
   },
   "untitled": {
-    "message": "Nimetön ilmoitus"
+    "message": "Otsikoton ilmoitus"
   },
   "optionsTitle": {
     "message": "Postulon asetukset"
@@ -222,7 +222,7 @@
     "message": "Testaus ja vianmääritys"
   },
   "offlineLabel": {
-    "message": "Toimi kuin Postuloa ei tavoitettaisi"
+    "message": "Toimi kuin Postuloon ei saataisi yhteyttä"
   },
   "offlineHint": {
     "message": "Testausta varten. Kun tämä on päällä, mitään ei lähetetä: kaappaukset odottavat tässä selaimessa aivan kuin Postulo olisi alhaalla, ja lähtevät, kun tämä on pois päältä."
@@ -531,5 +531,19 @@
         "content": "$3"
       }
     }
+  },
+  "forgetPostulo": {
+    "message": "Unohda tämä Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Tallennettu. $COUNT$ kaappausta odotti toista osoitetta: lähetä ne uudelleen selaimen Kaappaukset-näkymästä.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Unohdettu. Tämä selain ei enää säilytä osoitetta eikä tunnusta. Kaappaukset säilyvät, mutta mitään ei lähetetä."
   }
 }

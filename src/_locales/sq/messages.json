@@ -27,7 +27,7 @@
     "message": "Zgjerimit po i jepet leje të arrijë Postulo-në tuaj…"
   },
   "noPermission": {
-    "message": "Pa leje për të arritur Postulo-në tuaj, nuk mund të dërgohet asgjë."
+    "message": "Pa leje për të arritur Postulon tuaj, nuk mund të dërgohet asgjë."
   },
   "sending": {
     "message": "Po dërgohet te Postulo…"
@@ -170,7 +170,7 @@
     "message": "Kjo është ajo që u lexua nga faqja. Korrigjoni çdo gabim; asgjë nuk del nga ky shfletues derisa ta dërgoni."
   },
   "sendForReview": {
-    "message": "Dërgoje për shqyrtim"
+    "message": "Dërgo për shqyrtim"
   },
   "notConnected": {
     "message": "Ende nuk jeni lidhur me një Postulo: ato që kapni mbahen në këtë shfletues."
@@ -239,13 +239,13 @@
     "message": "Testimi dhe zgjidhja e problemeve"
   },
   "offlineLabel": {
-    "message": "Vepro sikur Postulo të mos mund të arrihet"
+    "message": "Vepro sikur Postulo nuk mund të arrihet"
   },
   "offlineHint": {
     "message": "Për testim. Sa kohë që kjo është e ndezur, asgjë nuk dërgohet: kapjet presin në këtë shfletues njësoj siç do të prisnin me Postulo-n jashtë funksionit, dhe shkojnë sapo të fiket."
   },
   "offlineOn": {
-    "message": "Çelësi i testimit është i ndezur: asgjë nuk i dërgohet Postulo-s."
+    "message": "Çelësi i provës është i ndezur: nuk dërgohet asgjë te Postulo."
   },
   "offlineOff": {
     "message": "Çelësi i testimit është i fikur: ato që presin shkojnë tani te Postulo."
@@ -436,13 +436,13 @@
     "message": "Postulo përgjigjet ngadalë"
   },
   "reviewHeading": {
-    "message": "Pret rishikim"
+    "message": "Pret shqyrtim"
   },
   "waitingInPostulo": {
-    "message": "Pret rishikim në Postulo"
+    "message": "Në pritje të shqyrtimit në Postulo"
   },
   "nothingWaiting": {
-    "message": "Asgjë nuk pret rishikim."
+    "message": "Asgjë nuk pret shqyrtim."
   },
   "lastListed": {
     "message": "Siç i renditi Postulo për herë të fundit, më $WHEN$.",
@@ -531,5 +531,19 @@
         "content": "$1"
       }
     }
+  },
+  "forgetPostulo": {
+    "message": "Harro këtë Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "U ruajt. $COUNT$ kapje po prisnin adresën tjetër: dërgojini sërish nga Kapjet në këtë shfletues.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "U harrua. Ky shfletues nuk mban më adresë ose token. Kapjet ruhen dhe asnjë nuk do të dërgohet."
   }
 }

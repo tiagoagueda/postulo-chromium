@@ -27,7 +27,7 @@
     "message": "Der Erweiterung wird der Zugriff auf Ihr Postulo erlaubt …"
   },
   "noPermission": {
-    "message": "Ohne die Erlaubnis, Ihr Postulo zu erreichen, kann nichts gesendet werden."
+    "message": "Ohne die Berechtigung, Ihr Postulo zu erreichen, kann nichts gesendet werden."
   },
   "sending": {
     "message": "Wird an Postulo gesendet …"
@@ -253,7 +253,7 @@
     "message": "Zum Testen. Solange dies an ist, wird nichts gesendet: Erfassungen warten in diesem Browser genau so, als wäre Postulo ausgefallen, und gehen los, sobald es aus ist."
   },
   "offlineOn": {
-    "message": "Der Testschalter ist an: Nichts wird an Postulo gesendet."
+    "message": "Der Testschalter ist an: Es wird nichts an Postulo gesendet."
   },
   "offlineOff": {
     "message": "Der Testschalter ist aus: Was wartet, geht jetzt an Postulo."
@@ -447,13 +447,13 @@
     "message": "Zu prüfen"
   },
   "waitingInPostulo": {
-    "message": "Wartet in Postulo auf Prüfung"
+    "message": "In Postulo zur Prüfung"
   },
   "nothingWaiting": {
     "message": "Nichts wartet auf Prüfung."
   },
   "lastListed": {
-    "message": "So, wie Postulo sie zuletzt aufgelistet hat, am $WHEN$.",
+    "message": "Stand der letzten Abfrage von Postulo: $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Die Adresse Ihres Postulo wurde nicht erlaubt, daher wurde nichts gesendet. Die Erfassung bleibt erhalten und wartet: Erlauben Sie die Adresse und drücken Sie erneut auf „Senden“."
+  },
+  "forgetPostulo": {
+    "message": "Dieses Postulo vergessen"
+  },
+  "savedOtherAddress": {
+    "message": "Gespeichert. $COUNT$ Erfassungen warteten auf die andere Adresse: Senden Sie sie erneut unter „Erfassungen“ in diesem Browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Vergessen. Dieser Browser speichert keine Adresse und keinen Token mehr. Die Erfassungen bleiben erhalten, es wird keine gesendet."
   }
 }

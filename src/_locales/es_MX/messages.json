@@ -18,13 +18,13 @@
     "message": "Por revisar"
   },
   "waitingInPostulo": {
-    "message": "En espera de revisión en Postulo"
+    "message": "Pendiente de revisión en Postulo"
   },
   "nothingWaiting": {
-    "message": "No hay nada en espera de revisión."
+    "message": "No hay nada pendiente de revisión."
   },
   "lastListed": {
-    "message": "Tal como Postulo las mostró por última vez, el $WHEN$.",
+    "message": "Tal como Postulo las listó por última vez, el $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -72,7 +72,7 @@
     "message": "Permitiendo que la extensión se conecte con su Postulo…"
   },
   "noPermission": {
-    "message": "Sin permiso para conectarse con su Postulo, no se puede enviar nada."
+    "message": "Sin permiso para acceder a tu Postulo, no se puede enviar nada."
   },
   "sending": {
     "message": "Enviando a Postulo…"
@@ -315,13 +315,13 @@
     "message": "Pruebas y solución de problemas"
   },
   "offlineLabel": {
-    "message": "Simular que no se puede conectar con Postulo"
+    "message": "Actuar como si no se pudiera acceder a Postulo"
   },
   "offlineHint": {
     "message": "Para pruebas. Mientras esté activado, no se envía nada: las capturas esperan en este navegador exactamente como lo harían si Postulo no estuviera disponible, y se envían en cuanto se desactiva."
   },
   "offlineOn": {
-    "message": "El interruptor de prueba está activado: no se envía nada a Postulo."
+    "message": "El interruptor de pruebas está activado: no se envía nada a Postulo."
   },
   "offlineOff": {
     "message": "El interruptor de prueba está desactivado: lo que estaba en espera se envía ahora a Postulo."
@@ -531,5 +531,19 @@
   },
   "reviewPageTitle": {
     "message": "Revisar una captura"
+  },
+  "forgetPostulo": {
+    "message": "Olvidar este Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Guardado. Había $COUNT$ capturas esperando a la otra dirección: vuelva a enviarlas desde Capturas en este navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Olvidado. Este navegador ya no guarda ninguna dirección ni token. Las capturas se conservan y no se enviará ninguna."
   }
 }

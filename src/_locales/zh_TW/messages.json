@@ -15,16 +15,16 @@
     "message": "Postulo 回應緩慢"
   },
   "reviewHeading": {
-    "message": "待審閱"
+    "message": "待審核"
   },
   "waitingInPostulo": {
-    "message": "在 Postulo 中等待審閱"
+    "message": "在 Postulo 中等待審核"
   },
   "nothingWaiting": {
-    "message": "沒有等待審閱的項目。"
+    "message": "沒有等待審核的項目。"
   },
   "lastListed": {
-    "message": "依 Postulo 於 $WHEN$ 最後列出的內容。",
+    "message": "依 Postulo 上次列出的內容，時間為 $WHEN$。",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -72,7 +72,7 @@
     "message": "正在允許擴充功能連線到您的 Postulo…"
   },
   "noPermission": {
-    "message": "沒有連線到您的 Postulo 的權限，就無法傳送任何內容。"
+    "message": "沒有存取你的 Postulo 的權限，無法傳送任何內容。"
   },
   "sending": {
     "message": "正在傳送到 Postulo…"
@@ -89,7 +89,7 @@
     }
   },
   "untitled": {
-    "message": "未命名的徵才啟事"
+    "message": "無標題徵才啟事"
   },
   "optionsTitle": {
     "message": "Postulo 設定"
@@ -243,7 +243,7 @@
     "message": "這是從頁面讀取到的內容。請修正任何錯誤；在您傳送之前，任何內容都不會離開此瀏覽器。"
   },
   "sendForReview": {
-    "message": "傳送以供審閱"
+    "message": "送出以供審閱"
   },
   "notConnected": {
     "message": "尚未連線到 Postulo：您擷取的內容會保存在此瀏覽器中。"
@@ -309,13 +309,13 @@
     "message": "測試與疑難排解"
   },
   "offlineLabel": {
-    "message": "模擬無法連線到 Postulo"
+    "message": "表現得如同無法連線到 Postulo"
   },
   "offlineHint": {
     "message": "供測試使用。開啟時不會傳送任何內容：擷取項目會在此瀏覽器中等待，就像 Postulo 停止運作時一樣，關閉後就會傳送。"
   },
   "offlineOn": {
-    "message": "測試開關已開啟：不會傳送任何內容到 Postulo。"
+    "message": "測試開關已開啟：不會向 Postulo 傳送任何內容。"
   },
   "offlineOff": {
     "message": "測試開關已關閉：等待中的項目現在會傳送到 Postulo。"
@@ -531,5 +531,19 @@
   },
   "holdBack": {
     "message": "改為保留在這裡"
+  },
+  "forgetPostulo": {
+    "message": "忘記此 Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "已儲存。有 $COUNT$ 筆擷取項目在等待傳送到另一個網址：請在此瀏覽器的「擷取項目」中重新傳送。",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "已忘記。此瀏覽器不再保存網址或權杖。擷取項目會保留，但不會傳送。"
   }
 }

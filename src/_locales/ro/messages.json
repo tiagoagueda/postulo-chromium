@@ -27,7 +27,7 @@
     "message": "Extensia primește permisiunea de a ajunge la Postulo-ul tău…"
   },
   "noPermission": {
-    "message": "Fără permisiunea de a ajunge la Postulo-ul tău, nu se poate trimite nimic."
+    "message": "Fără permisiunea de a accesa Postulo, nu se poate trimite nimic."
   },
   "sending": {
     "message": "Se trimite către Postulo…"
@@ -178,7 +178,7 @@
     "message": "Asta s-a citit din pagină. Corectează ce e greșit; nimic nu părăsește acest browser până nu îl trimiți."
   },
   "sendForReview": {
-    "message": "Trimite spre revizuire"
+    "message": "Trimiteți spre revizuire"
   },
   "notConnected": {
     "message": "Nu ești încă conectat la un Postulo: ce captezi este păstrat în acest browser."
@@ -247,13 +247,13 @@
     "message": "Testare și depanare"
   },
   "offlineLabel": {
-    "message": "Simulează că nu se poate ajunge la Postulo"
+    "message": "Acționează ca și cum Postulo nu ar putea fi contactat"
   },
   "offlineHint": {
     "message": "Pentru testare. Cât timp e pornit, nu se trimite nimic: captările așteaptă în acest browser exact ca atunci când Postulo e căzut, și pleacă după ce îl oprești."
   },
   "offlineOn": {
-    "message": "Comutatorul de testare este pornit: nimic nu este trimis către Postulo."
+    "message": "Comutatorul de testare este activat: nu se trimite nimic către Postulo."
   },
   "offlineOff": {
     "message": "Comutatorul de testare este oprit: ce așteaptă pleacă acum către Postulo."
@@ -441,13 +441,13 @@
     "message": "Postulo răspunde"
   },
   "footerSlow": {
-    "message": "Postulo răspunde greu"
+    "message": "Postulo răspunde lent"
   },
   "reviewHeading": {
     "message": "De verificat"
   },
   "waitingInPostulo": {
-    "message": "Așteaptă verificarea în Postulo"
+    "message": "În așteptare pentru verificare în Postulo"
   },
   "nothingWaiting": {
     "message": "Nimic nu așteaptă verificarea."
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Adresa Postulo nu a fost permisă, așa că nu s-a trimis nimic. Captura este păstrată și așteaptă: permiteți adresa și apăsați din nou Trimiteți."
+  },
+  "forgetPostulo": {
+    "message": "Uitați acest Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Salvat. $COUNT$ capturi așteptau cealaltă adresă: trimiteți-le din nou din Capturi în acest browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Uitat. Acest browser nu mai păstrează o adresă sau un token. Capturile sunt păstrate și niciuna nu va fi trimisă."
   }
 }

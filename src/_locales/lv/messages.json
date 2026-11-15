@@ -27,7 +27,7 @@
     "message": "Paplašinājumam tiek atļauts sasniegt jūsu Postulo…"
   },
   "noPermission": {
-    "message": "Bez atļaujas sasniegt jūsu Postulo neko nevar nosūtīt."
+    "message": "Bez atļaujas sasniegt jūsu Postulo nevar nosūtīt neko."
   },
   "sending": {
     "message": "Sūta uz Postulo…"
@@ -178,7 +178,7 @@
     "message": "Tas ir nolasīts no lapas. Izlabojiet kļūdas; nekas neatstāj šo pārlūku, kamēr to nenosūtāt."
   },
   "sendForReview": {
-    "message": "Sūtīt pārskatīšanai"
+    "message": "Nosūtīt pārskatīšanai"
   },
   "notConnected": {
     "message": "Vēl nav savienojuma ar Postulo: tas, ko tverat, tiek glabāts šajā pārlūkā."
@@ -247,13 +247,13 @@
     "message": "Testēšana un problēmu novēršana"
   },
   "offlineLabel": {
-    "message": "Rīkoties tā, it kā Postulo nebūtu sasniedzams"
+    "message": "Izturēties tā, it kā Postulo nebūtu sasniedzams"
   },
   "offlineHint": {
     "message": "Testēšanai. Kamēr šis ir ieslēgts, nekas netiek sūtīts: tvērumi gaida šajā pārlūkā tieši tāpat kā tad, ja Postulo nedarbotos, un aiziet, tiklīdz tas ir izslēgts."
   },
   "offlineOn": {
-    "message": "Testēšanas slēdzis ir ieslēgts: uz Postulo nekas netiek sūtīts."
+    "message": "Testa slēdzis ir ieslēgts: Postulo netiek sūtīts nekas."
   },
   "offlineOff": {
     "message": "Testēšanas slēdzis ir izslēgts: tas, kas gaida, tagad aiziet uz Postulo."
@@ -453,7 +453,7 @@
     "message": "Nekas negaida pārskatīšanu."
   },
   "lastListed": {
-    "message": "Kā Postulo pēdējoreiz uzskaitīja, $WHEN$.",
+    "message": "Tā, kā Postulo tos pēdējoreiz uzskaitīja, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Postulo adrese netika atļauta, tāpēc nekas netika nosūtīts. Tvērums ir saglabāts un gaida: atļaujiet adresi un vēlreiz nospiediet “Sūtīt”."
+  },
+  "forgetPostulo": {
+    "message": "Aizmirst šo Postulo instanci"
+  },
+  "savedOtherAddress": {
+    "message": "Saglabāts. $COUNT$ tvērumi gaidīja otru adresi: nosūtiet tos vēlreiz sadaļā “Tvērumi” šajā pārlūkā.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Aizmirsts. Šis pārlūks vairs neglabā ne adresi, ne marķieri. Tvērumi ir saglabāti, un neviens netiks nosūtīts."
   }
 }

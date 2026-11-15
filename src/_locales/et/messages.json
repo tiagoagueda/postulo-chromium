@@ -27,7 +27,7 @@
     "message": "Laiendusele antakse luba teie Postuloni jõuda…"
   },
   "noPermission": {
-    "message": "Ilma loata teie Postuloni jõuda ei saa midagi saata."
+    "message": "Ilma loata sinu Postulole ligi pääseda ei saa midagi saata."
   },
   "sending": {
     "message": "Saadetakse Postulosse…"
@@ -247,13 +247,13 @@
     "message": "Testimine ja tõrkeotsing"
   },
   "offlineLabel": {
-    "message": "Käitu nii, nagu Postulo poleks kättesaadav"
+    "message": "Käitu nii, nagu Postulole ei pääseks ligi"
   },
   "offlineHint": {
     "message": "Testimiseks. Kui see on sees, ei saadeta midagi: püüdmised ootavad selles brauseris täpselt nii, nagu siis, kui Postulo ei tööta, ja lähevad teele, kui see on väljas."
   },
   "offlineOn": {
-    "message": "Testlüliti on sees: Postulosse ei saadeta midagi."
+    "message": "Testimislüliti on sees: Postulole ei saadeta midagi."
   },
   "offlineOff": {
     "message": "Testlüliti on väljas: ootel olev läheb nüüd Postulosse."
@@ -444,13 +444,13 @@
     "message": "Postulo vastab aeglaselt"
   },
   "reviewHeading": {
-    "message": "Vajab ülevaatamist"
+    "message": "Vajab ülevaatust"
   },
   "waitingInPostulo": {
-    "message": "Ootab Postulos ülevaatamist"
+    "message": "Ootab Postulos ülevaatust"
   },
   "nothingWaiting": {
-    "message": "Midagi ei oota ülevaatamist."
+    "message": "Ülevaatamist ootavaid kuulutusi pole."
   },
   "lastListed": {
     "message": "Nii nagu Postulo need viimati loetles, $WHEN$.",
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Postulo aadressi ei lubatud, seega ei saadetud midagi. Jäädvustus on alles ja ootab: lubage aadress ja vajutage uuesti „Saada“."
+  },
+  "forgetPostulo": {
+    "message": "Unusta see Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Salvestatud. $COUNT$ jäädvustust ootas teist aadressi: saatke need uuesti selle brauseri jaotisest Jäädvustused.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Unustatud. See brauser ei hoia enam aadressi ega tõendit. Jäädvustused jäävad alles, kuid ühtegi neist ei saadeta."
   }
 }

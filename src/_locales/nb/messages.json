@@ -27,7 +27,7 @@
     "message": "Gir utvidelsen tilgang til Postulo-en din …"
   },
   "noPermission": {
-    "message": "Uten tillatelse til å nå Postulo-en din kan ingenting sendes."
+    "message": "Uten tillatelse til å nå din Postulo kan ingenting sendes."
   },
   "sending": {
     "message": "Sender til Postulo …"
@@ -178,7 +178,7 @@
     "message": "Dette er det som ble lest fra siden. Rett det som er feil; ingenting forlater denne nettleseren før du sender det."
   },
   "sendForReview": {
-    "message": "Send til gjennomsyn"
+    "message": "Send til gjennomgang"
   },
   "notConnected": {
     "message": "Ikke koblet til en Postulo ennå: det du fanger, beholdes i denne nettleseren."
@@ -247,7 +247,7 @@
     "message": "Testing og feilsøking"
   },
   "offlineLabel": {
-    "message": "Lat som Postulo ikke kan nås"
+    "message": "Opptre som om Postulo ikke kan nås"
   },
   "offlineHint": {
     "message": "For testing. Mens dette er på, sendes ingenting: fangster venter i denne nettleseren akkurat som de ville gjort med Postulo nede, og går når det er av."
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Adressen til Postulo ble ikke tillatt, så ingenting ble sendt. Fangsten er tatt vare på og venter: tillat adressen og trykk Send igjen."
+  },
+  "forgetPostulo": {
+    "message": "Glem denne Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Lagret. $COUNT$ fangster ventet på den andre adressen: send dem på nytt fra Fangster i denne nettleseren.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Glemt. Denne nettleseren har ikke lenger noen adresse eller token. Fangstene er beholdt, og ingen blir sendt."
   }
 }

@@ -27,7 +27,7 @@
     "message": "Zezwalanie rozszerzeniu na dostęp do Twojego Postulo…"
   },
   "noPermission": {
-    "message": "Bez pozwolenia na dostęp do Twojego Postulo nie można nic wysłać."
+    "message": "Bez uprawnienia do połączenia z Twoim Postulo nic nie może zostać wysłane."
   },
   "sending": {
     "message": "Wysyłanie do Postulo…"
@@ -247,7 +247,7 @@
     "message": "Testowanie i rozwiązywanie problemów"
   },
   "offlineLabel": {
-    "message": "Udawaj, że Postulo jest nieosiągalne"
+    "message": "Zachowuj się tak, jakby Postulo był nieosiągalny"
   },
   "offlineHint": {
     "message": "Do testów. Gdy to jest włączone, nic nie jest wysyłane: przechwycenia czekają w tej przeglądarce dokładnie tak, jak gdyby Postulo nie działało, i trafiają tam po wyłączeniu."
@@ -453,7 +453,7 @@
     "message": "Nic nie czeka na sprawdzenie."
   },
   "lastListed": {
-    "message": "Tak, jak Postulo ostatnio je wyświetliło: $WHEN$.",
+    "message": "Tak, jak Postulo wyświetlił je ostatnio, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Adres Postulo nie został dopuszczony, więc nic nie wysłano. Przechwycenie zostało zachowane i czeka: zezwól na dostęp do adresu i ponownie naciśnij Wyślij."
+  },
+  "forgetPostulo": {
+    "message": "Zapomnij tę instancję Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Zapisano. Przechwyceń oczekujących na inny adres: $COUNT$ – wyślij je ponownie z sekcji Przechwycenia w tej przeglądarce.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Zapomniano. Ta przeglądarka nie przechowuje już adresu ani tokena. Przechwycenia zostały zachowane i żadne nie zostanie wysłane."
   }
 }

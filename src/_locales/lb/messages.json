@@ -27,7 +27,7 @@
     "message": "D'Erweiderung kritt d'Erlaabnis, Äre Postulo z'erreechen…"
   },
   "noPermission": {
-    "message": "Ouni d'Erlaabnis, Äre Postulo z'erreechen, kann näischt geschéckt ginn."
+    "message": "Ouni Erlaabnis, äre Postulo z'erreechen, kann näischt geschéckt ginn."
   },
   "sending": {
     "message": "Gëtt un de Postulo geschéckt…"
@@ -178,7 +178,7 @@
     "message": "Dat gouf vun der Säit gelies. Verbessert, wat falsch ass; näischt verléisst dëse Browser, ier Dir et schéckt."
   },
   "sendForReview": {
-    "message": "Fir ze iwwerpréiwe schécken"
+    "message": "Zur Iwwerpréiwung schécken"
   },
   "notConnected": {
     "message": "Nach net mat engem Postulo verbonnen: wat Dir erfaasst, bleift an dësem Browser."
@@ -247,13 +247,13 @@
     "message": "Testen a Feelersich"
   },
   "offlineLabel": {
-    "message": "Maachen, wéi wann de Postulo net z'erreechen wier"
+    "message": "Esou doen, wéi wann Postulo net z'erreechen wier"
   },
   "offlineHint": {
     "message": "Fir ze testen. Soulaang dat un ass, gëtt näischt geschéckt: Erfaassunge waarden an dësem Browser genee wéi wann de Postulo net lafe géif, a ginn, soubal et aus ass."
   },
   "offlineOn": {
-    "message": "Den Testschalter ass un: näischt gëtt un de Postulo geschéckt."
+    "message": "De Testschalter ass un: et gëtt näischt un Postulo geschéckt."
   },
   "offlineOff": {
     "message": "Den Testschalter ass aus: wat waart, geet elo un de Postulo."
@@ -447,13 +447,13 @@
     "message": "Muss nogekuckt ginn"
   },
   "waitingInPostulo": {
-    "message": "Waart am Postulo op Nokucken"
+    "message": "Waart op d'Duerchkucken a Postulo"
   },
   "nothingWaiting": {
-    "message": "Näischt waart op Nokucken."
+    "message": "Näischt waart op d'Duerchkucken."
   },
   "lastListed": {
-    "message": "Sou wéi de Postulo se zuletzt opgelëscht huet, den $WHEN$.",
+    "message": "Wéi Postulo se de leschte Kéier opgelëscht huet, den $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "D'Adress vum Postulo gouf net erlaabt, dofir gouf näischt geschéckt. D'Erfaassung bleift a waart: erlaabt d'Adress an dréckt nach eng Kéier op Schécken."
+  },
+  "forgetPostulo": {
+    "message": "Dësen Postulo vergiessen"
+  },
+  "savedOtherAddress": {
+    "message": "Gespäichert. $COUNT$ Erfaassunge waren op déi aner Adress amgaang ze waarden: Schéckt se nach eng Kéier ënner „Erfaassungen“ an dësem Browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Vergiess. Dëse Browser hält keng Adress an och keen Token méi. D'Erfaassunge bleiwe behalen, et gëtt keng geschéckt."
   }
 }

@@ -15,16 +15,16 @@
     "message": "Postulo بطيء في الاستجابة"
   },
   "reviewHeading": {
-    "message": "بحاجة إلى مراجعة"
+    "message": "بانتظار المراجعة"
   },
   "waitingInPostulo": {
     "message": "بانتظار المراجعة في Postulo"
   },
   "nothingWaiting": {
-    "message": "لا شيء ينتظر المراجعة."
+    "message": "لا شيء بانتظار المراجعة."
   },
   "lastListed": {
-    "message": "كما عرضها Postulo آخر مرة، في $WHEN$.",
+    "message": "كما أدرجها Postulo آخر مرة، في $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -72,7 +72,7 @@
     "message": "جارٍ السماح للإضافة بالوصول إلى Postulo الخاص بك…"
   },
   "noPermission": {
-    "message": "دون إذن بالوصول إلى Postulo الخاص بك، لا يمكن إرسال أي شيء."
+    "message": "دون إذن للوصول إلى Postulo الخاص بك، لا يمكن إرسال أي شيء."
   },
   "sending": {
     "message": "جارٍ الإرسال إلى Postulo…"
@@ -296,7 +296,7 @@
     "message": "الاختبار واستكشاف الأخطاء وإصلاحها"
   },
   "offlineLabel": {
-    "message": "التصرّف كما لو تعذّر الوصول إلى Postulo"
+    "message": "التصرف كما لو تعذّر الوصول إلى Postulo"
   },
   "offlineHint": {
     "message": "للاختبار. ما دام مفعّلًا لا يُرسَل شيء: تنتظر الالتقاطات في هذا المتصفح تمامًا كما لو كان Postulo متوقفًا، وتُرسَل حالما يُطفأ."
@@ -531,5 +531,19 @@
         "content": "$1"
       }
     }
+  },
+  "forgetPostulo": {
+    "message": "نسيان Postulo هذا"
+  },
+  "savedOtherAddress": {
+    "message": "تم الحفظ. عدد الالتقاطات التي كانت تنتظر العنوان الآخر: $COUNT$. أرسلها مجددًا من «الالتقاطات» في هذا المتصفح.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "تم النسيان. لم يعد هذا المتصفح يحتفظ بعنوان أو برمز مميز. الالتقاطات محفوظة ولن يُرسَل أي منها."
   }
 }

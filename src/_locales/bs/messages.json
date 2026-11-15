@@ -27,7 +27,7 @@
     "message": "Dozvoljavanje proširenju da dođe do vašeg Postula…"
   },
   "noPermission": {
-    "message": "Bez dozvole da dođe do vašeg Postula ništa se ne može poslati."
+    "message": "Bez dozvole za pristup vašem Postulu ništa se ne može poslati."
   },
   "sending": {
     "message": "Slanje u Postulo…"
@@ -253,7 +253,7 @@
     "message": "Za testiranje. Dok je ovo uključeno, ništa se ne šalje: hvatanja čekaju u ovom pregledniku tačno kao da Postulo ne radi, i šalju se čim se isključi."
   },
   "offlineOn": {
-    "message": "Prekidač za testiranje je uključen: ništa se ne šalje u Postulo."
+    "message": "Testni prekidač je uključen: ništa se ne šalje Postulu."
   },
   "offlineOff": {
     "message": "Prekidač za testiranje je isključen: ono što čeka sada ide u Postulo."
@@ -444,7 +444,7 @@
     "message": "Postulo sporo odgovara"
   },
   "reviewHeading": {
-    "message": "Čeka pregled"
+    "message": "Za pregled"
   },
   "waitingInPostulo": {
     "message": "Čeka pregled u Postulu"
@@ -453,7 +453,7 @@
     "message": "Ništa ne čeka pregled."
   },
   "lastListed": {
-    "message": "Kako ih je Postulo zadnji put naveo, $WHEN$.",
+    "message": "Kako ih je Postulo posljednji put naveo, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Adresa Postula nije dozvoljena, pa ništa nije poslano. Hvatanje je sačuvano i čeka: dozvolite adresu i ponovo pritisnite Pošalji."
+  },
+  "forgetPostulo": {
+    "message": "Zaboravi ovaj Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Hvatanja koja su čekala drugu adresu: $COUNT$. Pošaljite ih ponovo iz Hvatanja u ovom pregledniku.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Zaboravljeno. Ovaj preglednik više ne čuva adresu ni token. Hvatanja su zadržana i nijedno neće biti poslano."
   }
 }

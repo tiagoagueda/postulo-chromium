@@ -27,7 +27,7 @@
     "message": "S'està permetent que l'extensió arribi al vostre Postulo…"
   },
   "noPermission": {
-    "message": "Sense permís per arribar al vostre Postulo, no es pot enviar res."
+    "message": "Sense permís per accedir al teu Postulo, no es pot enviar res."
   },
   "sending": {
     "message": "S'està enviant al Postulo…"
@@ -44,7 +44,7 @@
     }
   },
   "untitled": {
-    "message": "Oferta sense títol"
+    "message": "Anunci sense títol"
   },
   "optionsTitle": {
     "message": "Configuració de Postulo"
@@ -178,7 +178,7 @@
     "message": "Això és el que s'ha llegit de la pàgina. Corregiu el que estigui malament; res no surt d'aquest navegador fins que ho envieu."
   },
   "sendForReview": {
-    "message": "Envia a revisió"
+    "message": "Envia per a revisió"
   },
   "notConnected": {
     "message": "Encara sense connexió amb cap Postulo: el que captureu es desa en aquest navegador."
@@ -247,13 +247,13 @@
     "message": "Proves i resolució de problemes"
   },
   "offlineLabel": {
-    "message": "Fes com si no es pogués arribar al Postulo"
+    "message": "Actua com si no es pogués accedir a Postulo"
   },
   "offlineHint": {
     "message": "Per a proves. Mentre estigui activat, no s'envia res: les captures esperen en aquest navegador exactament com si el Postulo estigués caigut, i surten quan es desactiva."
   },
   "offlineOn": {
-    "message": "L'interruptor de proves està activat: no s'envia res al Postulo."
+    "message": "L'interruptor de proves està activat: no s'envia res a Postulo."
   },
   "offlineOff": {
     "message": "L'interruptor de proves està desactivat: el que esperava s'envia ara al Postulo."
@@ -438,22 +438,22 @@
     "message": "No es pot arribar al Postulo: el que envieu espera en aquest navegador fins que respongui."
   },
   "footerOnline": {
-    "message": "El Postulo respon"
+    "message": "Postulo respon"
   },
   "footerSlow": {
-    "message": "El Postulo triga a respondre"
+    "message": "Postulo triga a respondre"
   },
   "reviewHeading": {
-    "message": "Pendent de revisió"
+    "message": "Cal revisar"
   },
   "waitingInPostulo": {
-    "message": "Pendent de revisió al Postulo"
+    "message": "Pendent de revisió a Postulo"
   },
   "nothingWaiting": {
     "message": "No hi ha res pendent de revisió."
   },
   "lastListed": {
-    "message": "Tal com el Postulo les va llistar per última vegada, el $WHEN$.",
+    "message": "Tal com Postulo les va llistar l'última vegada, el $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "No s'ha permès l'adreça de Postulo, així que no s'ha enviat res. La captura es conserva i queda en espera: permeteu l'adreça i torneu a prémer Envia."
+  },
+  "forgetPostulo": {
+    "message": "Oblida aquest Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "S'ha desat. $COUNT$ captures esperaven l'altra adreça: torneu-les a enviar des de Captures en aquest navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "S'ha oblidat. Aquest navegador ja no conserva cap adreça ni cap testimoni. Les captures es conserven i no se n'enviarà cap."
   }
 }

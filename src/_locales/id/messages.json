@@ -9,22 +9,22 @@
     "message": "Postulo tidak dapat dicapai: apa yang Anda kirim menunggu di browser ini sampai jawabannya."
   },
   "footerOnline": {
-    "message": "Postulo jawaban"
+    "message": "Postulo menjawab"
   },
   "footerSlow": {
-    "message": "Postulo lambat untuk menjawab"
+    "message": "Postulo lambat menjawab"
   },
   "reviewHeading": {
-    "message": "Butuh ulasan"
+    "message": "Perlu ditinjau"
   },
   "waitingInPostulo": {
-    "message": "Menunggu ulasan di Postulo"
+    "message": "Menunggu peninjauan di Postulo"
   },
   "nothingWaiting": {
-    "message": "Tidak ada yang menunggu untuk meninjau."
+    "message": "Tidak ada yang menunggu peninjauan."
   },
   "lastListed": {
-    "message": "Seperti Postulo terakhir terdaftar mereka, pada $WHEN$.",
+    "message": "Seperti yang terakhir didaftar Postulo, pada $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -72,7 +72,7 @@
     "message": "Membiarkan perpanjangan untuk mencapai Postulo Anda.."
   },
   "noPermission": {
-    "message": "Tanpa izin untuk mencapai Postulo Anda, tidak ada yang dapat dikirim."
+    "message": "Tanpa izin untuk menjangkau Postulo Anda, tidak ada yang dapat dikirim."
   },
   "sending": {
     "message": "Mengirim ke Postulo.."
@@ -89,7 +89,7 @@
     }
   },
   "untitled": {
-    "message": "Postingan tanpa judul"
+    "message": "Lowongan tanpa judul"
   },
   "optionsTitle": {
     "message": "Pengaturan postulo"
@@ -243,7 +243,7 @@
     "message": "Ini adalah apa yang dibaca dari halaman. Koreksi semua yang salah; tak ada yang meninggalkan peramban ini sampai Anda mengirimkannya."
   },
   "sendForReview": {
-    "message": "Kirim untuk ulasan"
+    "message": "Kirim untuk ditinjau"
   },
   "notConnected": {
     "message": "Belum terhubung ke Postulo: apa yang Anda tangkap disimpan dalam peramban ini."
@@ -315,13 +315,13 @@
     "message": "Pengujian dan penyerapan"
   },
   "offlineLabel": {
-    "message": "Bertindak seolah-olah Postulo tidak dapat dicapai"
+    "message": "Bertindak seolah-olah Postulo tidak dapat dijangkau"
   },
   "offlineHint": {
     "message": "Untuk pengujian. Sementara ini pada, tidak ada yang dikirim: menangkap menunggu di browser ini persis seperti yang mereka akan dengan Postulo turun, dan pergi setelah itu mati."
   },
   "offlineOn": {
-    "message": "Saklar pengujian aktif: tidak ada yang dikirim ke Postulo."
+    "message": "Sakelar uji aktif: tidak ada yang dikirim ke Postulo."
   },
   "offlineOff": {
     "message": "Pengujian dimatikan: apa yang menunggu pergi ke Postulo sekarang."
@@ -531,5 +531,19 @@
   },
   "reviewPageTitle": {
     "message": "Tinjau penangkapan"
+  },
+  "forgetPostulo": {
+    "message": "Lupakan Postulo ini"
+  },
+  "savedOtherAddress": {
+    "message": "Disimpan. Ada $COUNT$ tangkapan yang menunggu alamat lain: kirim ulang dari Tangkapan di browser ini.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Dilupakan. Browser ini tidak lagi menyimpan alamat atau token. Tangkapan tetap disimpan, dan tidak ada yang akan dikirim."
   }
 }

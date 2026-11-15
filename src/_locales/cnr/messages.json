@@ -15,7 +15,7 @@
     "message": "Postulo sporo odgovara"
   },
   "reviewHeading": {
-    "message": "Čeka pregled"
+    "message": "Za pregled"
   },
   "waitingInPostulo": {
     "message": "Čeka pregled u Postulu"
@@ -321,7 +321,7 @@
     "message": "Za testiranje. Dok je ovo uključeno, ništa se ne šalje: uhvaćeni oglasi čekaju u ovom pregledaču tačno kao kad Postulo ne radi i šalju se kad se ovo isključi."
   },
   "offlineOn": {
-    "message": "Probni prekidač je uključen: ništa se ne šalje u Postulo."
+    "message": "Probni prekidač je uključen: ništa se ne šalje Postulu."
   },
   "offlineOff": {
     "message": "Probni prekidač je isključen: ono što čeka sada odlazi u Postulo."
@@ -531,5 +531,19 @@
   },
   "reviewPageTitle": {
     "message": "Pregled uhvaćenog oglasa"
+  },
+  "forgetPostulo": {
+    "message": "Zaboravi ovaj Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Sačuvano. $COUNT$ uhvaćenih oglasa čekalo je drugu adresu: pošaljite ih ponovo iz odjeljka „Uhvaćeni oglasi“ u ovom pregledaču.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Zaboravljeno. Ovaj pregledač više ne čuva ni adresu ni token. Uhvaćeni oglasi su sačuvani, a nijedan neće biti poslat."
   }
 }

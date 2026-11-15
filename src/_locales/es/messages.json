@@ -27,7 +27,7 @@
     "message": "Permitiendo que la extensión llegue a tu Postulo…"
   },
   "noPermission": {
-    "message": "Sin permiso para llegar a tu Postulo, no se puede enviar nada."
+    "message": "Sin permiso para acceder a tu Postulo, no se puede enviar nada."
   },
   "sending": {
     "message": "Enviando a Postulo…"
@@ -178,7 +178,7 @@
     "message": "Esto es lo que se ha leído de la página. Corrige lo que esté mal; nada sale de este navegador hasta que lo envíes."
   },
   "sendForReview": {
-    "message": "Enviar a revisión"
+    "message": "Enviar para revisión"
   },
   "notConnected": {
     "message": "Aún sin conexión con ningún Postulo: lo que captures se guarda en este navegador."
@@ -247,13 +247,13 @@
     "message": "Pruebas y resolución de problemas"
   },
   "offlineLabel": {
-    "message": "Actuar como si no se pudiera contactar con Postulo"
+    "message": "Actuar como si no se pudiera acceder a Postulo"
   },
   "offlineHint": {
     "message": "Para pruebas. Mientras esté activado, no se envía nada: las capturas esperan en este navegador igual que si Postulo estuviera caído, y salen en cuanto se desactive."
   },
   "offlineOn": {
-    "message": "El interruptor de prueba está activado: no se envía nada a Postulo."
+    "message": "El interruptor de pruebas está activado: no se envía nada a Postulo."
   },
   "offlineOff": {
     "message": "El interruptor de prueba está desactivado: lo que estaba esperando se envía ahora a Postulo."
@@ -444,10 +444,10 @@
     "message": "Postulo tarda en responder"
   },
   "reviewHeading": {
-    "message": "Pendientes de revisión"
+    "message": "Pendiente de revisión"
   },
   "waitingInPostulo": {
-    "message": "Esperando revisión en Postulo"
+    "message": "Pendiente de revisión en Postulo"
   },
   "nothingWaiting": {
     "message": "No hay nada pendiente de revisión."
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "No se permitió la dirección de Postulo, así que no se envió nada. La captura se conserva a la espera: permita la dirección y vuelva a pulsar Enviar."
+  },
+  "forgetPostulo": {
+    "message": "Olvidar este Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Guardado. Había $COUNT$ capturas esperando a la otra dirección: vuelva a enviarlas desde Capturas en este navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Olvidado. Este navegador ya no guarda ninguna dirección ni token. Las capturas se conservan y no se enviará ninguna."
   }
 }

@@ -27,7 +27,7 @@
     "message": "Rozšírenie dostáva povolenie na prístup k vášmu Postulu…"
   },
   "noPermission": {
-    "message": "Bez povolenia na prístup k vášmu Postulu nemožno nič odoslať."
+    "message": "Bez povolenia na prístup k vášmu Postulo sa nedá nič odoslať."
   },
   "sending": {
     "message": "Odosiela sa do Postula…"
@@ -247,13 +247,13 @@
     "message": "Testovanie a riešenie problémov"
   },
   "offlineLabel": {
-    "message": "Správať sa, akoby bol Postulo nedostupný"
+    "message": "Správať sa, akoby Postulo nebolo dostupné"
   },
   "offlineHint": {
     "message": "Na testovanie. Kým je to zapnuté, nič sa neodosiela: zachytenia čakajú v tomto prehliadači presne tak, ako keby bol Postulo mimo prevádzky, a odídu, keď sa to vypne."
   },
   "offlineOn": {
-    "message": "Testovací prepínač je zapnutý: Postulo nič nedostane."
+    "message": "Testovací prepínač je zapnutý: do Postulo sa nič neodosiela."
   },
   "offlineOff": {
     "message": "Testovací prepínač je vypnutý: Postulo teraz dostane všetko, čo čaká."
@@ -447,13 +447,13 @@
     "message": "Čaká na kontrolu"
   },
   "waitingInPostulo": {
-    "message": "Čaká na kontrolu v Postule"
+    "message": "Čaká na kontrolu v Postulo"
   },
   "nothingWaiting": {
     "message": "Nič nečaká na kontrolu."
   },
   "lastListed": {
-    "message": "Tak, ako ich Postulo naposledy uviedol, $WHEN$.",
+    "message": "Tak, ako ich Postulo naposledy vypísal, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Adresa vášho Postulo nebola povolená, takže sa nič neodoslalo. Zachytenie zostáva uložené a čaká: povoľte adresu a znova stlačte Odoslať."
+  },
+  "forgetPostulo": {
+    "message": "Zabudnúť túto inštanciu Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Uložené. Zachytenia čakajúce na inú adresu: $COUNT$ – odošlite ich znova zo sekcie Zachytenia v tomto prehliadači.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Zabudnuté. Tento prehliadač už nemá uloženú adresu ani token. Zachytenia zostávajú zachované a žiadne sa neodošle."
   }
 }

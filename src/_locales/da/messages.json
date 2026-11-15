@@ -178,7 +178,7 @@
     "message": "Det her er, hvad der blev læst på siden. Ret det, der er forkert; intet forlader denne browser, før du sender det."
   },
   "sendForReview": {
-    "message": "Send til gennemsyn"
+    "message": "Send til gennemgang"
   },
   "notConnected": {
     "message": "Endnu ikke forbundet til en Postulo: det, du indfanger, gemmes i denne browser."
@@ -247,7 +247,7 @@
     "message": "Test og fejlfinding"
   },
   "offlineLabel": {
-    "message": "Lad som om Postulo ikke kan nås"
+    "message": "Opfør dig, som om Postulo ikke kan nås"
   },
   "offlineHint": {
     "message": "Til test. Mens den er slået til, sendes intet: indfangninger venter i denne browser, præcis som hvis Postulo var nede, og sendes, når den er slået fra."
@@ -453,7 +453,7 @@
     "message": "Intet venter på gennemgang."
   },
   "lastListed": {
-    "message": "Som Postulo senest viste dem, den $WHEN$.",
+    "message": "Som Postulo senest listede dem, den $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Postulos adresse blev ikke tilladt, så intet blev sendt. Indfangningen er gemt og venter: tillad adressen, og tryk på Send igen."
+  },
+  "forgetPostulo": {
+    "message": "Glem denne Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Gemt. $COUNT$ indfangninger ventede på den anden adresse: send dem igen fra Indfangninger i denne browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Glemt. Denne browser har ikke længere en adresse eller et token. Indfangningerne er gemt, og ingen bliver sendt."
   }
 }

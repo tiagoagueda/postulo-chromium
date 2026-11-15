@@ -27,7 +27,7 @@
     "message": "A bővítmény hozzáférésének engedélyezése a Postulójához…"
   },
   "noPermission": {
-    "message": "A Postulója eléréséhez szükséges engedély nélkül semmit sem lehet elküldeni."
+    "message": "A Postuloddal való kapcsolatfelvétel engedélye nélkül nem küldhető semmi."
   },
   "sending": {
     "message": "Küldés a Postulóba…"
@@ -178,7 +178,7 @@
     "message": "Ezt olvasta be az oldalról. Javítsa ki, ami hibás; semmi sem hagyja el ezt a böngészőt, amíg el nem küldi."
   },
   "sendForReview": {
-    "message": "Küldés ellenőrzésre"
+    "message": "Küldés átnézésre"
   },
   "notConnected": {
     "message": "Még nincs csatlakoztatott Postulo: amit rögzít, azt ez a böngésző őrzi meg."
@@ -247,13 +247,13 @@
     "message": "Tesztelés és hibaelhárítás"
   },
   "offlineLabel": {
-    "message": "A Postulo elérhetetlenségének szimulálása"
+    "message": "Úgy viselkedjen, mintha a Postulo nem lenne elérhető"
   },
   "offlineHint": {
     "message": "Teszteléshez. Amíg be van kapcsolva, semmi sem megy el: a rögzítések pontosan úgy várnak ebben a böngészőben, mintha a Postulo nem működne, és kikapcsolás után elmennek."
   },
   "offlineOn": {
-    "message": "A tesztkapcsoló be van kapcsolva: a Postulo semmit sem kap meg."
+    "message": "A tesztelési kapcsoló be van kapcsolva: semmi sem megy a Postulónak."
   },
   "offlineOff": {
     "message": "A tesztkapcsoló ki van kapcsolva: ami várakozott, azt most megkapja a Postulo."
@@ -447,13 +447,13 @@
     "message": "Átnézésre vár"
   },
   "waitingInPostulo": {
-    "message": "Átnézésre vár a Postulóban"
+    "message": "Átnézésre vár a Postuloban"
   },
   "nothingWaiting": {
     "message": "Semmi sem vár átnézésre."
   },
   "lastListed": {
-    "message": "Ahogy a Postulo legutóbb felsorolta őket: $WHEN$.",
+    "message": "Úgy, ahogyan a Postulo utoljára listázta őket, ekkor: $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "A Postulo címe nem lett engedélyezve, ezért semmi sem lett elküldve. A rögzítés megmarad, és várakozik: engedélyezze a címet, és nyomja meg újra a Küldés gombot."
+  },
+  "forgetPostulo": {
+    "message": "A Postulo elfelejtése"
+  },
+  "savedOtherAddress": {
+    "message": "Mentve. $COUNT$ rögzítés várt a másik címre: küldje el újra őket a böngésző Rögzítések oldaláról.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Elfelejtve. Ez a böngésző már nem tárol címet vagy tokent. A rögzítések megmaradnak, de egyiket sem küldi el."
   }
 }

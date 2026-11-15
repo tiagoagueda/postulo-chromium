@@ -44,7 +44,7 @@
     }
   },
   "untitled": {
-    "message": "Anúncio sem título"
+    "message": "Vaga sem título"
   },
   "optionsTitle": {
     "message": "Configurações do Postulo"
@@ -253,7 +253,7 @@
     "message": "Para testes. Enquanto isto estiver ativado, nada é enviado: as capturas esperam neste navegador exatamente como esperariam com o Postulo fora do ar, e seguem assim que for desativado."
   },
   "offlineOn": {
-    "message": "O modo de teste está ativado: nada é enviado ao Postulo."
+    "message": "A chave de teste está ligada: nada é enviado ao Postulo."
   },
   "offlineOff": {
     "message": "O modo de teste está desativado: o que estava esperando vai para o Postulo agora."
@@ -438,22 +438,22 @@
     "message": "Não foi possível acessar o Postulo: o que você enviar espera neste navegador até ele responder."
   },
   "footerOnline": {
-    "message": "O Postulo está respondendo"
+    "message": "O Postulo responde"
   },
   "footerSlow": {
-    "message": "O Postulo está demorando para responder"
+    "message": "O Postulo demora para responder"
   },
   "reviewHeading": {
-    "message": "Aguardando revisão"
+    "message": "Precisa de revisão"
   },
   "waitingInPostulo": {
     "message": "Aguardando revisão no Postulo"
   },
   "nothingWaiting": {
-    "message": "Nada aguarda revisão."
+    "message": "Nada aguardando revisão."
   },
   "lastListed": {
-    "message": "Como o Postulo listou por último, em $WHEN$.",
+    "message": "Como o Postulo listou pela última vez, em $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "O endereço do seu Postulo não foi permitido, então nada foi enviado. A captura foi mantida e está aguardando: permita o endereço e clique em Enviar novamente."
+  },
+  "forgetPostulo": {
+    "message": "Esquecer este Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Salvo. $COUNT$ capturas estavam aguardando o outro endereço: envie-as novamente em “Capturas” neste navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Esquecido. Este navegador não guarda mais um endereço nem um token. As capturas foram mantidas e nenhuma será enviada."
   }
 }

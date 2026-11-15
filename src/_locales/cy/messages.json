@@ -27,7 +27,7 @@
     "message": "Yn caniatáu i'r estyniad gyrraedd eich Postulo…"
   },
   "noPermission": {
-    "message": "Heb ganiatâd i gyrraedd eich Postulo, does dim modd anfon dim."
+    "message": "Heb ganiatâd i gyrraedd eich Postulo, ni ellir anfon dim."
   },
   "sending": {
     "message": "Yn anfon i Postulo…"
@@ -247,13 +247,13 @@
     "message": "Profi a datrys problemau"
   },
   "offlineLabel": {
-    "message": "Ymddwyn fel pe na bai modd cyrraedd Postulo"
+    "message": "Gweithredu fel pe na ellid cyrraedd Postulo"
   },
   "offlineHint": {
     "message": "Ar gyfer profi. Tra bo hwn ymlaen, does dim yn cael ei anfon: mae dalfeydd yn aros yn y porwr hwn yn union fel y bydden nhw pe bai Postulo i lawr, ac yn mynd unwaith y bydd i ffwrdd."
   },
   "offlineOn": {
-    "message": "Mae'r switsh profi ymlaen: does dim yn cael ei anfon i Postulo."
+    "message": "Mae'r switsh profi ymlaen: ni anfonir dim at Postulo."
   },
   "offlineOff": {
     "message": "Mae'r switsh profi i ffwrdd: mae'r hyn sy'n aros yn mynd i Postulo nawr."
@@ -438,7 +438,7 @@
     "message": "Does dim modd cyrraedd Postulo: mae'r hyn rydych chi'n ei anfon yn aros yn y porwr hwn nes iddo ateb."
   },
   "footerOnline": {
-    "message": "Mae Postulo'n ateb"
+    "message": "Mae Postulo yn ateb"
   },
   "footerSlow": {
     "message": "Mae Postulo'n araf i ateb"
@@ -447,13 +447,13 @@
     "message": "Angen adolygu"
   },
   "waitingInPostulo": {
-    "message": "Yn aros i gael ei adolygu yn Postulo"
+    "message": "Yn aros i'w adolygu yn Postulo"
   },
   "nothingWaiting": {
-    "message": "Does dim byd yn aros i gael ei adolygu."
+    "message": "Does dim byd yn aros i'w adolygu."
   },
   "lastListed": {
-    "message": "Fel y rhestrodd Postulo nhw ddiwethaf, ar $WHEN$.",
+    "message": "Fel y gwnaeth Postulo eu rhestru ddiwethaf, ar $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Ni chafodd cyfeiriad Postulo ei ganiatáu, felly ni anfonwyd dim. Mae'r cipiad yn cael ei gadw ac yn aros: caniatewch y cyfeiriad a phwyswch Anfon eto."
+  },
+  "forgetPostulo": {
+    "message": "Anghofio'r Postulo hwn"
+  },
+  "savedOtherAddress": {
+    "message": "Cadwyd. Roedd $COUNT$ cipiad yn aros am y cyfeiriad arall: anfonwch hwy eto o'r adran Cipiadau yn y porwr hwn.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Anghofiwyd. Nid oes gan y porwr hwn gyfeiriad na thocyn mwyach. Cedwir y cipiadau, ac ni anfonir yr un ohonynt."
   }
 }

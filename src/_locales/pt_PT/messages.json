@@ -27,7 +27,7 @@
     "message": "A permitir que a extensão chegue ao seu Postulo…"
   },
   "noPermission": {
-    "message": "Sem permissão para chegar ao seu Postulo, nada pode ser enviado."
+    "message": "Sem permissão para aceder ao seu Postulo, não é possível enviar nada."
   },
   "sending": {
     "message": "A enviar para o Postulo…"
@@ -44,7 +44,7 @@
     }
   },
   "untitled": {
-    "message": "Anúncio sem título"
+    "message": "Oferta sem título"
   },
   "optionsTitle": {
     "message": "Definições do Postulo"
@@ -247,13 +247,13 @@
     "message": "Testes e resolução de problemas"
   },
   "offlineLabel": {
-    "message": "Agir como se o Postulo estivesse inacessível"
+    "message": "Agir como se o Postulo não pudesse ser contactado"
   },
   "offlineHint": {
     "message": "Para testes. Enquanto isto estiver ligado, nada é enviado: as capturas esperam neste navegador exatamente como esperariam com o Postulo em baixo, e seguem quando for desligado."
   },
   "offlineOn": {
-    "message": "O interruptor de teste está ligado: nada é enviado para o Postulo."
+    "message": "O interruptor de teste está ativado: nada é enviado para o Postulo."
   },
   "offlineOff": {
     "message": "O interruptor de teste está desligado: o que está à espera segue agora para o Postulo."
@@ -444,7 +444,7 @@
     "message": "O Postulo demora a responder"
   },
   "reviewHeading": {
-    "message": "Por rever"
+    "message": "A rever"
   },
   "waitingInPostulo": {
     "message": "À espera de revisão no Postulo"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "O endereço do Postulo não foi permitido, por isso nada foi enviado. A captura fica guardada e à espera: permita o endereço e prima Enviar novamente."
+  },
+  "forgetPostulo": {
+    "message": "Esquecer este Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Guardado. $COUNT$ capturas estavam à espera do outro endereço: envie-as de novo a partir de «Capturas» neste navegador.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Esquecido. Este navegador já não guarda um endereço nem um token. As capturas são mantidas e nenhuma será enviada."
   }
 }

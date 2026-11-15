@@ -12,19 +12,19 @@
     "message": "Postulo respunda"
   },
   "footerSlow": {
-    "message": "Postulo respunda plaun"
+    "message": "Postulo respunda a plaun"
   },
   "reviewHeading": {
-    "message": "Examinaziun necessaria"
+    "message": "Cunter controllar"
   },
   "waitingInPostulo": {
-    "message": "Spetga sin l'examinaziun en Postulo"
+    "message": "Spetga ina controlla en Postulo"
   },
   "nothingWaiting": {
-    "message": "Nagut na spetga sin l'examinaziun."
+    "message": "Nagut n'aspetta ina controlla."
   },
   "lastListed": {
-    "message": "Sco che Postulo als ha mussads l'ultima giada, ils $WHEN$.",
+    "message": "Uschia che Postulo als ha listà il davos, ils $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -72,7 +72,7 @@
     "message": "Dumonda la permissiun da cuntanscher Voss Postulo…"
   },
   "noPermission": {
-    "message": "Senza permissiun da cuntanscher Voss Postulo na po nagut vegnir tramess."
+    "message": "Senza permissiun d'access a Voss Postulo na po nagut vegnir tramett."
   },
   "sending": {
     "message": "Vegn tramess a Postulo…"
@@ -243,7 +243,7 @@
     "message": "Quai è quai ch'è vegnì legì da la pagina. Rectifitgai tut quai ch'è fauss; nagut na banduna quest navigatur avant che Vus al tramettais."
   },
   "sendForReview": {
-    "message": "Trametter per l'examinaziun"
+    "message": "Trametter per la revisiun"
   },
   "notConnected": {
     "message": "Anc betg collià cun in Postulo: quai che Vus capturais vegn conservà en quest navigatur."
@@ -315,13 +315,13 @@
     "message": "Test e soluziun da problems"
   },
   "offlineLabel": {
-    "message": "Far sco sche Postulo na fiss betg cuntanschibel"
+    "message": "Agir sco sche Postulo n'era betg accessibel"
   },
   "offlineHint": {
     "message": "Per testar. Durant che quai è activà, na vegn nagut tramess: las capturas spetgan en quest navigatur exactamain sco sche Postulo na funcziunass betg, e partan uschespert ch'il cumutatur è deactivà."
   },
   "offlineOn": {
-    "message": "Il cumutatur da test è activà: nagut na vegn tramess a Postulo."
+    "message": "L'interruptur da test è activà: nagut na vegn tramett a Postulo."
   },
   "offlineOff": {
     "message": "Il cumutatur da test è deactivà: quai che spetga va ussa a Postulo."
@@ -531,5 +531,19 @@
   },
   "reviewPageTitle": {
     "message": "Examinar ina captura"
+  },
+  "forgetPostulo": {
+    "message": "Emblidar questa instanza da Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Arcunà. $COUNT$ capturas spetgavan l'autra adressa: tramettai las danovamain da Capturas en quest navigatur.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Emblidà. Quest navigatur na conserva pli ni adressa ni token. Las capturas restan conservadas e nagina na vegn tramessa."
   }
 }

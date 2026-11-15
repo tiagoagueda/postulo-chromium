@@ -27,7 +27,7 @@
     "message": "Qed tingħata permess lill-estensjoni biex tilħaq il-Postulo tiegħek…"
   },
   "noPermission": {
-    "message": "Mingħajr permess biex tilħaq il-Postulo tiegħek, ma jista' jintbagħat xejn."
+    "message": "Mingħajr permess biex jintlaħaq il-Postulo tiegħek, xejn ma jista' jintbagħat."
   },
   "sending": {
     "message": "Qed jintbagħat lill-Postulo…"
@@ -247,13 +247,13 @@
     "message": "Ittestjar u soluzzjoni ta' problemi"
   },
   "offlineLabel": {
-    "message": "Aġixxi daqslikieku l-Postulo ma jistax jintlaħaq"
+    "message": "Aġixxi bħallikieku Postulo ma jistax jintlaħaq"
   },
   "offlineHint": {
     "message": "Għall-ittestjar. Sakemm dan ikun mixgħul, xejn ma jintbagħat: il-qbidiet jistennew f'dan il-brawżer eżatt kif kienu jagħmlu kieku l-Postulo ma jaħdimx, u jitilqu hekk kif jintefa."
   },
   "offlineOn": {
-    "message": "Is-swiċċ tal-ittestjar mixgħul: xejn ma jintbagħat lill-Postulo."
+    "message": "L-iswiċċ tal-ittestjar huwa mixgħul: xejn ma jintbagħat lil Postulo."
   },
   "offlineOff": {
     "message": "Is-swiċċ tal-ittestjar mitfi: dak li qed jistenna jmur lill-Postulo issa."
@@ -444,16 +444,16 @@
     "message": "Postulo qed iwieġeb bil-mod"
   },
   "reviewHeading": {
-    "message": "Jeħtieġ reviżjoni"
+    "message": "Teħtieġ reviżjoni"
   },
   "waitingInPostulo": {
-    "message": "Qed jistenna r-reviżjoni f'Postulo"
+    "message": "Qed jistenna reviżjoni f'Postulo"
   },
   "nothingWaiting": {
-    "message": "Xejn ma qed jistenna r-reviżjoni."
+    "message": "Xejn ma qed jistenna reviżjoni."
   },
   "lastListed": {
-    "message": "Kif Postulo elenkahom l-aħħar, fi $WHEN$.",
+    "message": "Kif Postulo elenkahom l-aħħar darba, fil-$WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "L-indirizz tal-Postulo ma ġiex permess, għalhekk xejn ma ntbagħat. Il-qbid jinżamm u jistenna: ippermetti l-indirizz u erġa' agħfas Ibgħat."
+  },
+  "forgetPostulo": {
+    "message": "Insa dan il-Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Issejvjat. Kien hemm $COUNT$ qbid jistennew l-indirizz l-ieħor: ibgħathom mill-ġdid minn Qbid f'dan il-browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Insa. Dan il-browser m'għandux indirizz jew token iżjed. Il-qbid jinżamm, u ebda wieħed ma jintbagħat."
   }
 }

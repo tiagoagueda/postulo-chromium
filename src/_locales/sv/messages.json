@@ -27,7 +27,7 @@
     "message": "Ger tillägget åtkomst till din Postulo …"
   },
   "noPermission": {
-    "message": "Utan tillåtelse att nå din Postulo kan inget skickas."
+    "message": "Utan behörighet att nå din Postulo kan inget skickas."
   },
   "sending": {
     "message": "Skickar till Postulo …"
@@ -222,7 +222,7 @@
     "message": "Testning och felsökning"
   },
   "offlineLabel": {
-    "message": "Låtsas att Postulo inte går att nå"
+    "message": "Agera som om Postulo inte kan nås"
   },
   "offlineHint": {
     "message": "För testning. Medan det här är på skickas inget: infångningar väntar i den här webbläsaren precis som om Postulo låg nere, och går iväg när det slås av."
@@ -428,7 +428,7 @@
     "message": "Inget väntar på granskning."
   },
   "lastListed": {
-    "message": "Så som Postulo senast listade dem, den $WHEN$.",
+    "message": "Som Postulo senast listade dem, den $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
         "content": "$3"
       }
     }
+  },
+  "forgetPostulo": {
+    "message": "Glöm den här Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Sparat. $COUNT$ infångningar väntade på den andra adressen: skicka dem igen från Infångningar i den här webbläsaren.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Glömd. Den här webbläsaren har inte längre någon adress eller token. Infångningarna är sparade och inga kommer att skickas."
   }
 }

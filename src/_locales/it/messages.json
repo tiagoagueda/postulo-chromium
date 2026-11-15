@@ -247,13 +247,13 @@
     "message": "Test e risoluzione dei problemi"
   },
   "offlineLabel": {
-    "message": "Fai come se Postulo non fosse raggiungibile"
+    "message": "Comportati come se Postulo non fosse raggiungibile"
   },
   "offlineHint": {
     "message": "Per i test. Finché è attivo, non viene inviato nulla: le acquisizioni restano in questo browser esattamente come farebbero con Postulo fuori servizio, e partono quando lo disattivi."
   },
   "offlineOn": {
-    "message": "L'interruttore di test è attivo: a Postulo non viene inviato nulla."
+    "message": "L'interruttore di prova è attivo: non viene inviato nulla a Postulo."
   },
   "offlineOff": {
     "message": "L'interruttore di test è disattivato: ciò che era in attesa parte ora verso Postulo."
@@ -450,7 +450,7 @@
     "message": "In attesa di revisione in Postulo"
   },
   "nothingWaiting": {
-    "message": "Niente è in attesa di revisione."
+    "message": "Niente in attesa di revisione."
   },
   "lastListed": {
     "message": "Come li ha elencati Postulo l'ultima volta, il $WHEN$.",
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "L'indirizzo di Postulo non è stato consentito, quindi non è stato inviato nulla. L'acquisizione viene conservata e resta in attesa: consenti l'indirizzo e premi di nuovo Invia."
+  },
+  "forgetPostulo": {
+    "message": "Dimentica questo Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Salvato. $COUNT$ acquisizioni erano in attesa dell'altro indirizzo: inviale di nuovo da Acquisizioni in questo browser.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Dimenticato. Questo browser non conserva più un indirizzo né un token. Le acquisizioni restano conservate e nessuna verrà inviata."
   }
 }

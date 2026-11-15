@@ -27,7 +27,7 @@
     "message": "Проширењу се дозвољава да дође до вашег Postulo-а…"
   },
   "noPermission": {
-    "message": "Без дозволе да се дође до вашег Postulo-а, ништа се не може послати."
+    "message": "Без дозволе за приступ вашем Postulo, ништа се не може послати."
   },
   "sending": {
     "message": "Шаље се у Postulo…"
@@ -444,16 +444,16 @@
     "message": "Postulo споро одговара"
   },
   "reviewHeading": {
-    "message": "Чека преглед"
+    "message": "Чека проверу"
   },
   "waitingInPostulo": {
-    "message": "Чека преглед у Postulo-у"
+    "message": "Чека проверу у Postulo"
   },
   "nothingWaiting": {
-    "message": "Ништа не чека преглед."
+    "message": "Ништа не чека проверу."
   },
   "lastListed": {
-    "message": "Како их је Postulo последњи пут навео, $WHEN$.",
+    "message": "Онако како их је Postulo последњи пут навео, $WHEN$.",
     "placeholders": {
       "when": {
         "content": "$1"
@@ -531,5 +531,19 @@
   },
   "permissionRefused": {
     "message": "Адреса Postulo није дозвољена, па ништа није послато. Снимак је сачуван и чека: дозволите адресу и поново притисните Пошаљи."
+  },
+  "forgetPostulo": {
+    "message": "Заборави овај Postulo"
+  },
+  "savedOtherAddress": {
+    "message": "Сачувано. $COUNT$ ухваћених огласа чекало је другу адресу: пошаљите их поново из одељка „Ухваћени огласи“ у овом прегледачу.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "forgotten": {
+    "message": "Заборављено. Овај прегледач више не чува ни адресу ни токен. Ухваћени огласи су сачувани, а ниједан неће бити послат."
   }
 }
