@@ -235,3 +235,13 @@ test("an identifier matches a whole segment of the address, not part of one", ()
   assert.equal(readPosting(doc, `${SITE}/jobs/2002`, parse).data.title, "Physicist");
   assert.equal(readPosting(doc, `${SITE}/jobs/20020`, parse).data.title, "Welder");
 });
+
+test("a page that draws its posting in an open shadow root keeps it, slimmed like the rest (#30)", () => {
+  const doc = page(
+    "<title>Offre</title>",
+    `<descriptif-offre><template shadowrootmode="open"><style>x{}</style><h1>Welder</h1><input type="hidden" value="SECRET-HIDDEN"><!-- SECRET-COMMENT --><script>big()</script><p>Weld things</p></template></descriptif-offre><template><p>an ordinary template</p></template>`,
+  );
+  const slim = slimPage(doc);
+  assert.ok(slim.includes('shadowrootmode="open"') && slim.includes("<h1>Welder</h1>") && slim.includes("Weld things"));
+  assert.doesNotMatch(slim, /SECRET|big\(\)|<style|ordinary template/);
+});

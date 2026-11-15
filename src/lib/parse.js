@@ -1046,7 +1046,17 @@ export const MAX_PAGE = 512 * 1024;
  *  arrives as leniently as a browser does, and reads the truncation note if a person looks. */
 export function slimPage(doc) {
   const copy = doc.documentElement.cloneNode(true);
-  for (const element of copy.querySelectorAll("script, style, noscript, template, svg, link, iframe")) {
+  slimTree(copy, doc);
+  const html = `<!doctype html>\n${copy.outerHTML}`;
+  return html.length > MAX_PAGE ? `${cut(html, MAX_PAGE)}\n<!-- truncated at ${MAX_PAGE} characters -->\n` : html;
+}
+
+/** Slim one tree in place: what slimPage does, for the page and for each declarative shadow
+ *  root in it (`<template shadowrootmode>`, which a capture writes where a page draws its
+ *  posting inside a web component, #30). Such a root is the posting, so it is kept; its
+ *  content is a tree `querySelectorAll` does not enter, so it is slimmed on its own. */
+function slimTree(copy, doc) {
+  for (const element of copy.querySelectorAll("script, style, noscript, template:not([shadowrootmode]), svg, link, iframe")) {
     const keep = element.localName === "script" && (element.getAttribute("type") || "").toLowerCase().includes("ld+json");
     if (!keep) {
       element.remove();
@@ -1073,6 +1083,7 @@ export function slimPage(doc) {
     gone.push(comments.currentNode);
   }
   gone.forEach((comment) => comment.remove());
-  const html = `<!doctype html>\n${copy.outerHTML}`;
-  return html.length > MAX_PAGE ? `${cut(html, MAX_PAGE)}\n<!-- truncated at ${MAX_PAGE} characters -->\n` : html;
+  for (const shadow of copy.querySelectorAll("template[shadowrootmode]")) {
+    slimTree(shadow.content, doc);
+  }
 }

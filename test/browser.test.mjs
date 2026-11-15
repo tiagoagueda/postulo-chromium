@@ -69,3 +69,39 @@ test("an address stored before the rules is not used: http to another machine, c
   assert.equal(fine.instance, "https://postulo.example.org");
   assert.equal(fine.refused, "");
 });
+
+test("the page is read with its open shadow roots where the browser can write them (#30)", async () => {
+  const { pageSource } = await import("../src/lib/browser.js");
+  const inner = { shadowRoot: null, name: "inner" };
+  const deep = { querySelectorAll: () => [inner], name: "root-of-outer" };
+  const outer = { shadowRoot: deep, name: "outer" };
+  const closed = { shadowRoot: null, name: "closed" };
+  let asked = null;
+  globalThis.location = { href: "https://candidat.example/offre/1" };
+  globalThis.document = {
+    querySelectorAll: () => [outer, closed],
+    documentElement: {
+      outerHTML: "<html>plain</html>",
+      getHTML: (options) => {
+        asked = options;
+        return "<html><template shadowrootmode='open'>offer</template></html>";
+      },
+    },
+  };
+  const read = pageSource();
+  assert.equal(read.url, "https://candidat.example/offre/1");
+  assert.match(read.html, /shadowrootmode/);
+  assert.equal(asked.serializableShadowRoots, true);
+  assert.deepEqual(asked.shadowRoots, [deep], "open roots only: a closed one has no shadowRoot to hand over");
+
+  // Nothing to add, or no getHTML (Chromium before 125), or one that throws: the page as it was.
+  globalThis.document.querySelectorAll = () => [closed];
+  assert.equal(pageSource().html, "<html>plain</html>");
+  globalThis.document.querySelectorAll = () => [outer];
+  globalThis.document.documentElement.getHTML = undefined;
+  assert.equal(pageSource().html, "<html>plain</html>");
+  globalThis.document.documentElement.getHTML = () => {
+    throw new Error("unsupported");
+  };
+  assert.equal(pageSource().html, "<html>plain</html>");
+});

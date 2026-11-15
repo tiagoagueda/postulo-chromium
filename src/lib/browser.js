@@ -62,6 +62,39 @@ export async function tabProblem() {
   return /^https?:/.test(tab.url) ? "" : "notWebPage";
 }
 
+/** The page's address and source, as it runs inside the page: injected for one call, so it
+ *  uses nothing outside itself.
+ *
+ *  `outerHTML` leaves out every shadow root, so a board that draws its posting inside a web
+ *  component arrives empty (#30). Each open root is written where it is as a declarative
+ *  `<template shadowrootmode="open">`, which an HTML parser reads as ordinary markup. A
+ *  closed root has no `shadowRoot` and so stays out, as it should. Where `getHTML` does not
+ *  exist (Chromium before 125), or fails, the page goes as it always did. */
+export function pageSource() {
+  const doc = document;
+  const root = doc.documentElement;
+  if (typeof root.getHTML === "function") {
+    try {
+      const roots = [];
+      const walk = (parent) => {
+        for (const element of parent.querySelectorAll("*")) {
+          if (element.shadowRoot) {
+            roots.push(element.shadowRoot);
+            walk(element.shadowRoot);
+          }
+        }
+      };
+      walk(doc);
+      if (roots.length) {
+        return { url: location.href, html: root.getHTML({ serializableShadowRoots: true, shadowRoots: roots }) };
+      }
+    } catch {
+      // Fall through to the plain page.
+    }
+  }
+  return { url: location.href, html: root.outerHTML };
+}
+
 /** The current tab's address and source, read through a content script injected for this
  *  one call. Only activeTab is needed: nothing runs on any page until the person asks. */
 export async function readCurrentTab() {
@@ -76,7 +109,7 @@ export async function readCurrentTab() {
   try {
     [injected] = await ext.scripting.executeScript({
       target: { tabId: tab.id },
-      func: () => ({ url: location.href, html: document.documentElement.outerHTML }),
+      func: pageSource,
     });
   } catch (error) {
     // The browser refuses some pages (its own store, policy-blocked hosts, error pages)
