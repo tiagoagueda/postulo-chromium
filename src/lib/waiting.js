@@ -2,13 +2,13 @@
 //
 // Two places hold such captures. Postulo holds the ones it has, and `GET /captures` lists
 // them; this browser holds the ones that have not reached it. A posting captured twice is
-// two captures, on purpose, and counts once here: two captures with one `sameUrl()` are one
-// posting. Postulo's list is read whole, because a capture decided there simply leaves it
+// two captures, on purpose, and counts once here: two captures with one `posting_key` are one
+// posting. The key is Postulo's: it names the posting at an address, however the address was
+// spelled, and the extension cannot compute it (it is keyed by the instance's secret). Postulo's list is read whole, because a capture decided there simply leaves it
 // and nothing reports a removal; what was read last is kept, so that a Postulo that cannot
 // be reached leaves the number where it was instead of dropping it.
 
 import { listCaptures } from "./api.js";
-import { sameUrl } from "./address.js";
 import { UNSENT } from "./store.js";
 
 /** The storage key of the last list read from Postulo: `{at, rows}`. */
@@ -29,22 +29,42 @@ export function slimRow(row) {
     title: row.title,
     company_name: row.company_name,
     location: row.location,
+    posting_key: row.posting_key,
     created_at: row.created_at,
     review_url: row.review_url,
   };
 }
 
+/** The key a row from Postulo groups by: Postulo's `posting_key`, or the row's own id where
+ *  it is empty (an address naming no host) or missing (a Postulo older than #711, whose
+ *  rows then count one per capture). */
+export const rowKey = (row) => row.posting_key || `postulo:${row.id}`;
+
+/** The key a capture held here groups by: the `posting_key` Postulo gave for its address
+ *  (kept on the record by `postingKey`), or its own id until Postulo has been asked. */
+export const recordKey = (record) => record.postingKey || `here:${record.id}`;
+
+/** Keep, on a capture held here, the `posting_key` Postulo gave for its address, so that
+ *  the badge and the list of captures to review can merge it with what Postulo holds of
+ *  the same posting. Nothing is kept for an answer without a key (a Postulo older than
+ *  #711) or with an empty one (an address naming no host); the capture then counts on its
+ *  own. Never an error: a capture deleted meanwhile is simply not updated. */
+export async function keepPostingKey(store, id, answer) {
+  if (answer && typeof answer.posting_key === "string" && answer.posting_key) {
+    await store.update(id, { postingKey: answer.posting_key }).catch(() => {});
+  }
+}
+
 /** How many postings the captures stand for: those waiting in Postulo (`rows`) and those
- *  here not yet sent (`records`), one per address. A capture whose address names no host
- *  cannot be matched with another and counts for itself. */
+ *  here not yet sent (`records`), one per `posting_key`. */
 export function countPostings(rows, records) {
   const keys = new Set();
   for (const row of rows) {
-    keys.add(sameUrl(row.url) || `postulo:${row.id}`);
+    keys.add(rowKey(row));
   }
   for (const record of records) {
     if (UNSENT.has(record.state)) {
-      keys.add(sameUrl(record.url) || `here:${record.id}`);
+      keys.add(recordKey(record));
     }
   }
   return keys.size;

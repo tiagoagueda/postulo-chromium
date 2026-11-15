@@ -116,9 +116,12 @@ proceeds as it always did.
 ## The number on the toolbar button
 
 The button shows how many postings are captured and waiting for review: those waiting in
-Postulo and those in this browser that have not reached it yet, one for each address (two
-captures of one posting, with or without `www.` or a trailing slash, count once; the rule
-is Postulo's own `same_url()`, tested against its cases). Past 99 it reads `99+`, and the
+Postulo and those in this browser that have not reached it yet, one for each posting (two
+captures of one posting count once: Postulo names the posting at an address with an opaque
+`posting_key`, the same however the address was spelled, and the extension groups by it and
+never reduces an address itself; a capture here has its key once Postulo has been asked
+about its address, and counts on its own until then, as does every capture of a Postulo
+older than that key). Past 99 it reads `99+`, and the
 tooltip says it in words. A capture Postulo has is counted from Postulo's list, which the
 extension reads (`GET /api/v1/captures`, only the token goes) every five minutes, when the
 browser starts, after a delivery that sent something, when you save another address or
@@ -296,8 +299,7 @@ request. `npm test` fails while the code asks for a key that `en` does not have.
 | `src/options.*` | Address, token, *Test*, *Save*; the language; the testing switch and the log |
 | `src/background.js` | Opens the settings on first install; sends what is waiting, reads Postulo's list of captures waiting for review and asks whether Postulo answers, every five minutes and at start |
 | `src/lib/connection.js` | Whether Postulo answers, kept as one record; and the toolbar's image and tooltip from it and the settings |
-| `src/lib/waiting.js` | The toolbar number: reading Postulo's list, and counting postings once per address |
-| `src/lib/address.js` | What identifies a posting by its address: Postulo's `same_url()`, ported |
+| `src/lib/waiting.js` | The toolbar number: reading Postulo's list, and counting postings once per Postulo `posting_key` |
 | `src/lib/parse.js` | Reading a posting: Postulo's `schema.org` and `page-metadata` sources, carried over |
 | `src/lib/titles.js`, `src/lib/patterns.js` | What `page-metadata` reads from a title line (job, employer) and from the text (salary, closing date), as Postulo's `titles.py` and `patterns.py` do |
 | `src/lib/store.js` | The captures kept in the browser, and the page each was read from |

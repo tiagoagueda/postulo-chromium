@@ -10,7 +10,7 @@ import { hostOf } from "./lib/log.js";
 import { emptyPosting, MAX_PAGE, readPosting, readPostings, slimPage } from "./lib/parse.js";
 import { onInstance } from "./lib/rendering.js";
 import { reviewRows } from "./lib/review.js";
-import { waitingCopy } from "./lib/waiting.js";
+import { keepPostingKey, waitingCopy } from "./lib/waiting.js";
 import { openInReviewWindow, reviewPageUrl } from "./lib/window.js";
 
 const $ = (id) => document.getElementById(id);
@@ -262,6 +262,7 @@ async function main() {
   // ------------------------------------------------------- several at once
 
   let offered = []; // what the results page listed, in its order
+  let keys = new Map(); // what Postulo said of each listed address (its posting_key), by address
 
   /** Lay the listed postings out as a list to tick, none ticked: the gesture is
    *  "look at forty, keep three", and three is easier to tick than thirty-seven to untick. */
@@ -293,10 +294,13 @@ async function main() {
     $("send-picked").disabled = false;
     // The ones Postulo already holds are marked, not unticked: they are unticked already,
     // and the second visit to a board's results page is where duplicates arrive in bulk.
+    keys = new Map();
     askKnown(settings, listed.map((posting) => posting.data)).then((answers) => {
       if (!answers) {
         return;
       }
+      // Kept for the captures made from this page, by address (see savePicked).
+      answers.forEach((answer, index) => keys.set(listed[index].data.url, answer));
       answers.forEach((answer, index) => {
         const label = list.children[index] && list.children[index].querySelector("label");
         if (label && (answer.listings.length || answer.captures.length)) {
@@ -332,6 +336,9 @@ async function main() {
       }
     }
     const records = await store.addMany({ html: page.html, entries, state });
+    for (const record of records) {
+      await keepPostingKey(store, record.id, keys.get(record.url));
+    }
     await log.add(state === "waiting" ? "to send" : "kept", { batch: records.length, host: hostOf(page.url) });
     await showCount();
     return records;

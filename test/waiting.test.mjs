@@ -2,10 +2,13 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { badgeText, coalesce, countPostings, lastWaiting, readWaiting, refreshWaiting, WAITING } from "../src/lib/waiting.js";
+import { makeStore } from "../src/lib/store.js";
+import { badgeText, coalesce, countPostings, keepPostingKey, lastWaiting, readWaiting, refreshWaiting, WAITING } from "../src/lib/waiting.js";
 
-const row = (id, url) => ({ id, url, title: `T${id}`, company_name: "Black Mesa", location: "Lyon", created_at: "2026-10-01T09:00:00Z", review_url: `https://p.example/r/${id}`, page: { big: "x" }, status: "pending" });
-const here = (id, url, state = "kept") => ({ id, url, state });
+// A stand-in for Postulo's `posting_key` (the extension cannot compute the real one).
+const keyOf = (url) => (/^https?:\/\//i.test(url) ? "k:" + url.replace(/^https?:\/\/(www\.)?/i, "").replace(/\/+$/, "").toLowerCase() : "");
+const row = (id, url) => ({ id, url, posting_key: keyOf(url), title: `T${id}`, company_name: "Black Mesa", location: "Lyon", created_at: "2026-10-01T09:00:00Z", review_url: `https://p.example/r/${id}`, page: { big: "x" }, status: "pending" });
+const here = (id, url, state = "kept", postingKey = keyOf(url)) => ({ id, url, postingKey, state });
 
 function memoryArea() {
   const data = new Map();
@@ -44,6 +47,18 @@ test("two captures of one posting, with and without www, and another kept here, 
   assert.equal(countPostings(rows, [here("a", "https://other.example/jobs/7")]), 2);
 });
 
+test("two keys stay apart, one key merges, and a record here without a key counts on its own", () => {
+  const rows = [row(1, "https://example.org/jobs/1"), row(2, "https://example.org/jobs/2")];
+  assert.equal(countPostings(rows, []), 2);
+  assert.equal(countPostings(rows, [here("a", "https://example.org/jobs/2", "kept")]), 2);
+  assert.equal(countPostings(rows, [here("a", "https://example.org/jobs/2", "kept", "")]), 3);
+});
+
+test("rows from a Postulo without posting_key count one per capture", () => {
+  const old = (id) => ({ ...row(id, "https://example.org/jobs/1"), posting_key: undefined });
+  assert.equal(countPostings([old(1), old(2)], []), 2);
+});
+
 test("a capture here that Postulo has, or has sent, counts once or not at all", () => {
   const rows = [row(1, "https://example.org/jobs/42")];
   assert.equal(countPostings(rows, [here("a", "https://www.example.org/jobs/42/", "waiting")]), 1);
@@ -51,7 +66,7 @@ test("a capture here that Postulo has, or has sent, counts once or not at all", 
   assert.equal(countPostings([], [here("a", "https://example.org/jobs/9", "refused")]), 1);
 });
 
-test("addresses that name no host count for themselves", () => {
+test("addresses that name no host (an empty key) count for themselves", () => {
   assert.equal(countPostings([row(1, "nonsense"), row(2, "nonsense")], [here("a", "nonsense")]), 3);
 });
 
@@ -65,7 +80,7 @@ test("the list is read in pages of 100 until the count is reached, and keeps no 
   const got = await readWaiting({ instance: "https://p.example", token: "t", fetchImpl: postulo(rows, asked) });
   assert.equal(got.length, 230);
   assert.equal(asked.length, 3);
-  assert.deepEqual(Object.keys(got[0]), ["id", "url", "title", "company_name", "location", "created_at", "review_url"]);
+  assert.deepEqual(Object.keys(got[0]), ["id", "url", "title", "company_name", "location", "posting_key", "created_at", "review_url"]);
 });
 
 test("after a 429 it waits as the refusal says, then goes on", async () => {
@@ -192,4 +207,20 @@ test("a recount that fails does not stop the next", async () => {
   fail = false;
   await recount();
   assert.equal(runs, 2);
+});
+
+test("the key Postulo gave for an address is kept on the record, and an empty or missing one is not", async () => {
+  const area = memoryArea();
+  area.remove = async (keys) => [].concat(keys).forEach((key) => area.data.delete(key));
+  const store = makeStore(area);
+  const a = await store.add({ url: "https://example.org/jobs/1", html: "", data: { title: "A" }, state: "kept" });
+  const b = await store.add({ url: "nonsense", html: "", data: { title: "B" }, state: "kept" });
+  await keepPostingKey(store, a.id, { url: a.url, posting_key: "k:abc" });
+  await keepPostingKey(store, b.id, { url: b.url, posting_key: "" });
+  await keepPostingKey(store, b.id, null);
+  await keepPostingKey(store, "gone", { posting_key: "k:x" });
+  const [kept, unkept] = [await store.get(a.id), await store.get(b.id)];
+  assert.equal(kept.postingKey, "k:abc");
+  assert.equal(unkept.postingKey, undefined);
+  assert.equal(countPostings([{ id: 1, posting_key: "k:abc" }], [kept]), 1);
 });

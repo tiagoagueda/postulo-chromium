@@ -4,8 +4,11 @@ import { test } from "node:test";
 
 import { MOST_ROWS, reviewRows } from "../src/lib/review.js";
 
-const post = (id, url, at) => ({ id, url, title: `T${id}`, company_name: "Black Mesa", location: "Lyon", created_at: at, review_url: `https://p.example/r/${id}` });
-const here = (id, url, capturedAt, state = "kept") => ({ id, url, state, capturedAt, data: { title: `H${id}`, company_name: "Aperture", location: "" } });
+// A stand-in for Postulo's `posting_key`: one name for the posting however the address was
+// spelled, empty for an address naming no host. The extension never computes it itself.
+const keyOf = (url) => (/^https?:\/\//i.test(url) ? "k:" + url.replace(/^https?:\/\/(www\.)?/i, "").replace(/\/+$/, "").toLowerCase() : "");
+const post = (id, url, at) => ({ id, url, posting_key: keyOf(url), title: `T${id}`, company_name: "Black Mesa", location: "Lyon", created_at: at, review_url: `https://p.example/r/${id}` });
+const here = (id, url, capturedAt, state = "kept", key = keyOf(url)) => ({ id, url, postingKey: key, state, capturedAt, data: { title: `H${id}`, company_name: "Aperture", location: "" } });
 
 test("three captures in Postulo, two of one posting, and one posting kept here: three rows", () => {
   const waiting = [
@@ -44,6 +47,25 @@ test("a capture sent from here is not a row of its own: Postulo's list holds it"
   const { rows, total } = reviewRows([], [here("s", "https://jobs.example/a/1", "2026-10-01T09:00:00Z", "sent")]);
   assert.equal(total, 0);
   assert.deepEqual(rows, []);
+});
+
+test("captures with one posting_key are one row however the address was spelled, and two keys stay apart", () => {
+  const { rows, total } = reviewRows(
+    [post(1, "https://www.jobs.example/a/1/", "2026-10-01T09:00:00Z"), post(2, "http://JOBS.example/a/1", "2026-10-02T09:00:00Z"), post(3, "https://jobs.example/a/2", "2026-10-01T10:00:00Z")],
+    [],
+  );
+  assert.equal(total, 2);
+  assert.deepEqual(rows.map((row) => [row.id, row.count]), [[2, 2], [3, 1]]);
+});
+
+test("a capture here without a key yet is a row of its own until Postulo has been asked", () => {
+  const { total } = reviewRows([post(1, "https://jobs.example/a/1", "2026-10-01T09:00:00Z")], [here("x", "https://jobs.example/a/1", "2026-10-02T09:00:00Z", "kept", "")]);
+  assert.equal(total, 2);
+});
+
+test("a Postulo older than the key gives rows without one: one row per capture", () => {
+  const old = (id) => ({ ...post(id, "https://jobs.example/a/1", "2026-10-01T09:00:00Z"), posting_key: undefined });
+  assert.equal(reviewRows([old(1), old(2)], []).total, 2);
 });
 
 test("captures whose address names no host are one row each", () => {

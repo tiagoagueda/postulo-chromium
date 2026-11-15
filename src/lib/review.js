@@ -1,12 +1,12 @@
 // The list of captures that need review, in the popup: the postings the badge counts.
 //
 // The same two places and the same rule as the number: what waits in Postulo (the copy of
-// its list) and what is here not yet sent, one row for each posting by `sameUrl()`. A row
+// its list) and what is here not yet sent, one row for each posting by Postulo's `posting_key`. A row
 // stands for the newest capture in Postulo if there is one, else the newest here, and says
 // how many captures there are of that posting.
 
-import { sameUrl } from "./address.js";
 import { UNSENT } from "./store.js";
+import { recordKey, rowKey } from "./waiting.js";
 
 /** The most rows the popup draws before it links to the rest. */
 export const MOST_ROWS = 5;
@@ -37,7 +37,7 @@ export function reviewRows(waiting, records, limit = MOST_ROWS) {
     }
   };
   for (const row of waiting) {
-    place(sameUrl(row.url) || `postulo:${row.id}`, {
+    place(rowKey(row), {
       kind: "postulo",
       id: row.id,
       title: row.title,
@@ -51,7 +51,7 @@ export function reviewRows(waiting, records, limit = MOST_ROWS) {
   }
   for (const record of records) {
     if (UNSENT.has(record.state)) {
-      place(sameUrl(record.url) || `here:${record.id}`, {
+      place(recordKey(record), {
         kind: "here",
         id: record.id,
         title: record.data.title,

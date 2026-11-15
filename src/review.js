@@ -9,6 +9,7 @@ import { ext, loadSettings, requestHostPermission } from "./lib/browser.js";
 import { postingForm } from "./lib/form.js";
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
 import { askKnown, sayKnown } from "./lib/known.js";
+import { keepPostingKey } from "./lib/waiting.js";
 import { afterSending, deliverWaiting, log, showUnsentCount, store } from "./lib/local.js";
 import { hostOf } from "./lib/log.js";
 import { drawPage, encodePicture } from "./lib/picture.js";
@@ -95,7 +96,10 @@ async function main() {
   $("edit-read-by").textContent = current.source ? t("readBy", [current.source]) : "";
   // Captured before? Asked after the form is up, and said when the answer comes;
   // the form is usable meanwhile and stays usable if it never does (#178).
-  askKnown(settings, [current.read || current.data]).then((answers) => sayKnown($("edit-known"), answers && answers[0], settings.instance), () => {});
+  askKnown(settings, [current.read || current.data]).then((answers) => {
+    sayKnown($("edit-known"), answers && answers[0], settings.instance);
+    return keepPostingKey(store, current.id, answers && answers[0]);
+  }, () => {});
   show("edit");
   editor.focus();
 
