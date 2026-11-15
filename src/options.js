@@ -83,7 +83,10 @@ async function main() {
   // A language stored but no longer shipped is not in the list: the select then shows "Follow
   // the browser", the stored value stays as it is, and so does the language in use.
   $("language").value = LANGUAGES.some((one) => one.tag === settings.language) ? settings.language : "";
-  $("instance").value = settings.instance;
+  $("instance").value = settings.stored;
+  if (settings.refused) {
+    say(t(settings.refused), true);
+  }
   $("token").value = settings.token;
   $("offline").checked = settings.offline;
 

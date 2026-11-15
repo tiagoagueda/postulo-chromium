@@ -158,6 +158,10 @@ async function main() {
   });
 
   $("not-connected").hidden = connected;
+  if (settings.refused) {
+    // An address kept from before a rule: say why it is not used (SEC3-010).
+    $("not-connected").firstElementChild.textContent = t(settings.refused);
+  }
   $("offline-on").hidden = !settings.offline;
   if (connected) {
     // Where a capture goes, in the corner: always visible, never in the way.

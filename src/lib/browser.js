@@ -1,6 +1,6 @@
 // Chromium exposes `chrome`, Firefox exposes `browser` (and `chrome` as an alias). Both
 // return promises in Manifest V3, so no polyfill is needed: pick whichever exists.
-import { Refusal } from "./api.js";
+import { normaliseInstance, Refusal } from "./api.js";
 
 export const ext = globalThis.browser ?? globalThis.chrome;
 
@@ -9,8 +9,21 @@ export const ext = globalThis.browser ?? globalThis.chrome;
  *  extension, empty to follow the browser. */
 export async function loadSettings() {
   const stored = await ext.storage.local.get(["instance", "token", "offline", "language"]);
+  // The rules for an address are applied here, where it is read, and not only where it is
+  // typed: one stored before a rule existed must not go on being used (SEC3-010). `refused`
+  // is the key of the sentence that says why it is not; `stored` is what is kept, for the
+  // settings form to show so that it can be corrected.
+  let instance = "";
+  let refused = "";
+  try {
+    instance = stored.instance ? normaliseInstance(stored.instance) : "";
+  } catch (error) {
+    refused = error.key || "notAnAddress";
+  }
   return {
-    instance: stored.instance || "",
+    instance,
+    refused,
+    stored: stored.instance || "",
     token: stored.token || "",
     offline: stored.offline === true,
     language: stored.language || "",
