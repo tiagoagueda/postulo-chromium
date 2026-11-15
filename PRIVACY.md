@@ -92,7 +92,10 @@ page screen by screen, hiding what stays fixed in place, and putting everything 
 was. It does not use the `debugger` permission.
 
 Permission to reach your Postulo's address is asked for once, when you save the settings,
-and is granted for that one origin. The extension holds no permanent host permissions.
+and is granted for the origin of that address: Chromium reads a pattern without a port as
+every port of that host. It is given back when you save another address, when you forget
+the Postulo, and after a Test of an address you did not save. The extension holds no
+permanent host permissions.
 
 ## What it does not do
 

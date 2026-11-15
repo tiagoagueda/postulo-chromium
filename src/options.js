@@ -1,5 +1,5 @@
 import { extraScopes, normaliseInstance, originPattern, whoAmI } from "./lib/api.js";
-import { ext, loadSettings, requestHostPermission, setLanguage, setOffline } from "./lib/browser.js";
+import { ext, hasHostPermission, loadSettings, requestHostPermission, setLanguage, setOffline } from "./lib/browser.js";
 import { explain, localise, localiseWith, t, useLanguage, useStoredLanguage } from "./lib/i18n.js";
 import { LANGUAGES } from "./lib/languages.js";
 import { learnFromCall, log, store } from "./lib/local.js";
@@ -19,6 +19,19 @@ function values() {
     instance: normaliseInstance($("instance").value),
     token: $("token").value.trim(),
   };
+}
+
+/** The origin pattern of an address as it is stored, or "" when it is none. */
+function patternOf(address) {
+  try {
+    return address ? originPattern(address) : "";
+  } catch {
+    return "";
+  }
+}
+
+async function storedInstance() {
+  return (await ext.storage.local.get("instance")).instance;
 }
 
 function element(tag, text) {
@@ -100,6 +113,7 @@ async function main() {
       // The manifest cannot list an address it does not know yet, so the instance's origin
       // is asked for here, from the click that saves it. Firefox insists on this; Chromium
       // is happy either way.
+      const before = patternOf(await storedInstance());
       const granted = await requestHostPermission(originPattern(next.instance));
       // The token's scopes are asked while the address is allowed: one wider than `captures`
       // is not stored. A Postulo that cannot be reached is no reason to refuse: the
@@ -118,6 +132,10 @@ async function main() {
       }
       // What waited for another address goes back to kept first: saving wakes the delivery.
       const released = await saveConnection({ area: ext.storage.local, store, next });
+      // The address it replaces is no longer one the extension may reach (SEC3-012).
+      if (before && before !== originPattern(next.instance)) {
+        await ext.permissions.remove({ origins: [before] }).catch(() => {});
+      }
       await log.add("settings saved", { postulo: hostOf(next.instance), permission: granted, released });
       if (released) {
         say(t("savedOtherAddress", [String(released)]), !granted);
@@ -146,6 +164,9 @@ async function main() {
   });
 
   $("test").addEventListener("click", async () => {
+    // The origin of an address that is tested and not the saved one, which the permission
+    // was not held for before: given back once the answer is in (SEC3-012).
+    let borrowed = "";
     try {
       const next = values();
       if ($("offline").checked) {
@@ -153,9 +174,14 @@ async function main() {
         return;
       }
       say(t("asking"));
-      const granted = await requestHostPermission(originPattern(next.instance));
+      const pattern = originPattern(next.instance);
+      const held = await hasHostPermission(pattern);
+      const granted = await requestHostPermission(pattern);
       if (!granted) {
         throw new Error(t("addressRefused"));
+      }
+      if (!held && patternOf(await storedInstance()) !== pattern) {
+        borrowed = pattern;
       }
       // What Test learns about the connection counts only when it asked the saved address
       // with the saved token, not what is merely typed.
@@ -188,6 +214,10 @@ async function main() {
     } catch (error) {
       await log.add("test", { outcome: "failed", status: error.status || "no answer", problem: error.key || error.message });
       say(explain(error), true);
+    } finally {
+      if (borrowed) {
+        await ext.permissions.remove({ origins: [borrowed] }).catch(() => {});
+      }
     }
   });
 
