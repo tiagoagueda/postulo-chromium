@@ -550,19 +550,19 @@
     "message": "Token para llenar formularios (opcional)"
   },
   "fillTokenHint": {
-    "message": "Un segundo token que puede leer sus datos, para llenar el formulario de la página que está viendo. Si lo deja vacío, la extensión no puede llenar formularios. Solo se usa cuando usted presiona el botón, y se guarda solo en este dispositivo."
+    "message": "Un segundo token que puede leer tus datos, para llenar el formulario de la página que estás viendo. Si lo dejas vacío, la extensión no puede llenar formularios. Solo se usa cuando presionas el botón y se guarda únicamente en este dispositivo."
   },
   "fillForm": {
     "message": "Llenar este formulario"
   },
   "fillHint": {
-    "message": "Escribe su nombre y su correo electrónico en los campos vacíos que reconoce, y los marca. No se envía nada: usted lo revisa y lo envía."
+    "message": "Pone tu nombre y tu correo en los campos vacíos que reconoce y los marca. No se envía nada: tú lo revisas y lo envías."
   },
   "filling": {
     "message": "Llenando el formulario…"
   },
   "filled": {
-    "message": "Se llenaron $COUNT$ campos, marcados con un contorno azul. Revíselos y luego envíe usted el formulario.",
+    "message": "Se llenaron $COUNT$ campos, marcados con un contorno azul. Revísalos y luego envía tú el formulario.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Aquí no se reconoció nada como un campo por llenar, o todos los campos ya tenían algo."
+    "message": "Aquí no se reconoció ningún campo para llenar, o todos los campos ya tenían algo."
   },
   "fillLeft": {
-    "message": "Le quedan por llenar: $FIELDS$",
+    "message": "Te quedan por llenar: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

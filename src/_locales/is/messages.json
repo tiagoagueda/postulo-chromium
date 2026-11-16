@@ -547,22 +547,22 @@
     "message": "Gleymt. Þessi vafri geymir ekki lengur vistfang eða teikn. Gripin eru geymd og engin verða send."
   },
   "fillTokenLabel": {
-    "message": "Teikn til að fylla út eyðublöð (valfrjálst)"
+    "message": "Tákn til að fylla út eyðublöð (valfrjálst)"
   },
   "fillTokenHint": {
-    "message": "Annað teikn sem má lesa upplýsingarnar þínar, til að fylla út eyðublaðið á síðunni sem þú ert að skoða. Ef þú skilur það eftir autt getur viðbótin ekki fyllt út eyðublöð. Það er aðeins notað þegar þú ýtir á hnappinn og aðeins geymt á þessu tæki."
+    "message": "Annað tákn sem má lesa upplýsingarnar þínar, til að fylla út eyðublaðið á síðunni sem þú ert að skoða. Skildu reitinn eftir tóman og viðbótin getur ekki fyllt út eyðublöð. Það er aðeins notað þegar þú ýtir á hnappinn og er aðeins geymt á þessu tæki."
   },
   "fillForm": {
     "message": "Fylla út þetta eyðublað"
   },
   "fillHint": {
-    "message": "Setur nafnið þitt og netfangið þitt í tómu reitina sem hún þekkir og merkir þá. Ekkert er sent inn: þú lest það yfir og sendir það sjálf(ur)."
+    "message": "Setur nafnið þitt og netfang í tómu reitina sem það þekkir og merkir þá. Engu er sent: þú lest yfir og sendir það sjálf(ur)."
   },
   "filling": {
     "message": "Fylli út eyðublaðið…"
   },
   "filled": {
-    "message": "Fyllti út $COUNT$ reiti, merkta með blárri útlínu. Lestu þá yfir og sendu svo eyðublaðið sjálf(ur).",
+    "message": "Fyllti út $COUNT$ reiti, merkta með bláum ramma. Lestu þá yfir og sendu svo eyðublaðið sjálf(ur).",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Ekkert hér þekktist sem reitur til að fylla út, eða allir reitir voru þegar með eitthvað í sér."
+    "message": "Ekkert hér þekktist sem reitur til að fylla út, eða allir reitir voru þegar útfylltir."
   },
   "fillLeft": {
-    "message": "Eftir fyrir þig: $FIELDS$",
+    "message": "Eftir handa þér: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

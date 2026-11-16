@@ -550,19 +550,19 @@
     "message": "Žeton za izpolnjevanje obrazcev (neobvezno)"
   },
   "fillTokenHint": {
-    "message": "Drugi žeton, ki sme brati vaše podatke, da izpolni obrazec na strani, ki jo gledate. Če polje pustite prazno, razširitev ne more izpolnjevati obrazcev. Uporabi se samo, ko pritisnete gumb, in se hrani samo v tej napravi."
+    "message": "Drugi žeton, ki sme brati vaše podatke, da izpolni obrazec na strani, ki jo gledate. Pustite ga praznega in razširitev ne more izpolnjevati obrazcev. Uporabi se le, ko pritisnete gumb, in je shranjen samo v tej napravi."
   },
   "fillForm": {
     "message": "Izpolni ta obrazec"
   },
   "fillHint": {
-    "message": "Vpiše vaše ime in e-poštni naslov v prazna polja, ki jih prepozna, in jih označi. Nič se ne odda: obrazec preberete in ga pošljete sami."
+    "message": "V prazna polja, ki jih prepozna, vpiše vaše ime in e-pošto ter jih označi. Nič se ne pošlje: pregledate in pošljete sami."
   },
   "filling": {
     "message": "Izpolnjevanje obrazca …"
   },
   "filled": {
-    "message": "Izpolnjena polja: $COUNT$, označena z modro obrobo. Preberite jih, nato obrazec pošljite sami.",
+    "message": "Izpolnjenih polj: $COUNT$, označenih z modrim robom. Preglejte jih in nato obrazec pošljite sami.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Nič tukaj ni bilo prepoznano kot polje za izpolnjevanje ali pa je bilo v vsakem polju že nekaj vpisano."
+    "message": "Tu ni bilo prepoznano nobeno polje za izpolnitev ali pa je bilo vsako polje že izpolnjeno."
   },
   "fillLeft": {
-    "message": "Ostalo za vas: $FIELDS$",
+    "message": "Pustili smo vam: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

@@ -547,22 +547,22 @@
     "message": "Gloymt. Hesin kagin hevur ikki longur nakra vevadressu ella nakað tekin. Fangingarnar eru varðveittar, og eingin verður send."
   },
   "fillTokenLabel": {
-    "message": "Tekin til at fylla út oyðubløð (valfrítt)"
+    "message": "Tekin til útfylling av oyðubløðum (valfrítt)"
   },
   "fillTokenHint": {
-    "message": "Eitt annað tekin, sum hevur loyvi at lesa tínar upplýsingar, til at fylla út oyðublaðið á síðuni, tú hyggur at. Lætur tú tað vera tómt, kann ískoytið ikki fylla út oyðubløð. Tað verður bert brúkt, tá ið tú trýstir á knøttin, og bert goymt á hesum tóli."
+    "message": "Eitt annað tekin, sum kann lesa tínar upplýsingar, til at fylla oyðublaðið út á síðuni, sum tú hyggur at. Lat tað standa tómt, og víðkanin kann ikki fylla oyðubløð út. Tað verður bert brúkt, tá ið tú trýstir á knappin, og bert goymt á hesum tóli."
   },
   "fillForm": {
-    "message": "Fyll út hetta oyðublaðið"
+    "message": "Fyl hetta oyðublaðið út"
   },
   "fillHint": {
-    "message": "Setur navn títt og teldupostadressu tína í tómu teigarnar, sum tað kennir aftur, og merkir teir. Einki verður sent inn: tú lesur tað ígjøgnum og sendir tað sjálvur."
+    "message": "Setur títt navn og tín teldupost í tómu feltini, sum tað kennir aftur, og merkir tey. Einki verður sent: tú lesur tað og sendir tað sjálvur."
   },
   "filling": {
-    "message": "Fyllir út oyðublaðið…"
+    "message": "Fyllir oyðublaðið út…"
   },
   "filled": {
-    "message": "$COUNT$ teigar fyltir út, merktir við bláari rammu. Les teir ígjøgnum, og send so sjálvur oyðublaðið.",
+    "message": "Fylti $COUNT$ felt út, merkt við bláari umrøðu. Les tey og send síðani oyðublaðið sjálvur.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,7 +570,7 @@
     }
   },
   "filledNothing": {
-    "message": "Einki her varð kent aftur sum ein teigur at fylla út, ella høvdu allir teigar longu okkurt í sær."
+    "message": "Einki varð kent aftur her sum felt at fylla út, ella øll feltini høvdu longu okkurt í sær."
   },
   "fillLeft": {
     "message": "Eftir til tín: $FIELDS$",

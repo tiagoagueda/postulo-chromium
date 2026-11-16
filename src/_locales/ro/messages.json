@@ -550,19 +550,19 @@
     "message": "Token pentru completarea formularelor (opțional)"
   },
   "fillTokenHint": {
-    "message": "Un al doilea token care îți poate citi datele, pentru a completa formularul din pagina pe care o vezi. Dacă îl lași gol, extensia nu poate completa formulare. Este folosit doar când apeși butonul și este păstrat doar pe acest dispozitiv."
+    "message": "Un al doilea token care poate citi datele tale, pentru a completa formularul din pagina pe care o privești. Lasă-l gol și extensia nu poate completa formulare. Este folosit doar când apeși butonul și este păstrat doar pe acest dispozitiv."
   },
   "fillForm": {
     "message": "Completează acest formular"
   },
   "fillHint": {
-    "message": "Pune numele și adresa ta de e-mail în câmpurile goale pe care le recunoaște și le marchează. Nu se trimite nimic: îl citești și îl trimiți chiar tu."
+    "message": "Introduce numele și e-mailul tău în câmpurile goale pe care le recunoaște și le marchează. Nu se trimite nimic: îl citești și îl trimiți tu."
   },
   "filling": {
     "message": "Se completează formularul…"
   },
   "filled": {
-    "message": "Câmpuri completate: $COUNT$, marcate cu un contur albastru. Citește-le, apoi trimite chiar tu formularul.",
+    "message": "Au fost completate $COUNT$ câmpuri, marcate cu un contur albastru. Citește-le, apoi trimite tu formularul.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Nimic de aici nu a fost recunoscut drept câmp de completat, sau fiecare câmp avea deja ceva în el."
+    "message": "Nimic de aici nu a fost recunoscut ca un câmp de completat sau toate câmpurile aveau deja conținut."
   },
   "fillLeft": {
-    "message": "Rămase pentru tine: $FIELDS$",
+    "message": "Lăsate pentru tine: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

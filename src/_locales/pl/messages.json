@@ -547,22 +547,22 @@
     "message": "Zapomniano. Ta przeglądarka nie przechowuje już adresu ani tokena. Przechwycenia zostały zachowane i żadne nie zostanie wysłane."
   },
   "fillTokenLabel": {
-    "message": "Token do wypełniania formularzy (opcjonalny)"
+    "message": "Token do wypełniania formularzy (opcjonalnie)"
   },
   "fillTokenHint": {
-    "message": "Drugi token, który może odczytywać Twoje dane, aby wypełnić formularz na oglądanej stronie. Jeśli zostawisz to pole puste, rozszerzenie nie będzie mogło wypełniać formularzy. Jest używany tylko po naciśnięciu przycisku i przechowywany tylko na tym urządzeniu."
+    "message": "Drugi token, który może odczytywać Twoje dane, aby wypełnić formularz na oglądanej stronie. Zostaw puste, a rozszerzenie nie wypełni formularzy. Jest używany tylko po naciśnięciu przycisku i przechowywany wyłącznie na tym urządzeniu."
   },
   "fillForm": {
     "message": "Wypełnij ten formularz"
   },
   "fillHint": {
-    "message": "Wpisuje Twoje imię i nazwisko oraz adres e-mail w rozpoznane puste pola i je oznacza. Nic nie jest przesyłane: sprawdzasz formularz i wysyłasz go samodzielnie."
+    "message": "Wpisuje Twoje imię i nazwisko oraz e-mail w puste pola, które rozpozna, i je oznacza. Nic nie jest wysyłane: sprawdzasz to i wysyłasz sam."
   },
   "filling": {
     "message": "Wypełnianie formularza…"
   },
   "filled": {
-    "message": "Wypełnione pola: $COUNT$, oznaczone niebieską obwódką. Przeczytaj je, a potem samodzielnie wyślij formularz.",
+    "message": "Wypełniono pola: $COUNT$, oznaczone niebieskim obrysem. Sprawdź je, a potem wyślij formularz samodzielnie.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Nic tutaj nie zostało rozpoznane jako pole do wypełnienia albo w każdym polu coś już było."
+    "message": "Nic tu nie rozpoznano jako pola do wypełnienia albo każde pole było już wypełnione."
   },
   "fillLeft": {
-    "message": "Do uzupełnienia przez Ciebie: $FIELDS$",
+    "message": "Zostawione dla Ciebie: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

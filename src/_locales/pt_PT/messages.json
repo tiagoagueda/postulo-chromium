@@ -550,19 +550,19 @@
     "message": "Token para preencher formulários (opcional)"
   },
   "fillTokenHint": {
-    "message": "Um segundo token que pode ler os seus dados, para preencher o formulário da página que está a ver. Se o deixar vazio, a extensão não consegue preencher formulários. Só é usado quando carrega no botão, e fica guardado apenas neste dispositivo."
+    "message": "Um segundo token que pode ler os seus dados, para preencher o formulário da página que está a ver. Deixe-o vazio e a extensão não poderá preencher formulários. Só é usado quando prime o botão e fica guardado apenas neste dispositivo."
   },
   "fillForm": {
     "message": "Preencher este formulário"
   },
   "fillHint": {
-    "message": "Coloca o seu nome e e-mail nos campos vazios que reconhece, e assinala-os. Nada é submetido: é o próprio utilizador que lê e envia o formulário."
+    "message": "Coloca o seu nome e e-mail nos campos vazios que reconhece e marca-os. Nada é enviado: lê e envia por si."
   },
   "filling": {
     "message": "A preencher o formulário…"
   },
   "filled": {
-    "message": "$COUNT$ campos preenchidos, assinalados com um contorno azul. Leia-os e depois envie o formulário por si.",
+    "message": "Preencheu $COUNT$ campos, marcados com um contorno azul. Leia-os e envie depois o formulário por si.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Nada aqui foi reconhecido como um campo a preencher, ou todos os campos já tinham algo."
+    "message": "Nada aqui foi reconhecido como campo a preencher, ou todos os campos já tinham algo."
   },
   "fillLeft": {
-    "message": "Fica para si: $FIELDS$",
+    "message": "Deixados para si: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

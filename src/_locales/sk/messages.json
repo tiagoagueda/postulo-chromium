@@ -547,22 +547,22 @@
     "message": "Zabudnuté. Tento prehliadač už nemá uloženú adresu ani token. Zachytenia zostávajú zachované a žiadne sa neodošle."
   },
   "fillTokenLabel": {
-    "message": "Token na vypĺňanie formulárov (nepovinné)"
+    "message": "Token na vypĺňanie formulárov (voliteľné)"
   },
   "fillTokenHint": {
-    "message": "Druhý token, ktorý smie čítať vaše údaje, aby vyplnil formulár na stránke, ktorú si prezeráte. Ak pole necháte prázdne, rozšírenie nemôže vypĺňať formuláre. Použije sa len po stlačení tlačidla a uchováva sa len v tomto zariadení."
+    "message": "Druhý token, ktorý môže čítať vaše údaje, aby sa vyplnil formulár na stránke, ktorú práve máte otvorenú. Nechajte ho prázdny a rozšírenie formuláre vyplniť nemôže. Používa sa len po stlačení tlačidla a uchováva sa iba v tomto zariadení."
   },
   "fillForm": {
     "message": "Vyplniť tento formulár"
   },
   "fillHint": {
-    "message": "Doplní vaše meno a e-mail do prázdnych polí, ktoré rozpozná, a označí ich. Nič sa neodošle: prečítate si ho a odošlete ho sami."
+    "message": "Vloží vaše meno a e-mail do prázdnych polí, ktoré rozpozná, a označí ich. Nič sa neodošle: skontrolujete to a odošlete sami."
   },
   "filling": {
     "message": "Vypĺňa sa formulár…"
   },
   "filled": {
-    "message": "Vyplnené polia: $COUNT$, označené modrým obrysom. Prečítajte si ich a potom formulár odošlite sami.",
+    "message": "Vyplnených polí: $COUNT$, označených modrým orámovaním. Skontrolujte ich a potom formulár odošlite sami.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Nič tu nebolo rozpoznané ako pole na vyplnenie, alebo už v každom poli niečo bolo."
+    "message": "Nič tu nebolo rozpoznané ako pole na vyplnenie, alebo každé pole už niečo obsahovalo."
   },
   "fillLeft": {
-    "message": "Zostáva na vás: $FIELDS$",
+    "message": "Nechané na vás: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

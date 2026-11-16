@@ -550,19 +550,19 @@
     "message": "Token për plotësimin e formularëve (opsional)"
   },
   "fillTokenHint": {
-    "message": "Një token i dytë që mund të lexojë të dhënat tuaja, për të plotësuar formularin në faqen që po shikoni. Nëse e lini bosh, shtesa nuk mund të plotësojë formularë. Përdoret vetëm kur shtypni butonin dhe mbahet vetëm në këtë pajisje."
+    "message": "Një token i dytë që mund t'i lexojë të dhënat tuaja, për të plotësuar formularin e faqes që po shihni. Lëreni bosh dhe zgjerimi nuk mund të plotësojë formularë. Përdoret vetëm kur shtypni butonin dhe ruhet vetëm në këtë pajisje."
   },
   "fillForm": {
     "message": "Plotëso këtë formular"
   },
   "fillHint": {
-    "message": "Vendos emrin dhe email-in tuaj në fushat bosh që njeh dhe i shënon ato. Asgjë nuk paraqitet: ju e lexoni dhe e dërgoni vetë."
+    "message": "Vendos emrin dhe email-in tuaj në fushat e zbrazëta që njeh dhe i shënon. Nuk dërgohet asgjë: e lexoni dhe e dërgoni vetë."
   },
   "filling": {
     "message": "Po plotësohet formulari…"
   },
   "filled": {
-    "message": "U plotësuan $COUNT$ fusha, të shënuara me një kornizë blu. Lexojini, pastaj dërgojeni formularin vetë.",
+    "message": "U plotësuan $COUNT$ fusha, të shënuara me kontur blu. Lexojini, pastaj dërgojeni vetë formularin.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Asgjë këtu nuk u njoh si fushë për t'u plotësuar, ose çdo fushë kishte tashmë diçka."
+    "message": "Këtu nuk u njoh asgjë si fushë për t'u plotësuar, ose çdo fushë kishte tashmë diçka."
   },
   "fillLeft": {
-    "message": "Mbetet për ju: $FIELDS$",
+    "message": "Lënë për ju: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

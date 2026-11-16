@@ -547,22 +547,22 @@
     "message": "Vergiess. Dëse Browser hält keng Adress an och keen Token méi. D'Erfaassunge bleiwe behalen, et gëtt keng geschéckt."
   },
   "fillTokenLabel": {
-    "message": "Token fir Formulairen auszefëllen (fakultativ)"
+    "message": "Token fir Formulairen auszefëllen (optional)"
   },
   "fillTokenHint": {
-    "message": "En zweeten Token, deen Är Donnéeë liesen däerf, fir de Formulaire op der Säit auszefëllen, déi Dir Iech ukuckt. Loosst Dir en eidel, kann d'Erweiderung keng Formulairen ausfëllen. En gëtt nëmme benotzt, wann Dir op de Knäppchen dréckt, an nëmmen op dësem Apparat gespäichert."
+    "message": "E zweeten Token, deen Är Donnéeë ka liesen, fir d'Formulaire vun der Säit auszefëllen, déi Dir gesitt. Looss et eidel an d'Erweiderung ka keng Formulairen ausfëllen. Et gëtt nëmmen benotzt, wann Dir op de Knäppchen dréckt, a gëtt nëmmen op dësem Apparat gespäichert."
   },
   "fillForm": {
-    "message": "Dëse Formulaire ausfëllen"
+    "message": "Dëst Formulaire ausfëllen"
   },
   "fillHint": {
-    "message": "Setzt Ären Numm an Är E-Mail-Adress an déi eidel Felder, déi en erkennt, a markéiert se. Näischt gëtt ofgeschéckt: Dir liest et a schéckt et selwer."
+    "message": "Setzt Ären Numm an Är E-Mail an déi eidel Felder, déi et erkennt, a markéiert se. Et gëtt näischt geschéckt: Dir liest et duerch a schéckt et selwer of."
   },
   "filling": {
-    "message": "De Formulaire gëtt ausgefëllt…"
+    "message": "Formulaire gëtt ausgefëllt…"
   },
   "filled": {
-    "message": "Ausgefëllte Felder: $COUNT$, mat engem bloe Rand markéiert. Liest se, a schéckt dann de Formulaire selwer.",
+    "message": "$COUNT$ Felder ausgefëllt, mat engem bloe Rummen markéiert. Liest se duerch, schéckt dann d'Formulaire selwer of.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Hei gouf näischt als Feld zum Ausfëllen erkannt, oder all Feld hat scho eppes dran."
+    "message": "Hei gouf näischt als Feld zum Ausfëllen erkannt, oder all Feld hat schonn en Inhalt."
   },
   "fillLeft": {
-    "message": "Bleift fir Iech: $FIELDS$",
+    "message": "Fir Iech iwwreg: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

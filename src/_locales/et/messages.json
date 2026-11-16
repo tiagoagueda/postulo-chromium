@@ -547,22 +547,22 @@
     "message": "Unustatud. See brauser ei hoia enam aadressi ega tõendit. Jäädvustused jäävad alles, kuid ühtegi neist ei saadeta."
   },
   "fillTokenLabel": {
-    "message": "Tõend vormide täitmiseks (valikuline)"
+    "message": "Vormide täitmise tõend (valikuline)"
   },
   "fillTokenHint": {
-    "message": "Teine tõend, mis tohib lugeda teie andmeid, et täita vaadataval lehel olev vorm. Kui jätate selle tühjaks, ei saa laiendus vorme täita. Seda kasutatakse ainult siis, kui vajutate nuppu, ja hoitakse ainult selles seadmes."
+    "message": "Teine tõend, mis tohib lugeda teie andmeid, et täita lehel, mida vaatate, olev vorm. Jätke see tühjaks ja laiendus ei saa vorme täita. Seda kasutatakse ainult nupule vajutamisel ja hoitakse ainult sellel seadmel."
   },
   "fillForm": {
     "message": "Täida see vorm"
   },
   "fillHint": {
-    "message": "Paneb teie nime ja e-posti aadressi tühjadele väljadele, mille see ära tunneb, ja märgib need. Midagi ei esitata: lugege see läbi ja saatke ise."
+    "message": "Sisestab teie nime ja e-posti tuvastatud tühjadesse väljadesse ja märgib need. Midagi ei saadeta: vaatate selle üle ja saadate ise."
   },
   "filling": {
     "message": "Vormi täidetakse…"
   },
   "filled": {
-    "message": "Täideti $COUNT$ välja, märgitud sinise äärisega. Lugege need läbi ja saatke siis vorm ise ära.",
+    "message": "Täideti $COUNT$ välja, märgitud sinise äärisega. Vaadake need üle ja saatke vorm siis ise.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Siin ei tuntud midagi ära täidetava väljana või oli igal väljal juba midagi sees."
+    "message": "Siin ei tuvastatud ühtegi täidetavat välja või igas väljas oli juba midagi."
   },
   "fillLeft": {
-    "message": "Teie täita jäi: $FIELDS$",
+    "message": "Teile jäetud: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

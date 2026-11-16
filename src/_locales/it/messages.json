@@ -550,19 +550,19 @@
     "message": "Token per compilare i moduli (facoltativo)"
   },
   "fillTokenHint": {
-    "message": "Un secondo token che può leggere i tuoi dati, per compilare il modulo nella pagina che stai guardando. Se lo lasci vuoto, l'estensione non può compilare moduli. Viene usato solo quando premi il pulsante e resta solo su questo dispositivo."
+    "message": "Un secondo token che può leggere i tuoi dati, per compilare il modulo della pagina che stai guardando. Lascialo vuoto e l'estensione non potrà compilare i moduli. Viene usato solo quando premi il pulsante ed è conservato solo su questo dispositivo."
   },
   "fillForm": {
     "message": "Compila questo modulo"
   },
   "fillHint": {
-    "message": "Inserisce il tuo nome e la tua email nei campi vuoti che riconosce, e li contrassegna. Non viene inviato nulla: lo rileggi e lo invii tu."
+    "message": "Inserisce il tuo nome e la tua email nei campi vuoti che riconosce e li contrassegna. Non viene inviato nulla: lo controlli e lo invii tu."
   },
   "filling": {
     "message": "Compilazione del modulo…"
   },
   "filled": {
-    "message": "Campi compilati: $COUNT$, contrassegnati da un contorno blu. Rileggili, poi invia tu il modulo.",
+    "message": "Compilati $COUNT$ campi, contrassegnati da un contorno blu. Controllali, poi invia tu il modulo.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Qui non è stato riconosciuto nessun campo da compilare, oppure ogni campo conteneva già qualcosa."
+    "message": "Qui non è stato riconosciuto nessun campo da compilare, oppure ogni campo era già compilato."
   },
   "fillLeft": {
-    "message": "Restano a te: $FIELDS$",
+    "message": "Da compilare a cura tua: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

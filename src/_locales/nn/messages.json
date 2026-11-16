@@ -550,19 +550,19 @@
     "message": "Token for utfylling av skjema (valfritt)"
   },
   "fillTokenHint": {
-    "message": "Eit ekstra token som får lese opplysningane dine, for å fylle ut skjemaet på sida du ser på. Lèt du det stå tomt, kan ikkje utvidinga fylle ut skjema. Det blir berre brukt når du trykkjer på knappen, og blir berre lagra på denne eininga."
+    "message": "Eit ekstra token som kan lesa opplysningane dine, for å fylla ut skjemaet på sida du ser på. Lat det stå tomt, så kan ikkje utvidinga fylla ut skjema. Det blir berre brukt når du trykkjer på knappen, og blir berre lagra på denne eininga."
   },
   "fillForm": {
     "message": "Fyll ut dette skjemaet"
   },
   "fillHint": {
-    "message": "Set inn namnet og e-postadressa di i dei tomme felta ho kjenner att, og merkjer dei. Ingenting blir sendt inn: du les gjennom og sender det sjølv."
+    "message": "Set inn namnet og e-postadressa di i dei tomme felta han kjenner att, og merkjer dei. Ingenting blir sendt: du les gjennom og sender det sjølv."
   },
   "filling": {
-    "message": "Fyller ut skjemaet…"
+    "message": "Fyller ut skjemaet …"
   },
   "filled": {
-    "message": "Fylte ut $COUNT$ felt, merkte med blå kant. Les gjennom dei, og send så skjemaet sjølv.",
+    "message": "Fylte ut $COUNT$ felt, merkte med blå ramme. Les gjennom dei, og send så skjemaet sjølv.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Ingenting her vart kjent att som eit felt å fylle ut, eller alle felta hadde alt noko i seg."
+    "message": "Ingenting her vart kjent att som eit felt som skal fyllast ut, eller alle felta hadde allereie innhald."
   },
   "fillLeft": {
-    "message": "Står att for deg: $FIELDS$",
+    "message": "Overlate til deg: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"
