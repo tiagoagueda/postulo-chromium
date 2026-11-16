@@ -1,0 +1,4 @@
+# One line ending everywhere, so a file is the same bytes on every machine that checks it out
+# (a Windows checkout with core.autocrlf would otherwise put CRLF into the built package).
+* text=auto eol=lf
+*.png binary
