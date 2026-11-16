@@ -159,6 +159,28 @@ shows the answer; a second without one shows orange while the 20 seconds go on, 
 record says red or grey, which stay until the answer. A popup closed before the answer writes
 nothing. The toolbar button is in colour exactly when the footer is green or orange.
 
+## Filling a form
+
+An application form asks again for your name and email. With a **token for filling forms**
+in the settings (optional, and kept apart from the token that captures), the popup shows
+**Fill this form**. It asks your Postulo for your details, puts them into the *empty* text
+fields of the page it recognises, and outlines each one in blue. It lists the fields it
+left, so you know what remains.
+
+It fills your first name, last name, full name, email and form of address, and a date of birth
+only when Postulo holds a whole date, recognising a field by its `autocomplete` attribute
+first and by its label or name after. Your phone, address and links are not filled yet: Postulo
+does not give them to a token.
+
+It never submits a form, never presses or clicks anything, never fills a password field,
+never overwrites what is already typed, and never attaches a file. Postulo never applies for
+anyone, and this does not either: you read what was filled and send it yourself. It acts on
+the page's own frame only, and only when you press the button.
+
+The token must be able to read your details, which today is Postulo's `read` scope: wider than
+the capture token, which is why it is a second token you may leave out. Postulo has been asked
+for a narrower one.
+
 ## Without a server
 
 Under the capture button the popup lists the postings that need review, newest first, as

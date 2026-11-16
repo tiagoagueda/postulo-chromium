@@ -40,6 +40,13 @@
       <p class="hint" data-i18n="captureHint">The page is read here, in your browser. Your Postulo, once set up, is asked only whether it already holds the page's postings, by their address, title and company; the page goes when you send it.</p>
     </section>
 
+    <!-- Fill the form on this page from your details; shown only with a token for it (#51). -->
+    <section id="fill" hidden>
+      <button id="fill-form" type="button" data-i18n="fillForm">Fill this form</button>
+      <p class="hint" data-i18n="fillHint">Puts your name and email into the empty fields it recognises, and marks them. Nothing is submitted: you read it and send it yourself.</p>
+      <p id="fill-left" class="muted small" hidden></p>
+    </section>
+
     <!-- The postings the badge counts, newest first: the captures that need review. -->
     <section id="review-list" hidden>
       <h2 data-i18n="reviewHeading">Needs review</h2>

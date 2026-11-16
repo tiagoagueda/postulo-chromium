@@ -689,5 +689,47 @@
   "reviewPageTitle": {
     "message": "Review a capture",
     "description": "Title of the window where one captured posting is corrected and sent, kept or deleted."
+  },
+  "fillTokenLabel": {
+    "message": "Token for filling forms (optional)",
+    "description": "Label of the settings field for a second token that may read the person's details."
+  },
+  "fillTokenHint": {
+    "message": "A second token that may read your details, to fill the form on the page you are looking at. Leave it empty and the extension cannot fill forms. It is used only when you press the button, and kept on this device only.",
+    "description": "Under the field for the token for filling forms."
+  },
+  "fillForm": {
+    "message": "Fill this form",
+    "description": "Button in the popup that fills the form on the current page from the person's details."
+  },
+  "fillHint": {
+    "message": "Puts your name and email into the empty fields it recognises, and marks them. Nothing is submitted: you read it and send it yourself.",
+    "description": "Under the button that fills a form: what it does and that it never submits."
+  },
+  "filling": {
+    "message": "Filling the form…",
+    "description": "Status while the form is being filled."
+  },
+  "filled": {
+    "message": "Filled $COUNT$ fields, marked with a blue outline. Read them, then send the form yourself.",
+    "description": "Status after filling. COUNT is how many fields were filled.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Nothing here was recognised as a field to fill, or every field already had something in it.",
+    "description": "Status when no field was filled."
+  },
+  "fillLeft": {
+    "message": "Left for you: $FIELDS$",
+    "description": "Lists the labels of the fields that were not filled, as the page names them. FIELDS is a comma-separated list.",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

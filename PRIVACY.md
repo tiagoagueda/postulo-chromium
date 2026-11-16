@@ -23,6 +23,9 @@ It keeps:
 - **Your Postulo's address and API token**, as you typed them into the settings. The token
   is the one you issued in Postulo, and you can revoke it there at any time, or press
   *Forget this Postulo* in the settings to remove both, and the permission to reach it, from this browser.
+- **A token for filling forms**, if you typed one into the settings: the same kind of thing as
+  the token above, kept the same way, and removed with it, and when you save another address.
+  It is used only when you press *Fill this form*.
 - **Your captures**: kept as soon as a page is read, before you decide anything, so that closing the review window loses nothing; for each, the posting's address, the fields that were read and the
   fields as you corrected them, which source read it, when, and where it stands — kept,
   waiting, sent or refused, with Postulo's reason when it refused. Once Postulo has a
@@ -70,6 +73,7 @@ others. There are exactly six:
 | Every five minutes, when the browser starts, when the popup opens, and after something was sent | `GET /api/v1/captures` | Nothing but the token, to read the list of captures waiting for review, for the number on the toolbar button. Not made with no Postulo set up, with the testing switch on, or before the address is allowed. |
 | Every five minutes, each time the popup opens, when the browser starts, and when the address is saved, the permission given or the testing switch turned off | `GET /healthz` | Nothing. No token and no cookies: only that your server is asked whether it is up, so it learns the browser is running and from where. It is how the toolbar button knows to turn grey. Not made with no Postulo set up, with the testing switch on, or before the address is allowed. |
 | Before anything is sent: each time the review window opens on a capture not sent yet, and when the popup reads a page of results, with Postulo set up, the testing switch off and the address allowed | `POST /api/v1/captures/known` | The address (without any `#` part), title and company of the postings on the page, as read off it and not as you corrected them, so the window can say which your Postulo already holds. Postulo's answer includes an opaque `posting_key` for each address, which is kept on a capture here so that the toolbar number groups it with what Postulo holds of the same posting. From a page of results, every posting it lists, in one request per hundred. Nothing else from the page. Postulo stores nothing on this request. |
+| You press *Fill this form*, with a token for it saved | `GET /api/v1/profile` and `GET /api/v1/me` | Nothing but that token, to read your name, form of address, date of birth and email. They are put into the page's empty fields through a script injected for that one call and are not kept; the page sees them as it would if you had typed them. Not made with the testing switch on. |
 | You press *Send the picture*, offered in the review window after a capture was sent, and only when your Postulo says it keeps pictures | `PUT` to the address Postulo gave for it | A picture of the whole page as you see it in that tab, signed in or not: the page's image, and nothing else. Never for several captures read off one results page. |
 
 Each of these requests carries the tag of the language the extension is speaking (`de`,

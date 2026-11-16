@@ -34,8 +34,21 @@ async function keepWaiting(store) {
 export async function saveConnection({ area, store, next }) {
   const stored = await area.get(["instance"]);
   const before = originOf(stored.instance);
-  const released = before && before !== originOf(next.instance) ? await keepWaiting(store) : 0;
+  const moved = Boolean(before) && before !== originOf(next.instance);
+  const released = moved ? await keepWaiting(store) : 0;
+  // The token for filling forms was made for the Postulo it was typed for: it is not sent to another.
+  if (moved) {
+    await area.remove(["fillToken"]);
+  }
   await area.set({ instance: next.instance, token: next.token });
+  // Typed (or emptied) on the same form: kept, or forgotten when blank.
+  if (typeof next.fillToken === "string") {
+    if (next.fillToken) {
+      await area.set({ fillToken: next.fillToken });
+    } else {
+      await area.remove(["fillToken"]);
+    }
+  }
   return released;
 }
 
@@ -45,6 +58,6 @@ export async function saveConnection({ area, store, next }) {
 export async function forgetPostulo({ area, store }) {
   const stored = await area.get(["instance"]);
   await keepWaiting(store);
-  await area.remove(["instance", "token", CONNECTION, WAITING]);
+  await area.remove(["instance", "token", "fillToken", CONNECTION, WAITING]);
   return originOf(stored.instance);
 }

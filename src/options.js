@@ -18,6 +18,7 @@ function values() {
   return {
     instance: normaliseInstance($("instance").value),
     token: $("token").value.trim(),
+    fillToken: $("fill-token").value.trim(),
   };
 }
 
@@ -101,6 +102,7 @@ async function main() {
     say(t(settings.refused), true);
   }
   $("token").value = settings.token;
+  $("fill-token").value = settings.fillToken;
   $("offline").checked = settings.offline;
 
   $("settings").addEventListener("submit", async (event) => {
@@ -156,6 +158,7 @@ async function main() {
       }
       $("instance").value = "";
       $("token").value = "";
+      $("fill-token").value = "";
       await log.add("forgotten", {});
       say(t("forgotten"));
     } catch (error) {

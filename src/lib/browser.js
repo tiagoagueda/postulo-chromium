@@ -1,6 +1,7 @@
 // Chromium exposes `chrome`, Firefox exposes `browser` (and `chrome` as an alias). Both
 // return promises in Manifest V3, so no polyfill is needed: pick whichever exists.
 import { normaliseInstance, Refusal } from "./api.js";
+import { fillPage, KINDS } from "./fill.js";
 
 export const ext = globalThis.browser ?? globalThis.chrome;
 
@@ -8,7 +9,7 @@ export const ext = globalThis.browser ?? globalThis.chrome;
  *  the extension act as if Postulo could not be reached. `language` is the tag picked for the
  *  extension, empty to follow the browser. */
 export async function loadSettings() {
-  const stored = await ext.storage.local.get(["instance", "token", "offline", "language"]);
+  const stored = await ext.storage.local.get(["instance", "token", "fillToken", "offline", "language"]);
   // The rules for an address are applied here, where it is read, and not only where it is
   // typed: one stored before a rule existed must not go on being used (SEC3-010). `refused`
   // is the key of the sentence that says why it is not; `stored` is what is kept, for the
@@ -25,6 +26,9 @@ export async function loadSettings() {
     refused,
     stored: stored.instance || "",
     token: stored.token || "",
+    // A second, optional token that may read the person's details, to fill a form (#51).
+    // Kept apart from the one that captures, which holds nothing wider (SEC2-081).
+    fillToken: stored.fillToken || "",
     offline: stored.offline === true,
     language: stored.language || "",
   };
@@ -93,6 +97,34 @@ export function pageSource() {
     }
   }
   return { url: location.href, html: root.outerHTML };
+}
+
+/** Fill the current tab's form with `values`, through a script injected for this one call (activeTab
+ *  again: nothing runs on a page until the person presses the button). Resolves to what was filled
+ *  and what was left, as labels. Nothing is submitted or clicked (fill.js). */
+export async function fillCurrentTab(values) {
+  const [tab] = await ext.tabs.query({ active: true, currentWindow: true });
+  if (!tab || !tab.id) {
+    throw new Refusal("noTab");
+  }
+  if (!/^https?:/.test(tab.url || "")) {
+    throw new Refusal("notWebPage");
+  }
+  let injected;
+  try {
+    [injected] = await ext.scripting.executeScript({
+      target: { tabId: tab.id },
+      func: fillPage,
+      args: [values, KINDS],
+    });
+  } catch (error) {
+    console.warn("Postulo could not script the page:", error && error.message);
+    throw new Refusal("unreadable");
+  }
+  if (!injected || !injected.result) {
+    throw new Refusal("unreadable");
+  }
+  return injected.result;
 }
 
 /** The current tab's address and source, read through a content script injected for this

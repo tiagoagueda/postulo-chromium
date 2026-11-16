@@ -197,6 +197,15 @@ export async function whoAmI(instance, token, fetchImpl = fetch) {
   return request(fetchImpl, endpoint(instance, "/me"), { headers: headers(token) }, readResponse);
 }
 
+/** GET /profile and GET /me: the person's own details, for filling a form (#51). A token that
+ *  may not read is refused with Postulo's own sentence, which names the scope. Nothing here
+ *  is kept: the answer is used for the form in front of the person and dropped. */
+export async function ownDetails(instance, token, fetchImpl = fetch) {
+  const profile = await request(fetchImpl, endpoint(instance, "/profile"), { headers: headers(token) }, readResponse);
+  const me = await request(fetchImpl, endpoint(instance, "/me"), { headers: headers(token) }, readResponse);
+  return { profile, me };
+}
+
 /** GET /healthz: the status Postulo answers with, to a request that carries no token and
  *  no cookies. It proves the host and its database answer, and nothing about who asks. A
  *  host that does not answer throws, as with every request here. */

@@ -1,7 +1,8 @@
-import { describe, newListingUrl, originPattern } from "./lib/api.js";
+import { describe, newListingUrl, originPattern, ownDetails } from "./lib/api.js";
 import { askAndKeep } from "./lib/allow.js";
-import { ext, loadSettings, readCurrentTab, requestHostPermission, tabProblem } from "./lib/browser.js";
+import { ext, fillCurrentTab, loadSettings, readCurrentTab, requestHostPermission, tabProblem } from "./lib/browser.js";
 import { explain, localise, t, useStoredLanguage } from "./lib/i18n.js";
+import { valuesFrom } from "./lib/fill.js";
 import { postingForm } from "./lib/form.js";
 import { askKnown } from "./lib/known.js";
 import { afterSending, checkPostulo, deliverWaiting, log, openCaptures, readWaitingList, showUnsentCount, store } from "./lib/local.js";
@@ -188,6 +189,34 @@ async function main() {
   // Postulo's own page, in the review window: no request from here, the testing switch or not.
   $("add-listing").addEventListener("click", () => {
     openInReviewWindow(newListingUrl(settings.instance)).then(() => window.close(), (error) => say(explain(error), true));
+  });
+  // Filling a form: offered only with a token for it and a Postulo that may be asked.
+  $("fill").hidden = !(settings.instance && settings.fillToken && !settings.offline);
+  $("fill-form").addEventListener("click", async () => {
+    const button = $("fill-form");
+    button.disabled = true;
+    $("fill-left").hidden = true;
+    say(t("filling"));
+    try {
+      // The details are asked for now, used for this page and not kept.
+      const granted = await requestHostPermission(originPattern(settings.instance));
+      if (!granted) {
+        throw new Error(t("permissionRefused"));
+      }
+      const { profile, me } = await ownDetails(settings.instance, settings.fillToken);
+      const result = await fillCurrentTab(valuesFrom(profile, me));
+      await log.add("filled", { host: hostOf((await ext.tabs.query({ active: true, currentWindow: true }))[0].url), filled: result.filled.length, left: result.left.length });
+      say(result.filled.length ? t("filled", [String(result.filled.length)]) : t("filledNothing"), !result.filled.length);
+      if (result.left.length) {
+        $("fill-left").textContent = t("fillLeft", [result.left.join(", ")]);
+        $("fill-left").hidden = false;
+      }
+    } catch (error) {
+      await log.add("error", { where: "filling", problem: error.key || error.message });
+      say(explain(error), true);
+    } finally {
+      button.disabled = false;
+    }
   });
   await showCount();
   // Whatever was waiting may go now; quietly, as the background would.
