@@ -60,7 +60,7 @@
     "message": "Tambahkan suatu daftar"
   },
   "captureHint": {
-    "message": "Halaman ini dibaca di sini, dalam browser Anda. Tidak ada yang dikirim sampai Anda mengatakan demikian."
+    "message": "Halaman dibaca di sini, di browser Anda. Postulo Anda, setelah diatur, hanya ditanya apakah sudah menyimpan posting di halaman ini, berdasarkan alamat, judul, dan perusahaannya; halaman itu sendiri dikirim saat Anda mengirimkannya."
   },
   "review": {
     "message": "Ulasan di Postulo"
@@ -124,7 +124,7 @@
     "message": "Uji"
   },
   "shortcutHint": {
-    "message": "Menekan tombol, atau $SHORTCUT$, membaca halaman yang Anda lihat, di sini di browser. Tidak ada halaman yang dibaca sampai Anda bertanya, dan tidak ada yang dikirim di mana saja kecuali Postulo Anda sendiri, ketika Anda mengatakan demikian.",
+    "message": "Menekan tombol, atau $SHORTCUT$, membaca halaman yang sedang Anda lihat, di sini di browser. Tidak ada halaman yang dibaca sampai Anda memintanya, dan tidak ada yang dikirim ke mana pun selain ke Postulo Anda sendiri: Postulo ditanya apakah sudah menyimpan posting tersebut, berdasarkan alamat, judul, dan perusahaannya, dan dikirimi halaman itu saat Anda memintanya.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -240,7 +240,7 @@
     "message": "Alamat halaman ini lebih panjang dari Postulo menerima, bahkan tanpa bagian setelah \"#\", sehingga penangkapan tidak dikirim. Tambahkan posting dalam Postulo dengan tangan sebagai gantinya."
   },
   "reviewHint": {
-    "message": "Ini adalah apa yang dibaca dari halaman. Koreksi semua yang salah; tak ada yang meninggalkan peramban ini sampai Anda mengirimkannya."
+    "message": "Inilah yang dibaca dari halaman. Perbaiki apa pun yang salah. Postulo Anda hanya ditanya apakah sudah menyimpan posting ini, berdasarkan alamat, judul, dan perusahaan yang dibaca; halaman dan koreksi Anda dikirim saat Anda mengirimkannya."
   },
   "sendForReview": {
     "message": "Kirim untuk ditinjau"
@@ -261,7 +261,7 @@
     "message": "Anda menyimpan halaman ini dan belum mengirimkannya: ini adalah versi Anda."
   },
   "nothingRead": {
-    "message": "Tidak ada yang bisa dibaca dari halaman ini. Isi apa yang Anda ketahui; tidak ada yang meninggalkan browser ini sampai Anda mengirimkannya."
+    "message": "Tidak ada yang bisa dibaca dari halaman ini. Isi apa yang Anda ketahui. Postulo Anda hanya ditanya apakah sudah menyimpan alamat halaman ini; apa yang Anda isi dikirim saat Anda mengirimkannya."
   },
   "waiting": {
     "message": "Postulo tidak dapat dicapai sekarang. Hal ini disimpan dalam browser ini dan dikirim segera setelah Postulo jawaban."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Dilupakan. Browser ini tidak lagi menyimpan alamat atau token. Tangkapan tetap disimpan, dan tidak ada yang akan dikirim."
+  },
+  "fillTokenLabel": {
+    "message": "Token untuk mengisi formulir (opsional)"
+  },
+  "fillTokenHint": {
+    "message": "Token kedua yang boleh membaca data Anda, untuk mengisi formulir di halaman yang sedang Anda lihat. Jika dibiarkan kosong, ekstensi tidak dapat mengisi formulir. Token ini hanya digunakan saat Anda menekan tombol, dan hanya disimpan di perangkat ini."
+  },
+  "fillForm": {
+    "message": "Isi formulir ini"
+  },
+  "fillHint": {
+    "message": "Memasukkan nama dan email Anda ke kolom kosong yang dikenalinya, lalu menandainya. Tidak ada yang dikirimkan: Anda membacanya dan mengirimkannya sendiri."
+  },
+  "filling": {
+    "message": "Mengisi formulir…"
+  },
+  "filled": {
+    "message": "$COUNT$ kolom diisi, ditandai dengan garis tepi biru. Baca kolom-kolom itu, lalu kirim formulirnya sendiri.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Tidak ada yang dikenali di sini sebagai kolom untuk diisi, atau setiap kolom sudah berisi sesuatu."
+  },
+  "fillLeft": {
+    "message": "Tersisa untuk Anda: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

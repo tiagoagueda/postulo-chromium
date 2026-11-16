@@ -15,7 +15,7 @@
     "message": "Užfiksuoti šį skelbimą"
   },
   "captureHint": {
-    "message": "Puslapis skaitomas čia, jūsų naršyklėje. Nieko nesiunčiama, kol nepasakysite."
+    "message": "Puslapis skaitomas čia, jūsų naršyklėje. Kai jūsų Postulo bus nustatytas, jo tik klausiama, ar jame jau yra šio puslapio skelbimai, pagal jų adresą, pareigų pavadinimą ir įmonę; pats puslapis keliauja, kai jį išsiunčiate."
   },
   "review": {
     "message": "Peržiūrėti Postulo"
@@ -79,7 +79,7 @@
     "message": "Išbandyti"
   },
   "shortcutHint": {
-    "message": "Paspaudus mygtuką arba $SHORTCUT$, peržiūrimas puslapis nuskaitomas čia, naršyklėje. Joks puslapis neskaitomas, kol nepaprašote, ir nieko nesiunčiama niekur kitur, tik į jūsų pačių Postulo, kai pasakysite.",
+    "message": "Paspaudus mygtuką arba $SHORTCUT$, peržiūrimas puslapis nuskaitomas čia, naršyklėje. Joks puslapis neskaitomas, kol nepaprašote, ir niekas nekeliauja niekur kitur, tik į jūsų pačių Postulo: jo klausiama, ar jame jau yra skelbimas, pagal jo adresą, pareigų pavadinimą ir įmonę, o puslapis jam išsiunčiamas, kai pasakysite.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Puslapio nepavyko nuskaityti. Kai kurie puslapiai blokuoja plėtinius."
   },
   "reviewHint": {
-    "message": "Tai nuskaityta iš puslapio. Ištaisykite, kas neteisinga; niekas nepalieka šios naršyklės, kol to neišsiųsite."
+    "message": "Tai nuskaityta iš puslapio. Ištaisykite, kas neteisinga. Jūsų Postulo tik klausiama, ar jame jau yra šis skelbimas, pagal nuskaitytą adresą, pareigų pavadinimą ir įmonę; puslapis ir jūsų pataisymai keliauja, kai jį išsiunčiate."
   },
   "sendForReview": {
     "message": "Siųsti peržiūrai"
@@ -193,7 +193,7 @@
     "message": "Šį puslapį jau pasilikote ir dar neišsiuntėte: tai jūsų versija."
   },
   "nothingRead": {
-    "message": "Iš šio puslapio nepavyko nieko nuskaityti. Užpildykite, ką žinote; niekas nepalieka šios naršyklės, kol to neišsiųsite."
+    "message": "Iš šio puslapio nepavyko nieko nuskaityti. Užpildykite, ką žinote. Jūsų Postulo tik klausiama, ar jame jau yra šio puslapio adresas; tai, ką užpildote, keliauja, kai tai išsiunčiate."
   },
   "waiting": {
     "message": "Postulo šiuo metu nepasiekiamas. Skelbimas laikomas šioje naršyklėje ir bus išsiųstas, kai tik Postulo atsakys."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Pamiršta. Ši naršyklė nebelaiko nei adreso, nei prieigos rakto. Fiksavimai išsaugoti, bet nė vienas nebus išsiųstas."
+  },
+  "fillTokenLabel": {
+    "message": "Prieigos raktas formoms pildyti (neprivaloma)"
+  },
+  "fillTokenHint": {
+    "message": "Antras prieigos raktas, galintis skaityti jūsų duomenis, kad užpildytų formą peržiūrimame puslapyje. Palikite jį tuščią, ir plėtinys negalės pildyti formų. Jis naudojamas tik paspaudus mygtuką ir laikomas tik šiame įrenginyje."
+  },
+  "fillForm": {
+    "message": "Užpildyti šią formą"
+  },
+  "fillHint": {
+    "message": "Įrašo jūsų vardą ir el. pašto adresą į atpažintus tuščius laukus ir juos pažymi. Niekas nepateikiama: jūs ją perskaitote ir išsiunčiate patys."
+  },
+  "filling": {
+    "message": "Pildoma forma…"
+  },
+  "filled": {
+    "message": "Užpildyta laukų: $COUNT$, jie pažymėti mėlynu kontūru. Perskaitykite juos, tada patys išsiųskite formą.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Čia nieko nepavyko atpažinti kaip pildomo lauko, arba visuose laukuose jau kažkas buvo."
+  },
+  "fillLeft": {
+    "message": "Palikta jums: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

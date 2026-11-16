@@ -15,7 +15,7 @@
     "message": "Acquisisci questo annuncio"
   },
   "captureHint": {
-    "message": "La pagina viene letta qui, nel tuo browser. Non viene inviato nulla finché non lo dici tu."
+    "message": "La pagina viene letta qui, nel tuo browser. Al tuo Postulo, una volta configurato, viene chiesto solo se ha già gli annunci della pagina, in base a indirizzo, titolo e azienda; la pagina parte quando la invii."
   },
   "review": {
     "message": "Rivedi in Postulo"
@@ -79,7 +79,7 @@
     "message": "Prova"
   },
   "shortcutHint": {
-    "message": "Premendo il pulsante, o $SHORTCUT$, la pagina che stai guardando viene letta qui, nel browser. Nessuna pagina viene letta finché non lo chiedi, e niente viene inviato altrove se non al tuo Postulo, quando lo dici tu.",
+    "message": "Premendo il pulsante, o $SHORTCUT$, la pagina che stai guardando viene letta qui, nel browser. Nessuna pagina viene letta finché non lo chiedi, e niente va altrove se non al tuo Postulo: gli viene chiesto se ha già l'annuncio, in base a indirizzo, titolo e azienda, e riceve la pagina quando lo dici tu.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Non è stato possibile leggere la pagina. Alcune pagine bloccano le estensioni."
   },
   "reviewHint": {
-    "message": "Ecco cosa è stato letto dalla pagina. Correggi ciò che è sbagliato; niente lascia questo browser finché non lo invii."
+    "message": "Ecco cosa è stato letto dalla pagina. Correggi ciò che è sbagliato. Al tuo Postulo viene chiesto solo se ha già questo annuncio, in base a indirizzo, titolo e azienda letti; la pagina e le tue correzioni partono quando invii."
   },
   "sendForReview": {
     "message": "Invia per la revisione"
@@ -193,7 +193,7 @@
     "message": "Hai già conservato questa pagina e non l'hai inviata: questa è la tua versione."
   },
   "nothingRead": {
-    "message": "Non è stato possibile leggere nulla da questa pagina. Compila ciò che sai; niente lascia questo browser finché non lo invii."
+    "message": "Non è stato possibile leggere nulla da questa pagina. Compila ciò che sai. Al tuo Postulo viene chiesto solo se ha già l'indirizzo della pagina; ciò che compili parte quando lo invii."
   },
   "waiting": {
     "message": "Al momento Postulo non è raggiungibile. Resta in questo browser e verrà inviato non appena Postulo risponde."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Dimenticato. Questo browser non conserva più un indirizzo né un token. Le acquisizioni restano conservate e nessuna verrà inviata."
+  },
+  "fillTokenLabel": {
+    "message": "Token per compilare i moduli (facoltativo)"
+  },
+  "fillTokenHint": {
+    "message": "Un secondo token che può leggere i tuoi dati, per compilare il modulo nella pagina che stai guardando. Se lo lasci vuoto, l'estensione non può compilare moduli. Viene usato solo quando premi il pulsante e resta solo su questo dispositivo."
+  },
+  "fillForm": {
+    "message": "Compila questo modulo"
+  },
+  "fillHint": {
+    "message": "Inserisce il tuo nome e la tua email nei campi vuoti che riconosce, e li contrassegna. Non viene inviato nulla: lo rileggi e lo invii tu."
+  },
+  "filling": {
+    "message": "Compilazione del modulo…"
+  },
+  "filled": {
+    "message": "Campi compilati: $COUNT$, contrassegnati da un contorno blu. Rileggili, poi invia tu il modulo.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Qui non è stato riconosciuto nessun campo da compilare, oppure ogni campo conteneva già qualcosa."
+  },
+  "fillLeft": {
+    "message": "Restano a te: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

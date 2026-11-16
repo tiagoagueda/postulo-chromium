@@ -15,7 +15,7 @@
     "message": "Captura aquest anunci"
   },
   "captureHint": {
-    "message": "La pàgina es llegeix aquí, al vostre navegador. No s'envia res fins que ho digueu."
+    "message": "La pàgina es llegeix aquí, al vostre navegador. Al vostre Postulo, un cop configurat, només se li pregunta si ja té les ofertes de la pàgina, per la seva adreça, títol i empresa; la pàgina surt quan l'envieu."
   },
   "review": {
     "message": "Revisa-la al Postulo"
@@ -79,7 +79,7 @@
     "message": "Prova"
   },
   "shortcutHint": {
-    "message": "En prémer el botó, o $SHORTCUT$, es llegeix la pàgina que esteu mirant, aquí al navegador. No es llegeix cap pàgina fins que ho demaneu, i no s'envia res enlloc més que al vostre propi Postulo, quan ho digueu.",
+    "message": "En prémer el botó, o $SHORTCUT$, es llegeix la pàgina que esteu mirant, aquí al navegador. No es llegeix cap pàgina fins que ho demaneu, i res no va enlloc més que al vostre propi Postulo: se li pregunta si ja té l'oferta, per la seva adreça, títol i empresa, i se li envia la pàgina quan ho digueu.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "No s'ha pogut llegir la pàgina. Algunes pàgines bloquegen les extensions."
   },
   "reviewHint": {
-    "message": "Això és el que s'ha llegit de la pàgina. Corregiu el que estigui malament; res no surt d'aquest navegador fins que ho envieu."
+    "message": "Això és el que s'ha llegit de la pàgina. Corregiu el que estigui malament. Al vostre Postulo només se li pregunta si ja té aquesta oferta, per l'adreça, el títol i l'empresa llegits; la pàgina i les vostres correccions surten quan l'envieu."
   },
   "sendForReview": {
     "message": "Envia per a revisió"
@@ -193,7 +193,7 @@
     "message": "Ja havíeu desat aquesta pàgina i no l'heu enviada: aquesta és la vostra versió."
   },
   "nothingRead": {
-    "message": "No s'ha pogut llegir res d'aquesta pàgina. Ompliu el que sapigueu; res no surt d'aquest navegador fins que ho envieu."
+    "message": "No s'ha pogut llegir res d'aquesta pàgina. Ompliu el que sapigueu. Al vostre Postulo només se li pregunta si ja té l'adreça de la pàgina; el que ompliu surt quan ho envieu."
   },
   "waiting": {
     "message": "Ara mateix no es pot arribar al Postulo. Es desa en aquest navegador i s'enviarà tan bon punt el Postulo respongui."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "S'ha oblidat. Aquest navegador ja no conserva cap adreça ni cap testimoni. Les captures es conserven i no se n'enviarà cap."
+  },
+  "fillTokenLabel": {
+    "message": "Testimoni per omplir formularis (opcional)"
+  },
+  "fillTokenHint": {
+    "message": "Un segon testimoni que pot llegir les vostres dades, per omplir el formulari de la pàgina que esteu mirant. Si el deixeu buit, l'extensió no pot omplir formularis. Només s'utilitza quan premeu el botó, i només es desa en aquest dispositiu."
+  },
+  "fillForm": {
+    "message": "Omple aquest formulari"
+  },
+  "fillHint": {
+    "message": "Posa el vostre nom i correu electrònic als camps buits que reconeix, i els marca. No es tramet res: el llegiu i l'envieu vós mateix."
+  },
+  "filling": {
+    "message": "S'està omplint el formulari…"
+  },
+  "filled": {
+    "message": "S'han omplert $COUNT$ camps, marcats amb un contorn blau. Llegiu-los i després envieu el formulari vós mateix.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "No s'ha reconegut res aquí com a camp per omplir, o tots els camps ja tenien alguna cosa."
+  },
+  "fillLeft": {
+    "message": "Us toca omplir: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

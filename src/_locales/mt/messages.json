@@ -15,7 +15,7 @@
     "message": "Aqbad dan l-avviż"
   },
   "captureHint": {
-    "message": "Il-paġna tinqara hawn, fil-brawżer tiegħek. Xejn ma jintbagħat sakemm ma tgħidx int."
+    "message": "Il-paġna tinqara hawn, fil-brawżer tiegħek. Il-Postulo tiegħek, ladarba jiġi ssettjat, jiġi mistoqsi biss jekk diġà għandux l-avviżi tal-paġna, skont l-indirizz, it-titlu u l-kumpanija tagħhom; il-paġna tmur meta tibgħatha."
   },
   "review": {
     "message": "Irrevedi fil-Postulo"
@@ -79,7 +79,7 @@
     "message": "Ittestja"
   },
   "shortcutHint": {
-    "message": "Meta tagħfas il-buttuna, jew $SHORTCUT$, il-paġna li qed tħares lejha tinqara hawn, fil-brawżer. L-ebda paġna ma tinqara sakemm ma titlobx, u xejn ma jintbagħat x'imkien ħlief lill-Postulo tiegħek, meta tgħid int.",
+    "message": "Meta tagħfas il-buttuna, jew $SHORTCUT$, il-paġna li qed tħares lejha tinqara hawn, fil-brawżer. L-ebda paġna ma tinqara sakemm ma titlobx, u xejn ma jmur x'imkien ħlief lill-Postulo tiegħek: jiġi mistoqsi jekk diġà għandux l-avviż, skont l-indirizz, it-titlu u l-kumpanija tiegħu, u tintbagħatlu l-paġna meta tgħid int.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Il-paġna ma setgħetx tinqara. Xi paġni jimblukkaw l-estensjonijiet."
   },
   "reviewHint": {
-    "message": "Dan hu dak li nqara mill-paġna. Ikkoreġi dak li huwa ħażin; xejn ma joħroġ minn dan il-brawżer sakemm ma tibagħtux."
+    "message": "Dan hu dak li nqara mill-paġna. Ikkoreġi dak li huwa ħażin. Il-Postulo tiegħek jiġi mistoqsi biss jekk diġà għandux dan l-avviż, skont l-indirizz, it-titlu u l-kumpanija li nqraw; il-paġna u l-korrezzjonijiet tiegħek imorru meta tibgħatha."
   },
   "sendForReview": {
     "message": "Ibgħat għar-reviżjoni"
@@ -193,7 +193,7 @@
     "message": "Din il-paġna diġà żammejtha u għadek ma bgħattihiex: din hi l-verżjoni tiegħek."
   },
   "nothingRead": {
-    "message": "Xejn ma seta' jinqara minn din il-paġna. Imla dak li taf; xejn ma joħroġ minn dan il-brawżer sakemm ma tibagħtux."
+    "message": "Xejn ma seta' jinqara minn din il-paġna. Imla dak li taf. Il-Postulo tiegħek jiġi mistoqsi biss jekk diġà għandux l-indirizz tal-paġna; dak li timla jmur meta tibagħtu."
   },
   "waiting": {
     "message": "Il-Postulo ma jistax jintlaħaq bħalissa. Jinżamm f'dan il-brawżer u jintbagħat hekk kif il-Postulo jwieġeb."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Insa. Dan il-browser m'għandux indirizz jew token iżjed. Il-qbid jinżamm, u ebda wieħed ma jintbagħat."
+  },
+  "fillTokenLabel": {
+    "message": "Token biex jimtlew il-formoli (mhux obbligatorju)"
+  },
+  "fillTokenHint": {
+    "message": "It-tieni token li jista' jaqra d-dettalji tiegħek, biex jimla l-formola fil-paġna li qed tħares lejha. Jekk tħallih vojt, l-estensjoni ma tistax timla formoli. Jintuża biss meta tagħfas il-buttuna, u jinżamm fuq dan l-apparat biss."
+  },
+  "fillForm": {
+    "message": "Imla din il-formola"
+  },
+  "fillHint": {
+    "message": "Ipoġġi ismek u l-email tiegħek fl-oqsma vojta li jagħraf, u jimmarkahom. Xejn ma jiġi sottomess: taqraha u tibgħatha int stess."
+  },
+  "filling": {
+    "message": "Qed timtela l-formola…"
+  },
+  "filled": {
+    "message": "Imtlew $COUNT$ oqsma, immarkati b'kontorn blu. Aqrahom, imbagħad ibgħat il-formola int stess.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Xejn hawn ma ntgħaraf bħala qasam li għandu jimtela, jew kull qasam diġà kellu xi ħaġa fih."
+  },
+  "fillLeft": {
+    "message": "Fadal għalik: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

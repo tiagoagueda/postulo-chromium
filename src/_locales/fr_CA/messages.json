@@ -60,7 +60,7 @@
     "message": "Ajouter une annonce"
   },
   "captureHint": {
-    "message": "La page est lue ici, dans votre navigateur. Rien n'est envoyé avant que vous le décidiez."
+    "message": "La page est lue ici, dans votre navigateur. On demande seulement à votre Postulo, une fois configuré, s'il a déjà les annonces de la page, d'après leur adresse, leur intitulé et leur entreprise; la page part quand vous l'envoyez."
   },
   "review": {
     "message": "Vérifier dans Postulo"
@@ -124,7 +124,7 @@
     "message": "Tester"
   },
   "shortcutHint": {
-    "message": "Appuyer sur le bouton, ou sur $SHORTCUT$, lit la page que vous consultez, ici dans le navigateur. Aucune page n'est lue avant que vous le demandiez, et rien n'est envoyé ailleurs qu'à votre propre Postulo, quand vous le décidez.",
+    "message": "Appuyer sur le bouton, ou sur $SHORTCUT$, lit la page que vous consultez, ici dans le navigateur. Aucune page n'est lue avant que vous le demandiez, et rien ne part ailleurs que vers votre propre Postulo : on lui demande s'il a déjà l'annonce, d'après son adresse, son intitulé et son entreprise, et la page lui est envoyée quand vous le décidez.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -240,7 +240,7 @@
     "message": "L'adresse de cette page est plus longue que ce que Postulo accepte, même sans la partie située après « # », donc la capture n'a pas été envoyée. Ajoutez plutôt l'annonce dans Postulo à la main."
   },
   "reviewHint": {
-    "message": "Voici ce qui a été lu sur la page. Corrigez ce qui est faux; rien ne quitte ce navigateur avant que vous l'envoyiez."
+    "message": "Voici ce qui a été lu sur la page. Corrigez ce qui est faux. On demande seulement à votre Postulo s'il a déjà cette annonce, d'après l'adresse, l'intitulé et l'entreprise lus; la page et vos corrections partent quand vous l'envoyez."
   },
   "sendForReview": {
     "message": "Envoyer pour examen"
@@ -261,7 +261,7 @@
     "message": "Vous avez déjà gardé cette page sans l'envoyer : voici votre version."
   },
   "nothingRead": {
-    "message": "Rien n'a pu être lu sur cette page. Remplissez ce que vous savez; rien ne quitte ce navigateur avant que vous l'envoyiez."
+    "message": "Rien n'a pu être lu sur cette page. Remplissez ce que vous savez. On demande seulement à votre Postulo s'il a déjà l'adresse de la page; ce que vous remplissez part quand vous l'envoyez."
   },
   "waiting": {
     "message": "Postulo est injoignable pour le moment. Elle est gardée dans ce navigateur et sera envoyée dès que Postulo répondra."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Oublié. Ce navigateur ne conserve plus ni adresse ni jeton. Les captures sont conservées et aucune ne sera envoyée."
+  },
+  "fillTokenLabel": {
+    "message": "Jeton pour remplir les formulaires (facultatif)"
+  },
+  "fillTokenHint": {
+    "message": "Un second jeton autorisé à lire vos informations, pour remplir le formulaire de la page que vous consultez. S'il reste vide, l'extension ne peut pas remplir de formulaires. Il n'est utilisé que lorsque vous appuyez sur le bouton, et n'est conservé que sur cet appareil."
+  },
+  "fillForm": {
+    "message": "Remplir ce formulaire"
+  },
+  "fillHint": {
+    "message": "Inscrit votre nom et votre adresse courriel dans les champs vides qu'il reconnaît, et les signale. Rien n'est soumis : vous relisez le formulaire et l'envoyez vous-même."
+  },
+  "filling": {
+    "message": "Remplissage du formulaire…"
+  },
+  "filled": {
+    "message": "$COUNT$ champs remplis, entourés de bleu. Relisez-les, puis envoyez le formulaire vous-même.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Rien ici n'a été reconnu comme un champ à remplir, ou chaque champ contenait déjà quelque chose."
+  },
+  "fillLeft": {
+    "message": "À remplir par vous : $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -60,7 +60,7 @@
     "message": "Legg til ei utlysing"
   },
   "captureHint": {
-    "message": "Sida blir lesen her, i nettlesaren din. Ingenting blir sendt før du seier frå."
+    "message": "Sida blir lesen her, i nettlesaren din. Postulo-en din blir, når han er sett opp, berre spurd om han alt har stillingsannonsane på sida, ut frå adresse, tittel og selskap; sida går når du sender henne."
   },
   "review": {
     "message": "Gå gjennom i Postulo"
@@ -124,7 +124,7 @@
     "message": "Test"
   },
   "shortcutHint": {
-    "message": "Når du trykkjer på knappen eller $SHORTCUT$, blir sida du ser på, lesen her i nettlesaren. Inga side blir lesen før du ber om det, og ingenting blir sendt nokon annan stad enn til din eigen Postulo, når du seier frå.",
+    "message": "Når du trykkjer på knappen eller $SHORTCUT$, blir sida du ser på, lesen her i nettlesaren. Inga side blir lesen før du ber om det, og ingenting går nokon annan stad enn til din eigen Postulo: han blir spurd om han alt har stillingsannonsen, ut frå adresse, tittel og selskap, og får sida send når du seier frå.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -240,7 +240,7 @@
     "message": "Adressa til denne sida er lengre enn Postulo godtek, sjølv utan delen etter «#», så fangsten vart ikkje sendt. Legg heller inn stillingsannonsen manuelt i Postulo."
   },
   "reviewHint": {
-    "message": "Dette er det som vart lese frå sida. Rett det som er feil; ingenting forlèt denne nettlesaren før du sender det."
+    "message": "Dette er det som vart lese frå sida. Rett det som er feil. Postulo-en din blir berre spurd om han alt har denne stillingsannonsen, ut frå adressa, tittelen og selskapet som vart lesne; sida og rettingane dine går når du sender det."
   },
   "sendForReview": {
     "message": "Send til gjennomgang"
@@ -261,7 +261,7 @@
     "message": "Du har alt teke vare på denne sida og ikkje sendt henne: dette er din versjon."
   },
   "nothingRead": {
-    "message": "Ingenting kunne lesast frå denne sida. Fyll inn det du veit; ingenting forlèt denne nettlesaren før du sender det."
+    "message": "Ingenting kunne lesast frå denne sida. Fyll inn det du veit. Postulo-en din blir berre spurd om han alt har adressa til sida; det du fyller inn, går når du sender det."
   },
   "waiting": {
     "message": "Får ikkje kontakt med Postulo akkurat no. Fangsten blir teken vare på i denne nettlesaren og sendt så snart Postulo svarar."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Gløymd. Denne nettlesaren har ikkje lenger ei adresse eller eit token. Fangstane er teke vare på, og ingen blir sende."
+  },
+  "fillTokenLabel": {
+    "message": "Token for utfylling av skjema (valfritt)"
+  },
+  "fillTokenHint": {
+    "message": "Eit ekstra token som får lese opplysningane dine, for å fylle ut skjemaet på sida du ser på. Lèt du det stå tomt, kan ikkje utvidinga fylle ut skjema. Det blir berre brukt når du trykkjer på knappen, og blir berre lagra på denne eininga."
+  },
+  "fillForm": {
+    "message": "Fyll ut dette skjemaet"
+  },
+  "fillHint": {
+    "message": "Set inn namnet og e-postadressa di i dei tomme felta ho kjenner att, og merkjer dei. Ingenting blir sendt inn: du les gjennom og sender det sjølv."
+  },
+  "filling": {
+    "message": "Fyller ut skjemaet…"
+  },
+  "filled": {
+    "message": "Fylte ut $COUNT$ felt, merkte med blå kant. Les gjennom dei, og send så skjemaet sjølv.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Ingenting her vart kjent att som eit felt å fylle ut, eller alle felta hadde alt noko i seg."
+  },
+  "fillLeft": {
+    "message": "Står att for deg: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

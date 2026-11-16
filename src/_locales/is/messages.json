@@ -15,7 +15,7 @@
     "message": "Grípa þessa auglýsingu"
   },
   "captureHint": {
-    "message": "Síðan er lesin hér, í vafranum þínum. Ekkert er sent fyrr en þú segir til."
+    "message": "Síðan er lesin hér, í vafranum þínum. Þitt Postulo er, þegar það hefur verið sett upp, aðeins spurt hvort það sé þegar með auglýsingar síðunnar, eftir heimilisfangi þeirra, titli og fyrirtæki; síðan fer þegar þú sendir hana."
   },
   "review": {
     "message": "Fara yfir í Postulo"
@@ -79,7 +79,7 @@
     "message": "Prófa"
   },
   "shortcutHint": {
-    "message": "Með því að ýta á hnappinn, eða $SHORTCUT$, er síðan sem þú ert að skoða lesin hér í vafranum. Engin síða er lesin fyrr en þú biður um það, og ekkert er sent neitt nema í þitt eigið Postulo, þegar þú segir til.",
+    "message": "Með því að ýta á hnappinn, eða $SHORTCUT$, er síðan sem þú ert að skoða lesin hér í vafranum. Engin síða er lesin fyrr en þú biður um það, og ekkert fer neitt nema í þitt eigið Postulo: það er spurt hvort það sé þegar með auglýsinguna, eftir heimilisfangi hennar, titli og fyrirtæki, og fær síðuna senda þegar þú segir til.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Ekki tókst að lesa síðuna. Sumar síður loka á viðbætur."
   },
   "reviewHint": {
-    "message": "Þetta var lesið af síðunni. Leiðréttu það sem er rangt; ekkert fer úr þessum vafra fyrr en þú sendir það."
+    "message": "Þetta var lesið af síðunni. Leiðréttu það sem er rangt. Þitt Postulo er aðeins spurt hvort það sé þegar með þessa auglýsingu, eftir heimilisfanginu, titlinum og fyrirtækinu sem voru lesin; síðan og leiðréttingarnar þínar fara þegar þú sendir það."
   },
   "sendForReview": {
     "message": "Senda til yfirferðar"
@@ -193,7 +193,7 @@
     "message": "Þú geymdir þessa síðu áður og hefur ekki sent hana: þetta er þín útgáfa."
   },
   "nothingRead": {
-    "message": "Ekkert var hægt að lesa af þessari síðu. Fylltu út það sem þú veist; ekkert fer úr þessum vafra fyrr en þú sendir það."
+    "message": "Ekkert var hægt að lesa af þessari síðu. Fylltu út það sem þú veist. Þitt Postulo er aðeins spurt hvort það sé þegar með heimilisfang síðunnar; það sem þú fyllir út fer þegar þú sendir það."
   },
   "waiting": {
     "message": "Ekki næst í Postulo í augnablikinu. Það er geymt í þessum vafra og sent um leið og Postulo svarar."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Gleymt. Þessi vafri geymir ekki lengur vistfang eða teikn. Gripin eru geymd og engin verða send."
+  },
+  "fillTokenLabel": {
+    "message": "Teikn til að fylla út eyðublöð (valfrjálst)"
+  },
+  "fillTokenHint": {
+    "message": "Annað teikn sem má lesa upplýsingarnar þínar, til að fylla út eyðublaðið á síðunni sem þú ert að skoða. Ef þú skilur það eftir autt getur viðbótin ekki fyllt út eyðublöð. Það er aðeins notað þegar þú ýtir á hnappinn og aðeins geymt á þessu tæki."
+  },
+  "fillForm": {
+    "message": "Fylla út þetta eyðublað"
+  },
+  "fillHint": {
+    "message": "Setur nafnið þitt og netfangið þitt í tómu reitina sem hún þekkir og merkir þá. Ekkert er sent inn: þú lest það yfir og sendir það sjálf(ur)."
+  },
+  "filling": {
+    "message": "Fylli út eyðublaðið…"
+  },
+  "filled": {
+    "message": "Fyllti út $COUNT$ reiti, merkta með blárri útlínu. Lestu þá yfir og sendu svo eyðublaðið sjálf(ur).",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Ekkert hér þekktist sem reitur til að fylla út, eða allir reitir voru þegar með eitthvað í sér."
+  },
+  "fillLeft": {
+    "message": "Eftir fyrir þig: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

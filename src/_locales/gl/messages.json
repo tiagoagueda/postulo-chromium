@@ -15,7 +15,7 @@
     "message": "Capturar esta oferta"
   },
   "captureHint": {
-    "message": "A páxina lese aquí, no teu navegador. Non se envía nada ata que ti o digas."
+    "message": "A páxina lese aquí, no teu navegador. Ao teu Postulo, unha vez configurado, só se lle pregunta se xa ten as ofertas da páxina, polo seu enderezo, título e empresa; a páxina sae cando a envíes."
   },
   "review": {
     "message": "Revisala no Postulo"
@@ -79,7 +79,7 @@
     "message": "Probar"
   },
   "shortcutHint": {
-    "message": "Ao premer o botón, ou $SHORTCUT$, lese a páxina que estás a ver, aquí no navegador. Non se le ningunha páxina ata que o pidas, e non se envía nada a ningures agás ao teu propio Postulo, cando ti o digas.",
+    "message": "Ao premer o botón, ou $SHORTCUT$, lese a páxina que estás a ver, aquí no navegador. Non se le ningunha páxina ata que o pidas, e nada vai a ningures agás ao teu propio Postulo: pregúntaselle se xa ten a oferta, polo seu enderezo, título e empresa, e envíaselle a páxina cando ti o digas.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Non se puido ler a páxina. Algunhas páxinas bloquean as extensións."
   },
   "reviewHint": {
-    "message": "Isto é o que se leu da páxina. Corrixe o que estea mal; nada sae deste navegador ata que o envíes."
+    "message": "Isto é o que se leu da páxina. Corrixe o que estea mal. Ao teu Postulo só se lle pregunta se xa ten esta oferta, polo enderezo, o título e a empresa lidos; a páxina e as túas correccións saen cando a envíes."
   },
   "sendForReview": {
     "message": "Enviar para revisión"
@@ -193,7 +193,7 @@
     "message": "Xa conservaches esta páxina e non a enviaches: esta é a túa versión."
   },
   "nothingRead": {
-    "message": "Non se puido ler nada desta páxina. Enche o que saibas; nada sae deste navegador ata que o envíes."
+    "message": "Non se puido ler nada desta páxina. Enche o que saibas. Ao teu Postulo só se lle pregunta se xa ten o enderezo da páxina; o que enchas sae cando o envíes."
   },
   "waiting": {
     "message": "Agora mesmo non se pode chegar ao Postulo. Consérvase neste navegador e enviarase en canto o Postulo responda."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Esquecido. Este navegador xa non garda un enderezo nin un token. As capturas consérvanse e non se enviará ningunha."
+  },
+  "fillTokenLabel": {
+    "message": "Token para encher formularios (opcional)"
+  },
+  "fillTokenHint": {
+    "message": "Un segundo token que pode ler os teus datos, para encher o formulario da páxina que estás a ver. Se o deixas baleiro, a extensión non pode encher formularios. Só se usa cando premes o botón, e gárdase só neste dispositivo."
+  },
+  "fillForm": {
+    "message": "Encher este formulario"
+  },
+  "fillHint": {
+    "message": "Pon o teu nome e correo electrónico nos campos baleiros que recoñece, e márcaos. Non se envía nada: ti mesmo o les e o envías."
+  },
+  "filling": {
+    "message": "Enchendo o formulario…"
+  },
+  "filled": {
+    "message": "Enchéronse $COUNT$ campos, marcados cun contorno azul. Leos e despois envía ti mesmo o formulario.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Aquí non se recoñeceu nada como campo para encher, ou todos os campos xa tiñan algo."
+  },
+  "fillLeft": {
+    "message": "Quédanche por encher: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

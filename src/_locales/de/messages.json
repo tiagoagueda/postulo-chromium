@@ -15,7 +15,7 @@
     "message": "Diese Anzeige erfassen"
   },
   "captureHint": {
-    "message": "Die Seite wird hier in Ihrem Browser gelesen. Nichts wird gesendet, bevor Sie es sagen."
+    "message": "Die Seite wird hier in Ihrem Browser gelesen. Ihr Postulo wird, sobald es eingerichtet ist, nur gefragt, ob es die Anzeigen der Seite schon hat, anhand ihrer Adresse, ihres Titels und ihres Unternehmens; die Seite geht los, wenn Sie sie senden."
   },
   "review": {
     "message": "In Postulo prüfen"
@@ -79,7 +79,7 @@
     "message": "Testen"
   },
   "shortcutHint": {
-    "message": "Ein Klick auf die Schaltfläche oder $SHORTCUT$ liest die Seite, die Sie ansehen, hier im Browser. Keine Seite wird gelesen, bevor Sie es verlangen, und nichts wird irgendwohin gesendet außer an Ihr eigenes Postulo, wenn Sie es sagen.",
+    "message": "Ein Klick auf die Schaltfläche oder $SHORTCUT$ liest die Seite, die Sie ansehen, hier im Browser. Keine Seite wird gelesen, bevor Sie es verlangen, und nichts geht irgendwohin außer an Ihr eigenes Postulo: Es wird gefragt, ob es die Anzeige schon hat, anhand ihrer Adresse, ihres Titels und ihres Unternehmens, und erhält die Seite, wenn Sie es sagen.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Die Seite konnte nicht gelesen werden. Manche Seiten blockieren Erweiterungen."
   },
   "reviewHint": {
-    "message": "Das wurde von der Seite gelesen. Korrigieren Sie, was falsch ist; nichts verlässt diesen Browser, bevor Sie es senden."
+    "message": "Das wurde von der Seite gelesen. Korrigieren Sie, was falsch ist. Ihr Postulo wird nur gefragt, ob es diese Anzeige schon hat, anhand der gelesenen Adresse, des Titels und des Unternehmens; die Seite und Ihre Korrekturen gehen los, wenn Sie sie senden."
   },
   "sendForReview": {
     "message": "Zur Prüfung senden"
@@ -193,7 +193,7 @@
     "message": "Sie haben diese Seite schon aufbewahrt und noch nicht gesendet: Das ist Ihre Fassung."
   },
   "nothingRead": {
-    "message": "Von dieser Seite ließ sich nichts lesen. Füllen Sie aus, was Sie wissen; nichts verlässt diesen Browser, bevor Sie es senden."
+    "message": "Von dieser Seite ließ sich nichts lesen. Füllen Sie aus, was Sie wissen. Ihr Postulo wird nur gefragt, ob es die Adresse der Seite schon hat; was Sie ausfüllen, geht los, wenn Sie es senden."
   },
   "waiting": {
     "message": "Postulo ist gerade nicht erreichbar. Die Erfassung wird in diesem Browser aufbewahrt und gesendet, sobald Postulo antwortet."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Vergessen. Dieser Browser speichert keine Adresse und keinen Token mehr. Die Erfassungen bleiben erhalten, es wird keine gesendet."
+  },
+  "fillTokenLabel": {
+    "message": "Token zum Ausfüllen von Formularen (optional)"
+  },
+  "fillTokenHint": {
+    "message": "Ein zweites Token, das Ihre Angaben lesen darf, um das Formular auf der Seite auszufüllen, die Sie ansehen. Lassen Sie es leer, kann die Erweiterung keine Formulare ausfüllen. Es wird nur verwendet, wenn Sie die Schaltfläche drücken, und nur auf diesem Gerät gespeichert."
+  },
+  "fillForm": {
+    "message": "Dieses Formular ausfüllen"
+  },
+  "fillHint": {
+    "message": "Trägt Ihren Namen und Ihre E-Mail-Adresse in die leeren Felder ein, die erkannt werden, und markiert sie. Nichts wird abgeschickt: Sie lesen es durch und senden es selbst."
+  },
+  "filling": {
+    "message": "Formular wird ausgefüllt …"
+  },
+  "filled": {
+    "message": "Ausgefüllte Felder: $COUNT$, blau umrandet. Lesen Sie sie durch und senden Sie das Formular dann selbst.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Hier wurde nichts als auszufüllendes Feld erkannt, oder jedes Feld enthielt bereits etwas."
+  },
+  "fillLeft": {
+    "message": "Für Sie übrig: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

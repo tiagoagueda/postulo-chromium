@@ -60,7 +60,7 @@
     "message": "Legg eina starvslýsing afturat"
   },
   "captureHint": {
-    "message": "Síðan verður lisin her, í kaganum hjá tær. Einki verður sent, fyrr enn tú sigur tað."
+    "message": "Síðan verður lisin her, í kaganum hjá tær. Tín Postulo verður, tá ið hon er sett upp, bert spurd, um hon longu hevur starvslýsingarnar á síðuni, eftir vevbústaði, heiti og fyritøku; síðan fer, tá ið tú sendir hana."
   },
   "review": {
     "message": "Eftirkanna í Postulo"
@@ -124,7 +124,7 @@
     "message": "Royn"
   },
   "shortcutHint": {
-    "message": "Trýstir tú á knøttin, ella $SHORTCUT$, verður síðan, tú hyggur at, lisin her í kaganum. Eingin síða verður lisin, fyrr enn tú biður um tað, og einki verður sent nakrastaðni uttan til tína egnu Postulo, tá ið tú sigur tað.",
+    "message": "Trýstir tú á knøttin, ella $SHORTCUT$, verður síðan, tú hyggur at, lisin her í kaganum. Eingin síða verður lisin, fyrr enn tú biður um tað, og einki fer nakrastaðni uttan til tína egnu Postulo: hon verður spurd, um hon longu hevur starvslýsingina, eftir vevbústaði, heiti og fyritøku, og fær síðuna senda, tá ið tú sigur tað.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -240,7 +240,7 @@
     "message": "Vevbústaðurin hjá hesi síðuni er longri, enn Postulo góðtekur, eisini uttan partin aftan á „#“, so fangingin varð ikki send. Legg heldur starvslýsingina afturat í Postulo við hond."
   },
   "reviewHint": {
-    "message": "Hetta er tað, sum varð lisið av síðuni. Rætta alt, sum er skeivt; einki fer úr hesum kaganum, fyrr enn tú sendir tað."
+    "message": "Hetta er tað, sum varð lisið av síðuni. Rætta alt, sum er skeivt. Tín Postulo verður bert spurd, um hon longu hevur hesa starvslýsingina, eftir vevbústaðnum, heitinum og fyritøkuni, sum vórðu lisin; síðan og tínar rættingar fara, tá ið tú sendir tað."
   },
   "sendForReview": {
     "message": "Send til eftirkanning"
@@ -261,7 +261,7 @@
     "message": "Tú hevur longu goymt hesa síðuna og ikki sent hana: hetta er tín útgáva."
   },
   "nothingRead": {
-    "message": "Einki bar til at lesa av hesi síðuni. Fyll út tað, tú veitst; einki fer úr hesum kaganum, fyrr enn tú sendir tað."
+    "message": "Einki bar til at lesa av hesi síðuni. Fyll út tað, tú veitst. Tín Postulo verður bert spurd, um hon longu hevur vevbústaðin hjá síðuni; tað, tú fyllir út, fer, tá ið tú sendir tað."
   },
   "waiting": {
     "message": "Ikki ber til at fáa samband við Postulo júst nú. Tað verður goymt í hesum kaganum og sent, so skjótt sum Postulo svarar."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Gloymt. Hesin kagin hevur ikki longur nakra vevadressu ella nakað tekin. Fangingarnar eru varðveittar, og eingin verður send."
+  },
+  "fillTokenLabel": {
+    "message": "Tekin til at fylla út oyðubløð (valfrítt)"
+  },
+  "fillTokenHint": {
+    "message": "Eitt annað tekin, sum hevur loyvi at lesa tínar upplýsingar, til at fylla út oyðublaðið á síðuni, tú hyggur at. Lætur tú tað vera tómt, kann ískoytið ikki fylla út oyðubløð. Tað verður bert brúkt, tá ið tú trýstir á knøttin, og bert goymt á hesum tóli."
+  },
+  "fillForm": {
+    "message": "Fyll út hetta oyðublaðið"
+  },
+  "fillHint": {
+    "message": "Setur navn títt og teldupostadressu tína í tómu teigarnar, sum tað kennir aftur, og merkir teir. Einki verður sent inn: tú lesur tað ígjøgnum og sendir tað sjálvur."
+  },
+  "filling": {
+    "message": "Fyllir út oyðublaðið…"
+  },
+  "filled": {
+    "message": "$COUNT$ teigar fyltir út, merktir við bláari rammu. Les teir ígjøgnum, og send so sjálvur oyðublaðið.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Einki her varð kent aftur sum ein teigur at fylla út, ella høvdu allir teigar longu okkurt í sær."
+  },
+  "fillLeft": {
+    "message": "Eftir til tín: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

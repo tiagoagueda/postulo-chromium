@@ -15,7 +15,7 @@
     "message": "Gabh an fógra poist seo"
   },
   "captureHint": {
-    "message": "Léitear an leathanach anseo, i do bhrabhsálaí. Ní sheoltar aon rud go dtí go ndeir tú é."
+    "message": "Léitear an leathanach anseo, i do bhrabhsálaí. Ní fhiafraítear de do Postulo, nuair a bheidh sé socraithe, ach an bhfuil fógraí an leathanaigh aige cheana, de réir a seoladh, a dteideal agus a gcuideachta; imíonn an leathanach nuair a sheolann tú é."
   },
   "review": {
     "message": "Athbhreithnigh in Postulo"
@@ -79,7 +79,7 @@
     "message": "Tástáil"
   },
   "shortcutHint": {
-    "message": "Nuair a bhrúnn tú an cnaipe, nó $SHORTCUT$, léitear an leathanach atá á fheiceáil agat, anseo sa bhrabhsálaí. Ní léitear aon leathanach go n-iarrann tú é, agus ní sheoltar aon rud áit ar bith ach chuig do Postulo féin, nuair a deir tú é.",
+    "message": "Nuair a bhrúnn tú an cnaipe, nó $SHORTCUT$, léitear an leathanach atá á fheiceáil agat, anseo sa bhrabhsálaí. Ní léitear aon leathanach go n-iarrann tú é, agus ní théann aon rud áit ar bith ach chuig do Postulo féin: fiafraítear de an bhfuil an fógra aige cheana, de réir a sheolta, a theidil agus a chuideachta, agus seoltar an leathanach chuige nuair a deir tú é.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Níorbh fhéidir an leathanach a léamh. Cuireann roinnt leathanach bac ar shínte."
   },
   "reviewHint": {
-    "message": "Seo an méid a léadh ón leathanach. Ceartaigh aon rud atá mícheart; ní fhágann aon rud an brabhsálaí seo go dtí go seolann tú é."
+    "message": "Seo an méid a léadh ón leathanach. Ceartaigh aon rud atá mícheart. Ní fhiafraítear de do Postulo ach an bhfuil an fógra seo aige cheana, de réir an tseolta, an teidil agus na cuideachta a léadh; imíonn an leathanach agus do cheartúcháin nuair a sheolann tú é."
   },
   "sendForReview": {
     "message": "Seol le haghaidh athbhreithnithe"
@@ -193,7 +193,7 @@
     "message": "Choinnigh tú an leathanach seo cheana agus níor sheol tú é: seo do leagan féin."
   },
   "nothingRead": {
-    "message": "Níorbh fhéidir aon rud a léamh ón leathanach seo. Líon isteach a bhfuil ar eolas agat; ní fhágann aon rud an brabhsálaí seo go dtí go seolann tú é."
+    "message": "Níorbh fhéidir aon rud a léamh ón leathanach seo. Líon isteach a bhfuil ar eolas agat. Ní fhiafraítear de do Postulo ach an bhfuil seoladh an leathanaigh aige cheana; imíonn a líonann tú isteach nuair a sheolann tú é."
   },
   "waiting": {
     "message": "Ní féidir Postulo a bhaint amach faoi láthair. Coinnítear sa bhrabhsálaí seo é agus seolfar é chomh luath agus a fhreagraíonn Postulo."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Dearmadta. Níl seoladh ná comhartha ag an mbrabhsálaí seo a thuilleadh. Coinnítear na gabhálacha, agus ní sheolfar aon cheann acu."
+  },
+  "fillTokenLabel": {
+    "message": "Comhartha chun foirmeacha a líonadh (roghnach)"
+  },
+  "fillTokenHint": {
+    "message": "Dara comhartha atá in ann do shonraí a léamh, chun an fhoirm ar an leathanach atá á fheiceáil agat a líonadh. Fág folamh é agus ní féidir leis an síneadh foirmeacha a líonadh. Ní úsáidtear é ach nuair a bhrúnn tú an cnaipe, agus ní choinnítear é ach ar an ngléas seo."
+  },
+  "fillForm": {
+    "message": "Líon an fhoirm seo"
+  },
+  "fillHint": {
+    "message": "Cuireann sé d'ainm agus do sheoladh ríomhphoist sna réimsí folmha a aithníonn sé, agus marcálann sé iad. Ní chuirtear aon rud isteach: léann tú í agus seolann tú féin í."
+  },
+  "filling": {
+    "message": "Ag líonadh na foirme…"
+  },
+  "filled": {
+    "message": "Líonadh $COUNT$ réimse, marcáilte le himlíne ghorm. Léigh iad, ansin seol féin an fhoirm.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Níor aithníodh aon rud anseo mar réimse le líonadh, nó bhí rud éigin i ngach réimse cheana."
+  },
+  "fillLeft": {
+    "message": "Fágtha duit: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

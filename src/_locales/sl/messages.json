@@ -15,7 +15,7 @@
     "message": "Zajemi ta oglas"
   },
   "captureHint": {
-    "message": "Stran se prebere tukaj, v vašem brskalniku. Nič se ne pošlje, dokler tega ne rečete."
+    "message": "Stran se prebere tukaj, v vašem brskalniku. Vaš Postulo, ko bo nastavljen, dobi samo vprašanje, ali oglase s te strani že ima, po njihovem spletnem naslovu, nazivu in podjetju; stran gre tja, ko jo pošljete."
   },
   "review": {
     "message": "Preglej v Postulu"
@@ -79,7 +79,7 @@
     "message": "Preizkusi"
   },
   "shortcutHint": {
-    "message": "Pritisk na gumb ali $SHORTCUT$ prebere stran, ki jo gledate, tukaj v brskalniku. Nobena stran se ne prebere, dokler tega ne zahtevate, in nič se ne pošlje nikamor razen v vaš Postulo, ko tako rečete.",
+    "message": "Pritisk na gumb ali $SHORTCUT$ prebere stran, ki jo gledate, tukaj v brskalniku. Nobena stran se ne prebere, dokler tega ne zahtevate, in nič ne gre nikamor razen v vaš Postulo: ta dobi vprašanje, ali oglas že ima, po njegovem spletnem naslovu, nazivu in podjetju, stran pa prejme, ko tako rečete.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Strani ni bilo mogoče prebrati. Nekatere strani blokirajo razširitve."
   },
   "reviewHint": {
-    "message": "To je bilo prebrano s strani. Popravite, kar je narobe; nič ne zapusti tega brskalnika, dokler tega ne pošljete."
+    "message": "To je bilo prebrano s strani. Popravite, kar je narobe. Vaš Postulo dobi samo vprašanje, ali ta oglas že ima, po prebranem spletnem naslovu, nazivu in podjetju; stran in vaši popravki gredo tja, ko jih pošljete."
   },
   "sendForReview": {
     "message": "Pošlji v pregled"
@@ -193,7 +193,7 @@
     "message": "To stran ste že obdržali in je še niste poslali: to je vaša različica."
   },
   "nothingRead": {
-    "message": "S te strani ni bilo mogoče prebrati ničesar. Izpolnite, kar veste; nič ne zapusti tega brskalnika, dokler tega ne pošljete."
+    "message": "S te strani ni bilo mogoče prebrati ničesar. Izpolnite, kar veste. Vaš Postulo dobi samo vprašanje, ali spletni naslov te strani že ima; kar izpolnite, gre tja, ko to pošljete."
   },
   "waiting": {
     "message": "Postulo trenutno ni dosegljiv. Hrani se v tem brskalniku in se pošlje, takoj ko se Postulo odzove."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Pozabljeno. Ta brskalnik ne hrani več naslova ali žetona. Zajemi so ohranjeni, nobeden pa ne bo poslan."
+  },
+  "fillTokenLabel": {
+    "message": "Žeton za izpolnjevanje obrazcev (neobvezno)"
+  },
+  "fillTokenHint": {
+    "message": "Drugi žeton, ki sme brati vaše podatke, da izpolni obrazec na strani, ki jo gledate. Če polje pustite prazno, razširitev ne more izpolnjevati obrazcev. Uporabi se samo, ko pritisnete gumb, in se hrani samo v tej napravi."
+  },
+  "fillForm": {
+    "message": "Izpolni ta obrazec"
+  },
+  "fillHint": {
+    "message": "Vpiše vaše ime in e-poštni naslov v prazna polja, ki jih prepozna, in jih označi. Nič se ne odda: obrazec preberete in ga pošljete sami."
+  },
+  "filling": {
+    "message": "Izpolnjevanje obrazca …"
+  },
+  "filled": {
+    "message": "Izpolnjena polja: $COUNT$, označena z modro obrobo. Preberite jih, nato obrazec pošljite sami.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Nič tukaj ni bilo prepoznano kot polje za izpolnjevanje ali pa je bilo v vsakem polju že nekaj vpisano."
+  },
+  "fillLeft": {
+    "message": "Ostalo za vas: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

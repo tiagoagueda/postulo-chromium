@@ -15,7 +15,7 @@
     "message": "Kap këtë shpallje"
   },
   "captureHint": {
-    "message": "Faqja lexohet këtu, në shfletuesin tuaj. Asgjë nuk dërgohet derisa ta thoni ju."
+    "message": "Faqja lexohet këtu, në shfletuesin tuaj. Postulo-ja juaj, pasi të konfigurohet, pyetet vetëm nëse i ka tashmë shpalljet e faqes, sipas adresës, titullit dhe kompanisë së tyre; vetë faqja shkon kur ta dërgoni."
   },
   "review": {
     "message": "Shqyrtojeni në Postulo"
@@ -79,7 +79,7 @@
     "message": "Testo"
   },
   "shortcutHint": {
-    "message": "Duke shtypur butonin, ose $SHORTCUT$, faqja që po shikoni lexohet këtu, në shfletues. Asnjë faqe nuk lexohet derisa ta kërkoni, dhe asgjë nuk dërgohet askund tjetër veçse te Postulo-ja juaj, kur ta thoni ju.",
+    "message": "Duke shtypur butonin, ose $SHORTCUT$, faqja që po shikoni lexohet këtu, në shfletues. Asnjë faqe nuk lexohet derisa ta kërkoni, dhe asgjë nuk shkon askund tjetër veçse te Postulo-ja juaj: ajo pyetet nëse e ka tashmë shpalljen, sipas adresës, titullit dhe kompanisë së saj, dhe i dërgohet faqja kur ta thoni ju.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -167,7 +167,7 @@
     "message": "Faqja nuk mund të lexohej. Disa faqe i bllokojnë zgjerimet."
   },
   "reviewHint": {
-    "message": "Kjo është ajo që u lexua nga faqja. Korrigjoni çdo gabim; asgjë nuk del nga ky shfletues derisa ta dërgoni."
+    "message": "Kjo është ajo që u lexua nga faqja. Korrigjoni çdo gabim. Postulo-ja juaj pyetet vetëm nëse e ka tashmë këtë shpallje, sipas adresës, titullit dhe kompanisë së lexuar; faqja dhe korrigjimet tuaja shkojnë kur ta dërgoni."
   },
   "sendForReview": {
     "message": "Dërgo për shqyrtim"
@@ -185,7 +185,7 @@
     "message": "Këtë faqe e keni mbajtur tashmë dhe nuk e keni dërguar: ky është versioni juaj."
   },
   "nothingRead": {
-    "message": "Nga kjo faqe nuk mund të lexohej asgjë. Plotësoni atë që dini; asgjë nuk del nga ky shfletues derisa ta dërgoni."
+    "message": "Nga kjo faqe nuk mund të lexohej asgjë. Plotësoni atë që dini. Postulo-ja juaj pyetet vetëm nëse e ka tashmë adresën e faqes; ajo që plotësoni shkon kur ta dërgoni."
   },
   "waiting": {
     "message": "Postulo nuk mund të arrihet tani. Mbahet në këtë shfletues dhe dërgohet sapo Postulo të përgjigjet."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "U harrua. Ky shfletues nuk mban më adresë ose token. Kapjet ruhen dhe asnjë nuk do të dërgohet."
+  },
+  "fillTokenLabel": {
+    "message": "Token për plotësimin e formularëve (opsional)"
+  },
+  "fillTokenHint": {
+    "message": "Një token i dytë që mund të lexojë të dhënat tuaja, për të plotësuar formularin në faqen që po shikoni. Nëse e lini bosh, shtesa nuk mund të plotësojë formularë. Përdoret vetëm kur shtypni butonin dhe mbahet vetëm në këtë pajisje."
+  },
+  "fillForm": {
+    "message": "Plotëso këtë formular"
+  },
+  "fillHint": {
+    "message": "Vendos emrin dhe email-in tuaj në fushat bosh që njeh dhe i shënon ato. Asgjë nuk paraqitet: ju e lexoni dhe e dërgoni vetë."
+  },
+  "filling": {
+    "message": "Po plotësohet formulari…"
+  },
+  "filled": {
+    "message": "U plotësuan $COUNT$ fusha, të shënuara me një kornizë blu. Lexojini, pastaj dërgojeni formularin vetë.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Asgjë këtu nuk u njoh si fushë për t'u plotësuar, ose çdo fushë kishte tashmë diçka."
+  },
+  "fillLeft": {
+    "message": "Mbetet për ju: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

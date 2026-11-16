@@ -15,7 +15,7 @@
     "message": "Uhvati ovaj oglas"
   },
   "captureHint": {
-    "message": "Stranica se čita ovdje, u vašem pregledniku. Ništa se ne šalje dok to ne kažete."
+    "message": "Stranica se čita ovdje, u vašem pregledniku. Vaš Postulo, kad bude postavljen, dobiva samo upit ima li već oglase s ove stranice, prema njihovoj adresi, naslovu i tvrtki; stranica odlazi kada je pošaljete."
   },
   "review": {
     "message": "Pregledaj u Postulu"
@@ -79,7 +79,7 @@
     "message": "Testiraj"
   },
   "shortcutHint": {
-    "message": "Pritiskom na gumb ili na $SHORTCUT$ čita se stranica koju gledate, ovdje u pregledniku. Nijedna se stranica ne čita dok to ne zatražite, i ništa se ne šalje nikamo osim u vaš Postulo, kada to kažete.",
+    "message": "Pritiskom na gumb ili na $SHORTCUT$ čita se stranica koju gledate, ovdje u pregledniku. Nijedna se stranica ne čita dok to ne zatražite, i ništa ne ide nikamo osim u vaš Postulo: on dobiva upit ima li već oglas, prema njegovoj adresi, naslovu i tvrtki, a stranica mu se šalje kada to kažete.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Stranica se nije mogla pročitati. Neke stranice blokiraju proširenja."
   },
   "reviewHint": {
-    "message": "Ovo je pročitano sa stranice. Ispravite sve što je pogrešno; ništa ne napušta ovaj preglednik dok to ne pošaljete."
+    "message": "Ovo je pročitano sa stranice. Ispravite sve što je pogrešno. Vaš Postulo dobiva samo upit ima li već ovaj oglas, prema pročitanoj adresi, naslovu i tvrtki; stranica i vaši ispravci odlaze kada ih pošaljete."
   },
   "sendForReview": {
     "message": "Pošalji na pregled"
@@ -193,7 +193,7 @@
     "message": "Ovu ste stranicu već zadržali i niste je poslali: ovo je vaša verzija."
   },
   "nothingRead": {
-    "message": "S ove se stranice ništa nije moglo pročitati. Ispunite ono što znate; ništa ne napušta ovaj preglednik dok to ne pošaljete."
+    "message": "S ove se stranice ništa nije moglo pročitati. Ispunite ono što znate. Vaš Postulo dobiva samo upit ima li već adresu ove stranice; ono što ispunite odlazi kada to pošaljete."
   },
   "waiting": {
     "message": "Postulo trenutačno nije dostupan. Čuva se u ovom pregledniku i šalje se čim Postulo odgovori."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Zaboravljeno. Ovaj preglednik više ne drži adresu ni token. Hvatanja su zadržana i nijedno neće biti poslano."
+  },
+  "fillTokenLabel": {
+    "message": "Token za ispunjavanje obrazaca (neobavezno)"
+  },
+  "fillTokenHint": {
+    "message": "Drugi token koji smije čitati vaše podatke kako bi ispunio obrazac na stranici koju gledate. Ako polje ostavite prazno, proširenje ne može ispunjavati obrasce. Koristi se samo kada pritisnete gumb i čuva se samo na ovom uređaju."
+  },
+  "fillForm": {
+    "message": "Ispuni ovaj obrazac"
+  },
+  "fillHint": {
+    "message": "Upisuje vaše ime i e-adresu u prazna polja koja prepozna i označava ih. Ništa se ne predaje: vi ga pročitate i sami pošaljete."
+  },
+  "filling": {
+    "message": "Ispunjavanje obrasca…"
+  },
+  "filled": {
+    "message": "Ispunjena polja: $COUNT$, označena plavim obrubom. Pročitajte ih, a zatim sami pošaljite obrazac.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Ništa ovdje nije prepoznato kao polje za ispunjavanje ili je u svakom polju već nešto bilo."
+  },
+  "fillLeft": {
+    "message": "Ostavljeno vama: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

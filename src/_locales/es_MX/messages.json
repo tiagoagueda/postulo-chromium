@@ -60,7 +60,7 @@
     "message": "Agregar una oferta"
   },
   "captureHint": {
-    "message": "La página se lee aquí, en su navegador. No se envía nada hasta que usted lo indique."
+    "message": "La página se lee aquí, en su navegador. A su Postulo, una vez configurado, solo se le pregunta si ya tiene las vacantes de la página, por su dirección, título y empresa; la página sale cuando usted la envía."
   },
   "review": {
     "message": "Revisar en Postulo"
@@ -124,7 +124,7 @@
     "message": "Probar"
   },
   "shortcutHint": {
-    "message": "Al presionar el botón, o $SHORTCUT$, se lee la página que está viendo, aquí en el navegador. No se lee ninguna página hasta que usted lo pida, y no se envía nada a ningún lugar que no sea su propio Postulo, cuando usted lo indique.",
+    "message": "Al presionar el botón, o $SHORTCUT$, se lee la página que está viendo, aquí en el navegador. No se lee ninguna página hasta que usted lo pida, y nada va a ningún lugar que no sea su propio Postulo: se le pregunta si ya tiene la vacante, por su dirección, título y empresa, y se le envía la página cuando usted lo indique.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -240,7 +240,7 @@
     "message": "La dirección de esta página es más larga de lo que Postulo acepta, incluso sin la parte que va después de “#”, así que la captura no se envió. Mejor agregue la vacante en Postulo a mano."
   },
   "reviewHint": {
-    "message": "Esto es lo que se leyó de la página. Corrija lo que esté mal; nada sale de este navegador hasta que usted lo envíe."
+    "message": "Esto es lo que se leyó de la página. Corrija lo que esté mal. A su Postulo solo se le pregunta si ya tiene esta vacante, por la dirección, el título y la empresa leídos; la página y sus correcciones salen cuando usted la envíe."
   },
   "sendForReview": {
     "message": "Enviar para revisión"
@@ -261,7 +261,7 @@
     "message": "Ya había conservado esta página y no la ha enviado: esta es su versión."
   },
   "nothingRead": {
-    "message": "No se pudo leer nada de esta página. Complete lo que sepa; nada sale de este navegador hasta que usted lo envíe."
+    "message": "No se pudo leer nada de esta página. Complete lo que sepa. A su Postulo solo se le pregunta si ya tiene la dirección de la página; lo que complete sale cuando usted lo envíe."
   },
   "waiting": {
     "message": "No se puede conectar con Postulo en este momento. Se conserva en este navegador y se enviará en cuanto Postulo responda."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Olvidado. Este navegador ya no guarda ninguna dirección ni token. Las capturas se conservan y no se enviará ninguna."
+  },
+  "fillTokenLabel": {
+    "message": "Token para llenar formularios (opcional)"
+  },
+  "fillTokenHint": {
+    "message": "Un segundo token que puede leer sus datos, para llenar el formulario de la página que está viendo. Si lo deja vacío, la extensión no puede llenar formularios. Solo se usa cuando usted presiona el botón, y se guarda solo en este dispositivo."
+  },
+  "fillForm": {
+    "message": "Llenar este formulario"
+  },
+  "fillHint": {
+    "message": "Escribe su nombre y su correo electrónico en los campos vacíos que reconoce, y los marca. No se envía nada: usted lo revisa y lo envía."
+  },
+  "filling": {
+    "message": "Llenando el formulario…"
+  },
+  "filled": {
+    "message": "Se llenaron $COUNT$ campos, marcados con un contorno azul. Revíselos y luego envíe usted el formulario.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Aquí no se reconoció nada como un campo por llenar, o todos los campos ya tenían algo."
+  },
+  "fillLeft": {
+    "message": "Le quedan por llenar: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -60,7 +60,7 @@
     "message": "Add a listing"
   },
   "captureHint": {
-    "message": "The page is read here, in your browser. Nothing is sent until you say so."
+    "message": "The page is read here, in your browser. Your Postulo, once set up, is asked only whether it already holds the page's postings, by their address, title and company; the page goes when you send it."
   },
   "review": {
     "message": "Review in Postulo"
@@ -124,7 +124,7 @@
     "message": "Test"
   },
   "shortcutHint": {
-    "message": "Pressing the button, or $SHORTCUT$, reads the page you are looking at, here in the browser. No page is read until you ask, and nothing is sent anywhere but your own Postulo, when you say so.",
+    "message": "Pressing the button, or $SHORTCUT$, reads the page you are looking at, here in the browser. No page is read until you ask, and nothing goes anywhere but your own Postulo: it is asked whether it already holds the posting, by its address, title and company, and is sent the page when you say so.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -240,7 +240,7 @@
     "message": "This page's address is longer than Postulo accepts, even without the part after the “#”, so the capture was not sent. Add the posting in Postulo by hand instead."
   },
   "reviewHint": {
-    "message": "This is what was read from the page. Correct anything that is wrong; nothing leaves this browser until you send it."
+    "message": "This is what was read from the page. Correct anything that is wrong. Your Postulo is asked only whether it already holds this posting, by the address, title and company read; the page and your corrections go when you send it."
   },
   "sendForReview": {
     "message": "Send for review"
@@ -261,7 +261,7 @@
     "message": "You kept this page already and have not sent it: this is your version."
   },
   "nothingRead": {
-    "message": "Nothing could be read from this page. Fill in what you know; nothing leaves this browser until you send it."
+    "message": "Nothing could be read from this page. Fill in what you know. Your Postulo is asked only whether it already holds the page's address; what you fill in goes when you send it."
   },
   "waiting": {
     "message": "Postulo cannot be reached right now. It is kept in this browser and sent as soon as Postulo answers."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Forgotten. This browser no longer holds an address or a token. The captures are kept, and none will be sent."
+  },
+  "fillTokenLabel": {
+    "message": "Token for filling forms (optional)"
+  },
+  "fillTokenHint": {
+    "message": "A second token that may read your details, to fill the form on the page you are looking at. Leave it empty and the extension cannot fill forms. It is used only when you press the button, and kept on this device only."
+  },
+  "fillForm": {
+    "message": "Fill this form"
+  },
+  "fillHint": {
+    "message": "Puts your name and email into the empty fields it recognizes, and marks them. Nothing is submitted: you read it and send it yourself."
+  },
+  "filling": {
+    "message": "Filling the form…"
+  },
+  "filled": {
+    "message": "Filled $COUNT$ fields, marked with a blue outline. Read them, then send the form yourself.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Nothing here was recognized as a field to fill, or every field already had something in it."
+  },
+  "fillLeft": {
+    "message": "Left for you: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

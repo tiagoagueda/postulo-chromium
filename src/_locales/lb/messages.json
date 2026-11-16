@@ -15,7 +15,7 @@
     "message": "Dës Annonce erfaassen"
   },
   "captureHint": {
-    "message": "D'Säit gëtt hei gelies, an Ärem Browser. Näischt gëtt geschéckt, ier Dir et sot."
+    "message": "D'Säit gëtt hei gelies, an Ärem Browser. Äre Postulo gëtt, soubal en ageriicht ass, nëmme gefrot, ob en d'Annoncë vun der Säit scho huet, no hirer Adress, hirem Titel an hirer Firma; d'Säit geet, wann Dir se schéckt."
   },
   "review": {
     "message": "Am Postulo duerchkucken"
@@ -79,7 +79,7 @@
     "message": "Testen"
   },
   "shortcutHint": {
-    "message": "E Klick op de Knäppchen, oder $SHORTCUT$, liest d'Säit, déi Dir Iech ukuckt, hei am Browser. Keng Säit gëtt gelies, ier Dir et frot, an näischt gëtt iergendwouhi geschéckt ausser un Ären eegene Postulo, wann Dir et sot.",
+    "message": "E Klick op de Knäppchen, oder $SHORTCUT$, liest d'Säit, déi Dir Iech ukuckt, hei am Browser. Keng Säit gëtt gelies, ier Dir et frot, an näischt geet iergendwouhin ausser un Ären eegene Postulo: deen gëtt gefrot, ob en d'Annonce scho huet, no hirer Adress, hirem Titel an hirer Firma, a kritt d'Säit, wann Dir et sot.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "D'Säit konnt net gelies ginn. Verschidde Säite blockéieren Erweiderungen."
   },
   "reviewHint": {
-    "message": "Dat gouf vun der Säit gelies. Verbessert, wat falsch ass; näischt verléisst dëse Browser, ier Dir et schéckt."
+    "message": "Dat gouf vun der Säit gelies. Verbessert, wat falsch ass. Äre Postulo gëtt nëmme gefrot, ob en dës Annonce scho huet, no der geliesener Adress, dem Titel an der Firma; d'Säit an Är Verbesserunge ginn, wann Dir se schéckt."
   },
   "sendForReview": {
     "message": "Zur Iwwerpréiwung schécken"
@@ -193,7 +193,7 @@
     "message": "Dir hutt dës Säit scho behalen an nach net geschéckt: dëst ass Är Versioun."
   },
   "nothingRead": {
-    "message": "Vun dëser Säit konnt näischt gelies ginn. Fëllt aus, wat Dir wësst; näischt verléisst dëse Browser, ier Dir et schéckt."
+    "message": "Vun dëser Säit konnt näischt gelies ginn. Fëllt aus, wat Dir wësst. Äre Postulo gëtt nëmme gefrot, ob en d'Adress vun der Säit scho huet; wat Dir ausfëllt, geet, wann Dir et schéckt."
   },
   "waiting": {
     "message": "De Postulo ass grad net z'erreechen. D'Annonce bleift an dësem Browser a gëtt geschéckt, soubal de Postulo äntwert."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Vergiess. Dëse Browser hält keng Adress an och keen Token méi. D'Erfaassunge bleiwe behalen, et gëtt keng geschéckt."
+  },
+  "fillTokenLabel": {
+    "message": "Token fir Formulairen auszefëllen (fakultativ)"
+  },
+  "fillTokenHint": {
+    "message": "En zweeten Token, deen Är Donnéeë liesen däerf, fir de Formulaire op der Säit auszefëllen, déi Dir Iech ukuckt. Loosst Dir en eidel, kann d'Erweiderung keng Formulairen ausfëllen. En gëtt nëmme benotzt, wann Dir op de Knäppchen dréckt, an nëmmen op dësem Apparat gespäichert."
+  },
+  "fillForm": {
+    "message": "Dëse Formulaire ausfëllen"
+  },
+  "fillHint": {
+    "message": "Setzt Ären Numm an Är E-Mail-Adress an déi eidel Felder, déi en erkennt, a markéiert se. Näischt gëtt ofgeschéckt: Dir liest et a schéckt et selwer."
+  },
+  "filling": {
+    "message": "De Formulaire gëtt ausgefëllt…"
+  },
+  "filled": {
+    "message": "Ausgefëllte Felder: $COUNT$, mat engem bloe Rand markéiert. Liest se, a schéckt dann de Formulaire selwer.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Hei gouf näischt als Feld zum Ausfëllen erkannt, oder all Feld hat scho eppes dran."
+  },
+  "fillLeft": {
+    "message": "Bleift fir Iech: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

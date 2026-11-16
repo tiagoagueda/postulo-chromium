@@ -15,7 +15,7 @@
     "message": "Capturar este anúncio"
   },
   "captureHint": {
-    "message": "A página é lida aqui, no seu navegador. Nada é enviado até que o indique."
+    "message": "A página é lida aqui, no seu navegador. Ao seu Postulo, depois de configurado, só se pergunta se já tem os anúncios da página, pelo endereço, título e empresa de cada um; a página segue quando a enviar."
   },
   "review": {
     "message": "Rever no Postulo"
@@ -79,7 +79,7 @@
     "message": "Testar"
   },
   "shortcutHint": {
-    "message": "Ao carregar no botão, ou em $SHORTCUT$, a página que está a ver é lida aqui, no navegador. Nenhuma página é lida até o pedir, e nada é enviado para lado nenhum além do seu próprio Postulo, quando o indicar.",
+    "message": "Ao carregar no botão, ou em $SHORTCUT$, a página que está a ver é lida aqui, no navegador. Nenhuma página é lida até o pedir, e nada vai para lado nenhum além do seu próprio Postulo: pergunta-se-lhe se já tem o anúncio, pelo endereço, título e empresa, e a página é-lhe enviada quando o indicar.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Não foi possível ler a página. Algumas páginas bloqueiam extensões."
   },
   "reviewHint": {
-    "message": "Isto é o que foi lido da página. Corrija o que estiver errado; nada sai deste navegador até o enviar."
+    "message": "Isto é o que foi lido da página. Corrija o que estiver errado. Ao seu Postulo só se pergunta se já tem este anúncio, pelo endereço, título e empresa lidos; a página e as suas correções seguem quando a enviar."
   },
   "sendForReview": {
     "message": "Enviar para revisão"
@@ -193,7 +193,7 @@
     "message": "Já tinha mantido esta página sem a enviar: esta é a sua versão."
   },
   "nothingRead": {
-    "message": "Não foi possível ler nada desta página. Preencha o que souber; nada sai deste navegador até o enviar."
+    "message": "Não foi possível ler nada desta página. Preencha o que souber. Ao seu Postulo só se pergunta se já tem o endereço da página; o que preencher segue quando o enviar."
   },
   "waiting": {
     "message": "Neste momento não é possível chegar ao Postulo. Fica guardado neste navegador e é enviado assim que o Postulo responder."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Esquecido. Este navegador já não guarda um endereço nem um token. As capturas são mantidas e nenhuma será enviada."
+  },
+  "fillTokenLabel": {
+    "message": "Token para preencher formulários (opcional)"
+  },
+  "fillTokenHint": {
+    "message": "Um segundo token que pode ler os seus dados, para preencher o formulário da página que está a ver. Se o deixar vazio, a extensão não consegue preencher formulários. Só é usado quando carrega no botão, e fica guardado apenas neste dispositivo."
+  },
+  "fillForm": {
+    "message": "Preencher este formulário"
+  },
+  "fillHint": {
+    "message": "Coloca o seu nome e e-mail nos campos vazios que reconhece, e assinala-os. Nada é submetido: é o próprio utilizador que lê e envia o formulário."
+  },
+  "filling": {
+    "message": "A preencher o formulário…"
+  },
+  "filled": {
+    "message": "$COUNT$ campos preenchidos, assinalados com um contorno azul. Leia-os e depois envie o formulário por si.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Nada aqui foi reconhecido como um campo a preencher, ou todos os campos já tinham algo."
+  },
+  "fillLeft": {
+    "message": "Fica para si: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

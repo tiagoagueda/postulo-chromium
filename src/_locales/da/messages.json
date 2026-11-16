@@ -15,7 +15,7 @@
     "message": "Indfang dette opslag"
   },
   "captureHint": {
-    "message": "Siden læses her, i din browser. Intet sendes, før du siger til."
+    "message": "Siden læses her, i din browser. Din Postulo bliver, når den er sat op, kun spurgt, om den allerede har sidens opslag, ud fra deres adresse, titel og virksomhed; siden går af sted, når du sender den."
   },
   "review": {
     "message": "Gennemse i Postulo"
@@ -79,7 +79,7 @@
     "message": "Test"
   },
   "shortcutHint": {
-    "message": "Et tryk på knappen, eller $SHORTCUT$, læser siden, du kigger på, her i browseren. Ingen side læses, før du beder om det, og intet sendes andre steder hen end til din egen Postulo, når du siger til.",
+    "message": "Et tryk på knappen, eller $SHORTCUT$, læser siden, du kigger på, her i browseren. Ingen side læses, før du beder om det, og intet går andre steder hen end til din egen Postulo: den bliver spurgt, om den allerede har opslaget, ud fra dets adresse, titel og virksomhed, og får siden sendt, når du siger til.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Siden kunne ikke læses. Nogle sider blokerer udvidelser."
   },
   "reviewHint": {
-    "message": "Det her er, hvad der blev læst på siden. Ret det, der er forkert; intet forlader denne browser, før du sender det."
+    "message": "Det her er, hvad der blev læst på siden. Ret det, der er forkert. Din Postulo bliver kun spurgt, om den allerede har dette opslag, ud fra den læste adresse, titel og virksomhed; siden og dine rettelser går af sted, når du sender det."
   },
   "sendForReview": {
     "message": "Send til gennemgang"
@@ -193,7 +193,7 @@
     "message": "Du har allerede gemt denne side uden at sende den: dette er din version."
   },
   "nothingRead": {
-    "message": "Der kunne ikke læses noget på denne side. Udfyld det, du ved; intet forlader denne browser, før du sender det."
+    "message": "Der kunne ikke læses noget på denne side. Udfyld det, du ved. Din Postulo bliver kun spurgt, om den allerede har sidens adresse; det, du udfylder, går af sted, når du sender det."
   },
   "waiting": {
     "message": "Postulo kan ikke nås lige nu. Det gemmes i denne browser og sendes, så snart Postulo svarer."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Glemt. Denne browser har ikke længere en adresse eller et token. Indfangningerne er gemt, og ingen bliver sendt."
+  },
+  "fillTokenLabel": {
+    "message": "Token til udfyldning af formularer (valgfrit)"
+  },
+  "fillTokenHint": {
+    "message": "Et ekstra token, der må læse dine oplysninger, så formularen på siden, du kigger på, kan udfyldes. Lad det stå tomt, så kan udvidelsen ikke udfylde formularer. Det bruges kun, når du trykker på knappen, og gemmes kun på denne enhed."
+  },
+  "fillForm": {
+    "message": "Udfyld denne formular"
+  },
+  "fillHint": {
+    "message": "Indsætter dit navn og din e-mail i de tomme felter, den genkender, og markerer dem. Intet indsendes: du læser det igennem og sender det selv."
+  },
+  "filling": {
+    "message": "Udfylder formularen…"
+  },
+  "filled": {
+    "message": "Udfyldte $COUNT$ felter, markeret med en blå kant. Læs dem igennem, og send så selv formularen.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Intet her blev genkendt som et felt, der skal udfyldes, eller alle felter havde allerede noget i sig."
+  },
+  "fillLeft": {
+    "message": "Udfyld selv: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

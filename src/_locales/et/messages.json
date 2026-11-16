@@ -15,7 +15,7 @@
     "message": "Jäädvusta see kuulutus"
   },
   "captureHint": {
-    "message": "Lehte loetakse siin, teie brauseris. Midagi ei saadeta enne, kui te seda ütlete."
+    "message": "Lehte loetakse siin, teie brauseris. Teie Postulolt küsitakse, kui see on seadistatud, ainult seda, kas lehe kuulutused on tal juba olemas, nende aadressi, pealkirja ja ettevõtte järgi; leht läheb teele, kui te selle saadate."
   },
   "review": {
     "message": "Vaata üle Postulos"
@@ -79,7 +79,7 @@
     "message": "Testi"
   },
   "shortcutHint": {
-    "message": "Nupu või $SHORTCUT$ vajutamine loeb vaadatava lehe siin brauseris. Ühtegi lehte ei loeta enne, kui te seda palute, ja midagi ei saadeta kuhugi mujale kui teie enda Postulosse ning ainult siis, kui te seda ütlete.",
+    "message": "Nupu või $SHORTCUT$ vajutamine loeb vaadatava lehe siin brauseris. Ühtegi lehte ei loeta enne, kui te seda palute, ja midagi ei lähe kuhugi mujale kui teie enda Postulosse: sellelt küsitakse, kas kuulutus on tal juba olemas, selle aadressi, pealkirja ja ettevõtte järgi, ning leht saadetakse sellele siis, kui te seda ütlete.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Lehte ei õnnestunud lugeda. Mõned lehed blokeerivad laiendusi."
   },
   "reviewHint": {
-    "message": "See on lehelt loetu. Parandage kõik, mis on valesti; midagi ei lahku sellest brauserist enne, kui te selle saadate."
+    "message": "See on lehelt loetu. Parandage kõik, mis on valesti. Teie Postulolt küsitakse ainult, kas see kuulutus on tal juba olemas, loetud aadressi, pealkirja ja ettevõtte järgi; leht ja teie parandused lähevad teele, kui te selle saadate."
   },
   "sendForReview": {
     "message": "Saada ülevaatamiseks"
@@ -193,7 +193,7 @@
     "message": "Hoidsite selle lehe juba alles ega ole seda saatnud: see on teie versioon."
   },
   "nothingRead": {
-    "message": "Sellelt lehelt ei õnnestunud midagi lugeda. Täitke, mida teate; midagi ei lahku sellest brauserist enne, kui te selle saadate."
+    "message": "Sellelt lehelt ei õnnestunud midagi lugeda. Täitke, mida teate. Teie Postulolt küsitakse ainult, kas lehe aadress on tal juba olemas; see, mida täidate, läheb teele, kui te selle saadate."
   },
   "waiting": {
     "message": "Postulo pole praegu kättesaadav. Kuulutust hoitakse selles brauseris ja see saadetakse kohe, kui Postulo vastab."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Unustatud. See brauser ei hoia enam aadressi ega tõendit. Jäädvustused jäävad alles, kuid ühtegi neist ei saadeta."
+  },
+  "fillTokenLabel": {
+    "message": "Tõend vormide täitmiseks (valikuline)"
+  },
+  "fillTokenHint": {
+    "message": "Teine tõend, mis tohib lugeda teie andmeid, et täita vaadataval lehel olev vorm. Kui jätate selle tühjaks, ei saa laiendus vorme täita. Seda kasutatakse ainult siis, kui vajutate nuppu, ja hoitakse ainult selles seadmes."
+  },
+  "fillForm": {
+    "message": "Täida see vorm"
+  },
+  "fillHint": {
+    "message": "Paneb teie nime ja e-posti aadressi tühjadele väljadele, mille see ära tunneb, ja märgib need. Midagi ei esitata: lugege see läbi ja saatke ise."
+  },
+  "filling": {
+    "message": "Vormi täidetakse…"
+  },
+  "filled": {
+    "message": "Täideti $COUNT$ välja, märgitud sinise äärisega. Lugege need läbi ja saatke siis vorm ise ära.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Siin ei tuntud midagi ära täidetava väljana või oli igal väljal juba midagi sees."
+  },
+  "fillLeft": {
+    "message": "Teie täita jäi: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

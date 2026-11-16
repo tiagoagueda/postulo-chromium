@@ -60,7 +60,7 @@
     "message": "Elan əlavə et"
   },
   "captureHint": {
-    "message": "Səhifə burada, brauzerinizdə oxunur. Siz istəməyənə qədər heç nə göndərilmir."
+    "message": "Səhifə burada, brauzerinizdə oxunur. Postulo-nuzdan, quraşdırıldıqdan sonra, yalnız səhifədəki elanların onda artıq olub-olmadığı onların ünvanı, başlığı və şirkətinə görə soruşulur; səhifə isə siz onu göndərdikdə gedir."
   },
   "review": {
     "message": "Postulo-da nəzərdən keçir"
@@ -124,7 +124,7 @@
     "message": "Sına"
   },
   "shortcutHint": {
-    "message": "Düyməni və ya $SHORTCUT$ düymələrini basdıqda baxdığınız səhifə burada, brauzerdə oxunur. Siz istəməyənə qədər heç bir səhifə oxunmur və heç nə sizin öz Postulo-nuzdan başqa yerə göndərilmir, o da yalnız siz istədiyiniz zaman.",
+    "message": "Düyməni və ya $SHORTCUT$ düymələrini basdıqda baxdığınız səhifə burada, brauzerdə oxunur. Siz istəməyənə qədər heç bir səhifə oxunmur və heç nə sizin öz Postulo-nuzdan başqa yerə getmir: ondan elanın onda artıq olub-olmadığı onun ünvanı, başlığı və şirkətinə görə soruşulur, səhifə isə ona siz istədiyiniz zaman göndərilir.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -240,7 +240,7 @@
     "message": "Bu səhifənin ünvanı, hətta «#» işarəsindən sonrakı hissə olmadan belə, Postulo-nun qəbul etdiyindən uzundur, ona görə götürmə göndərilmədi. Bunun əvəzinə elanı Postulo-da əl ilə əlavə edin."
   },
   "reviewHint": {
-    "message": "Səhifədən oxunan budur. Səhv olan hər şeyi düzəldin; siz göndərməyənə qədər heç nə bu brauzerdən çıxmır."
+    "message": "Səhifədən oxunan budur. Səhv olan hər şeyi düzəldin. Postulo-nuzdan yalnız bu elanın onda artıq olub-olmadığı oxunan ünvan, başlıq və şirkətə görə soruşulur; səhifə və düzəlişləriniz isə siz göndərdikdə gedir."
   },
   "sendForReview": {
     "message": "Nəzərdən keçirməyə göndər"
@@ -261,7 +261,7 @@
     "message": "Bu səhifəni artıq saxlamısınız və göndərməmisiniz: bu, sizin versiyanızdır."
   },
   "nothingRead": {
-    "message": "Bu səhifədən heç nə oxunmadı. Bildiklərinizi doldurun; siz göndərməyənə qədər heç nə bu brauzerdən çıxmır."
+    "message": "Bu səhifədən heç nə oxunmadı. Bildiklərinizi doldurun. Postulo-nuzdan yalnız səhifənin ünvanının onda artıq olub-olmadığı soruşulur; doldurduqlarınız isə siz göndərdikdə gedir."
   },
   "waiting": {
     "message": "Postulo-ya hazırda qoşulmaq mümkün deyil. Götürmə bu brauzerdə saxlanılır və Postulo cavab verən kimi göndəriləcək."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Unuduldu. Bu brauzerdə artıq nə ünvan, nə də token saxlanılır. Götürmələr saxlanılır və heç biri göndərilməyəcək."
+  },
+  "fillTokenLabel": {
+    "message": "Formları doldurmaq üçün token (istəyə bağlı)"
+  },
+  "fillTokenHint": {
+    "message": "Baxdığınız səhifədəki formu doldurmaq üçün məlumatlarınızı oxuya bilən ikinci token. Boş saxlasanız, genişləndirmə formları doldura bilməz. Yalnız düyməni basdığınız zaman istifadə olunur və yalnız bu cihazda saxlanılır."
+  },
+  "fillForm": {
+    "message": "Bu formu doldur"
+  },
+  "fillHint": {
+    "message": "Adınızı və e-poçt ünvanınızı tanıdığı boş sahələrə yazır və onları işarələyir. Heç nə təqdim edilmir: formu siz oxuyur və özünüz göndərirsiniz."
+  },
+  "filling": {
+    "message": "Form doldurulur…"
+  },
+  "filled": {
+    "message": "$COUNT$ sahə dolduruldu və mavi çərçivə ilə işarələndi. Onları oxuyun, sonra formu özünüz göndərin.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Burada heç nə doldurulacaq sahə kimi tanınmadı və ya hər sahədə artıq nəsə var idi."
+  },
+  "fillLeft": {
+    "message": "Sizə qalanlar: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

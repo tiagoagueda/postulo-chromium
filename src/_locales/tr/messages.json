@@ -15,7 +15,7 @@
     "message": "Bu ilanı yakala"
   },
   "captureHint": {
-    "message": "Sayfa burada, tarayıcınızda okunur. Siz söyleyene kadar hiçbir şey gönderilmez."
+    "message": "Sayfa burada, tarayıcınızda okunur. Postulo'nuza, kurulduktan sonra, yalnızca sayfadaki ilanları adresleri, başlıkları ve şirketleriyle zaten tutup tutmadığı sorulur; sayfa, siz gönderdiğinizde gider."
   },
   "review": {
     "message": "Postulo'da incele"
@@ -79,7 +79,7 @@
     "message": "Test et"
   },
   "shortcutHint": {
-    "message": "Düğmeye ya da $SHORTCUT$ tuşlarına basmak, baktığınız sayfayı burada, tarayıcıda okur. Siz istemeden hiçbir sayfa okunmaz; bir şey yalnızca siz söylediğinizde ve yalnızca kendi Postulo'nuza gönderilir.",
+    "message": "Düğmeye ya da $SHORTCUT$ tuşlarına basmak, baktığınız sayfayı burada, tarayıcıda okur. Siz istemeden hiçbir sayfa okunmaz ve hiçbir şey kendi Postulo'nuzdan başka bir yere gitmez: ona ilanı adresi, başlığı ve şirketiyle zaten tutup tutmadığı sorulur, sayfa da siz söylediğinizde ona gönderilir.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -150,7 +150,7 @@
     "message": "Sayfa okunamadı. Bazı sayfalar uzantıları engeller."
   },
   "reviewHint": {
-    "message": "Sayfadan okunanlar bunlar. Yanlış olanları düzeltin; siz gönderene kadar hiçbir şey bu tarayıcıdan çıkmaz."
+    "message": "Sayfadan okunanlar bunlar. Yanlış olanları düzeltin. Postulo'nuza yalnızca bu ilanı, okunan adres, başlık ve şirketle zaten tutup tutmadığı sorulur; sayfa ve düzeltmeleriniz, siz gönderdiğinizde gider."
   },
   "sendForReview": {
     "message": "İncelemeye gönder"
@@ -168,7 +168,7 @@
     "message": "Bu sayfayı zaten sakladınız ve henüz göndermediniz: bu sizin sürümünüz."
   },
   "nothingRead": {
-    "message": "Bu sayfadan hiçbir şey okunamadı. Bildiklerinizi doldurun; siz gönderene kadar hiçbir şey bu tarayıcıdan çıkmaz."
+    "message": "Bu sayfadan hiçbir şey okunamadı. Bildiklerinizi doldurun. Postulo'nuza yalnızca sayfanın adresini zaten tutup tutmadığı sorulur; doldurduklarınız, siz gönderdiğinizde gider."
   },
   "waiting": {
     "message": "Postulo'ya şu anda erişilemiyor. Bu tarayıcıda saklanır ve Postulo yanıt verir vermez gönderilir."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Unutuldu. Bu tarayıcı artık bir adres veya belirteç tutmuyor. Yakalamalar saklanır ve hiçbiri gönderilmez."
+  },
+  "fillTokenLabel": {
+    "message": "Form doldurma belirteci (isteğe bağlı)"
+  },
+  "fillTokenHint": {
+    "message": "Baktığınız sayfadaki formu doldurmak için bilgilerinizi okuyabilen ikinci bir belirteç. Boş bırakırsanız uzantı form dolduramaz. Yalnızca düğmeye bastığınızda kullanılır ve yalnızca bu cihazda saklanır."
+  },
+  "fillForm": {
+    "message": "Bu formu doldur"
+  },
+  "fillHint": {
+    "message": "Adınızı ve e-posta adresinizi tanıdığı boş alanlara yazar ve bunları işaretler. Hiçbir şey gönderilmez: formu siz okur ve kendiniz gönderirsiniz."
+  },
+  "filling": {
+    "message": "Form dolduruluyor…"
+  },
+  "filled": {
+    "message": "$COUNT$ alan dolduruldu ve mavi bir çerçeveyle işaretlendi. Bunları okuyun, ardından formu kendiniz gönderin.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Burada doldurulacak alan olarak hiçbir şey tanınmadı ya da her alanda zaten bir şey vardı."
+  },
+  "fillLeft": {
+    "message": "Size kalanlar: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

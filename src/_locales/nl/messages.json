@@ -15,7 +15,7 @@
     "message": "Deze vacature vastleggen"
   },
   "captureHint": {
-    "message": "De pagina wordt hier gelezen, in uw browser. Er wordt niets verstuurd voordat u dat zegt."
+    "message": "De pagina wordt hier gelezen, in uw browser. Uw Postulo wordt, zodra het is ingesteld, alleen gevraagd of het de vacatures van de pagina al heeft, aan de hand van hun adres, titel en bedrijf; de pagina gaat pas als u hem verstuurt."
   },
   "review": {
     "message": "Controleren in Postulo"
@@ -79,7 +79,7 @@
     "message": "Testen"
   },
   "shortcutHint": {
-    "message": "Met de knop, of $SHORTCUT$, wordt de pagina die u bekijkt hier in de browser gelezen. Er wordt geen pagina gelezen voordat u erom vraagt, en er gaat niets ergens anders heen dan naar uw eigen Postulo, wanneer u dat zegt.",
+    "message": "Met de knop, of $SHORTCUT$, wordt de pagina die u bekijkt hier in de browser gelezen. Er wordt geen pagina gelezen voordat u erom vraagt, en er gaat niets ergens anders heen dan naar uw eigen Postulo: dat wordt gevraagd of het de vacature al heeft, aan de hand van adres, titel en bedrijf, en krijgt de pagina wanneer u dat zegt.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "De pagina kon niet worden gelezen. Sommige pagina's blokkeren extensies."
   },
   "reviewHint": {
-    "message": "Dit is wat er van de pagina is gelezen. Verbeter wat niet klopt; er verlaat niets deze browser voordat u het verstuurt."
+    "message": "Dit is wat er van de pagina is gelezen. Verbeter wat niet klopt. Uw Postulo wordt alleen gevraagd of het deze vacature al heeft, aan de hand van het gelezen adres, de titel en het bedrijf; de pagina en uw correcties gaan pas als u ze verstuurt."
   },
   "sendForReview": {
     "message": "Ter controle versturen"
@@ -193,7 +193,7 @@
     "message": "U hebt deze pagina al bewaard en nog niet verstuurd: dit is uw versie."
   },
   "nothingRead": {
-    "message": "Er kon niets van deze pagina worden gelezen. Vul in wat u weet; er verlaat niets deze browser voordat u het verstuurt."
+    "message": "Er kon niets van deze pagina worden gelezen. Vul in wat u weet. Uw Postulo wordt alleen gevraagd of het het adres van de pagina al heeft; wat u invult, gaat pas als u het verstuurt."
   },
   "waiting": {
     "message": "Postulo is nu niet bereikbaar. De vacature blijft in deze browser bewaard en wordt verstuurd zodra Postulo antwoordt."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Vergeten. Deze browser bewaart geen adres en geen token meer. De vastleggingen blijven bewaard en er wordt er geen verstuurd."
+  },
+  "fillTokenLabel": {
+    "message": "Token voor het invullen van formulieren (optioneel)"
+  },
+  "fillTokenHint": {
+    "message": "Een tweede token dat uw gegevens mag lezen, om het formulier in te vullen op de pagina die u bekijkt. Laat u het leeg, dan kan de extensie geen formulieren invullen. Het wordt alleen gebruikt wanneer u op de knop drukt, en alleen op dit apparaat bewaard."
+  },
+  "fillForm": {
+    "message": "Dit formulier invullen"
+  },
+  "fillHint": {
+    "message": "Zet uw naam en e-mailadres in de lege velden die worden herkend, en markeert ze. Er wordt niets verstuurd: u leest het na en verstuurt het zelf."
+  },
+  "filling": {
+    "message": "Het formulier wordt ingevuld…"
+  },
+  "filled": {
+    "message": "Ingevulde velden: $COUNT$, gemarkeerd met een blauwe rand. Lees ze na en verstuur het formulier dan zelf.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Niets hier werd herkend als in te vullen veld, of elk veld bevatte al iets."
+  },
+  "fillLeft": {
+    "message": "Voor u overgelaten: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

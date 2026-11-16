@@ -15,7 +15,7 @@
     "message": "Fånga in den här annonsen"
   },
   "captureHint": {
-    "message": "Sidan läses här, i din webbläsare. Inget skickas förrän du säger till."
+    "message": "Sidan läses här, i din webbläsare. Din Postulo tillfrågas, när den är inställd, bara om den redan har sidans annonser, utifrån deras adress, titel och företag; sidan går iväg när du skickar den."
   },
   "review": {
     "message": "Granska i Postulo"
@@ -79,7 +79,7 @@
     "message": "Testa"
   },
   "shortcutHint": {
-    "message": "Ett tryck på knappen, eller $SHORTCUT$, läser sidan du tittar på här i webbläsaren. Ingen sida läses förrän du ber om det, och inget skickas någon annanstans än till din egen Postulo, när du säger till.",
+    "message": "Ett tryck på knappen, eller $SHORTCUT$, läser sidan du tittar på här i webbläsaren. Ingen sida läses förrän du ber om det, och inget går någon annanstans än till din egen Postulo: den tillfrågas om den redan har annonsen, utifrån dess adress, titel och företag, och får sidan skickad när du säger till.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -150,7 +150,7 @@
     "message": "Sidan kunde inte läsas. Vissa sidor blockerar tillägg."
   },
   "reviewHint": {
-    "message": "Det här lästes från sidan. Rätta det som är fel; inget lämnar den här webbläsaren förrän du skickar det."
+    "message": "Det här lästes från sidan. Rätta det som är fel. Din Postulo tillfrågas bara om den redan har den här annonsen, utifrån den lästa adressen, titeln och företaget; sidan och dina rättelser går iväg när du skickar det."
   },
   "sendForReview": {
     "message": "Skicka för granskning"
@@ -168,7 +168,7 @@
     "message": "Du har redan sparat den här sidan utan att skicka den: det här är din version."
   },
   "nothingRead": {
-    "message": "Inget kunde läsas från den här sidan. Fyll i det du vet; inget lämnar den här webbläsaren förrän du skickar det."
+    "message": "Inget kunde läsas från den här sidan. Fyll i det du vet. Din Postulo tillfrågas bara om den redan har sidans adress; det du fyller i går iväg när du skickar det."
   },
   "waiting": {
     "message": "Postulo går inte att nå just nu. Den sparas i den här webbläsaren och skickas så snart Postulo svarar."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Glömd. Den här webbläsaren har inte längre någon adress eller token. Infångningarna är sparade och inga kommer att skickas."
+  },
+  "fillTokenLabel": {
+    "message": "Token för att fylla i formulär (valfritt)"
+  },
+  "fillTokenHint": {
+    "message": "En andra token som får läsa dina uppgifter, för att fylla i formuläret på sidan du tittar på. Lämna den tom så kan tillägget inte fylla i formulär. Den används bara när du trycker på knappen och sparas bara på den här enheten."
+  },
+  "fillForm": {
+    "message": "Fyll i det här formuläret"
+  },
+  "fillHint": {
+    "message": "Fyller i ditt namn och din e-postadress i de tomma fält som tillägget känner igen och markerar dem. Inget skickas in: du läser igenom det och skickar det själv."
+  },
+  "filling": {
+    "message": "Fyller i formuläret…"
+  },
+  "filled": {
+    "message": "Fyllde i $COUNT$ fält, markerade med blå kontur. Läs igenom dem och skicka sedan formuläret själv.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Inget här kändes igen som ett fält att fylla i, eller så hade alla fält redan något i sig."
+  },
+  "fillLeft": {
+    "message": "Kvar att fylla i själv: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

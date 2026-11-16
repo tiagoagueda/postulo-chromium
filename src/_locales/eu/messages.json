@@ -15,7 +15,7 @@
     "message": "Kapturatu iragarki hau"
   },
   "captureHint": {
-    "message": "Orria hemen irakurtzen da, zure nabigatzailean. Ez da ezer bidaltzen zuk esan arte."
+    "message": "Orria hemen irakurtzen da, zure nabigatzailean. Zure Postulori, konfiguratuta dagoenean, orriko iragarkiak dagoeneko dituen galdetzen zaio soilik, haien helbide, izenburu eta enpresaren arabera; orria zuk bidaltzen duzunean joaten da."
   },
   "review": {
     "message": "Berrikusi Postulon"
@@ -79,7 +79,7 @@
     "message": "Probatu"
   },
   "shortcutHint": {
-    "message": "Botoia edo $SHORTCUT$ sakatuta, ikusten ari zaren orria hemen irakurtzen da, nabigatzailean. Ez da orririk irakurtzen eskatu arte, eta zuk esaten duzunean bakarrik bidaltzen da, zure Postulora eta ez beste inora.",
+    "message": "Botoia edo $SHORTCUT$ sakatuta, ikusten ari zaren orria hemen irakurtzen da, nabigatzailean. Ez da orririk irakurtzen eskatu arte, eta ez da ezer joaten zure Postulora ez beste inora: iragarkia dagoeneko duen galdetzen zaio, haren helbide, izenburu eta enpresaren arabera, eta orria bidaltzen zaio zuk esaten duzunean.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Ezin izan da orria irakurri. Orri batzuek hedapenak blokeatzen dituzte."
   },
   "reviewHint": {
-    "message": "Hau da orritik irakurri dena. Zuzendu gaizki dagoena; ez da ezer nabigatzaile honetatik ateratzen zuk bidali arte."
+    "message": "Hau da orritik irakurri dena. Zuzendu gaizki dagoena. Zure Postulori iragarki hau dagoeneko duen galdetzen zaio soilik, irakurritako helbide, izenburu eta enpresaren arabera; orria eta zure zuzenketak zuk bidaltzen duzunean joaten dira."
   },
   "sendForReview": {
     "message": "Bidali berrikustera"
@@ -193,7 +193,7 @@
     "message": "Orri hau lehendik gorde zenuen eta ez duzu bidali: hau da zure bertsioa."
   },
   "nothingRead": {
-    "message": "Ezin izan da ezer irakurri orri honetatik. Bete dakizuna; ez da ezer nabigatzaile honetatik ateratzen zuk bidali arte."
+    "message": "Ezin izan da ezer irakurri orri honetatik. Bete dakizuna. Zure Postulori orriaren helbidea dagoeneko duen galdetzen zaio soilik; betetzen duzuna zuk bidaltzen duzunean joaten da."
   },
   "waiting": {
     "message": "Orain ezin da Postulora iritsi. Nabigatzaile honetan gordetzen da, eta Postulok erantzun bezain laster bidaliko da."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Ahaztuta. Nabigatzaile honek ez du dagoeneko helbiderik ez tokenik gordetzen. Kapturak gordeta daude, eta bat ere ez da bidaliko."
+  },
+  "fillTokenLabel": {
+    "message": "Inprimakiak betetzeko tokena (aukerakoa)"
+  },
+  "fillTokenHint": {
+    "message": "Zure datuak irakur ditzakeen bigarren token bat, ikusten ari zaren orriko inprimakia betetzeko. Hutsik uzten baduzu, hedapenak ezin ditu inprimakiak bete. Botoia sakatzen duzunean bakarrik erabiltzen da, eta gailu honetan bakarrik gordetzen da."
+  },
+  "fillForm": {
+    "message": "Bete inprimaki hau"
+  },
+  "fillHint": {
+    "message": "Zure izena eta helbide elektronikoa ezagutzen dituen eremu hutsetan jartzen ditu, eta markatu egiten ditu. Ez da ezer bidaltzen: zuk irakurri eta zuk zeuk bidaltzen duzu."
+  },
+  "filling": {
+    "message": "Inprimakia betetzen…"
+  },
+  "filled": {
+    "message": "Betetako eremuak: $COUNT$, ertz urdinez markatuta. Irakurri itzazu, eta bidali inprimakia zuk zeuk.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Hemen ez da ezer ezagutu bete beharreko eremu gisa, edo eremu guztiek bazuten jada zerbait."
+  },
+  "fillLeft": {
+    "message": "Zuretzat geratzen dena: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

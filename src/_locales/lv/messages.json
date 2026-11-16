@@ -15,7 +15,7 @@
     "message": "Tvert šo sludinājumu"
   },
   "captureHint": {
-    "message": "Lapa tiek lasīta šeit, jūsu pārlūkā. Nekas netiek nosūtīts, kamēr jūs to nelūdzat."
+    "message": "Lapa tiek lasīta šeit, jūsu pārlūkā. Jūsu Postulo, kad tas būs iestatīts, tiek tikai jautāts, vai tajā jau ir šīs lapas sludinājumi, pēc to adreses, amata nosaukuma un uzņēmuma; pati lapa tiek nosūtīta, kad jūs to nosūtāt."
   },
   "review": {
     "message": "Pārskatīt Postulo"
@@ -79,7 +79,7 @@
     "message": "Pārbaudīt"
   },
   "shortcutHint": {
-    "message": "Nospiežot pogu vai $SHORTCUT$, skatītā lapa tiek nolasīta šeit, pārlūkā. Neviena lapa netiek lasīta, kamēr to nelūdzat, un nekas netiek sūtīts nekur citur kā vien uz jūsu pašu Postulo, kad jūs to vēlaties.",
+    "message": "Nospiežot pogu vai $SHORTCUT$, skatītā lapa tiek nolasīta šeit, pārlūkā. Neviena lapa netiek lasīta, kamēr to nelūdzat, un nekas nenonāk nekur citur kā vien jūsu pašu Postulo: tam tiek jautāts, vai tajā jau ir šis sludinājums, pēc tā adreses, amata nosaukuma un uzņēmuma, un tam tiek nosūtīta lapa, kad jūs to vēlaties.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Lapu neizdevās nolasīt. Dažas lapas bloķē paplašinājumus."
   },
   "reviewHint": {
-    "message": "Tas ir nolasīts no lapas. Izlabojiet kļūdas; nekas neatstāj šo pārlūku, kamēr to nenosūtāt."
+    "message": "Tas ir nolasīts no lapas. Izlabojiet kļūdas. Jūsu Postulo tiek tikai jautāts, vai tajā jau ir šis sludinājums, pēc nolasītās adreses, amata nosaukuma un uzņēmuma; lapa un jūsu labojumi tiek nosūtīti, kad jūs to nosūtāt."
   },
   "sendForReview": {
     "message": "Nosūtīt pārskatīšanai"
@@ -193,7 +193,7 @@
     "message": "Šī lapa jau ir paturēta un nav nosūtīta: šī ir jūsu versija."
   },
   "nothingRead": {
-    "message": "No šīs lapas neizdevās neko nolasīt. Aizpildiet to, ko zināt; nekas neatstāj šo pārlūku, kamēr to nenosūtāt."
+    "message": "No šīs lapas neizdevās neko nolasīt. Aizpildiet to, ko zināt. Jūsu Postulo tiek tikai jautāts, vai tajā jau ir šīs lapas adrese; tas, ko aizpildāt, tiek nosūtīts, kad jūs to nosūtāt."
   },
   "waiting": {
     "message": "Postulo pašlaik nav sasniedzams. Sludinājums tiek glabāts šajā pārlūkā un tiks nosūtīts, tiklīdz Postulo atbildēs."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Aizmirsts. Šis pārlūks vairs neglabā ne adresi, ne marķieri. Tvērumi ir saglabāti, un neviens netiks nosūtīts."
+  },
+  "fillTokenLabel": {
+    "message": "Marķieris veidlapu aizpildīšanai (neobligāts)"
+  },
+  "fillTokenHint": {
+    "message": "Otrs marķieris, kas drīkst lasīt jūsu datus, lai aizpildītu veidlapu skatītajā lapā. Atstājiet to tukšu, un paplašinājums nevarēs aizpildīt veidlapas. Tas tiek izmantots tikai tad, kad nospiežat pogu, un tiek glabāts tikai šajā ierīcē."
+  },
+  "fillForm": {
+    "message": "Aizpildīt šo veidlapu"
+  },
+  "fillHint": {
+    "message": "Ieraksta jūsu vārdu un e-pasta adresi atpazītajos tukšajos laukos un tos iezīmē. Nekas netiek iesniegts: jūs to izlasāt un nosūtāt paši."
+  },
+  "filling": {
+    "message": "Veidlapa tiek aizpildīta…"
+  },
+  "filled": {
+    "message": "Aizpildīti lauki: $COUNT$, tie iezīmēti ar zilu apmali. Izlasiet tos un pēc tam nosūtiet veidlapu paši.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Nekas šeit netika atpazīts kā aizpildāms lauks, vai arī katrā laukā jau kaut kas bija."
+  },
+  "fillLeft": {
+    "message": "Atstāts jums: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

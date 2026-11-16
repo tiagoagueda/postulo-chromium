@@ -15,7 +15,7 @@
     "message": "Kaappaa tämä ilmoitus"
   },
   "captureHint": {
-    "message": "Sivu luetaan täällä, selaimessasi. Mitään ei lähetetä, ennen kuin sanot."
+    "message": "Sivu luetaan täällä, selaimessasi. Postuloltasi kysytään, kun se on otettu käyttöön, vain, onko sillä jo sivun ilmoitukset, niiden osoitteen, otsikon ja yrityksen perusteella; sivu lähtee, kun lähetät sen."
   },
   "review": {
     "message": "Tarkista Postulossa"
@@ -79,7 +79,7 @@
     "message": "Testaa"
   },
   "shortcutHint": {
-    "message": "Painikkeen tai $SHORTCUT$ painaminen lukee katsomasi sivun täällä selaimessa. Mitään sivua ei lueta ennen kuin pyydät, eikä mitään lähetetä minnekään muualle kuin omaan Postuloosi, kun sanot.",
+    "message": "Painikkeen tai $SHORTCUT$ painaminen lukee katsomasi sivun täällä selaimessa. Mitään sivua ei lueta ennen kuin pyydät, eikä mitään lähde minnekään muualle kuin omaan Postuloosi: siltä kysytään, onko sillä jo ilmoitus, sen osoitteen, otsikon ja yrityksen perusteella, ja sille lähetetään sivu, kun sanot.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -150,7 +150,7 @@
     "message": "Sivua ei voitu lukea. Jotkin sivut estävät laajennukset."
   },
   "reviewHint": {
-    "message": "Tämä luettiin sivulta. Korjaa virheet; mikään ei lähde tästä selaimesta ennen kuin lähetät sen."
+    "message": "Tämä luettiin sivulta. Korjaa virheet. Postuloltasi kysytään vain, onko sillä jo tämä ilmoitus, luetun osoitteen, otsikon ja yrityksen perusteella; sivu ja korjauksesi lähtevät, kun lähetät sen."
   },
   "sendForReview": {
     "message": "Lähetä tarkistettavaksi"
@@ -168,7 +168,7 @@
     "message": "Säilytit tämän sivun jo etkä ole lähettänyt sitä: tämä on sinun versiosi."
   },
   "nothingRead": {
-    "message": "Tältä sivulta ei voitu lukea mitään. Täytä, mitä tiedät; mikään ei lähde tästä selaimesta ennen kuin lähetät sen."
+    "message": "Tältä sivulta ei voitu lukea mitään. Täytä, mitä tiedät. Postuloltasi kysytään vain, onko sillä jo sivun osoite; täyttämäsi tiedot lähtevät, kun lähetät ne."
   },
   "waiting": {
     "message": "Postuloa ei tavoiteta juuri nyt. Se säilytetään tässä selaimessa ja lähetetään heti, kun Postulo vastaa."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Unohdettu. Tämä selain ei enää säilytä osoitetta eikä tunnusta. Kaappaukset säilyvät, mutta mitään ei lähetetä."
+  },
+  "fillTokenLabel": {
+    "message": "Tunnus lomakkeiden täyttämiseen (valinnainen)"
+  },
+  "fillTokenHint": {
+    "message": "Toinen tunnus, joka saa lukea tietojasi, jotta katsomasi sivun lomake voidaan täyttää. Jos jätät sen tyhjäksi, laajennus ei voi täyttää lomakkeita. Sitä käytetään vain, kun painat painiketta, ja se säilytetään vain tällä laitteella."
+  },
+  "fillForm": {
+    "message": "Täytä tämä lomake"
+  },
+  "fillHint": {
+    "message": "Lisää nimesi ja sähköpostiosoitteesi tunnistamiinsa tyhjiin kenttiin ja merkitsee ne. Mitään ei lähetetä: luet sen ja lähetät sen itse."
+  },
+  "filling": {
+    "message": "Täytetään lomaketta…"
+  },
+  "filled": {
+    "message": "Täytetty $COUNT$ kenttää, ja ne on merkitty sinisellä reunuksella. Lue ne ja lähetä sitten lomake itse.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Mitään täällä ei tunnistettu täytettäväksi kentäksi, tai jokaisessa kentässä oli jo jotain."
+  },
+  "fillLeft": {
+    "message": "Täytettäväksesi jäi: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

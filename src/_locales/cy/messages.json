@@ -15,7 +15,7 @@
     "message": "Cipio'r hysbyseb hon"
   },
   "captureHint": {
-    "message": "Caiff y dudalen ei darllen yma, yn eich porwr. Does dim yn cael ei anfon nes i chi ddweud."
+    "message": "Caiff y dudalen ei darllen yma, yn eich porwr. Yr unig beth a ofynnir i'ch Postulo, unwaith y bydd wedi'i osod, yw a oes ganddo hysbysebion y dudalen eisoes, yn ôl eu cyfeiriad, eu teitl a'u cwmni; mae'r dudalen yn mynd pan fyddwch chi'n ei hanfon."
   },
   "review": {
     "message": "Adolygu yn Postulo"
@@ -79,7 +79,7 @@
     "message": "Profi"
   },
   "shortcutHint": {
-    "message": "Mae pwyso'r botwm, neu $SHORTCUT$, yn darllen y dudalen rydych chi'n edrych arni, yma yn y porwr. Does dim tudalen yn cael ei darllen nes i chi ofyn, a does dim yn cael ei anfon i unman ond i'ch Postulo eich hun, pan fyddwch chi'n dweud.",
+    "message": "Mae pwyso'r botwm, neu $SHORTCUT$, yn darllen y dudalen rydych chi'n edrych arni, yma yn y porwr. Does dim tudalen yn cael ei darllen nes i chi ofyn, a does dim yn mynd i unman ond i'ch Postulo eich hun: gofynnir iddo a oes ganddo'r hysbyseb eisoes, yn ôl ei chyfeiriad, ei theitl a'i chwmni, ac anfonir y dudalen ato pan fyddwch chi'n dweud.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Doedd dim modd darllen y dudalen. Mae rhai tudalennau'n rhwystro estyniadau."
   },
   "reviewHint": {
-    "message": "Dyma beth gafodd ei ddarllen o'r dudalen. Cywirwch unrhyw beth sy'n anghywir; does dim yn gadael y porwr hwn nes i chi ei anfon."
+    "message": "Dyma beth gafodd ei ddarllen o'r dudalen. Cywirwch unrhyw beth sy'n anghywir. Yr unig beth a ofynnir i'ch Postulo yw a oes ganddo'r hysbyseb hon eisoes, yn ôl y cyfeiriad, y teitl a'r cwmni a ddarllenwyd; mae'r dudalen a'ch cywiriadau'n mynd pan fyddwch chi'n ei hanfon."
   },
   "sendForReview": {
     "message": "Anfon i'w adolygu"
@@ -193,7 +193,7 @@
     "message": "Rydych chi wedi cadw'r dudalen hon yn barod heb ei hanfon: dyma'ch fersiwn chi."
   },
   "nothingRead": {
-    "message": "Doedd dim modd darllen dim o'r dudalen hon. Llenwch yr hyn rydych chi'n ei wybod; does dim yn gadael y porwr hwn nes i chi ei anfon."
+    "message": "Doedd dim modd darllen dim o'r dudalen hon. Llenwch yr hyn rydych chi'n ei wybod. Yr unig beth a ofynnir i'ch Postulo yw a oes ganddo gyfeiriad y dudalen eisoes; mae'r hyn rydych chi'n ei lenwi'n mynd pan fyddwch chi'n ei anfon."
   },
   "waiting": {
     "message": "Does dim modd cyrraedd Postulo ar hyn o bryd. Mae hi'n cael ei chadw yn y porwr hwn a'i hanfon cyn gynted ag y bydd Postulo'n ateb."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Anghofiwyd. Nid oes gan y porwr hwn gyfeiriad na thocyn mwyach. Cedwir y cipiadau, ac ni anfonir yr un ohonynt."
+  },
+  "fillTokenLabel": {
+    "message": "Tocyn ar gyfer llenwi ffurflenni (dewisol)"
+  },
+  "fillTokenHint": {
+    "message": "Ail docyn sy'n cael darllen eich manylion, i lenwi'r ffurflen ar y dudalen rydych chi'n edrych arni. Gadewch ef yn wag ac ni all yr estyniad lenwi ffurflenni. Dim ond pan fyddwch chi'n pwyso'r botwm y caiff ei ddefnyddio, a chaiff ei gadw ar y ddyfais hon yn unig."
+  },
+  "fillForm": {
+    "message": "Llenwi'r ffurflen hon"
+  },
+  "fillHint": {
+    "message": "Mae'n rhoi eich enw a'ch e-bost yn y meysydd gwag y mae'n eu hadnabod, ac yn eu marcio. Does dim yn cael ei gyflwyno: rydych chi'n ei darllen ac yn ei hanfon eich hun."
+  },
+  "filling": {
+    "message": "Yn llenwi'r ffurflen…"
+  },
+  "filled": {
+    "message": "Llenwyd $COUNT$ maes, wedi'u marcio ag amlinell las. Darllenwch nhw, yna anfonwch y ffurflen eich hun.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Ni chafodd dim yma ei adnabod fel maes i'w lenwi, neu roedd rhywbeth ym mhob maes yn barod."
+  },
+  "fillLeft": {
+    "message": "Ar ôl i chi: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

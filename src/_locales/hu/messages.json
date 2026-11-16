@@ -15,7 +15,7 @@
     "message": "Hirdetés rögzítése"
   },
   "captureHint": {
-    "message": "Az oldal beolvasása itt, a böngészőjében történik. Semmit sem küld el, amíg Ön nem szól."
+    "message": "Az oldal beolvasása itt, a böngészőjében történik. A beállítás után a Postulo-példányától csak azt kérdezi meg, hogy megvannak-e már benne az oldal hirdetései, a webcímük, a munkakörük és a cégük alapján; maga az oldal akkor megy el, amikor elküldi."
   },
   "review": {
     "message": "Ellenőrzés a Postulóban"
@@ -79,7 +79,7 @@
     "message": "Tesztelés"
   },
   "shortcutHint": {
-    "message": "A gomb vagy a(z) $SHORTCUT$ megnyomásával a megtekintett oldal beolvasása itt, a böngészőben történik. Egyetlen oldalt sem olvas be, amíg nem kéri, és semmit sem küld máshová, csak a saját Postulo-példányába, amikor Ön szól.",
+    "message": "A gomb vagy a(z) $SHORTCUT$ megnyomásával a megtekintett oldal beolvasása itt, a böngészőben történik. Egyetlen oldalt sem olvas be, amíg nem kéri, és semmi sem kerül máshová, csak a saját Postulo-példányába: attól megkérdezi, hogy megvan-e már benne a hirdetés, a webcíme, a munkaköre és a cége alapján, és elküldi neki az oldalt, amikor Ön szól.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Az oldalt nem sikerült beolvasni. Egyes oldalak letiltják a bővítményeket."
   },
   "reviewHint": {
-    "message": "Ezt olvasta be az oldalról. Javítsa ki, ami hibás; semmi sem hagyja el ezt a böngészőt, amíg el nem küldi."
+    "message": "Ezt olvasta be az oldalról. Javítsa ki, ami hibás. A Postulo-példányától csak azt kérdezi meg, hogy megvan-e már benne ez a hirdetés, a beolvasott webcím, munkakör és cég alapján; az oldal és a javításai akkor mennek el, amikor elküldi."
   },
   "sendForReview": {
     "message": "Küldés átnézésre"
@@ -193,7 +193,7 @@
     "message": "Ezt az oldalt már megőrizte, és még nem küldte el: ez az Ön változata."
   },
   "nothingRead": {
-    "message": "Erről az oldalról semmit sem sikerült beolvasni. Töltse ki, amit tud; semmi sem hagyja el ezt a böngészőt, amíg el nem küldi."
+    "message": "Erről az oldalról semmit sem sikerült beolvasni. Töltse ki, amit tud. A Postulo-példányától csak azt kérdezi meg, hogy megvan-e már benne az oldal webcíme; amit kitölt, az akkor megy el, amikor elküldi."
   },
   "waiting": {
     "message": "A Postulo most nem érhető el. Ebben a böngészőben marad, és elmegy, amint a Postulo válaszol."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Elfelejtve. Ez a böngésző már nem tárol címet vagy tokent. A rögzítések megmaradnak, de egyiket sem küldi el."
+  },
+  "fillTokenLabel": {
+    "message": "Token az űrlapok kitöltéséhez (nem kötelező)"
+  },
+  "fillTokenHint": {
+    "message": "Egy második token, amely olvashatja az Ön adatait, hogy kitöltse az űrlapot a megtekintett oldalon. Ha üresen hagyja, a bővítmény nem tud űrlapokat kitölteni. Csak akkor használja, amikor megnyomja a gombot, és csak ezen az eszközön tárolódik."
+  },
+  "fillForm": {
+    "message": "Űrlap kitöltése"
+  },
+  "fillHint": {
+    "message": "Beírja a nevét és az e-mail-címét a felismert üres mezőkbe, és megjelöli őket. Semmit sem küld be: Ön elolvassa, és maga küldi el."
+  },
+  "filling": {
+    "message": "Az űrlap kitöltése…"
+  },
+  "filled": {
+    "message": "Kitöltött mezők: $COUNT$, kék kerettel megjelölve. Olvassa át őket, majd küldje el maga az űrlapot.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Itt semmit sem ismert fel kitöltendő mezőként, vagy már minden mezőben volt valami."
+  },
+  "fillLeft": {
+    "message": "Önre maradt: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -15,7 +15,7 @@
     "message": "Fang denne annonsen"
   },
   "captureHint": {
-    "message": "Siden leses her, i nettleseren din. Ingenting sendes før du sier fra."
+    "message": "Siden leses her, i nettleseren din. Din Postulo blir, når den er satt opp, bare spurt om den allerede har sidens utlysninger, ut fra adresse, tittel og selskap; siden går når du sender den."
   },
   "review": {
     "message": "Se gjennom i Postulo"
@@ -79,7 +79,7 @@
     "message": "Test"
   },
   "shortcutHint": {
-    "message": "Et trykk på knappen, eller $SHORTCUT$, leser siden du ser på, her i nettleseren. Ingen side leses før du ber om det, og ingenting sendes noe annet sted enn til din egen Postulo, når du sier fra.",
+    "message": "Et trykk på knappen, eller $SHORTCUT$, leser siden du ser på, her i nettleseren. Ingen side leses før du ber om det, og ingenting går noe annet sted enn til din egen Postulo: den blir spurt om den allerede har annonsen, ut fra adresse, tittel og selskap, og får siden sendt når du sier fra.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Siden kunne ikke leses. Noen sider blokkerer utvidelser."
   },
   "reviewHint": {
-    "message": "Dette er det som ble lest fra siden. Rett det som er feil; ingenting forlater denne nettleseren før du sender det."
+    "message": "Dette er det som ble lest fra siden. Rett det som er feil. Din Postulo blir bare spurt om den allerede har denne annonsen, ut fra adressen, tittelen og selskapet som ble lest; siden og rettelsene dine går når du sender det."
   },
   "sendForReview": {
     "message": "Send til gjennomgang"
@@ -193,7 +193,7 @@
     "message": "Du har allerede beholdt denne siden og ikke sendt den: dette er din versjon."
   },
   "nothingRead": {
-    "message": "Ingenting kunne leses fra denne siden. Fyll inn det du vet; ingenting forlater denne nettleseren før du sender det."
+    "message": "Ingenting kunne leses fra denne siden. Fyll inn det du vet. Din Postulo blir bare spurt om den allerede har adressen til siden; det du fyller inn, går når du sender det."
   },
   "waiting": {
     "message": "Postulo kan ikke nås akkurat nå. Den beholdes i denne nettleseren og sendes så snart Postulo svarer."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Glemt. Denne nettleseren har ikke lenger noen adresse eller token. Fangstene er beholdt, og ingen blir sendt."
+  },
+  "fillTokenLabel": {
+    "message": "Token for utfylling av skjemaer (valgfritt)"
+  },
+  "fillTokenHint": {
+    "message": "Et ekstra token som får lese opplysningene dine, for å fylle ut skjemaet på siden du ser på. La det stå tomt, så kan ikke utvidelsen fylle ut skjemaer. Det brukes bare når du trykker på knappen, og lagres bare på denne enheten."
+  },
+  "fillForm": {
+    "message": "Fyll ut dette skjemaet"
+  },
+  "fillHint": {
+    "message": "Setter navnet og e-postadressen din inn i de tomme feltene den kjenner igjen, og markerer dem. Ingenting sendes inn: du leser gjennom og sender det selv."
+  },
+  "filling": {
+    "message": "Fyller ut skjemaet …"
+  },
+  "filled": {
+    "message": "Fylte ut $COUNT$ felt, markert med blå kant. Les gjennom dem, og send deretter skjemaet selv.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Ingenting her ble gjenkjent som et felt å fylle ut, eller alle feltene hadde allerede noe i seg."
+  },
+  "fillLeft": {
+    "message": "Gjenstår for deg: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

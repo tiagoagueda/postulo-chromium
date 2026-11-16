@@ -15,7 +15,7 @@
     "message": "Zachytiť tento inzerát"
   },
   "captureHint": {
-    "message": "Stránka sa číta tu, vo vašom prehliadači. Nič sa neodošle, kým to nepoviete."
+    "message": "Stránka sa číta tu, vo vašom prehliadači. Váš Postulo, keď bude nastavený, dostane len otázku, či už inzeráty z tejto stránky má, podľa ich adresy, názvu a firmy; stránka odíde, keď ju odošlete."
   },
   "review": {
     "message": "Skontrolovať v Postule"
@@ -79,7 +79,7 @@
     "message": "Otestovať"
   },
   "shortcutHint": {
-    "message": "Stlačením tlačidla alebo $SHORTCUT$ sa stránka, ktorú si prezeráte, prečíta tu v prehliadači. Žiadna stránka sa nečíta, kým o to nepožiadate, a nič sa nikam neposiela; dostane to len váš vlastný Postulo, keď poviete.",
+    "message": "Stlačením tlačidla alebo $SHORTCUT$ sa stránka, ktorú si prezeráte, prečíta tu v prehliadači. Žiadna stránka sa nečíta, kým o to nepožiadate, a nič nejde nikam inam než do vášho vlastného Postula: ten dostane otázku, či už inzerát má, podľa jeho adresy, názvu a firmy, a stránku dostane, keď poviete.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Stránku sa nepodarilo prečítať. Niektoré stránky blokujú rozšírenia."
   },
   "reviewHint": {
-    "message": "Toto sa zo stránky prečítalo. Opravte, čo je nesprávne; nič neopustí tento prehliadač, kým to neodošlete."
+    "message": "Toto sa zo stránky prečítalo. Opravte, čo je nesprávne. Váš Postulo dostane len otázku, či už tento inzerát má, podľa prečítanej adresy, názvu a firmy; stránka a vaše opravy odídu, keď ich odošlete."
   },
   "sendForReview": {
     "message": "Odoslať na kontrolu"
@@ -193,7 +193,7 @@
     "message": "Túto stránku ste si už ponechali a neodoslali ste ju: toto je vaša verzia."
   },
   "nothingRead": {
-    "message": "Z tejto stránky sa nepodarilo nič prečítať. Vyplňte, čo viete; nič neopustí tento prehliadač, kým to neodošlete."
+    "message": "Z tejto stránky sa nepodarilo nič prečítať. Vyplňte, čo viete. Váš Postulo dostane len otázku, či už adresu tejto stránky má; čo vyplníte, odíde, keď to odošlete."
   },
   "waiting": {
     "message": "K Postulu sa momentálne nedá pripojiť. Uchováva sa v tomto prehliadači a odošle sa, hneď ako Postulo odpovie."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Zabudnuté. Tento prehliadač už nemá uloženú adresu ani token. Zachytenia zostávajú zachované a žiadne sa neodošle."
+  },
+  "fillTokenLabel": {
+    "message": "Token na vypĺňanie formulárov (nepovinné)"
+  },
+  "fillTokenHint": {
+    "message": "Druhý token, ktorý smie čítať vaše údaje, aby vyplnil formulár na stránke, ktorú si prezeráte. Ak pole necháte prázdne, rozšírenie nemôže vypĺňať formuláre. Použije sa len po stlačení tlačidla a uchováva sa len v tomto zariadení."
+  },
+  "fillForm": {
+    "message": "Vyplniť tento formulár"
+  },
+  "fillHint": {
+    "message": "Doplní vaše meno a e-mail do prázdnych polí, ktoré rozpozná, a označí ich. Nič sa neodošle: prečítate si ho a odošlete ho sami."
+  },
+  "filling": {
+    "message": "Vypĺňa sa formulár…"
+  },
+  "filled": {
+    "message": "Vyplnené polia: $COUNT$, označené modrým obrysom. Prečítajte si ich a potom formulár odošlite sami.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Nič tu nebolo rozpoznané ako pole na vyplnenie, alebo už v každom poli niečo bolo."
+  },
+  "fillLeft": {
+    "message": "Zostáva na vás: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

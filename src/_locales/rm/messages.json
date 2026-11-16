@@ -60,7 +60,7 @@
     "message": "Agiuntar in inserat"
   },
   "captureHint": {
-    "message": "La pagina vegn legida qua, en Voss navigatur. Nagut na vegn tramess avant che Vus decidais quai."
+    "message": "La pagina vegn legida qua, en Voss navigatur. Voss Postulo, uschespert ch'el è configurà, vegn dumandà mo sch'el ha gia ils inserats da la pagina, tenor lur adressa, titel ed interpresa; la pagina parta cura che Vus la tramettais."
   },
   "review": {
     "message": "Examinar en Postulo"
@@ -124,7 +124,7 @@
     "message": "Testar"
   },
   "shortcutHint": {
-    "message": "Cun smatgar il buttun u $SHORTCUT$ vegn la pagina che Vus guardais legida, qua en il navigatur. Nagina pagina na vegn legida avant che Vus al dumandais, e nagut na vegn tramess insanua auter che a Voss agen Postulo, cura che Vus decidais quai.",
+    "message": "Cun smatgar il buttun u $SHORTCUT$ vegn la pagina che Vus guardais legida, qua en il navigatur. Nagina pagina na vegn legida avant che Vus al dumandais, e nagut na va insanua auter che a Voss agen Postulo: el vegn dumandà sch'el ha gia l'inserat, tenor sia adressa, ses titel e sia interpresa, e survegn la pagina cura che Vus decidais quai.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -240,7 +240,7 @@
     "message": "L'adressa da questa pagina è pli lunga che quai che Postulo accepta, er senza la part suenter il «#», perquai n'è la captura betg vegnida tramessa. Agiuntai enstagl l'inserat a maun en Postulo."
   },
   "reviewHint": {
-    "message": "Quai è quai ch'è vegnì legì da la pagina. Rectifitgai tut quai ch'è fauss; nagut na banduna quest navigatur avant che Vus al tramettais."
+    "message": "Quai è quai ch'è vegnì legì da la pagina. Rectifitgai tut quai ch'è fauss. Voss Postulo vegn dumandà mo sch'el ha gia quest inserat, tenor l'adressa, il titel e l'interpresa legids; la pagina e Vossas correcturas partan cura che Vus al tramettais."
   },
   "sendForReview": {
     "message": "Trametter per la revisiun"
@@ -261,7 +261,7 @@
     "message": "Vus avais gia conservà questa pagina, ma n'avais anc betg tramess ella: quai è Vossa versiun."
   },
   "nothingRead": {
-    "message": "Da questa pagina n'ha nagut pudì vegnir legì. Emplenai quai che Vus savais; nagut na banduna quest navigatur avant che Vus al tramettais."
+    "message": "Da questa pagina n'ha nagut pudì vegnir legì. Emplenai quai che Vus savais. Voss Postulo vegn dumandà mo sch'el ha gia l'adressa da la pagina; quai che Vus emplenis parta cura che Vus al tramettais."
   },
   "waiting": {
     "message": "Postulo n'è betg cuntanschibel en quest mument. La captura vegn conservada en quest navigatur e tramessa uschespert che Postulo respunda."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Emblidà. Quest navigatur na conserva pli ni adressa ni token. Las capturas restan conservadas e nagina na vegn tramessa."
+  },
+  "fillTokenLabel": {
+    "message": "Token per emplenir formulars (facultativ)"
+  },
+  "fillTokenHint": {
+    "message": "In segund token che dastga leger Vossas datas, per emplenir il formular sin la pagina che Vus guardais. Sche Vus al laschais vid, na po l'extensiun betg emplenir formulars. El vegn duvrà mo cura che Vus smatgais il buttun, ed arcunà mo sin quest apparat."
+  },
+  "fillForm": {
+    "message": "Emplenir quest formular"
+  },
+  "fillHint": {
+    "message": "Metta Voss num e Vossa adressa d'e-mail en ils champs vids ch'el renconuscha, ed als marca. Nagut na vegn tramess: Vus al legis e tramettais sez."
+  },
+  "filling": {
+    "message": "Il formular vegn emplenì…"
+  },
+  "filled": {
+    "message": "Champs emplenids: $COUNT$, marcads cun in rom blau. Legiai als, lura tramettai sez il formular.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Nagut qua n'è vegnì renconuschì sco champ d'emplenir, u mintga champ cuntegneva gia insatge."
+  },
+  "fillLeft": {
+    "message": "Resta per Vus: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

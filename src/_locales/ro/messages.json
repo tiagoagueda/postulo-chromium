@@ -15,7 +15,7 @@
     "message": "Capturați acest anunț"
   },
   "captureHint": {
-    "message": "Pagina este citită aici, în browserul tău. Nimic nu este trimis până nu spui tu."
+    "message": "Pagina este citită aici, în browserul tău. Postulo-ul tău, odată configurat, este întrebat doar dacă are deja anunțurile din pagină, după adresă, titlu și companie; pagina pleacă atunci când o trimiți."
   },
   "review": {
     "message": "Revizuiește în Postulo"
@@ -79,7 +79,7 @@
     "message": "Testați"
   },
   "shortcutHint": {
-    "message": "Apăsând butonul, sau $SHORTCUT$, pagina pe care o vezi este citită aici, în browser. Nicio pagină nu este citită până nu ceri, și nimic nu este trimis nicăieri în afară de propriul tău Postulo, când spui tu.",
+    "message": "Apăsând butonul, sau $SHORTCUT$, pagina pe care o vezi este citită aici, în browser. Nicio pagină nu este citită până nu ceri, și nimic nu ajunge nicăieri în afară de propriul tău Postulo: este întrebat dacă are deja anunțul, după adresă, titlu și companie, și primește pagina când spui tu.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Pagina nu a putut fi citită. Unele pagini blochează extensiile."
   },
   "reviewHint": {
-    "message": "Asta s-a citit din pagină. Corectează ce e greșit; nimic nu părăsește acest browser până nu îl trimiți."
+    "message": "Asta s-a citit din pagină. Corectează ce e greșit. Postulo-ul tău este întrebat doar dacă are deja acest anunț, după adresa, titlul și compania citite; pagina și corecturile tale pleacă atunci când îl trimiți."
   },
   "sendForReview": {
     "message": "Trimiteți spre revizuire"
@@ -193,7 +193,7 @@
     "message": "Ai păstrat deja această pagină și nu ai trimis-o: aceasta este versiunea ta."
   },
   "nothingRead": {
-    "message": "Nu s-a putut citi nimic din această pagină. Completează ce știi; nimic nu părăsește acest browser până nu îl trimiți."
+    "message": "Nu s-a putut citi nimic din această pagină. Completează ce știi. Postulo-ul tău este întrebat doar dacă are deja adresa paginii; ce completezi pleacă atunci când îl trimiți."
   },
   "waiting": {
     "message": "Nu se poate ajunge la Postulo acum. Este păstrat în acest browser și trimis imediat ce Postulo răspunde."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Uitat. Acest browser nu mai păstrează o adresă sau un token. Capturile sunt păstrate și niciuna nu va fi trimisă."
+  },
+  "fillTokenLabel": {
+    "message": "Token pentru completarea formularelor (opțional)"
+  },
+  "fillTokenHint": {
+    "message": "Un al doilea token care îți poate citi datele, pentru a completa formularul din pagina pe care o vezi. Dacă îl lași gol, extensia nu poate completa formulare. Este folosit doar când apeși butonul și este păstrat doar pe acest dispozitiv."
+  },
+  "fillForm": {
+    "message": "Completează acest formular"
+  },
+  "fillHint": {
+    "message": "Pune numele și adresa ta de e-mail în câmpurile goale pe care le recunoaște și le marchează. Nu se trimite nimic: îl citești și îl trimiți chiar tu."
+  },
+  "filling": {
+    "message": "Se completează formularul…"
+  },
+  "filled": {
+    "message": "Câmpuri completate: $COUNT$, marcate cu un contur albastru. Citește-le, apoi trimite chiar tu formularul.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Nimic de aici nu a fost recunoscut drept câmp de completat, sau fiecare câmp avea deja ceva în el."
+  },
+  "fillLeft": {
+    "message": "Rămase pentru tine: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }

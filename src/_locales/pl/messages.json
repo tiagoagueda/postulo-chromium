@@ -15,7 +15,7 @@
     "message": "Przechwyć to ogłoszenie"
   },
   "captureHint": {
-    "message": "Strona jest czytana tutaj, w Twojej przeglądarce. Nic nie jest wysyłane, dopóki o tym nie zdecydujesz."
+    "message": "Strona jest czytana tutaj, w Twojej przeglądarce. Twoje Postulo, gdy już zostanie skonfigurowane, jest pytane tylko o to, czy ma już ogłoszenia z tej strony, po ich adresie, tytule i firmie; sama strona trafia tam, gdy ją wyślesz."
   },
   "review": {
     "message": "Sprawdź w Postulo"
@@ -79,7 +79,7 @@
     "message": "Testuj"
   },
   "shortcutHint": {
-    "message": "Naciśnięcie przycisku albo $SHORTCUT$ odczytuje oglądaną stronę tutaj, w przeglądarce. Żadna strona nie jest czytana, dopóki o to nie poprosisz, a nic nie trafia nigdzie indziej niż do Twojego własnego Postulo, i to wtedy, gdy zechcesz.",
+    "message": "Naciśnięcie przycisku albo $SHORTCUT$ odczytuje oglądaną stronę tutaj, w przeglądarce. Żadna strona nie jest czytana, dopóki o to nie poprosisz, a nic nie trafia nigdzie indziej niż do Twojego własnego Postulo: jest ono pytane, czy ma już to ogłoszenie, po jego adresie, tytule i firmie, a stronę dostaje wtedy, gdy zechcesz.",
     "placeholders": {
       "shortcut": {
         "content": "$1"
@@ -175,7 +175,7 @@
     "message": "Nie udało się odczytać strony. Niektóre strony blokują rozszerzenia."
   },
   "reviewHint": {
-    "message": "Tyle odczytano ze strony. Popraw to, co się nie zgadza; nic nie opuszcza tej przeglądarki, dopóki tego nie wyślesz."
+    "message": "Tyle odczytano ze strony. Popraw to, co się nie zgadza. Twoje Postulo jest pytane tylko o to, czy ma już to ogłoszenie, po odczytanym adresie, tytule i firmie; strona i Twoje poprawki trafiają tam, gdy je wyślesz."
   },
   "sendForReview": {
     "message": "Wyślij do sprawdzenia"
@@ -193,7 +193,7 @@
     "message": "Ta strona jest już zachowana i nie została wysłana: oto Twoja wersja."
   },
   "nothingRead": {
-    "message": "Z tej strony nie udało się nic odczytać. Uzupełnij, co wiesz; nic nie opuszcza tej przeglądarki, dopóki tego nie wyślesz."
+    "message": "Z tej strony nie udało się nic odczytać. Uzupełnij, co wiesz. Twoje Postulo jest pytane tylko o to, czy ma już adres tej strony; to, co uzupełnisz, trafia tam, gdy to wyślesz."
   },
   "waiting": {
     "message": "Postulo jest teraz nieosiągalne. Ogłoszenie zostaje w tej przeglądarce i zostanie wysłane, gdy tylko Postulo odpowie."
@@ -545,5 +545,39 @@
   },
   "forgotten": {
     "message": "Zapomniano. Ta przeglądarka nie przechowuje już adresu ani tokena. Przechwycenia zostały zachowane i żadne nie zostanie wysłane."
+  },
+  "fillTokenLabel": {
+    "message": "Token do wypełniania formularzy (opcjonalny)"
+  },
+  "fillTokenHint": {
+    "message": "Drugi token, który może odczytywać Twoje dane, aby wypełnić formularz na oglądanej stronie. Jeśli zostawisz to pole puste, rozszerzenie nie będzie mogło wypełniać formularzy. Jest używany tylko po naciśnięciu przycisku i przechowywany tylko na tym urządzeniu."
+  },
+  "fillForm": {
+    "message": "Wypełnij ten formularz"
+  },
+  "fillHint": {
+    "message": "Wpisuje Twoje imię i nazwisko oraz adres e-mail w rozpoznane puste pola i je oznacza. Nic nie jest przesyłane: sprawdzasz formularz i wysyłasz go samodzielnie."
+  },
+  "filling": {
+    "message": "Wypełnianie formularza…"
+  },
+  "filled": {
+    "message": "Wypełnione pola: $COUNT$, oznaczone niebieską obwódką. Przeczytaj je, a potem samodzielnie wyślij formularz.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "filledNothing": {
+    "message": "Nic tutaj nie zostało rozpoznane jako pole do wypełnienia albo w każdym polu coś już było."
+  },
+  "fillLeft": {
+    "message": "Do uzupełnienia przez Ciebie: $FIELDS$",
+    "placeholders": {
+      "fields": {
+        "content": "$1"
+      }
+    }
   }
 }
