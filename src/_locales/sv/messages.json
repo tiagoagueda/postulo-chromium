@@ -556,13 +556,13 @@
     "message": "Fyll i det här formuläret"
   },
   "fillHint": {
-    "message": "Fyller i ditt namn och din e-postadress i de tomma fält som tillägget känner igen och markerar dem. Inget skickas in: du läser igenom det och skickar det själv."
+    "message": "Skriver in ditt namn och din e-postadress i de tomma fält som den känner igen och markerar dem. Inget skickas: du läser igenom det och skickar det själv."
   },
   "filling": {
     "message": "Fyller i formuläret…"
   },
   "filled": {
-    "message": "Fyllde i $COUNT$ fält, markerade med blå kontur. Läs igenom dem och skicka sedan formuläret själv.",
+    "message": "Fyllde i $COUNT$ fält, markerade med blå kantlinje. Läs igenom dem och skicka sedan formuläret själv.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Inget här kändes igen som ett fält att fylla i, eller så hade alla fält redan något i sig."
+    "message": "Inget här kändes igen som ett fält att fylla i, eller så hade varje fält redan innehåll."
   },
   "fillLeft": {
-    "message": "Kvar att fylla i själv: $FIELDS$",
+    "message": "Lämnade åt dig: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

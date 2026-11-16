@@ -547,22 +547,22 @@
     "message": "Emblidà. Quest navigatur na conserva pli ni adressa ni token. Las capturas restan conservadas e nagina na vegn tramessa."
   },
   "fillTokenLabel": {
-    "message": "Token per emplenir formulars (facultativ)"
+    "message": "Token per emplenir formulars (opziunal)"
   },
   "fillTokenHint": {
-    "message": "In segund token che dastga leger Vossas datas, per emplenir il formular sin la pagina che Vus guardais. Sche Vus al laschais vid, na po l'extensiun betg emplenir formulars. El vegn duvrà mo cura che Vus smatgais il buttun, ed arcunà mo sin quest apparat."
+    "message": "Ün segund token che po leger tias datas, per emplenir il formular da la pagina ch'ti guardas. Laschà vid, l'extensiun na po betg emplenir formulars. El vegn duvrà mo cura che ti smatgas la tasta e vegn memorisà mo sin quest apparat."
   },
   "fillForm": {
     "message": "Emplenir quest formular"
   },
   "fillHint": {
-    "message": "Metta Voss num e Vossa adressa d'e-mail en ils champs vids ch'el renconuscha, ed als marca. Nagut na vegn tramess: Vus al legis e tramettais sez."
+    "message": "Scriva tes num e tia adressa dad e-mail en ils champs vids ch'el renconuscha e als marchescha. I na vegn trasmess nagut: ti til legias e til trametas sez."
   },
   "filling": {
-    "message": "Il formular vegn emplenì…"
+    "message": "Emplenir il formular…"
   },
   "filled": {
-    "message": "Champs emplenids: $COUNT$, marcads cun in rom blau. Legiai als, lura tramettai sez il formular.",
+    "message": "Emplenì $COUNT$ champs, marchads cun ina cuntura blaua. Legia els e trametta lura sez il formular.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Nagut qua n'è vegnì renconuschì sco champ d'emplenir, u mintga champ cuntegneva gia insatge."
+    "message": "Qua n'è nagut vegnì renconuschì sco champ per emplenir, u mintga champ aveva gia in cuntegn."
   },
   "fillLeft": {
-    "message": "Resta per Vus: $FIELDS$",
+    "message": "Per tai: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

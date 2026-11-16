@@ -547,22 +547,22 @@
     "message": "Elfelejtve. Ez a böngésző már nem tárol címet vagy tokent. A rögzítések megmaradnak, de egyiket sem küldi el."
   },
   "fillTokenLabel": {
-    "message": "Token az űrlapok kitöltéséhez (nem kötelező)"
+    "message": "Token űrlapok kitöltéséhez (nem kötelező)"
   },
   "fillTokenHint": {
-    "message": "Egy második token, amely olvashatja az Ön adatait, hogy kitöltse az űrlapot a megtekintett oldalon. Ha üresen hagyja, a bővítmény nem tud űrlapokat kitölteni. Csak akkor használja, amikor megnyomja a gombot, és csak ezen az eszközön tárolódik."
+    "message": "Egy második token, amely olvashatja az Ön adatait, hogy kitöltse az épp megtekintett oldal űrlapját. Ha üresen hagyja, a bővítmény nem tud űrlapokat kitölteni. Csak a gomb megnyomásakor használja, és csak ezen az eszközön tárolja."
   },
   "fillForm": {
     "message": "Űrlap kitöltése"
   },
   "fillHint": {
-    "message": "Beírja a nevét és az e-mail-címét a felismert üres mezőkbe, és megjelöli őket. Semmit sem küld be: Ön elolvassa, és maga küldi el."
+    "message": "Beírja az Ön nevét és e-mail-címét az általa felismert üres mezőkbe, és megjelöli őket. Semmi sem lesz elküldve: Ön átolvassa, és Ön küldi el."
   },
   "filling": {
-    "message": "Az űrlap kitöltése…"
+    "message": "Űrlap kitöltése folyamatban…"
   },
   "filled": {
-    "message": "Kitöltött mezők: $COUNT$, kék kerettel megjelölve. Olvassa át őket, majd küldje el maga az űrlapot.",
+    "message": "$COUNT$ mező kitöltve, kék körvonallal jelölve. Olvassa át őket, majd küldje el az űrlapot saját maga.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Itt semmit sem ismert fel kitöltendő mezőként, vagy már minden mezőben volt valami."
+    "message": "Itt semmit sem ismert fel kitölthető mezőként, vagy minden mezőben volt már valami."
   },
   "fillLeft": {
-    "message": "Önre maradt: $FIELDS$",
+    "message": "Önre hagyva: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

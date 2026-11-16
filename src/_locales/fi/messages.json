@@ -547,22 +547,22 @@
     "message": "Unohdettu. Tämä selain ei enää säilytä osoitetta eikä tunnusta. Kaappaukset säilyvät, mutta mitään ei lähetetä."
   },
   "fillTokenLabel": {
-    "message": "Tunnus lomakkeiden täyttämiseen (valinnainen)"
+    "message": "Lomakkeiden täyttämisen tunnus (valinnainen)"
   },
   "fillTokenHint": {
-    "message": "Toinen tunnus, joka saa lukea tietojasi, jotta katsomasi sivun lomake voidaan täyttää. Jos jätät sen tyhjäksi, laajennus ei voi täyttää lomakkeita. Sitä käytetään vain, kun painat painiketta, ja se säilytetään vain tällä laitteella."
+    "message": "Toinen tunnus, joka saa lukea tietosi, jotta se voi täyttää katsomasi sivun lomakkeen. Jätä tyhjäksi, niin laajennus ei voi täyttää lomakkeita. Sitä käytetään vain, kun painat painiketta, ja se tallennetaan vain tälle laitteelle."
   },
   "fillForm": {
     "message": "Täytä tämä lomake"
   },
   "fillHint": {
-    "message": "Lisää nimesi ja sähköpostiosoitteesi tunnistamiinsa tyhjiin kenttiin ja merkitsee ne. Mitään ei lähetetä: luet sen ja lähetät sen itse."
+    "message": "Lisää nimesi ja sähköpostiosoitteesi tunnistamiinsa tyhjiin kenttiin ja merkitsee ne. Mitään ei lähetetä: luet sen ja lähetät itse."
   },
   "filling": {
     "message": "Täytetään lomaketta…"
   },
   "filled": {
-    "message": "Täytetty $COUNT$ kenttää, ja ne on merkitty sinisellä reunuksella. Lue ne ja lähetä sitten lomake itse.",
+    "message": "Täytettiin $COUNT$ kenttää, merkitty sinisellä reunuksella. Lue ne ja lähetä sitten lomake itse.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Mitään täällä ei tunnistettu täytettäväksi kentäksi, tai jokaisessa kentässä oli jo jotain."
+    "message": "Täällä ei tunnistettu täytettävää kenttää, tai jokaisessa kentässä oli jo jotain."
   },
   "fillLeft": {
-    "message": "Täytettäväksesi jäi: $FIELDS$",
+    "message": "Jätetty sinulle: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

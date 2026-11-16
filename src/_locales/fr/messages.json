@@ -550,19 +550,19 @@
     "message": "Jeton pour remplir les formulaires (facultatif)"
   },
   "fillTokenHint": {
-    "message": "Un second jeton autorisé à lire vos informations, pour remplir le formulaire de la page que vous consultez. S'il reste vide, l'extension ne peut pas remplir de formulaires. Il n'est utilisé que lorsque vous appuyez sur le bouton, et n'est conservé que sur cet appareil."
+    "message": "Un second jeton qui peut lire vos informations, pour remplir le formulaire de la page que vous consultez. Laissez-le vide et l'extension ne peut pas remplir de formulaires. Il n'est utilisé que lorsque vous appuyez sur le bouton, et conservé uniquement sur cet appareil."
   },
   "fillForm": {
     "message": "Remplir ce formulaire"
   },
   "fillHint": {
-    "message": "Inscrit votre nom et votre adresse e-mail dans les champs vides qu'il reconnaît, et les signale. Rien n'est soumis : vous relisez le formulaire et l'envoyez vous-même."
+    "message": "Place votre nom et votre e-mail dans les champs vides qu'elle reconnaît, et les marque. Rien n'est envoyé : vous relisez et vous envoyez vous-même."
   },
   "filling": {
     "message": "Remplissage du formulaire…"
   },
   "filled": {
-    "message": "$COUNT$ champs remplis, entourés de bleu. Relisez-les, puis envoyez le formulaire vous-même.",
+    "message": "$COUNT$ champs remplis, repérés par un contour bleu. Relisez-les, puis envoyez vous-même le formulaire.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Rien ici n'a été reconnu comme un champ à remplir, ou chaque champ contenait déjà quelque chose."
+    "message": "Rien ici n'a été reconnu comme un champ à remplir, ou tous les champs contenaient déjà quelque chose."
   },
   "fillLeft": {
-    "message": "À remplir par vous : $FIELDS$",
+    "message": "Laissés pour vous : $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

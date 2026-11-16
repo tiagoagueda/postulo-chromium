@@ -550,19 +550,19 @@
     "message": "Token voor het invullen van formulieren (optioneel)"
   },
   "fillTokenHint": {
-    "message": "Een tweede token dat uw gegevens mag lezen, om het formulier in te vullen op de pagina die u bekijkt. Laat u het leeg, dan kan de extensie geen formulieren invullen. Het wordt alleen gebruikt wanneer u op de knop drukt, en alleen op dit apparaat bewaard."
+    "message": "Een tweede token dat je gegevens mag lezen, om het formulier op de pagina die je bekijkt in te vullen. Laat je het leeg, dan kan de extensie geen formulieren invullen. Het wordt alleen gebruikt wanneer je op de knop drukt en wordt alleen op dit apparaat bewaard."
   },
   "fillForm": {
     "message": "Dit formulier invullen"
   },
   "fillHint": {
-    "message": "Zet uw naam en e-mailadres in de lege velden die worden herkend, en markeert ze. Er wordt niets verstuurd: u leest het na en verstuurt het zelf."
+    "message": "Zet je naam en e-mailadres in de lege velden die het herkent en markeert ze. Er wordt niets verzonden: jij leest het na en verstuurt het zelf."
   },
   "filling": {
-    "message": "Het formulier wordt ingevuld…"
+    "message": "Formulier invullen…"
   },
   "filled": {
-    "message": "Ingevulde velden: $COUNT$, gemarkeerd met een blauwe rand. Lees ze na en verstuur het formulier dan zelf.",
+    "message": "$COUNT$ velden ingevuld, gemarkeerd met een blauwe rand. Lees ze na en verstuur het formulier dan zelf.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Niets hier werd herkend als in te vullen veld, of elk veld bevatte al iets."
+    "message": "Hier is niets herkend als een veld om in te vullen, of elk veld was al ingevuld."
   },
   "fillLeft": {
-    "message": "Voor u overgelaten: $FIELDS$",
+    "message": "Voor jou gelaten: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

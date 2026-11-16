@@ -550,19 +550,19 @@
     "message": "Comhartha chun foirmeacha a líonadh (roghnach)"
   },
   "fillTokenHint": {
-    "message": "Dara comhartha atá in ann do shonraí a léamh, chun an fhoirm ar an leathanach atá á fheiceáil agat a líonadh. Fág folamh é agus ní féidir leis an síneadh foirmeacha a líonadh. Ní úsáidtear é ach nuair a bhrúnn tú an cnaipe, agus ní choinnítear é ach ar an ngléas seo."
+    "message": "An dara comhartha a fhéadfaidh do shonraí a léamh, chun an fhoirm ar an leathanach atá á bhreathnú agat a líonadh. Fág folamh é agus ní féidir leis an eisínteacht foirmeacha a líonadh. Ní úsáidtear é ach nuair a bhrúnn tú an cnaipe, agus ní choinnítear é ach ar an ngléas seo."
   },
   "fillForm": {
     "message": "Líon an fhoirm seo"
   },
   "fillHint": {
-    "message": "Cuireann sé d'ainm agus do sheoladh ríomhphoist sna réimsí folmha a aithníonn sé, agus marcálann sé iad. Ní chuirtear aon rud isteach: léann tú í agus seolann tú féin í."
+    "message": "Cuireann sé d’ainm agus do ríomhphost sna réimsí folamha a aithníonn sé, agus marcálann sé iad. Ní chuirtear tada isteach: léann tú é agus seolann tú féin é."
   },
   "filling": {
     "message": "Ag líonadh na foirme…"
   },
   "filled": {
-    "message": "Líonadh $COUNT$ réimse, marcáilte le himlíne ghorm. Léigh iad, ansin seol féin an fhoirm.",
+    "message": "Líonadh $COUNT$ réimse, marcáilte le imlíne ghorm. Léigh iad, ansin seol an fhoirm tú féin.",
     "placeholders": {
       "count": {
         "content": "$1"

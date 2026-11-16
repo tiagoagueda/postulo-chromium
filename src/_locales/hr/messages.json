@@ -550,19 +550,19 @@
     "message": "Token za ispunjavanje obrazaca (neobavezno)"
   },
   "fillTokenHint": {
-    "message": "Drugi token koji smije čitati vaše podatke kako bi ispunio obrazac na stranici koju gledate. Ako polje ostavite prazno, proširenje ne može ispunjavati obrasce. Koristi se samo kada pritisnete gumb i čuva se samo na ovom uređaju."
+    "message": "Drugi token koji smije čitati vaše podatke, za ispunjavanje obrasca na stranici koju gledate. Ostavite ga praznim i proširenje ne može ispunjavati obrasce. Koristi se samo kad pritisnete gumb i čuva se samo na ovom uređaju."
   },
   "fillForm": {
     "message": "Ispuni ovaj obrazac"
   },
   "fillHint": {
-    "message": "Upisuje vaše ime i e-adresu u prazna polja koja prepozna i označava ih. Ništa se ne predaje: vi ga pročitate i sami pošaljete."
+    "message": "Upisuje vaše ime i e-poštu u prazna polja koja prepozna i označava ih. Ništa se ne šalje: vi pročitate i pošaljete sami."
   },
   "filling": {
     "message": "Ispunjavanje obrasca…"
   },
   "filled": {
-    "message": "Ispunjena polja: $COUNT$, označena plavim obrubom. Pročitajte ih, a zatim sami pošaljite obrazac.",
+    "message": "Ispunjeno polja: $COUNT$, označenih plavim obrisom. Pročitajte ih, a zatim sami pošaljite obrazac.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,7 +570,7 @@
     }
   },
   "filledNothing": {
-    "message": "Ništa ovdje nije prepoznato kao polje za ispunjavanje ili je u svakom polju već nešto bilo."
+    "message": "Ovdje nijedno polje nije prepoznato kao polje za ispunjavanje, ili je svako polje već imalo nešto u sebi."
   },
   "fillLeft": {
     "message": "Ostavljeno vama: $FIELDS$",

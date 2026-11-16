@@ -547,22 +547,22 @@
     "message": "Unutuldu. Bu tarayıcı artık bir adres veya belirteç tutmuyor. Yakalamalar saklanır ve hiçbiri gönderilmez."
   },
   "fillTokenLabel": {
-    "message": "Form doldurma belirteci (isteğe bağlı)"
+    "message": "Formları doldurmak için belirteç (isteğe bağlı)"
   },
   "fillTokenHint": {
-    "message": "Baktığınız sayfadaki formu doldurmak için bilgilerinizi okuyabilen ikinci bir belirteç. Boş bırakırsanız uzantı form dolduramaz. Yalnızca düğmeye bastığınızda kullanılır ve yalnızca bu cihazda saklanır."
+    "message": "Bakmakta olduğunuz sayfadaki formu doldurmak için bilgilerinizi okuyabilen ikinci bir belirteç. Boş bırakırsanız uzantı formları dolduramaz. Yalnızca düğmeye bastığınızda kullanılır ve yalnızca bu cihazda saklanır."
   },
   "fillForm": {
     "message": "Bu formu doldur"
   },
   "fillHint": {
-    "message": "Adınızı ve e-posta adresinizi tanıdığı boş alanlara yazar ve bunları işaretler. Hiçbir şey gönderilmez: formu siz okur ve kendiniz gönderirsiniz."
+    "message": "Adınızı ve e-postanızı tanıdığı boş alanlara yazar ve bunları işaretler. Hiçbir şey gönderilmez: siz okur ve kendiniz gönderirsiniz."
   },
   "filling": {
     "message": "Form dolduruluyor…"
   },
   "filled": {
-    "message": "$COUNT$ alan dolduruldu ve mavi bir çerçeveyle işaretlendi. Bunları okuyun, ardından formu kendiniz gönderin.",
+    "message": "$COUNT$ alan dolduruldu, mavi çerçeveyle işaretlendi. Bunları okuyun, ardından formu kendiniz gönderin.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Burada doldurulacak alan olarak hiçbir şey tanınmadı ya da her alanda zaten bir şey vardı."
+    "message": "Burada doldurulacak bir alan olarak tanınan bir şey yok ya da her alanda zaten bir şey vardı."
   },
   "fillLeft": {
-    "message": "Size kalanlar: $FIELDS$",
+    "message": "Size bırakılanlar: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

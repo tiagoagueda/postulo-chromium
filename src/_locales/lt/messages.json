@@ -547,22 +547,22 @@
     "message": "Pamiršta. Ši naršyklė nebelaiko nei adreso, nei prieigos rakto. Fiksavimai išsaugoti, bet nė vienas nebus išsiųstas."
   },
   "fillTokenLabel": {
-    "message": "Prieigos raktas formoms pildyti (neprivaloma)"
+    "message": "Žetonas formoms pildyti (neprivaloma)"
   },
   "fillTokenHint": {
-    "message": "Antras prieigos raktas, galintis skaityti jūsų duomenis, kad užpildytų formą peržiūrimame puslapyje. Palikite jį tuščią, ir plėtinys negalės pildyti formų. Jis naudojamas tik paspaudus mygtuką ir laikomas tik šiame įrenginyje."
+    "message": "Antras žetonas, galintis skaityti jūsų duomenis, kad būtų užpildyta puslapyje, kurį žiūrite, esanti forma. Palikite tuščią ir plėtinys negalės pildyti formų. Jis naudojamas tik paspaudus mygtuką ir laikomas tik šiame įrenginyje."
   },
   "fillForm": {
     "message": "Užpildyti šią formą"
   },
   "fillHint": {
-    "message": "Įrašo jūsų vardą ir el. pašto adresą į atpažintus tuščius laukus ir juos pažymi. Niekas nepateikiama: jūs ją perskaitote ir išsiunčiate patys."
+    "message": "Įrašo jūsų vardą ir el. paštą į atpažintus tuščius laukus ir juos pažymi. Niekas nesiunčiama: patys peržiūrite ir išsiunčiate."
   },
   "filling": {
     "message": "Pildoma forma…"
   },
   "filled": {
-    "message": "Užpildyta laukų: $COUNT$, jie pažymėti mėlynu kontūru. Perskaitykite juos, tada patys išsiųskite formą.",
+    "message": "Užpildyta laukų: $COUNT$, jie pažymėti mėlynu rėmeliu. Peržiūrėkite juos, tada patys išsiųskite formą.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Čia nieko nepavyko atpažinti kaip pildomo lauko, arba visuose laukuose jau kažkas buvo."
+    "message": "Čia nieko neatpažinta kaip užpildytino lauko arba kiekvienas laukas jau turėjo turinį."
   },
   "fillLeft": {
-    "message": "Palikta jums: $FIELDS$",
+    "message": "Paliekama jums: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

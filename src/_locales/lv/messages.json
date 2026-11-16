@@ -547,22 +547,22 @@
     "message": "Aizmirsts. Šis pārlūks vairs neglabā ne adresi, ne marķieri. Tvērumi ir saglabāti, un neviens netiks nosūtīts."
   },
   "fillTokenLabel": {
-    "message": "Marķieris veidlapu aizpildīšanai (neobligāts)"
+    "message": "Pilnvara veidlapu aizpildīšanai (neobligāta)"
   },
   "fillTokenHint": {
-    "message": "Otrs marķieris, kas drīkst lasīt jūsu datus, lai aizpildītu veidlapu skatītajā lapā. Atstājiet to tukšu, un paplašinājums nevarēs aizpildīt veidlapas. Tas tiek izmantots tikai tad, kad nospiežat pogu, un tiek glabāts tikai šajā ierīcē."
+    "message": "Otra pilnvara, kas drīkst lasīt jūsu datus, lai aizpildītu veidlapu lapā, kuru skatāties. Atstājiet to tukšu, un paplašinājums veidlapas aizpildīt nevarēs. To izmanto tikai tad, kad nospiežat pogu, un glabā tikai šajā ierīcē."
   },
   "fillForm": {
     "message": "Aizpildīt šo veidlapu"
   },
   "fillHint": {
-    "message": "Ieraksta jūsu vārdu un e-pasta adresi atpazītajos tukšajos laukos un tos iezīmē. Nekas netiek iesniegts: jūs to izlasāt un nosūtāt paši."
+    "message": "Ieraksta jūsu vārdu un e-pastu tukšajos laukos, ko tas atpazīst, un tos atzīmē. Nekas netiek nosūtīts: jūs to pārlasāt un nosūtāt paši."
   },
   "filling": {
     "message": "Veidlapa tiek aizpildīta…"
   },
   "filled": {
-    "message": "Aizpildīti lauki: $COUNT$, tie iezīmēti ar zilu apmali. Izlasiet tos un pēc tam nosūtiet veidlapu paši.",
+    "message": "Aizpildīti lauki: $COUNT$, tie atzīmēti ar zilu apmali. Pārlasiet tos, tad veidlapu nosūtiet paši.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,7 +570,7 @@
     }
   },
   "filledNothing": {
-    "message": "Nekas šeit netika atpazīts kā aizpildāms lauks, vai arī katrā laukā jau kaut kas bija."
+    "message": "Šeit nekas netika atpazīts kā aizpildāms lauks, vai arī katrā laukā jau kaut kas bija."
   },
   "fillLeft": {
     "message": "Atstāts jums: $FIELDS$",

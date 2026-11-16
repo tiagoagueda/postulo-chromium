@@ -547,22 +547,22 @@
     "message": "Esquecido. Este navegador xa non garda un enderezo nin un token. As capturas consérvanse e non se enviará ningunha."
   },
   "fillTokenLabel": {
-    "message": "Token para encher formularios (opcional)"
+    "message": "Testemuño para encher formularios (opcional)"
   },
   "fillTokenHint": {
-    "message": "Un segundo token que pode ler os teus datos, para encher o formulario da páxina que estás a ver. Se o deixas baleiro, a extensión non pode encher formularios. Só se usa cando premes o botón, e gárdase só neste dispositivo."
+    "message": "Un segundo testemuño que pode ler os teus datos, para encher o formulario da páxina que estás a ver. Se o deixas baleiro, a extensión non pode encher formularios. Só se usa cando premes o botón e gárdase unicamente neste dispositivo."
   },
   "fillForm": {
     "message": "Encher este formulario"
   },
   "fillHint": {
-    "message": "Pon o teu nome e correo electrónico nos campos baleiros que recoñece, e márcaos. Non se envía nada: ti mesmo o les e o envías."
+    "message": "Pon o teu nome e o teu correo nos campos baleiros que recoñece e márcaos. Non se envía nada: ti revísalo e envíalo."
   },
   "filling": {
     "message": "Enchendo o formulario…"
   },
   "filled": {
-    "message": "Enchéronse $COUNT$ campos, marcados cun contorno azul. Leos e despois envía ti mesmo o formulario.",
+    "message": "Enchéronse $COUNT$ campos, marcados cun contorno azul. Revísaos e despois envía ti o formulario.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Aquí non se recoñeceu nada como campo para encher, ou todos os campos xa tiñan algo."
+    "message": "Aquí non se recoñeceu ningún campo para encher, ou todos os campos xa tiñan algo."
   },
   "fillLeft": {
-    "message": "Quédanche por encher: $FIELDS$",
+    "message": "Deixados para ti: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

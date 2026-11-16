@@ -550,19 +550,19 @@
     "message": "Token untuk mengisi formulir (opsional)"
   },
   "fillTokenHint": {
-    "message": "Token kedua yang boleh membaca data Anda, untuk mengisi formulir di halaman yang sedang Anda lihat. Jika dibiarkan kosong, ekstensi tidak dapat mengisi formulir. Token ini hanya digunakan saat Anda menekan tombol, dan hanya disimpan di perangkat ini."
+    "message": "Token kedua yang dapat membaca data Anda, untuk mengisi formulir di halaman yang sedang Anda lihat. Kosongkan, maka ekstensi tidak dapat mengisi formulir. Token hanya dipakai saat Anda menekan tombol, dan hanya disimpan di perangkat ini."
   },
   "fillForm": {
     "message": "Isi formulir ini"
   },
   "fillHint": {
-    "message": "Memasukkan nama dan email Anda ke kolom kosong yang dikenalinya, lalu menandainya. Tidak ada yang dikirimkan: Anda membacanya dan mengirimkannya sendiri."
+    "message": "Memasukkan nama dan email Anda ke kolom kosong yang dikenalinya, lalu menandainya. Tidak ada yang dikirim: Anda memeriksanya dan mengirimnya sendiri."
   },
   "filling": {
     "message": "Mengisi formulir…"
   },
   "filled": {
-    "message": "$COUNT$ kolom diisi, ditandai dengan garis tepi biru. Baca kolom-kolom itu, lalu kirim formulirnya sendiri.",
+    "message": "$COUNT$ kolom terisi dan ditandai dengan garis tepi biru. Periksa, lalu kirim formulir sendiri.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Tidak ada yang dikenali di sini sebagai kolom untuk diisi, atau setiap kolom sudah berisi sesuatu."
+    "message": "Tidak ada yang dikenali di sini sebagai kolom untuk diisi, atau semua kolom sudah terisi."
   },
   "fillLeft": {
-    "message": "Tersisa untuk Anda: $FIELDS$",
+    "message": "Untuk Anda isi: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

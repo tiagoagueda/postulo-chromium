@@ -550,19 +550,19 @@
     "message": "Inprimakiak betetzeko tokena (aukerakoa)"
   },
   "fillTokenHint": {
-    "message": "Zure datuak irakur ditzakeen bigarren token bat, ikusten ari zaren orriko inprimakia betetzeko. Hutsik uzten baduzu, hedapenak ezin ditu inprimakiak bete. Botoia sakatzen duzunean bakarrik erabiltzen da, eta gailu honetan bakarrik gordetzen da."
+    "message": "Zure datuak irakur ditzakeen bigarren token bat, ikusten ari zaren orriko inprimakia betetzeko. Utzi hutsik eta luzapenak ezin ditu inprimakiak bete. Botoia sakatzen duzunean soilik erabiltzen da, eta gailu honetan soilik gordetzen da."
   },
   "fillForm": {
     "message": "Bete inprimaki hau"
   },
   "fillHint": {
-    "message": "Zure izena eta helbide elektronikoa ezagutzen dituen eremu hutsetan jartzen ditu, eta markatu egiten ditu. Ez da ezer bidaltzen: zuk irakurri eta zuk zeuk bidaltzen duzu."
+    "message": "Zure izena eta posta elektronikoa ezartzen ditu ezagutzen dituen eremu hutsetan, eta markatu egiten ditu. Ez da ezer bidaltzen: zuk irakurri eta zuk bidaltzen duzu."
   },
   "filling": {
     "message": "Inprimakia betetzen…"
   },
   "filled": {
-    "message": "Betetako eremuak: $COUNT$, ertz urdinez markatuta. Irakurri itzazu, eta bidali inprimakia zuk zeuk.",
+    "message": "$COUNT$ eremu bete dira, kontorno urdinarekin markatuta. Irakurri itzazu eta bidali inprimakia zuk zeuk.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Hemen ez da ezer ezagutu bete beharreko eremu gisa, edo eremu guztiek bazuten jada zerbait."
+    "message": "Hemen ez da betetzeko eremurik ezagutu, edo eremu guztiek zerbait zuten jada."
   },
   "fillLeft": {
-    "message": "Zuretzat geratzen dena: $FIELDS$",
+    "message": "Zuretzat utzi dira: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"

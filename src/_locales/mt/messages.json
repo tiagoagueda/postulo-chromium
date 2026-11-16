@@ -547,22 +547,22 @@
     "message": "Insa. Dan il-browser m'għandux indirizz jew token iżjed. Il-qbid jinżamm, u ebda wieħed ma jintbagħat."
   },
   "fillTokenLabel": {
-    "message": "Token biex jimtlew il-formoli (mhux obbligatorju)"
+    "message": "Token biex timtela l-formoli (mhux obbligatorju)"
   },
   "fillTokenHint": {
-    "message": "It-tieni token li jista' jaqra d-dettalji tiegħek, biex jimla l-formola fil-paġna li qed tħares lejha. Jekk tħallih vojt, l-estensjoni ma tistax timla formoli. Jintuża biss meta tagħfas il-buttuna, u jinżamm fuq dan l-apparat biss."
+    "message": "It-tieni token li jista' jaqra d-dettalji tiegħek, biex timtela l-formola tal-paġna li qed tarah. Ħallih vojt u l-estensjoni ma tistax timla l-formoli. Jintuża biss meta tagħfas il-buttuna, u jinżamm fuq dan l-apparat biss."
   },
   "fillForm": {
     "message": "Imla din il-formola"
   },
   "fillHint": {
-    "message": "Ipoġġi ismek u l-email tiegħek fl-oqsma vojta li jagħraf, u jimmarkahom. Xejn ma jiġi sottomess: taqraha u tibgħatha int stess."
+    "message": "Iddaħħal ismek u l-email tiegħek fl-oqsma vojta li tagħraf, u timmarkahom. Xejn ma jintbagħat: int taqrah u tibagħtu int stess."
   },
   "filling": {
     "message": "Qed timtela l-formola…"
   },
   "filled": {
-    "message": "Imtlew $COUNT$ oqsma, immarkati b'kontorn blu. Aqrahom, imbagħad ibgħat il-formola int stess.",
+    "message": "Ġew mimlija $COUNT$ oqsma, immarkati b'kontorn blu. Aqrahom, imbagħad ibgħat il-formola int stess.",
     "placeholders": {
       "count": {
         "content": "$1"
@@ -570,10 +570,10 @@
     }
   },
   "filledNothing": {
-    "message": "Xejn hawn ma ntgħaraf bħala qasam li għandu jimtela, jew kull qasam diġà kellu xi ħaġa fih."
+    "message": "Xejn hawn ma ġie rikonoxxut bħala qasam li jrid jimtela, jew kull qasam kien diġà fih xi ħaġa."
   },
   "fillLeft": {
-    "message": "Fadal għalik: $FIELDS$",
+    "message": "Ħalliet lilek: $FIELDS$",
     "placeholders": {
       "fields": {
         "content": "$1"
